@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Permissions Explained — Takt</title>
+  <meta name="description" content="What permissions Takt requests, why, and how to manage them.">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="../../assets/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../../assets/favicon-16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../../assets/apple-touch-icon.png">
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../css/tokens.css">
+  <link rel="stylesheet" href="../../css/base.css">
+  <link rel="stylesheet" href="../../css/layout.css">
+  <link rel="stylesheet" href="../../css/docs.css">
+
+  <script src="../../js/theme.js"></script>
+</head>
+<body>
+  <header id="site-header"></header>
+
+  <div class="docs-layout">
+    <aside class="docs-sidebar">
+      <h4>Documentation</h4>
+      <ul>
+        <li><a href="../../getting-started/">Getting Started</a></li>
+        <li><a href="../rules/">Rule Reference</a></li>
+        <li><a href="../duplicates/">Duplicate Prevention</a></li>
+        <li><a href="../resources/">Resource Dashboard</a></li>
+        <li><a href="../profiles/">Profiles &amp; Schedules</a></li>
+        <li><a href="../shortcuts/">Keyboard Shortcuts</a></li>
+        <li><a href="./" class="active">Permissions</a></li>
+      </ul>
+    </aside>
+
+    <main class="docs-content">
+      <h1>Permissions Explained</h1>
+      <p class="lead">Takt requests only the permissions it needs. Here's what each one does and why.</p>
+
+      <h2 id="required">Required permissions <a href="#required" class="anchor-link">#</a></h2>
+      <p>These are granted at install time and are necessary for core functionality:</p>
+
+      <table>
+        <thead><tr><th>Permission</th><th>Why</th></tr></thead>
+        <tbody>
+          <tr><td><code>tabs</code></td><td>Read tab URLs and titles to match against your rules</td></tr>
+          <tr><td><code>tabGroups</code></td><td>Create and manage Chrome tab groups</td></tr>
+          <tr><td><code>storage</code></td><td>Save your rules, settings, and profiles</td></tr>
+          <tr><td><code>contextMenus</code></td><td>Right-click "Create rule from this tab" menu item</td></tr>
+          <tr><td><code>scripting</code></td><td>Inject the duplicate-prevention toast notification</td></tr>
+          <tr><td><code>notifications</code></td><td>Alert you when tab groups exceed memory budgets</td></tr>
+          <tr><td><code>alarms</code></td><td>Periodic budget checks and scheduled profile switching</td></tr>
+        </tbody>
+      </table>
+
+      <h2 id="optional">Optional permissions <a href="#optional" class="anchor-link">#</a></h2>
+      <p>These are requested at runtime only when you enable features that need them:</p>
+
+      <table>
+        <thead><tr><th>Permission</th><th>Why</th><th>Triggered by</th></tr></thead>
+        <tbody>
+          <tr>
+            <td><code>webRequest</code> + <code>&lt;all_urls&gt;</code></td>
+            <td>Monitor network requests for the resource dashboard</td>
+            <td>Opening the resource dashboard</td>
+          </tr>
+          <tr>
+            <td><code>webNavigation</code></td>
+            <td>Detect navigation for duplicate tab prevention</td>
+            <td>Enabling duplicate prevention</td>
+          </tr>
+          <tr>
+            <td><code>system.memory</code></td>
+            <td>Show total system memory in the resource dashboard</td>
+            <td>Opening the resource dashboard</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2 id="manage">How to manage permissions <a href="#manage" class="anchor-link">#</a></h2>
+      <p>Open the Options page and go to <strong>Settings</strong>. The permissions panel lets you:</p>
+      <ul>
+        <li><strong>Grant All</strong> — grant all optional permissions at once</li>
+        <li><strong>Individual toggles</strong> — grant or revoke each permission separately</li>
+        <li><strong>Revoke All</strong> — revoke all optional permissions</li>
+        <li><strong>Prompt mode</strong> — choose whether Takt asks before requesting a permission ("Ask") or never requests automatically ("Never")</li>
+      </ul>
+      <p>Revoking a permission disables the feature that depends on it. The feature re-enables automatically when the permission is granted again.</p>
+
+      <h2 id="never-access">What Takt never accesses <a href="#never-access" class="anchor-link">#</a></h2>
+      <ul>
+        <li>Browsing history or URLs you visit (beyond matching against your rules)</li>
+        <li>Page content or form data</li>
+        <li>Personal information (name, email, etc.)</li>
+        <li>Cookies or authentication tokens</li>
+        <li>Analytics or telemetry of any kind</li>
+      </ul>
+      <p>For the full privacy story, see the <a href="../../privacy/">Privacy Policy</a>.</p>
+
+      <div class="docs-nav-prev-next">
+        <a href="../shortcuts/">&larr; Keyboard Shortcuts</a>
+        <span></span>
+      </div>
+    </main>
+  </div>
+
+  <footer id="site-footer"></footer>
+
+  <script src="../../js/includes.js"></script>
+  <script src="../../js/nav.js"></script>
+</body>
+</html>

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Takt — Tabs, organized. Automatically.</title>
+  <meta name="description" content="Auto-group tabs by URL rules, block duplicates, monitor resource usage. All local: nothing leaves your browser.">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Takt — Tabs, organized. Automatically.">
+  <meta property="og:description" content="Group by rules. Prevent duplicates. Watch resource use. All locally — nothing leaves your browser.">
+  <meta property="og:image" content="assets/og-card.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="assets/og-card.png">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+  <link rel="manifest" href="site.webmanifest">
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+
+  <script src="js/theme.js"></script>
+</head>
+<body>
+  <header id="site-header"></header>
+
+  <main>
+    <div class="page-hero">
+      <svg viewBox="0 0 64 64" width="64" height="64" aria-hidden="true" style="margin: 0 auto 1.25rem; color: var(--ink);">
+        <rect x="8" y="8" width="48" height="48" rx="10" fill="none" stroke="currentColor" stroke-width="5"/>
+        <rect x="22" y="22" width="20" height="20" rx="4" fill="currentColor"/>
+      </svg>
+      <h1>Tabs, organized. Automatically.</h1>
+      <p style="color: var(--ink-2); font-size: 1.15rem; margin: 1rem auto 2rem; max-width: 520px;">
+        Create rules that group your tabs by URL. Prevent duplicates. Monitor resource usage. Everything stays in your browser.
+      </p>
+      <div style="display: flex; gap: 0.75rem; justify-content: center; flex-wrap: wrap;">
+        <a href="getting-started/" class="btn btn-primary">Get Started</a>
+        <a href="docs/rules/" class="btn btn-secondary">Read the Docs</a>
+      </div>
+      <p style="color: var(--muted); font-size: 0.85rem; margin-top: 1.25rem;">Free to start. Complete for $3/month.</p>
+    </div>
+
+    <div class="page-shell">
+      <section class="section">
+        <h2 class="section-title">What Takt does</h2>
+        <p class="section-subtitle">Three tools to keep your browser under control.</p>
+
+        <div class="feature-cards">
+          <div class="feature-card">
+            <div class="feature-card-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/>
+                <rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/>
+              </svg>
+            </div>
+            <h3>Rule-Based Grouping</h3>
+            <p>Create rules that match tabs by URL or title. Use simple text matching, domain matching, glob patterns, or full regex.</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-card-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M9 3H5a2 2 0 00-2 2v4m6-6h10a2 2 0 012 2v4M9 3v18m0 0h10a2 2 0 002-2v-4M9 21H5a2 2 0 01-2-2v-4"/>
+                <path d="M15 12l-3-3m0 0l-3 3m3-3v6"/>
+              </svg>
+            </div>
+            <h3>Duplicate Prevention <span class="badge">Complete</span></h3>
+            <p>Open the same URL twice? Takt catches it, closes the duplicate, and focuses the original.</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-card-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+              </svg>
+            </div>
+            <h3>Resource Intelligence <span class="badge">Complete</span></h3>
+            <p>See which tab groups consume the most memory. Get health scores, idle tracking, and discard recommendations.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2 class="section-title">How it works</h2>
+        <p class="section-subtitle">Up and running in under a minute.</p>
+
+        <div class="steps">
+          <div class="step">
+            <h3>Install</h3>
+            <p>Add Takt from the Chrome Web Store. No account needed.</p>
+          </div>
+          <div class="step">
+            <h3>Create a rule</h3>
+            <p>Pick a URL pattern, choose a group color. Done.</p>
+          </div>
+          <div class="step">
+            <h3>Organize</h3>
+            <p>Click "Organize All" or enable auto-mode to group tabs on load.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2 class="section-title">Free vs Complete</h2>
+        <p class="section-subtitle">Start free. Upgrade when you need more.</p>
+
+        <table class="comparison-table">
+          <thead>
+            <tr><th>Feature</th><th>Free</th><th>Complete</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Rules</td><td>3</td><td>Unlimited</td></tr>
+            <tr><td>Match types</td><td>Contains, Exact</td><td>+ Glob, Regex, Domain</td></tr>
+            <tr><td>Group colors</td><td>Grey, Blue</td><td>All 8</td></tr>
+            <tr><td>Title matching</td><td class="cross">&mdash;</td><td class="check">&#10003;</td></tr>
+            <tr><td>Compound conditions (AND/OR)</td><td class="cross">&mdash;</td><td class="check">&#10003;</td></tr>
+            <tr><td>Auto-assign mode</td><td class="cross">&mdash;</td><td class="check">&#10003;</td></tr>
+            <tr><td>Duplicate prevention</td><td class="cross">&mdash;</td><td class="check">&#10003;</td></tr>
+            <tr><td>Resource dashboard</td><td class="cross">&mdash;</td><td class="check">&#10003;</td></tr>
+            <tr><td>Profiles &amp; schedules</td><td class="cross">&mdash;</td><td class="check">&#10003;</td></tr>
+            <tr><td>Context menu &amp; keyboard shortcut</td><td class="cross">&mdash;</td><td class="check">&#10003;</td></tr>
+            <tr><td>Import / export</td><td class="cross">&mdash;</td><td class="check">&#10003;</td></tr>
+            <tr class="pricing-row"><td></td><td>Free</td><td>$3/month or $30/year</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="section">
+        <div class="privacy-banner">
+          <h2>Your data stays in your browser.</h2>
+          <p>No accounts. No analytics. No cloud sync. Takt stores everything locally. <a href="privacy/">Read the full privacy policy.</a></p>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer id="site-footer"></footer>
+
+  <script src="js/includes.js"></script>
+  <script src="js/nav.js"></script>
+</body>
+</html>

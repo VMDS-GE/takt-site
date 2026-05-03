@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Duplicate Prevention — Takt</title>
+  <meta name="description" content="How Takt prevents duplicate tabs with URL normalization and bypass methods.">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="../../assets/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../../assets/favicon-16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../../assets/apple-touch-icon.png">
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../css/tokens.css">
+  <link rel="stylesheet" href="../../css/base.css">
+  <link rel="stylesheet" href="../../css/layout.css">
+  <link rel="stylesheet" href="../../css/docs.css">
+
+  <script src="../../js/theme.js"></script>
+</head>
+<body>
+  <header id="site-header"></header>
+
+  <div class="docs-layout">
+    <aside class="docs-sidebar">
+      <h4>Documentation</h4>
+      <ul>
+        <li><a href="../../getting-started/">Getting Started</a></li>
+        <li><a href="../rules/">Rule Reference</a></li>
+        <li><a href="./" class="active">Duplicate Prevention</a></li>
+        <li><a href="../resources/">Resource Dashboard</a></li>
+        <li><a href="../profiles/">Profiles &amp; Schedules</a></li>
+        <li><a href="../shortcuts/">Keyboard Shortcuts</a></li>
+        <li><a href="../permissions/">Permissions</a></li>
+      </ul>
+    </aside>
+
+    <main class="docs-content">
+      <h1>Duplicate Prevention</h1>
+      <p class="lead">Stop opening the same tab twice. Takt detects duplicate URLs, closes the new tab, and focuses the original.</p>
+
+      <div class="callout">
+        <p><strong>Complete feature.</strong> Duplicate prevention requires a Complete subscription.</p>
+      </div>
+
+      <h2 id="how-it-works">How it works <a href="#how-it-works" class="anchor-link">#</a></h2>
+      <p>When you open a new tab:</p>
+      <ol>
+        <li>Takt normalizes the URL using your chosen strategy</li>
+        <li>It checks the normalized URL against all currently open tabs</li>
+        <li>If a match is found: the new tab is closed, the existing tab is focused, and a brief toast notification appears</li>
+        <li>If no match: the tab opens normally</li>
+      </ol>
+
+      <h2 id="strategies">URL normalization strategies <a href="#strategies" class="anchor-link">#</a></h2>
+      <p>Different strategies control how strictly URLs are compared. Set a global default in Settings, or override per rule.</p>
+
+      <table>
+        <thead><tr><th>Strategy</th><th>Ignores</th><th>Example</th></tr></thead>
+        <tbody>
+          <tr>
+            <td><code>exact</code></td>
+            <td>Nothing (after universal normalization)</td>
+            <td><code>/page#top</code> ≠ <code>/page#bottom</code></td>
+          </tr>
+          <tr>
+            <td><code>ignoreFragment</code></td>
+            <td>Fragment (<code>#...</code>)</td>
+            <td><code>/page#top</code> = <code>/page#bottom</code></td>
+          </tr>
+          <tr>
+            <td><code>ignoreQuery</code></td>
+            <td>Query string + fragment</td>
+            <td><code>/page?ref=tw</code> = <code>/page?ref=gh</code></td>
+          </tr>
+          <tr>
+            <td><code>ignoreAll</code></td>
+            <td>Query + fragment + trailing path differences</td>
+            <td>Origin + path only</td>
+          </tr>
+          <tr>
+            <td><code>originPath</code></td>
+            <td>Same as ignoreAll</td>
+            <td>Origin + path only</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>The default strategy is <strong>ignoreFragment</strong>, which works well for most sites.</p>
+
+      <h2 id="universal">Universal normalization <a href="#universal" class="anchor-link">#</a></h2>
+      <p>All strategies apply these normalizations before comparing:</p>
+      <ul>
+        <li>Lowercase the scheme and hostname (<code>HTTPS://GitHub.COM</code> &rarr; <code>https://github.com</code>)</li>
+        <li>Strip <code>www.</code> prefix (<code>www.example.com</code> &rarr; <code>example.com</code>)</li>
+        <li>Remove trailing slash (<code>/path/</code> &rarr; <code>/path</code>)</li>
+        <li>Decode unreserved percent-encoding (<code>%41</code> &rarr; <code>A</code>)</li>
+        <li>Sort query parameters alphabetically</li>
+      </ul>
+
+      <h2 id="per-rule">Per-rule strategy <a href="#per-rule" class="anchor-link">#</a></h2>
+      <p>Each rule can override the global default. This is useful when different sites need different levels of strictness:</p>
+      <ul>
+        <li>Use <code>exact</code> for single-page apps where fragments represent different views</li>
+        <li>Use <code>ignoreQuery</code> for sites that add tracking parameters</li>
+        <li>Use <code>ignoreAll</code> when you only care about the domain and path</li>
+      </ul>
+
+      <h2 id="bypass">Bypass methods <a href="#bypass" class="anchor-link">#</a></h2>
+      <p>When you intentionally want to open a duplicate:</p>
+      <ul>
+        <li><strong>Shift+click</strong> a link — the duplicate check is bypassed for that navigation</li>
+        <li><strong>Right-click &rarr; "Open in new tab (allow duplicate)"</strong> — context menu bypass</li>
+        <li><strong>"Open anyway"</strong> — click in the toast notification or popup after a duplicate is blocked</li>
+      </ul>
+
+      <h2 id="enable">Enabling duplicate prevention <a href="#enable" class="anchor-link">#</a></h2>
+      <ol>
+        <li>Open the Options page and go to <strong>Settings</strong></li>
+        <li>Check <strong>"Prevent duplicate tabs"</strong></li>
+        <li>Choose a default normalization strategy</li>
+        <li>Optionally override the strategy on individual rules in the rule editor</li>
+      </ol>
+
+      <div class="docs-nav-prev-next">
+        <a href="../rules/">&larr; Rule Reference</a>
+        <a href="../resources/" class="next">Resource Dashboard &rarr;</a>
+      </div>
+    </main>
+  </div>
+
+  <footer id="site-footer"></footer>
+
+  <script src="../../js/includes.js"></script>
+  <script src="../../js/nav.js"></script>
+</body>
+</html>
