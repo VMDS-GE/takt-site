@@ -109,7 +109,11 @@
         <li><strong>High request count</strong> — tabs with 500+ requests get a bonus</li>
       </ul>
       <p>The advisor excludes your active tab, pinned tabs, and tabs in groups with fewer than 2 tabs (to preserve the group).</p>
-      <p>Click <strong>"Discard"</strong> to unload a tab from memory. The tab stays in your tab bar but releases its resources. Clicking it reloads the page.</p>
+      <p>Click <strong>"Suspend"</strong> to unload a tab from memory. The tab stays in your tab bar but releases its resources. Clicking it reloads the page.</p>
+
+      <div class="callout">
+        <p><strong>Chrome still shows memory?</strong> After suspending a tab, Chrome's native tab hover card may still display a small memory footprint (typically 2–5 MB). This is normal — Chrome retains metadata for the tab's session history, favicon, and scroll position. The renderer process and JavaScript heap are fully released. Takt cannot control Chrome's native UI for this display.</p>
+      </div>
 
       <h2 id="permissions">Required permissions <a href="#permissions" class="anchor-link">#</a></h2>
       <p>The resource dashboard needs two optional permissions:</p>
