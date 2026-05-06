@@ -1,43 +1,78 @@
 :root {
-  --ink: #14172B;
-  --ink-2: #2A2F4A;
-  --paper: #F6F5F0;
-  --paper-2: #ECEBE5;
-  --accent: oklch(0.45 0.15 270);
-  --accent-hover: oklch(0.38 0.15 270);
-  --muted: #6B6E80;
-  --line: #D6D4CB;
+  /* Brand */
+  --red: #FF3B30;
+  --orange: #FF9500;
+  --yellow: #FFCC00;
+  --green: #34C759;
+  --teal: #5AC8FA;
+  --blue: #007AFF;
+  --indigo: #5856D6;
+  --purple: #AF52DE;
+  --pink: #FF2D55;
+
+  /* Neutrals */
+  --ink: #1D1D1F;
+  --ink-2: #3A3A3C;
+  --ink-3: #86868B;
+  --hairline: #E5E5E7;
+  --mist: #F5F5F7;
+  --warm: #FAFAFA;
+  --paper: #FFFFFF;
+
+  /* Semantic aliases */
+  --accent: var(--red);
+  --accent-hover: #E0321E;
+  --link: #007AFF;
+  --muted: var(--ink-3);
+  --line: var(--hairline);
+  --paper-2: var(--mist);
+  --code-bg: #0A0A0A;
+  --code-fg: #F5F5F7;
 
   --font-body: 'Inter', system-ui, -apple-system, sans-serif;
   --font-mono: 'JetBrains Mono', ui-monospace, monospace;
 
   --max-width-content: 720px;
   --max-width-wide: 960px;
-  --nav-height: 56px;
+  --nav-height: 52px;
 
-  --radius-sm: 6px;
-  --radius-md: 10px;
-  --radius-lg: 16px;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 24px;
 
   color-scheme: light dark;
 }
 
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
-    --ink: #F6F5F0;
+    --ink: #F5F5F7;
     --ink-2: #C8C6BF;
-    --paper: #14172B;
-    --paper-2: #1E2038;
-    --muted: #8A8D9E;
-    --line: #2A2F4A;
+    --ink-3: #98989D;
+    --paper: #1C1C1E;
+    --paper-2: #2C2C2E;
+    --mist: #2C2C2E;
+    --warm: #1C1C1E;
+    --hairline: rgba(84, 84, 88, 0.65);
+    --muted: #98989D;
+    --line: rgba(84, 84, 88, 0.65);
+    --link: #64D2FF;
+    --code-bg: #0A0A0A;
+    --code-fg: #F5F5F7;
   }
 }
 
 :root[data-theme="dark"] {
-  --ink: #F6F5F0;
+  --ink: #F5F5F7;
   --ink-2: #C8C6BF;
-  --paper: #14172B;
-  --paper-2: #1E2038;
-  --muted: #8A8D9E;
-  --line: #2A2F4A;
+  --ink-3: #98989D;
+  --paper: #1C1C1E;
+  --paper-2: #2C2C2E;
+  --mist: #2C2C2E;
+  --warm: #1C1C1E;
+  --hairline: rgba(84, 84, 88, 0.65);
+  --muted: #98989D;
+  --line: rgba(84, 84, 88, 0.65);
+  --link: #64D2FF;
+  --code-bg: #0A0A0A;
+  --code-fg: #F5F5F7;
 }

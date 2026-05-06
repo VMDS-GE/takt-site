@@ -1,6 +1,6 @@
 .docs-layout {
   display: grid;
-  grid-template-columns: 220px 1fr;
+  grid-template-columns: 240px 1fr;
   gap: 3rem;
   max-width: var(--max-width-wide);
   margin: 0 auto;
@@ -13,6 +13,8 @@
   align-self: start;
   max-height: calc(100vh - var(--nav-height) - 3rem);
   overflow-y: auto;
+  border-right: 1px solid var(--line);
+  padding-right: 1.5rem;
 }
 
 .docs-sidebar h4 {
@@ -33,12 +35,12 @@
 .docs-sidebar a {
   display: block;
   padding: 0.3rem 0.75rem;
-  font-size: 0.875rem;
+  font-size: 14px;
   color: var(--ink-2);
   border-radius: var(--radius-sm);
   text-decoration: none;
 }
-.docs-sidebar a:hover { color: var(--ink); background: var(--paper-2); }
+.docs-sidebar a:hover { color: var(--ink); background: var(--paper-2); text-decoration: none; }
 .docs-sidebar a.active {
   color: var(--ink);
   background: var(--paper-2);
@@ -51,37 +53,58 @@
 }
 
 .docs-content h1 {
-  font-size: 2rem;
+  font-size: 32px;
+  font-weight: 800;
+  letter-spacing: -0.035em;
   margin-bottom: 0.5rem;
 }
 
 .docs-content h2 {
-  margin-top: 2.5rem;
+  font-size: 24px;
+  margin-top: 64px;
   margin-bottom: 0.75rem;
   padding-top: 1rem;
   border-top: 1px solid var(--line);
 }
-.docs-content h2:first-of-type { border-top: none; padding-top: 0; }
+.docs-content h2:first-of-type { border-top: none; padding-top: 0; margin-top: 2.5rem; }
 
 .docs-content h3 {
-  margin-top: 1.5rem;
+  font-size: 18px;
+  margin-top: 40px;
   margin-bottom: 0.5rem;
 }
 
 .docs-content .lead {
-  font-size: 1.1rem;
+  font-size: 21px;
   color: var(--ink-2);
+  line-height: 1.45;
+  letter-spacing: -0.01em;
   margin-bottom: 2rem;
 }
 
 .docs-content .callout {
-  background: var(--paper-2);
-  border-left: 3px solid var(--accent);
+  background: var(--mist);
+  border-left: 4px solid var(--link);
   border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
   padding: 1rem 1.25rem;
   margin-bottom: 1.5rem;
   font-size: 0.925rem;
 }
+.docs-content .callout-warning {
+  background: #FFF8E0;
+  border-left-color: var(--orange);
+}
+.docs-content .callout-danger {
+  background: #FFF0EE;
+  border-left-color: var(--red);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .docs-content .callout-warning { background: rgba(255, 149, 0, 0.1); }
+  :root:not([data-theme="light"]) .docs-content .callout-danger { background: rgba(255, 59, 48, 0.1); }
+}
+:root[data-theme="dark"] .docs-content .callout-warning { background: rgba(255, 149, 0, 0.1); }
+:root[data-theme="dark"] .docs-content .callout-danger { background: rgba(255, 59, 48, 0.1); }
 .docs-content .callout p:last-child { margin-bottom: 0; }
 
 .docs-content .example-table {
@@ -103,6 +126,44 @@
 h2:hover .anchor-link,
 h3:hover .anchor-link { opacity: 1; }
 
+.docs-eyebrow {
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--red);
+  margin-bottom: 0.5rem;
+}
+
+.docs-next-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+  margin-top: 3rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--line);
+}
+.docs-next-card {
+  background: var(--mist);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  text-decoration: none;
+}
+.docs-next-card:hover { text-decoration: none; opacity: 0.85; }
+.docs-next-card .docs-eyebrow { margin-bottom: 0.35rem; }
+.docs-next-card h4 {
+  font-size: 21px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+  margin-bottom: 0.25rem;
+}
+.docs-next-card p {
+  font-size: 15px;
+  color: var(--ink-2);
+  margin-bottom: 0;
+}
+
 .docs-nav-prev-next {
   display: flex;
   justify-content: space-between;
@@ -114,7 +175,9 @@ h3:hover .anchor-link { opacity: 1; }
 .docs-nav-prev-next a {
   font-size: 0.9rem;
   font-weight: 500;
+  text-decoration: none;
 }
+.docs-nav-prev-next a:hover { text-decoration: none; }
 .docs-nav-prev-next .next { margin-left: auto; text-align: right; }
 
 @media (max-width: 960px) {
@@ -126,6 +189,8 @@ h3:hover .anchor-link { opacity: 1; }
   .docs-sidebar {
     position: static;
     max-height: none;
+    border-right: none;
+    padding-right: 0;
     border-bottom: 1px solid var(--line);
     padding-bottom: 1rem;
     margin-bottom: 2rem;

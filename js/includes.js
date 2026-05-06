@@ -21,8 +21,8 @@
       '<div class="header-inner">' +
         '<a href="' + b + '" class="site-logo">' +
           '<svg viewBox="0 0 64 64" width="24" height="24" aria-hidden="true">' +
-            '<rect x="8" y="8" width="48" height="48" rx="10" fill="none" stroke="currentColor" stroke-width="5"/>' +
-            '<rect x="22" y="22" width="20" height="20" rx="4" fill="currentColor"/>' +
+            '<rect x="8" y="8" width="48" height="48" rx="14" fill="none" stroke="currentColor" stroke-width="4.5"/>' +
+            '<rect x="22" y="22" width="20" height="20" rx="6" fill="currentColor"/>' +
           '</svg>' +
           '<span>Takt</span>' +
         '</a>' +

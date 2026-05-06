@@ -2,9 +2,20 @@
   position: sticky;
   top: 0;
   z-index: 100;
-  background: var(--paper);
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: saturate(180%) blur(20px);
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
   border-bottom: 1px solid var(--line);
   height: var(--nav-height);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .site-header {
+    background: rgba(28, 28, 30, 0.85);
+  }
+}
+:root[data-theme="dark"] .site-header {
+  background: rgba(28, 28, 30, 0.85);
 }
 
 .header-inner {
@@ -25,11 +36,12 @@
   color: var(--ink);
 }
 .site-logo:hover { text-decoration: none; }
-.site-logo svg { flex-shrink: 0; }
+.site-logo svg { flex-shrink: 0; color: var(--red); }
 .site-logo span {
   font-size: 1.125rem;
-  font-weight: 700;
-  letter-spacing: -0.025em;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  color: var(--red);
 }
 
 .nav-links {
@@ -41,14 +53,14 @@
   margin: 0;
 }
 .nav-links a {
-  font-size: 0.9rem;
+  font-size: 13px;
   font-weight: 500;
   color: var(--ink-2);
   text-decoration: none;
   transition: color 0.15s;
 }
 .nav-links a:hover,
-.nav-links a.active { color: var(--ink); }
+.nav-links a.active { color: var(--ink); text-decoration: none; }
 
 .nav-toggle {
   display: none;
@@ -100,8 +112,9 @@
 .footer-col a {
   font-size: 0.9rem;
   color: var(--ink-2);
+  text-decoration: none;
 }
-.footer-col a:hover { color: var(--ink); }
+.footer-col a:hover { color: var(--ink); text-decoration: none; }
 
 .footer-bottom {
   max-width: var(--max-width-wide);
@@ -123,7 +136,7 @@
 
 .page-hero {
   text-align: center;
-  padding: 4rem 1.5rem;
+  padding: 5rem 1.5rem 4rem;
   max-width: var(--max-width-content);
   margin: 0 auto;
 }
