@@ -120,11 +120,39 @@
 .comparison-table td:not(:first-child) { text-align: center; font-size: 0.9rem; }
 .comparison-table .check { color: var(--green); font-weight: 700; }
 .comparison-table .cross { color: var(--muted); }
-.comparison-table .pricing-row td {
+.cta-row {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.btn-cta {
+  display: inline-block;
+  padding: 14px 32px;
+  border: none;
+  border-radius: 999px;
+  font-size: 17px;
   font-weight: 700;
-  font-size: 1rem;
-  border-bottom: none;
-  padding-top: 1rem;
+  cursor: pointer;
+  background: var(--ink);
+  color: #fff;
+  text-decoration: none;
+  transition: opacity 0.15s ease, transform 0.1s ease;
+  letter-spacing: -0.01em;
+}
+
+.btn-cta:hover { opacity: 0.88; }
+.btn-cta:active { transform: scale(0.97); }
+
+.btn-cta-annual {
+  background: linear-gradient(135deg, #ff9f0a, #ff6723);
+}
+
+.cta-save {
+  font-size: 12px;
+  font-weight: 400;
+  opacity: 0.9;
 }
 
 .section {
