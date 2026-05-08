@@ -1,10 +1,19 @@
 (function () {
   var KEY = 'takt-theme';
   var cycle = { light: 'dark', dark: 'system', system: 'light' };
+  var icons = { light: '☀', dark: '☾', system: '◑' };
+  var labels = {
+    light: 'Switch to dark mode',
+    dark: 'Switch to system mode',
+    system: 'Switch to light mode',
+  };
 
   function getStored() {
-    try { return localStorage.getItem(KEY) || 'system'; }
-    catch (_) { return 'system'; }
+    try {
+      return localStorage.getItem(KEY) || 'system';
+    } catch (_) {
+      return 'system';
+    }
   }
 
   function apply(theme) {
@@ -19,8 +28,6 @@
   function updateIcon(theme) {
     var btn = document.getElementById('theme-toggle');
     if (!btn) return;
-    var icons = { light: '☀', dark: '☾', system: '◑' };
-    var labels = { light: 'Switch to dark mode', dark: 'Switch to system mode', system: 'Switch to light mode' };
     btn.textContent = icons[theme];
     btn.setAttribute('aria-label', labels[theme]);
   }
@@ -35,7 +42,9 @@
     if (btn) {
       btn.addEventListener('click', function () {
         current = cycle[current] || 'light';
-        try { localStorage.setItem(KEY, current); } catch (_) {}
+        try {
+          localStorage.setItem(KEY, current);
+        } catch (_) {}
         apply(current);
       });
     }
