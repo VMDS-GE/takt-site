@@ -1,171 +1,24 @@
-*,
-*::before,
-*::after {
+*, *::before, *::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
 html {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
   scroll-behavior: smooth;
-  scroll-padding-top: calc(var(--nav-height) + 24px);
+  scroll-padding-top: calc(var(--nav-height) + 1rem);
 }
 
 body {
   font-family: var(--font-body);
   font-size: 17px;
-  line-height: 1.5;
+  line-height: 1.65;
   color: var(--ink);
   background: var(--paper);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
-
-::selection {
-  background: var(--red);
-  color: white;
-}
-
-img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-}
-
-a {
-  color: var(--blue);
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-:focus-visible {
-  outline: 2px solid var(--blue);
-  outline-offset: 2px;
-}
-
-.skip-link {
-  position: absolute;
-  top: -100%;
-  left: 16px;
-  padding: 8px 16px;
-  background: var(--ink);
-  color: var(--paper);
-  border-radius: var(--radius-sm);
-  z-index: 200;
-  font-size: 14px;
-  font-weight: 600;
-}
-
-.skip-link:focus {
-  top: 8px;
-}
-
-.display {
-  font-size: 96px;
-  font-weight: 800;
-  line-height: 1.02;
-  letter-spacing: -0.045em;
-}
-
-.headline {
-  font-size: 56px;
-  font-weight: 800;
-  line-height: 1.07;
-  letter-spacing: -0.035em;
-}
-
-.title {
-  font-size: 32px;
-  font-weight: 700;
-  line-height: 1.15;
-  letter-spacing: -0.02em;
-}
-
-.lede {
-  font-size: 21px;
-  font-weight: 400;
-  line-height: 1.45;
-  letter-spacing: -0.01em;
-}
-
-.small {
-  font-size: 15px;
-  line-height: 1.5;
-}
-
-.caption {
-  font-size: 13px;
-  line-height: 1.5;
-}
-
-.text-red { color: var(--red); }
-.text-ink-2 { color: var(--ink-2); }
-.text-ink-3 { color: var(--ink-3); }
-
-.btn-primary {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  background: var(--red);
-  color: white;
-  padding: 14px 28px;
-  border-radius: var(--radius-btn);
-  font-weight: 600;
-  font-size: 17px;
-  letter-spacing: -0.01em;
-  border: none;
-  cursor: pointer;
-  text-decoration: none;
-  transition: opacity 0.15s;
-}
-
-.btn-primary:hover {
-  opacity: 0.88;
-  text-decoration: none;
-}
-
-.btn-secondary {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  background: var(--mist);
-  color: var(--ink);
-  padding: 14px 28px;
-  border-radius: var(--radius-btn);
-  font-weight: 600;
-  font-size: 17px;
-  letter-spacing: -0.01em;
-  border: none;
-  cursor: pointer;
-  text-decoration: none;
-  transition: background 0.15s;
-}
-
-.btn-secondary:hover {
-  background: var(--hairline);
-  text-decoration: none;
-}
-
-@media (max-width: 768px) {
-  .display {
-    font-size: 48px;
-    letter-spacing: -0.035em;
-  }
-
-  .headline {
-    font-size: 36px;
-    letter-spacing: -0.03em;
-  }
-
-  .title {
-    font-size: 24px;
-  }
-}
-
-/* Document content styles (used by docs/, getting-started/, privacy/ subpages) */
 
 h1, h2, h3, h4 {
   font-weight: 700;
@@ -174,7 +27,17 @@ h1, h2, h3, h4 {
   color: var(--ink);
 }
 
+h1 { font-size: 56px; font-weight: 800; letter-spacing: -0.035em; line-height: 1.07; }
+h2 { font-size: 32px; letter-spacing: -0.02em; }
+h3 { font-size: 21px; letter-spacing: -0.01em; }
+
 p { margin-bottom: 1rem; }
+
+a {
+  color: var(--link);
+  text-decoration: none;
+}
+a:hover { text-decoration: underline; }
 
 code {
   font-family: var(--font-mono);
@@ -187,15 +50,14 @@ code {
 pre {
   font-family: var(--font-mono);
   font-size: 13px;
-  background: #0A0A0A;
-  color: #F5F5F7;
+  background: var(--code-bg);
+  color: var(--code-fg);
   border-radius: 16px;
   padding: 24px;
   overflow-x: auto;
   margin-bottom: 1.5rem;
   line-height: 1.5;
 }
-
 pre code {
   background: none;
   border: none;
@@ -204,19 +66,25 @@ pre code {
   color: inherit;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 24px;
+  border: 1px solid var(--line);
+}
+
 table {
   width: 100%;
   border-collapse: collapse;
   margin-bottom: 1.5rem;
 }
-
 th, td {
   text-align: left;
   padding: 0.6rem 0.75rem;
-  border-bottom: 1px solid var(--hairline);
+  border-bottom: 1px solid var(--line);
   font-size: 0.925rem;
 }
-
 th {
   font-weight: 600;
   color: var(--ink-2);
@@ -226,11 +94,15 @@ ul, ol {
   padding-left: 1.25rem;
   margin-bottom: 1rem;
 }
-
 li { margin-bottom: 0.35rem; }
 
 hr {
   border: none;
-  border-top: 1px solid var(--hairline);
+  border-top: 1px solid var(--line);
   margin: 2rem 0;
+}
+
+::selection {
+  background: var(--accent);
+  color: var(--paper);
 }
