@@ -123,12 +123,17 @@
       </div>
 
       <h2 id="permissions">Required permissions <a href="#permissions" class="anchor-link">#</a></h2>
-      <p>The resource dashboard needs two optional permissions:</p>
+      <p>The resource dashboard needs two optional permissions to show full data:</p>
       <ul>
-        <li><code>webRequest</code> + <code>&lt;all_urls&gt;</code> — to monitor network requests per tab</li>
-        <li><code>system.memory</code> — to show total system memory</li>
+        <li><code>&lt;all_urls&gt;</code> (All website access) — to <strong>measure per-tab memory</strong> and monitor network requests. Without this, the Memory column shows <code>—</code> for all tabs.</li>
+        <li><code>webRequest</code> — to count network requests and detect background activity per tab.</li>
+        <li><code>system.memory</code> — to show the total system memory bar at the top of the dashboard.</li>
       </ul>
-      <p>These are requested when you first open the dashboard. You can revoke them at any time from <a href="../permissions/">Settings &rarr; Permissions</a>.</p>
+      <p>Grant these in <strong>Settings &rarr; Permissions</strong>. You can revoke them at any time from the same page.</p>
+
+      <div class="callout">
+        <p><strong>Memory shows "—"?</strong> This means the <code>&lt;all_urls&gt;</code> permission is not granted. Takt injects a lightweight script into each tab to sample its memory — without host access, the measurement cannot run. Go to <strong>Settings &rarr; Permissions</strong> and grant <em>All website access</em>. Memory values will appear on the next dashboard refresh (within 10 seconds).</p>
+      </div>
 
       <div class="docs-nav-prev-next">
         <a href="../duplicates/">&larr; Duplicate Prevention</a>

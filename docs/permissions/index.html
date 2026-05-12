@@ -66,8 +66,13 @@
         <thead><tr><th>Permission</th><th>Why</th><th>Triggered by</th></tr></thead>
         <tbody>
           <tr>
-            <td><code>webRequest</code> + <code>&lt;all_urls&gt;</code></td>
-            <td>Monitor network requests for the resource dashboard</td>
+            <td><code>&lt;all_urls&gt;</code></td>
+            <td>Measure per-tab memory and monitor network requests in the resource dashboard. Also enables in-page prompts in Manual automation mode.</td>
+            <td>Opening the resource dashboard or enabling Manual mode</td>
+          </tr>
+          <tr>
+            <td><code>webRequest</code></td>
+            <td>Count network requests and detect background activity per tab in the resource dashboard.</td>
             <td>Opening the resource dashboard</td>
           </tr>
           <tr>
