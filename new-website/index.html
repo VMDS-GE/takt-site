@@ -98,7 +98,7 @@
       <div class="container">
         <svg width="64" height="64" class="hero-mark"><use href="#takt-mark"/></svg>
         <h1 class="display">Tabs, <span class="text-red">sorted</span>.</h1>
-        <p class="lede">A quieter browser. Set rules that group your tabs, prevent duplicates, and track resource usage. Everything stays local.</p>
+        <p class="lede">Auto-group tabs by URL rule. Find any tab with Alt+Shift+Space. Prevent duplicates, reclaim memory. All local — no account, no telemetry.</p>
         <div class="hero-actions">
           <a href="https://chromewebstore.google.com/detail/takt/plgfdnbgkjocmgegnkbihoeojcfphdic" class="btn-primary">Add to Chrome — it's free</a>
         </div>
@@ -150,10 +150,70 @@
         </div>
       </div>
 
-      <!-- Feature B: Duplicate Prevention -->
+      <!-- Feature B: Quick Switch -->
       <div class="section">
         <div class="container">
           <div class="feature-row feature-row-reverse">
+            <div class="feature-screenshot">
+              <div class="qs-shortcut-row">
+                <kbd>Alt</kbd>
+                <span class="qs-plus">+</span>
+                <kbd>Shift</kbd>
+                <span class="qs-plus">+</span>
+                <kbd>Space</kbd>
+              </div>
+              <div class="qs-mock">
+                <div class="qs-mock-bar">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+                  </svg>
+                  <span class="qs-mock-typed">github</span><span class="qs-mock-cursor"></span>
+                </div>
+                <div class="qs-mock-results">
+                  <div class="qs-mock-row qs-mock-active">
+                    <span class="qs-mock-dot" style="background:#007AFF"></span>
+                    <span class="qs-mock-title"><mark>github</mark>.com/pulls</span>
+                    <span class="qs-mock-chip" style="background:#007AFF">Dev</span>
+                  </div>
+                  <div class="qs-mock-row">
+                    <span class="qs-mock-dot" style="background:#007AFF"></span>
+                    <span class="qs-mock-title"><mark>github</mark>.com/issues</span>
+                    <span class="qs-mock-chip" style="background:#007AFF">Dev</span>
+                  </div>
+                  <div class="qs-mock-row">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="qs-mock-hist-icon" aria-hidden="true">
+                      <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
+                    </svg>
+                    <span class="qs-mock-title qs-mock-hist-title"><mark>github</mark>.com/notifications</span>
+                    <span class="qs-mock-hist-tag">History</span>
+                  </div>
+                </div>
+                <div class="qs-mock-hints">
+                  <span>↑↓ navigate</span>
+                  <span>↵ jump</span>
+                  <span>Esc dismiss</span>
+                </div>
+              </div>
+            </div>
+            <div class="feature-text">
+              <span class="eyebrow" style="color: var(--red)">Quick Switch</span>
+              <h2 class="title">Find any tab. Instantly.</h2>
+              <p>Press Alt+Shift+Space anywhere in Chrome. A fuzzy-search overlay appears — type a few letters and jump without touching your mouse. Searches all open tabs by title and URL. Premium extends results to hibernated tabs and your full browsing history.</p>
+              <div class="feature-tags">
+                <span class="feature-tag">fuzzy search</span>
+                <span class="feature-tag">hibernated tabs</span>
+                <span class="feature-tag">history search</span>
+                <span class="feature-tag">keyboard-only</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Feature C: Duplicate Prevention -->
+      <div class="section">
+        <div class="container">
+          <div class="feature-row">
             <div class="feature-screenshot">
               <div class="screenshot-placeholder">(Screenshot: Duplicate prevention toast)</div>
             </div>
@@ -166,10 +226,10 @@
         </div>
       </div>
 
-      <!-- Feature C: Resource Dashboard -->
+      <!-- Feature D: Resource Dashboard -->
       <div class="section">
         <div class="container">
-          <div class="feature-row">
+          <div class="feature-row feature-row-reverse">
             <div class="feature-screenshot">
               <div class="screenshot-placeholder">(Screenshot: Resource dashboard)</div>
             </div>
@@ -182,10 +242,10 @@
         </div>
       </div>
 
-      <!-- Feature D: Hibernation -->
+      <!-- Feature E: Hibernation -->
       <div class="section">
         <div class="container">
-          <div class="feature-row feature-row-reverse">
+          <div class="feature-row">
             <div class="feature-screenshot">
               <div class="screenshot-placeholder">(Screenshot: Hibernate pane in popup)</div>
             </div>
@@ -213,16 +273,6 @@
         <p class="lede">The details that make the difference.</p>
 
         <div class="grid-cards">
-
-          <div class="grid-card">
-            <div class="grid-card-icon">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
-              </svg>
-            </div>
-            <h3>Find any tab</h3>
-            <p>Press Alt+Shift+Space. Search open tabs and hibernated tabs in one overlay. Premium also searches your browsing history. Type, navigate with arrows, hit Enter to jump.</p>
-          </div>
 
           <div class="grid-card">
             <div class="grid-card-icon">
