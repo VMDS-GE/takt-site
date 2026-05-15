@@ -145,9 +145,11 @@
   overflow: hidden;
 }
 
-.feature-screenshot img {
+.feature-screenshot img,
+.feature-screenshot video {
   width: 100%;
   border-radius: 12px;
+  display: block;
 }
 
 .feature-screenshot .screenshot-placeholder {
