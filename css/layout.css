@@ -128,6 +128,12 @@
   display: block;
 }
 
+.mobile-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
 .mobile-nav a {
   display: block;
   padding: 12px 0;

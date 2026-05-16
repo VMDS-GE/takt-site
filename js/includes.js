@@ -39,20 +39,26 @@
             '<path d="M3 6h18M3 12h18M3 18h18"/>' +
           '</svg>' +
         '</button>' +
-      '</div>' +
-      '<div class="mobile-nav" role="navigation">' +
-        '<ul>' +
-          '<li><a href="' + b + '">Home</a></li>' +
-          '<li><a href="' + b + 'getting-started/">Get Started</a></li>' +
-          '<li><a href="' + b + 'docs/rules/">Rule Reference</a></li>' +
-          '<li><a href="' + b + 'docs/duplicates/">Duplicates</a></li>' +
-          '<li><a href="' + b + 'docs/resources/">Resources</a></li>' +
-          '<li><a href="' + b + 'docs/profiles/">Profiles</a></li>' +
-          '<li><a href="' + b + 'docs/shortcuts/">Shortcuts</a></li>' +
-          '<li><a href="' + b + 'docs/permissions/">Permissions</a></li>' +
-          '<li><a href="' + b + 'privacy/">Privacy</a></li>' +
-        '</ul>' +
       '</div>';
+
+    // Inject mobile nav as a sibling of the header to avoid backdrop-filter
+    // creating a containing block that traps fixed-position children.
+    var mobileNav = document.createElement('div');
+    mobileNav.className = 'mobile-nav';
+    mobileNav.setAttribute('role', 'navigation');
+    mobileNav.innerHTML =
+      '<ul>' +
+        '<li><a href="' + b + '">Home</a></li>' +
+        '<li><a href="' + b + 'getting-started/">Get Started</a></li>' +
+        '<li><a href="' + b + 'docs/rules/">Rule Reference</a></li>' +
+        '<li><a href="' + b + 'docs/duplicates/">Duplicates</a></li>' +
+        '<li><a href="' + b + 'docs/resources/">Resources</a></li>' +
+        '<li><a href="' + b + 'docs/profiles/">Profiles</a></li>' +
+        '<li><a href="' + b + 'docs/shortcuts/">Shortcuts</a></li>' +
+        '<li><a href="' + b + 'docs/permissions/">Permissions</a></li>' +
+        '<li><a href="' + b + 'privacy/">Privacy</a></li>' +
+      '</ul>';
+    el.parentNode.insertBefore(mobileNav, el.nextSibling);
   }
 
   function injectFooter(b) {
