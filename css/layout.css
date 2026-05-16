@@ -119,7 +119,7 @@
   right: 0;
   bottom: 0;
   background: var(--paper);
-  z-index: 99;
+  z-index: 101;
   padding: 24px var(--gutter);
   overflow-y: auto;
 }
