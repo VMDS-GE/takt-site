@@ -1,6 +1,6 @@
 (function () {
   document.addEventListener('DOMContentLoaded', function () {
-    var toggle = document.querySelector('.nav-toggle');
+    var toggle = document.querySelector('.nav-hamburger') || document.querySelector('.nav-toggle');
     var mobileNav = document.querySelector('.mobile-nav');
     if (!toggle || !mobileNav) return;
 
@@ -23,7 +23,7 @@
 
   function highlightActive() {
     var path = window.location.pathname;
-    var links = document.querySelectorAll('.nav-links a, .mobile-nav a, .docs-sidebar a');
+    var links = document.querySelectorAll('.nav-links a, .nav-center a, .mobile-nav a, .docs-sidebar a');
     links.forEach(function (link) {
       var href = link.getAttribute('href');
       if (!href) return;
