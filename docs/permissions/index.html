@@ -51,6 +51,7 @@
       <table>
         <thead><tr><th>Permission</th><th>Why</th></tr></thead>
         <tbody>
+          <tr><td><code>activeTab</code></td><td>Read the current tab when you trigger a popup action (e.g. hibernate this tab, create a rule from it)</td></tr>
           <tr><td><code>tabs</code></td><td>Read tab URLs and titles to match against your rules</td></tr>
           <tr><td><code>tabGroups</code></td><td>Create and manage Chrome tab groups</td></tr>
           <tr><td><code>storage</code></td><td>Save your rules, settings, and profiles</td></tr>
@@ -87,6 +88,21 @@
             <td>Show total system memory in the resource dashboard</td>
             <td>Opening the resource dashboard</td>
           </tr>
+          <tr>
+            <td><code>identity</code></td>
+            <td>Obtain an OAuth token to read and write Takt's private sync file in your Google Drive App Data folder. No other Drive files are accessed.</td>
+            <td>Enabling Google Drive Sync</td>
+          </tr>
+          <tr>
+            <td><code>bookmarks</code></td>
+            <td>Create a "Takt Bookmarks" folder and save a group's tabs as bookmarks. No existing bookmarks are read or modified.</td>
+            <td>Using "Save group as bookmarks"</td>
+          </tr>
+          <tr>
+            <td><code>history</code></td>
+            <td>Search your browsing history in Quick Switch (Alt+Shift+Space) and surface frequently-visited domains in rule suggestions. History data is never stored beyond the session or transmitted externally.</td>
+            <td>Enabling browsing history search</td>
+          </tr>
         </tbody>
       </table>
 
@@ -102,7 +118,7 @@
 
       <h2 id="never-access">What Takt never accesses <a href="#never-access" class="anchor-link">#</a></h2>
       <ul>
-        <li>Browsing history or URLs you visit (beyond matching against your rules)</li>
+        <li>Browsing history — unless you explicitly grant the optional <code>history</code> permission</li>
         <li>Page content or form data</li>
         <li>Personal information (name, email, etc.)</li>
         <li>Cookies or authentication tokens</li>
