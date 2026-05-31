@@ -38,7 +38,7 @@
 
     <main class="docs-content">
       <h1>Privacy Policy</h1>
-      <p class="lead" style="color: var(--muted); font-size: 0.9rem;">Last updated: May 2, 2026</p>
+      <p class="lead" style="color: var(--muted); font-size: 0.9rem;">Last updated: May 30, 2026</p>
 
       <h2 id="summary">Summary <a href="#summary" class="anchor-link">#</a></h2>
       <p>Takt does not collect, transmit, or store your personal data on any external server. All extension data stays in your browser's local storage. The only network communication is license validation for paid features, handled by a third-party payment processor.</p>
@@ -61,6 +61,11 @@
       </table>
 
       <p><code>chrome.storage.sync</code> data may be synced across your Chrome instances via your Google account if Chrome Sync is enabled. This is a Chrome platform feature, not controlled by Takt.</p>
+
+      <h2 id="interaction-tracking">Interaction tracking <a href="#interaction-tracking" class="anchor-link">#</a></h2>
+      <p>The staleness reporter content script listens for <code>click</code>, <code>scroll</code>, and <code>keydown</code> events on each active tab. When any of those events occurs, the script records a single Unix-millisecond timestamp (<code>Date.now()</code>) and transmits it to the extension's service worker at most once every 30 seconds — and only if a new interaction has occurred since the last report. Tabs with no user interaction generate zero reports.</p>
+      <p>The transmitted payload contains exactly one data field: the integer timestamp. No other information is included. Specifically, the staleness reporter does <strong>not</strong> read page text, form values, keystroke characters, the tab URL, the page title, or any DOM node content. The <code>keydown</code> listener only records that <em>a</em> key was pressed, not which key.</p>
+      <p>This data stays within the extension: it is used solely to determine whether a tab is stale and is never sent to any external server.</p>
 
       <h2 id="not-collected">What data Takt does NOT collect <a href="#not-collected" class="anchor-link">#</a></h2>
       <ul>
