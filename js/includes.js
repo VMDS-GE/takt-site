@@ -30,6 +30,7 @@
           '<ul class="nav-links">' +
             '<li><a href="' + b + 'getting-started/">Get Started</a></li>' +
             '<li><a href="' + b + 'docs/rules/">Docs</a></li>' +
+            '<li><a href="' + b + 'blog/">Blog</a></li>' +
             '<li><a href="' + b + 'privacy/">Privacy</a></li>' +
             '<li><button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">◑</button></li>' +
           '</ul>' +
@@ -56,6 +57,7 @@
         '<li><a href="' + b + 'docs/profiles/">Profiles</a></li>' +
         '<li><a href="' + b + 'docs/shortcuts/">Shortcuts</a></li>' +
         '<li><a href="' + b + 'docs/permissions/">Permissions</a></li>' +
+        '<li><a href="' + b + 'blog/">Blog</a></li>' +
         '<li><a href="' + b + 'privacy/">Privacy</a></li>' +
       '</ul>';
     el.parentNode.insertBefore(mobileNav, el.nextSibling);
@@ -72,6 +74,7 @@
           '<ul>' +
             '<li><a href="' + b + '">Home</a></li>' +
             '<li><a href="' + b + 'getting-started/">Get Started</a></li>' +
+            '<li><a href="' + b + 'blog/">Blog</a></li>' +
             '<li><a href="' + b + 'privacy/">Privacy Policy</a></li>' +
           '</ul>' +
         '</div>' +
