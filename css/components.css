@@ -586,3 +586,41 @@ kbd {
   color: var(--ink-3);
   margin-top: 20px;
 }
+
+/* Newsletter Form */
+
+.newsletter-form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.newsletter-form label {
+  font-size: 14px;
+  color: var(--ink-2);
+}
+
+.newsletter-form input[type="email"] {
+  width: 100%;
+  padding: 8px 12px;
+  border: 1px solid var(--hairline);
+  border-radius: var(--radius-sm);
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 14px;
+  box-sizing: border-box;
+  outline: none;
+}
+
+.newsletter-form button {
+  align-self: flex-start;
+  padding: 8px 16px;
+  background: var(--red);
+  color: var(--paper);
+  border: none;
+  border-radius: var(--radius-btn);
+  font-family: var(--font-body);
+  font-size: 14px;
+  cursor: pointer;
+}
