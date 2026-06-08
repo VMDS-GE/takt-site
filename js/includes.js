@@ -89,12 +89,6 @@
             '<li><a href="' + b + 'docs/permissions/">Permissions</a></li>' +
           '</ul>' +
         '</div>' +
-        '<div class="footer-col">' +
-          '<h4>Links</h4>' +
-          '<ul>' +
-            '<li><a href="https://github.com/VMDS-GE/takt-site" rel="noopener">GitHub</a></li>' +
-          '</ul>' +
-        '</div>' +
       '</div>' +
       '<div class="footer-bottom">' +
         '<span>&copy; ' + new Date().getFullYear() + ' Takt. Built with Manifest V3.</span>' +
