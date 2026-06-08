@@ -90,6 +90,13 @@
   overflow: hidden;
 }
 
+.blog-post-body figure img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+
 .blog-post-body figcaption {
   color: var(--ink-3);
   font-size: 0.875rem;
