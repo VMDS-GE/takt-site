@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Match tabs by URL and title at the same time — Takt</title>
+  <meta name="description" content="Single-condition rules sort by domain. Compound AND/OR rules sort by context: authored PRs, draft docs, specific Slack channels. Here's how to set them up.">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon-16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../assets/apple-touch-icon.png">
+
+  <meta name="theme-color" content="#FF3B30">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/tokens.css">
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/layout.css">
+  <link rel="stylesheet" href="../css/blog.css">
+
+  <script src="../js/theme.js"></script>
+</head>
+<body>
+  <header id="site-header"></header>
+
+  <main class="blog-main">
+    <article class="blog-post">
+      <h1 class="blog-post-title">Match tabs by URL and title at the same time</h1>
+      <p class="blog-post-meta">June 2026 · 5 min read</p>
+      <div class="blog-post-body">
+        <p>
+          Most tab rules look at one thing: the URL. That works for 80% of cases. The other 20% is
+          where tabs share a domain but belong to different contexts, like Reddit.
+        </p>
+        <p>
+          Compound rules in Takt let you match on URL <strong>and</strong> title (or any combination,
+          AND/OR). That covers the cases a single-condition rule can't.
+        </p>
+        <p>
+          This is a <a href="https://taktabs.com/#pricing">Premium</a> feature.
+        </p>
+
+        <h2>When a single condition isn't enough</h2>
+        <p>
+          A few real cases where URL alone doesn't tell you which group a tab belongs to:
+        </p>
+        <ul>
+          <li><strong>GitHub/GitLab PRs/MRs you authored vs PRs/MRs you're reviewing.</strong> Same domain, same pull path but different mental context. Authoring is "in flight." Reviewing is "todo."</li>
+          <li><strong>Google Docs drafts vs published docs.</strong> Same <code>docs.google.com</code>. The title is <code>[DRAFT] X</code> or <code>X</code> for example.</li>
+          <li><strong>Linear issues assigned to you vs everyone else's.</strong> Same workspace URL. Title contains your name or doesn't.</li>
+          <li><strong>Slack channels by team.</strong> Same <code>app.slack.com</code>. The title carries the channel name: <code>#eng-backend - Acme Slack</code>.</li>
+        </ul>
+        <p>
+          Each of these needs two pieces of info to sort correctly. Those are just examples that are
+          highly software-development oriented, but you can apply the same principles to many other
+          domains that are not necessarily related to a particular profession.
+        </p>
+
+        <h2>How a compound rule looks</h2>
+        <p>
+          Open Takt, go to "Manage rules," click "+ New rule." Switch the condition block to
+          <strong>AND</strong> (or <strong>OR</strong>, depending on what you need). Add multiple conditions.
+        </p>
+        <p>
+          Example with a "My open PRs" rule:
+        </p>
+        <ul>
+          <li><strong>Condition 1:</strong> URL contains <code>github.com/&lt;yourusername&gt;/&lt;yourrepository&gt;/pull/</code></li>
+          <li><strong>Condition 2:</strong> Title contains <code>[your username]</code></li>
+          <li><strong>Group:</strong> My PRs</li>
+          <li><strong>Color:</strong> red</li>
+        </ul>
+        <figure>
+          <img src="../assets/screenshots/compound-and-or-rules-github-example.png" alt="Takt GitHub example for pull tabs" loading="lazy">
+          <figcaption>Rule creation example to capture Takt GitHub example for pull tabs.</figcaption>
+        </figure>
+        <p>
+          Now every PR with you in the title lands in red. Every other PR you happen to open lands
+          in the regular Dev group via your domain rule.
+        </p>
+
+        <h2>Three setups that pay off immediately</h2>
+
+        <h3>Drafts vs published Google Docs</h3>
+        <ul>
+          <li><strong>Domain:</strong> <code>docs.google.com</code></li>
+          <li>AND</li>
+          <li><strong>Title contains:</strong> <code>[DRAFT]</code></li>
+          <li><strong>Group:</strong> Drafts (orange)</li>
+        </ul>
+        <p>
+          Anything you tag with <code>[DRAFT]</code> in the doc title gets pulled into Drafts. The
+          rest stay in your normal Docs group.
+        </p>
+
+        <h3>Authored PRs vs review queue</h3>
+        <ul>
+          <li><strong>URL contains:</strong> <code>github.com/&lt;yourusername&gt;/&lt;yourrepository&gt;/pull/</code></li>
+          <li>AND</li>
+          <li><strong>Title contains:</strong> <code>[your username]</code></li>
+          <li><strong>Group:</strong> My PRs (red)</li>
+        </ul>
+
+        <h3>One Slack workspace, multiple project channels</h3>
+        <ul>
+          <li><strong>Domain:</strong> <code>acme.slack.com</code></li>
+          <li>AND</li>
+          <li><strong>Title contains:</strong> <code>#project-alpha</code></li>
+          <li><strong>Group:</strong> Alpha (purple)</li>
+        </ul>
+        <p>
+          Repeat per project. All your Acme Slack tabs route to the right project group based on
+          which channel is open.
+        </p>
+
+        <h2>OR for catch-alls</h2>
+        <p>
+          OR is useful when several distinct conditions all belong in the same bucket.
+        </p>
+        <p>
+          <strong>All your monitoring tabs in one group:</strong>
+        </p>
+        <ul>
+          <li>URL contains: <code>datadoghq.com</code></li>
+          <li>OR</li>
+          <li>URL contains: <code>grafana.internal</code></li>
+          <li>OR</li>
+          <li>URL contains: <code>sentry.io</code></li>
+          <li><strong>Group:</strong> Monitoring (orange)</li>
+        </ul>
+        <figure>
+          <img src="../assets/screenshots/compound-and-or-rules-monitoring-example.png" alt="Takt example for a simple monitoring rule" loading="lazy">
+          <figcaption>Simple rule creation example to capture in a dedicated group tabs belonging to monitoring systems.</figcaption>
+        </figure>
+        <p>
+          You could write three separate rules, but OR keeps it as one rule for the same group.
+          Easier to manage and only counts as one rule against your quota.
+        </p>
+
+        <h2>What this actually fixes</h2>
+        <p>
+          Single-condition rules force a choice: either everything from a domain goes into one group,
+          or you have to manually move the exceptions.
+        </p>
+        <p>
+          Compound rules let you describe context: "GitHub PRs where I'm the author" is a context,
+          "Google Docs in draft state" is another one. The URL and title alone can't see it, but
+          together they can.
+        </p>
+        <p>
+          A few practical notes:
+        </p>
+        <ul>
+          <li><strong>Title matching is also a Premium feature</strong> on its own, useful even without AND/OR.</li>
+          <li><strong>Specificity matters.</strong> A compound rule with three AND conditions runs against fewer tabs, so order from cheapest to most specific in your head when you write them.</li>
+          <li><strong>Why this is a Premium feature.</strong> Simple rules sort by where a tab lives. Compound rules sort by what it is: "PRs I authored", "docs in draft", "channel #project-alpha." That's a different category of capability, and a different category of work for the matcher (observing title changes, evaluating multiple conditions on every tab event). The free tier covers location-based sorting because that's enough for basic users. Compound matching is a more advanced capability that benefits power users.</li>
+        </ul>
+        <p>
+          <a href="https://chromewebstore.google.com/detail/takt/plgfdnbgkjocmgegnkbihoeojcfphdic">Add Takt to Chrome</a> — it's free, no account needed. Nothing leaves your browser.
+        </p>
+      </div>
+      <footer class="blog-post-footer">
+        <a href="../blog/">Back to blog</a>
+      </footer>
+    </article>
+  </main>
+
+  <footer id="site-footer"></footer>
+
+  <script src="../js/includes.js"></script>
+  <script src="../js/nav.js"></script>
+</body>
+</html>
