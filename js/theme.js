@@ -27,17 +27,28 @@
 
   apply(getStored());
 
-  document.addEventListener('DOMContentLoaded', function () {
+  function bindToggle() {
     var current = getStored();
     updateIcon(current);
 
     var btn = document.getElementById('theme-toggle');
-    if (btn) {
-      btn.addEventListener('click', function () {
-        current = cycle[current] || 'light';
-        try { localStorage.setItem(KEY, current); } catch (_) {}
-        apply(current);
-      });
+    if (!btn) return;
+    btn.addEventListener('click', function () {
+      current = cycle[current] || 'light';
+      try { localStorage.setItem(KEY, current); } catch (_) {}
+      apply(current);
+    });
+  }
+
+  document.addEventListener('DOMContentLoaded', function () {
+    bindToggle();
+    if (!document.getElementById('theme-toggle')) {
+      new MutationObserver(function (_, obs) {
+        if (document.getElementById('theme-toggle')) {
+          bindToggle();
+          obs.disconnect();
+        }
+      }).observe(document.body, { childList: true, subtree: true });
     }
   });
 })();
