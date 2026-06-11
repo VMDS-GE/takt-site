@@ -85,20 +85,24 @@
 }
 
 .blog-post-body figure {
-  border-radius: var(--radius-md);
   margin: 2rem 0;
-  overflow: hidden;
 }
 
 .blog-post-body figure img {
+  border-radius: var(--radius-md) var(--radius-md) 0 0;
   display: block;
   max-width: 100%;
   height: auto;
   margin: 0 auto;
 }
 
+.blog-post-body figure img:last-child {
+  border-radius: var(--radius-md);
+}
+
 .blog-post-body figcaption {
   background: var(--mist);
+  border-radius: 0 0 var(--radius-md) var(--radius-md);
   color: var(--ink-3);
   font-size: 0.875rem;
   padding: 0.5rem 0.75rem;
