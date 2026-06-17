@@ -3,6 +3,12 @@
     var base = getBasePath();
     injectHeader(base);
     injectFooter(base);
+    // Load the i18n controller as an ES module so it initialises on every page
+    // that uses includes.js. The homepage loads i18n.js directly in its <head>.
+    var i18nScript = document.createElement('script');
+    i18nScript.type = 'module';
+    i18nScript.src = base + 'js/i18n.js';
+    document.head.appendChild(i18nScript);
   });
 
   function getBasePath() {
@@ -33,6 +39,7 @@
             '<li><a href="' + b + 'blog/">Blog</a></li>' +
             '<li><a href="' + b + 'privacy/">Privacy</a></li>' +
             '<li><button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">◑</button></li>' +
+            '<li><div id="lang-switcher-container"></div></li>' +
           '</ul>' +
         '</nav>' +
         '<button class="nav-toggle" aria-label="Menu" aria-expanded="false">' +

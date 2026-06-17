@@ -357,6 +357,31 @@ kbd {
   color: var(--orange) !important;
 }
 
+/* ── Language switcher ─────────────────────────────────────────────────────── */
+
+.lang-select {
+  appearance: none;
+  -webkit-appearance: none;
+  background: transparent;
+  border: 1px solid var(--hairline);
+  border-radius: 6px;
+  color: var(--ink-2);
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 13px;
+  padding: 3px 8px;
+}
+
+.lang-select:hover {
+  border-color: var(--ink-3);
+  color: var(--ink);
+}
+
+.lang-select:focus {
+  outline: 2px solid var(--red);
+  outline-offset: 2px;
+}
+
 .qs-mock-hist-title mark {
   color: var(--orange);
 }
