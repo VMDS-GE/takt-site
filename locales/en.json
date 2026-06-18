@@ -4,5 +4,7 @@
   "nav.pricing": "Pricing",
   "nav.docs": "Docs",
   "nav.blog": "Blog",
-  "blog.heading": "Blog"
+  "blog.heading": "Blog",
+  "demo.title": "See it in action",
+  "demo.subtitle": "Watch Takt organize tabs automatically as you browse."
 }

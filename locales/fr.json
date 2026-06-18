@@ -4,5 +4,7 @@
   "nav.pricing": "Tarifs",
   "nav.docs": "Documentation",
   "nav.blog": "Blog",
-  "blog.heading": "Blog"
+  "blog.heading": "Blog",
+  "demo.title": "Voyez par vous-même",
+  "demo.subtitle": "Regardez Takt organiser vos onglets automatiquement."
 }

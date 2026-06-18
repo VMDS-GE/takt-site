@@ -30,6 +30,7 @@
   <link rel="stylesheet" href="css/components.css">
 
   <script src="js/theme.js"></script>
+  <script defer src="js/browser-stage.iife.js"></script>
   <script type="module" src="js/i18n.js"></script>
 
   <script type="application/ld+json">
@@ -128,6 +129,15 @@
           <div class="mark-chip"><svg width="48" height="48" style="color:var(--purple)"><use href="#takt-mark"/></svg></div>
         </div>
         <h2 class="title">One extension. Every color Chrome gives you.</h2>
+      </div>
+    </section>
+
+    <!-- Interactive Demo -->
+    <section id="demo" class="section">
+      <div class="container">
+        <h2 data-i18n="demo.title">See it in action</h2>
+        <p data-i18n="demo.subtitle">Watch Takt organize tabs automatically as you browse.</p>
+        <browser-stage></browser-stage>
       </div>
     </section>
 

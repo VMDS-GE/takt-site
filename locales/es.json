@@ -4,5 +4,7 @@
   "nav.pricing": "Precios",
   "nav.docs": "Documentación",
   "nav.blog": "Blog",
-  "blog.heading": "Blog"
+  "blog.heading": "Blog",
+  "demo.title": "Míralo en acción",
+  "demo.subtitle": "Observa cómo Takt organiza tus pestañas automáticamente."
 }
