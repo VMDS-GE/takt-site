@@ -26,7 +26,7 @@ import {
  *   (d) Adding data-i18n annotations to the translated HTML pages.
  * No other algorithmic JS changes are needed.
  */
-const availableLocales = ['en', 'fr', 'es', 'it', 'de'];
+const availableLocales = ['en', 'fr', 'es', 'it', 'de', 'pt'];
 
 /** Native display names for each locale code. */
 const LOCALE_LABELS = {
@@ -35,6 +35,7 @@ const LOCALE_LABELS = {
   es: 'Español',
   it: 'Italiano',
   de: 'Deutsch',
+  pt: 'Português',
 };
 
 /**
