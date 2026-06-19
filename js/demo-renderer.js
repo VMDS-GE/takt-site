@@ -36,7 +36,7 @@ export function renderRules(state, popupRoot) {
   countEl.textContent = `(${activeCount} active)`;
   listEl.innerHTML = state.rules.map((rule, i) =>
     `<li class="tp-rule-item">` +
-    `<label class="tp-toggle"><input type="checkbox"${rule.enabled ? ' checked' : ''} data-idx="${i}">` +
+    `<label class="tp-toggle"><input type="checkbox"${rule.enabled ? ' checked' : ''} data-rule-id="${rule.id}">` +
     `<span class="tp-toggle-track"></span></label>` +
     `<span class="tp-rule-name">${escapeHtml(rule.name)}</span>` +
     `<span class="tp-color-dot" style="background:${rule.color}"></span>` +
@@ -106,7 +106,7 @@ export function renderInsights(state, popupRoot) {
       ? `<div class="tp-insight-rule"><span class="tp-insight-rule-name">${escapeHtml(insight.suggestedRule.name)}</span></div>`
       : '';
     const createBtn = insight.type === 'suggestion'
-      ? `<button class="tp-insight-btn tp-insight-create" data-idx="${i}">Create rule</button>`
+      ? `<button class="tp-insight-btn tp-insight-create" data-insight-idx="${i}">Create rule</button>`
       : '';
     return `<div class="tp-insight-card">` +
       `<div class="tp-insight-header">` +
@@ -117,7 +117,7 @@ export function renderInsights(state, popupRoot) {
       ruleHtml +
       `<div class="tp-insight-actions">` +
       createBtn +
-      `<button class="tp-insight-btn tp-insight-dismiss" data-idx="${i}">Dismiss</button>` +
+      `<button class="tp-insight-btn tp-insight-dismiss" data-insight-idx="${i}">Dismiss</button>` +
       `</div>` +
       `</div>`;
   }).join('');

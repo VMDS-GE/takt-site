@@ -3,7 +3,7 @@
  * Wires BrowserStage tab-change, tab-group-toggle, and group action events to state mutation + renderHome.
  */
 
-import { renderHome, renderHibernate } from './demo-renderer.js';
+import { renderHome, renderHibernate, renderRules } from './demo-renderer.js';
 
 export function setActiveTab(state, index) {
   if (state.tabs.length === 0) return;
@@ -56,6 +56,13 @@ export function groupAll(state) {
   state.tabs.forEach((t) => {
     if (!t.groupId) t.groupId = target;
   });
+}
+
+// ponytail: flip rule.enabled; no-op on miss or falsy ruleId (find returns undefined, early return)
+export function toggleRule(state, ruleId) {
+  const rule = state.rules.find((r) => r.id === ruleId);
+  if (!rule) return;
+  rule.enabled = !rule.enabled;
 }
 
 // ponytail: splice active tab → push 4-field entry to hibernated → re-anchor tabs[0].active
@@ -140,7 +147,14 @@ export function wireController(el, popupRoot, state) {
     });
   }
   popupRoot.addEventListener('click', (e) => {
-    if (e.target.id === 'btn-move-to-group') {
+    if (e.target.tagName === 'INPUT' && e.target.dataset.ruleId) {
+      const ruleId = e.target.dataset.ruleId;
+      toggleRule(state, ruleId);
+      const rule = state.rules.find((r) => r.id === ruleId);
+      renderRules(state, popupRoot);
+      renderHome(state, popupRoot);
+      el.showToast(rule.enabled ? 'Rule enabled' : 'Rule disabled', { type: 'success', duration: 1500 });
+    } else if (e.target.id === 'btn-move-to-group') {
       e.target.disabled = true;
       e.target.textContent = 'Moved!';
       const activeTab = state.tabs.find(t => t.active);
