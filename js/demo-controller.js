@@ -1,5 +1,5 @@
 /**
- * docs/js/demo-controller.js — Feature #95 + #96 + #97 + #98 + #99
+ * docs/js/demo-controller.js — Feature #95 + #96 + #97 + #98 + #99 + #100 + #101 + #102 + #103
  * Wires BrowserStage tab-change, tab-group-toggle, and group action events to state mutation + renderHome.
  */
 
@@ -63,6 +63,14 @@ export function toggleRule(state, ruleId) {
   const rule = state.rules.find((r) => r.id === ruleId);
   if (!rule) return;
   rule.enabled = !rule.enabled;
+}
+
+// ponytail: splice matched hibernated entry → push reconstructed Tab with groupId:null/active:false
+export function wakeTab(state, tabId) {
+  const idx = state.hibernated.findIndex((h) => h.id === tabId);
+  if (idx === -1) return;
+  const [h] = state.hibernated.splice(idx, 1);
+  state.tabs.push({ id: h.id, title: h.title, url: h.url, favIconUrl: h.favIconUrl, groupId: null, active: false });
 }
 
 // ponytail: splice active tab → push 4-field entry to hibernated → re-anchor tabs[0].active
@@ -167,6 +175,13 @@ export function wireController(el, popupRoot, state) {
         e.target.disabled = false;
         e.target.textContent = 'Move to group';
       }, 1500);
+    } else if (e.target.classList?.contains('tp-wake-btn')) {
+      const tabId = e.target.dataset.id;
+      wakeTab(state, tabId);
+      el.tabs = mapTabs(state);
+      renderHibernate(state, popupRoot);
+      renderHome(state, popupRoot);
+      el.showToast('Tab awakened', { type: 'success', duration: 1500 });
     }
   });
 }
