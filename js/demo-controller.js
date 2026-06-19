@@ -1,6 +1,6 @@
 /**
- * docs/js/demo-controller.js — Feature #95 + #96
- * Wires BrowserStage tab-change and tab-group-toggle events to state mutation + renderHome.
+ * docs/js/demo-controller.js — Feature #95 + #96 + #97
+ * Wires BrowserStage tab-change, tab-group-toggle, and group-all events to state mutation + renderHome.
  */
 
 import { renderHome } from './demo-renderer.js';
@@ -23,6 +23,18 @@ export function setTabGroupCollapsed(state, id, collapsed) {
   if (group) group.collapsed = Boolean(collapsed);
 }
 
+// ponytail: assigns all falsy-groupId tabs to the first group; creates default group if none exist
+export function groupAll(state) {
+  if (state.tabs.length === 0) return;
+  if (state.tabGroups.length === 0) {
+    state.tabGroups.push({ id: 'group-default', title: 'Work', color: 'blue', collapsed: false });
+  }
+  const target = state.tabGroups[0].id;
+  state.tabs.forEach((t) => {
+    if (!t.groupId) t.groupId = target;
+  });
+}
+
 const mapTabGroups = (state) =>
   state.tabGroups.map((g) => ({
     id: g.id,
@@ -31,8 +43,11 @@ const mapTabGroups = (state) =>
     collapsed: g.collapsed,
   }));
 
+const mapTabs = (state) =>
+  state.tabs.map((t) => ({ title: t.title, url: t.url, groupId: t.groupId }));
+
 export function wireController(el, popupRoot, state) {
-  el.tabs = state.tabs.map((t) => ({ title: t.title, url: t.url, groupId: t.groupId }));
+  el.tabs = mapTabs(state);
   el.tabGroups = mapTabGroups(state);
   el.addEventListener('tab-change', (event) => {
     setActiveTab(state, event.detail.index);
@@ -42,4 +57,14 @@ export function wireController(el, popupRoot, state) {
     setTabGroupCollapsed(state, event.detail.id, event.detail.collapsed);
     el.tabGroups = mapTabGroups(state);
   });
+  const btn = popupRoot.querySelector('#btn-group-all');
+  if (btn) {
+    btn.addEventListener('click', () => {
+      groupAll(state);
+      el.tabs = mapTabs(state);
+      el.tabGroups = mapTabGroups(state);
+      el.showToast('All tabs grouped', { type: 'success', duration: 1500 });
+      renderHome(state, popupRoot);
+    });
+  }
 }
