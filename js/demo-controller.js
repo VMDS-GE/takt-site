@@ -70,15 +70,35 @@ export function wakeTab(state, tabId) {
   const idx = state.hibernated.findIndex((h) => h.id === tabId);
   if (idx === -1) return;
   const [h] = state.hibernated.splice(idx, 1);
-  state.tabs.push({ id: h.id, title: h.title, url: h.url, favIconUrl: h.favIconUrl, groupId: null, active: false });
+  state.tabs.push({
+    id: h.id,
+    title: h.title,
+    url: h.url,
+    favIconUrl: h.favIconUrl,
+    groupId: null,
+    active: false,
+  });
 }
 
 // ponytail: forEach push reconstructed Tab (groupId:null/active:false) → clear hibernated via length=0
 export function wakeAll(state) {
   if (state.hibernated.length === 0) return;
   state.hibernated.forEach((h) => {
-    state.tabs.push({ id: h.id, title: h.title, url: h.url, favIconUrl: h.favIconUrl, groupId: null, active: false });
+    state.tabs.push({
+      id: h.id,
+      title: h.title,
+      url: h.url,
+      favIconUrl: h.favIconUrl,
+      groupId: null,
+      active: false,
+    });
   });
+  state.hibernated.length = 0;
+}
+
+// ponytail: discard all hibernated entries via length=0 (array identity preserved); does NOT touch tabs
+export function clearHibernated(state) {
+  if (state.hibernated.length === 0) return;
   state.hibernated.length = 0;
 }
 
@@ -87,7 +107,12 @@ export function hibernateTab(state) {
   const idx = state.tabs.findIndex((t) => t.active === true);
   if (idx === -1) return;
   const [removed] = state.tabs.splice(idx, 1);
-  state.hibernated.push({ id: removed.id, title: removed.title, url: removed.url, favIconUrl: removed.favIconUrl });
+  state.hibernated.push({
+    id: removed.id,
+    title: removed.title,
+    url: removed.url,
+    favIconUrl: removed.favIconUrl,
+  });
   if (state.tabs.length > 0) state.tabs[0].active = true;
 }
 
@@ -173,6 +198,15 @@ export function wireController(el, popupRoot, state) {
       el.showToast('All tabs awakened', { type: 'success', duration: 1500 });
     });
   }
+  const clearHibBtn = popupRoot.querySelector('#btn-clear-hib');
+  if (clearHibBtn) {
+    clearHibBtn.addEventListener('click', () => {
+      clearHibernated(state);
+      renderHibernate(state, popupRoot);
+      renderHome(state, popupRoot);
+      el.showToast('All hibernated tabs cleared', { type: 'success', duration: 1500 });
+    });
+  }
   popupRoot.addEventListener('click', (e) => {
     if (e.target.tagName === 'INPUT' && e.target.dataset.ruleId) {
       const ruleId = e.target.dataset.ruleId;
@@ -180,13 +214,16 @@ export function wireController(el, popupRoot, state) {
       const rule = state.rules.find((r) => r.id === ruleId);
       renderRules(state, popupRoot);
       renderHome(state, popupRoot);
-      el.showToast(rule.enabled ? 'Rule enabled' : 'Rule disabled', { type: 'success', duration: 1500 });
+      el.showToast(rule.enabled ? 'Rule enabled' : 'Rule disabled', {
+        type: 'success',
+        duration: 1500,
+      });
     } else if (e.target.id === 'btn-move-to-group') {
       e.target.disabled = true;
       e.target.textContent = 'Moved!';
-      const activeTab = state.tabs.find(t => t.active);
+      const activeTab = state.tabs.find((t) => t.active);
       const matchedRule = activeTab
-        ? state.rules.find(r => r.enabled && activeTab.url.includes(r.pattern))
+        ? state.rules.find((r) => r.enabled && activeTab.url.includes(r.pattern))
         : null;
       if (!matchedRule) return;
       el.showToast('Moved to "' + matchedRule.name + '"', { type: 'success', duration: 1500 });
