@@ -3,7 +3,7 @@
  * Wires BrowserStage tab-change, tab-group-toggle, and group action events to state mutation + renderHome.
  */
 
-import { renderHome } from './demo-renderer.js';
+import { renderHome, renderHibernate } from './demo-renderer.js';
 
 export function setActiveTab(state, index) {
   if (state.tabs.length === 0) return;
@@ -56,6 +56,15 @@ export function groupAll(state) {
   state.tabs.forEach((t) => {
     if (!t.groupId) t.groupId = target;
   });
+}
+
+// ponytail: splice active tab → push 4-field entry to hibernated → re-anchor tabs[0].active
+export function hibernateTab(state) {
+  const idx = state.tabs.findIndex((t) => t.active === true);
+  if (idx === -1) return;
+  const [removed] = state.tabs.splice(idx, 1);
+  state.hibernated.push({ id: removed.id, title: removed.title, url: removed.url, favIconUrl: removed.favIconUrl });
+  if (state.tabs.length > 0) state.tabs[0].active = true;
 }
 
 const mapTabGroups = (state) =>
@@ -118,6 +127,16 @@ export function wireController(el, popupRoot, state) {
       el.tabGroups = mapTabGroups(state);
       el.showToast('All groups expanded', { type: 'success', duration: 1500 });
       renderHome(state, popupRoot);
+    });
+  }
+  const hibBtn = popupRoot.querySelector('#btn-hibernate-tab');
+  if (hibBtn) {
+    hibBtn.addEventListener('click', () => {
+      hibernateTab(state);
+      el.tabs = mapTabs(state);
+      el.showToast('Tab hibernated', { type: 'success', duration: 1500 });
+      renderHome(state, popupRoot);
+      renderHibernate(state, popupRoot);
     });
   }
   popupRoot.addEventListener('click', (e) => {
