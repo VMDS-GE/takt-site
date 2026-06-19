@@ -1,6 +1,6 @@
 /**
- * docs/js/demo-controller.js — Feature #95 + #96 + #97
- * Wires BrowserStage tab-change, tab-group-toggle, and group-all events to state mutation + renderHome.
+ * docs/js/demo-controller.js — Feature #95 + #96 + #97 + #98 + #99
+ * Wires BrowserStage tab-change, tab-group-toggle, and group action events to state mutation + renderHome.
  */
 
 import { renderHome } from './demo-renderer.js';
@@ -21,6 +21,20 @@ export function setActiveTab(state, index) {
 export function setTabGroupCollapsed(state, id, collapsed) {
   const group = state.tabGroups.find((g) => g.id === id);
   if (group) group.collapsed = Boolean(collapsed);
+}
+
+// ponytail: sets all tabGroups[i].collapsed to true; no-op on empty array
+export function collapseAll(state) {
+  state.tabGroups.forEach((g) => {
+    g.collapsed = true;
+  });
+}
+
+// ponytail: symmetric inverse of collapseAll — sets all tabGroups[i].collapsed to false
+export function expandAll(state) {
+  state.tabGroups.forEach((g) => {
+    g.collapsed = false;
+  });
 }
 
 // ponytail: symmetric inverse of groupAll — clears all groups and sets every tab's groupId to null
@@ -83,6 +97,26 @@ export function wireController(el, popupRoot, state) {
       el.tabs = mapTabs(state);
       el.tabGroups = mapTabGroups(state);
       el.showToast('All groups removed', { type: 'success', duration: 1500 });
+      renderHome(state, popupRoot);
+    });
+  }
+  const collapseBtn = popupRoot.querySelector('#btn-collapse-all');
+  if (collapseBtn) {
+    collapseBtn.addEventListener('click', () => {
+      if (state.tabGroups.length === 0) return;
+      collapseAll(state);
+      el.tabGroups = mapTabGroups(state);
+      el.showToast('All groups collapsed', { type: 'success', duration: 1500 });
+      renderHome(state, popupRoot);
+    });
+  }
+  const expandBtn = popupRoot.querySelector('#btn-expand-all');
+  if (expandBtn) {
+    expandBtn.addEventListener('click', () => {
+      if (state.tabGroups.length === 0) return;
+      expandAll(state);
+      el.tabGroups = mapTabGroups(state);
+      el.showToast('All groups expanded', { type: 'success', duration: 1500 });
       renderHome(state, popupRoot);
     });
   }
