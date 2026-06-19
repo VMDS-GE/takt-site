@@ -22,7 +22,8 @@ export function renderHome(state, popupRoot) {
   if (matchedRule) {
     statusEl.innerHTML =
       `<span class="tp-color-dot" style="background:${matchedRule.color}"></span>` +
-      ` Matched: "${escapeHtml(matchedRule.name)}"`;
+      ` Matched: "${escapeHtml(matchedRule.name)}"` +
+      `<button id="btn-move-to-group" type="button">Move to group</button>`;
   } else {
     statusEl.innerHTML = '<span class="tp-status-no-match">No matching rule</span>';
   }

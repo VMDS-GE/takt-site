@@ -120,4 +120,20 @@ export function wireController(el, popupRoot, state) {
       renderHome(state, popupRoot);
     });
   }
+  popupRoot.addEventListener('click', (e) => {
+    if (e.target.id === 'btn-move-to-group') {
+      e.target.disabled = true;
+      e.target.textContent = 'Moved!';
+      const activeTab = state.tabs.find(t => t.active);
+      const matchedRule = activeTab
+        ? state.rules.find(r => r.enabled && activeTab.url.includes(r.pattern))
+        : null;
+      if (!matchedRule) return;
+      el.showToast('Moved to "' + matchedRule.name + '"', { type: 'success', duration: 1500 });
+      setTimeout(() => {
+        e.target.disabled = false;
+        e.target.textContent = 'Move to group';
+      }, 1500);
+    }
+  });
 }
