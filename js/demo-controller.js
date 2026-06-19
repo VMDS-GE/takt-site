@@ -73,6 +73,15 @@ export function wakeTab(state, tabId) {
   state.tabs.push({ id: h.id, title: h.title, url: h.url, favIconUrl: h.favIconUrl, groupId: null, active: false });
 }
 
+// ponytail: forEach push reconstructed Tab (groupId:null/active:false) → clear hibernated via length=0
+export function wakeAll(state) {
+  if (state.hibernated.length === 0) return;
+  state.hibernated.forEach((h) => {
+    state.tabs.push({ id: h.id, title: h.title, url: h.url, favIconUrl: h.favIconUrl, groupId: null, active: false });
+  });
+  state.hibernated.length = 0;
+}
+
 // ponytail: splice active tab → push 4-field entry to hibernated → re-anchor tabs[0].active
 export function hibernateTab(state) {
   const idx = state.tabs.findIndex((t) => t.active === true);
@@ -152,6 +161,16 @@ export function wireController(el, popupRoot, state) {
       el.showToast('Tab hibernated', { type: 'success', duration: 1500 });
       renderHome(state, popupRoot);
       renderHibernate(state, popupRoot);
+    });
+  }
+  const wakeAllBtn = popupRoot.querySelector('#btn-wake-all');
+  if (wakeAllBtn) {
+    wakeAllBtn.addEventListener('click', () => {
+      wakeAll(state);
+      el.tabs = mapTabs(state);
+      renderHibernate(state, popupRoot);
+      renderHome(state, popupRoot);
+      el.showToast('All tabs awakened', { type: 'success', duration: 1500 });
     });
   }
   popupRoot.addEventListener('click', (e) => {
