@@ -23,6 +23,15 @@ export function setTabGroupCollapsed(state, id, collapsed) {
   if (group) group.collapsed = Boolean(collapsed);
 }
 
+// ponytail: symmetric inverse of groupAll — clears all groups and sets every tab's groupId to null
+export function ungroupAll(state) {
+  if (state.tabs.length === 0) return;
+  state.tabGroups = [];
+  state.tabs.forEach((t) => {
+    t.groupId = null;
+  });
+}
+
 // ponytail: assigns all falsy-groupId tabs to the first group; creates default group if none exist
 export function groupAll(state) {
   if (state.tabs.length === 0) return;
@@ -64,6 +73,16 @@ export function wireController(el, popupRoot, state) {
       el.tabs = mapTabs(state);
       el.tabGroups = mapTabGroups(state);
       el.showToast('All tabs grouped', { type: 'success', duration: 1500 });
+      renderHome(state, popupRoot);
+    });
+  }
+  const ungroupBtn = popupRoot.querySelector('#btn-ungroup-all');
+  if (ungroupBtn) {
+    ungroupBtn.addEventListener('click', () => {
+      ungroupAll(state);
+      el.tabs = mapTabs(state);
+      el.tabGroups = mapTabGroups(state);
+      el.showToast('All groups removed', { type: 'success', duration: 1500 });
       renderHome(state, popupRoot);
     });
   }
