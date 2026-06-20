@@ -3,7 +3,7 @@
  * Wires BrowserStage tab-change, tab-group-toggle, and group action events to state mutation + renderHome.
  */
 
-import { renderHome, renderHibernate, renderRules } from './demo-renderer.js';
+import { renderHome, renderHibernate, renderRules, renderSessions } from './demo-renderer.js';
 
 export function setActiveTab(state, index) {
   if (state.tabs.length === 0) return;
@@ -96,6 +96,14 @@ export function wakeAll(state) {
   state.hibernated.length = 0;
 }
 
+// ponytail: findIndex on sessions by id, splice on hit; no-op on miss or falsy sessionId
+export function deleteSession(state, sessionId) {
+  if (!sessionId) return;
+  const idx = state.sessions.findIndex((s) => s.id === sessionId);
+  if (idx === -1) return;
+  state.sessions.splice(idx, 1);
+}
+
 // ponytail: discard all hibernated entries via length=0 (array identity preserved); does NOT touch tabs
 export function clearHibernated(state) {
   if (state.hibernated.length === 0) return;
@@ -130,6 +138,7 @@ const mapTabs = (state) =>
 export function wireController(el, popupRoot, state) {
   el.tabs = mapTabs(state);
   el.tabGroups = mapTabGroups(state);
+  renderSessions(state, popupRoot);
   el.addEventListener('tab-change', (event) => {
     setActiveTab(state, event.detail.index);
     renderHome(state, popupRoot);
@@ -238,6 +247,12 @@ export function wireController(el, popupRoot, state) {
       renderHibernate(state, popupRoot);
       renderHome(state, popupRoot);
       el.showToast('Tab awakened', { type: 'success', duration: 1500 });
+    } else if (e.target.classList?.contains('tp-del-btn')) {
+      const sessionId = e.target.dataset.sessionId;
+      if (!state.sessions.some((s) => s.id === sessionId)) return;
+      deleteSession(state, sessionId);
+      renderSessions(state, popupRoot);
+      el.showToast('Session deleted', { type: 'success', duration: 1500 });
     }
   });
 }

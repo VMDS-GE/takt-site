@@ -60,7 +60,7 @@ export function renderSessions(state, popupRoot) {
     `</div>` +
     `<div class="tp-session-actions">` +
     `<button class="tp-btn-link tp-restore-btn" style="font-size:11px;color:#007aff">Restore</button>` +
-    `<button class="tp-btn-link tp-del-btn" style="font-size:11px;color:#aeaeb2">✕</button>` +
+    `<button class="tp-btn-link tp-del-btn" data-session-id="${escapeHtml(session.id)}" style="font-size:11px;color:#aeaeb2">✕</button>` +
     `</div>` +
     `</div>`
   ).join('');
