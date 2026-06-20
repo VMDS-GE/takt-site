@@ -291,6 +291,11 @@ export function wireController(el, popupRoot, state) {
       renderHibernate(state, popupRoot);
       renderHome(state, popupRoot);
       el.showToast('Tab awakened', { type: 'success', duration: 1500 });
+    } else if (e.target.classList?.contains('tp-restore-btn')) {
+      const sessionId = e.target.dataset.sessionId;
+      const session = state.sessions.find((s) => s.id === sessionId);
+      if (!session) return;
+      el.showToast('Restoring… ' + session.name, { type: 'success', duration: 1500 });
     } else if (e.target.classList?.contains('tp-del-btn')) {
       const sessionId = e.target.dataset.sessionId;
       if (!state.sessions.some((s) => s.id === sessionId)) return;
