@@ -110,6 +110,13 @@ export function clearHibernated(state) {
   state.hibernated.length = 0;
 }
 
+// ponytail: sets every i.hidden = false; idempotent; no DOM/clock/rng
+export function unlockHiddenInsights(state) {
+  state.insights.forEach((i) => {
+    i.hidden = false;
+  });
+}
+
 // ponytail: find insight by id → splice on hit; silent no-op on falsy or miss
 export function dismissInsight(state, insightId) {
   if (!insightId) return;
@@ -318,6 +325,10 @@ export function wireController(el, popupRoot, state) {
       renderInsights(state, popupRoot);
       renderHome(state, popupRoot);
       el.showToast('Insight dismissed', { type: 'success', duration: 1500 });
+    } else if (e.target.closest?.('button.tp-insights-cta')) {
+      unlockHiddenInsights(state);
+      renderInsights(state, popupRoot);
+      el.showToast('This is a demo — all features unlocked!', { type: 'success', duration: 1500 });
     }
   });
 }

@@ -93,15 +93,16 @@ export function renderHibernate(state, popupRoot) {
 export function renderInsights(state, popupRoot) {
   const listEl = popupRoot.querySelector('#tp-insights-list');
   const badge = popupRoot.querySelector('#tp-insights-badge');
-  if (!state.insights.length) {
+  const visible = state.insights.filter((i) => i.hidden !== true);
+  if (!visible.length) {
     listEl.innerHTML =
       '<div style="padding:40px 24px;text-align:center;color:#8e8e93;font-size:13px;line-height:1.5">Your tabs are well-organized!</div>';
     badge.hidden = true;
     return;
   }
-  badge.textContent = String(state.insights.length);
+  badge.textContent = String(visible.length);
   badge.hidden = false;
-  const cards = state.insights.map((insight) => {
+  const cards = visible.map((insight) => {
     const ruleHtml = 'suggestedRule' in insight
       ? `<div class="tp-insight-rule"><span class="tp-insight-rule-name">${escapeHtml(insight.suggestedRule.name)}</span></div>`
       : '';
@@ -122,5 +123,5 @@ export function renderInsights(state, popupRoot) {
       `</div>`;
   }).join('');
   listEl.innerHTML =
-    cards + '<div class="tp-insights-cta"><span>Unlock full insights with</span><strong>Takt Premium</strong></div>';
+    cards + '<button type="button" class="tp-insights-cta"><span>Unlock full insights with</span><strong>Takt Premium</strong></button>';
 }
