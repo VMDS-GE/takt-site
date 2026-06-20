@@ -253,6 +253,13 @@ export function wireController(el, popupRoot, state) {
       el.showToast('Session saved', { type: 'success', duration: 1500 });
     });
   }
+  const optBtn = popupRoot.querySelector('#btn-open-options');
+  if (optBtn) {
+    optBtn.addEventListener('click', () => {
+      // ponytail: checkbox lives at page level, not in popupRoot
+      document.getElementById('opt-view-toggle')?.click();
+    });
+  }
   popupRoot.addEventListener('click', (e) => {
     if (e.target.tagName === 'INPUT' && e.target.dataset.ruleId) {
       const ruleId = e.target.dataset.ruleId;
