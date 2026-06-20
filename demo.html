@@ -600,6 +600,104 @@
       color: #8e8e93;
       line-height: 1.5;
     }
+
+    /* Feature #112 — Options page replica (CSS-only toggle + tab switch) */
+    .opt-open-btn {
+      display: inline-block;
+      margin: 16px;
+      padding: 6px 14px;
+      border: 1px solid #3a3a3c;
+      border-radius: 6px;
+      color: #0f0f0f;
+      font-size: 12px;
+      cursor: pointer;
+      background: #e5e5e5;
+      text-decoration: none;
+    }
+
+    body:has(#opt-view-toggle:checked) .fake-page { display: none !important; }
+    body:has(#opt-view-toggle:checked) .takt-options { display: flex !important; flex-direction: column; }
+
+    .takt-options {
+      height: 100%;
+      overflow-y: auto;
+      background: #1c1c1e;
+      color: #e5e5e5;
+    }
+
+    .opt-header {
+      display: flex;
+      align-items: center;
+      padding: 10px 14px;
+      border-bottom: 1px solid #3a3a3c;
+      gap: 10px;
+    }
+
+    .opt-back-btn {
+      background: none;
+      border: none;
+      color: #e5e5e5;
+      cursor: pointer;
+      font-size: 13px;
+      padding: 0;
+    }
+
+    .opt-tab-bar {
+      display: flex;
+      border-bottom: 1px solid #3a3a3c;
+    }
+
+    .opt-tab-label {
+      padding: 10px 14px;
+      font-size: 13px;
+      cursor: pointer;
+      color: #8e8e93;
+      border-bottom: 2px solid transparent;
+    }
+
+    .takt-options .opt-pane-profiles,
+    .takt-options .opt-pane-settings { display: none; }
+
+    #opt-tab-profiles:checked ~ .takt-options .opt-pane-rules { display: none; }
+    #opt-tab-profiles:checked ~ .takt-options .opt-pane-profiles { display: block; }
+    #opt-tab-settings:checked ~ .takt-options .opt-pane-rules { display: none; }
+    #opt-tab-settings:checked ~ .takt-options .opt-pane-settings { display: block; }
+
+    .opt-pane { padding: 16px; }
+
+    .opt-settings-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 0;
+      border-bottom: 1px solid #3a3a3c;
+      font-size: 13px;
+    }
+
+    .opt-settings-row select {
+      background: #2c2c2e;
+      border: 1px solid #3a3a3c;
+      color: #e5e5e5;
+      border-radius: 4px;
+      padding: 3px 6px;
+      font-size: 12px;
+    }
+
+    .opt-profile-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 0;
+      font-size: 13px;
+    }
+
+    .opt-active-badge {
+      font-size: 11px;
+      padding: 2px 6px;
+      background: #ff3b30;
+      color: #fff;
+      border-radius: 4px;
+    }
   </style>
 </head>
 <body>
@@ -638,7 +736,58 @@
             </div>
           </div>
         </div>
+        <label for="opt-view-toggle" class="opt-open-btn">⚙ Options</label>
       </div>
+
+      <!-- Feature #112: CSS-only page toggle and tab switch controls -->
+      <input type="checkbox" id="opt-view-toggle" hidden>
+      <input type="radio" name="opt-tab" id="opt-tab-rules" checked hidden>
+      <input type="radio" name="opt-tab" id="opt-tab-profiles" hidden>
+      <input type="radio" name="opt-tab" id="opt-tab-settings" hidden>
+
+      <!-- Feature #112: Options page replica -->
+      <section class="takt-options" hidden>
+        <div class="opt-header">
+          <label for="opt-view-toggle" class="opt-back-btn">← Back</label>
+          <nav class="opt-tab-bar">
+            <label class="opt-tab-label" for="opt-tab-rules">Rules</label>
+            <label class="opt-tab-label" for="opt-tab-profiles">Profiles</label>
+            <label class="opt-tab-label" for="opt-tab-settings">Settings</label>
+          </nav>
+        </div>
+        <div class="opt-pane opt-pane-rules">
+          <ul id="opt-rules-list"></ul>
+        </div>
+        <div class="opt-pane opt-pane-profiles">
+          <div id="opt-profiles-list">
+            <div class="opt-profile-item">
+              <span>Default</span>
+              <span class="opt-active-badge">Active</span>
+            </div>
+          </div>
+        </div>
+        <div class="opt-pane opt-pane-settings">
+          <div class="opt-settings-row">
+            <label>Theme</label>
+            <select id="opt-settings-theme">
+              <option value="system" selected>System</option>
+              <option value="light">Light</option>
+              <option value="dark">Dark</option>
+            </select>
+          </div>
+          <div class="opt-settings-row">
+            <label>Automation</label>
+            <select id="opt-settings-automation">
+              <option value="auto" selected>Auto</option>
+              <option value="manual">Manual</option>
+            </select>
+          </div>
+          <div class="opt-settings-row">
+            <label for="opt-settings-autoCollapse">Auto-collapse groups</label>
+            <input type="checkbox" id="opt-settings-autoCollapse" checked>
+          </div>
+        </div>
+      </section>
 
       <!-- Popup slot -->
       <div slot="popup-takt" class="takt-popup">
