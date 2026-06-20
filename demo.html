@@ -741,7 +741,7 @@
           <!-- Sessions pane -->
           <div class="tp-pane" data-pane="sessions">
             <fieldset class="tp-section" style="padding:2px 12px 4px">
-              <legend>Sessions <button class="tp-btn-link" style="margin-left:auto;font-size:11px">+ Save</button></legend>
+              <legend>Sessions <button id="btn-save-session" class="tp-btn-link" style="margin-left:auto;font-size:11px">+ Save</button></legend>
               <div id="tp-sessions-list" style="margin:2px 0 0"></div>
             </fieldset>
           </div>
@@ -1014,7 +1014,7 @@
         div.className = 'tp-session-item';
         div.innerHTML =
           '<div class="tp-session-info"><span class="tp-session-name">' + s.name + '</span><span class="tp-session-meta">' + s.meta + '</span></div>' +
-          '<div class="tp-session-actions"><button class="tp-btn-link tp-restore-btn" style="font-size:11px;color:#007aff">Restore</button><button class="tp-btn-link tp-del-btn" style="font-size:11px;color:#aeaeb2">✕</button></div>';
+          '<div class="tp-session-actions"><button class="tp-btn-link tp-restore-btn" data-session-id="' + s.id + '" style="font-size:11px;color:#007aff">Restore</button><button class="tp-btn-link tp-del-btn" style="font-size:11px;color:#aeaeb2">✕</button></div>';
         box.appendChild(div);
       });
       box.querySelectorAll('.tp-restore-btn').forEach(function (btn, i) {

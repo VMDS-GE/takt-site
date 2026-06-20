@@ -110,6 +110,11 @@ export function clearHibernated(state) {
   state.hibernated.length = 0;
 }
 
+// ponytail: pure push — caller generates id/name/createdAt/tabCount; no clock/rng here
+export function saveSession(state, { id, name, createdAt, tabCount }) {
+  state.sessions.push({ id, name, createdAt, tabCount });
+}
+
 // ponytail: splice active tab → push 4-field entry to hibernated → re-anchor tabs[0].active
 export function hibernateTab(state) {
   const idx = state.tabs.findIndex((t) => t.active === true);
@@ -214,6 +219,19 @@ export function wireController(el, popupRoot, state) {
       renderHibernate(state, popupRoot);
       renderHome(state, popupRoot);
       el.showToast('All hibernated tabs cleared', { type: 'success', duration: 1500 });
+    });
+  }
+  const saveSessionBtn = popupRoot.querySelector('#btn-save-session');
+  if (saveSessionBtn) {
+    saveSessionBtn.addEventListener('click', () => {
+      const id = 'ses-' + Date.now();
+      const name = 'Session ' + (state.sessions.length + 1);
+      const createdAt = new Date().toISOString();
+      const tabCount = state.tabs.length;
+      saveSession(state, { id, name, createdAt, tabCount });
+      renderSessions(state, popupRoot);
+      renderHome(state, popupRoot);
+      el.showToast('Session saved', { type: 'success', duration: 1500 });
     });
   }
   popupRoot.addEventListener('click', (e) => {
