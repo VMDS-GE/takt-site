@@ -101,12 +101,12 @@ export function renderInsights(state, popupRoot) {
   }
   badge.textContent = String(state.insights.length);
   badge.hidden = false;
-  const cards = state.insights.map((insight, i) => {
+  const cards = state.insights.map((insight) => {
     const ruleHtml = 'suggestedRule' in insight
       ? `<div class="tp-insight-rule"><span class="tp-insight-rule-name">${escapeHtml(insight.suggestedRule.name)}</span></div>`
       : '';
     const createBtn = insight.type === 'suggestion'
-      ? `<button class="tp-insight-btn tp-insight-create" data-insight-idx="${i}">Create rule</button>`
+      ? `<button class="tp-insight-btn tp-insight-create" data-insight-id="${escapeHtml(insight.id)}">Create rule</button>`
       : '';
     return `<div class="tp-insight-card">` +
       `<div class="tp-insight-header">` +
@@ -117,7 +117,7 @@ export function renderInsights(state, popupRoot) {
       ruleHtml +
       `<div class="tp-insight-actions">` +
       createBtn +
-      `<button class="tp-insight-btn tp-insight-dismiss" data-insight-idx="${i}">Dismiss</button>` +
+      `<button class="tp-insight-btn tp-insight-dismiss" data-insight-id="${escapeHtml(insight.id)}">Dismiss</button>` +
       `</div>` +
       `</div>`;
   }).join('');

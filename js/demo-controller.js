@@ -3,7 +3,7 @@
  * Wires BrowserStage tab-change, tab-group-toggle, and group action events to state mutation + renderHome.
  */
 
-import { renderHome, renderHibernate, renderRules, renderSessions } from './demo-renderer.js';
+import { renderHome, renderHibernate, renderRules, renderSessions, renderInsights } from './demo-renderer.js';
 
 export function setActiveTab(state, index) {
   if (state.tabs.length === 0) return;
@@ -110,6 +110,24 @@ export function clearHibernated(state) {
   state.hibernated.length = 0;
 }
 
+// ponytail: find insight by id → splice on hit; silent no-op on falsy or miss
+export function dismissInsight(state, insightId) {
+  if (!insightId) return;
+  const idx = state.insights.findIndex((i) => i.id === insightId);
+  if (idx === -1) return;
+  state.insights.splice(idx, 1);
+}
+
+// ponytail: find insight by id → push shallow clone of suggestedRule to rules → splice insight; no-op on miss/no-key
+export function createRuleFromInsight(state, insightId) {
+  const insight = state.insights.find((i) => i.id === insightId);
+  if (!insight) return;
+  if (!('suggestedRule' in insight)) return;
+  state.rules.push({ ...insight.suggestedRule });
+  const idx = state.insights.findIndex((i) => i.id === insightId);
+  state.insights.splice(idx, 1);
+}
+
 // ponytail: pure push — caller generates id/name/createdAt/tabCount; no clock/rng here
 export function saveSession(state, { id, name, createdAt, tabCount }) {
   state.sessions.push({ id, name, createdAt, tabCount });
@@ -144,6 +162,7 @@ export function wireController(el, popupRoot, state) {
   el.tabs = mapTabs(state);
   el.tabGroups = mapTabGroups(state);
   renderSessions(state, popupRoot);
+  renderInsights(state, popupRoot);
   el.addEventListener('tab-change', (event) => {
     setActiveTab(state, event.detail.index);
     renderHome(state, popupRoot);
@@ -271,6 +290,22 @@ export function wireController(el, popupRoot, state) {
       deleteSession(state, sessionId);
       renderSessions(state, popupRoot);
       el.showToast('Session deleted', { type: 'success', duration: 1500 });
+    } else if (e.target.classList?.contains('tp-insight-create')) {
+      const insightId = e.target.dataset.insightId;
+      if (!state.insights.some((i) => i.id === insightId)) return;
+      const insight = state.insights.find((i) => i.id === insightId);
+      if (!('suggestedRule' in insight)) return;
+      createRuleFromInsight(state, insightId);
+      renderRules(state, popupRoot);
+      renderInsights(state, popupRoot);
+      el.showToast('Rule created', { type: 'success', duration: 1500 });
+    } else if (e.target.classList?.contains('tp-insight-dismiss')) {
+      const insightId = e.target.dataset.insightId;
+      if (!state.insights.some((i) => i.id === insightId)) return;
+      dismissInsight(state, insightId);
+      renderInsights(state, popupRoot);
+      renderHome(state, popupRoot);
+      el.showToast('Insight dismissed', { type: 'success', duration: 1500 });
     }
   });
 }
