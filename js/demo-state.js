@@ -8,9 +8,15 @@
  * Feature #93
  */
 export const initialState = {
+  profiles: [
+    { id: 'prof-default', name: 'Default' },
+    { id: 'prof-work', name: 'Work' },
+    { id: 'prof-personal', name: 'Personal' },
+  ],
+  activeProfileId: 'prof-default',
   rules: [
-    { id: 'rule-1', name: 'Work', pattern: 'google.com', matchType: 'domain', color: 'blue', enabled: true },
-    { id: 'rule-2', name: 'Research', pattern: 'arxiv.org', matchType: 'domain', color: 'purple', enabled: false },
+    { id: 'rule-1', name: 'Work', pattern: 'google.com', matchType: 'domain', color: 'blue', enabled: true, profileId: 'prof-work' },
+    { id: 'rule-2', name: 'Research', pattern: 'arxiv.org', matchType: 'domain', color: 'purple', enabled: false, profileId: 'prof-default' },
   ],
   tabs: [
     { id: 'tab-1', title: 'Gmail', url: 'https://mail.google.com/', favIconUrl: 'https://ssl.gstatic.com/ui/v1/icons/mail/rfr/gmail.ico', groupId: 'group-1', active: true },

@@ -32,9 +32,10 @@ export function renderHome(state, popupRoot) {
 export function renderRules(state, popupRoot) {
   const listEl = popupRoot.querySelector('#tp-rules-list');
   const countEl = popupRoot.querySelector('#tp-rules-count');
-  const activeCount = state.rules.filter(r => r.enabled).length;
+  const filteredRules = state.rules.filter(r => (r.profileId || 'prof-default') === state.activeProfileId);
+  const activeCount = filteredRules.filter(r => r.enabled).length;
   countEl.textContent = `(${activeCount} active)`;
-  listEl.innerHTML = state.rules.map((rule, i) =>
+  listEl.innerHTML = filteredRules.map((rule) =>
     `<li class="tp-rule-item">` +
     `<label class="tp-toggle"><input type="checkbox"${rule.enabled ? ' checked' : ''} data-rule-id="${rule.id}">` +
     `<span class="tp-toggle-track"></span></label>` +
@@ -94,8 +95,9 @@ export function renderHibernate(state, popupRoot) {
 export function renderOptionsRules(state, root = document) {
   const listEl = root.querySelector('#opt-rules-list');
   if (!listEl) return;
+  const filteredRules = state.rules.filter(r => (r.profileId || 'prof-default') === state.activeProfileId);
   listEl.innerHTML =
-    state.rules.map(rule =>
+    filteredRules.map(rule =>
       `<li class="opt-rule-item" data-rule-id="${escapeHtml(rule.id)}">` +
       `<span class="opt-rule-name">${escapeHtml(rule.name)}</span>` +
       `<span class="opt-rule-pattern">${escapeHtml(rule.pattern)}</span>` +
@@ -107,6 +109,18 @@ export function renderOptionsRules(state, root = document) {
     `<input type="text" id="opt-rule-add-pattern" placeholder="Pattern (e.g. github.com)">` +
     `<button id="opt-rule-add-btn" type="button">Add Rule</button>` +
     `</li>`;
+}
+
+// ponytail: root defaults to document — #opt-profiles-list lives in .takt-options
+export function renderOptionsProfiles(state, root = document) {
+  const listEl = root.querySelector('#opt-profiles-list');
+  if (!listEl) return;
+  listEl.innerHTML = state.profiles.map(profile =>
+    `<div class="opt-profile-item" data-profile-id="${escapeHtml(profile.id)}">` +
+    escapeHtml(profile.name) +
+    (profile.id === state.activeProfileId ? '<span class="opt-active-badge">Active</span>' : '') +
+    `</div>`
+  ).join('');
 }
 
 export function renderInsights(state, popupRoot) {

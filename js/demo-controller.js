@@ -3,7 +3,7 @@
  * Wires BrowserStage tab-change, tab-group-toggle, and group action events to state mutation + renderHome.
  */
 
-import { renderHome, renderHibernate, renderRules, renderSessions, renderInsights, renderOptionsRules } from './demo-renderer.js';
+import { renderHome, renderHibernate, renderRules, renderSessions, renderInsights, renderOptionsRules, renderOptionsProfiles } from './demo-renderer.js';
 
 export function setActiveTab(state, index) {
   if (state.tabs.length === 0) return;
@@ -178,6 +178,13 @@ const mapTabGroups = (state) =>
 const mapTabs = (state) =>
   state.tabs.map((t) => ({ title: t.title, url: t.url, groupId: t.groupId }));
 
+// ponytail: pure mutator — strict === match on profiles array; no-op on miss or falsy; no DOM access
+export function setActiveProfile(state, profileId) {
+  if (state.profiles.find((p) => p.id === profileId)) {
+    state.activeProfileId = profileId;
+  }
+}
+
 // ponytail: optRoot — in production pass document (#opt-rules-list is outside popupRoot); tests omit it
 export function wireController(el, popupRoot, state, optRoot = popupRoot) {
   el.tabs = mapTabs(state);
@@ -185,6 +192,7 @@ export function wireController(el, popupRoot, state, optRoot = popupRoot) {
   renderSessions(state, popupRoot);
   renderInsights(state, popupRoot);
   renderOptionsRules(state, optRoot);
+  renderOptionsProfiles(state, optRoot);
   el.addEventListener('tab-change', (event) => {
     setActiveTab(state, event.detail.index);
     renderHome(state, popupRoot);
@@ -352,7 +360,7 @@ export function wireController(el, popupRoot, state, optRoot = popupRoot) {
       const name = (optRoot.querySelector('#opt-rule-add-name')?.value || '').trim();
       const pattern = (optRoot.querySelector('#opt-rule-add-pattern')?.value || '').trim();
       if (!name || !pattern) return;
-      addRule(state, { id: 'rule-u' + Date.now(), name, pattern, matchType: 'domain', color: 'blue', enabled: true });
+      addRule(state, { id: 'rule-u' + Date.now(), name, pattern, matchType: 'domain', color: 'blue', enabled: true, profileId: state.activeProfileId });
       renderOptionsRules(state, optRoot);
       renderRules(state, popupRoot);
       renderHome(state, popupRoot);
@@ -365,6 +373,17 @@ export function wireController(el, popupRoot, state, optRoot = popupRoot) {
       renderRules(state, popupRoot);
       renderHome(state, popupRoot);
       el.showToast('Rule deleted', { type: 'success', duration: 1500 });
+    } else if (e.target.closest?.('.opt-profile-item')) {
+      const row = e.target.closest('.opt-profile-item');
+      const profileId = row.dataset.profileId;
+      if (!profileId || profileId === state.activeProfileId) return;
+      setActiveProfile(state, profileId);
+      const profile = state.profiles.find((p) => p.id === profileId);
+      renderOptionsProfiles(state, optRoot);
+      renderOptionsRules(state, optRoot);
+      renderRules(state, popupRoot);
+      renderHome(state, popupRoot);
+      el.showToast('Profile: ' + profile.name, { type: 'success', duration: 1500 });
     }
   });
 }
