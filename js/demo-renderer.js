@@ -90,6 +90,25 @@ export function renderHibernate(state, popupRoot) {
   }
 }
 
+// ponytail: root defaults to document — #opt-rules-list lives in .takt-options, not popupRoot
+export function renderOptionsRules(state, root = document) {
+  const listEl = root.querySelector('#opt-rules-list');
+  if (!listEl) return;
+  listEl.innerHTML =
+    state.rules.map(rule =>
+      `<li class="opt-rule-item" data-rule-id="${escapeHtml(rule.id)}">` +
+      `<span class="opt-rule-name">${escapeHtml(rule.name)}</span>` +
+      `<span class="opt-rule-pattern">${escapeHtml(rule.pattern)}</span>` +
+      `<button class="opt-rule-delete-btn" type="button" data-rule-id="${escapeHtml(rule.id)}">Delete</button>` +
+      `</li>`
+    ).join('') +
+    `<li class="opt-rule-add-row">` +
+    `<input type="text" id="opt-rule-add-name" placeholder="Name">` +
+    `<input type="text" id="opt-rule-add-pattern" placeholder="Pattern (e.g. github.com)">` +
+    `<button id="opt-rule-add-btn" type="button">Add Rule</button>` +
+    `</li>`;
+}
+
 export function renderInsights(state, popupRoot) {
   const listEl = popupRoot.querySelector('#tp-insights-list');
   const badge = popupRoot.querySelector('#tp-insights-badge');

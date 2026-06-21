@@ -3,7 +3,7 @@
  * Wires BrowserStage tab-change, tab-group-toggle, and group action events to state mutation + renderHome.
  */
 
-import { renderHome, renderHibernate, renderRules, renderSessions, renderInsights } from './demo-renderer.js';
+import { renderHome, renderHibernate, renderRules, renderSessions, renderInsights, renderOptionsRules } from './demo-renderer.js';
 
 export function setActiveTab(state, index) {
   if (state.tabs.length === 0) return;
@@ -140,6 +140,19 @@ export function saveSession(state, { id, name, createdAt, tabCount }) {
   state.sessions.push({ id, name, createdAt, tabCount });
 }
 
+// ponytail: pure push — appends rule to state.rules; caller provides all fields
+export function addRule(state, rule) {
+  state.rules.push(rule);
+}
+
+// ponytail: findIndex on rules by id, splice on hit; no-op on miss or falsy ruleId
+export function deleteRule(state, ruleId) {
+  if (!ruleId) return;
+  const idx = state.rules.findIndex((r) => r.id === ruleId);
+  if (idx === -1) return;
+  state.rules.splice(idx, 1);
+}
+
 // ponytail: splice active tab → push 4-field entry to hibernated → re-anchor tabs[0].active
 export function hibernateTab(state) {
   const idx = state.tabs.findIndex((t) => t.active === true);
@@ -165,11 +178,13 @@ const mapTabGroups = (state) =>
 const mapTabs = (state) =>
   state.tabs.map((t) => ({ title: t.title, url: t.url, groupId: t.groupId }));
 
-export function wireController(el, popupRoot, state) {
+// ponytail: optRoot — in production pass document (#opt-rules-list is outside popupRoot); tests omit it
+export function wireController(el, popupRoot, state, optRoot = popupRoot) {
   el.tabs = mapTabs(state);
   el.tabGroups = mapTabGroups(state);
   renderSessions(state, popupRoot);
   renderInsights(state, popupRoot);
+  renderOptionsRules(state, optRoot);
   el.addEventListener('tab-change', (event) => {
     setActiveTab(state, event.detail.index);
     renderHome(state, popupRoot);
@@ -329,6 +344,27 @@ export function wireController(el, popupRoot, state) {
       unlockHiddenInsights(state);
       renderInsights(state, popupRoot);
       el.showToast('This is a demo — all features unlocked!', { type: 'success', duration: 1500 });
+    }
+  });
+  // ponytail: #opt-rules-list is in .takt-options (sibling of popupRoot), delegate from optRoot
+  optRoot.addEventListener('click', (e) => {
+    if (e.target.id === 'opt-rule-add-btn') {
+      const name = (optRoot.querySelector('#opt-rule-add-name')?.value || '').trim();
+      const pattern = (optRoot.querySelector('#opt-rule-add-pattern')?.value || '').trim();
+      if (!name || !pattern) return;
+      addRule(state, { id: 'rule-u' + Date.now(), name, pattern, matchType: 'domain', color: 'blue', enabled: true });
+      renderOptionsRules(state, optRoot);
+      renderRules(state, popupRoot);
+      renderHome(state, popupRoot);
+      el.showToast('Rule added', { type: 'success', duration: 1500 });
+    } else if (e.target.classList?.contains('opt-rule-delete-btn')) {
+      const ruleId = e.target.dataset.ruleId;
+      if (!state.rules.some((r) => r.id === ruleId)) return;
+      deleteRule(state, ruleId);
+      renderOptionsRules(state, optRoot);
+      renderRules(state, popupRoot);
+      renderHome(state, popupRoot);
+      el.showToast('Rule deleted', { type: 'success', duration: 1500 });
     }
   });
 }
