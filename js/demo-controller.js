@@ -249,15 +249,17 @@ export function wireController(el, popupRoot, state, optRoot = popupRoot, keyboa
   if (btn) {
     btn.addEventListener('click', () => triggerGroupAll());
   }
+  // ponytail: triggerUngroupAll — shared by button click (#98) and Alt+Shift+U shortcut (#119)
+  const triggerUngroupAll = () => {
+    ungroupAll(state);
+    el.tabs = mapTabs(state);
+    el.tabGroups = mapTabGroups(state);
+    el.showToast('All groups removed', { type: 'success', duration: 1500 });
+    renderHome(state, popupRoot);
+  };
   const ungroupBtn = popupRoot.querySelector('#btn-ungroup-all');
   if (ungroupBtn) {
-    ungroupBtn.addEventListener('click', () => {
-      ungroupAll(state);
-      el.tabs = mapTabs(state);
-      el.tabGroups = mapTabGroups(state);
-      el.showToast('All groups removed', { type: 'success', duration: 1500 });
-      renderHome(state, popupRoot);
-    });
+    ungroupBtn.addEventListener('click', () => triggerUngroupAll());
   }
   const collapseBtn = popupRoot.querySelector('#btn-collapse-all');
   if (collapseBtn) {
@@ -454,6 +456,11 @@ export function wireController(el, popupRoot, state, optRoot = popupRoot, keyboa
     if (e.altKey && e.shiftKey && (e.key === 'g' || e.key === 'G' || e.code === 'KeyG')) {
       e.preventDefault();
       triggerGroupAll();
+      return;
+    }
+    if (e.altKey && e.shiftKey && (e.key === 'u' || e.key === 'U' || e.code === 'KeyU')) {
+      e.preventDefault();
+      triggerUngroupAll();
       return;
     }
     if (!isOpen) return;
