@@ -185,6 +185,13 @@ export function setActiveProfile(state, profileId) {
   }
 }
 
+// ponytail: allowlist guard prevents stray keys; direct assignment, no coercion; no DOM/clock/rng
+export function setSetting(state, key, value) {
+  if (!state?.settings) return;
+  if (!['theme', 'automation', 'autoCollapse'].includes(key)) return;
+  state.settings[key] = value;
+}
+
 // ponytail: optRoot — in production pass document (#opt-rules-list is outside popupRoot); tests omit it
 export function wireController(el, popupRoot, state, optRoot = popupRoot) {
   el.tabs = mapTabs(state);
@@ -384,6 +391,18 @@ export function wireController(el, popupRoot, state, optRoot = popupRoot) {
       renderRules(state, popupRoot);
       renderHome(state, popupRoot);
       el.showToast('Profile: ' + profile.name, { type: 'success', duration: 1500 });
+    }
+  });
+  optRoot.addEventListener('change', (e) => {
+    if (e.target.id === 'opt-settings-theme') {
+      setSetting(state, 'theme', e.target.value);
+      el.showToast('Theme: ' + e.target.value, { type: 'success', duration: 1500 });
+    } else if (e.target.id === 'opt-settings-automation') {
+      setSetting(state, 'automation', e.target.value);
+      el.showToast('Automation: ' + e.target.value, { type: 'success', duration: 1500 });
+    } else if (e.target.id === 'opt-settings-autoCollapse') {
+      setSetting(state, 'autoCollapse', e.target.checked);
+      el.showToast(e.target.checked ? 'Auto-collapse on' : 'Auto-collapse off', { type: 'success', duration: 1500 });
     }
   });
 }
