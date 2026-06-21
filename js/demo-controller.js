@@ -237,15 +237,17 @@ export function wireController(el, popupRoot, state, optRoot = popupRoot, keyboa
     setTabGroupCollapsed(state, event.detail.id, event.detail.collapsed);
     el.tabGroups = mapTabGroups(state);
   });
+  // ponytail: triggerGroupAll — shared by button click (#97) and Alt+Shift+G shortcut (#118)
+  const triggerGroupAll = () => {
+    groupAll(state);
+    el.tabs = mapTabs(state);
+    el.tabGroups = mapTabGroups(state);
+    el.showToast('All tabs grouped', { type: 'success', duration: 1500 });
+    renderHome(state, popupRoot);
+  };
   const btn = popupRoot.querySelector('#btn-group-all');
   if (btn) {
-    btn.addEventListener('click', () => {
-      groupAll(state);
-      el.tabs = mapTabs(state);
-      el.tabGroups = mapTabGroups(state);
-      el.showToast('All tabs grouped', { type: 'success', duration: 1500 });
-      renderHome(state, popupRoot);
-    });
+    btn.addEventListener('click', () => triggerGroupAll());
   }
   const ungroupBtn = popupRoot.querySelector('#btn-ungroup-all');
   if (ungroupBtn) {
@@ -447,6 +449,11 @@ export function wireController(el, popupRoot, state, optRoot = popupRoot, keyboa
     if ((e.metaKey || e.ctrlKey) && (e.key === 'k' || e.key === 'K')) {
       e.preventDefault();
       if (isOpen) closePalette(popupRoot); else openPalette(state, popupRoot);
+      return;
+    }
+    if (e.altKey && e.shiftKey && (e.key === 'g' || e.key === 'G' || e.code === 'KeyG')) {
+      e.preventDefault();
+      triggerGroupAll();
       return;
     }
     if (!isOpen) return;
