@@ -123,6 +123,27 @@ export function renderOptionsProfiles(state, root = document) {
   ).join('');
 }
 
+// ponytail: inline filter (no import from controller — avoids circular dep); escapeHtml on all tab fields
+export function renderPalette(state, root, query) {
+  const resultsEl = root.querySelector('#cmd-palette-results');
+  if (!resultsEl) return;
+  // ponytail: duplicate of filterTabsByQuery logic — 2 lines, third module fails ponytail rung 6
+  const q = (query == null) ? '' : String(query).trim().toLowerCase();
+  const filtered = q === '' ? state.tabs : state.tabs.filter(
+    (t) => t.title?.toLowerCase().includes(q) || t.url?.toLowerCase().includes(q)
+  );
+  if (filtered.length === 0) {
+    resultsEl.innerHTML = '<li class="cmd-palette-empty">No results</li>';
+    return;
+  }
+  resultsEl.innerHTML = filtered.map((t) =>
+    `<li data-tab-id="${escapeHtml(String(t.id))}">` +
+    `<span class="cmd-palette-title">${escapeHtml(t.title)}</span>` +
+    `<span class="cmd-palette-url">${escapeHtml(t.url)}</span>` +
+    `</li>`
+  ).join('');
+}
+
 export function renderInsights(state, popupRoot) {
   const listEl = popupRoot.querySelector('#tp-insights-list');
   const badge = popupRoot.querySelector('#tp-insights-badge');

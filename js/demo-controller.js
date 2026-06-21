@@ -3,7 +3,7 @@
  * Wires BrowserStage tab-change, tab-group-toggle, and group action events to state mutation + renderHome.
  */
 
-import { renderHome, renderHibernate, renderRules, renderSessions, renderInsights, renderOptionsRules, renderOptionsProfiles } from './demo-renderer.js';
+import { renderHome, renderHibernate, renderRules, renderSessions, renderInsights, renderOptionsRules, renderOptionsProfiles, renderPalette } from './demo-renderer.js';
 
 export function setActiveTab(state, index) {
   if (state.tabs.length === 0) return;
@@ -192,8 +192,37 @@ export function setSetting(state, key, value) {
   state.settings[key] = value;
 }
 
+// ponytail: null/undefined → identity; String()+trim otherwise; case-insensitive substring on title OR url
+export function filterTabsByQuery(tabs, query) {
+  if (query == null) return tabs;
+  const q = String(query).trim().toLowerCase();
+  if (q === '') return tabs;
+  return tabs.filter((t) => t.title?.toLowerCase().includes(q) || t.url?.toLowerCase().includes(q));
+}
+
+// ponytail: sets hidden=false, clears input, renders all tabs, focuses input; no-op if palette absent
+export function openPalette(state, popupRoot) {
+  const palette = popupRoot.querySelector('#cmd-palette');
+  if (!palette) return;
+  palette.hidden = false;
+  const input = popupRoot.querySelector('#cmd-palette-input');
+  if (input) input.value = '';
+  renderPalette(state, popupRoot, '');
+  if (input) input.focus?.();
+}
+
+// ponytail: sets hidden=true, clears input; no-op if palette absent
+export function closePalette(popupRoot) {
+  const palette = popupRoot.querySelector('#cmd-palette');
+  if (!palette) return;
+  palette.hidden = true;
+  const input = popupRoot.querySelector('#cmd-palette-input');
+  if (input) input.value = '';
+}
+
 // ponytail: optRoot — in production pass document (#opt-rules-list is outside popupRoot); tests omit it
-export function wireController(el, popupRoot, state, optRoot = popupRoot) {
+// ponytail: keyboardRoot defaults to globalThis.document — safe in Node.js (returns undefined) and browser (returns document)
+export function wireController(el, popupRoot, state, optRoot = popupRoot, keyboardRoot = globalThis.document) {
   el.tabs = mapTabs(state);
   el.tabGroups = mapTabGroups(state);
   renderSessions(state, popupRoot);
@@ -403,6 +432,38 @@ export function wireController(el, popupRoot, state, optRoot = popupRoot) {
     } else if (e.target.id === 'opt-settings-autoCollapse') {
       setSetting(state, 'autoCollapse', e.target.checked);
       el.showToast(e.target.checked ? 'Auto-collapse on' : 'Auto-collapse off', { type: 'success', duration: 1500 });
+    }
+  });
+  // ponytail: palette input delegation — filter results on every keystroke
+  popupRoot.addEventListener('input', (e) => {
+    if (e.target.id === 'cmd-palette-input') {
+      renderPalette(state, popupRoot, e.target.value);
+    }
+  });
+  // ponytail: keyboardRoot defaults to document; use optional chaining so Node tests (no document) don't crash
+  keyboardRoot?.addEventListener('keydown', (e) => {
+    const palette = popupRoot.querySelector('#cmd-palette');
+    const isOpen = palette && palette.hidden === false;
+    if ((e.metaKey || e.ctrlKey) && (e.key === 'k' || e.key === 'K')) {
+      e.preventDefault();
+      if (isOpen) closePalette(popupRoot); else openPalette(state, popupRoot);
+      return;
+    }
+    if (!isOpen) return;
+    if (e.key === 'Escape') {
+      e.preventDefault();
+      closePalette(popupRoot);
+    } else if (e.key === 'Enter') {
+      e.preventDefault();
+      const query = popupRoot.querySelector('#cmd-palette-input')?.value || '';
+      const matches = filterTabsByQuery(state.tabs, query);
+      if (matches.length === 0) return;
+      const targetIndex = state.tabs.indexOf(matches[0]);
+      if (targetIndex < 0) return;
+      setActiveTab(state, targetIndex);
+      el.activeTab = targetIndex;
+      renderHome(state, popupRoot);
+      closePalette(popupRoot);
     }
   });
 }
