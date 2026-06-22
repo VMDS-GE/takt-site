@@ -261,15 +261,16 @@ export function wireController(el, popupRoot, state, optRoot = popupRoot, keyboa
   if (ungroupBtn) {
     ungroupBtn.addEventListener('click', () => triggerUngroupAll());
   }
+  // ponytail: triggerCollapseAll — shared by button click (#99) and Alt+Shift+C shortcut (#120)
+  const triggerCollapseAll = () => {
+    collapseAll(state);
+    el.tabGroups = mapTabGroups(state);
+    el.showToast('All groups collapsed', { type: 'success', duration: 1500 });
+    renderHome(state, popupRoot);
+  };
   const collapseBtn = popupRoot.querySelector('#btn-collapse-all');
   if (collapseBtn) {
-    collapseBtn.addEventListener('click', () => {
-      if (state.tabGroups.length === 0) return;
-      collapseAll(state);
-      el.tabGroups = mapTabGroups(state);
-      el.showToast('All groups collapsed', { type: 'success', duration: 1500 });
-      renderHome(state, popupRoot);
-    });
+    collapseBtn.addEventListener('click', () => triggerCollapseAll());
   }
   const expandBtn = popupRoot.querySelector('#btn-expand-all');
   if (expandBtn) {
@@ -461,6 +462,11 @@ export function wireController(el, popupRoot, state, optRoot = popupRoot, keyboa
     if (e.altKey && e.shiftKey && (e.key === 'u' || e.key === 'U' || e.code === 'KeyU')) {
       e.preventDefault();
       triggerUngroupAll();
+      return;
+    }
+    if (e.altKey && e.shiftKey && (e.key === 'c' || e.key === 'C' || e.code === 'KeyC')) {
+      e.preventDefault();
+      triggerCollapseAll();
       return;
     }
     if (!isOpen) return;
