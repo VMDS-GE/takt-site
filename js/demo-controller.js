@@ -223,7 +223,10 @@ export function closePalette(popupRoot) {
 // ponytail: optRoot — in production pass document (#opt-rules-list is outside popupRoot); tests omit it
 // ponytail: keyboardRoot defaults to globalThis.document — safe in Node.js (returns undefined) and browser (returns document)
 export function wireController(el, popupRoot, state, optRoot = popupRoot, keyboardRoot = globalThis.document) {
+  // ponytail: private — returns new entry object; caller wraps in [] for Lit reactivity (new array per call)
+  const updateToolbarBadge = () => ({ id: 'takt', iconUrl: 'assets/favicon-32.png', title: 'Takt', badge: String(state.hibernated.length || '') });
   el.tabs = mapTabs(state);
+  el.toolbar = [updateToolbarBadge()];
   el.tabGroups = mapTabGroups(state);
   renderSessions(state, popupRoot);
   renderInsights(state, popupRoot);
@@ -290,6 +293,7 @@ export function wireController(el, popupRoot, state, optRoot = popupRoot, keyboa
       el.showToast('Tab hibernated', { type: 'success', duration: 1500 });
       renderHome(state, popupRoot);
       renderHibernate(state, popupRoot);
+      el.toolbar = [updateToolbarBadge()];
     });
   }
   const wakeAllBtn = popupRoot.querySelector('#btn-wake-all');
@@ -300,6 +304,7 @@ export function wireController(el, popupRoot, state, optRoot = popupRoot, keyboa
       renderHibernate(state, popupRoot);
       renderHome(state, popupRoot);
       el.showToast('All tabs awakened', { type: 'success', duration: 1500 });
+      el.toolbar = [updateToolbarBadge()];
     });
   }
   const clearHibBtn = popupRoot.querySelector('#btn-clear-hib');
@@ -309,6 +314,7 @@ export function wireController(el, popupRoot, state, optRoot = popupRoot, keyboa
       renderHibernate(state, popupRoot);
       renderHome(state, popupRoot);
       el.showToast('All hibernated tabs cleared', { type: 'success', duration: 1500 });
+      el.toolbar = [updateToolbarBadge()];
     });
   }
   const saveSessionBtn = popupRoot.querySelector('#btn-save-session');
@@ -362,6 +368,7 @@ export function wireController(el, popupRoot, state, optRoot = popupRoot, keyboa
       renderHibernate(state, popupRoot);
       renderHome(state, popupRoot);
       el.showToast('Tab awakened', { type: 'success', duration: 1500 });
+      el.toolbar = [updateToolbarBadge()];
     } else if (e.target.classList?.contains('tp-restore-btn')) {
       const sessionId = e.target.dataset.sessionId;
       const session = state.sessions.find((s) => s.id === sessionId);
