@@ -248,6 +248,7 @@ export function wireController(
   el.tabs = mapTabs(state);
   el.toolbar = [updateToolbarBadge()];
   el.tabGroups = mapTabGroups(state);
+  el.activePopupId = 'takt';
   renderSessions(state, popupRoot);
   renderInsights(state, popupRoot);
   renderOptionsRules(state, optRoot);
