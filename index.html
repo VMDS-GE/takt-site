@@ -30,7 +30,6 @@
   <link rel="stylesheet" href="css/components.css">
 
   <script src="js/theme.js"></script>
-  <script defer src="js/browser-stage.iife.js"></script>
   <script type="module" src="js/i18n.js"></script>
 
   <script type="application/ld+json">
@@ -137,7 +136,11 @@
       <div class="container">
         <h2 data-i18n="demo.title">See it in action</h2>
         <p data-i18n="demo.subtitle">Watch Takt organize tabs automatically as you browse.</p>
-        <browser-stage></browser-stage>
+        <iframe
+          class="demo-iframe"
+          src="demo.html"
+          title="Takt interactive demo"
+          loading="lazy"></iframe>
       </div>
     </section>
 
