@@ -3,7 +3,16 @@
  * Wires BrowserStage tab-change, tab-group-toggle, and group action events to state mutation + renderHome.
  */
 
-import { renderHome, renderHibernate, renderRules, renderSessions, renderInsights, renderOptionsRules, renderOptionsProfiles, renderPalette } from './demo-renderer.js';
+import {
+  renderHome,
+  renderHibernate,
+  renderRules,
+  renderSessions,
+  renderInsights,
+  renderOptionsRules,
+  renderOptionsProfiles,
+  renderPalette,
+} from './demo-renderer.js';
 
 export function setActiveTab(state, index) {
   if (state.tabs.length === 0) return;
@@ -222,9 +231,20 @@ export function closePalette(popupRoot) {
 
 // ponytail: optRoot — in production pass document (#opt-rules-list is outside popupRoot); tests omit it
 // ponytail: keyboardRoot defaults to globalThis.document — safe in Node.js (returns undefined) and browser (returns document)
-export function wireController(el, popupRoot, state, optRoot = popupRoot, keyboardRoot = globalThis.document) {
+export function wireController(
+  el,
+  popupRoot,
+  state,
+  optRoot = popupRoot,
+  keyboardRoot = globalThis.document
+) {
   // ponytail: private — returns new entry object; caller wraps in [] for Lit reactivity (new array per call)
-  const updateToolbarBadge = () => ({ id: 'takt', iconUrl: 'assets/favicon-32.png', title: 'Takt', badge: String(state.hibernated.length || '') });
+  const updateToolbarBadge = () => ({
+    id: 'takt',
+    iconUrl: 'assets/favicon-32.png',
+    title: 'Takt',
+    badge: String(state.hibernated.length || ''),
+  });
   el.tabs = mapTabs(state);
   el.toolbar = [updateToolbarBadge()];
   el.tabGroups = mapTabGroups(state);
@@ -232,6 +252,7 @@ export function wireController(el, popupRoot, state, optRoot = popupRoot, keyboa
   renderInsights(state, popupRoot);
   renderOptionsRules(state, optRoot);
   renderOptionsProfiles(state, optRoot);
+  renderHibernate(state, popupRoot);
   el.addEventListener('tab-change', (event) => {
     setActiveTab(state, event.detail.index);
     renderHome(state, popupRoot);
@@ -242,6 +263,11 @@ export function wireController(el, popupRoot, state, optRoot = popupRoot, keyboa
   });
   // ponytail: triggerGroupAll — shared by button click (#97) and Alt+Shift+G shortcut (#118)
   const triggerGroupAll = () => {
+    // Guard 3: no-op when all tabs already grouped
+    if (state.tabs.length > 0 && state.tabs.every((t) => t.groupId)) {
+      el.showToast('All tabs already grouped', { type: 'info', duration: 1500 });
+      return;
+    }
     groupAll(state);
     el.tabs = mapTabs(state);
     el.tabGroups = mapTabGroups(state);
@@ -288,8 +314,14 @@ export function wireController(el, popupRoot, state, optRoot = popupRoot, keyboa
   const hibBtn = popupRoot.querySelector('#btn-hibernate-tab');
   if (hibBtn) {
     hibBtn.addEventListener('click', () => {
+      // Guard 1: block when only one tab remains
+      if (state.tabs.length <= 1) {
+        el.showToast('Keep at least one tab open', { type: 'info', duration: 1500 });
+        return;
+      }
       hibernateTab(state);
       el.tabs = mapTabs(state);
+      el.activeTab = state.tabs.findIndex((t) => t.active === true); // Guard 4
       el.showToast('Tab hibernated', { type: 'success', duration: 1500 });
       renderHome(state, popupRoot);
       renderHibernate(state, popupRoot);
@@ -298,7 +330,7 @@ export function wireController(el, popupRoot, state, optRoot = popupRoot, keyboa
   }
   const wakeAllBtn = popupRoot.querySelector('#btn-wake-all');
   if (wakeAllBtn) {
-    wakeAllBtn.addEventListener('click', () => {
+    wakeAllBtn.addEventListener?.('click', () => {
       wakeAll(state);
       el.tabs = mapTabs(state);
       renderHibernate(state, popupRoot);
@@ -309,7 +341,7 @@ export function wireController(el, popupRoot, state, optRoot = popupRoot, keyboa
   }
   const clearHibBtn = popupRoot.querySelector('#btn-clear-hib');
   if (clearHibBtn) {
-    clearHibBtn.addEventListener('click', () => {
+    clearHibBtn.addEventListener?.('click', () => {
       clearHibernated(state);
       renderHibernate(state, popupRoot);
       renderHome(state, popupRoot);
@@ -408,7 +440,15 @@ export function wireController(el, popupRoot, state, optRoot = popupRoot, keyboa
       const name = (optRoot.querySelector('#opt-rule-add-name')?.value || '').trim();
       const pattern = (optRoot.querySelector('#opt-rule-add-pattern')?.value || '').trim();
       if (!name || !pattern) return;
-      addRule(state, { id: 'rule-u' + Date.now(), name, pattern, matchType: 'domain', color: 'blue', enabled: true, profileId: state.activeProfileId });
+      addRule(state, {
+        id: 'rule-u' + Date.now(),
+        name,
+        pattern,
+        matchType: 'domain',
+        color: 'blue',
+        enabled: true,
+        profileId: state.activeProfileId,
+      });
       renderOptionsRules(state, optRoot);
       renderRules(state, popupRoot);
       renderHome(state, popupRoot);
@@ -443,7 +483,10 @@ export function wireController(el, popupRoot, state, optRoot = popupRoot, keyboa
       el.showToast('Automation: ' + e.target.value, { type: 'success', duration: 1500 });
     } else if (e.target.id === 'opt-settings-autoCollapse') {
       setSetting(state, 'autoCollapse', e.target.checked);
-      el.showToast(e.target.checked ? 'Auto-collapse on' : 'Auto-collapse off', { type: 'success', duration: 1500 });
+      el.showToast(e.target.checked ? 'Auto-collapse on' : 'Auto-collapse off', {
+        type: 'success',
+        duration: 1500,
+      });
     }
   });
   // ponytail: palette input delegation — filter results on every keystroke
@@ -458,7 +501,8 @@ export function wireController(el, popupRoot, state, optRoot = popupRoot, keyboa
     const isOpen = palette && palette.hidden === false;
     if ((e.metaKey || e.ctrlKey) && (e.key === 'k' || e.key === 'K')) {
       e.preventDefault();
-      if (isOpen) closePalette(popupRoot); else openPalette(state, popupRoot);
+      if (isOpen) closePalette(popupRoot);
+      else openPalette(state, popupRoot);
       return;
     }
     if (e.altKey && e.shiftKey && (e.key === 'g' || e.key === 'G' || e.code === 'KeyG')) {

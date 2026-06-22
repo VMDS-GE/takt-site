@@ -15,9 +15,9 @@ export function escapeHtml(str) {
 
 export function renderHome(state, popupRoot) {
   const statusEl = popupRoot.querySelector('#tp-status');
-  const activeTab = state.tabs.find(t => t.active === true);
+  const activeTab = state.tabs.find((t) => t.active === true);
   const matchedRule = activeTab
-    ? state.rules.find(r => r.enabled && activeTab.url.includes(r.pattern))
+    ? state.rules.find((r) => r.enabled && activeTab.url.includes(r.pattern))
     : null;
   if (matchedRule) {
     statusEl.innerHTML =
@@ -32,18 +32,23 @@ export function renderHome(state, popupRoot) {
 export function renderRules(state, popupRoot) {
   const listEl = popupRoot.querySelector('#tp-rules-list');
   const countEl = popupRoot.querySelector('#tp-rules-count');
-  const filteredRules = state.rules.filter(r => (r.profileId || 'prof-default') === state.activeProfileId);
-  const activeCount = filteredRules.filter(r => r.enabled).length;
+  const filteredRules = state.rules.filter(
+    (r) => (r.profileId || 'prof-default') === state.activeProfileId
+  );
+  const activeCount = filteredRules.filter((r) => r.enabled).length;
   countEl.textContent = `(${activeCount} active)`;
-  listEl.innerHTML = filteredRules.map((rule) =>
-    `<li class="tp-rule-item">` +
-    `<label class="tp-toggle"><input type="checkbox"${rule.enabled ? ' checked' : ''} data-rule-id="${rule.id}">` +
-    `<span class="tp-toggle-track"></span></label>` +
-    `<span class="tp-rule-name">${escapeHtml(rule.name)}</span>` +
-    `<span class="tp-color-dot" style="background:${rule.color}"></span>` +
-    `<span class="tp-rule-group">${escapeHtml(rule.name)}</span>` +
-    `</li>`
-  ).join('');
+  listEl.innerHTML = filteredRules
+    .map(
+      (rule) =>
+        `<li class="tp-rule-item">` +
+        `<label class="tp-toggle"><input type="checkbox"${rule.enabled ? ' checked' : ''} data-rule-id="${rule.id}">` +
+        `<span class="tp-toggle-track"></span></label>` +
+        `<span class="tp-rule-name">${escapeHtml(rule.name)}</span>` +
+        `<span class="tp-color-dot" style="background:${rule.color}"></span>` +
+        `<span class="tp-rule-group">${escapeHtml(rule.name)}</span>` +
+        `</li>`
+    )
+    .join('');
 }
 
 export function renderSessions(state, popupRoot) {
@@ -53,18 +58,21 @@ export function renderSessions(state, popupRoot) {
       '<div style="font-size:11px;color:#8e8e93;padding:4px 0">No saved sessions.</div>';
     return;
   }
-  listEl.innerHTML = state.sessions.map(session =>
-    `<div class="tp-session-item">` +
-    `<div class="tp-session-info">` +
-    `<span class="tp-session-name">${escapeHtml(session.name)}</span>` +
-    `<span class="tp-session-meta">${session.tabCount} tabs · ${session.createdAt.slice(0, 10)}</span>` +
-    `</div>` +
-    `<div class="tp-session-actions">` +
-    `<button class="tp-btn-link tp-restore-btn" data-session-id="${escapeHtml(session.id)}" style="font-size:11px;color:#007aff">Restore</button>` +
-    `<button class="tp-btn-link tp-del-btn" data-session-id="${escapeHtml(session.id)}" style="font-size:11px;color:#aeaeb2">✕</button>` +
-    `</div>` +
-    `</div>`
-  ).join('');
+  listEl.innerHTML = state.sessions
+    .map(
+      (session) =>
+        `<div class="tp-session-item">` +
+        `<div class="tp-session-info">` +
+        `<span class="tp-session-name">${escapeHtml(session.name)}</span>` +
+        `<span class="tp-session-meta">${session.tabCount} tabs · ${session.createdAt.slice(0, 10)}</span>` +
+        `</div>` +
+        `<div class="tp-session-actions">` +
+        `<button class="tp-btn-link tp-restore-btn" data-session-id="${escapeHtml(session.id)}" style="font-size:11px;color:#007aff">Restore</button>` +
+        `<button class="tp-btn-link tp-del-btn" data-session-id="${escapeHtml(session.id)}" style="font-size:11px;color:#aeaeb2">✕</button>` +
+        `</div>` +
+        `</div>`
+    )
+    .join('');
 }
 
 export function renderHibernate(state, popupRoot) {
@@ -72,17 +80,25 @@ export function renderHibernate(state, popupRoot) {
   const statsEl = popupRoot.querySelector('#tp-hib-stats');
   const listEl = popupRoot.querySelector('#tp-hib-list');
   const count = state.hibernated.length;
+  // Guard 2: disable/enable footer buttons based on count
+  const wakeAllEl = popupRoot.querySelector('#btn-wake-all');
+  const clearHibEl = popupRoot.querySelector('#btn-clear-hib');
+  if (wakeAllEl) wakeAllEl.disabled = count === 0;
+  if (clearHibEl) clearHibEl.disabled = count === 0;
   if (count > 0) {
     badge.textContent = String(count);
     badge.hidden = false;
     statsEl.innerHTML = `<span class="tp-hib-stat">~${count * 16}MB saved</span>`;
-    listEl.innerHTML = state.hibernated.map(tab =>
-      `<div class="tp-hib-item">` +
-      `<img class="tp-hib-favicon" src="${escapeHtml(tab.favIconUrl)}" alt="" />` +
-      `<div class="tp-hib-info"><div class="tp-hib-title">${escapeHtml(tab.title)}</div></div>` +
-      `<button class="tp-wake-btn" data-id="${escapeHtml(tab.id)}">Wake</button>` +
-      `</div>`
-    ).join('');
+    listEl.innerHTML = state.hibernated
+      .map(
+        (tab) =>
+          `<div class="tp-hib-item">` +
+          `<img class="tp-hib-favicon" src="${escapeHtml(tab.favIconUrl)}" alt="" />` +
+          `<div class="tp-hib-info"><div class="tp-hib-title">${escapeHtml(tab.title)}</div></div>` +
+          `<button class="tp-wake-btn" data-id="${escapeHtml(tab.id)}">Wake</button>` +
+          `</div>`
+      )
+      .join('');
   } else {
     badge.hidden = true;
     statsEl.innerHTML = '';
@@ -95,15 +111,20 @@ export function renderHibernate(state, popupRoot) {
 export function renderOptionsRules(state, root = document) {
   const listEl = root.querySelector('#opt-rules-list');
   if (!listEl) return;
-  const filteredRules = state.rules.filter(r => (r.profileId || 'prof-default') === state.activeProfileId);
+  const filteredRules = state.rules.filter(
+    (r) => (r.profileId || 'prof-default') === state.activeProfileId
+  );
   listEl.innerHTML =
-    filteredRules.map(rule =>
-      `<li class="opt-rule-item" data-rule-id="${escapeHtml(rule.id)}">` +
-      `<span class="opt-rule-name">${escapeHtml(rule.name)}</span>` +
-      `<span class="opt-rule-pattern">${escapeHtml(rule.pattern)}</span>` +
-      `<button class="opt-rule-delete-btn" type="button" data-rule-id="${escapeHtml(rule.id)}">Delete</button>` +
-      `</li>`
-    ).join('') +
+    filteredRules
+      .map(
+        (rule) =>
+          `<li class="opt-rule-item" data-rule-id="${escapeHtml(rule.id)}">` +
+          `<span class="opt-rule-name">${escapeHtml(rule.name)}</span>` +
+          `<span class="opt-rule-pattern">${escapeHtml(rule.pattern)}</span>` +
+          `<button class="opt-rule-delete-btn" type="button" data-rule-id="${escapeHtml(rule.id)}">Delete</button>` +
+          `</li>`
+      )
+      .join('') +
     `<li class="opt-rule-add-row">` +
     `<input type="text" id="opt-rule-add-name" placeholder="Name">` +
     `<input type="text" id="opt-rule-add-pattern" placeholder="Pattern (e.g. github.com)">` +
@@ -115,12 +136,17 @@ export function renderOptionsRules(state, root = document) {
 export function renderOptionsProfiles(state, root = document) {
   const listEl = root.querySelector('#opt-profiles-list');
   if (!listEl) return;
-  listEl.innerHTML = state.profiles.map(profile =>
-    `<div class="opt-profile-item" data-profile-id="${escapeHtml(profile.id)}">` +
-    escapeHtml(profile.name) +
-    (profile.id === state.activeProfileId ? '<span class="opt-active-badge">Active</span>' : '') +
-    `</div>`
-  ).join('');
+  listEl.innerHTML = state.profiles
+    .map(
+      (profile) =>
+        `<div class="opt-profile-item" data-profile-id="${escapeHtml(profile.id)}">` +
+        escapeHtml(profile.name) +
+        (profile.id === state.activeProfileId
+          ? '<span class="opt-active-badge">Active</span>'
+          : '') +
+        `</div>`
+    )
+    .join('');
 }
 
 // ponytail: inline filter (no import from controller — avoids circular dep); escapeHtml on all tab fields
@@ -128,20 +154,26 @@ export function renderPalette(state, root, query) {
   const resultsEl = root.querySelector('#cmd-palette-results');
   if (!resultsEl) return;
   // ponytail: duplicate of filterTabsByQuery logic — 2 lines, third module fails ponytail rung 6
-  const q = (query == null) ? '' : String(query).trim().toLowerCase();
-  const filtered = q === '' ? state.tabs : state.tabs.filter(
-    (t) => t.title?.toLowerCase().includes(q) || t.url?.toLowerCase().includes(q)
-  );
+  const q = query == null ? '' : String(query).trim().toLowerCase();
+  const filtered =
+    q === ''
+      ? state.tabs
+      : state.tabs.filter(
+          (t) => t.title?.toLowerCase().includes(q) || t.url?.toLowerCase().includes(q)
+        );
   if (filtered.length === 0) {
     resultsEl.innerHTML = '<li class="cmd-palette-empty">No results</li>';
     return;
   }
-  resultsEl.innerHTML = filtered.map((t) =>
-    `<li data-tab-id="${escapeHtml(String(t.id))}">` +
-    `<span class="cmd-palette-title">${escapeHtml(t.title)}</span>` +
-    `<span class="cmd-palette-url">${escapeHtml(t.url)}</span>` +
-    `</li>`
-  ).join('');
+  resultsEl.innerHTML = filtered
+    .map(
+      (t) =>
+        `<li data-tab-id="${escapeHtml(String(t.id))}">` +
+        `<span class="cmd-palette-title">${escapeHtml(t.title)}</span>` +
+        `<span class="cmd-palette-url">${escapeHtml(t.url)}</span>` +
+        `</li>`
+    )
+    .join('');
 }
 
 export function renderInsights(state, popupRoot) {
@@ -156,26 +188,33 @@ export function renderInsights(state, popupRoot) {
   }
   badge.textContent = String(visible.length);
   badge.hidden = false;
-  const cards = visible.map((insight) => {
-    const ruleHtml = 'suggestedRule' in insight
-      ? `<div class="tp-insight-rule"><span class="tp-insight-rule-name">${escapeHtml(insight.suggestedRule.name)}</span></div>`
-      : '';
-    const createBtn = insight.type === 'suggestion'
-      ? `<button class="tp-insight-btn tp-insight-create" data-insight-id="${escapeHtml(insight.id)}">Create rule</button>`
-      : '';
-    return `<div class="tp-insight-card">` +
-      `<div class="tp-insight-header">` +
-      `<span class="tp-insight-title">${escapeHtml(insight.title)}</span>` +
-      `<span class="tp-insight-type">${escapeHtml(insight.type)}</span>` +
-      `</div>` +
-      `<p class="tp-insight-body">${escapeHtml(insight.body)}</p>` +
-      ruleHtml +
-      `<div class="tp-insight-actions">` +
-      createBtn +
-      `<button class="tp-insight-btn tp-insight-dismiss" data-insight-id="${escapeHtml(insight.id)}">Dismiss</button>` +
-      `</div>` +
-      `</div>`;
-  }).join('');
+  const cards = visible
+    .map((insight) => {
+      const ruleHtml =
+        'suggestedRule' in insight
+          ? `<div class="tp-insight-rule"><span class="tp-insight-rule-name">${escapeHtml(insight.suggestedRule.name)}</span></div>`
+          : '';
+      const createBtn =
+        insight.type === 'suggestion'
+          ? `<button class="tp-insight-btn tp-insight-create" data-insight-id="${escapeHtml(insight.id)}">Create rule</button>`
+          : '';
+      return (
+        `<div class="tp-insight-card">` +
+        `<div class="tp-insight-header">` +
+        `<span class="tp-insight-title">${escapeHtml(insight.title)}</span>` +
+        `<span class="tp-insight-type">${escapeHtml(insight.type)}</span>` +
+        `</div>` +
+        `<p class="tp-insight-body">${escapeHtml(insight.body)}</p>` +
+        ruleHtml +
+        `<div class="tp-insight-actions">` +
+        createBtn +
+        `<button class="tp-insight-btn tp-insight-dismiss" data-insight-id="${escapeHtml(insight.id)}">Dismiss</button>` +
+        `</div>` +
+        `</div>`
+      );
+    })
+    .join('');
   listEl.innerHTML =
-    cards + '<button type="button" class="tp-insights-cta"><span>Unlock full insights with</span><strong>Takt Premium</strong></button>';
+    cards +
+    '<button type="button" class="tp-insights-cta"><span>Unlock full insights with</span><strong>Takt Premium</strong></button>';
 }
