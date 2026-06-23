@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Auto-collapse — Takt</title>
+    <meta
+      name="description"
+      content="Auto-collapse automatically collapses other tab groups when you expand one, keeping your workspace focused."
+    />
+
+    <link rel="icon" type="image/png" sizes="32x32" href="../../assets/favicon-32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="../../assets/favicon-16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="../../assets/apple-touch-icon.png" />
+
+    <meta name="theme-color" content="#FF3B30" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../../css/tokens.css" />
+    <link rel="stylesheet" href="../../css/base.css" />
+    <link rel="stylesheet" href="../../css/layout.css" />
+    <link rel="stylesheet" href="../../css/docs.css" />
+
+    <script src="../../js/theme.js"></script>
+  </head>
+  <body>
+    <header id="site-header"></header>
+
+    <div class="docs-layout">
+      <aside class="docs-sidebar">
+        <h4>Documentation</h4>
+        <ul>
+          <li><a href="../../getting-started/">Getting Started</a></li>
+          <li><a href="../rules/">Rule Reference</a></li>
+          <li><a href="../duplicates/">Duplicate Prevention</a></li>
+          <li><a href="../group-actions/">Group Actions</a></li>
+          <li><a href="./" class="active">Auto-collapse</a></li>
+          <li><a href="../resources/">Resource Dashboard</a></li>
+          <li><a href="../profiles/">Profiles &amp; Schedules</a></li>
+          <li><a href="../sessions/">Sessions</a></li>
+          <li><a href="../hibernation/">Hibernation</a></li>
+          <li><a href="../sync/">File Sync</a></li>
+          <li><a href="../drive-sync/">Drive Sync</a></li>
+          <li><a href="../shortcuts/">Keyboard Shortcuts</a></li>
+          <li><a href="../quick-switch/">Quick Switch</a></li>
+          <li><a href="../insights/">Insights &amp; Suggestions</a></li>
+          <li><a href="../permissions/">Permissions</a></li>
+        </ul>
+      </aside>
+
+      <main class="docs-content">
+        <h1>Auto-collapse</h1>
+        <p class="lead">
+          Automatically collapse other tab groups when you expand one — keep your workspace focused
+          without manual tidying.
+        </p>
+
+        <h2 id="overview">Overview <a href="#overview" class="anchor-link">#</a></h2>
+        <p>
+          Auto-collapse watches for tab group expansions and collapses competing groups
+          automatically. The feature ships in two tiers: a same-window mode available to all users
+          and a cross-window mode for Premium subscribers.
+        </p>
+        <p>
+          Both settings are <strong>off by default</strong>. You must opt in via
+          <strong>Settings</strong> → <strong>TAB GROUPS</strong>. Each toggle starts disabled;
+          you must turn it on manually.
+        </p>
+        <p>
+          The settings are <strong>global toggles</strong> — they apply across all profiles and
+          all windows. There is no profile-specific auto-collapse override.
+        </p>
+
+        <h2 id="how-it-works">How it works <a href="#how-it-works" class="anchor-link">#</a></h2>
+        <p>
+          When auto-collapse is enabled, Takt listens for <code>tabGroups.onUpdated</code> events.
+          Whenever a group transitions to expanded (collapsed: false) and it is the only expanded
+          group in its window, Takt collapses all other groups in the same window. The predicate is
+          stateless — no suppression flag is stored. This means:
+        </p>
+        <ul>
+          <li>
+            <strong>Manual re-expand still works.</strong> Using the
+            <kbd>Alt</kbd> + <kbd>Shift</kbd> + <kbd>E</kbd> expand-all shortcut (or the Expand
+            All button) re-expands all groups normally. Auto-collapse does not suppress the
+            expand-all command.
+          </li>
+          <li>
+            <strong>No feedback loop.</strong> Collapsing groups does not itself trigger further
+            collapse events.
+          </li>
+        </ul>
+        <p>
+          Cross-window auto-collapse is triggered by <code>tabs.onActivated</code> events instead.
+          When you switch to a tab in window A, Takt collapses all tab groups in every other open
+          window after a debounce of <strong>300 ms</strong>
+          (<code>DEBOUNCE_MS = 300</code> in <code>src/shared/constants.js</code>). The debounce
+          prevents thrashing when switching tabs in quick succession.
+        </p>
+
+        <h2 id="tiers">Free vs Premium <a href="#tiers" class="anchor-link">#</a></h2>
+        <p>
+          <span class="badge">Premium</span> Auto-collapse has two independent toggles, each
+          controlling a different scope.
+        </p>
+
+        <table class="docs-table">
+          <thead>
+            <tr>
+              <th>Tier</th>
+              <th>Same-window collapse</th>
+              <th>Cross-window collapse</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Free</td>
+              <td>✓ (opt-in)</td>
+              <td>✗</td>
+            </tr>
+            <tr>
+              <td>Premium</td>
+              <td>✓ (opt-in)</td>
+              <td>✓ (opt-in)</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p>
+          Enable same-window auto-collapse in <strong>Settings</strong> → <strong>TAB GROUPS</strong>
+          → "Auto-collapse other groups when one expands".
+        </p>
+        <p>
+          Enable cross-window auto-collapse in <strong>Settings</strong> → <strong>TAB GROUPS</strong>
+          → "Also collapse groups in other windows" (this toggle is disabled and labelled Premium
+          for free users).
+        </p>
+        <p>
+          The two settings are independent. A Premium subscriber with only same-window enabled gets
+          same-window behavior only — enabling the Premium toggle is a separate opt-in.
+        </p>
+
+        <h2 id="gotchas">Edge cases and gotchas <a href="#gotchas" class="anchor-link">#</a></h2>
+        <ul>
+          <li>
+            <strong>Both toggles default to off.</strong> Neither
+            <code>autoCollapseEnabled</code> nor <code>crossWindowAutoCollapseEnabled</code>
+            starts on. You must enable each in Settings before auto-collapse does anything.
+          </li>
+          <li>
+            <strong>300 ms debounce on cross-window.</strong> Brief tab-switches (under 300 ms)
+            do not trigger cross-window collapse. This prevents a quick tab-select from collapsing
+            all your groups in other windows before you settle on a tab.
+          </li>
+          <li>
+            <strong>Manual expand still works.</strong> After auto-collapse closes your other
+            groups, you can re-expand them individually or use the expand-all shortcut
+            (<kbd>Alt</kbd> + <kbd>Shift</kbd> + <kbd>E</kbd>). The stateless predicate means
+            there is no suppression — expand-all runs unconditionally.
+          </li>
+          <li>
+            <strong>Global setting, not profile-specific.</strong> The auto-collapse toggles
+            apply globally across all profiles. Switching to a different Takt profile does not
+            change whether auto-collapse is active.
+          </li>
+          <li>
+            <strong>Stateless predicate.</strong> Takt does not store a suppression flag to
+            prevent a group from being re-collapsed. If you expand a group and another group is
+            already open, auto-collapse fires every time.
+          </li>
+        </ul>
+
+        <div class="docs-nav-prev-next">
+          <a href="../group-actions/">&larr; Group Actions</a>
+          <a href="../resources/" class="next">Resource Dashboard &rarr;</a>
+        </div>
+      </main>
+    </div>
+
+    <footer id="site-footer"></footer>
+
+    <script src="../../js/includes.js"></script>
+    <script src="../../js/nav.js"></script>
+  </body>
+</html>
