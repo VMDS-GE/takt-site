@@ -1,110 +1,188 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Quick Switch — Takt</title>
-  <meta name="description" content="Quick Switch lets you jump to any open tab instantly by typing part of its title or URL.">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quick Switch — Takt</title>
+    <meta
+      name="description"
+      content="Quick Switch lets you jump to any open tab instantly by typing part of its title or URL."
+    />
 
-  <link rel="icon" type="image/png" sizes="32x32" href="../../assets/favicon-32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="../../assets/favicon-16.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="../../assets/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../../assets/favicon-32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="../../assets/favicon-16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="../../assets/apple-touch-icon.png" />
 
-  <meta name="theme-color" content="#FF3B30">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../../css/tokens.css">
-  <link rel="stylesheet" href="../../css/base.css">
-  <link rel="stylesheet" href="../../css/layout.css">
-  <link rel="stylesheet" href="../../css/docs.css">
+    <meta name="theme-color" content="#FF3B30" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../../css/tokens.css" />
+    <link rel="stylesheet" href="../../css/base.css" />
+    <link rel="stylesheet" href="../../css/layout.css" />
+    <link rel="stylesheet" href="../../css/docs.css" />
 
-  <script src="../../js/theme.js"></script>
-</head>
-<body>
-  <header id="site-header"></header>
+    <script src="../../js/theme.js"></script>
+  </head>
+  <body>
+    <header id="site-header"></header>
 
-  <div class="docs-layout">
-    <aside class="docs-sidebar">
-      <!-- nav: ../shortcuts/ -->
-      <h4>Documentation</h4>
-      <ul>
-        <li><a href="../../getting-started/">Getting Started</a></li>
-        <li><a href="../rules/">Rule Reference</a></li>
-        <li><a href="../duplicates/">Duplicate Prevention</a></li>
-        <li><a href="../group-actions/">Group Actions</a></li>
-        <li><a href="../resources/">Resource Dashboard</a></li>
-        <li><a href="../profiles/">Profiles &amp; Schedules</a></li>
-        <li><a href="../sessions/">Sessions</a></li>
-        <li><a href="../hibernation/">Hibernation</a></li>
-        <li><a href="../sync/">File Sync</a></li>
-        <li><a href="../drive-sync/">Drive Sync</a></li>
-        <li><a href="../shortcuts/">Keyboard Shortcuts</a></li>
-        <li><a href="./" class="active">Quick Switch</a></li>
-        <li><a href="../permissions/">Permissions</a></li>
-      </ul>
-    </aside>
+    <div class="docs-layout">
+      <aside class="docs-sidebar">
+        <!-- nav: ../shortcuts/ | active: ../quick-switch/ -->
+        <h4>Documentation</h4>
+        <ul>
+          <li><a href="../../getting-started/">Getting Started</a></li>
+          <li><a href="../rules/">Rule Reference</a></li>
+          <li><a href="../duplicates/">Duplicate Prevention</a></li>
+          <li><a href="../group-actions/">Group Actions</a></li>
+          <li><a href="../resources/">Resource Dashboard</a></li>
+          <li><a href="../profiles/">Profiles &amp; Schedules</a></li>
+          <li><a href="../sessions/">Sessions</a></li>
+          <li><a href="../hibernation/">Hibernation</a></li>
+          <li><a href="../sync/">File Sync</a></li>
+          <li><a href="../drive-sync/">Drive Sync</a></li>
+          <li><a href="../shortcuts/">Keyboard Shortcuts</a></li>
+          <li><a href="./" class="active">Quick Switch</a></li>
+          <li><a href="../insights/">Insights &amp; Suggestions</a></li>
+          <li><a href="../permissions/">Permissions</a></li>
+        </ul>
+      </aside>
 
-    <main class="docs-content">
-      <h1>Quick Switch</h1>
-      <p class="lead">Jump to any open tab instantly by typing part of its title or URL.</p>
+      <main class="docs-content">
+        <h1>Quick Switch</h1>
+        <p class="lead">Jump to any open tab instantly by typing part of its title or URL.</p>
 
-      <h2 id="overview">Overview <a href="#overview" class="anchor-link">#</a></h2>
-      <p>Quick Switch is a command-palette-style search overlay for your open tabs. Press the keyboard shortcut and start typing — Takt filters results in real time by tab title and URL, letting you navigate instantly without reaching for the mouse.</p>
+        <h2 id="overview">Overview <a href="#overview" class="anchor-link">#</a></h2>
+        <p>
+          Quick Switch is a command-palette-style search overlay for your open tabs. Press the
+          keyboard shortcut and start typing — Takt filters results in real time by tab title and
+          URL, letting you navigate instantly without reaching for the mouse.
+        </p>
 
-      <h2 id="open">Opening the overlay <a href="#open" class="anchor-link">#</a></h2>
-      <p>Quick Switch requires Premium. Press <kbd>Alt</kbd> + <kbd>Shift</kbd> + <kbd>Space</kbd> on any regular web page to open the overlay inline.</p>
-      <p>On pages where content scripts cannot be injected, Takt opens a standalone popup window (560 × 480 px) instead. This fallback activates on URLs that match any of the following:</p>
-      <ul>
-        <li><code>chrome://</code></li>
-        <li><code>chrome-extension://</code></li>
-        <li><code>about:</code></li>
-        <li><code>chrome-untrusted://</code></li>
-        <li><code>chromewebstore.google.com</code></li>
-      </ul>
+        <h2 id="open">Opening the overlay <a href="#open" class="anchor-link">#</a></h2>
+        <p>
+          Quick Switch requires Premium. Press <kbd>Alt</kbd> + <kbd>Shift</kbd> +
+          <kbd>Space</kbd> on any regular web page to open the overlay inline.
+        </p>
+        <p>
+          On pages where content scripts cannot be injected, Takt opens a standalone popup window
+          (560 × 480 px) instead. This fallback activates on URLs that match any of the following:
+        </p>
+        <ul>
+          <li><code>chrome://</code></li>
+          <li><code>chrome-extension://</code></li>
+          <li><code>about:</code></li>
+          <li><code>chrome-untrusted://</code></li>
+          <li><code>chromewebstore.google.com</code></li>
+        </ul>
 
-      <h2 id="navigate">Searching and navigating <a href="#navigate" class="anchor-link">#</a></h2>
-      <p>Type in the search box to filter results in real time. Filtering is case-insensitive and matches against the full tab title and full URL. Every keystroke updates the list immediately — including clearing the box, which returns to the full list.</p>
-      <ul>
-        <li><kbd>&uarr;</kbd> / <kbd>&darr;</kbd> — move selection up or down; wraps around at the ends.</li>
-        <li><kbd>Enter</kbd> — jump to the selected result (focuses the tab, wakes a hibernated tab, or opens a history URL in a new tab).</li>
-        <li><kbd>Tab</kbd> — autocompletes the search input with the selected result's title.</li>
-        <li><kbd>Esc</kbd> — dismisses the overlay and returns focus to the previous tab.</li>
-      </ul>
+        <h2 id="navigate">
+          Searching and navigating <a href="#navigate" class="anchor-link">#</a>
+        </h2>
+        <p>
+          Type in the search box to filter results in real time. Filtering is case-insensitive and
+          matches against the full tab title and full URL. Every keystroke updates the list
+          immediately — including clearing the box, which returns to the full list.
+        </p>
+        <ul>
+          <li>
+            <kbd>&uarr;</kbd> / <kbd>&darr;</kbd> — move selection up or down; wraps around at the
+            ends.
+          </li>
+          <li>
+            <kbd>Enter</kbd> — jump to the selected result (focuses the tab, wakes a hibernated tab,
+            or opens a history URL in a new tab).
+          </li>
+          <li><kbd>Tab</kbd> — autocompletes the search input with the selected result's title.</li>
+          <li><kbd>Esc</kbd> — dismisses the overlay and returns focus to the previous tab.</li>
+        </ul>
 
-      <h2 id="ranking">How results are ranked <a href="#ranking" class="anchor-link">#</a></h2>
-      <p>Results appear in three groups, always in this order:</p>
-      <ol>
-        <li><strong>Open tabs</strong> — returned by <code>chrome.tabs.query({})</code> in Chrome's natural tab order. Up to 50 open tabs are shown.</li>
-        <li><strong>Hibernated tabs</strong> — returned from the hibernation store in insertion order. Up to 50 hibernated tabs are shown.</li>
-        <li><strong>History results</strong> — returned by <code>chrome.history.search</code> using Chrome's built-in relevance and recency ranking. Up to 20 history items are shown.</li>
-      </ol>
-      <p>Takt does not apply any additional scoring or re-ordering beyond what Chrome provides. The combined list is always ordered: open tabs → hibernated tabs → history items.</p>
+        <h2 id="ranking">How results are ranked <a href="#ranking" class="anchor-link">#</a></h2>
+        <p>Results appear in three groups, always in this order:</p>
+        <ol>
+          <li>
+            <strong>Open tabs</strong> — returned by <code>chrome.tabs.query({})</code> in Chrome's
+            natural tab order. Up to 50 open tabs are shown.
+          </li>
+          <li>
+            <strong>Hibernated tabs</strong> — returned from the hibernation store in insertion
+            order. Up to 50 hibernated tabs are shown.
+          </li>
+          <li>
+            <strong>History results</strong> — returned by <code>chrome.history.search</code> using
+            Chrome's built-in relevance and recency ranking. Up to 20 history items are shown.
+          </li>
+        </ol>
+        <p>
+          Takt does not apply any additional scoring or re-ordering beyond what Chrome provides. The
+          combined list is always ordered: open tabs → hibernated tabs → history items.
+        </p>
 
-      <h2 id="tiers">Free vs Premium <a href="#tiers" class="anchor-link">#</a></h2>
-      <p><span class="badge">Premium</span> Quick Switch is a Premium feature. The keyboard shortcut <kbd>Alt</kbd> + <kbd>Shift</kbd> + <kbd>Space</kbd> is gated by <code>canUseKeyboardShortcut()</code>, which returns <code>true</code> only for Premium users. Free users pressing the shortcut see no response.</p>
-      <p>For Premium users, Quick Switch searches open tabs and hibernated tabs by default. To also include browsing history results, grant the optional <strong>History</strong> permission from Options → Settings → Permissions. Without the History permission, Quick Switch is fully functional but no history results appear.</p>
+        <h2 id="tiers">Free vs Premium <a href="#tiers" class="anchor-link">#</a></h2>
+        <p>
+          <span class="badge">Premium</span> Quick Switch is a Premium feature. The keyboard
+          shortcut <kbd>Alt</kbd> + <kbd>Shift</kbd> + <kbd>Space</kbd> is gated by
+          <code>canUseKeyboardShortcut()</code>, which returns <code>true</code> only for Premium
+          users. Free users pressing the shortcut see no response.
+        </p>
+        <p>
+          For Premium users, Quick Switch searches open tabs and hibernated tabs by default. To also
+          include browsing history results, grant the optional <strong>History</strong> permission
+          from Options → Settings → Permissions. Without the History permission, Quick Switch is
+          fully functional but no history results appear.
+        </p>
 
-      <h2 id="gotchas">Edge cases and gotchas <a href="#gotchas" class="anchor-link">#</a></h2>
-      <ul>
-        <li><strong>Blocked pages open a popup.</strong> On <code>chrome://</code>, <code>chrome-extension://</code>, <code>about:</code>, <code>chrome-untrusted://</code>, and <code>chromewebstore.google.com</code> pages the shortcut opens a 560 × 480 popup window instead of an inline overlay.</li>
-        <li><strong>No minimum query length.</strong> Results update on every keystroke. Clearing the search box returns the full open-tab list.</li>
-        <li><strong>Search is case-insensitive.</strong> Typing <code>GITHUB</code> finds tabs with <code>GitHub</code> in the title or URL.</li>
-        <li><strong>History results are deduplicated.</strong> URLs already present as open or hibernated tabs are excluded from the history section.</li>
-        <li><strong>Chrome internal URLs are excluded from history.</strong> <code>chrome://</code> and <code>chrome-extension://</code> URLs are filtered out of history results even if they appear in the browser's history.</li>
-        <li><strong>Zero open tabs.</strong> Opening Quick Switch when there are no open tabs shows "No open tabs" in the results area.</li>
-        <li><strong>No matches found.</strong> If no results match your query, the results area shows "No matches found".</li>
-        <li><strong>The overlay closes automatically</strong> if you switch to a different tab or focus a different window while the overlay is open.</li>
-      </ul>
+        <h2 id="gotchas">Edge cases and gotchas <a href="#gotchas" class="anchor-link">#</a></h2>
+        <ul>
+          <li>
+            <strong>Blocked pages open a popup.</strong> On <code>chrome://</code>,
+            <code>chrome-extension://</code>, <code>about:</code>, <code>chrome-untrusted://</code>,
+            and <code>chromewebstore.google.com</code> pages the shortcut opens a 560 × 480 popup
+            window instead of an inline overlay.
+          </li>
+          <li>
+            <strong>No minimum query length.</strong> Results update on every keystroke. Clearing
+            the search box returns the full open-tab list.
+          </li>
+          <li>
+            <strong>Search is case-insensitive.</strong> Typing <code>GITHUB</code> finds tabs with
+            <code>GitHub</code> in the title or URL.
+          </li>
+          <li>
+            <strong>History results are deduplicated.</strong> URLs already present as open or
+            hibernated tabs are excluded from the history section.
+          </li>
+          <li>
+            <strong>Chrome internal URLs are excluded from history.</strong>
+            <code>chrome://</code> and <code>chrome-extension://</code> URLs are filtered out of
+            history results even if they appear in the browser's history.
+          </li>
+          <li>
+            <strong>Zero open tabs.</strong> Opening Quick Switch when there are no open tabs shows
+            "No open tabs" in the results area.
+          </li>
+          <li>
+            <strong>No matches found.</strong> If no results match your query, the results area
+            shows "No matches found".
+          </li>
+          <li>
+            <strong>The overlay closes automatically</strong> if you switch to a different tab or
+            focus a different window while the overlay is open.
+          </li>
+        </ul>
 
-      <div class="docs-nav-prev-next">
-        <a href="../shortcuts/">&larr; Keyboard Shortcuts</a>
-        <a href="../permissions/" class="next">Permissions &rarr;</a>
-      </div>
-    </main>
-  </div>
+        <div class="docs-nav-prev-next">
+          <a href="../shortcuts/">&larr; Keyboard Shortcuts</a>
+          <a href="../insights/" class="next">Insights &amp; Suggestions &rarr;</a>
+        </div>
+      </main>
+    </div>
 
-  <footer id="site-footer"></footer>
+    <footer id="site-footer"></footer>
 
-  <script src="../../js/includes.js"></script>
-  <script src="../../js/nav.js"></script>
-</body>
+    <script src="../../js/includes.js"></script>
+    <script src="../../js/nav.js"></script>
+  </body>
 </html>

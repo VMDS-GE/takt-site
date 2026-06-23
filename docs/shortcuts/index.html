@@ -1,103 +1,160 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Keyboard Shortcuts — Takt</title>
-  <meta name="description" content="Takt keyboard shortcuts and how to customize them.">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Keyboard Shortcuts — Takt</title>
+    <meta name="description" content="Takt keyboard shortcuts and how to customize them." />
 
-  <link rel="icon" type="image/png" sizes="32x32" href="../../assets/favicon-32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="../../assets/favicon-16.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="../../assets/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../../assets/favicon-32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="../../assets/favicon-16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="../../assets/apple-touch-icon.png" />
 
-  <meta name="theme-color" content="#FF3B30">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../../css/tokens.css">
-  <link rel="stylesheet" href="../../css/base.css">
-  <link rel="stylesheet" href="../../css/layout.css">
-  <link rel="stylesheet" href="../../css/docs.css">
+    <meta name="theme-color" content="#FF3B30" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../../css/tokens.css" />
+    <link rel="stylesheet" href="../../css/base.css" />
+    <link rel="stylesheet" href="../../css/layout.css" />
+    <link rel="stylesheet" href="../../css/docs.css" />
 
-  <script src="../../js/theme.js"></script>
-</head>
-<body>
-  <header id="site-header"></header>
+    <script src="../../js/theme.js"></script>
+  </head>
+  <body>
+    <header id="site-header"></header>
 
-  <div class="docs-layout">
-    <aside class="docs-sidebar">
-      <h4>Documentation</h4>
-      <ul>
-        <li><a href="../../getting-started/">Getting Started</a></li>
-        <li><a href="../rules/">Rule Reference</a></li>
-        <li><a href="../duplicates/">Duplicate Prevention</a></li>
-        <li><a href="../group-actions/">Group Actions</a></li>
-        <li><a href="../resources/">Resource Dashboard</a></li>
-        <li><a href="../profiles/">Profiles &amp; Schedules</a></li>
-        <li><a href="../sessions/">Sessions</a></li>
-        <li><a href="../hibernation/">Hibernation</a></li>
-        <li><a href="../sync/">File Sync</a></li>
-        <li><a href="../drive-sync/">Drive Sync</a></li>
-        <li><a href="../shortcuts/" class="active">Keyboard Shortcuts</a></li>
-        <li><a href="../quick-switch/">Quick Switch</a></li>
-        <li><a href="../permissions/">Permissions</a></li>
-      </ul>
-    </aside>
+    <div class="docs-layout">
+      <aside class="docs-sidebar">
+        <h4>Documentation</h4>
+        <ul>
+          <li><a href="../../getting-started/">Getting Started</a></li>
+          <li><a href="../rules/">Rule Reference</a></li>
+          <li><a href="../duplicates/">Duplicate Prevention</a></li>
+          <li><a href="../group-actions/">Group Actions</a></li>
+          <li><a href="../resources/">Resource Dashboard</a></li>
+          <li><a href="../profiles/">Profiles &amp; Schedules</a></li>
+          <li><a href="../sessions/">Sessions</a></li>
+          <li><a href="../hibernation/">Hibernation</a></li>
+          <li><a href="../sync/">File Sync</a></li>
+          <li><a href="../drive-sync/">Drive Sync</a></li>
+          <li><a href="../shortcuts/" class="active">Keyboard Shortcuts</a></li>
+          <li><a href="../quick-switch/">Quick Switch</a></li>
+          <li><a href="../insights/">Insights &amp; Suggestions</a></li>
+          <li><a href="../permissions/">Permissions</a></li>
+        </ul>
+      </aside>
 
-    <main class="docs-content">
-      <h1>Keyboard Shortcuts</h1>
-      <p class="lead">Organize your tabs without touching the mouse.</p>
+      <main class="docs-content">
+        <h1>Keyboard Shortcuts</h1>
+        <p class="lead">Organize your tabs without touching the mouse.</p>
 
-      <h2 id="default">Default shortcuts <a href="#default" class="anchor-link">#</a></h2>
+        <h2 id="default">Default shortcuts <a href="#default" class="anchor-link">#</a></h2>
 
-      <table>
-        <thead><tr><th>Shortcut</th><th>Action</th></tr></thead>
-        <tbody>
-          <tr><td><kbd>Alt</kbd> + <kbd>Shift</kbd> + <kbd>G</kbd></td><td>Group all tabs across all windows</td></tr>
-          <tr><td><kbd>Alt</kbd> + <kbd>Shift</kbd> + <kbd>U</kbd></td><td>Ungroup all tabs across all windows</td></tr>
-          <tr><td><kbd>Alt</kbd> + <kbd>Shift</kbd> + <kbd>C</kbd></td><td>Collapse all tab groups across all windows</td></tr>
-          <tr><td><kbd>Alt</kbd> + <kbd>Shift</kbd> + <kbd>Space</kbd></td><td>Quick-switch: search and jump to any open tab</td></tr>
-        </tbody>
-      </table>
+        <table>
+          <thead>
+            <tr>
+              <th>Shortcut</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><kbd>Alt</kbd> + <kbd>Shift</kbd> + <kbd>G</kbd></td>
+              <td>Group all tabs across all windows</td>
+            </tr>
+            <tr>
+              <td><kbd>Alt</kbd> + <kbd>Shift</kbd> + <kbd>U</kbd></td>
+              <td>Ungroup all tabs across all windows</td>
+            </tr>
+            <tr>
+              <td><kbd>Alt</kbd> + <kbd>Shift</kbd> + <kbd>C</kbd></td>
+              <td>Collapse all tab groups across all windows</td>
+            </tr>
+            <tr>
+              <td><kbd>Alt</kbd> + <kbd>Shift</kbd> + <kbd>Space</kbd></td>
+              <td>Quick-switch: search and jump to any open tab</td>
+            </tr>
+          </tbody>
+        </table>
 
-      <p>Organize, ungroup, and collapse shortcuts are available to all users. Quick-switch (<kbd>Alt</kbd> + <kbd>Shift</kbd> + <kbd>Space</kbd>) requires Premium.</p>
+        <p>
+          Organize, ungroup, and collapse shortcuts are available to all users. Quick-switch (<kbd
+            >Alt</kbd
+          >
+          + <kbd>Shift</kbd> + <kbd>Space</kbd>) requires Premium.
+        </p>
 
-      <h2 id="quick-switch">Quick-switch overlay <a href="#quick-switch" class="anchor-link">#</a></h2>
-      <p>The quick-switch overlay is a command-palette style search for your open tabs. Press the shortcut and start typing — tabs are filtered in real time by title and URL. Use <kbd>&uarr;</kbd><kbd>&darr;</kbd> to navigate, <kbd>Enter</kbd> to jump to the selected tab, <kbd>Tab</kbd> to autocomplete, and <kbd>Esc</kbd> to dismiss.</p>
-      <p>Premium expands the results to include hibernated tabs (shown with an ice-blue treatment and moon icon) and browsing history (shown in orange). Selecting a hibernated tab wakes it automatically. Selecting a history result opens that URL in a new tab.</p>
-      <p>On pages where content scripts cannot be injected (e.g. <code>chrome://</code> pages), a popup window opens instead.</p>
-      <p>See the <a href="../quick-switch/">Quick Switch</a> page for full documentation on keyboard interactions, result ranking, and edge cases.</p>
+        <h2 id="quick-switch">
+          Quick-switch overlay <a href="#quick-switch" class="anchor-link">#</a>
+        </h2>
+        <p>
+          The quick-switch overlay is a command-palette style search for your open tabs. Press the
+          shortcut and start typing — tabs are filtered in real time by title and URL. Use
+          <kbd>&uarr;</kbd><kbd>&darr;</kbd> to navigate, <kbd>Enter</kbd> to jump to the selected
+          tab, <kbd>Tab</kbd> to autocomplete, and <kbd>Esc</kbd> to dismiss.
+        </p>
+        <p>
+          Premium expands the results to include hibernated tabs (shown with an ice-blue treatment
+          and moon icon) and browsing history (shown in orange). Selecting a hibernated tab wakes it
+          automatically. Selecting a history result opens that URL in a new tab.
+        </p>
+        <p>
+          On pages where content scripts cannot be injected (e.g. <code>chrome://</code> pages), a
+          popup window opens instead.
+        </p>
+        <p>
+          See the <a href="../quick-switch/">Quick Switch</a> page for full documentation on
+          keyboard interactions, result ranking, and edge cases.
+        </p>
 
-      <h2 id="customize">Customizing shortcuts <a href="#customize" class="anchor-link">#</a></h2>
-      <p>Chrome lets you change extension keyboard shortcuts:</p>
-      <ol>
-        <li>Navigate to <code>chrome://extensions/shortcuts</code></li>
-        <li>Find <strong>Takt</strong> in the list</li>
-        <li>Click the pencil icon next to the shortcut you want to change</li>
-        <li>Press your preferred key combination</li>
-      </ol>
-      <p>You can also clear the shortcut entirely if you prefer to use the popup exclusively.</p>
+        <h2 id="customize">Customizing shortcuts <a href="#customize" class="anchor-link">#</a></h2>
+        <p>Chrome lets you change extension keyboard shortcuts:</p>
+        <ol>
+          <li>Navigate to <code>chrome://extensions/shortcuts</code></li>
+          <li>Find <strong>Takt</strong> in the list</li>
+          <li>Click the pencil icon next to the shortcut you want to change</li>
+          <li>Press your preferred key combination</li>
+        </ol>
+        <p>You can also clear the shortcut entirely if you prefer to use the popup exclusively.</p>
 
-      <h2 id="popup">Popup actions <a href="#popup" class="anchor-link">#</a></h2>
-      <p>The same actions are available from the popup (click the Takt toolbar icon):</p>
-      <table>
-        <thead><tr><th>Button</th><th>Keyboard shortcut</th></tr></thead>
-        <tbody>
-          <tr><td><strong>Group All</strong></td><td><kbd>Alt</kbd> + <kbd>Shift</kbd> + <kbd>G</kbd></td></tr>
-          <tr><td><strong>Ungroup All</strong></td><td><kbd>Alt</kbd> + <kbd>Shift</kbd> + <kbd>U</kbd></td></tr>
-          <tr><td><strong>Collapse All</strong></td><td><kbd>Alt</kbd> + <kbd>Shift</kbd> + <kbd>C</kbd></td></tr>
-        </tbody>
-      </table>
-      <p>Both the popup buttons and keyboard shortcuts apply to all open windows.</p>
+        <h2 id="popup">Popup actions <a href="#popup" class="anchor-link">#</a></h2>
+        <p>The same actions are available from the popup (click the Takt toolbar icon):</p>
+        <table>
+          <thead>
+            <tr>
+              <th>Button</th>
+              <th>Keyboard shortcut</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Group All</strong></td>
+              <td><kbd>Alt</kbd> + <kbd>Shift</kbd> + <kbd>G</kbd></td>
+            </tr>
+            <tr>
+              <td><strong>Ungroup All</strong></td>
+              <td><kbd>Alt</kbd> + <kbd>Shift</kbd> + <kbd>U</kbd></td>
+            </tr>
+            <tr>
+              <td><strong>Collapse All</strong></td>
+              <td><kbd>Alt</kbd> + <kbd>Shift</kbd> + <kbd>C</kbd></td>
+            </tr>
+          </tbody>
+        </table>
+        <p>Both the popup buttons and keyboard shortcuts apply to all open windows.</p>
 
-      <div class="docs-nav-prev-next">
-        <a href="../drive-sync/">&larr; Drive Sync</a>
-        <a href="../quick-switch/" class="next">Quick Switch &rarr;</a>
-      </div>
-    </main>
-  </div>
+        <div class="docs-nav-prev-next">
+          <a href="../drive-sync/">&larr; Drive Sync</a>
+          <a href="../quick-switch/" class="next">Quick Switch &rarr;</a>
+        </div>
+      </main>
+    </div>
 
-  <footer id="site-footer"></footer>
+    <footer id="site-footer"></footer>
 
-  <script src="../../js/includes.js"></script>
-  <script src="../../js/nav.js"></script>
-</body>
+    <script src="../../js/includes.js"></script>
+    <script src="../../js/nav.js"></script>
+  </body>
 </html>

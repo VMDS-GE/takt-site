@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Insights &amp; Suggestions — Takt</title>
+    <meta
+      name="description"
+      content="Takt automatically surfaces rule suggestions based on your browsing patterns."
+    />
+
+    <link rel="icon" type="image/png" sizes="32x32" href="../../assets/favicon-32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="../../assets/favicon-16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="../../assets/apple-touch-icon.png" />
+
+    <meta name="theme-color" content="#FF3B30" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../../css/tokens.css" />
+    <link rel="stylesheet" href="../../css/base.css" />
+    <link rel="stylesheet" href="../../css/layout.css" />
+    <link rel="stylesheet" href="../../css/docs.css" />
+
+    <script src="../../js/theme.js"></script>
+  </head>
+  <body>
+    <header id="site-header"></header>
+
+    <div class="docs-layout">
+      <aside class="docs-sidebar">
+        <h4>Documentation</h4>
+        <ul>
+          <li><a href="../../getting-started/">Getting Started</a></li>
+          <li><a href="../rules/">Rule Reference</a></li>
+          <li><a href="../duplicates/">Duplicate Prevention</a></li>
+          <li><a href="../group-actions/">Group Actions</a></li>
+          <li><a href="../resources/">Resource Dashboard</a></li>
+          <li><a href="../profiles/">Profiles &amp; Schedules</a></li>
+          <li><a href="../sessions/">Sessions</a></li>
+          <li><a href="../hibernation/">Hibernation</a></li>
+          <li><a href="../sync/">File Sync</a></li>
+          <li><a href="../drive-sync/">Drive Sync</a></li>
+          <li><a href="../shortcuts/">Keyboard Shortcuts</a></li>
+          <li><a href="../quick-switch/">Quick Switch</a></li>
+          <li><a href="./" class="active">Insights &amp; Suggestions</a></li>
+          <li><a href="../permissions/">Permissions</a></li>
+        </ul>
+      </aside>
+
+      <main class="docs-content">
+        <h1>Insights &amp; Suggestions</h1>
+        <p class="lead">
+          Takt watches your browsing patterns and suggests rules for domains you visit frequently —
+          so you can build a rule set without starting from scratch.
+        </p>
+
+        <h2 id="overview">Overview <a href="#overview" class="anchor-link">#</a></h2>
+        <p>
+          The Insights pane in the popup surfaces auto-generated rule suggestions based on the
+          domains you have open or visit often. Each suggestion card shows a domain that Takt has
+          detected as a candidate for a new rule, along with a count of matching open tabs or
+          history visits. Takt never stores your browsing history beyond the current session —
+          analysis happens locally and on demand.
+        </p>
+
+        <h2 id="how-it-works">How it works <a href="#how-it-works" class="anchor-link">#</a></h2>
+        <p>Takt generates suggestions from two sources:</p>
+        <ol>
+          <li>
+            <strong>Open tabs</strong> — Takt clusters your open tabs by domain. A domain must have
+            at least <strong>3</strong> open tabs (<code>MIN_CLUSTER_SIZE = 3</code>) to appear as a
+            tab-based suggestion.
+          </li>
+          <li>
+            <strong>Browsing history</strong> — Takt scans your history for frequently-visited
+            domains. A domain must meet either the minimum visit count or minimum active-days
+            threshold to qualify. History-based results are capped at 20 per session.
+          </li>
+        </ol>
+        <p>
+          Domains already covered by an existing rule are excluded from suggestions — Takt won't
+          suggest a rule you already have.
+        </p>
+
+        <h2 id="interactions">Interactions <a href="#interactions" class="anchor-link">#</a></h2>
+        <p>Each insight card has two actions:</p>
+        <ul>
+          <li>
+            <strong>Create Rule</strong> — opens the Options page with the domain pre-filled in the
+            rule editor, so you can create a rule with one click. The card is removed after the rule
+            is saved.
+          </li>
+          <li>
+            <strong>Dismiss</strong> — permanently hides the suggestion. The card won't reappear
+            until your browsing patterns change significantly enough for the domain to re-qualify.
+            Dismiss is persistent across popup opens within the session.
+          </li>
+        </ul>
+
+        <h2 id="tiers">Free vs Premium <a href="#tiers" class="anchor-link">#</a></h2>
+        <p>
+          <span class="badge">Premium</span> Free users see up to <strong>3</strong> insight cards
+          at a time. If Takt has found more suggestions than the free limit, an upgrade prompt
+          appears below the visible cards inviting you to unlock the hidden ones.
+        </p>
+        <p>
+          Premium users see all suggestions with no cap. Upgrading removes the 3-card limit
+          immediately — all pending suggestions become visible without reloading.
+        </p>
+
+        <h2 id="gotchas">Edge cases and gotchas <a href="#gotchas" class="anchor-link">#</a></h2>
+        <ul>
+          <li>
+            <strong>Existing rules are excluded.</strong> If a domain is already covered by an
+            existing rule, it won't appear as a suggestion. This prevents duplicate rules.
+          </li>
+          <li>
+            <strong>Internal URLs are skipped.</strong> <code>chrome://</code> and
+            <code>chrome-extension://</code> URLs are excluded from suggestion analysis — only
+            regular web pages are considered.
+          </li>
+          <li>
+            <strong>No insights.</strong> If Takt has no active suggestions (all dismissed, all
+            covered by rules, or not enough tabs), the Insights pane shows an empty state with a
+            message. This is normal — add more tabs or visit more domains to generate new
+            suggestions.
+          </li>
+        </ul>
+
+        <div class="docs-nav-prev-next">
+          <a href="../quick-switch/">&larr; Quick Switch</a>
+          <a href="../permissions/" class="next">Permissions &rarr;</a>
+        </div>
+      </main>
+    </div>
+
+    <footer id="site-footer"></footer>
+
+    <script src="../../js/includes.js"></script>
+    <script src="../../js/nav.js"></script>
+  </body>
+</html>

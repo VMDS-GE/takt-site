@@ -1,111 +1,157 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Profiles &amp; Schedules — Takt</title>
-  <meta name="description" content="Save different rule sets as profiles and schedule automatic switching by time of day.">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profiles &amp; Schedules — Takt</title>
+    <meta
+      name="description"
+      content="Save different rule sets as profiles and schedule automatic switching by time of day."
+    />
 
-  <link rel="icon" type="image/png" sizes="32x32" href="../../assets/favicon-32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="../../assets/favicon-16.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="../../assets/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../../assets/favicon-32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="../../assets/favicon-16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="../../assets/apple-touch-icon.png" />
 
-  <meta name="theme-color" content="#FF3B30">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../../css/tokens.css">
-  <link rel="stylesheet" href="../../css/base.css">
-  <link rel="stylesheet" href="../../css/layout.css">
-  <link rel="stylesheet" href="../../css/docs.css">
+    <meta name="theme-color" content="#FF3B30" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../../css/tokens.css" />
+    <link rel="stylesheet" href="../../css/base.css" />
+    <link rel="stylesheet" href="../../css/layout.css" />
+    <link rel="stylesheet" href="../../css/docs.css" />
 
-  <script src="../../js/theme.js"></script>
-</head>
-<body>
-  <header id="site-header"></header>
+    <script src="../../js/theme.js"></script>
+  </head>
+  <body>
+    <header id="site-header"></header>
 
-  <div class="docs-layout">
-    <aside class="docs-sidebar">
-      <h4>Documentation</h4>
-      <ul>
-        <li><a href="../../getting-started/">Getting Started</a></li>
-        <li><a href="../rules/">Rule Reference</a></li>
-        <li><a href="../duplicates/">Duplicate Prevention</a></li>
-        <li><a href="../group-actions/">Group Actions</a></li>
-        <li><a href="../resources/">Resource Dashboard</a></li>
-        <li><a href="./" class="active">Profiles &amp; Schedules</a></li>
-        <li><a href="../sessions/">Sessions</a></li>
-        <li><a href="../hibernation/">Hibernation</a></li>
-        <li><a href="../sync/">File Sync</a></li>
-        <li><a href="../drive-sync/">Drive Sync</a></li>
-        <li><a href="../shortcuts/">Keyboard Shortcuts</a></li>
-        <li><a href="../quick-switch/">Quick Switch</a></li>
-        <li><a href="../permissions/">Permissions</a></li>
-      </ul>
-    </aside>
+    <div class="docs-layout">
+      <aside class="docs-sidebar">
+        <h4>Documentation</h4>
+        <ul>
+          <li><a href="../../getting-started/">Getting Started</a></li>
+          <li><a href="../rules/">Rule Reference</a></li>
+          <li><a href="../duplicates/">Duplicate Prevention</a></li>
+          <li><a href="../group-actions/">Group Actions</a></li>
+          <li><a href="../resources/">Resource Dashboard</a></li>
+          <li><a href="./" class="active">Profiles &amp; Schedules</a></li>
+          <li><a href="../sessions/">Sessions</a></li>
+          <li><a href="../hibernation/">Hibernation</a></li>
+          <li><a href="../sync/">File Sync</a></li>
+          <li><a href="../drive-sync/">Drive Sync</a></li>
+          <li><a href="../shortcuts/">Keyboard Shortcuts</a></li>
+          <li><a href="../quick-switch/">Quick Switch</a></li>
+          <li><a href="../insights/">Insights &amp; Suggestions</a></li>
+          <li><a href="../permissions/">Permissions</a></li>
+        </ul>
+      </aside>
 
-    <main class="docs-content">
-      <h1>Profiles &amp; Schedules</h1>
-      <p class="lead">Save different rule sets as profiles and switch between them manually or on a schedule.</p>
+      <main class="docs-content">
+        <h1>Profiles &amp; Schedules</h1>
+        <p class="lead">
+          Save different rule sets as profiles and switch between them manually or on a schedule.
+        </p>
 
-      <div class="callout">
-        <p><strong>Premium feature.</strong> Profiles and scheduled switching require a Premium subscription.</p>
-      </div>
-      <div class="cta-row">
-        <a href="https://chromewebstore.google.com/detail/takt/plgfdnbgkjocmgegnkbihoeojcfphdic" class="btn-cta">$3/month</a>
-        <a href="https://chromewebstore.google.com/detail/takt/plgfdnbgkjocmgegnkbihoeojcfphdic" class="btn-cta btn-cta-annual">$30/year <span class="cta-save">save 17%</span></a>
-      </div>
+        <div class="callout">
+          <p>
+            <strong>Premium feature.</strong> Profiles and scheduled switching require a Premium
+            subscription.
+          </p>
+        </div>
+        <div class="cta-row">
+          <a
+            href="https://chromewebstore.google.com/detail/takt/plgfdnbgkjocmgegnkbihoeojcfphdic"
+            class="btn-cta"
+            >$3/month</a
+          >
+          <a
+            href="https://chromewebstore.google.com/detail/takt/plgfdnbgkjocmgegnkbihoeojcfphdic"
+            class="btn-cta btn-cta-annual"
+            >$30/year <span class="cta-save">save 17%</span></a
+          >
+        </div>
 
-      <h2 id="what-are-profiles">What are profiles <a href="#what-are-profiles" class="anchor-link">#</a></h2>
-      <p>A profile is a named subset of your rules. When a profile is active, only the rules assigned to it are evaluated. Rules not in any profile are always active ("All Rules" mode).</p>
-      <p>Use profiles to separate different contexts:</p>
-      <ul>
-        <li><strong>Work</strong> — rules for Jira, GitHub, Confluence, Slack</li>
-        <li><strong>Personal</strong> — rules for YouTube, Reddit, shopping sites</li>
-        <li><strong>Research</strong> — rules for academic papers, documentation sites</li>
-      </ul>
+        <h2 id="what-are-profiles">
+          What are profiles <a href="#what-are-profiles" class="anchor-link">#</a>
+        </h2>
+        <p>
+          A profile is a named subset of your rules. When a profile is active, only the rules
+          assigned to it are evaluated. Rules not in any profile are always active ("All Rules"
+          mode).
+        </p>
+        <p>Use profiles to separate different contexts:</p>
+        <ul>
+          <li><strong>Work</strong> — rules for Jira, GitHub, Confluence, Slack</li>
+          <li><strong>Personal</strong> — rules for YouTube, Reddit, shopping sites</li>
+          <li><strong>Research</strong> — rules for academic papers, documentation sites</li>
+        </ul>
 
-      <h2 id="creating">Creating a profile <a href="#creating" class="anchor-link">#</a></h2>
-      <p>Open the Options page and go to the <strong>Profiles</strong> tab:</p>
-      <ol>
-        <li>Click <strong>"Create Profile"</strong></li>
-        <li>Enter a name</li>
-        <li>Choose to <strong>clone current rules</strong> (copies all rules into the new profile) or <strong>start empty</strong></li>
-        <li>Click <strong>Create</strong></li>
-      </ol>
-      <p>New rules you create while a profile is active are automatically added to that profile.</p>
+        <h2 id="creating">Creating a profile <a href="#creating" class="anchor-link">#</a></h2>
+        <p>Open the Options page and go to the <strong>Profiles</strong> tab:</p>
+        <ol>
+          <li>Click <strong>"Create Profile"</strong></li>
+          <li>Enter a name</li>
+          <li>
+            Choose to <strong>clone current rules</strong> (copies all rules into the new profile)
+            or <strong>start empty</strong>
+          </li>
+          <li>Click <strong>Create</strong></li>
+        </ol>
+        <p>
+          New rules you create while a profile is active are automatically added to that profile.
+        </p>
 
-      <h2 id="switching">Switching profiles <a href="#switching" class="anchor-link">#</a></h2>
-      <p>Click a profile card to activate it. Click <strong>"All Rules"</strong> to deactivate all profiles and use every rule.</p>
-      <p>When you switch profiles:</p>
-      <ul>
-        <li>The rule engine reloads with only the active profile's rules</li>
-        <li>Existing tab groups are not removed — only new organization actions use the updated rules</li>
-        <li>Click "Group All" after switching to reorganize existing tabs</li>
-      </ul>
+        <h2 id="switching">Switching profiles <a href="#switching" class="anchor-link">#</a></h2>
+        <p>
+          Click a profile card to activate it. Click <strong>"All Rules"</strong> to deactivate all
+          profiles and use every rule.
+        </p>
+        <p>When you switch profiles:</p>
+        <ul>
+          <li>The rule engine reloads with only the active profile's rules</li>
+          <li>
+            Existing tab groups are not removed — only new organization actions use the updated
+            rules
+          </li>
+          <li>Click "Group All" after switching to reorganize existing tabs</li>
+        </ul>
 
-      <h2 id="schedules">Scheduled switching <a href="#schedules" class="anchor-link">#</a></h2>
-      <p>Automate profile switching by time of day and day of week:</p>
-      <ol>
-        <li>On a profile card, click the <strong>schedule</strong> section</li>
-        <li>Toggle <strong>"Enable schedule"</strong></li>
-        <li>Set a <strong>start time</strong> and <strong>end time</strong></li>
-        <li>Select which <strong>days of the week</strong> the schedule applies</li>
-      </ol>
-      <p>When the schedule window begins, Takt activates the profile. When the window ends, it reverts to "All Rules" mode (unless you manually switched to a different profile).</p>
-      <div class="callout">
-        <p>Cross-midnight schedules are supported. A schedule from 10:00 PM to 6:00 AM activates at 10 PM and deactivates at 6 AM the next morning.</p>
-      </div>
-      <p>If multiple profiles have overlapping schedules, the first match wins (based on profile creation order).</p>
+        <h2 id="schedules">Scheduled switching <a href="#schedules" class="anchor-link">#</a></h2>
+        <p>Automate profile switching by time of day and day of week:</p>
+        <ol>
+          <li>On a profile card, click the <strong>schedule</strong> section</li>
+          <li>Toggle <strong>"Enable schedule"</strong></li>
+          <li>Set a <strong>start time</strong> and <strong>end time</strong></li>
+          <li>Select which <strong>days of the week</strong> the schedule applies</li>
+        </ol>
+        <p>
+          When the schedule window begins, Takt activates the profile. When the window ends, it
+          reverts to "All Rules" mode (unless you manually switched to a different profile).
+        </p>
+        <div class="callout">
+          <p>
+            Cross-midnight schedules are supported. A schedule from 10:00 PM to 6:00 AM activates at
+            10 PM and deactivates at 6 AM the next morning.
+          </p>
+        </div>
+        <p>
+          If multiple profiles have overlapping schedules, the first match wins (based on profile
+          creation order).
+        </p>
 
-      <div class="docs-nav-prev-next">
-        <a href="../resources/">&larr; Resource Dashboard</a>
-        <a href="../shortcuts/" class="next">Keyboard Shortcuts &rarr;</a>
-      </div>
-    </main>
-  </div>
+        <div class="docs-nav-prev-next">
+          <a href="../resources/">&larr; Resource Dashboard</a>
+          <a href="../shortcuts/" class="next">Keyboard Shortcuts &rarr;</a>
+        </div>
+      </main>
+    </div>
 
-  <footer id="site-footer"></footer>
+    <footer id="site-footer"></footer>
 
-  <script src="../../js/includes.js"></script>
-  <script src="../../js/nav.js"></script>
-</body>
+    <script src="../../js/includes.js"></script>
+    <script src="../../js/nav.js"></script>
+  </body>
 </html>

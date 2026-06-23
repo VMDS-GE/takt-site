@@ -1,154 +1,247 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sessions — Takt</title>
-  <meta name="description" content="Save and restore your browser windows with Takt Sessions. Capture tab groups, ungrouped tabs, and multiple windows in one click.">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sessions — Takt</title>
+    <meta
+      name="description"
+      content="Save and restore your browser windows with Takt Sessions. Capture tab groups, ungrouped tabs, and multiple windows in one click."
+    />
 
-  <link rel="icon" type="image/png" sizes="32x32" href="../../assets/favicon-32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="../../assets/favicon-16.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="../../assets/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../../assets/favicon-32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="../../assets/favicon-16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="../../assets/apple-touch-icon.png" />
 
-  <meta name="theme-color" content="#FF3B30">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../../css/tokens.css">
-  <link rel="stylesheet" href="../../css/base.css">
-  <link rel="stylesheet" href="../../css/layout.css">
-  <link rel="stylesheet" href="../../css/docs.css">
+    <meta name="theme-color" content="#FF3B30" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../../css/tokens.css" />
+    <link rel="stylesheet" href="../../css/base.css" />
+    <link rel="stylesheet" href="../../css/layout.css" />
+    <link rel="stylesheet" href="../../css/docs.css" />
 
-  <script src="../../js/theme.js"></script>
-</head>
-<body>
-  <header id="site-header"></header>
+    <script src="../../js/theme.js"></script>
+  </head>
+  <body>
+    <header id="site-header"></header>
 
-  <div class="docs-layout">
-    <aside class="docs-sidebar">
-      <h4>Documentation</h4>
-      <ul>
-        <li><a href="../../getting-started/">Getting Started</a></li>
-        <li><a href="../rules/">Rule Reference</a></li>
-        <li><a href="../duplicates/">Duplicate Prevention</a></li>
-        <li><a href="../group-actions/">Group Actions</a></li>
-        <li><a href="../resources/">Resource Dashboard</a></li>
-        <li><a href="../profiles/">Profiles &amp; Schedules</a></li>
-        <li><a href="./" class="active">Sessions</a></li>
-        <li><a href="../hibernation/">Hibernation</a></li>
-        <li><a href="../sync/">File Sync</a></li>
-        <li><a href="../drive-sync/">Drive Sync</a></li>
-        <li><a href="../shortcuts/">Keyboard Shortcuts</a></li>
-        <li><a href="../quick-switch/">Quick Switch</a></li>
-        <li><a href="../permissions/">Permissions</a></li>
-      </ul>
-    </aside>
+    <div class="docs-layout">
+      <aside class="docs-sidebar">
+        <h4>Documentation</h4>
+        <ul>
+          <li><a href="../../getting-started/">Getting Started</a></li>
+          <li><a href="../rules/">Rule Reference</a></li>
+          <li><a href="../duplicates/">Duplicate Prevention</a></li>
+          <li><a href="../group-actions/">Group Actions</a></li>
+          <li><a href="../resources/">Resource Dashboard</a></li>
+          <li><a href="../profiles/">Profiles &amp; Schedules</a></li>
+          <li><a href="./" class="active">Sessions</a></li>
+          <li><a href="../hibernation/">Hibernation</a></li>
+          <li><a href="../sync/">File Sync</a></li>
+          <li><a href="../drive-sync/">Drive Sync</a></li>
+          <li><a href="../shortcuts/">Keyboard Shortcuts</a></li>
+          <li><a href="../quick-switch/">Quick Switch</a></li>
+          <li><a href="../insights/">Insights &amp; Suggestions</a></li>
+          <li><a href="../permissions/">Permissions</a></li>
+        </ul>
+      </aside>
 
-    <main class="docs-content">
-      <h1>Sessions</h1>
-      <p class="lead">Snapshot your browser windows and restore them later — including tab groups, ungrouped tabs, and multiple windows.</p>
+      <main class="docs-content">
+        <h1>Sessions</h1>
+        <p class="lead">
+          Snapshot your browser windows and restore them later — including tab groups, ungrouped
+          tabs, and multiple windows.
+        </p>
 
-      <div class="callout">
-        <p><strong>Premium feature.</strong> Saving and restoring sessions requires a Premium subscription. You can browse saved sessions for free.</p>
-      </div>
-      <div class="cta-row">
-        <a href="https://chromewebstore.google.com/detail/takt/plgfdnbgkjocmgegnkbihoeojcfphdic" class="btn-cta">$3/month</a>
-        <a href="https://chromewebstore.google.com/detail/takt/plgfdnbgkjocmgegnkbihoeojcfphdic" class="btn-cta btn-cta-annual">$30/year <span class="cta-save">save 17%</span></a>
-      </div>
+        <div class="callout">
+          <p>
+            <strong>Premium feature.</strong> Saving and restoring sessions requires a Premium
+            subscription. You can browse saved sessions for free.
+          </p>
+        </div>
+        <div class="cta-row">
+          <a
+            href="https://chromewebstore.google.com/detail/takt/plgfdnbgkjocmgegnkbihoeojcfphdic"
+            class="btn-cta"
+            >$3/month</a
+          >
+          <a
+            href="https://chromewebstore.google.com/detail/takt/plgfdnbgkjocmgegnkbihoeojcfphdic"
+            class="btn-cta btn-cta-annual"
+            >$30/year <span class="cta-save">save 17%</span></a
+          >
+        </div>
 
-      <h2 id="what-is-a-session">What is a session <a href="#what-is-a-session" class="anchor-link">#</a></h2>
-      <p>A session is a named snapshot of one or more Chrome windows. Each session captures:</p>
-      <ul>
-        <li>Every open tab — URL, title, and pinned state</li>
-        <li>Tab group names, colors, and collapsed states</li>
-        <li>Which tabs belong to which group</li>
-        <li>Ungrouped tabs (tabs not inside any group)</li>
-        <li>Optionally, all open windows at once</li>
-      </ul>
-      <p>Sessions are stored locally in Chrome's storage and are not synced across devices.</p>
+        <h2 id="what-is-a-session">
+          What is a session <a href="#what-is-a-session" class="anchor-link">#</a>
+        </h2>
+        <p>A session is a named snapshot of one or more Chrome windows. Each session captures:</p>
+        <ul>
+          <li>Every open tab — URL, title, and pinned state</li>
+          <li>Tab group names, colors, and collapsed states</li>
+          <li>Which tabs belong to which group</li>
+          <li>Ungrouped tabs (tabs not inside any group)</li>
+          <li>Optionally, all open windows at once</li>
+        </ul>
+        <p>Sessions are stored locally in Chrome's storage and are not synced across devices.</p>
 
-      <h2 id="saving">Saving a session <a href="#saving" class="anchor-link">#</a></h2>
-      <p>Open the Takt popup and find the <strong>Sessions</strong> section:</p>
-      <ol>
-        <li>Click <strong>+ Save</strong></li>
-        <li>Enter a name (up to 60 characters). Each session name must be unique — if the name already exists, the save is blocked and the field stays open so you can choose a different name.</li>
-        <li>Choose the <strong>scope</strong>:
-          <ul>
-            <li><strong>This window</strong> — captures only the current Chrome window (default)</li>
-            <li><strong>All windows</strong> — captures every open normal Chrome window</li>
-          </ul>
-        </li>
-        <li>Click <strong>Save</strong></li>
-      </ol>
-      <p>You can save up to <strong>50 sessions</strong>. Once the limit is reached, delete older sessions before saving new ones.</p>
+        <h2 id="saving">Saving a session <a href="#saving" class="anchor-link">#</a></h2>
+        <p>Open the Takt popup and find the <strong>Sessions</strong> section:</p>
+        <ol>
+          <li>Click <strong>+ Save</strong></li>
+          <li>
+            Enter a name (up to 60 characters). Each session name must be unique — if the name
+            already exists, the save is blocked and the field stays open so you can choose a
+            different name.
+          </li>
+          <li>
+            Choose the <strong>scope</strong>:
+            <ul>
+              <li>
+                <strong>This window</strong> — captures only the current Chrome window (default)
+              </li>
+              <li><strong>All windows</strong> — captures every open normal Chrome window</li>
+            </ul>
+          </li>
+          <li>Click <strong>Save</strong></li>
+        </ol>
+        <p>
+          You can save up to <strong>50 sessions</strong>. Once the limit is reached, delete older
+          sessions before saving new ones.
+        </p>
 
-      <div class="callout">
-        <p>Tabs on restricted Chrome pages (<code>chrome://</code>, <code>about:</code>, extension pages) are silently skipped when saving and restoring, since Chrome does not allow programmatic navigation to those URLs.</p>
-      </div>
+        <div class="callout">
+          <p>
+            Tabs on restricted Chrome pages (<code>chrome://</code>, <code>about:</code>, extension
+            pages) are silently skipped when saving and restoring, since Chrome does not allow
+            programmatic navigation to those URLs.
+          </p>
+        </div>
 
-      <h2 id="restoring">Restoring a session <a href="#restoring" class="anchor-link">#</a></h2>
-      <p>Click <strong>Restore</strong> next to a session in the popup. A dialog appears with two options:</p>
-      <ul>
-        <li><strong>Open in new window</strong> — creates a fresh Chrome window and opens all saved tabs inside it. Your current window is untouched.</li>
-        <li><strong>Replace this window</strong> — opens the saved tabs in the current window, then closes the tabs that were already there.</li>
-      </ul>
-      <p>Takt counts down 7 seconds before restoring automatically using the selected mode. Click <strong>Restore now</strong> to proceed immediately, or <strong>Cancel</strong> to abort.</p>
+        <h2 id="restoring">Restoring a session <a href="#restoring" class="anchor-link">#</a></h2>
+        <p>
+          Click <strong>Restore</strong> next to a session in the popup. A dialog appears with two
+          options:
+        </p>
+        <ul>
+          <li>
+            <strong>Open in new window</strong> — creates a fresh Chrome window and opens all saved
+            tabs inside it. Your current window is untouched.
+          </li>
+          <li>
+            <strong>Replace this window</strong> — opens the saved tabs in the current window, then
+            closes the tabs that were already there.
+          </li>
+        </ul>
+        <p>
+          Takt counts down 7 seconds before restoring automatically using the selected mode. Click
+          <strong>Restore now</strong> to proceed immediately, or <strong>Cancel</strong> to abort.
+        </p>
 
-      <h3 id="multi-window-restore">Multi-window sessions</h3>
-      <p>When you restore a session saved with <strong>All windows</strong>:</p>
-      <ul>
-        <li>The first saved window uses your chosen mode (new or replace)</li>
-        <li>Each additional saved window always opens as a new Chrome window</li>
-      </ul>
+        <h3 id="multi-window-restore">Multi-window sessions</h3>
+        <p>When you restore a session saved with <strong>All windows</strong>:</p>
+        <ul>
+          <li>The first saved window uses your chosen mode (new or replace)</li>
+          <li>Each additional saved window always opens as a new Chrome window</li>
+        </ul>
 
-      <h2 id="managing">Managing sessions <a href="#managing" class="anchor-link">#</a></h2>
+        <h2 id="managing">Managing sessions <a href="#managing" class="anchor-link">#</a></h2>
 
-      <h3 id="popup">In the popup</h3>
-      <p>The Sessions section in the popup shows your most recent sessions. Each entry displays:</p>
-      <ul>
-        <li>Session name</li>
-        <li>Tab count, group count, and (for multi-window sessions) window count</li>
-        <li>Time since last saved</li>
-      </ul>
-      <p>Click <strong>Restore</strong> to open the restore dialog. Click <strong>✕</strong> to delete the session immediately.</p>
+        <h3 id="popup">In the popup</h3>
+        <p>
+          The Sessions section in the popup shows your most recent sessions. Each entry displays:
+        </p>
+        <ul>
+          <li>Session name</li>
+          <li>Tab count, group count, and (for multi-window sessions) window count</li>
+          <li>Time since last saved</li>
+        </ul>
+        <p>
+          Click <strong>Restore</strong> to open the restore dialog. Click <strong>✕</strong> to
+          delete the session immediately.
+        </p>
 
-      <h3 id="options-page">In the Options page</h3>
-      <p>Open the Takt options page and go to the <strong>Sessions</strong> tab for a full detail view:</p>
-      <ul>
-        <li>Created and last-updated timestamps</li>
-        <li>Tab and group counts per session</li>
-        <li>Click any session row to expand it and see each tab group and its tabs, including favicons</li>
-        <li><strong>Restore</strong> — opens an inline panel to choose <em>New window</em> or <em>Replace current window</em>, then restores immediately</li>
-        <li><strong>Rename</strong> — edit the session name inline (press Enter to save, Escape to cancel)</li>
-        <li><strong>Delete</strong> — permanently remove the session</li>
-      </ul>
+        <h3 id="options-page">In the Options page</h3>
+        <p>
+          Open the Takt options page and go to the <strong>Sessions</strong> tab for a full detail
+          view:
+        </p>
+        <ul>
+          <li>Created and last-updated timestamps</li>
+          <li>Tab and group counts per session</li>
+          <li>
+            Click any session row to expand it and see each tab group and its tabs, including
+            favicons
+          </li>
+          <li>
+            <strong>Restore</strong> — opens an inline panel to choose <em>New window</em> or
+            <em>Replace current window</em>, then restores immediately
+          </li>
+          <li>
+            <strong>Rename</strong> — edit the session name inline (press Enter to save, Escape to
+            cancel)
+          </li>
+          <li><strong>Delete</strong> — permanently remove the session</li>
+        </ul>
 
-      <h2 id="export-import">Export &amp; Import <a href="#export-import" class="anchor-link">#</a></h2>
-      <p>Sessions are included in Takt's full <strong>Export All</strong> / <strong>Import All</strong> bundle (available in Options → Settings). This lets you back up all your sessions along with rules and profiles.</p>
-      <p>When importing, each session receives a fresh ID so it does not overwrite any existing session with the same name.</p>
+        <h2 id="export-import">
+          Export &amp; Import <a href="#export-import" class="anchor-link">#</a>
+        </h2>
+        <p>
+          Sessions are included in Takt's full <strong>Export All</strong> /
+          <strong>Import All</strong> bundle (available in Options → Settings). This lets you back
+          up all your sessions along with rules and profiles.
+        </p>
+        <p>
+          When importing, each session receives a fresh ID so it does not overwrite any existing
+          session with the same name.
+        </p>
 
-      <h2 id="limits">Limits &amp; behaviour <a href="#limits" class="anchor-link">#</a></h2>
-      <table>
-        <thead>
-          <tr><th>Property</th><th>Value</th></tr>
-        </thead>
-        <tbody>
-          <tr><td>Maximum sessions</td><td>50</td></tr>
-          <tr><td>Maximum name length</td><td>60 characters</td></tr>
-          <tr><td>Storage location</td><td>Chrome local storage (device only)</td></tr>
-          <tr><td>Duplicate names</td><td>Not allowed — saving a name that already exists is blocked</td></tr>
-          <tr><td>Restricted tabs skipped</td><td><code>chrome://</code>, <code>about:</code>, extension pages</td></tr>
-        </tbody>
-      </table>
+        <h2 id="limits">Limits &amp; behaviour <a href="#limits" class="anchor-link">#</a></h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Property</th>
+              <th>Value</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Maximum sessions</td>
+              <td>50</td>
+            </tr>
+            <tr>
+              <td>Maximum name length</td>
+              <td>60 characters</td>
+            </tr>
+            <tr>
+              <td>Storage location</td>
+              <td>Chrome local storage (device only)</td>
+            </tr>
+            <tr>
+              <td>Duplicate names</td>
+              <td>Not allowed — saving a name that already exists is blocked</td>
+            </tr>
+            <tr>
+              <td>Restricted tabs skipped</td>
+              <td><code>chrome://</code>, <code>about:</code>, extension pages</td>
+            </tr>
+          </tbody>
+        </table>
 
-      <div class="docs-nav-prev-next">
-        <a href="../profiles/">&larr; Profiles &amp; Schedules</a>
-        <a href="../sync/" class="next">File Sync &rarr;</a>
-      </div>
-    </main>
-  </div>
+        <div class="docs-nav-prev-next">
+          <a href="../profiles/">&larr; Profiles &amp; Schedules</a>
+          <a href="../sync/" class="next">File Sync &rarr;</a>
+        </div>
+      </main>
+    </div>
 
-  <footer id="site-footer"></footer>
+    <footer id="site-footer"></footer>
 
-  <script src="../../js/includes.js"></script>
-  <script src="../../js/nav.js"></script>
-</body>
+    <script src="../../js/includes.js"></script>
+    <script src="../../js/nav.js"></script>
+  </body>
 </html>

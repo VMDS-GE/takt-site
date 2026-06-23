@@ -1,115 +1,212 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Group Actions — Takt</title>
-  <meta name="description" content="Act on entire tab groups at once — close, bookmark, or move them to a new window with Takt Group Actions.">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Group Actions — Takt</title>
+    <meta
+      name="description"
+      content="Act on entire tab groups at once — close, bookmark, or move them to a new window with Takt Group Actions."
+    />
 
-  <link rel="icon" type="image/png" sizes="32x32" href="../../assets/favicon-32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="../../assets/favicon-16.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="../../assets/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../../assets/favicon-32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="../../assets/favicon-16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="../../assets/apple-touch-icon.png" />
 
-  <meta name="theme-color" content="#FF3B30">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../../css/tokens.css">
-  <link rel="stylesheet" href="../../css/base.css">
-  <link rel="stylesheet" href="../../css/layout.css">
-  <link rel="stylesheet" href="../../css/docs.css">
+    <meta name="theme-color" content="#FF3B30" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../../css/tokens.css" />
+    <link rel="stylesheet" href="../../css/base.css" />
+    <link rel="stylesheet" href="../../css/layout.css" />
+    <link rel="stylesheet" href="../../css/docs.css" />
 
-  <script src="../../js/theme.js"></script>
-</head>
-<body>
-  <header id="site-header"></header>
+    <script src="../../js/theme.js"></script>
+  </head>
+  <body>
+    <header id="site-header"></header>
 
-  <div class="docs-layout">
-    <aside class="docs-sidebar">
-      <h4>Documentation</h4>
-      <ul>
-        <li><a href="../../getting-started/">Getting Started</a></li>
-        <li><a href="../rules/">Rule Reference</a></li>
-        <li><a href="../duplicates/">Duplicate Prevention</a></li>
-        <li><a href="../group-actions/" class="active">Group Actions</a></li>
-        <li><a href="../resources/">Resource Dashboard</a></li>
-        <li><a href="../profiles/">Profiles &amp; Schedules</a></li>
-        <li><a href="../sessions/">Sessions</a></li>
-        <li><a href="../hibernation/">Hibernation</a></li>
-        <li><a href="../sync/">File Sync</a></li>
-        <li><a href="../drive-sync/">Drive Sync</a></li>
-        <li><a href="../shortcuts/">Keyboard Shortcuts</a></li>
-        <li><a href="../quick-switch/">Quick Switch</a></li>
-        <li><a href="../permissions/">Permissions</a></li>
-      </ul>
-    </aside>
+    <div class="docs-layout">
+      <aside class="docs-sidebar">
+        <h4>Documentation</h4>
+        <ul>
+          <li><a href="../../getting-started/">Getting Started</a></li>
+          <li><a href="../rules/">Rule Reference</a></li>
+          <li><a href="../duplicates/">Duplicate Prevention</a></li>
+          <li><a href="../group-actions/" class="active">Group Actions</a></li>
+          <li><a href="../resources/">Resource Dashboard</a></li>
+          <li><a href="../profiles/">Profiles &amp; Schedules</a></li>
+          <li><a href="../sessions/">Sessions</a></li>
+          <li><a href="../hibernation/">Hibernation</a></li>
+          <li><a href="../sync/">File Sync</a></li>
+          <li><a href="../drive-sync/">Drive Sync</a></li>
+          <li><a href="../shortcuts/">Keyboard Shortcuts</a></li>
+          <li><a href="../quick-switch/">Quick Switch</a></li>
+          <li><a href="../insights/">Insights &amp; Suggestions</a></li>
+          <li><a href="../permissions/">Permissions</a></li>
+        </ul>
+      </aside>
 
-    <main class="docs-content">
-      <h1>Group Actions</h1>
-      <p class="lead">Act on entire tab groups at once — close, bookmark, or move them to a new window.</p>
+      <main class="docs-content">
+        <h1>Group Actions</h1>
+        <p class="lead">
+          Act on entire tab groups at once — close, bookmark, or move them to a new window.
+        </p>
 
-      <div class="callout">
-        <p><strong>Premium feature.</strong> Group Actions require a Premium subscription.</p>
-      </div>
-      <div class="cta-row">
-        <a href="https://chromewebstore.google.com/detail/takt/plgfdnbgkjocmgegnkbihoeojcfphdic" class="btn-cta">$3/month</a>
-        <a href="https://chromewebstore.google.com/detail/takt/plgfdnbgkjocmgegnkbihoeojcfphdic" class="btn-cta btn-cta-annual">$30/year <span class="cta-save">save 17%</span></a>
-      </div>
+        <div class="callout">
+          <p><strong>Premium feature.</strong> Group Actions require a Premium subscription.</p>
+        </div>
+        <div class="cta-row">
+          <a
+            href="https://chromewebstore.google.com/detail/takt/plgfdnbgkjocmgegnkbihoeojcfphdic"
+            class="btn-cta"
+            >$3/month</a
+          >
+          <a
+            href="https://chromewebstore.google.com/detail/takt/plgfdnbgkjocmgegnkbihoeojcfphdic"
+            class="btn-cta btn-cta-annual"
+            >$30/year <span class="cta-save">save 17%</span></a
+          >
+        </div>
 
-      <h2 id="close-group">Close Group <a href="#close-group" class="anchor-link">#</a></h2>
-      <p>Closes all tabs in a group at once.</p>
-      <ul>
-        <li><strong>Pinned tabs are skipped.</strong> Pinned tabs in the group are left open; the count of skipped tabs is shown in the feedback toast.</li>
-        <li><strong>Last-tab-in-window protection.</strong> If closing the group would leave a window completely empty (accounting for pinned tabs), Takt opens a blank new tab first so the window stays open.</li>
-        <li>The group is removed from Takt's registry after closing.</li>
-      </ul>
-      <p>A confirmation prompt appears before closing, showing the number of tabs that will be closed.</p>
+        <h2 id="close-group">Close Group <a href="#close-group" class="anchor-link">#</a></h2>
+        <p>Closes all tabs in a group at once.</p>
+        <ul>
+          <li>
+            <strong>Pinned tabs are skipped.</strong> Pinned tabs in the group are left open; the
+            count of skipped tabs is shown in the feedback toast.
+          </li>
+          <li>
+            <strong>Last-tab-in-window protection.</strong> If closing the group would leave a
+            window completely empty (accounting for pinned tabs), Takt opens a blank new tab first
+            so the window stays open.
+          </li>
+          <li>The group is removed from Takt's registry after closing.</li>
+        </ul>
+        <p>
+          A confirmation prompt appears before closing, showing the number of tabs that will be
+          closed.
+        </p>
 
-      <h2 id="bookmark-group">Bookmark Group <a href="#bookmark-group" class="anchor-link">#</a></h2>
-      <p>Saves all tabs in the group as Chrome bookmarks inside a <strong>Takt Bookmarks</strong> folder.</p>
-      <ul>
-        <li><strong>Root folder.</strong> Takt creates a single <em>Takt Bookmarks</em> folder in your Chrome bookmarks (under Other Bookmarks). If the folder already exists, it is reused.</li>
-        <li><strong>Subfolder per save.</strong> Each bookmark action creates a timestamped subfolder if a subfolder with that group name already exists, so no bookmarks are overwritten.</li>
-        <li><strong>Restricted URLs skipped.</strong> <code>chrome://</code>, <code>chrome-extension://</code>, and <code>javascript:</code> URLs cannot be bookmarked and are silently skipped.</li>
-        <li><strong>Bookmarks permission required.</strong> The Bookmarks permission must be granted in <a href="../permissions/">Settings → Permissions</a> before this action is available. If the permission is missing, a prompt guides you there.</li>
-      </ul>
-      <p>The tabs themselves are not closed or moved — Bookmark Group is read-only.</p>
+        <h2 id="bookmark-group">
+          Bookmark Group <a href="#bookmark-group" class="anchor-link">#</a>
+        </h2>
+        <p>
+          Saves all tabs in the group as Chrome bookmarks inside a
+          <strong>Takt Bookmarks</strong> folder.
+        </p>
+        <ul>
+          <li>
+            <strong>Root folder.</strong> Takt creates a single <em>Takt Bookmarks</em> folder in
+            your Chrome bookmarks (under Other Bookmarks). If the folder already exists, it is
+            reused.
+          </li>
+          <li>
+            <strong>Subfolder per save.</strong> Each bookmark action creates a timestamped
+            subfolder if a subfolder with that group name already exists, so no bookmarks are
+            overwritten.
+          </li>
+          <li>
+            <strong>Restricted URLs skipped.</strong> <code>chrome://</code>,
+            <code>chrome-extension://</code>, and <code>javascript:</code> URLs cannot be bookmarked
+            and are silently skipped.
+          </li>
+          <li>
+            <strong>Bookmarks permission required.</strong> The Bookmarks permission must be granted
+            in <a href="../permissions/">Settings → Permissions</a> before this action is available.
+            If the permission is missing, a prompt guides you there.
+          </li>
+        </ul>
+        <p>The tabs themselves are not closed or moved — Bookmark Group is read-only.</p>
 
-      <h2 id="move-group">Move Group to New Window <a href="#move-group" class="anchor-link">#</a></h2>
-      <p>Detaches all tabs in the group into a brand-new Chrome window.</p>
-      <ul>
-        <li><strong>Group properties preserved.</strong> The new window's group has the same title, color, and collapsed state as the original.</li>
-        <li><strong>Cross-window consolidation.</strong> If the group is spread across multiple windows (consolidated), all tabs are gathered into the single new window.</li>
-        <li><strong>Last-tab-in-window protection.</strong> Same as Close Group — if moving all group tabs would empty a source window, a blank tab is created first.</li>
-        <li>The registry is updated: the old group entries are removed and the new window's group is registered.</li>
-      </ul>
+        <h2 id="move-group">
+          Move Group to New Window <a href="#move-group" class="anchor-link">#</a>
+        </h2>
+        <p>Detaches all tabs in the group into a brand-new Chrome window.</p>
+        <ul>
+          <li>
+            <strong>Group properties preserved.</strong> The new window's group has the same title,
+            color, and collapsed state as the original.
+          </li>
+          <li>
+            <strong>Cross-window consolidation.</strong> If the group is spread across multiple
+            windows (consolidated), all tabs are gathered into the single new window.
+          </li>
+          <li>
+            <strong>Last-tab-in-window protection.</strong> Same as Close Group — if moving all
+            group tabs would empty a source window, a blank tab is created first.
+          </li>
+          <li>
+            The registry is updated: the old group entries are removed and the new window's group is
+            registered.
+          </li>
+        </ul>
 
-      <h2 id="accessing">Accessing Group Actions <a href="#accessing" class="anchor-link">#</a></h2>
-      <h3>Options page — Groups view</h3>
-      <p>Open <strong>Options → Rules → Groups</strong>. Expand any group to see the Close, Bookmark, and Move to Window buttons. On a free plan, the buttons are visible but locked behind the Premium upgrade prompt.</p>
+        <h2 id="accessing">
+          Accessing Group Actions <a href="#accessing" class="anchor-link">#</a>
+        </h2>
+        <h3>Options page — Groups view</h3>
+        <p>
+          Open <strong>Options → Rules → Groups</strong>. Expand any group to see the Close,
+          Bookmark, and Move to Window buttons. On a free plan, the buttons are visible but locked
+          behind the Premium upgrade prompt.
+        </p>
 
-      <h3>Right-click context menu</h3>
-      <p>Right-click any tab that belongs to a group. The <strong>Takt group actions</strong> submenu appears with three items corresponding to the three actions. If the tab is not in a group, a notification explains this. The submenu is only shown for Premium users.</p>
+        <h3>Right-click context menu</h3>
+        <p>
+          Right-click any tab that belongs to a group. The
+          <strong>Takt group actions</strong> submenu appears with three items corresponding to the
+          three actions. If the tab is not in a group, a notification explains this. The submenu is
+          only shown for Premium users.
+        </p>
 
-      <h2 id="limits">Limits &amp; behavior <a href="#limits" class="anchor-link">#</a></h2>
-      <table class="docs-table">
-        <thead>
-          <tr><th>Action</th><th>Tabs closed?</th><th>Tabs bookmarked?</th><th>New window?</th><th>Requires permission</th></tr>
-        </thead>
-        <tbody>
-          <tr><td>Close Group</td><td>Yes (non-pinned)</td><td>No</td><td>No</td><td>None</td></tr>
-          <tr><td>Bookmark Group</td><td>No</td><td>Yes</td><td>No</td><td>Bookmarks</td></tr>
-          <tr><td>Move to New Window</td><td>No</td><td>No</td><td>Yes</td><td>None</td></tr>
-        </tbody>
-      </table>
+        <h2 id="limits">Limits &amp; behavior <a href="#limits" class="anchor-link">#</a></h2>
+        <table class="docs-table">
+          <thead>
+            <tr>
+              <th>Action</th>
+              <th>Tabs closed?</th>
+              <th>Tabs bookmarked?</th>
+              <th>New window?</th>
+              <th>Requires permission</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Close Group</td>
+              <td>Yes (non-pinned)</td>
+              <td>No</td>
+              <td>No</td>
+              <td>None</td>
+            </tr>
+            <tr>
+              <td>Bookmark Group</td>
+              <td>No</td>
+              <td>Yes</td>
+              <td>No</td>
+              <td>Bookmarks</td>
+            </tr>
+            <tr>
+              <td>Move to New Window</td>
+              <td>No</td>
+              <td>No</td>
+              <td>Yes</td>
+              <td>None</td>
+            </tr>
+          </tbody>
+        </table>
 
-      <div class="docs-nav-prev-next">
-        <a href="../rules/">&larr; Rule Reference</a>
-        <a href="../duplicates/" class="next">Duplicate Prevention &rarr;</a>
-      </div>
-    </main>
-  </div>
+        <div class="docs-nav-prev-next">
+          <a href="../rules/">&larr; Rule Reference</a>
+          <a href="../duplicates/" class="next">Duplicate Prevention &rarr;</a>
+        </div>
+      </main>
+    </div>
 
-  <footer id="site-footer"></footer>
-  <script src="../../js/includes.js"></script>
-  <script src="../../js/nav.js"></script>
-</body>
+    <footer id="site-footer"></footer>
+    <script src="../../js/includes.js"></script>
+    <script src="../../js/nav.js"></script>
+  </body>
 </html>

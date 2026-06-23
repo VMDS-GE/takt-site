@@ -1,159 +1,303 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>File Sync — Takt</title>
-  <meta name="description" content="Sync your Takt rules, profiles, and sessions across devices via a cloud-backed local folder — Google Drive, iCloud Drive, Dropbox, or any other cloud client.">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>File Sync — Takt</title>
+    <meta
+      name="description"
+      content="Sync your Takt rules, profiles, and sessions across devices via a cloud-backed local folder — Google Drive, iCloud Drive, Dropbox, or any other cloud client."
+    />
 
-  <link rel="icon" type="image/png" sizes="32x32" href="../../assets/favicon-32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="../../assets/favicon-16.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="../../assets/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../../assets/favicon-32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="../../assets/favicon-16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="../../assets/apple-touch-icon.png" />
 
-  <meta name="theme-color" content="#FF3B30">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../../css/tokens.css">
-  <link rel="stylesheet" href="../../css/base.css">
-  <link rel="stylesheet" href="../../css/layout.css">
-  <link rel="stylesheet" href="../../css/docs.css">
+    <meta name="theme-color" content="#FF3B30" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../../css/tokens.css" />
+    <link rel="stylesheet" href="../../css/base.css" />
+    <link rel="stylesheet" href="../../css/layout.css" />
+    <link rel="stylesheet" href="../../css/docs.css" />
 
-  <script src="../../js/theme.js"></script>
-</head>
-<body>
-  <header id="site-header"></header>
+    <script src="../../js/theme.js"></script>
+  </head>
+  <body>
+    <header id="site-header"></header>
 
-  <div class="docs-layout">
-    <aside class="docs-sidebar">
-      <h4>Documentation</h4>
-      <ul>
-        <li><a href="../../getting-started/">Getting Started</a></li>
-        <li><a href="../rules/">Rule Reference</a></li>
-        <li><a href="../duplicates/">Duplicate Prevention</a></li>
-        <li><a href="../group-actions/">Group Actions</a></li>
-        <li><a href="../resources/">Resource Dashboard</a></li>
-        <li><a href="../profiles/">Profiles &amp; Schedules</a></li>
-        <li><a href="../sessions/">Sessions</a></li>
-        <li><a href="../hibernation/">Hibernation</a></li>
-        <li><a href="./" class="active">File Sync</a></li>
-        <li><a href="../drive-sync/">Drive Sync</a></li>
-        <li><a href="../shortcuts/">Keyboard Shortcuts</a></li>
-        <li><a href="../quick-switch/">Quick Switch</a></li>
-        <li><a href="../permissions/">Permissions</a></li>
-      </ul>
-    </aside>
+    <div class="docs-layout">
+      <aside class="docs-sidebar">
+        <h4>Documentation</h4>
+        <ul>
+          <li><a href="../../getting-started/">Getting Started</a></li>
+          <li><a href="../rules/">Rule Reference</a></li>
+          <li><a href="../duplicates/">Duplicate Prevention</a></li>
+          <li><a href="../group-actions/">Group Actions</a></li>
+          <li><a href="../resources/">Resource Dashboard</a></li>
+          <li><a href="../profiles/">Profiles &amp; Schedules</a></li>
+          <li><a href="../sessions/">Sessions</a></li>
+          <li><a href="../hibernation/">Hibernation</a></li>
+          <li><a href="./" class="active">File Sync</a></li>
+          <li><a href="../drive-sync/">Drive Sync</a></li>
+          <li><a href="../shortcuts/">Keyboard Shortcuts</a></li>
+          <li><a href="../quick-switch/">Quick Switch</a></li>
+          <li><a href="../insights/">Insights &amp; Suggestions</a></li>
+          <li><a href="../permissions/">Permissions</a></li>
+        </ul>
+      </aside>
 
-    <main class="docs-content">
-      <h1>File Sync</h1>
-      <p class="lead">Keep your rules, profiles, and sessions in sync across all your devices — by writing to a folder your cloud client already watches.</p>
+      <main class="docs-content">
+        <h1>File Sync</h1>
+        <p class="lead">
+          Keep your rules, profiles, and sessions in sync across all your devices — by writing to a
+          folder your cloud client already watches.
+        </p>
 
-      <div class="callout">
-        <p><strong>Premium feature.</strong> File Sync requires a Premium subscription.</p>
-      </div>
-      <div class="cta-row">
-        <a href="https://chromewebstore.google.com/detail/takt/plgfdnbgkjocmgegnkbihoeojcfphdic" class="btn-cta">$3/month</a>
-        <a href="https://chromewebstore.google.com/detail/takt/plgfdnbgkjocmgegnkbihoeojcfphdic" class="btn-cta btn-cta-annual">$30/year <span class="cta-save">save 17%</span></a>
-      </div>
+        <div class="callout">
+          <p><strong>Premium feature.</strong> File Sync requires a Premium subscription.</p>
+        </div>
+        <div class="cta-row">
+          <a
+            href="https://chromewebstore.google.com/detail/takt/plgfdnbgkjocmgegnkbihoeojcfphdic"
+            class="btn-cta"
+            >$3/month</a
+          >
+          <a
+            href="https://chromewebstore.google.com/detail/takt/plgfdnbgkjocmgegnkbihoeojcfphdic"
+            class="btn-cta btn-cta-annual"
+            >$30/year <span class="cta-save">save 17%</span></a
+          >
+        </div>
 
-      <h2 id="how-it-works">How it works <a href="#how-it-works" class="anchor-link">#</a></h2>
-      <p>Takt writes four JSON files to a folder you choose. Your cloud desktop client — Google Drive, iCloud Drive, Dropbox, or any other — detects the new or changed files and uploads them. On your other devices, the client downloads the files, and you can pull them into Takt with <strong>Import from Folder</strong>.</p>
-      <p>Takt handles the reading and writing. Your cloud client handles the transfer. No account linking or OAuth is required on Takt's side.</p>
+        <h2 id="how-it-works">How it works <a href="#how-it-works" class="anchor-link">#</a></h2>
+        <p>
+          Takt writes four JSON files to a folder you choose. Your cloud desktop client — Google
+          Drive, iCloud Drive, Dropbox, or any other — detects the new or changed files and uploads
+          them. On your other devices, the client downloads the files, and you can pull them into
+          Takt with <strong>Import from Folder</strong>.
+        </p>
+        <p>
+          Takt handles the reading and writing. Your cloud client handles the transfer. No account
+          linking or OAuth is required on Takt's side.
+        </p>
 
-      <h2 id="setup">Setting up sync <a href="#setup" class="anchor-link">#</a></h2>
-      <ol>
-        <li>Open the Takt Options page and go to the <strong>Settings</strong> tab.</li>
-        <li>Scroll to the <strong>File Sync</strong> section.</li>
-        <li>Click <strong>Choose Folder…</strong>. Chrome will open a folder picker.</li>
-        <li>Navigate to a folder inside your cloud client's local directory — for example:
-          <ul>
-            <li><code>Google Drive/My Drive/Takt/</code></li>
-            <li><code>iCloud Drive/Takt/</code></li>
-            <li><code>Dropbox/Takt/</code></li>
-          </ul>
-          You can create a new subfolder called <code>Takt</code> inside your cloud folder directly from the picker.
-        </li>
-        <li>Click <strong>Select</strong>. Takt stores a reference to that folder.</li>
-        <li>Click <strong>Sync Now</strong> to write your data immediately.</li>
-      </ol>
+        <h2 id="setup">Setting up sync <a href="#setup" class="anchor-link">#</a></h2>
+        <ol>
+          <li>Open the Takt Options page and go to the <strong>Settings</strong> tab.</li>
+          <li>Scroll to the <strong>File Sync</strong> section.</li>
+          <li>Click <strong>Choose Folder…</strong>. Chrome will open a folder picker.</li>
+          <li>
+            Navigate to a folder inside your cloud client's local directory — for example:
+            <ul>
+              <li><code>Google Drive/My Drive/Takt/</code></li>
+              <li><code>iCloud Drive/Takt/</code></li>
+              <li><code>Dropbox/Takt/</code></li>
+            </ul>
+            You can create a new subfolder called <code>Takt</code> inside your cloud folder
+            directly from the picker.
+          </li>
+          <li>Click <strong>Select</strong>. Takt stores a reference to that folder.</li>
+          <li>Click <strong>Sync Now</strong> to write your data immediately.</li>
+        </ol>
 
-      <div class="callout">
-        <p>Takt stores a handle to the folder, not the folder path as a string. Chrome remembers this handle across sessions, so you don't need to pick the folder again every time you open the browser — unless the folder is moved or deleted.</p>
-      </div>
+        <div class="callout">
+          <p>
+            Takt stores a handle to the folder, not the folder path as a string. Chrome remembers
+            this handle across sessions, so you don't need to pick the folder again every time you
+            open the browser — unless the folder is moved or deleted.
+          </p>
+        </div>
 
-      <h2 id="sync-files">What gets synced <a href="#sync-files" class="anchor-link">#</a></h2>
-      <p>Takt writes four files to the chosen folder:</p>
-      <table>
-        <thead>
-          <tr><th>File</th><th>Contents</th></tr>
-        </thead>
-        <tbody>
-          <tr><td><code>rules.json</code></td><td>All your grouping rules</td></tr>
-          <tr><td><code>profiles.json</code></td><td>All your profiles and their rule assignments</td></tr>
-          <tr><td><code>sessions.json</code></td><td>All your saved sessions</td></tr>
-          <tr><td><code>meta.json</code></td><td>Sync timestamp and extension version</td></tr>
-        </tbody>
-      </table>
-      <p>Each file is written independently. If your cloud client supports per-file conflict resolution (like Google Drive), a change to rules on device A and profiles on device B will not conflict.</p>
+        <h2 id="sync-files">What gets synced <a href="#sync-files" class="anchor-link">#</a></h2>
+        <p>Takt writes four files to the chosen folder:</p>
+        <table>
+          <thead>
+            <tr>
+              <th>File</th>
+              <th>Contents</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>rules.json</code></td>
+              <td>All your grouping rules</td>
+            </tr>
+            <tr>
+              <td><code>profiles.json</code></td>
+              <td>All your profiles and their rule assignments</td>
+            </tr>
+            <tr>
+              <td><code>sessions.json</code></td>
+              <td>All your saved sessions</td>
+            </tr>
+            <tr>
+              <td><code>meta.json</code></td>
+              <td>Sync timestamp and extension version</td>
+            </tr>
+          </tbody>
+        </table>
+        <p>
+          Each file is written independently. If your cloud client supports per-file conflict
+          resolution (like Google Drive), a change to rules on device A and profiles on device B
+          will not conflict.
+        </p>
 
-      <h2 id="sync-now">Sync Now <a href="#sync-now" class="anchor-link">#</a></h2>
-      <p>Click <strong>Sync Now</strong> to write all four files to the folder immediately. The <em>Last synced</em> timestamp updates when the write succeeds.</p>
-      <p>Use Sync Now after making a batch of changes you want to push to your other devices right away.</p>
+        <h2 id="sync-now">Sync Now <a href="#sync-now" class="anchor-link">#</a></h2>
+        <p>
+          Click <strong>Sync Now</strong> to write all four files to the folder immediately. The
+          <em>Last synced</em> timestamp updates when the write succeeds.
+        </p>
+        <p>
+          Use Sync Now after making a batch of changes you want to push to your other devices right
+          away.
+        </p>
 
-      <h2 id="auto-sync">Auto-sync <a href="#auto-sync" class="anchor-link">#</a></h2>
-      <p>Enable <strong>Auto-sync on every change</strong> to have Takt write to the folder automatically whenever your rules, profiles, or sessions change. There is a short delay (about 2 seconds) after the last change before the write happens, so rapid edits are batched into a single write.</p>
-      <p>Auto-sync runs silently in the background. If the write fails (for example, if the folder permission was lost after a browser restart), Takt surfaces a <strong>Re-authorize</strong> prompt the next time you open the Options page.</p>
+        <h2 id="auto-sync">Auto-sync <a href="#auto-sync" class="anchor-link">#</a></h2>
+        <p>
+          Enable <strong>Auto-sync on every change</strong> to have Takt write to the folder
+          automatically whenever your rules, profiles, or sessions change. There is a short delay
+          (about 2 seconds) after the last change before the write happens, so rapid edits are
+          batched into a single write.
+        </p>
+        <p>
+          Auto-sync runs silently in the background. If the write fails (for example, if the folder
+          permission was lost after a browser restart), Takt surfaces a
+          <strong>Re-authorize</strong> prompt the next time you open the Options page.
+        </p>
 
-      <h2 id="import">Import from Folder <a href="#import" class="anchor-link">#</a></h2>
-      <p>Click <strong>Import from Folder</strong> to pull data into Takt from any folder on your disk — such as a cloud-synced folder on another device:</p>
-      <ol>
-        <li>A system folder picker opens. Navigate to the folder that contains the Takt sync files (<code>rules.json</code>, <code>profiles.json</code>, <code>sessions.json</code>).</li>
-        <li>Takt verifies that at least one expected file is present. If none are found, the import is cancelled with an error message.</li>
-        <li>Each file is read, size-checked (5 MB limit), parsed, and validated for structure and security before any data is written.</li>
-        <li>Valid data is merged into your current Takt data. Rules and profiles get fresh IDs to avoid collisions. Sessions each get a new ID.</li>
-      </ol>
-      <p>If a file is missing (for example, <code>sessions.json</code> doesn't exist yet), that data type is skipped without error.</p>
+        <h2 id="import">Import from Folder <a href="#import" class="anchor-link">#</a></h2>
+        <p>
+          Click <strong>Import from Folder</strong> to pull data into Takt from any folder on your
+          disk — such as a cloud-synced folder on another device:
+        </p>
+        <ol>
+          <li>
+            A system folder picker opens. Navigate to the folder that contains the Takt sync files
+            (<code>rules.json</code>, <code>profiles.json</code>, <code>sessions.json</code>).
+          </li>
+          <li>
+            Takt verifies that at least one expected file is present. If none are found, the import
+            is cancelled with an error message.
+          </li>
+          <li>
+            Each file is read, size-checked (5 MB limit), parsed, and validated for structure and
+            security before any data is written.
+          </li>
+          <li>
+            Valid data is merged into your current Takt data. Rules and profiles get fresh IDs to
+            avoid collisions. Sessions each get a new ID.
+          </li>
+        </ol>
+        <p>
+          If a file is missing (for example, <code>sessions.json</code> doesn't exist yet), that
+          data type is skipped without error.
+        </p>
 
-      <div class="callout">
-        <p><strong>Don't import from your active sync folder.</strong> If you pick the same folder Takt is currently syncing to, Takt will read back the files it just wrote — this is harmless but pointless, and can create duplicate entries if you have made local changes since the last sync. Use Import from Folder to bring in data from a <em>different</em> device or a backup, not from the folder you sync to.</p>
-      </div>
+        <div class="callout">
+          <p>
+            <strong>Don't import from your active sync folder.</strong> If you pick the same folder
+            Takt is currently syncing to, Takt will read back the files it just wrote — this is
+            harmless but pointless, and can create duplicate entries if you have made local changes
+            since the last sync. Use Import from Folder to bring in data from a
+            <em>different</em> device or a backup, not from the folder you sync to.
+          </p>
+        </div>
 
-      <h2 id="reauthorize">Re-authorizing after permission loss <a href="#reauthorize" class="anchor-link">#</a></h2>
-      <p>In most cases Chrome remembers your folder permission across browser restarts and sync continues to work without any action. Occasionally permission can be lost — for example if the folder was moved or deleted, the extension was reinstalled, or Chrome's permission store was cleared.</p>
-      <p>When Takt detects that folder access was lost, it shows a yellow warning in the File Sync section:</p>
-      <blockquote>Folder access was lost. Click Re-authorize to restore sync.</blockquote>
-      <p>Click <strong>Re-authorize</strong> and Chrome will ask for permission to access the same folder again — no folder picker, just a one-click confirmation. Once granted, sync resumes automatically.</p>
+        <h2 id="reauthorize">
+          Re-authorizing after permission loss <a href="#reauthorize" class="anchor-link">#</a>
+        </h2>
+        <p>
+          In most cases Chrome remembers your folder permission across browser restarts and sync
+          continues to work without any action. Occasionally permission can be lost — for example if
+          the folder was moved or deleted, the extension was reinstalled, or Chrome's permission
+          store was cleared.
+        </p>
+        <p>
+          When Takt detects that folder access was lost, it shows a yellow warning in the File Sync
+          section:
+        </p>
+        <blockquote>Folder access was lost. Click Re-authorize to restore sync.</blockquote>
+        <p>
+          Click <strong>Re-authorize</strong> and Chrome will ask for permission to access the same
+          folder again — no folder picker, just a one-click confirmation. Once granted, sync resumes
+          automatically.
+        </p>
 
-      <h2 id="clear">Clearing the sync folder <a href="#clear" class="anchor-link">#</a></h2>
-      <p>Click <strong>Clear</strong> next to the folder name to disconnect Takt from the sync folder. This removes Takt's reference to the folder and turns off auto-sync. It does <em>not</em> delete the files from your disk or from your cloud storage.</p>
-      <p>You can pick a different folder at any time by clicking <strong>Choose Folder…</strong> again.</p>
+        <h2 id="clear">Clearing the sync folder <a href="#clear" class="anchor-link">#</a></h2>
+        <p>
+          Click <strong>Clear</strong> next to the folder name to disconnect Takt from the sync
+          folder. This removes Takt's reference to the folder and turns off auto-sync. It does
+          <em>not</em> delete the files from your disk or from your cloud storage.
+        </p>
+        <p>
+          You can pick a different folder at any time by clicking
+          <strong>Choose Folder…</strong> again.
+        </p>
 
-      <h2 id="limits">Limits &amp; behaviour <a href="#limits" class="anchor-link">#</a></h2>
-      <table>
-        <thead>
-          <tr><th>Property</th><th>Value</th></tr>
-        </thead>
-        <tbody>
-          <tr><td>Availability</td><td>Premium plan only</td></tr>
-          <tr><td>Files written</td><td><code>rules.json</code>, <code>profiles.json</code>, <code>sessions.json</code>, <code>meta.json</code></td></tr>
-          <tr><td>Import source</td><td>Any folder you pick — independent of the sync folder</td></tr>
-          <tr><td>Maximum file size on import</td><td>5 MB per file</td></tr>
-          <tr><td>Import validation</td><td>Size, JSON structure, and security checks before any data is written</td></tr>
-          <tr><td>Auto-sync debounce</td><td>~2 seconds after last change</td></tr>
-          <tr><td>Folder permission</td><td>Usually persists across restarts; re-authorize if access is lost</td></tr>
-          <tr><td>Cross-device transfer</td><td>Handled by your cloud client, not by Takt</td></tr>
-          <tr><td>Conflict strategy</td><td>Last write wins per file</td></tr>
-        </tbody>
-      </table>
+        <h2 id="limits">Limits &amp; behaviour <a href="#limits" class="anchor-link">#</a></h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Property</th>
+              <th>Value</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Availability</td>
+              <td>Premium plan only</td>
+            </tr>
+            <tr>
+              <td>Files written</td>
+              <td>
+                <code>rules.json</code>, <code>profiles.json</code>, <code>sessions.json</code>,
+                <code>meta.json</code>
+              </td>
+            </tr>
+            <tr>
+              <td>Import source</td>
+              <td>Any folder you pick — independent of the sync folder</td>
+            </tr>
+            <tr>
+              <td>Maximum file size on import</td>
+              <td>5 MB per file</td>
+            </tr>
+            <tr>
+              <td>Import validation</td>
+              <td>Size, JSON structure, and security checks before any data is written</td>
+            </tr>
+            <tr>
+              <td>Auto-sync debounce</td>
+              <td>~2 seconds after last change</td>
+            </tr>
+            <tr>
+              <td>Folder permission</td>
+              <td>Usually persists across restarts; re-authorize if access is lost</td>
+            </tr>
+            <tr>
+              <td>Cross-device transfer</td>
+              <td>Handled by your cloud client, not by Takt</td>
+            </tr>
+            <tr>
+              <td>Conflict strategy</td>
+              <td>Last write wins per file</td>
+            </tr>
+          </tbody>
+        </table>
 
-      <div class="docs-nav-prev-next">
-        <a href="../sessions/">&larr; Sessions</a>
-        <a href="../drive-sync/" class="next">Drive Sync &rarr;</a>
-      </div>
-    </main>
-  </div>
+        <div class="docs-nav-prev-next">
+          <a href="../sessions/">&larr; Sessions</a>
+          <a href="../drive-sync/" class="next">Drive Sync &rarr;</a>
+        </div>
+      </main>
+    </div>
 
-  <footer id="site-footer"></footer>
+    <footer id="site-footer"></footer>
 
-  <script src="../../js/includes.js"></script>
-  <script src="../../js/nav.js"></script>
-</body>
+    <script src="../../js/includes.js"></script>
+    <script src="../../js/nav.js"></script>
+  </body>
 </html>
