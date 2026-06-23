@@ -302,15 +302,16 @@ export function wireController(
   if (collapseBtn) {
     collapseBtn.addEventListener('click', () => triggerCollapseAll());
   }
+  // ponytail: triggerExpandAll — shared by button click and Alt+Shift+E shortcut (#126)
+  const triggerExpandAll = () => {
+    expandAll(state);
+    el.tabGroups = mapTabGroups(state);
+    el.showToast('All groups expanded', { type: 'success', duration: 1500 });
+    renderHome(state, popupRoot);
+  };
   const expandBtn = popupRoot.querySelector('#btn-expand-all');
   if (expandBtn) {
-    expandBtn.addEventListener('click', () => {
-      if (state.tabGroups.length === 0) return;
-      expandAll(state);
-      el.tabGroups = mapTabGroups(state);
-      el.showToast('All groups expanded', { type: 'success', duration: 1500 });
-      renderHome(state, popupRoot);
-    });
+    expandBtn.addEventListener('click', () => triggerExpandAll());
   }
   const hibBtn = popupRoot.querySelector('#btn-hibernate-tab');
   if (hibBtn) {
@@ -519,6 +520,11 @@ export function wireController(
     if (e.altKey && e.shiftKey && (e.key === 'c' || e.key === 'C' || e.code === 'KeyC')) {
       e.preventDefault();
       triggerCollapseAll();
+      return;
+    }
+    if (e.altKey && e.shiftKey && (e.key === 'e' || e.key === 'E' || e.code === 'KeyE')) {
+      e.preventDefault();
+      triggerExpandAll();
       return;
     }
     if (!isOpen) return;
