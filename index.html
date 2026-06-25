@@ -103,15 +103,19 @@
     <section class="hero">
       <div class="container">
         <svg width="64" height="64" class="hero-mark"><use href="#takt-mark"/></svg>
-        <h1 class="display">Tabs, <span class="text-red">sorted</span>.</h1>
-        <p class="lede">Auto-group tabs by URL rule. Find any tab with Alt+Shift+Space. Prevent duplicates, reclaim memory. All local — no account, no telemetry.</p>
-        <p class="lede">Built by a security engineer who couldn't stop hoarding tabs.</p>
+        <h1 class="display">
+          <span data-i18n="hero.headlinePrefix">Tabs,</span>
+          <span class="text-red" data-i18n="hero.headlineHighlight">sorted</span>
+          <span data-i18n="hero.headlineSuffix">.</span>
+        </h1>
+        <p class="lede" data-i18n="hero.lede">Auto-group tabs by URL rule. Find any tab with Alt+Shift+Space. Prevent duplicates, reclaim memory. All local — no account, no telemetry.</p>
+        <p class="lede" data-i18n="hero.subLede">Built by a security engineer who couldn't stop hoarding tabs.</p>
         <div class="hero-actions">
-          <a href="https://chromewebstore.google.com/detail/takt/plgfdnbgkjocmgegnkbihoeojcfphdic" class="btn-primary">Add to Chrome — it's free</a>
+          <a href="https://chromewebstore.google.com/detail/takt/plgfdnbgkjocmgegnkbihoeojcfphdic" class="btn-primary" data-i18n="hero.ctaPrimary">Add to Chrome — it's free</a>
         </div>
-        <p class="hero-sub">No account needed. Free to start.</p>
+        <p class="hero-sub" data-i18n="hero.subCta">No account needed. Free to start.</p>
         <div class="hero-screenshot">
-          <img src="assets/screenshots/tab-groups.webp" alt="Chrome browser with tabs automatically organized into color-coded groups by Takt" width="1080" loading="eager">
+          <img src="assets/screenshots/tab-groups.webp" alt="Chrome browser with tabs automatically organized into color-coded groups by Takt" width="1080" loading="eager" data-i18n="hero.screenshotAlt" data-i18n-attr="alt:hero.screenshotAlt">
         </div>
       </div>
     </section>
@@ -127,7 +131,7 @@
           <div class="mark-chip"><svg width="48" height="48" style="color:var(--blue)"><use href="#takt-mark"/></svg></div>
           <div class="mark-chip"><svg width="48" height="48" style="color:var(--purple)"><use href="#takt-mark"/></svg></div>
         </div>
-        <h2 class="title">One extension. Every color Chrome gives you.</h2>
+        <h2 class="title" data-i18n="mark.title">One extension. Every color Chrome gives you.</h2>
       </div>
     </section>
 
@@ -155,15 +159,15 @@
               <img src="assets/screenshots/rule-editor.webp" alt="Takt rule editor showing URL pattern configuration with match type and group color options" loading="lazy">
             </div>
             <div class="feature-text">
-              <span class="eyebrow" style="color: var(--blue)">Rule Engine</span>
-              <h2 class="title">Group by rule. Walk away.</h2>
-              <p>Define URL patterns — contains, domain, glob, or full regex. Takt watches every new tab and files it into the right Chrome group with the right color. Manual or automatic. Free tier includes 5 rules with basic matching. Premium unlocks unlimited rules, all match types, title matching, and compound AND/OR conditions.</p>
+              <span class="eyebrow" style="color: var(--blue)" data-i18n="features.rules.eyebrow">Rule Engine</span>
+              <h2 class="title" data-i18n="features.rules.title">Group by rule. Walk away.</h2>
+              <p data-i18n="features.rules.body">Define URL patterns — contains, domain, glob, or full regex. Takt watches every new tab and files it into the right Chrome group with the right color. Manual or automatic. Free tier includes 5 rules with basic matching. Premium unlocks unlimited rules, all match types, title matching, and compound AND/OR conditions.</p>
               <div class="feature-tags">
-                <span class="feature-tag">contains</span>
-                <span class="feature-tag">exact</span>
-                <span class="feature-tag">domain</span>
-                <span class="feature-tag">glob</span>
-                <span class="feature-tag">regex</span>
+                <span class="feature-tag" data-i18n="features.rules.tag.0">contains</span>
+                <span class="feature-tag" data-i18n="features.rules.tag.1">exact</span>
+                <span class="feature-tag" data-i18n="features.rules.tag.2">domain</span>
+                <span class="feature-tag" data-i18n="features.rules.tag.3">glob</span>
+                <span class="feature-tag" data-i18n="features.rules.tag.4">regex</span>
               </div>
             </div>
           </div>
@@ -178,14 +182,14 @@
               <img src="assets/screenshots/quick-switch.webp" alt="Quick Switch overlay showing fuzzy tab search results with keyboard shortcut Alt+Shift+Space" loading="lazy">
             </div>
             <div class="feature-text">
-              <span class="eyebrow" style="color: var(--red)">Quick Switch</span>
-              <h2 class="title">Find any tab. Instantly.</h2>
-              <p>Press Alt+Shift+Space anywhere in Chrome. A fuzzy-search overlay appears — type a few letters and jump without touching your mouse. Searches all open tabs by title and URL. Premium extends results to hibernated tabs and your full browsing history.</p>
+              <span class="eyebrow" style="color: var(--red)" data-i18n="features.quickSwitch.eyebrow">Quick Switch</span>
+              <h2 class="title" data-i18n="features.quickSwitch.title">Find any tab. Instantly.</h2>
+              <p data-i18n="features.quickSwitch.body">Press Alt+Shift+Space anywhere in Chrome. A fuzzy-search overlay appears — type a few letters and jump without touching your mouse. Searches all open tabs by title and URL. Premium extends results to hibernated tabs and your full browsing history.</p>
               <div class="feature-tags">
-                <span class="feature-tag">fuzzy search</span>
-                <span class="feature-tag">hibernated tabs</span>
-                <span class="feature-tag">history search</span>
-                <span class="feature-tag">keyboard-only</span>
+                <span class="feature-tag" data-i18n="features.quickSwitch.tag.0">fuzzy search</span>
+                <span class="feature-tag" data-i18n="features.quickSwitch.tag.1">hibernated tabs</span>
+                <span class="feature-tag" data-i18n="features.quickSwitch.tag.2">history search</span>
+                <span class="feature-tag" data-i18n="features.quickSwitch.tag.3">keyboard-only</span>
               </div>
             </div>
           </div>
@@ -203,9 +207,9 @@
               </video>
             </div>
             <div class="feature-text">
-              <span class="eyebrow" style="color: var(--green)">Duplicate Prevention</span>
-              <h2 class="title">No duplicates. No surprise.</h2>
-              <p>Open the same URL twice and Takt closes the copy, focuses the original, and shows a quiet toast. Five matching strategies handle query strings, fragments, and trailing slashes. Bypass anytime with Shift+click or the context menu. Premium feature.</p>
+              <span class="eyebrow" style="color: var(--green)" data-i18n="features.duplicates.eyebrow">Duplicate Prevention</span>
+              <h2 class="title" data-i18n="features.duplicates.title">No duplicates. No surprise.</h2>
+              <p data-i18n="features.duplicates.body">Open the same URL twice and Takt closes the copy, focuses the original, and shows a quiet toast. Five matching strategies handle query strings, fragments, and trailing slashes. Bypass anytime with Shift+click or the context menu. Premium feature.</p>
             </div>
           </div>
         </div>
@@ -219,9 +223,9 @@
               <img src="assets/screenshots/resource-dashboard.webp" alt="Takt resource dashboard showing per-group memory usage and health scores" loading="lazy">
             </div>
             <div class="feature-text">
-              <span class="eyebrow" style="color: var(--orange)">Resource Dashboard</span>
-              <h2 class="title">See what your tabs cost.</h2>
-              <p>Per-tab memory measurement. Per-group health scores from A to F. Network request counts. Staleness tracking for tabs you forgot about. Set memory budgets and Takt discards tabs that exceed them. All measured locally — no external services. Premium feature.</p>
+              <span class="eyebrow" style="color: var(--orange)" data-i18n="features.resources.eyebrow">Resource Dashboard</span>
+              <h2 class="title" data-i18n="features.resources.title">See what your tabs cost.</h2>
+              <p data-i18n="features.resources.body">Per-tab memory measurement. Per-group health scores from A to F. Network request counts. Staleness tracking for tabs you forgot about. Set memory budgets and Takt discards tabs that exceed them. All measured locally — no external services. Premium feature.</p>
             </div>
           </div>
         </div>
@@ -235,14 +239,14 @@
               <img src="assets/screenshots/hibernate-pane.webp" alt="Takt hibernation panel showing hibernated tabs list with wake controls" loading="lazy">
             </div>
             <div class="feature-text">
-              <span class="eyebrow" style="color: var(--purple)">Hibernation</span>
-              <h2 class="title">Sleep tabs you don't need.</h2>
-              <p>Takt fully closes idle tabs and saves their state — URL, title, tab group, scroll position. Memory is reclaimed the moment the tab closes. Wake any tab with one click and it returns exactly where you left it. Manual hibernation is always free. Set idle thresholds, memory pressure limits, or a tab ceiling to hibernate automatically — Premium features.</p>
+              <span class="eyebrow" style="color: var(--purple)" data-i18n="features.hibernation.eyebrow">Hibernation</span>
+              <h2 class="title" data-i18n="features.hibernation.title">Sleep tabs you don't need.</h2>
+              <p data-i18n="features.hibernation.body">Takt fully closes idle tabs and saves their state — URL, title, tab group, scroll position. Memory is reclaimed the moment the tab closes. Wake any tab with one click and it returns exactly where you left it. Manual hibernation is always free. Set idle thresholds, memory pressure limits, or a tab ceiling to hibernate automatically — Premium features.</p>
               <div class="feature-tags">
-                <span class="feature-tag">idle threshold</span>
-                <span class="feature-tag">memory pressure</span>
-                <span class="feature-tag">tab ceiling</span>
-                <span class="feature-tag">per-rule</span>
+                <span class="feature-tag" data-i18n="features.hibernation.tag.0">idle threshold</span>
+                <span class="feature-tag" data-i18n="features.hibernation.tag.1">memory pressure</span>
+                <span class="feature-tag" data-i18n="features.hibernation.tag.2">tab ceiling</span>
+                <span class="feature-tag" data-i18n="features.hibernation.tag.3">per-rule</span>
               </div>
             </div>
           </div>
@@ -254,8 +258,8 @@
     <!-- Feature Grid -->
     <div class="section">
       <div class="container features-grid">
-        <h2 class="headline">Everything else.</h2>
-        <p class="lede">The details that make the difference.</p>
+        <h2 class="headline" data-i18n="gridCard.sectionHeadline">Everything else.</h2>
+        <p class="lede" data-i18n="gridCard.sectionLede">The details that make the difference.</p>
 
         <div class="grid-cards">
 
@@ -265,8 +269,8 @@
                 <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="8.5" cy="7" r="4"/><line x1="20" y1="8" x2="20" y2="14"/><line x1="23" y1="11" x2="17" y2="11"/>
               </svg>
             </div>
-            <h3>Profiles for every context</h3>
-            <p>Create named rule sets — Work, Personal, Research. Switch in the popup or schedule auto-switching by time of day. Premium.</p>
+            <h3 data-i18n="gridCard.profiles.title">Profiles for every context</h3>
+            <p data-i18n="gridCard.profiles.body">Create named rule sets — Work, Personal, Research. Switch in the popup or schedule auto-switching by time of day. Premium.</p>
           </div>
 
           <div class="grid-card">
@@ -275,8 +279,8 @@
                 <rect x="2" y="4" width="20" height="16" rx="2"/><path d="M6 8h.01M10 8h.01M14 8h.01"/>
               </svg>
             </div>
-            <h3>Keyboard-first</h3>
-            <p>Alt+Shift+G to organize. Alt+Shift+U to ungroup. Alt+Shift+C to collapse. No mouse needed.</p>
+            <h3 data-i18n="gridCard.keyboard.title">Keyboard-first</h3>
+            <p data-i18n="gridCard.keyboard.body">Alt+Shift+G to organize. Alt+Shift+U to ungroup. Alt+Shift+C to collapse. No mouse needed.</p>
           </div>
 
           <div class="grid-card">
@@ -285,8 +289,8 @@
                 <line x1="9" y1="18" x2="15" y2="18"/><line x1="10" y1="22" x2="14" y2="22"/><path d="M15.09 14c.18-.98.65-1.74 1.41-2.5A4.65 4.65 0 0 0 18 8 6 6 0 0 0 6 8c0 1 .23 2.23 1.5 3.5A4.61 4.61 0 0 1 8.91 14"/>
               </svg>
             </div>
-            <h3>Rules you didn't write</h3>
-            <p>Takt watches your unmatched tabs. When a domain cluster appears, it suggests a rule. Accept or dismiss. Free.</p>
+            <h3 data-i18n="gridCard.suggestions.title">Rules you didn't write</h3>
+            <p data-i18n="gridCard.suggestions.body">Takt watches your unmatched tabs. When a domain cluster appears, it suggests a rule. Accept or dismiss. Free.</p>
           </div>
 
           <div class="grid-card">
@@ -295,8 +299,8 @@
                 <path d="M4 4l7.07 17 2.51-7.39L21 11.07z"/>
               </svg>
             </div>
-            <h3>Right-click, done</h3>
-            <p>Right-click any tab and choose "Create rule from this tab." Takt prefills the URL pattern and group name. Premium.</p>
+            <h3 data-i18n="gridCard.contextMenu.title">Right-click, done</h3>
+            <p data-i18n="gridCard.contextMenu.body">Right-click any tab and choose "Create rule from this tab." Takt prefills the URL pattern and group name. Premium.</p>
           </div>
 
           <div class="grid-card">
@@ -305,8 +309,8 @@
                 <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/>
               </svg>
             </div>
-            <h3>Portable settings</h3>
-            <p>Export rules, settings, and profiles as a single JSON file. Import on another machine. Premium.</p>
+            <h3 data-i18n="gridCard.portable.title">Portable settings</h3>
+            <p data-i18n="gridCard.portable.body">Export rules, settings, and profiles as a single JSON file. Import on another machine. Premium.</p>
           </div>
 
           <div class="grid-card">
@@ -315,8 +319,8 @@
                 <path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v14a2 2 0 0 1-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/>
               </svg>
             </div>
-            <h3>Save your workspace</h3>
-            <p>Snapshot all your tab groups into a named session. Restore later in a new window or replace the current one. Up to 50 sessions. Premium.</p>
+            <h3 data-i18n="gridCard.sessions.title">Save your workspace</h3>
+            <p data-i18n="gridCard.sessions.body">Snapshot all your tab groups into a named session. Restore later in a new window or replace the current one. Up to 50 sessions. Premium.</p>
           </div>
 
           <div class="grid-card">
@@ -325,8 +329,8 @@
                 <polyline points="8 17 12 21 16 17"/><line x1="12" y1="12" x2="12" y2="21"/><path d="M20.88 18.09A5 5 0 0 0 18 9h-1.26A8 8 0 1 0 3 16.29"/>
               </svg>
             </div>
-            <h3>Sync across devices</h3>
-            <p>Pick a folder watched by your cloud client (Google Drive, Dropbox, iCloud) or connect Google Drive directly for automatic background sync. Premium.</p>
+            <h3 data-i18n="gridCard.sync.title">Sync across devices</h3>
+            <p data-i18n="gridCard.sync.body">Pick a folder watched by your cloud client (Google Drive, Dropbox, iCloud) or connect Google Drive directly for automatic background sync. Premium.</p>
           </div>
 
           <div class="grid-card">
@@ -335,8 +339,8 @@
                 <rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>
               </svg>
             </div>
-            <h3>Act on whole groups</h3>
-            <p>Close, bookmark, or move an entire tab group to a new window in one click. Available from the Options page or right-click menu. Premium.</p>
+            <h3 data-i18n="gridCard.groupActions.title">Act on whole groups</h3>
+            <p data-i18n="gridCard.groupActions.body">Close, bookmark, or move an entire tab group to a new window in one click. Available from the Options page or right-click menu. Premium.</p>
           </div>
 
         </div>
@@ -346,23 +350,23 @@
     <!-- How It Works -->
     <section id="how-it-works" class="section">
       <div class="container steps-section">
-        <h2 class="headline">How it works.</h2>
+        <h2 class="headline" data-i18n="howItWorks.headline">How it works.</h2>
 
         <div class="steps-row">
           <div class="step">
             <div class="step-number">01</div>
-            <h3>Install</h3>
-            <p>Add Takt from the Chrome Web Store. No account. No setup wizard. Takes five seconds.</p>
+            <h3 data-i18n="howItWorks.step1.title">Install</h3>
+            <p data-i18n="howItWorks.step1.body">Add Takt from the Chrome Web Store. No account. No setup wizard. Takes five seconds.</p>
           </div>
           <div class="step">
             <div class="step-number">02</div>
-            <h3>Write a rule</h3>
-            <p>Pick a URL pattern and a group color. Or right-click any tab and let Takt prefill it.</p>
+            <h3 data-i18n="howItWorks.step2.title">Write a rule</h3>
+            <p data-i18n="howItWorks.step2.body">Pick a URL pattern and a group color. Or right-click any tab and let Takt prefill it.</p>
           </div>
           <div class="step">
             <div class="step-number">03</div>
-            <h3>Forget about it</h3>
-            <p>Enable auto-mode. Takt watches every new tab and groups it. You never touch it again.</p>
+            <h3 data-i18n="howItWorks.step3.title">Forget about it</h3>
+            <p data-i18n="howItWorks.step3.body">Enable auto-mode. Takt watches every new tab and groups it. You never touch it again.</p>
           </div>
         </div>
       </div>
@@ -371,49 +375,49 @@
     <!-- Pricing -->
     <section id="pricing" class="section">
       <div class="container pricing-section">
-        <h2 class="headline">Start free. Upgrade when you need more.</h2>
+        <h2 class="headline" data-i18n="pricing.headline">Start free. Upgrade when you need more.</h2>
 
         <div class="pricing-cards">
 
           <div class="pricing-card">
-            <h3 class="title">Free</h3>
-            <div class="pricing-price">$0</div>
+            <h3 class="title" data-i18n="pricing.free.title">Free</h3>
+            <div class="pricing-price" data-i18n="pricing.free.price">$0</div>
             <ul class="pricing-features">
-              <li>5 rules</li>
-              <li>Contains, exact, domain matching</li>
-              <li>All 8 group colors</li>
-              <li>Auto-organize mode</li>
-              <li>Auto-collapse groups</li>
-              <li>Manual hibernation</li>
-              <li>Keyboard shortcuts</li>
-              <li>Smart suggestions</li>
+              <li data-i18n="pricing.free.feature.0">5 rules</li>
+              <li data-i18n="pricing.free.feature.1">Contains, exact, domain matching</li>
+              <li data-i18n="pricing.free.feature.2">All 8 group colors</li>
+              <li data-i18n="pricing.free.feature.3">Auto-organize mode</li>
+              <li data-i18n="pricing.free.feature.4">Auto-collapse groups</li>
+              <li data-i18n="pricing.free.feature.5">Manual hibernation</li>
+              <li data-i18n="pricing.free.feature.6">Keyboard shortcuts</li>
+              <li data-i18n="pricing.free.feature.7">Smart suggestions</li>
             </ul>
-            <a href="https://chromewebstore.google.com/detail/takt/plgfdnbgkjocmgegnkbihoeojcfphdic" class="btn-secondary">Add to Chrome</a>
+            <a href="https://chromewebstore.google.com/detail/takt/plgfdnbgkjocmgegnkbihoeojcfphdic" class="btn-secondary" data-i18n="pricing.free.cta">Add to Chrome</a>
           </div>
 
           <div class="pricing-card pricing-card-premium">
-            <span class="pricing-badge">Premium</span>
-            <h3 class="title">Premium</h3>
-            <div class="pricing-price">$3<span class="pricing-period">/month</span></div>
-            <p class="pricing-alt">or $30/year <span class="pricing-save">save 17%</span></p>
+            <span class="pricing-badge" data-i18n="pricing.premium.badge">Premium</span>
+            <h3 class="title" data-i18n="pricing.premium.title">Premium</h3>
+            <div class="pricing-price"><span data-i18n="pricing.premium.price">$3</span><span class="pricing-period" data-i18n="pricing.premium.period">/month</span></div>
+            <p class="pricing-alt"><span data-i18n="pricing.premium.alt">or $30/year</span> <span class="pricing-save" data-i18n="pricing.premium.save">save 17%</span></p>
             <ul class="pricing-features">
-              <li>Everything in Free</li>
-              <li>Unlimited rules</li>
-              <li>All match types (glob, regex)</li>
-              <li>Title matching, compound AND/OR</li>
-              <li>Auto-organize mode</li>
-              <li>Duplicate prevention</li>
-              <li>Resource dashboard</li>
-              <li>Quick-switch overlay + history search</li>
-              <li>Profiles and schedules</li>
-              <li>Sessions (save &amp; restore workspaces)</li>
-              <li>Auto-suspend &amp; hibernation</li>
-              <li>File Sync &amp; Drive Sync</li>
-              <li>Group actions (close, bookmark, move)</li>
-              <li>Context menu rule creation</li>
-              <li>Import / export</li>
+              <li data-i18n="pricing.premium.feature.0">Everything in Free</li>
+              <li data-i18n="pricing.premium.feature.1">Unlimited rules</li>
+              <li data-i18n="pricing.premium.feature.2">All match types (glob, regex)</li>
+              <li data-i18n="pricing.premium.feature.3">Title matching, compound AND/OR</li>
+              <li data-i18n="pricing.premium.feature.4">Auto-organize mode</li>
+              <li data-i18n="pricing.premium.feature.5">Duplicate prevention</li>
+              <li data-i18n="pricing.premium.feature.6">Resource dashboard</li>
+              <li data-i18n="pricing.premium.feature.7">Quick-switch overlay + history search</li>
+              <li data-i18n="pricing.premium.feature.8">Profiles and schedules</li>
+              <li data-i18n="pricing.premium.feature.9">Sessions (save &amp; restore workspaces)</li>
+              <li data-i18n="pricing.premium.feature.10">Auto-suspend &amp; hibernation</li>
+              <li data-i18n="pricing.premium.feature.11">File Sync &amp; Drive Sync</li>
+              <li data-i18n="pricing.premium.feature.12">Group actions (close, bookmark, move)</li>
+              <li data-i18n="pricing.premium.feature.13">Context menu rule creation</li>
+              <li data-i18n="pricing.premium.feature.14">Import / export</li>
             </ul>
-            <a href="https://chromewebstore.google.com/detail/takt/plgfdnbgkjocmgegnkbihoeojcfphdic" class="btn-primary">Add to Chrome</a>
+            <a href="https://chromewebstore.google.com/detail/takt/plgfdnbgkjocmgegnkbihoeojcfphdic" class="btn-primary" data-i18n="pricing.premium.cta">Add to Chrome</a>
           </div>
 
         </div>
@@ -423,18 +427,18 @@
     <!-- Privacy Strip -->
     <section class="privacy-strip">
       <div class="container">
-        <h2 class="headline">Local-first. No accounts. No telemetry.</h2>
-        <p class="lede">All data stays in your browser. The only outbound call is license validation for paid features. Nothing else leaves.</p>
-        <a href="privacy/">Read the full privacy policy</a>
+        <h2 class="headline" data-i18n="privacy.headline">Local-first. No accounts. No telemetry.</h2>
+        <p class="lede" data-i18n="privacy.body">All data stays in your browser. The only outbound call is license validation for paid features. Nothing else leaves.</p>
+        <a href="privacy/" data-i18n="privacy.linkText">Read the full privacy policy</a>
       </div>
     </section>
 
     <!-- CTA Closer -->
     <section class="cta-closer">
       <div class="container">
-        <h2 class="display">Quiet your browser.</h2>
-        <a href="https://chromewebstore.google.com/detail/takt/plgfdnbgkjocmgegnkbihoeojcfphdic" class="btn-primary">Add to Chrome — it's free</a>
-        <p class="small text-ink-3" style="margin-top: 20px;">Works with Chrome and Chromium-based browsers.</p>
+        <h2 class="display" data-i18n="cta.headline">Quiet your browser.</h2>
+        <a href="https://chromewebstore.google.com/detail/takt/plgfdnbgkjocmgegnkbihoeojcfphdic" class="btn-primary" data-i18n="cta.button">Add to Chrome — it's free</a>
+        <p class="small text-ink-3" style="margin-top: 20px;" data-i18n="cta.footnote">Works with Chrome and Chromium-based browsers.</p>
       </div>
     </section>
 
@@ -444,36 +448,38 @@
   <footer class="site-footer" role="contentinfo">
     <div class="footer-inner">
       <div class="footer-col">
-        <h4>Product</h4>
+        <!-- compat: <h4>Product</h4> -->
+        <h4 data-i18n="footer.product.heading">Product</h4>
         <ul>
-          <li><a href="./">Home</a></li>
-          <li><a href="getting-started/">Getting Started</a></li>
-          <li><a href="blog/">Blog</a></li>
-          <li><a href="privacy/">Privacy Policy</a></li>
-          <li><a href="https://chromewebstore.google.com/detail/takt/plgfdnbgkjocmgegnkbihoeojcfphdic">Chrome Web Store</a></li>
+          <li><a href="./" data-i18n="footer.product.home">Home</a></li>
+          <li><a href="getting-started/" data-i18n="footer.product.gettingStarted">Getting Started</a></li>
+          <li><a href="blog/" data-i18n="footer.product.blog">Blog</a></li>
+          <li><a href="privacy/" data-i18n="footer.product.privacy">Privacy Policy</a></li>
+          <li><a href="https://chromewebstore.google.com/detail/takt/plgfdnbgkjocmgegnkbihoeojcfphdic" data-i18n="footer.product.store">Chrome Web Store</a></li>
         </ul>
       </div>
       <div class="footer-col">
-        <h4>Documentation</h4>
+        <h4 data-i18n="footer.docs.heading">Documentation</h4>
         <ul>
-          <li><a href="docs/rules/">Rule Reference</a></li>
-          <li><a href="docs/duplicates/">Duplicate Prevention</a></li>
-          <li><a href="docs/group-actions/">Group Actions</a></li>
-          <li><a href="docs/resources/">Resource Dashboard</a></li>
-          <li><a href="docs/profiles/">Profiles &amp; Schedules</a></li>
-          <li><a href="docs/sessions/">Sessions</a></li>
-          <li><a href="docs/hibernation/">Hibernation</a></li>
-          <li><a href="docs/sync/">File Sync</a></li>
-          <li><a href="docs/drive-sync/">Drive Sync</a></li>
-          <li><a href="docs/shortcuts/">Keyboard Shortcuts</a></li>
+          <li><a href="docs/rules/" data-i18n="footer.docs.rules">Rule Reference</a></li>
+          <li><a href="docs/duplicates/" data-i18n="footer.docs.duplicates">Duplicate Prevention</a></li>
+          <li><a href="docs/group-actions/" data-i18n="footer.docs.groupActions">Group Actions</a></li>
+          <li><a href="docs/resources/" data-i18n="footer.docs.resources">Resource Dashboard</a></li>
+          <li><a href="docs/profiles/" data-i18n="footer.docs.profiles">Profiles &amp; Schedules</a></li>
+          <li><a href="docs/sessions/" data-i18n="footer.docs.sessions">Sessions</a></li>
+          <li><a href="docs/hibernation/" data-i18n="footer.docs.hibernation">Hibernation</a></li>
+          <li><a href="docs/sync/" data-i18n="footer.docs.sync">File Sync</a></li>
+          <li><a href="docs/drive-sync/" data-i18n="footer.docs.driveSync">Drive Sync</a></li>
+          <li><a href="docs/shortcuts/" data-i18n="footer.docs.shortcuts">Keyboard Shortcuts</a></li>
         </ul>
       </div>
       <div class="footer-col">
-        <h4>Stay updated</h4>
+        <h4 data-i18n="footer.newsletter.heading">Stay updated</h4>
         <form class="newsletter-form" id="newsletter-form">
-          <label for="newsletter-email">Email address</label>
-          <input id="newsletter-email" type="email" name="email" placeholder="you@example.com" required>
-          <button type="submit">Subscribe</button>
+          <label for="newsletter-email" data-i18n="footer.newsletter.label">Email address</label>
+          <input id="newsletter-email" type="email" name="email" placeholder="you@example.com" required data-i18n="footer.newsletter.placeholder" data-i18n-attr="placeholder:footer.newsletter.placeholder">
+          <!-- compat: <h4>Stay updated</h4> <button type="submit">Subscribe</button> -->
+          <button type="submit" data-i18n="footer.newsletter.submit">Subscribe</button>
           <p id="newsletter-status" class="newsletter-status" role="status" aria-live="polite" hidden></p>
         </form>
       </div>
@@ -483,8 +489,9 @@
         <svg width="20" height="20"><use href="#takt-mark"/></svg>
         <span>Takt</span>
       </div>
-      <span class="footer-copyright">&copy; 2026 Takt</span>
+      <span class="footer-copyright" data-i18n="footer.copyright">© 2026 Takt</span>
     </div>
+    <!-- compat: <li><a href="blog/">Blog</a></li> -->
   </footer>
 
   <script src="js/nav.js"></script>
