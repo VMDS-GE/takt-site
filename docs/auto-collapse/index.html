@@ -24,57 +24,58 @@
     <link rel="stylesheet" href="../../css/docs.css" />
 
     <script src="../../js/theme.js"></script>
+    <script type="module" src="../../js/i18n.js"></script>
   </head>
   <body>
     <header id="site-header"></header>
 
     <div class="docs-layout">
       <aside class="docs-sidebar">
-        <h4>Documentation</h4>
+        <h4 data-i18n="docs.sidebar.heading">Documentation</h4>
         <ul>
-          <li><a href="../../getting-started/">Getting Started</a></li>
-          <li><a href="../rules/">Rule Reference</a></li>
-          <li><a href="../duplicates/">Duplicate Prevention</a></li>
-          <li><a href="../group-actions/">Group Actions</a></li>
-          <li><a href="./" class="active">Auto-collapse</a></li>
-          <li><a href="../resources/">Resource Dashboard</a></li>
-          <li><a href="../profiles/">Profiles &amp; Schedules</a></li>
-          <li><a href="../sessions/">Sessions</a></li>
-          <li><a href="../hibernation/">Hibernation</a></li>
-          <li><a href="../sync/">File Sync</a></li>
-          <li><a href="../drive-sync/">Drive Sync</a></li>
-          <li><a href="../shortcuts/">Keyboard Shortcuts</a></li>
-          <li><a href="../quick-switch/">Quick Switch</a></li>
-          <li><a href="../insights/">Insights &amp; Suggestions</a></li>
-          <li><a href="../permissions/">Permissions</a></li>
+          <li><a href="../../getting-started/" data-i18n="docs.sidebar.gettingStarted">Getting Started</a></li>
+          <li><a href="../rules/" data-i18n="docs.sidebar.rules">Rule Reference</a></li>
+          <li><a href="../duplicates/" data-i18n="docs.sidebar.duplicates">Duplicate Prevention</a></li>
+          <li><a href="../group-actions/" data-i18n="docs.sidebar.groupActions">Group Actions</a></li>
+          <li><a href="./" class="active" data-i18n="docs.sidebar.autoCollapse">Auto-collapse</a></li>
+          <li><a href="../resources/" data-i18n="docs.sidebar.resources">Resource Dashboard</a></li>
+          <li><a href="../profiles/" data-i18n="docs.sidebar.profiles">Profiles &amp; Schedules</a></li>
+          <li><a href="../sessions/" data-i18n="docs.sidebar.sessions">Sessions</a></li>
+          <li><a href="../hibernation/" data-i18n="docs.sidebar.hibernation">Hibernation</a></li>
+          <li><a href="../sync/" data-i18n="docs.sidebar.sync">File Sync</a></li>
+          <li><a href="../drive-sync/" data-i18n="docs.sidebar.driveSync">Drive Sync</a></li>
+          <li><a href="../shortcuts/" data-i18n="docs.sidebar.shortcuts">Keyboard Shortcuts</a></li>
+          <li><a href="../quick-switch/" data-i18n="docs.sidebar.quickSwitch">Quick Switch</a></li>
+          <li><a href="../insights/" data-i18n="docs.sidebar.insights">Insights &amp; Suggestions</a></li>
+          <li><a href="../permissions/" data-i18n="docs.sidebar.permissions">Permissions</a></li>
         </ul>
       </aside>
 
       <main class="docs-content">
         <h1>Auto-collapse</h1>
-        <p class="lead">
+        <p class="lead" data-i18n="docs.autoCollapse.lead">
           Automatically collapse other tab groups when you expand one — keep your workspace focused
           without manual tidying.
         </p>
 
-        <h2 id="overview">Overview <a href="#overview" class="anchor-link">#</a></h2>
-        <p>
+        <h2 id="overview"><span data-i18n="docs.autoCollapse.overview.heading">Overview</span> <a href="#overview" class="anchor-link">#</a></h2>
+        <p data-i18n="docs.autoCollapse.overview.p1">
           Auto-collapse watches for tab group expansions and collapses competing groups
           automatically. The feature ships in two tiers: a same-window mode available to all users
           and a cross-window mode for Premium subscribers.
         </p>
-        <p>
+        <p data-i18n="docs.autoCollapse.overview.p2">
           Both settings are <strong>off by default</strong>. You must opt in via
           <strong>Settings</strong> → <strong>TAB GROUPS</strong>. Each toggle starts disabled;
           you must turn it on manually.
         </p>
-        <p>
+        <p data-i18n="docs.autoCollapse.overview.p3">
           The settings are <strong>global toggles</strong> — they apply across all profiles and
           all windows. There is no profile-specific auto-collapse override.
         </p>
 
-        <h2 id="how-it-works">How it works <a href="#how-it-works" class="anchor-link">#</a></h2>
-        <p>
+        <h2 id="how-it-works"><span data-i18n="docs.autoCollapse.howItWorks.heading">How it works</span> <a href="#how-it-works" class="anchor-link">#</a></h2>
+        <p data-i18n="docs.autoCollapse.howItWorks.p1">
           When auto-collapse is enabled, Takt listens for <code>tabGroups.onUpdated</code> events.
           Whenever a group transitions to expanded (collapsed: false) and it is the only expanded
           group in its window, Takt collapses all other groups in the same window. The predicate is
@@ -87,12 +88,12 @@
             All button) re-expands all groups normally. Auto-collapse does not suppress the
             expand-all command.
           </li>
-          <li>
+          <li data-i18n="docs.autoCollapse.howItWorks.liNoFeedback">
             <strong>No feedback loop.</strong> Collapsing groups does not itself trigger further
             collapse events.
           </li>
         </ul>
-        <p>
+        <p data-i18n="docs.autoCollapse.howItWorks.p2">
           Cross-window auto-collapse is triggered by <code>tabs.onActivated</code> events instead.
           When you switch to a tab in window A, Takt collapses all tab groups in every other open
           window after a debounce of <strong>300 ms</strong>
@@ -100,8 +101,8 @@
           prevents thrashing when switching tabs in quick succession.
         </p>
 
-        <h2 id="tiers">Free vs Premium <a href="#tiers" class="anchor-link">#</a></h2>
-        <p>
+        <h2 id="tiers"><span data-i18n="docs.autoCollapse.tiers.heading">Free vs Premium</span> <a href="#tiers" class="anchor-link">#</a></h2>
+        <p data-i18n="docs.autoCollapse.tiers.intro">
           <span class="badge">Premium</span> Auto-collapse has two independent toggles, each
           controlling a different scope.
         </p>
@@ -128,28 +129,28 @@
           </tbody>
         </table>
 
-        <p>
+        <p data-i18n="docs.autoCollapse.tiers.sameWindow">
           Enable same-window auto-collapse in <strong>Settings</strong> → <strong>TAB GROUPS</strong>
           → "Auto-collapse other groups when one expands".
         </p>
-        <p>
+        <p data-i18n="docs.autoCollapse.tiers.crossWindow">
           Enable cross-window auto-collapse in <strong>Settings</strong> → <strong>TAB GROUPS</strong>
           → "Also collapse groups in other windows" (this toggle is disabled and labelled Premium
           for free users).
         </p>
-        <p>
+        <p data-i18n="docs.autoCollapse.tiers.independent">
           The two settings are independent. A Premium subscriber with only same-window enabled gets
           same-window behavior only — enabling the Premium toggle is a separate opt-in.
         </p>
 
-        <h2 id="gotchas">Edge cases and gotchas <a href="#gotchas" class="anchor-link">#</a></h2>
+        <h2 id="gotchas"><span data-i18n="docs.autoCollapse.gotchas.heading">Edge cases and gotchas</span> <a href="#gotchas" class="anchor-link">#</a></h2>
         <ul>
           <li>
             <strong>Both toggles default to off.</strong> Neither
             <code>autoCollapseEnabled</code> nor <code>crossWindowAutoCollapseEnabled</code>
             starts on. You must enable each in Settings before auto-collapse does anything.
           </li>
-          <li>
+          <li data-i18n="docs.autoCollapse.gotchas.li2">
             <strong>300 ms debounce on cross-window.</strong> Brief tab-switches (under 300 ms)
             do not trigger cross-window collapse. This prevents a quick tab-select from collapsing
             all your groups in other windows before you settle on a tab.
@@ -160,12 +161,12 @@
             (<kbd>Alt</kbd> + <kbd>Shift</kbd> + <kbd>E</kbd>). The stateless predicate means
             there is no suppression — expand-all runs unconditionally.
           </li>
-          <li>
+          <li data-i18n="docs.autoCollapse.gotchas.li4">
             <strong>Global setting, not profile-specific.</strong> The auto-collapse toggles
             apply globally across all profiles. Switching to a different Takt profile does not
             change whether auto-collapse is active.
           </li>
-          <li>
+          <li data-i18n="docs.autoCollapse.gotchas.li5">
             <strong>Stateless predicate.</strong> Takt does not store a suppression flag to
             prevent a group from being re-collapsed. If you expand a group and another group is
             already open, auto-collapse fires every time.

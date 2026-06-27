@@ -24,41 +24,42 @@
     <link rel="stylesheet" href="../../css/docs.css" />
 
     <script src="../../js/theme.js"></script>
+    <script type="module" src="../../js/i18n.js"></script>
   </head>
   <body>
     <header id="site-header"></header>
 
     <div class="docs-layout">
       <aside class="docs-sidebar">
-        <h4>Documentation</h4>
+        <h4 data-i18n="docs.sidebar.heading">Documentation</h4>
         <ul>
-          <li><a href="../../getting-started/">Getting Started</a></li>
-          <li><a href="../rules/">Rule Reference</a></li>
-          <li><a href="../duplicates/">Duplicate Prevention</a></li>
-          <li><a href="../group-actions/">Group Actions</a></li>
-          <li><a href="../auto-collapse/">Auto-collapse</a></li>
-          <li><a href="../resources/">Resource Dashboard</a></li>
-          <li><a href="../profiles/">Profiles &amp; Schedules</a></li>
-          <li><a href="../sessions/">Sessions</a></li>
-          <li><a href="../hibernation/">Hibernation</a></li>
-          <li><a href="../sync/">File Sync</a></li>
-          <li><a href="./" class="active">Drive Sync</a></li>
-          <li><a href="../shortcuts/">Keyboard Shortcuts</a></li>
-          <li><a href="../quick-switch/">Quick Switch</a></li>
-          <li><a href="../insights/">Insights &amp; Suggestions</a></li>
-          <li><a href="../permissions/">Permissions</a></li>
+          <li><a href="../../getting-started/" data-i18n="docs.sidebar.gettingStarted">Getting Started</a></li>
+          <li><a href="../rules/" data-i18n="docs.sidebar.rules">Rule Reference</a></li>
+          <li><a href="../duplicates/" data-i18n="docs.sidebar.duplicates">Duplicate Prevention</a></li>
+          <li><a href="../group-actions/" data-i18n="docs.sidebar.groupActions">Group Actions</a></li>
+          <li><a href="../auto-collapse/" data-i18n="docs.sidebar.autoCollapse">Auto-collapse</a></li>
+          <li><a href="../resources/" data-i18n="docs.sidebar.resources">Resource Dashboard</a></li>
+          <li><a href="../profiles/" data-i18n="docs.sidebar.profiles">Profiles &amp; Schedules</a></li>
+          <li><a href="../sessions/" data-i18n="docs.sidebar.sessions">Sessions</a></li>
+          <li><a href="../hibernation/" data-i18n="docs.sidebar.hibernation">Hibernation</a></li>
+          <li><a href="../sync/" data-i18n="docs.sidebar.sync">File Sync</a></li>
+          <li><a href="./" class="active" data-i18n="docs.sidebar.driveSync">Drive Sync</a></li>
+          <li><a href="../shortcuts/" data-i18n="docs.sidebar.shortcuts">Keyboard Shortcuts</a></li>
+          <li><a href="../quick-switch/" data-i18n="docs.sidebar.quickSwitch">Quick Switch</a></li>
+          <li><a href="../insights/" data-i18n="docs.sidebar.insights">Insights &amp; Suggestions</a></li>
+          <li><a href="../permissions/" data-i18n="docs.sidebar.permissions">Permissions</a></li>
         </ul>
       </aside>
 
       <main class="docs-content">
-        <h1>Drive Sync</h1>
-        <p class="lead">
+        <h1 data-i18n="docs.sidebar.driveSync">Drive Sync</h1>
+        <p class="lead" data-i18n="docs.driveSync.lead">
           Keep your rules, profiles, and sessions in sync across all your devices — automatically,
           using Google Drive. Sign in once and Takt handles everything silently in the background.
         </p>
 
         <div class="callout">
-          <p><strong>Premium feature.</strong> Drive Sync requires a Premium subscription.</p>
+          <p data-i18n="docs.driveSync.premiumCallout"><strong>Premium feature.</strong> Drive Sync requires a Premium subscription.</p>
         </div>
         <div class="cta-row">
           <a
@@ -73,13 +74,13 @@
           >
         </div>
 
-        <h2 id="how-it-works">How it works <a href="#how-it-works" class="anchor-link">#</a></h2>
-        <p>
+        <h2 id="how-it-works"><span data-i18n="docs.driveSync.howItWorks.heading">How it works</span> <a href="#how-it-works" class="anchor-link">#</a></h2>
+        <p data-i18n="docs.driveSync.howItWorks.p1">
           Takt stores your data in Google Drive's <strong>hidden app folder</strong> — a private,
           per-app space that only Takt can access. It is completely separate from your Google Drive
           files and never appears in the Drive UI. Other apps and people cannot see it.
         </p>
-        <p>
+        <p data-i18n="docs.driveSync.howItWorks.p2">
           After a one-time sign-in, Takt automatically syncs every 15 minutes in the background. You
           can also sync on demand or force-push and force-pull at any time. A
           <strong>smart direction check</strong> runs on every sync: Takt reads the remote timestamp
@@ -88,7 +89,7 @@
         </p>
 
         <h2 id="drive-sync-vs-file-sync">
-          Drive Sync vs File Sync <a href="#drive-sync-vs-file-sync" class="anchor-link">#</a>
+          <span data-i18n="docs.driveSync.comparison.heading">Drive Sync vs File Sync</span> <a href="#drive-sync-vs-file-sync" class="anchor-link">#</a>
         </h2>
         <p>Takt offers two sync methods. Here is how to choose:</p>
         <table>
@@ -132,33 +133,33 @@
             </tr>
           </tbody>
         </table>
-        <p>
+        <p data-i18n="docs.driveSync.comparison.conclusion">
           Drive Sync is the simpler choice for most users. File Sync is better if you want to
           inspect or edit the sync files directly, or use a cloud provider other than Google.
         </p>
 
-        <h2 id="setup">Setting up Drive Sync <a href="#setup" class="anchor-link">#</a></h2>
+        <h2 id="setup"><span data-i18n="docs.driveSync.setup.heading">Setting up Drive Sync</span> <a href="#setup" class="anchor-link">#</a></h2>
         <ol>
-          <li>Open the Takt Options page and go to the <strong>Settings</strong> tab.</li>
-          <li>Scroll to the <strong>Drive Sync</strong> section.</li>
-          <li>Click <strong>Connect Google Drive</strong>. A Google sign-in window will appear.</li>
-          <li>
+          <li data-i18n="docs.driveSync.setup.li1">Open the Takt Options page and go to the <strong>Settings</strong> tab.</li>
+          <li data-i18n="docs.driveSync.setup.li2">Scroll to the <strong>Drive Sync</strong> section.</li>
+          <li data-i18n="docs.driveSync.setup.li3">Click <strong>Connect Google Drive</strong>. A Google sign-in window will appear.</li>
+          <li data-i18n="docs.driveSync.setup.li4">
             Sign in and grant Takt permission to access its hidden app folder. Takt requests the
             minimum possible scope — it cannot read or modify any of your regular Drive files.
           </li>
-          <li>Once connected, your account email appears next to the button. You can now sync.</li>
+          <li data-i18n="docs.driveSync.setup.li5">Once connected, your account email appears next to the button. You can now sync.</li>
         </ol>
 
         <div class="callout">
-          <p>
+          <p data-i18n="docs.driveSync.setup.callout">
             The sign-in window appears only once. After that, Chrome caches the authentication token
             and renews it silently. You will not be prompted again unless you explicitly disconnect
             or revoke access from your Google account settings.
           </p>
         </div>
 
-        <h2 id="sync-files">What gets synced <a href="#sync-files" class="anchor-link">#</a></h2>
-        <p>Takt stores four files in Google Drive's app folder:</p>
+        <h2 id="sync-files"><span data-i18n="docs.driveSync.syncFiles.heading">What gets synced</span> <a href="#sync-files" class="anchor-link">#</a></h2>
+        <p data-i18n="docs.driveSync.syncFiles.intro">Takt stores four files in Google Drive's app folder:</p>
         <table>
           <thead>
             <tr>
@@ -185,35 +186,35 @@
             </tr>
           </tbody>
         </table>
-        <p>
+        <p data-i18n="docs.driveSync.syncFiles.conclusion">
           The files are written independently. A change to rules on device A and profiles on device
           B will not cause a conflict between those two files.
         </p>
 
-        <h2 id="sync-now">Sync Now <a href="#sync-now" class="anchor-link">#</a></h2>
-        <p>
+        <h2 id="sync-now"><span data-i18n="docs.driveSync.syncNow.heading">Sync Now</span> <a href="#sync-now" class="anchor-link">#</a></h2>
+        <p data-i18n="docs.driveSync.syncNow.p1">
           Click <strong>Sync Now</strong> to trigger an immediate sync. Takt compares timestamps and
           automatically pushes or pulls:
         </p>
         <ul>
-          <li>
+          <li data-i18n="docs.driveSync.syncNow.liPush">
             <strong>Push</strong> — if your local data is newer than what is on Drive, your data is
             uploaded.
           </li>
-          <li>
+          <li data-i18n="docs.driveSync.syncNow.liPull">
             <strong>Pull</strong> — if another device synced to Drive more recently, the remote data
             is downloaded and replaces your local data.
           </li>
         </ul>
-        <p>The <em>Last synced</em> timestamp updates when the operation completes successfully.</p>
+        <p data-i18n="docs.driveSync.syncNow.p2">The <em>Last synced</em> timestamp updates when the operation completes successfully.</p>
 
-        <h2 id="auto-sync">Auto-sync <a href="#auto-sync" class="anchor-link">#</a></h2>
-        <p>
+        <h2 id="auto-sync"><span data-i18n="docs.driveSync.autoSync.heading">Auto-sync</span> <a href="#auto-sync" class="anchor-link">#</a></h2>
+        <p data-i18n="docs.driveSync.autoSync.p1">
           Enable <strong>Auto-sync every 15 minutes</strong> to have Takt sync automatically in the
           background. The Settings panel shows a countdown to the next scheduled sync, refreshed
           every 30 seconds.
         </p>
-        <p>
+        <p data-i18n="docs.driveSync.autoSync.p2">
           Auto-sync runs silently. Failures (for example, a temporary network error) are swallowed
           without any notification — the next scheduled sync will retry. If you need to ensure a
           sync succeeded, use <strong>Sync Now</strong> and check the
@@ -221,36 +222,36 @@
         </p>
 
         <h2 id="force-push-pull">
-          Force Push and Force Pull <a href="#force-push-pull" class="anchor-link">#</a>
+          <span data-i18n="docs.driveSync.forcePushPull.heading">Force Push and Force Pull</span> <a href="#force-push-pull" class="anchor-link">#</a>
         </h2>
-        <p>These operations bypass the automatic direction check and ignore timestamps entirely.</p>
+        <p data-i18n="docs.driveSync.forcePushPull.intro">These operations bypass the automatic direction check and ignore timestamps entirely.</p>
         <ul>
-          <li>
+          <li data-i18n="docs.driveSync.forcePushPull.liForcePush">
             <strong>Force Push</strong> — overwrites everything on Drive with your current local
             data. Use this to reset the remote state, for example after correcting corrupted data or
             when setting up Drive Sync for the first time on a device that already has your data.
           </li>
-          <li>
+          <li data-i18n="docs.driveSync.forcePushPull.liForcePull">
             <strong>Force Pull</strong> — replaces your local data with everything currently on
             Drive. Use this to bring a new device fully up to date.
           </li>
         </ul>
         <div class="callout callout-warning">
-          <p>
+          <p data-i18n="docs.driveSync.forcePushPull.callout">
             <strong>Force Push and Force Pull are destructive.</strong> Force Push overwrites Drive
             unconditionally. Force Pull replaces all local rules, profiles, and sessions with the
             remote copy. Both operations are immediate and cannot be undone from within Takt.
           </p>
         </div>
 
-        <h2 id="disconnect">Disconnecting <a href="#disconnect" class="anchor-link">#</a></h2>
-        <p>
+        <h2 id="disconnect"><span data-i18n="docs.driveSync.disconnect.heading">Disconnecting</span> <a href="#disconnect" class="anchor-link">#</a></h2>
+        <p data-i18n="docs.driveSync.disconnect.p1">
           Click <strong>Disconnect</strong> to sign out of Google Drive. Takt revokes its cached
           access token, clears your account email from Settings, and turns off auto-sync. Your data
           on Drive is not deleted — the files remain in the hidden app folder and can be accessed
           again if you reconnect.
         </p>
-        <p>
+        <p data-i18n="docs.driveSync.disconnect.p2">
           To delete the data from Drive entirely, disconnect, then go to
           <a href="https://myaccount.google.com/permissions" target="_blank" rel="noopener"
             >Google Account → Security → Third-party access</a
@@ -258,19 +259,19 @@
           and remove Takt's access there. This also removes the files from the hidden app folder.
         </p>
 
-        <h2 id="privacy">Privacy <a href="#privacy" class="anchor-link">#</a></h2>
-        <p>Takt requests two OAuth scopes from Google:</p>
+        <h2 id="privacy"><span data-i18n="docs.driveSync.privacySection.heading">Privacy</span> <a href="#privacy" class="anchor-link">#</a></h2>
+        <p data-i18n="docs.driveSync.privacySection.intro">Takt requests two OAuth scopes from Google:</p>
         <ul>
-          <li>
+          <li data-i18n="docs.driveSync.privacySection.liDriveFolder">
             <strong>Drive app folder</strong> — read and write access to a hidden folder only Takt
             can see. Takt cannot read, list, or modify any file in your regular Google Drive.
           </li>
-          <li>
+          <li data-i18n="docs.driveSync.privacySection.liEmail">
             <strong>Email address (read-only)</strong> — used only to display which account is
             connected in the Settings panel. Not stored on any server.
           </li>
         </ul>
-        <p>
+        <p data-i18n="docs.driveSync.privacySection.p2">
           Your sync data is stored exclusively in your own Google account's Drive. Anthropic and the
           Takt developers have no access to it.
         </p>

@@ -24,43 +24,44 @@
     <link rel="stylesheet" href="../../css/docs.css" />
 
     <script src="../../js/theme.js"></script>
+    <script type="module" src="../../js/i18n.js"></script>
   </head>
   <body>
     <header id="site-header"></header>
 
     <div class="docs-layout">
       <aside class="docs-sidebar">
-        <h4>Documentation</h4>
+        <h4 data-i18n="docs.sidebar.heading">Documentation</h4>
         <ul>
-          <li><a href="../../getting-started/">Getting Started</a></li>
-          <li><a href="../rules/">Rule Reference</a></li>
-          <li><a href="../duplicates/">Duplicate Prevention</a></li>
-          <li><a href="../group-actions/">Group Actions</a></li>
-          <li><a href="../auto-collapse/">Auto-collapse</a></li>
-          <li><a href="../resources/">Resource Dashboard</a></li>
-          <li><a href="../profiles/">Profiles &amp; Schedules</a></li>
-          <li><a href="../sessions/">Sessions</a></li>
-          <li><a href="./" class="active">Hibernation</a></li>
-          <li><a href="../sync/">File Sync</a></li>
-          <li><a href="../drive-sync/">Drive Sync</a></li>
-          <li><a href="../shortcuts/">Keyboard Shortcuts</a></li>
-          <li><a href="../quick-switch/">Quick Switch</a></li>
-          <li><a href="../insights/">Insights &amp; Suggestions</a></li>
-          <li><a href="../permissions/">Permissions</a></li>
+          <li><a href="../../getting-started/" data-i18n="docs.sidebar.gettingStarted">Getting Started</a></li>
+          <li><a href="../rules/" data-i18n="docs.sidebar.rules">Rule Reference</a></li>
+          <li><a href="../duplicates/" data-i18n="docs.sidebar.duplicates">Duplicate Prevention</a></li>
+          <li><a href="../group-actions/" data-i18n="docs.sidebar.groupActions">Group Actions</a></li>
+          <li><a href="../auto-collapse/" data-i18n="docs.sidebar.autoCollapse">Auto-collapse</a></li>
+          <li><a href="../resources/" data-i18n="docs.sidebar.resources">Resource Dashboard</a></li>
+          <li><a href="../profiles/" data-i18n="docs.sidebar.profiles">Profiles &amp; Schedules</a></li>
+          <li><a href="../sessions/" data-i18n="docs.sidebar.sessions">Sessions</a></li>
+          <li><a href="./" class="active" data-i18n="docs.sidebar.hibernation">Hibernation</a></li>
+          <li><a href="../sync/" data-i18n="docs.sidebar.sync">File Sync</a></li>
+          <li><a href="../drive-sync/" data-i18n="docs.sidebar.driveSync">Drive Sync</a></li>
+          <li><a href="../shortcuts/" data-i18n="docs.sidebar.shortcuts">Keyboard Shortcuts</a></li>
+          <li><a href="../quick-switch/" data-i18n="docs.sidebar.quickSwitch">Quick Switch</a></li>
+          <li><a href="../insights/" data-i18n="docs.sidebar.insights">Insights &amp; Suggestions</a></li>
+          <li><a href="../permissions/" data-i18n="docs.sidebar.permissions">Permissions</a></li>
         </ul>
       </aside>
 
       <main class="docs-content">
-        <h1>Hibernation</h1>
-        <p class="lead">
+        <h1 data-i18n="docs.sidebar.hibernation">Hibernation</h1>
+        <p class="lead" data-i18n="docs.hibernation.lead">
           Fully close idle tabs to reclaim memory, then bring them back exactly where you left them
           — URL, scroll position, tab group, and pin state intact.
         </p>
 
         <h2 id="suspend-vs-hibernate">
-          Suspension vs hibernation <a href="#suspend-vs-hibernate" class="anchor-link">#</a>
+          <span data-i18n="docs.hibernation.suspendVsHibernate.heading">Suspension vs hibernation</span> <a href="#suspend-vs-hibernate" class="anchor-link">#</a>
         </h2>
-        <p>Takt manages tabs through a two-stage lifecycle:</p>
+        <p data-i18n="docs.hibernation.suspendVsHibernate.intro">Takt manages tabs through a two-stage lifecycle:</p>
         <table>
           <thead>
             <tr>
@@ -88,85 +89,85 @@
             </tr>
           </tbody>
         </table>
-        <p>
+        <p data-i18n="docs.hibernation.suspendVsHibernate.conclusion">
           Suspension happens first. Hibernation is the deeper step: the tab is closed and Takt
           becomes responsible for its state. To get it back, you wake it from the popup or Options
           page.
         </p>
 
         <h2 id="what-is-saved">
-          What gets saved <a href="#what-is-saved" class="anchor-link">#</a>
+          <span data-i18n="docs.hibernation.whatIsSaved.heading">What gets saved</span> <a href="#what-is-saved" class="anchor-link">#</a>
         </h2>
-        <p>When a tab is hibernated, Takt records:</p>
+        <p data-i18n="docs.hibernation.whatIsSaved.intro">When a tab is hibernated, Takt records:</p>
         <ul>
-          <li>Page URL and title</li>
-          <li>Favicon</li>
-          <li>Tab group name and color</li>
-          <li>Scroll position (pixels from top)</li>
-          <li>Pin state</li>
-          <li>Original position in the window</li>
-          <li>Timestamp of hibernation</li>
+          <li data-i18n="docs.hibernation.whatIsSaved.li1">Page URL and title</li>
+          <li data-i18n="docs.hibernation.whatIsSaved.li2">Favicon</li>
+          <li data-i18n="docs.hibernation.whatIsSaved.li3">Tab group name and color</li>
+          <li data-i18n="docs.hibernation.whatIsSaved.li4">Scroll position (pixels from top)</li>
+          <li data-i18n="docs.hibernation.whatIsSaved.li5">Pin state</li>
+          <li data-i18n="docs.hibernation.whatIsSaved.li6">Original position in the window</li>
+          <li data-i18n="docs.hibernation.whatIsSaved.li7">Timestamp of hibernation</li>
         </ul>
-        <p>
+        <p data-i18n="docs.hibernation.whatIsSaved.storage">
           This record is stored in Chrome's local storage on your device. It is not synced across
           devices unless you use <a href="../drive-sync/">Drive Sync</a>.
         </p>
 
-        <h2 id="manual">Manual hibernation <a href="#manual" class="anchor-link">#</a></h2>
-        <p>You can hibernate any tab on demand in three ways:</p>
+        <h2 id="manual"><span data-i18n="docs.hibernation.manual.heading">Manual hibernation</span> <a href="#manual" class="anchor-link">#</a></h2>
+        <p data-i18n="docs.hibernation.manual.intro">You can hibernate any tab on demand in three ways:</p>
         <ul>
-          <li>
+          <li data-i18n="docs.hibernation.manual.liPopup">
             <strong>Popup</strong> — open the Takt popup, go to the
             <strong>Hibernate</strong> section, and click the hibernate icon next to any open tab.
           </li>
-          <li>
+          <li data-i18n="docs.hibernation.manual.liContext">
             <strong>Context menu</strong> — right-click anywhere on a page and choose
             <strong>Hibernate this tab</strong>.
           </li>
-          <li>
+          <li data-i18n="docs.hibernation.manual.liOptions">
             <strong>Options page</strong> — go to <strong>Options → Hibernate</strong> and click the
             hibernate button next to any tab in the list.
           </li>
         </ul>
-        <p>Manual hibernation is free — no Premium subscription required.</p>
+        <p data-i18n="docs.hibernation.manual.free">Manual hibernation is free — no Premium subscription required.</p>
 
-        <h3 id="exemptions">Tabs that cannot be hibernated</h3>
-        <p>Some tabs are always exempt from hibernation:</p>
+        <h2 id="exemptions"><span data-i18n="docs.hibernation.exemptions.heading">Tabs that cannot be hibernated</span></h2>
+        <p data-i18n="docs.hibernation.exemptions.intro">Some tabs are always exempt from hibernation:</p>
         <ul>
-          <li>Tabs playing audio</li>
-          <li>
+          <li data-i18n="docs.hibernation.exemptions.li1">Tabs playing audio</li>
+          <li data-i18n="docs.hibernation.exemptions.li2">
             Pinned tabs — unless you enable <strong>Hibernate pinned tabs</strong> in Settings
           </li>
         </ul>
-        <p>
+        <p data-i18n="docs.hibernation.exemptions.activeTab">
           The active tab in any window can be manually hibernated but is always skipped by automatic
           triggers.
         </p>
 
-        <h2 id="waking">Waking a tab <a href="#waking" class="anchor-link">#</a></h2>
-        <p>To restore a hibernated tab:</p>
+        <h2 id="waking"><span data-i18n="docs.hibernation.waking.heading">Waking a tab</span> <a href="#waking" class="anchor-link">#</a></h2>
+        <p data-i18n="docs.hibernation.waking.intro">To restore a hibernated tab:</p>
         <ol>
-          <li>
+          <li data-i18n="docs.hibernation.waking.li1">
             Open the Takt popup and go to the <strong>Hibernate</strong> section, <em>or</em> open
             <strong>Options → Hibernate</strong>
           </li>
-          <li>Click <strong>Wake</strong> next to the tab you want to restore</li>
+          <li data-i18n="docs.hibernation.waking.li2">Click <strong>Wake</strong> next to the tab you want to restore</li>
         </ol>
-        <p>
+        <p data-i18n="docs.hibernation.waking.p1">
           Takt reopens the tab in the same window it came from, at the same position, restores its
           tab group membership, and scrolls back to where you were.
         </p>
-        <p>
+        <p data-i18n="docs.hibernation.waking.p2">
           If the same URL is already open in another tab, Takt will warn you before waking to avoid
           duplicates.
         </p>
 
         <h2 id="auto-hibernation">
-          Auto-hibernation <a href="#auto-hibernation" class="anchor-link">#</a>
+          <span data-i18n="docs.hibernation.autoHibernation.heading">Auto-hibernation</span> <a href="#auto-hibernation" class="anchor-link">#</a>
         </h2>
 
         <div class="callout">
-          <p>
+          <p data-i18n="docs.hibernation.autoHibernation.callout">
             <strong>Premium feature.</strong> All automatic hibernation triggers require a Premium
             subscription.
           </p>
@@ -184,18 +185,18 @@
           >
         </div>
 
-        <p>
+        <p data-i18n="docs.hibernation.autoHibernation.intro">
           Auto-hibernation runs every 5 minutes and checks tabs against the rules you configure in
           <strong>Options → Settings → Tab Lifecycle</strong>.
         </p>
 
-        <h3 id="idle-threshold">Idle threshold</h3>
-        <p>
+        <h3 id="idle-threshold"><span data-i18n="docs.hibernation.idleThreshold.heading">Idle threshold</span></h3>
+        <p data-i18n="docs.hibernation.idleThreshold.p1">
           Enable <strong>Auto-hibernate suspended tabs after</strong> and set a duration. Any tab
           that has been suspended (discarded by Chrome) and idle for longer than that duration is
           automatically hibernated.
         </p>
-        <p>
+        <p data-i18n="docs.hibernation.idleThreshold.p2">
           <strong>Idle time</strong> is measured from the last moment you interacted with the tab —
           clicked, scrolled, typed, or activated it. Tabs you have never interacted with since the
           extension was installed report an infinite idle time and are treated as the most stale
@@ -203,54 +204,54 @@
         </p>
 
         <div class="callout">
-          <p>
+          <p data-i18n="docs.hibernation.idleThreshold.callout">
             Auto-hibernation only targets tabs that are already <em>suspended</em>. It does not
             directly close active or loading tabs. If you want tabs to reach suspension first,
             enable <strong>Auto-suspend idle tabs</strong> in the same settings section.
           </p>
         </div>
 
-        <h3 id="per-rule">Per-rule hibernation threshold</h3>
-        <p>
+        <h3 id="per-rule"><span data-i18n="docs.hibernation.perRule.heading">Per-rule hibernation threshold</span></h3>
+        <p data-i18n="docs.hibernation.perRule.p1">
           In <strong>Options → Rules</strong>, each rule can have its own hibernation threshold that
           overrides the global one. This lets you be aggressive with low-priority groups (e.g.
           hibernate news tabs after 1 hour) and conservative with high-priority ones (e.g. hibernate
           work tabs only after 3 days).
         </p>
-        <p>
+        <p data-i18n="docs.hibernation.perRule.p2">
           A tab is hibernated if it meets either the global threshold <em>or</em> its rule-specific
           threshold — whichever fires first.
         </p>
 
-        <h3 id="tab-ceiling">Tab ceiling</h3>
-        <p>
+        <h3 id="tab-ceiling"><span data-i18n="docs.hibernation.tabCeiling.heading">Tab ceiling</span></h3>
+        <p data-i18n="docs.hibernation.tabCeiling.p1">
           Enable <strong>Hibernate oldest tabs when a window exceeds N tabs</strong> and set a
           limit. Whenever a window goes over that number — including the moment you open a new tab —
           Takt hibernates the least-recently-used tabs until the count is back at the limit.
         </p>
-        <p>
+        <p data-i18n="docs.hibernation.tabCeiling.p2">
           When the window drops <em>below</em> the limit (because you close a tab), Takt
           automatically restores the most recently hibernated tab back into that window, keeping the
           count at the ceiling.
         </p>
-        <p>
+        <p data-i18n="docs.hibernation.tabCeiling.p3">
           The ceiling is enforced per window. Having 40 tabs split across two windows with a ceiling
           of 30 does not trigger hibernation; each window is evaluated independently.
         </p>
 
-        <h3 id="schedule">Schedule-end hibernation</h3>
-        <p>
+        <h3 id="schedule"><span data-i18n="docs.hibernation.schedule.heading">Schedule-end hibernation</span></h3>
+        <p data-i18n="docs.hibernation.schedule.p1">
           In <strong>Options → Profiles</strong>, each schedule can optionally hibernate all
           eligible tabs when the scheduled hours end. This is useful for work profiles: when your
           work hours finish, all open tabs are hibernated, and you start fresh next morning.
         </p>
-        <p>
+        <p data-i18n="docs.hibernation.schedule.p2">
           Configure it by editing a profile's schedule and enabling
           <strong>Hibernate tabs when schedule ends</strong>.
         </p>
 
-        <h2 id="undo">Undoing auto-hibernation <a href="#undo" class="anchor-link">#</a></h2>
-        <p>
+        <h2 id="undo"><span data-i18n="docs.hibernation.undo.heading">Undoing auto-hibernation</span> <a href="#undo" class="anchor-link">#</a></h2>
+        <p data-i18n="docs.hibernation.undo.p1">
           Each time a tab is auto-hibernated, Takt shows a Chrome notification with an
           <strong>Undo</strong> button. Clicking Undo within 10 seconds immediately wakes the tab
           back. After 10 seconds, the undo window closes — but the tab remains in the Hibernate pane
@@ -258,9 +259,9 @@
         </p>
 
         <h2 id="exempt-patterns">
-          Exempt URL patterns <a href="#exempt-patterns" class="anchor-link">#</a>
+          <span data-i18n="docs.hibernation.exemptPatterns.heading">Exempt URL patterns</span> <a href="#exempt-patterns" class="anchor-link">#</a>
         </h2>
-        <p>
+        <p data-i18n="docs.hibernation.exemptPatterns.p1">
           In <strong>Options → Settings → Tab Lifecycle</strong>, you can add URL patterns that
           should never be auto-hibernated. Patterns support <code>*</code> as a wildcard:
         </p>
@@ -269,7 +270,7 @@
           <li><code>*github.com/myorg/*</code> — exempt your org's repos</li>
           <li><code>*localhost*</code> — exempt local dev servers</li>
         </ul>
-        <p>
+        <p data-i18n="docs.hibernation.exemptPatterns.p2">
           Exempt patterns apply to all automatic triggers (idle threshold, ceiling, schedule). They
           do not prevent manual hibernation.
         </p>
@@ -316,13 +317,13 @@
             </tr>
           </tbody>
         </table>
-        <p>
+        <p data-i18n="docs.hibernation.limits.conclusion">
           When the hibernation limit is reached, Takt blocks further hibernation and logs the
           reason. Wake or clear existing tabs to make room.
         </p>
 
         <h2 id="startup">Browser restart behaviour <a href="#startup" class="anchor-link">#</a></h2>
-        <p>
+        <p data-i18n="docs.hibernation.startup.p1">
           Hibernated tabs survive browser restarts — they are stored in Chrome's local storage, not
           in memory. When the browser starts, Takt checks whether any hibernated tab's URL is
           already open and removes the duplicate record if so. All other records remain and can be

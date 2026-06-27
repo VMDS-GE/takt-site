@@ -24,41 +24,42 @@
     <link rel="stylesheet" href="../../css/docs.css" />
 
     <script src="../../js/theme.js"></script>
+    <script type="module" src="../../js/i18n.js"></script>
   </head>
   <body>
     <header id="site-header"></header>
 
     <div class="docs-layout">
       <aside class="docs-sidebar">
-        <h4>Documentation</h4>
+        <h4 data-i18n="docs.sidebar.heading">Documentation</h4>
         <ul>
-          <li><a href="../../getting-started/">Getting Started</a></li>
-          <li><a href="../rules/">Rule Reference</a></li>
-          <li><a href="./" class="active">Duplicate Prevention</a></li>
-          <li><a href="../group-actions/">Group Actions</a></li>
-          <li><a href="../auto-collapse/">Auto-collapse</a></li>
-          <li><a href="../resources/">Resource Dashboard</a></li>
-          <li><a href="../profiles/">Profiles &amp; Schedules</a></li>
-          <li><a href="../sessions/">Sessions</a></li>
-          <li><a href="../hibernation/">Hibernation</a></li>
-          <li><a href="../sync/">File Sync</a></li>
-          <li><a href="../drive-sync/">Drive Sync</a></li>
-          <li><a href="../shortcuts/">Keyboard Shortcuts</a></li>
-          <li><a href="../quick-switch/">Quick Switch</a></li>
-          <li><a href="../insights/">Insights &amp; Suggestions</a></li>
-          <li><a href="../permissions/">Permissions</a></li>
+          <li><a href="../../getting-started/" data-i18n="docs.sidebar.gettingStarted">Getting Started</a></li>
+          <li><a href="../rules/" data-i18n="docs.sidebar.rules">Rule Reference</a></li>
+          <li><a href="./" class="active" data-i18n="docs.sidebar.duplicates">Duplicate Prevention</a></li>
+          <li><a href="../group-actions/" data-i18n="docs.sidebar.groupActions">Group Actions</a></li>
+          <li><a href="../auto-collapse/" data-i18n="docs.sidebar.autoCollapse">Auto-collapse</a></li>
+          <li><a href="../resources/" data-i18n="docs.sidebar.resources">Resource Dashboard</a></li>
+          <li><a href="../profiles/" data-i18n="docs.sidebar.profiles">Profiles &amp; Schedules</a></li>
+          <li><a href="../sessions/" data-i18n="docs.sidebar.sessions">Sessions</a></li>
+          <li><a href="../hibernation/" data-i18n="docs.sidebar.hibernation">Hibernation</a></li>
+          <li><a href="../sync/" data-i18n="docs.sidebar.sync">File Sync</a></li>
+          <li><a href="../drive-sync/" data-i18n="docs.sidebar.driveSync">Drive Sync</a></li>
+          <li><a href="../shortcuts/" data-i18n="docs.sidebar.shortcuts">Keyboard Shortcuts</a></li>
+          <li><a href="../quick-switch/" data-i18n="docs.sidebar.quickSwitch">Quick Switch</a></li>
+          <li><a href="../insights/" data-i18n="docs.sidebar.insights">Insights &amp; Suggestions</a></li>
+          <li><a href="../permissions/" data-i18n="docs.sidebar.permissions">Permissions</a></li>
         </ul>
       </aside>
 
       <main class="docs-content">
-        <h1>Duplicate Prevention</h1>
-        <p class="lead">
+        <h1 data-i18n="docs.sidebar.duplicates">Duplicate Prevention</h1>
+        <p class="lead" data-i18n="docs.duplicates.lead">
           Stop opening the same tab twice. Takt detects duplicate URLs, closes the new tab, and
           focuses the original.
         </p>
 
         <div class="callout">
-          <p>
+          <p data-i18n="docs.duplicates.premiumCallout">
             <strong>Premium feature.</strong> Duplicate prevention requires a Premium subscription.
           </p>
         </div>
@@ -75,22 +76,22 @@
           >
         </div>
 
-        <h2 id="how-it-works">How it works <a href="#how-it-works" class="anchor-link">#</a></h2>
-        <p>When you open a new tab:</p>
+        <h2 id="how-it-works"><span data-i18n="docs.duplicates.howItWorks.heading">How it works</span> <a href="#how-it-works" class="anchor-link">#</a></h2>
+        <p data-i18n="docs.duplicates.howItWorks.intro">When you open a new tab:</p>
         <ol>
-          <li>Takt normalizes the URL using your chosen strategy</li>
-          <li>It checks the normalized URL against all currently open tabs</li>
-          <li>
+          <li data-i18n="docs.duplicates.howItWorks.li1">Takt normalizes the URL using your chosen strategy</li>
+          <li data-i18n="docs.duplicates.howItWorks.li2">It checks the normalized URL against all currently open tabs</li>
+          <li data-i18n="docs.duplicates.howItWorks.li3">
             If a match is found: the new tab is closed, the existing tab is focused, and a brief
             toast notification appears
           </li>
-          <li>If no match: the tab opens normally</li>
+          <li data-i18n="docs.duplicates.howItWorks.li4">If no match: the tab opens normally</li>
         </ol>
 
         <h2 id="strategies">
-          URL normalization strategies <a href="#strategies" class="anchor-link">#</a>
+          <span data-i18n="docs.duplicates.strategies.heading">URL normalization strategies</span> <a href="#strategies" class="anchor-link">#</a>
         </h2>
-        <p>
+        <p data-i18n="docs.duplicates.strategies.intro">
           Different strategies control how strictly URLs are compared. Set a global default in
           Settings, or override per rule.
         </p>
@@ -132,14 +133,14 @@
           </tbody>
         </table>
 
-        <p>
+        <p data-i18n="docs.duplicates.strategies.conclusion">
           The default strategy is <strong>ignoreFragment</strong>, which works well for most sites.
         </p>
 
         <h2 id="universal">
-          Universal normalization <a href="#universal" class="anchor-link">#</a>
+          <span data-i18n="docs.duplicates.universal.heading">Universal normalization</span> <a href="#universal" class="anchor-link">#</a>
         </h2>
-        <p>All strategies apply these normalizations before comparing:</p>
+        <p data-i18n="docs.duplicates.universal.intro">All strategies apply these normalizations before comparing:</p>
         <ul>
           <li>
             Lowercase the scheme and hostname (<code>HTTPS://GitHub.COM</code> &rarr;
@@ -154,8 +155,8 @@
           <li>Sort query parameters alphabetically</li>
         </ul>
 
-        <h2 id="per-rule">Per-rule strategy <a href="#per-rule" class="anchor-link">#</a></h2>
-        <p>
+        <h2 id="per-rule"><span data-i18n="docs.duplicates.perRule.heading">Per-rule strategy</span> <a href="#per-rule" class="anchor-link">#</a></h2>
+        <p data-i18n="docs.duplicates.perRule.intro">
           Each rule can override the global default. This is useful when different sites need
           different levels of strictness:
         </p>
@@ -167,30 +168,30 @@
           <li>Use <code>ignoreAll</code> when you only care about the domain and path</li>
         </ul>
 
-        <h2 id="bypass">Bypass methods <a href="#bypass" class="anchor-link">#</a></h2>
-        <p>When you intentionally want to open a duplicate:</p>
+        <h2 id="bypass"><span data-i18n="docs.duplicates.bypass.heading">Bypass methods</span> <a href="#bypass" class="anchor-link">#</a></h2>
+        <p data-i18n="docs.duplicates.bypass.intro">When you intentionally want to open a duplicate:</p>
         <ul>
-          <li>
+          <li data-i18n="docs.duplicates.bypass.liShift">
             <strong>Shift+click</strong> a link — the duplicate check is bypassed for that
             navigation
           </li>
-          <li>
+          <li data-i18n="docs.duplicates.bypass.liContextMenu">
             <strong>Right-click &rarr; "Open in new tab (allow duplicate)"</strong> — context menu
             bypass
           </li>
-          <li>
+          <li data-i18n="docs.duplicates.bypass.liOpenAnyway">
             <strong>"Open anyway"</strong> — click in the toast notification or popup after a
             duplicate is blocked
           </li>
         </ul>
 
         <h2 id="enable">
-          Enabling duplicate prevention <a href="#enable" class="anchor-link">#</a>
+          <span data-i18n="docs.duplicates.enable.heading">Enabling duplicate prevention</span> <a href="#enable" class="anchor-link">#</a>
         </h2>
         <ol>
-          <li>Open the Options page and go to <strong>Settings</strong></li>
-          <li>Check <strong>"Prevent duplicate tabs"</strong></li>
-          <li>Choose a default normalization strategy</li>
+          <li data-i18n="docs.duplicates.enable.li1">Open the Options page and go to <strong>Settings</strong></li>
+          <li data-i18n="docs.duplicates.enable.li2">Check <strong>"Prevent duplicate tabs"</strong></li>
+          <li data-i18n="docs.duplicates.enable.li3">Choose a default normalization strategy</li>
           <li>Optionally override the strategy on individual rules in the rule editor</li>
         </ol>
 

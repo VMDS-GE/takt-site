@@ -24,41 +24,42 @@
     <link rel="stylesheet" href="../../css/docs.css" />
 
     <script src="../../js/theme.js"></script>
+    <script type="module" src="../../js/i18n.js"></script>
   </head>
   <body>
     <header id="site-header"></header>
 
     <div class="docs-layout">
       <aside class="docs-sidebar">
-        <h4>Documentation</h4>
+        <h4 data-i18n="docs.sidebar.heading">Documentation</h4>
         <ul>
-          <li><a href="../../getting-started/">Getting Started</a></li>
-          <li><a href="../rules/">Rule Reference</a></li>
-          <li><a href="../duplicates/">Duplicate Prevention</a></li>
-          <li><a href="../group-actions/">Group Actions</a></li>
-          <li><a href="../auto-collapse/">Auto-collapse</a></li>
-          <li><a href="../resources/">Resource Dashboard</a></li>
-          <li><a href="../profiles/">Profiles &amp; Schedules</a></li>
-          <li><a href="../sessions/">Sessions</a></li>
-          <li><a href="../hibernation/">Hibernation</a></li>
-          <li><a href="../sync/">File Sync</a></li>
-          <li><a href="../drive-sync/">Drive Sync</a></li>
-          <li><a href="../shortcuts/">Keyboard Shortcuts</a></li>
-          <li><a href="../quick-switch/">Quick Switch</a></li>
-          <li><a href="../insights/">Insights &amp; Suggestions</a></li>
+          <li><a href="../../getting-started/" data-i18n="docs.sidebar.gettingStarted">Getting Started</a></li>
+          <li><a href="../rules/" data-i18n="docs.sidebar.rules">Rule Reference</a></li>
+          <li><a href="../duplicates/" data-i18n="docs.sidebar.duplicates">Duplicate Prevention</a></li>
+          <li><a href="../group-actions/" data-i18n="docs.sidebar.groupActions">Group Actions</a></li>
+          <li><a href="../auto-collapse/" data-i18n="docs.sidebar.autoCollapse">Auto-collapse</a></li>
+          <li><a href="../resources/" data-i18n="docs.sidebar.resources">Resource Dashboard</a></li>
+          <li><a href="../profiles/" data-i18n="docs.sidebar.profiles">Profiles &amp; Schedules</a></li>
+          <li><a href="../sessions/" data-i18n="docs.sidebar.sessions">Sessions</a></li>
+          <li><a href="../hibernation/" data-i18n="docs.sidebar.hibernation">Hibernation</a></li>
+          <li><a href="../sync/" data-i18n="docs.sidebar.sync">File Sync</a></li>
+          <li><a href="../drive-sync/" data-i18n="docs.sidebar.driveSync">Drive Sync</a></li>
+          <li><a href="../shortcuts/" data-i18n="docs.sidebar.shortcuts">Keyboard Shortcuts</a></li>
+          <li><a href="../quick-switch/" data-i18n="docs.sidebar.quickSwitch">Quick Switch</a></li>
+          <li><a href="../insights/" data-i18n="docs.sidebar.insights">Insights &amp; Suggestions</a></li>
           <!-- page: ../permissions/ -->
-          <li><a href="./" class="active">Permissions</a></li>
+          <li><a href="./" class="active" data-i18n="docs.sidebar.permissions">Permissions</a></li>
         </ul>
       </aside>
 
       <main class="docs-content">
-        <h1>Permissions Explained</h1>
-        <p class="lead">
+        <h1 data-i18n="docs.permissions.h1">Permissions Explained</h1>
+        <p class="lead" data-i18n="docs.permissions.lead">
           Takt requests only the permissions it needs. Here's what each one does and why.
         </p>
 
-        <h2 id="required">Required permissions <a href="#required" class="anchor-link">#</a></h2>
-        <p>These are granted at install time and are necessary for core functionality:</p>
+        <h2 id="required"><span data-i18n="docs.permissions.required.heading">Required permissions</span> <a href="#required" class="anchor-link">#</a></h2>
+        <p data-i18n="docs.permissions.required.intro">These are granted at install time and are necessary for core functionality:</p>
 
         <table>
           <thead>
@@ -106,8 +107,8 @@
           </tbody>
         </table>
 
-        <h2 id="optional">Optional permissions <a href="#optional" class="anchor-link">#</a></h2>
-        <p>These are requested at runtime only when you enable features that need them:</p>
+        <h2 id="optional"><span data-i18n="docs.permissions.optional.heading">Optional permissions</span> <a href="#optional" class="anchor-link">#</a></h2>
+        <p data-i18n="docs.permissions.optional.intro">These are requested at runtime only when you enable features that need them:</p>
 
         <table>
           <thead>
@@ -172,38 +173,38 @@
           </tbody>
         </table>
 
-        <h2 id="manage">How to manage permissions <a href="#manage" class="anchor-link">#</a></h2>
-        <p>
+        <h2 id="manage"><span data-i18n="docs.permissions.manage.heading">How to manage permissions</span> <a href="#manage" class="anchor-link">#</a></h2>
+        <p data-i18n="docs.permissions.manage.intro">
           Open the Options page and go to <strong>Settings</strong>. The permissions panel lets you:
         </p>
         <ul>
-          <li><strong>Grant All</strong> — grant all optional permissions at once</li>
-          <li><strong>Individual toggles</strong> — grant or revoke each permission separately</li>
-          <li><strong>Revoke All</strong> — revoke all optional permissions</li>
-          <li>
+          <li data-i18n="docs.permissions.manage.liGrantAll"><strong>Grant All</strong> — grant all optional permissions at once</li>
+          <li data-i18n="docs.permissions.manage.liIndividual"><strong>Individual toggles</strong> — grant or revoke each permission separately</li>
+          <li data-i18n="docs.permissions.manage.liRevokeAll"><strong>Revoke All</strong> — revoke all optional permissions</li>
+          <li data-i18n="docs.permissions.manage.liPromptMode">
             <strong>Prompt mode</strong> — choose whether Takt asks before requesting a permission
             ("Ask") or never requests automatically ("Never")
           </li>
         </ul>
-        <p>
+        <p data-i18n="docs.permissions.manage.conclusion">
           Revoking a permission disables the feature that depends on it. The feature re-enables
           automatically when the permission is granted again.
         </p>
 
         <h2 id="never-access">
-          What Takt never accesses <a href="#never-access" class="anchor-link">#</a>
+          <span data-i18n="docs.permissions.neverAccess.heading">What Takt never accesses</span> <a href="#never-access" class="anchor-link">#</a>
         </h2>
         <ul>
           <li>
             Browsing history — unless you explicitly grant the optional
             <code>history</code> permission
           </li>
-          <li>Page content or form data</li>
-          <li>Personal information (name, email, etc.)</li>
-          <li>Cookies or authentication tokens</li>
-          <li>Analytics or telemetry of any kind</li>
+          <li data-i18n="docs.permissions.neverAccess.li2">Page content or form data</li>
+          <li data-i18n="docs.permissions.neverAccess.li3">Personal information (name, email, etc.)</li>
+          <li data-i18n="docs.permissions.neverAccess.li4">Cookies or authentication tokens</li>
+          <li data-i18n="docs.permissions.neverAccess.li5">Analytics or telemetry of any kind</li>
         </ul>
-        <p>For the full privacy story, see the <a href="../../privacy/">Privacy Policy</a>.</p>
+        <p data-i18n="docs.permissions.neverAccess.privacyLink">For the full privacy story, see the <a href="../../privacy/">Privacy Policy</a>.</p>
 
         <div class="docs-nav-prev-next">
           <a href="../insights/">&larr; Insights &amp; Suggestions</a>

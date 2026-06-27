@@ -24,40 +24,41 @@
     <link rel="stylesheet" href="../../css/docs.css" />
 
     <script src="../../js/theme.js"></script>
+    <script type="module" src="../../js/i18n.js"></script>
   </head>
   <body>
     <header id="site-header"></header>
 
     <div class="docs-layout">
       <aside class="docs-sidebar">
-        <h4>Documentation</h4>
+        <h4 data-i18n="docs.sidebar.heading">Documentation</h4>
         <ul>
-          <li><a href="../../getting-started/">Getting Started</a></li>
-          <li><a href="../rules/">Rule Reference</a></li>
-          <li><a href="../duplicates/">Duplicate Prevention</a></li>
-          <li><a href="../group-actions/">Group Actions</a></li>
-          <li><a href="../auto-collapse/">Auto-collapse</a></li>
-          <li><a href="../resources/">Resource Dashboard</a></li>
-          <li><a href="./" class="active">Profiles &amp; Schedules</a></li>
-          <li><a href="../sessions/">Sessions</a></li>
-          <li><a href="../hibernation/">Hibernation</a></li>
-          <li><a href="../sync/">File Sync</a></li>
-          <li><a href="../drive-sync/">Drive Sync</a></li>
-          <li><a href="../shortcuts/">Keyboard Shortcuts</a></li>
-          <li><a href="../quick-switch/">Quick Switch</a></li>
-          <li><a href="../insights/">Insights &amp; Suggestions</a></li>
-          <li><a href="../permissions/">Permissions</a></li>
+          <li><a href="../../getting-started/" data-i18n="docs.sidebar.gettingStarted">Getting Started</a></li>
+          <li><a href="../rules/" data-i18n="docs.sidebar.rules">Rule Reference</a></li>
+          <li><a href="../duplicates/" data-i18n="docs.sidebar.duplicates">Duplicate Prevention</a></li>
+          <li><a href="../group-actions/" data-i18n="docs.sidebar.groupActions">Group Actions</a></li>
+          <li><a href="../auto-collapse/" data-i18n="docs.sidebar.autoCollapse">Auto-collapse</a></li>
+          <li><a href="../resources/" data-i18n="docs.sidebar.resources">Resource Dashboard</a></li>
+          <li><a href="./" class="active" data-i18n="docs.sidebar.profiles">Profiles &amp; Schedules</a></li>
+          <li><a href="../sessions/" data-i18n="docs.sidebar.sessions">Sessions</a></li>
+          <li><a href="../hibernation/" data-i18n="docs.sidebar.hibernation">Hibernation</a></li>
+          <li><a href="../sync/" data-i18n="docs.sidebar.sync">File Sync</a></li>
+          <li><a href="../drive-sync/" data-i18n="docs.sidebar.driveSync">Drive Sync</a></li>
+          <li><a href="../shortcuts/" data-i18n="docs.sidebar.shortcuts">Keyboard Shortcuts</a></li>
+          <li><a href="../quick-switch/" data-i18n="docs.sidebar.quickSwitch">Quick Switch</a></li>
+          <li><a href="../insights/" data-i18n="docs.sidebar.insights">Insights &amp; Suggestions</a></li>
+          <li><a href="../permissions/" data-i18n="docs.sidebar.permissions">Permissions</a></li>
         </ul>
       </aside>
 
       <main class="docs-content">
-        <h1>Profiles &amp; Schedules</h1>
-        <p class="lead">
+        <h1 data-i18n="docs.sidebar.profiles">Profiles &amp; Schedules</h1>
+        <p class="lead" data-i18n="docs.profiles.lead">
           Save different rule sets as profiles and switch between them manually or on a schedule.
         </p>
 
         <div class="callout">
-          <p>
+          <p data-i18n="docs.profiles.premiumCallout">
             <strong>Premium feature.</strong> Profiles and scheduled switching require a Premium
             subscription.
           </p>
@@ -76,64 +77,64 @@
         </div>
 
         <h2 id="what-are-profiles">
-          What are profiles <a href="#what-are-profiles" class="anchor-link">#</a>
+          <span data-i18n="docs.profiles.whatAreProfiles.heading">What are profiles</span> <a href="#what-are-profiles" class="anchor-link">#</a>
         </h2>
-        <p>
+        <p data-i18n="docs.profiles.whatAreProfiles.p1">
           A profile is a named subset of your rules. When a profile is active, only the rules
           assigned to it are evaluated. Rules not in any profile are always active ("All Rules"
           mode).
         </p>
-        <p>Use profiles to separate different contexts:</p>
+        <p data-i18n="docs.profiles.whatAreProfiles.intro">Use profiles to separate different contexts:</p>
         <ul>
-          <li><strong>Work</strong> — rules for Jira, GitHub, Confluence, Slack</li>
-          <li><strong>Personal</strong> — rules for YouTube, Reddit, shopping sites</li>
-          <li><strong>Research</strong> — rules for academic papers, documentation sites</li>
+          <li data-i18n="docs.profiles.whatAreProfiles.liWork"><strong>Work</strong> — rules for Jira, GitHub, Confluence, Slack</li>
+          <li data-i18n="docs.profiles.whatAreProfiles.liPersonal"><strong>Personal</strong> — rules for YouTube, Reddit, shopping sites</li>
+          <li data-i18n="docs.profiles.whatAreProfiles.liResearch"><strong>Research</strong> — rules for academic papers, documentation sites</li>
         </ul>
 
-        <h2 id="creating">Creating a profile <a href="#creating" class="anchor-link">#</a></h2>
-        <p>Open the Options page and go to the <strong>Profiles</strong> tab:</p>
+        <h2 id="creating"><span data-i18n="docs.profiles.creating.heading">Creating a profile</span> <a href="#creating" class="anchor-link">#</a></h2>
+        <p data-i18n="docs.profiles.creating.intro">Open the Options page and go to the <strong>Profiles</strong> tab:</p>
         <ol>
-          <li>Click <strong>"Create Profile"</strong></li>
-          <li>Enter a name</li>
-          <li>
+          <li data-i18n="docs.profiles.creating.li1">Click <strong>"Create Profile"</strong></li>
+          <li data-i18n="docs.profiles.creating.li2">Enter a name</li>
+          <li data-i18n="docs.profiles.creating.li3">
             Choose to <strong>clone current rules</strong> (copies all rules into the new profile)
             or <strong>start empty</strong>
           </li>
-          <li>Click <strong>Create</strong></li>
+          <li data-i18n="docs.profiles.creating.li4">Click <strong>Create</strong></li>
         </ol>
-        <p>
+        <p data-i18n="docs.profiles.creating.p2">
           New rules you create while a profile is active are automatically added to that profile.
         </p>
 
-        <h2 id="switching">Switching profiles <a href="#switching" class="anchor-link">#</a></h2>
-        <p>
+        <h2 id="switching"><span data-i18n="docs.profiles.switching.heading">Switching profiles</span> <a href="#switching" class="anchor-link">#</a></h2>
+        <p data-i18n="docs.profiles.switching.p1">
           Click a profile card to activate it. Click <strong>"All Rules"</strong> to deactivate all
           profiles and use every rule.
         </p>
-        <p>When you switch profiles:</p>
+        <p data-i18n="docs.profiles.switching.intro">When you switch profiles:</p>
         <ul>
-          <li>The rule engine reloads with only the active profile's rules</li>
-          <li>
+          <li data-i18n="docs.profiles.switching.li1">The rule engine reloads with only the active profile's rules</li>
+          <li data-i18n="docs.profiles.switching.li2">
             Existing tab groups are not removed — only new organization actions use the updated
             rules
           </li>
-          <li>Click "Group All" after switching to reorganize existing tabs</li>
+          <li data-i18n="docs.profiles.switching.li3">Click "Group All" after switching to reorganize existing tabs</li>
         </ul>
 
-        <h2 id="schedules">Scheduled switching <a href="#schedules" class="anchor-link">#</a></h2>
-        <p>Automate profile switching by time of day and day of week:</p>
+        <h2 id="schedules"><span data-i18n="docs.profiles.schedules.heading">Scheduled switching</span> <a href="#schedules" class="anchor-link">#</a></h2>
+        <p data-i18n="docs.profiles.schedules.intro">Automate profile switching by time of day and day of week:</p>
         <ol>
-          <li>On a profile card, click the <strong>schedule</strong> section</li>
-          <li>Toggle <strong>"Enable schedule"</strong></li>
-          <li>Set a <strong>start time</strong> and <strong>end time</strong></li>
-          <li>Select which <strong>days of the week</strong> the schedule applies</li>
+          <li data-i18n="docs.profiles.schedules.li1">On a profile card, click the <strong>schedule</strong> section</li>
+          <li data-i18n="docs.profiles.schedules.li2">Toggle <strong>"Enable schedule"</strong></li>
+          <li data-i18n="docs.profiles.schedules.li3">Set a <strong>start time</strong> and <strong>end time</strong></li>
+          <li data-i18n="docs.profiles.schedules.li4">Select which <strong>days of the week</strong> the schedule applies</li>
         </ol>
-        <p>
+        <p data-i18n="docs.profiles.schedules.p1">
           When the schedule window begins, Takt activates the profile. When the window ends, it
           reverts to "All Rules" mode (unless you manually switched to a different profile).
         </p>
         <div class="callout">
-          <p>
+          <p data-i18n="docs.profiles.schedules.callout">
             Cross-midnight schedules are supported. A schedule from 10:00 PM to 6:00 AM activates at
             10 PM and deactivates at 6 AM the next morning.
           </p>

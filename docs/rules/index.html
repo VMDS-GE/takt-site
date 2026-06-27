@@ -24,62 +24,63 @@
     <link rel="stylesheet" href="../../css/docs.css" />
 
     <script src="../../js/theme.js"></script>
+    <script type="module" src="../../js/i18n.js"></script>
   </head>
   <body>
     <header id="site-header"></header>
 
     <div class="docs-layout">
       <aside class="docs-sidebar">
-        <h4>Documentation</h4>
+        <h4 data-i18n="docs.sidebar.heading">Documentation</h4>
         <ul>
-          <li><a href="../../getting-started/">Getting Started</a></li>
-          <li><a href="./" class="active">Rule Reference</a></li>
-          <li><a href="../duplicates/">Duplicate Prevention</a></li>
-          <li><a href="../group-actions/">Group Actions</a></li>
-          <li><a href="../auto-collapse/">Auto-collapse</a></li>
-          <li><a href="../resources/">Resource Dashboard</a></li>
-          <li><a href="../profiles/">Profiles &amp; Schedules</a></li>
-          <li><a href="../sessions/">Sessions</a></li>
-          <li><a href="../hibernation/">Hibernation</a></li>
-          <li><a href="../sync/">File Sync</a></li>
-          <li><a href="../drive-sync/">Drive Sync</a></li>
-          <li><a href="../shortcuts/">Keyboard Shortcuts</a></li>
-          <li><a href="../quick-switch/">Quick Switch</a></li>
-          <li><a href="../insights/">Insights &amp; Suggestions</a></li>
-          <li><a href="../permissions/">Permissions</a></li>
+          <li><a href="../../getting-started/" data-i18n="docs.sidebar.gettingStarted">Getting Started</a></li>
+          <li><a href="./" class="active" data-i18n="docs.sidebar.rules">Rule Reference</a></li>
+          <li><a href="../duplicates/" data-i18n="docs.sidebar.duplicates">Duplicate Prevention</a></li>
+          <li><a href="../group-actions/" data-i18n="docs.sidebar.groupActions">Group Actions</a></li>
+          <li><a href="../auto-collapse/" data-i18n="docs.sidebar.autoCollapse">Auto-collapse</a></li>
+          <li><a href="../resources/" data-i18n="docs.sidebar.resources">Resource Dashboard</a></li>
+          <li><a href="../profiles/" data-i18n="docs.sidebar.profiles">Profiles &amp; Schedules</a></li>
+          <li><a href="../sessions/" data-i18n="docs.sidebar.sessions">Sessions</a></li>
+          <li><a href="../hibernation/" data-i18n="docs.sidebar.hibernation">Hibernation</a></li>
+          <li><a href="../sync/" data-i18n="docs.sidebar.sync">File Sync</a></li>
+          <li><a href="../drive-sync/" data-i18n="docs.sidebar.driveSync">Drive Sync</a></li>
+          <li><a href="../shortcuts/" data-i18n="docs.sidebar.shortcuts">Keyboard Shortcuts</a></li>
+          <li><a href="../quick-switch/" data-i18n="docs.sidebar.quickSwitch">Quick Switch</a></li>
+          <li><a href="../insights/" data-i18n="docs.sidebar.insights">Insights &amp; Suggestions</a></li>
+          <li><a href="../permissions/" data-i18n="docs.sidebar.permissions">Permissions</a></li>
         </ul>
       </aside>
 
       <main class="docs-content">
-        <h1>Rule Reference</h1>
-        <p class="lead">
+        <h1 data-i18n="docs.sidebar.rules">Rule Reference</h1>
+        <p class="lead" data-i18n="docs.rules.lead">
           Rules tell Takt how to organize your tabs. Each rule matches tabs by URL or title and
           assigns them to a named, colored tab group.
         </p>
 
-        <h2 id="structure">Rule structure <a href="#structure" class="anchor-link">#</a></h2>
-        <p>Every rule has:</p>
+        <h2 id="structure"><span data-i18n="docs.rules.structure.heading">Rule structure</span> <a href="#structure" class="anchor-link">#</a></h2>
+        <p data-i18n="docs.rules.structure.intro">Every rule has:</p>
         <ul>
-          <li><strong>Name</strong> — a label for your reference (e.g., "GitHub repos")</li>
-          <li>
+          <li data-i18n="docs.rules.structure.liName"><strong>Name</strong> — a label for your reference (e.g., "GitHub repos")</li>
+          <li data-i18n="docs.rules.structure.liConditions">
             <strong>Conditions</strong> — one or more patterns to match against tab URLs or titles
           </li>
-          <li><strong>Group name</strong> — the label Chrome displays on the tab group</li>
-          <li><strong>Color</strong> — one of Chrome's 8 tab group colors</li>
-          <li><strong>Enabled</strong> — toggle rules on/off without deleting them</li>
+          <li data-i18n="docs.rules.structure.liGroupName"><strong>Group name</strong> — the label Chrome displays on the tab group</li>
+          <li data-i18n="docs.rules.structure.liColor"><strong>Color</strong> — one of Chrome's 8 tab group colors</li>
+          <li data-i18n="docs.rules.structure.liEnabled"><strong>Enabled</strong> — toggle rules on/off without deleting them</li>
         </ul>
-        <p>
+        <p data-i18n="docs.rules.structure.p2">
           Rules are evaluated top-to-bottom in priority order. The first matching rule wins — later
           rules are not checked.
         </p>
 
-        <h2 id="match-types">Match types <a href="#match-types" class="anchor-link">#</a></h2>
+        <h2 id="match-types"><span data-i18n="docs.rules.matchTypes.heading">Match types</span> <a href="#match-types" class="anchor-link">#</a></h2>
 
         <h3 id="contains">
-          Contains
+          <span data-i18n="docs.rules.matchTypes.contains.heading">Contains</span>
           <span style="color: var(--muted); font-weight: 400; font-size: 0.85rem">Free</span>
         </h3>
-        <p>Case-insensitive substring match. The pattern can appear anywhere in the URL.</p>
+        <p data-i18n="docs.rules.matchTypes.contains.desc">Case-insensitive substring match. The pattern can appear anywhere in the URL.</p>
         <table class="example-table">
           <thead>
             <tr>
@@ -104,9 +105,9 @@
         </table>
 
         <h3 id="exact">
-          Exact <span style="color: var(--muted); font-weight: 400; font-size: 0.85rem">Free</span>
+          <span data-i18n="docs.rules.matchTypes.exact.heading">Exact</span> <span style="color: var(--muted); font-weight: 400; font-size: 0.85rem">Free</span>
         </h3>
-        <p>The full URL must match the pattern exactly (case-insensitive).</p>
+        <p data-i18n="docs.rules.matchTypes.exact.desc">The full URL must match the pattern exactly (case-insensitive).</p>
         <table class="example-table">
           <thead>
             <tr>
@@ -123,9 +124,9 @@
         </table>
 
         <h3 id="domain">
-          Domain <span style="color: var(--muted); font-weight: 400; font-size: 0.85rem">Free</span>
+          <span data-i18n="docs.rules.matchTypes.domain.heading">Domain</span> <span style="color: var(--muted); font-weight: 400; font-size: 0.85rem">Free</span>
         </h3>
-        <p>
+        <p data-i18n="docs.rules.matchTypes.domain.desc">
           Matches the hostname or any subdomain. Useful for grouping all pages from a site
           regardless of path.
         </p>
@@ -148,8 +149,8 @@
           </tbody>
         </table>
 
-        <h3 id="glob">Glob <span class="badge">Premium</span></h3>
-        <p>Shell-style pattern matching with wildcards:</p>
+        <h3 id="glob"><span data-i18n="docs.rules.matchTypes.glob.heading">Glob</span> <span class="badge">Premium</span></h3>
+        <p data-i18n="docs.rules.matchTypes.glob.desc">Shell-style pattern matching with wildcards:</p>
         <ul>
           <li><code>*</code> — matches any characters except <code>/</code></li>
           <li><code>**</code> — matches anything, including <code>/</code></li>
@@ -178,8 +179,8 @@
           </tbody>
         </table>
 
-        <h3 id="regex">Regex <span class="badge">Premium</span></h3>
-        <p>
+        <h3 id="regex"><span data-i18n="docs.rules.matchTypes.regex.heading">Regex</span> <span class="badge">Premium</span></h3>
+        <p data-i18n="docs.rules.matchTypes.regex.desc">
           Full JavaScript regular expression. The pattern is anchored — it must match the entire URL
           (equivalent to wrapping in <code>^...$</code>).
         </p>
@@ -202,35 +203,35 @@
           </tbody>
         </table>
         <div class="callout">
-          <p>
+          <p data-i18n="docs.rules.matchTypes.regex.callout">
             Regex patterns are powerful but can be tricky. Use the <strong>Rule Tester</strong> in
             the options page to verify your pattern matches the URLs you expect.
           </p>
         </div>
 
         <h2 id="condition-fields">
-          Condition fields <a href="#condition-fields" class="anchor-link">#</a>
+          <span data-i18n="docs.rules.conditionFields.heading">Condition fields</span> <a href="#condition-fields" class="anchor-link">#</a>
         </h2>
-        <p>Each condition matches against one of two fields:</p>
+        <p data-i18n="docs.rules.conditionFields.intro">Each condition matches against one of two fields:</p>
         <ul>
-          <li><strong>URL</strong> (default) — the full tab URL</li>
-          <li>
+          <li data-i18n="docs.rules.conditionFields.liUrl"><strong>URL</strong> (default) — the full tab URL</li>
+          <li data-i18n="docs.rules.conditionFields.liTitle">
             <strong>Title</strong> <span class="badge">Premium</span> — the page title shown in the
             tab
           </li>
         </ul>
-        <p>Additional options per condition:</p>
+        <p data-i18n="docs.rules.conditionFields.additional">Additional options per condition:</p>
         <ul>
           <li>
             <strong>Negate</strong> — inverts the match. "URL does NOT contain
             <code>google.com</code>"
           </li>
-          <li><strong>Case sensitive</strong> — by default, matching is case-insensitive</li>
+          <li data-i18n="docs.rules.conditionFields.liCaseSensitive"><strong>Case sensitive</strong> — by default, matching is case-insensitive</li>
         </ul>
 
-        <h2 id="compound">Compound conditions <a href="#compound" class="anchor-link">#</a></h2>
+        <h2 id="compound"><span data-i18n="docs.rules.compound.heading">Compound conditions</span> <a href="#compound" class="anchor-link">#</a></h2>
         <div class="callout">
-          <p>
+          <p data-i18n="docs.rules.compound.callout">
             <strong>Premium feature.</strong> Free users are limited to a single condition per rule.
           </p>
         </div>
@@ -246,33 +247,33 @@
             >$30/year <span class="cta-save">save 17%</span></a
           >
         </div>
-        <p>Combine multiple conditions with:</p>
+        <p data-i18n="docs.rules.compound.intro">Combine multiple conditions with:</p>
         <ul>
-          <li><strong>AND</strong> — all conditions must match</li>
-          <li><strong>OR</strong> — any condition can match</li>
+          <li data-i18n="docs.rules.compound.liAnd"><strong>AND</strong> — all conditions must match</li>
+          <li data-i18n="docs.rules.compound.liOr"><strong>OR</strong> — any condition can match</li>
         </ul>
         <p>
           Example: group tabs where the URL contains <code>github.com</code>
           <strong>AND</strong> the title contains <code>Pull Request</code>.
         </p>
 
-        <h2 id="priority">Rule priority <a href="#priority" class="anchor-link">#</a></h2>
-        <p>
+        <h2 id="priority"><span data-i18n="docs.rules.priority.heading">Rule priority</span> <a href="#priority" class="anchor-link">#</a></h2>
+        <p data-i18n="docs.rules.priority.p1">
           Rules are evaluated in the order they appear in your rule list. The first matching rule
           wins — the tab is assigned to that rule's group, and no further rules are checked.
         </p>
-        <p>
+        <p data-i18n="docs.rules.priority.p2">
           Drag rules in the options page to reorder them. Put more specific rules higher, general
           catch-all rules lower.
         </p>
 
-        <h2 id="colors">Group colors <a href="#colors" class="anchor-link">#</a></h2>
-        <p>
+        <h2 id="colors"><span data-i18n="docs.rules.colors.heading">Group colors</span> <a href="#colors" class="anchor-link">#</a></h2>
+        <p data-i18n="docs.rules.colors.p1">
           Chrome supports 8 tab group colors: <strong>grey</strong>, <strong>blue</strong>,
           <strong>red</strong>, <strong>yellow</strong>, <strong>green</strong>,
           <strong>pink</strong>, <strong>purple</strong>, and <strong>cyan</strong>.
         </p>
-        <p>All 8 colors are available to free and Premium users.</p>
+        <p data-i18n="docs.rules.colors.p2">All 8 colors are available to free and Premium users.</p>
 
         <div class="docs-nav-prev-next">
           <a href="../../getting-started/">&larr; Getting Started</a>

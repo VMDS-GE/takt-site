@@ -24,41 +24,42 @@
     <link rel="stylesheet" href="../../css/docs.css" />
 
     <script src="../../js/theme.js"></script>
+    <script type="module" src="../../js/i18n.js"></script>
   </head>
   <body>
     <header id="site-header"></header>
 
     <div class="docs-layout">
       <aside class="docs-sidebar">
-        <h4>Documentation</h4>
+        <h4 data-i18n="docs.sidebar.heading">Documentation</h4>
         <ul>
-          <li><a href="../../getting-started/">Getting Started</a></li>
-          <li><a href="../rules/">Rule Reference</a></li>
-          <li><a href="../duplicates/">Duplicate Prevention</a></li>
-          <li><a href="../group-actions/">Group Actions</a></li>
-          <li><a href="../auto-collapse/">Auto-collapse</a></li>
-          <li><a href="../resources/">Resource Dashboard</a></li>
-          <li><a href="../profiles/">Profiles &amp; Schedules</a></li>
-          <li><a href="./" class="active">Sessions</a></li>
-          <li><a href="../hibernation/">Hibernation</a></li>
-          <li><a href="../sync/">File Sync</a></li>
-          <li><a href="../drive-sync/">Drive Sync</a></li>
-          <li><a href="../shortcuts/">Keyboard Shortcuts</a></li>
-          <li><a href="../quick-switch/">Quick Switch</a></li>
-          <li><a href="../insights/">Insights &amp; Suggestions</a></li>
-          <li><a href="../permissions/">Permissions</a></li>
+          <li><a href="../../getting-started/" data-i18n="docs.sidebar.gettingStarted">Getting Started</a></li>
+          <li><a href="../rules/" data-i18n="docs.sidebar.rules">Rule Reference</a></li>
+          <li><a href="../duplicates/" data-i18n="docs.sidebar.duplicates">Duplicate Prevention</a></li>
+          <li><a href="../group-actions/" data-i18n="docs.sidebar.groupActions">Group Actions</a></li>
+          <li><a href="../auto-collapse/" data-i18n="docs.sidebar.autoCollapse">Auto-collapse</a></li>
+          <li><a href="../resources/" data-i18n="docs.sidebar.resources">Resource Dashboard</a></li>
+          <li><a href="../profiles/" data-i18n="docs.sidebar.profiles">Profiles &amp; Schedules</a></li>
+          <li><a href="./" class="active" data-i18n="docs.sidebar.sessions">Sessions</a></li>
+          <li><a href="../hibernation/" data-i18n="docs.sidebar.hibernation">Hibernation</a></li>
+          <li><a href="../sync/" data-i18n="docs.sidebar.sync">File Sync</a></li>
+          <li><a href="../drive-sync/" data-i18n="docs.sidebar.driveSync">Drive Sync</a></li>
+          <li><a href="../shortcuts/" data-i18n="docs.sidebar.shortcuts">Keyboard Shortcuts</a></li>
+          <li><a href="../quick-switch/" data-i18n="docs.sidebar.quickSwitch">Quick Switch</a></li>
+          <li><a href="../insights/" data-i18n="docs.sidebar.insights">Insights &amp; Suggestions</a></li>
+          <li><a href="../permissions/" data-i18n="docs.sidebar.permissions">Permissions</a></li>
         </ul>
       </aside>
 
       <main class="docs-content">
-        <h1>Sessions</h1>
-        <p class="lead">
+        <h1 data-i18n="docs.sidebar.sessions">Sessions</h1>
+        <p class="lead" data-i18n="docs.sessions.lead">
           Snapshot your browser windows and restore them later — including tab groups, ungrouped
           tabs, and multiple windows.
         </p>
 
         <div class="callout">
-          <p>
+          <p data-i18n="docs.sessions.premiumCallout">
             <strong>Premium feature.</strong> Saving and restoring sessions requires a Premium
             subscription. You can browse saved sessions for free.
           </p>
@@ -77,82 +78,82 @@
         </div>
 
         <h2 id="what-is-a-session">
-          What is a session <a href="#what-is-a-session" class="anchor-link">#</a>
+          <span data-i18n="docs.sessions.whatIsASession.heading">What is a session</span> <a href="#what-is-a-session" class="anchor-link">#</a>
         </h2>
-        <p>A session is a named snapshot of one or more Chrome windows. Each session captures:</p>
+        <p data-i18n="docs.sessions.whatIsASession.intro">A session is a named snapshot of one or more Chrome windows. Each session captures:</p>
         <ul>
-          <li>Every open tab — URL, title, and pinned state</li>
-          <li>Tab group names, colors, and collapsed states</li>
-          <li>Which tabs belong to which group</li>
-          <li>Ungrouped tabs (tabs not inside any group)</li>
-          <li>Optionally, all open windows at once</li>
+          <li data-i18n="docs.sessions.whatIsASession.li1">Every open tab — URL, title, and pinned state</li>
+          <li data-i18n="docs.sessions.whatIsASession.li2">Tab group names, colors, and collapsed states</li>
+          <li data-i18n="docs.sessions.whatIsASession.li3">Which tabs belong to which group</li>
+          <li data-i18n="docs.sessions.whatIsASession.li4">Ungrouped tabs (tabs not inside any group)</li>
+          <li data-i18n="docs.sessions.whatIsASession.li5">Optionally, all open windows at once</li>
         </ul>
-        <p>Sessions are stored locally in Chrome's storage and are not synced across devices.</p>
+        <p data-i18n="docs.sessions.whatIsASession.storage">Sessions are stored locally in Chrome's storage and are not synced across devices.</p>
 
-        <h2 id="saving">Saving a session <a href="#saving" class="anchor-link">#</a></h2>
-        <p>Open the Takt popup and find the <strong>Sessions</strong> section:</p>
+        <h2 id="saving"><span data-i18n="docs.sessions.saving.heading">Saving a session</span> <a href="#saving" class="anchor-link">#</a></h2>
+        <p data-i18n="docs.sessions.saving.intro">Open the Takt popup and find the <strong>Sessions</strong> section:</p>
         <ol>
-          <li>Click <strong>+ Save</strong></li>
-          <li>
+          <li data-i18n="docs.sessions.saving.li1">Click <strong>+ Save</strong></li>
+          <li data-i18n="docs.sessions.saving.li2">
             Enter a name (up to 60 characters). Each session name must be unique — if the name
             already exists, the save is blocked and the field stays open so you can choose a
             different name.
           </li>
           <li>
-            Choose the <strong>scope</strong>:
+            <span data-i18n="docs.sessions.saving.li3Intro">Choose the <strong>scope</strong>:</span>
             <ul>
-              <li>
+              <li data-i18n="docs.sessions.saving.li3ThisWindow">
                 <strong>This window</strong> — captures only the current Chrome window (default)
               </li>
-              <li><strong>All windows</strong> — captures every open normal Chrome window</li>
+              <li data-i18n="docs.sessions.saving.li3AllWindows"><strong>All windows</strong> — captures every open normal Chrome window</li>
             </ul>
           </li>
-          <li>Click <strong>Save</strong></li>
+          <li data-i18n="docs.sessions.saving.li4">Click <strong>Save</strong></li>
         </ol>
-        <p>
+        <p data-i18n="docs.sessions.saving.limit">
           You can save up to <strong>50 sessions</strong>. Once the limit is reached, delete older
           sessions before saving new ones.
         </p>
 
         <div class="callout">
-          <p>
+          <p data-i18n="docs.sessions.saving.callout">
             Tabs on restricted Chrome pages (<code>chrome://</code>, <code>about:</code>, extension
             pages) are silently skipped when saving and restoring, since Chrome does not allow
             programmatic navigation to those URLs.
           </p>
         </div>
 
-        <h2 id="restoring">Restoring a session <a href="#restoring" class="anchor-link">#</a></h2>
-        <p>
+        <h2 id="restoring"><span data-i18n="docs.sessions.restoring.heading">Restoring a session</span> <a href="#restoring" class="anchor-link">#</a></h2>
+        <p data-i18n="docs.sessions.restoring.intro">
           Click <strong>Restore</strong> next to a session in the popup. A dialog appears with two
           options:
         </p>
         <ul>
-          <li>
+          <li data-i18n="docs.sessions.restoring.liNewWindow">
             <strong>Open in new window</strong> — creates a fresh Chrome window and opens all saved
             tabs inside it. Your current window is untouched.
           </li>
-          <li>
+          <li data-i18n="docs.sessions.restoring.liReplace">
             <strong>Replace this window</strong> — opens the saved tabs in the current window, then
             closes the tabs that were already there.
           </li>
         </ul>
-        <p>
+        <p data-i18n="docs.sessions.restoring.countdown">
           Takt counts down 7 seconds before restoring automatically using the selected mode. Click
           <strong>Restore now</strong> to proceed immediately, or <strong>Cancel</strong> to abort.
         </p>
 
-        <h3 id="multi-window-restore">Multi-window sessions</h3>
-        <p>When you restore a session saved with <strong>All windows</strong>:</p>
+        <h3 id="multi-window-restore"><span data-i18n="docs.sessions.multiWindow.heading">Multi-window sessions</span></h3>
+        <p data-i18n="docs.sessions.multiWindow.intro">When you restore a session saved with <strong>All windows</strong>:</p>
         <ul>
-          <li>The first saved window uses your chosen mode (new or replace)</li>
-          <li>Each additional saved window always opens as a new Chrome window</li>
+          <li data-i18n="docs.sessions.multiWindow.li1">The first saved window uses your chosen mode (new or replace)</li>
+          <li data-i18n="docs.sessions.multiWindow.li2">Each additional saved window always opens as a new Chrome window</li>
         </ul>
 
-        <h2 id="managing">Managing sessions <a href="#managing" class="anchor-link">#</a></h2>
+        <h2 id="managing"><span data-i18n="docs.sessions.managing.heading">Managing sessions</span> <a href="#managing" class="anchor-link">#</a></h2>
 
-        <h3 id="popup">In the popup</h3>
-        <p>
+        <h3 id="popup" data-i18n="docs.sessions.managing.popupHeading">In the popup</h3>
+        <p data-i18n="docs.sessions.managing.popupIntro">
           The Sessions section in the popup shows your most recent sessions. Each entry displays:
         </p>
         <ul>
@@ -165,8 +166,8 @@
           delete the session immediately.
         </p>
 
-        <h3 id="options-page">In the Options page</h3>
-        <p>
+        <h3 id="options-page" data-i18n="docs.sessions.managing.optionsHeading">In the Options page</h3>
+        <p data-i18n="docs.sessions.managing.optionsIntro">
           Open the Takt options page and go to the <strong>Sessions</strong> tab for a full detail
           view:
         </p>
@@ -189,19 +190,19 @@
         </ul>
 
         <h2 id="export-import">
-          Export &amp; Import <a href="#export-import" class="anchor-link">#</a>
+          <span data-i18n="docs.sessions.exportImport.heading">Export &amp; Import</span> <a href="#export-import" class="anchor-link">#</a>
         </h2>
-        <p>
+        <p data-i18n="docs.sessions.exportImport.p1">
           Sessions are included in Takt's full <strong>Export All</strong> /
           <strong>Import All</strong> bundle (available in Options → Settings). This lets you back
           up all your sessions along with rules and profiles.
         </p>
-        <p>
+        <p data-i18n="docs.sessions.exportImport.p2">
           When importing, each session receives a fresh ID so it does not overwrite any existing
           session with the same name.
         </p>
 
-        <h2 id="limits">Limits &amp; behaviour <a href="#limits" class="anchor-link">#</a></h2>
+        <h2 id="limits"><span data-i18n="docs.sessions.limits.heading">Limits &amp; behaviour</span> <a href="#limits" class="anchor-link">#</a></h2>
         <table>
           <thead>
             <tr>

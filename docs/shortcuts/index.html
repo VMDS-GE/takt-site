@@ -21,37 +21,38 @@
     <link rel="stylesheet" href="../../css/docs.css" />
 
     <script src="../../js/theme.js"></script>
+    <script type="module" src="../../js/i18n.js"></script>
   </head>
   <body>
     <header id="site-header"></header>
 
     <div class="docs-layout">
       <aside class="docs-sidebar">
-        <h4>Documentation</h4>
+        <h4 data-i18n="docs.sidebar.heading">Documentation</h4>
         <ul>
-          <li><a href="../../getting-started/">Getting Started</a></li>
-          <li><a href="../rules/">Rule Reference</a></li>
-          <li><a href="../duplicates/">Duplicate Prevention</a></li>
-          <li><a href="../group-actions/">Group Actions</a></li>
-          <li><a href="../auto-collapse/">Auto-collapse</a></li>
-          <li><a href="../resources/">Resource Dashboard</a></li>
-          <li><a href="../profiles/">Profiles &amp; Schedules</a></li>
-          <li><a href="../sessions/">Sessions</a></li>
-          <li><a href="../hibernation/">Hibernation</a></li>
-          <li><a href="../sync/">File Sync</a></li>
-          <li><a href="../drive-sync/">Drive Sync</a></li>
-          <li><a href="../shortcuts/" class="active">Keyboard Shortcuts</a></li>
-          <li><a href="../quick-switch/">Quick Switch</a></li>
-          <li><a href="../insights/">Insights &amp; Suggestions</a></li>
-          <li><a href="../permissions/">Permissions</a></li>
+          <li><a href="../../getting-started/" data-i18n="docs.sidebar.gettingStarted">Getting Started</a></li>
+          <li><a href="../rules/" data-i18n="docs.sidebar.rules">Rule Reference</a></li>
+          <li><a href="../duplicates/" data-i18n="docs.sidebar.duplicates">Duplicate Prevention</a></li>
+          <li><a href="../group-actions/" data-i18n="docs.sidebar.groupActions">Group Actions</a></li>
+          <li><a href="../auto-collapse/" data-i18n="docs.sidebar.autoCollapse">Auto-collapse</a></li>
+          <li><a href="../resources/" data-i18n="docs.sidebar.resources">Resource Dashboard</a></li>
+          <li><a href="../profiles/" data-i18n="docs.sidebar.profiles">Profiles &amp; Schedules</a></li>
+          <li><a href="../sessions/" data-i18n="docs.sidebar.sessions">Sessions</a></li>
+          <li><a href="../hibernation/" data-i18n="docs.sidebar.hibernation">Hibernation</a></li>
+          <li><a href="../sync/" data-i18n="docs.sidebar.sync">File Sync</a></li>
+          <li><a href="../drive-sync/" data-i18n="docs.sidebar.driveSync">Drive Sync</a></li>
+          <li><a href="../shortcuts/" class="active" data-i18n="docs.sidebar.shortcuts">Keyboard Shortcuts</a></li>
+          <li><a href="../quick-switch/" data-i18n="docs.sidebar.quickSwitch">Quick Switch</a></li>
+          <li><a href="../insights/" data-i18n="docs.sidebar.insights">Insights &amp; Suggestions</a></li>
+          <li><a href="../permissions/" data-i18n="docs.sidebar.permissions">Permissions</a></li>
         </ul>
       </aside>
 
       <main class="docs-content">
-        <h1>Keyboard Shortcuts</h1>
-        <p class="lead">Organize your tabs without touching the mouse.</p>
+        <h1 data-i18n="docs.sidebar.shortcuts">Keyboard Shortcuts</h1>
+        <p class="lead" data-i18n="docs.shortcuts.lead">Organize your tabs without touching the mouse.</p>
 
-        <h2 id="default">Default shortcuts <a href="#default" class="anchor-link">#</a></h2>
+        <h2 id="default"><span data-i18n="docs.shortcuts.default.heading">Default shortcuts</span> <a href="#default" class="anchor-link">#</a></h2>
 
         <table>
           <thead>
@@ -80,7 +81,7 @@
           </tbody>
         </table>
 
-        <p>
+        <p data-i18n="docs.shortcuts.default.p1">
           Organize, ungroup, and collapse shortcuts are available to all users. Quick-switch (<kbd
             >Alt</kbd
           >
@@ -88,40 +89,40 @@
         </p>
 
         <h2 id="quick-switch">
-          Quick-switch overlay <a href="#quick-switch" class="anchor-link">#</a>
+          <span data-i18n="docs.shortcuts.quickSwitch.heading">Quick-switch overlay</span> <a href="#quick-switch" class="anchor-link">#</a>
         </h2>
-        <p>
+        <p data-i18n="docs.shortcuts.quickSwitch.p1">
           The quick-switch overlay is a command-palette style search for your open tabs. Press the
           shortcut and start typing — tabs are filtered in real time by title and URL. Use
           <kbd>&uarr;</kbd><kbd>&darr;</kbd> to navigate, <kbd>Enter</kbd> to jump to the selected
           tab, <kbd>Tab</kbd> to autocomplete, and <kbd>Esc</kbd> to dismiss.
         </p>
-        <p>
+        <p data-i18n="docs.shortcuts.quickSwitch.p2">
           Premium expands the results to include hibernated tabs (shown with an ice-blue treatment
           and moon icon) and browsing history (shown in orange). Selecting a hibernated tab wakes it
           automatically. Selecting a history result opens that URL in a new tab.
         </p>
-        <p>
+        <p data-i18n="docs.shortcuts.quickSwitch.p3">
           On pages where content scripts cannot be injected (e.g. <code>chrome://</code> pages), a
           popup window opens instead.
         </p>
         <p>
-          See the <a href="../quick-switch/">Quick Switch</a> page for full documentation on
+          See the <a href="../quick-switch/" data-i18n="docs.shortcuts.quickSwitch.linkText">Quick Switch</a> page for full documentation on
           keyboard interactions, result ranking, and edge cases.
         </p>
 
-        <h2 id="customize">Customizing shortcuts <a href="#customize" class="anchor-link">#</a></h2>
-        <p>Chrome lets you change extension keyboard shortcuts:</p>
+        <h2 id="customize"><span data-i18n="docs.shortcuts.customize.heading">Customizing shortcuts</span> <a href="#customize" class="anchor-link">#</a></h2>
+        <p data-i18n="docs.shortcuts.customize.intro">Chrome lets you change extension keyboard shortcuts:</p>
         <ol>
           <li>Navigate to <code>chrome://extensions/shortcuts</code></li>
-          <li>Find <strong>Takt</strong> in the list</li>
-          <li>Click the pencil icon next to the shortcut you want to change</li>
-          <li>Press your preferred key combination</li>
+          <li data-i18n="docs.shortcuts.customize.li2">Find <strong>Takt</strong> in the list</li>
+          <li data-i18n="docs.shortcuts.customize.li3">Click the pencil icon next to the shortcut you want to change</li>
+          <li data-i18n="docs.shortcuts.customize.li4">Press your preferred key combination</li>
         </ol>
-        <p>You can also clear the shortcut entirely if you prefer to use the popup exclusively.</p>
+        <p data-i18n="docs.shortcuts.customize.p2">You can also clear the shortcut entirely if you prefer to use the popup exclusively.</p>
 
-        <h2 id="popup">Popup actions <a href="#popup" class="anchor-link">#</a></h2>
-        <p>The same actions are available from the popup (click the Takt toolbar icon):</p>
+        <h2 id="popup"><span data-i18n="docs.shortcuts.popup.heading">Popup actions</span> <a href="#popup" class="anchor-link">#</a></h2>
+        <p data-i18n="docs.shortcuts.popup.p1">The same actions are available from the popup (click the Takt toolbar icon):</p>
         <table>
           <thead>
             <tr>
@@ -144,7 +145,7 @@
             </tr>
           </tbody>
         </table>
-        <p>Both the popup buttons and keyboard shortcuts apply to all open windows.</p>
+        <p data-i18n="docs.shortcuts.popup.p2">Both the popup buttons and keyboard shortcuts apply to all open windows.</p>
 
         <div class="docs-nav-prev-next">
           <a href="../drive-sync/">&larr; Drive Sync</a>

@@ -24,41 +24,42 @@
     <link rel="stylesheet" href="../../css/docs.css" />
 
     <script src="../../js/theme.js"></script>
+    <script type="module" src="../../js/i18n.js"></script>
   </head>
   <body>
     <header id="site-header"></header>
 
     <div class="docs-layout">
       <aside class="docs-sidebar">
-        <h4>Documentation</h4>
+        <h4 data-i18n="docs.sidebar.heading">Documentation</h4>
         <ul>
-          <li><a href="../../getting-started/">Getting Started</a></li>
-          <li><a href="../rules/">Rule Reference</a></li>
-          <li><a href="../duplicates/">Duplicate Prevention</a></li>
-          <li><a href="../group-actions/">Group Actions</a></li>
-          <li><a href="../auto-collapse/">Auto-collapse</a></li>
-          <li><a href="../resources/" class="active">Resource Dashboard</a></li>
-          <li><a href="../profiles/">Profiles &amp; Schedules</a></li>
-          <li><a href="../sessions/">Sessions</a></li>
-          <li><a href="../hibernation/">Hibernation</a></li>
-          <li><a href="../sync/">File Sync</a></li>
-          <li><a href="../drive-sync/">Drive Sync</a></li>
-          <li><a href="../shortcuts/">Keyboard Shortcuts</a></li>
-          <li><a href="../quick-switch/">Quick Switch</a></li>
-          <li><a href="../insights/">Insights &amp; Suggestions</a></li>
-          <li><a href="../permissions/">Permissions</a></li>
+          <li><a href="../../getting-started/" data-i18n="docs.sidebar.gettingStarted">Getting Started</a></li>
+          <li><a href="../rules/" data-i18n="docs.sidebar.rules">Rule Reference</a></li>
+          <li><a href="../duplicates/" data-i18n="docs.sidebar.duplicates">Duplicate Prevention</a></li>
+          <li><a href="../group-actions/" data-i18n="docs.sidebar.groupActions">Group Actions</a></li>
+          <li><a href="../auto-collapse/" data-i18n="docs.sidebar.autoCollapse">Auto-collapse</a></li>
+          <li><a href="../resources/" class="active" data-i18n="docs.sidebar.resources">Resource Dashboard</a></li>
+          <li><a href="../profiles/" data-i18n="docs.sidebar.profiles">Profiles &amp; Schedules</a></li>
+          <li><a href="../sessions/" data-i18n="docs.sidebar.sessions">Sessions</a></li>
+          <li><a href="../hibernation/" data-i18n="docs.sidebar.hibernation">Hibernation</a></li>
+          <li><a href="../sync/" data-i18n="docs.sidebar.sync">File Sync</a></li>
+          <li><a href="../drive-sync/" data-i18n="docs.sidebar.driveSync">Drive Sync</a></li>
+          <li><a href="../shortcuts/" data-i18n="docs.sidebar.shortcuts">Keyboard Shortcuts</a></li>
+          <li><a href="../quick-switch/" data-i18n="docs.sidebar.quickSwitch">Quick Switch</a></li>
+          <li><a href="../insights/" data-i18n="docs.sidebar.insights">Insights &amp; Suggestions</a></li>
+          <li><a href="../permissions/" data-i18n="docs.sidebar.permissions">Permissions</a></li>
         </ul>
       </aside>
 
       <main class="docs-content">
-        <h1>Resource Dashboard</h1>
-        <p class="lead">
+        <h1 data-i18n="docs.sidebar.resources">Resource Dashboard</h1>
+        <p class="lead" data-i18n="docs.resources.lead">
           See which tab groups consume the most memory. Get health scores, idle time tracking, and
           discard recommendations.
         </p>
 
         <div class="callout">
-          <p>
+          <p data-i18n="docs.resources.premiumCallout">
             <strong>Premium feature.</strong> The resource dashboard requires a Premium
             subscription.
           </p>
@@ -76,24 +77,24 @@
           >
         </div>
 
-        <h2 id="overview">Overview <a href="#overview" class="anchor-link">#</a></h2>
-        <p>
+        <h2 id="overview"><span data-i18n="docs.resources.overview.heading">Overview</span> <a href="#overview" class="anchor-link">#</a></h2>
+        <p data-i18n="docs.resources.overview.p1">
           The resource dashboard is in the Options page under the <strong>Dashboard</strong> tab. It
           shows real-time data about your tabs and groups, refreshing every 10 seconds while
           visible.
         </p>
-        <p>Four types of data are collected:</p>
+        <p data-i18n="docs.resources.overview.intro">Four types of data are collected:</p>
         <ul>
-          <li><strong>Memory</strong> — JavaScript heap size per tab</li>
-          <li>
+          <li data-i18n="docs.resources.overview.liMemory"><strong>Memory</strong> — JavaScript heap size per tab</li>
+          <li data-i18n="docs.resources.overview.liNetwork">
             <strong>Network</strong> — request counts, third-party domains, background activity
           </li>
-          <li><strong>Staleness</strong> — how long since you last interacted with a tab</li>
-          <li><strong>DOM complexity</strong> — number of DOM nodes in each page</li>
+          <li data-i18n="docs.resources.overview.liStaleness"><strong>Staleness</strong> — how long since you last interacted with a tab</li>
+          <li data-i18n="docs.resources.overview.liDom"><strong>DOM complexity</strong> — number of DOM nodes in each page</li>
         </ul>
 
-        <h2 id="health-scores">Health scores <a href="#health-scores" class="anchor-link">#</a></h2>
-        <p>
+        <h2 id="health-scores"><span data-i18n="docs.resources.healthScores.heading">Health scores</span> <a href="#health-scores" class="anchor-link">#</a></h2>
+        <p data-i18n="docs.resources.healthScores.intro">
           Each tab group receives a health score from <strong>A</strong> (healthy) to
           <strong>F</strong> (problematic), calculated from four factors:
         </p>
@@ -130,19 +131,19 @@
           </tbody>
         </table>
 
-        <p>Score bands:</p>
+        <p data-i18n="docs.resources.healthScores.bands">Score bands:</p>
         <ul>
-          <li><strong>A</strong> (90-100) — low resource use, recently active</li>
-          <li><strong>B</strong> (75-89) — moderate use, normal</li>
-          <li><strong>C</strong> (60-74) — elevated use, consider reviewing</li>
-          <li><strong>D</strong> (40-59) — high use, likely candidates for cleanup</li>
-          <li><strong>F</strong> (0-39) — excessive use, strongly recommend action</li>
+          <li data-i18n="docs.resources.healthScores.liA"><strong>A</strong> (90-100) — low resource use, recently active</li>
+          <li data-i18n="docs.resources.healthScores.liB"><strong>B</strong> (75-89) — moderate use, normal</li>
+          <li data-i18n="docs.resources.healthScores.liC"><strong>C</strong> (60-74) — elevated use, consider reviewing</li>
+          <li data-i18n="docs.resources.healthScores.liD"><strong>D</strong> (40-59) — high use, likely candidates for cleanup</li>
+          <li data-i18n="docs.resources.healthScores.liF"><strong>F</strong> (0-39) — excessive use, strongly recommend action</li>
         </ul>
 
         <h2 id="group-breakdown">
-          Group breakdown <a href="#group-breakdown" class="anchor-link">#</a>
+          <span data-i18n="docs.resources.groupBreakdown.heading">Group breakdown</span> <a href="#group-breakdown" class="anchor-link">#</a>
         </h2>
-        <p>
+        <p data-i18n="docs.resources.groupBreakdown.p1">
           The group breakdown shows a memory bar chart sorted by total memory. Each group card
           displays:
         </p>
@@ -153,8 +154,8 @@
           <li>Budget exceeded indicator (if memory budgets are configured)</li>
         </ul>
 
-        <h2 id="tab-table">Tab table <a href="#tab-table" class="anchor-link">#</a></h2>
-        <p>
+        <h2 id="tab-table"><span data-i18n="docs.resources.tabTable.heading">Tab table</span> <a href="#tab-table" class="anchor-link">#</a></h2>
+        <p data-i18n="docs.resources.tabTable.p1">
           Below the group breakdown, tabs are listed in collapsible group cards. Each tab shows:
         </p>
         <ul>
@@ -164,20 +165,20 @@
           <li>Third-party domain count (expandable to see the list)</li>
           <li>Background activity indicator</li>
         </ul>
-        <p>Click any column header to sort. Use the search field to filter tabs by title or URL.</p>
+        <p data-i18n="docs.resources.tabTable.p2">Click any column header to sort. Use the search field to filter tabs by title or URL.</p>
 
-        <h2 id="budgets">Memory budgets <a href="#budgets" class="anchor-link">#</a></h2>
-        <p>
+        <h2 id="budgets"><span data-i18n="docs.resources.budgets.heading">Memory budgets</span> <a href="#budgets" class="anchor-link">#</a></h2>
+        <p data-i18n="docs.resources.budgets.p1">
           Set per-group memory limits in <strong>Settings &rarr; Memory Budgets</strong>. When a
           group exceeds its budget, Takt shows a browser notification.
         </p>
-        <p>
+        <p data-i18n="docs.resources.budgets.p2">
           Budgets are checked every 60 seconds while the extension is running. The dashboard also
           shows a visual indicator when a group is over budget.
         </p>
 
-        <h2 id="discard">Discard advisor <a href="#discard" class="anchor-link">#</a></h2>
-        <p>The discard advisor recommends tabs to close based on a weighted score:</p>
+        <h2 id="discard"><span data-i18n="docs.resources.discard.heading">Discard advisor</span> <a href="#discard" class="anchor-link">#</a></h2>
+        <p data-i18n="docs.resources.discard.intro">The discard advisor recommends tabs to close based on a weighted score:</p>
         <ul>
           <li><strong>Memory</strong> (40%) — higher memory tabs score higher</li>
           <li><strong>Idle time</strong> (30%) — tabs you haven't touched score higher</li>
@@ -186,17 +187,17 @@
           </li>
           <li><strong>High request count</strong> — tabs with 500+ requests get a bonus</li>
         </ul>
-        <p>
+        <p data-i18n="docs.resources.discard.p2">
           The advisor excludes your active tab, pinned tabs, and tabs in groups with fewer than 2
           tabs (to preserve the group).
         </p>
-        <p>
+        <p data-i18n="docs.resources.discard.p3">
           Click <strong>"Suspend"</strong> to unload a tab from memory. The tab stays in your tab
           bar but releases its resources. Clicking it reloads the page.
         </p>
 
         <div class="callout">
-          <p>
+          <p data-i18n="docs.resources.discard.callout">
             <strong>Chrome still shows memory?</strong> After suspending a tab, Chrome's native tab
             hover card may still display a small memory footprint (typically 2–5 MB). This is normal
             — Chrome retains metadata for the tab's session history, favicon, and scroll position.
@@ -206,9 +207,9 @@
         </div>
 
         <h2 id="permissions">
-          Required permissions <a href="#permissions" class="anchor-link">#</a>
+          <span data-i18n="docs.resources.permissions.heading">Required permissions</span> <a href="#permissions" class="anchor-link">#</a>
         </h2>
-        <p>The resource dashboard needs two optional permissions to show full data:</p>
+        <p data-i18n="docs.resources.permissions.intro">The resource dashboard needs two optional permissions to show full data:</p>
         <ul>
           <li>
             <code>&lt;all_urls&gt;</code> (All website access) — to
@@ -230,7 +231,7 @@
         </p>
 
         <div class="callout">
-          <p>
+          <p data-i18n="docs.resources.permissions.callout">
             <strong>Memory shows "—"?</strong> This means the
             <code>&lt;all_urls&gt;</code> permission is not granted. Takt injects a lightweight
             script into each tab to sample its memory — without host access, the measurement cannot
