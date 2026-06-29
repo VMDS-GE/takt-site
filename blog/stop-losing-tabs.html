@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>How to stop losing tabs when you have 90+ open — Takt</title>
-  <meta name="description" content="A flat tab bar with 90 entries is unusable. Rules-based auto-grouping, keyboard search, and hibernation fix the problem at the source.">
+  <title data-i18n="blog.stopLosing.title">How to stop losing tabs when you have 90+ open — Takt</title>
+  <meta name="description" data-i18n-attr="content:blog.stopLosing.metaDescription" content="A flat tab bar with 90 entries is unusable. Rules-based auto-grouping, keyboard search, and hibernation fix the problem at the source.">
 
   <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon-16.png">
@@ -18,131 +18,132 @@
   <link rel="stylesheet" href="../css/blog.css">
 
   <script src="../js/theme.js"></script>
+  <script type="module" src="../js/i18n.js"></script>
 </head>
 <body>
   <header id="site-header"></header>
 
   <main class="blog-main">
     <article class="blog-post">
-      <h1 class="blog-post-title">How to stop losing tabs when you have 90+ open</h1>
-      <p class="blog-post-meta">June 2026 · 4 min read</p>
+      <h1 class="blog-post-title" data-i18n="blog.stopLosing.h1">How to stop losing tabs when you have 90+ open</h1>
+      <p class="blog-post-meta" data-i18n="blog.stopLosing.meta">June 2026 · 4 min read</p>
       <div class="blog-post-body">
-        <p>
+        <p data-i18n="blog.stopLosing.lede">
           Open a few tabs for a task. Open more for a second task. At the end of the day, you have
           90 tabs across two windows and no idea which one has the doc you were reading an hour ago.
         </p>
-        <p>
+        <p data-i18n="blog.stopLosing.p.1">
           The tab bar is useless at that count: titles are truncated to a favicon, scrolling through
           them is slower than searching your history. Chrome's built-in tab search is several clicks
           away and doesn't solve the real issue: nothing is organized.
         </p>
-        <p>
+        <p data-i18n="blog.stopLosing.p.2">
           That's where <a href="https://taktabs.com">Takt</a> helps you. It's a <a href="https://chromewebstore.google.com/detail/takt/plgfdnbgkjocmgegnkbihoeojcfphdic">Chrome extension</a> that
           auto-groups tabs by URL rules, finds any tab with a keyboard shortcut, and hibernates the
           ones you forgot about. Here's how it works in practice.
         </p>
-        <p>
+        <p data-i18n="blog.stopLosing.p.3">
           Note: some of the features describes below are for the <a href="https://taktabs.com/#pricing">Premium plan</a>.
         </p>
-        <h2>Manual grouping doesn't last</h2>
-        <p>
+        <h2 data-i18n="blog.stopLosing.h2.1">Manual grouping doesn't last</h2>
+        <p data-i18n="blog.stopLosing.p.4">
           Having 90 tabs open is fine. Having 90 tabs in a flat, unsorted list is not.
         </p>
-        <p>
+        <p data-i18n="blog.stopLosing.p.5">
           Chrome's native tab groups help, but creating them manually isn't sustained in the long
           run. You group a few tabs, forget for an hour, and the next 20 tabs land outside every
           group.
         </p>
-        <p>
+        <p data-i18n="blog.stopLosing.p.6">
           The fix is making grouping automatic. Instead of dragging tabs into groups after the fact,
           you define rules once and let every new tab sort itself.
         </p>
 
-        <h2>Create a rule in Takt, tabs sort themselves</h2>
-        <p>
+        <h2 data-i18n="blog.stopLosing.h2.2">Create a rule in Takt, tabs sort themselves</h2>
+        <p data-i18n="blog.stopLosing.p.7">
           Open the Takt popup, go on the rules section, click "Manage rules" and then press "+ New rule" button. Three fields:
         </p>
         <ol>
-          <li><strong>Rule name</strong> - what the tab group will be labeled: "Dev."</li>
-          <li><strong>Conditions</strong> - the URL to match. For domain matching, just enter <code>github.com</code>.</li>
-          <li><strong>Group name</strong> - what group will the rule belong to.</li>
-          <li><strong>Color</strong> - pick from Chrome's eight group colors.</li>
-          <li><strong>Auto-collapse group</strong> - select to auto-collapse a group when creating it.</li>
-          <li><strong>Prevent duplicate tabs in this group</strong> - well, the name speaks for itself :).</li>
+          <li data-i18n="blog.stopLosing.li.rule.1"><strong>Rule name</strong> - what the tab group will be labeled: "Dev."</li>
+          <li data-i18n="blog.stopLosing.li.rule.2"><strong>Conditions</strong> - the URL to match. For domain matching, just enter <code>github.com</code>.</li>
+          <li data-i18n="blog.stopLosing.li.rule.3"><strong>Group name</strong> - what group will the rule belong to.</li>
+          <li data-i18n="blog.stopLosing.li.rule.4"><strong>Color</strong> - pick from Chrome's eight group colors.</li>
+          <li data-i18n="blog.stopLosing.li.rule.5"><strong>Auto-collapse group</strong> - select to auto-collapse a group when creating it.</li>
+          <li data-i18n="blog.stopLosing.li.rule.6"><strong>Prevent duplicate tabs in this group</strong> - well, the name speaks for itself :).</li>
         </ol>
         <figure>
-          <img src="../assets/screenshots/rule-creation-blogpost.png" alt="Takt rule creation" loading="lazy">
-          <figcaption>Takt rule creation.</figcaption>
+          <img data-i18n-attr="alt:blog.stopLosing.fig.1.alt" src="../assets/screenshots/rule-creation-blogpost.png" alt="Takt rule creation" loading="lazy">
+          <figcaption data-i18n="blog.stopLosing.fig.1.caption">Takt rule creation.</figcaption>
         </figure>
-        <p>
+        <p data-i18n="blog.stopLosing.p.8">
           Save. Every open GitHub tab moves into a green "Dev" group immediately. Every future
           GitHub tab you open today, tomorrow, next week lands there automatically. No more manual overload.
         </p>
-        
-        <h2>What a practical setup looks like</h2>
-        <p>
+
+        <h2 data-i18n="blog.stopLosing.h2.3">What a practical setup looks like</h2>
+        <p data-i18n="blog.stopLosing.p.9">
           Most people's tab habits fall into four or five buckets. Here's a setup that takes
           about a minute to do:
         </p>
         <ul>
-          <li><strong>Dev</strong> (green) — github.com, gitlab.com, stackoverflow.com</li>
-          <li><strong>Comms</strong> (yellow) — Slack, Gmail, Calendar</li>
-          <li><strong>Entertainment</strong> (blue) — Spotify, YouTube, YouTube Music</li>
-          <li><strong>Social</strong> (purple) — linkedin.com, facebook.com, x.com, reddit.com</li>
+          <li data-i18n="blog.stopLosing.li.setup.1"><strong>Dev</strong> (green) — github.com, gitlab.com, stackoverflow.com</li>
+          <li data-i18n="blog.stopLosing.li.setup.2"><strong>Comms</strong> (yellow) — Slack, Gmail, Calendar</li>
+          <li data-i18n="blog.stopLosing.li.setup.3"><strong>Entertainment</strong> (blue) — Spotify, YouTube, YouTube Music</li>
+          <li data-i18n="blog.stopLosing.li.setup.4"><strong>Social</strong> (purple) — linkedin.com, facebook.com, x.com, reddit.com</li>
         </ul>
-        <p>
+        <p data-i18n="blog.stopLosing.p.10">
           Four rules. Your tab bar goes from 90 grey favicons to four color-coded groups. Click
           "Group All" in the Takt popup (or use the keyboard shortcut Alt/Option+Shift+G) and every open tab that matches a rule sorts itself in one
           pass.
         </p>
 
-        <h2>Find any tab with Alt+Shift+Space</h2>
-        <p>
+        <h2 data-i18n="blog.stopLosing.h2.4">Find any tab with Alt+Shift+Space</h2>
+        <p data-i18n="blog.stopLosing.p.11">
           Organization is half the problem. The other half is retrieval: jumping to a specific tab fast.
         </p>
-        <p>
+        <p data-i18n="blog.stopLosing.p.12">
           Press <kbd>Alt/Option+Shift+Space</kbd> anywhere in Chrome. Takt opens a fuzzy-search overlay,
           type a few letters of any tab's title or URL and jump directly to it. No scrolling, no
           group scanning, just a quick access.
         </p>
         <figure>
-          <img src="../assets/screenshots/quick-search-blogpost.png" alt="Takt quick Search pop-up" loading="lazy">
-          <figcaption>Takt Quick Search.</figcaption>
+          <img data-i18n-attr="alt:blog.stopLosing.fig.2.alt" src="../assets/screenshots/quick-search-blogpost.png" alt="Takt quick Search pop-up" loading="lazy">
+          <figcaption data-i18n="blog.stopLosing.fig.2.caption">Takt Quick Search.</figcaption>
         </figure>
-        <p>
+        <p data-i18n="blog.stopLosing.p.13">
           The search covers all open tabs, your browsing history, and hibernated tabs. At 90+ tabs,
           this is consistently faster than any visual scan.
         </p>
 
-        <h2>Reclaim memory from forgotten tabs</h2>
-        <p>
+        <h2 data-i18n="blog.stopLosing.h2.5">Reclaim memory from forgotten tabs</h2>
+        <p data-i18n="blog.stopLosing.p.14">
           Tabs you forgot about still consume memory. A browser with 60 tabs can easily use 4-6 GB
           of RAM, and most of it goes to tabs you haven't looked at in hours.
         </p>
-        <p>
+        <p data-i18n="blog.stopLosing.p.15">
           Takt's hibernation closes idle tabs while preserving their state: URL, title, group,
           scroll position. Memory is reclaimed the moment the tab closes. Wake any tab with one
           click and it returns exactly where you left it.
         </p>
-        <p>
+        <p data-i18n="blog.stopLosing.p.16">
           Set an idle threshold and Takt hibernates tabs automatically. Your active workspace stays
           lean. Your idle tabs aren't costing you anything.
         </p>
         <figure>
-          <img src="../assets/screenshots/takt-tab-management.png" alt="Takt tab lifecycle" loading="lazy">
-          <figcaption>Takt tab lifecycle.</figcaption>
+          <img data-i18n-attr="alt:blog.stopLosing.fig.3.alt" src="../assets/screenshots/takt-tab-management.png" alt="Takt tab lifecycle" loading="lazy">
+          <figcaption data-i18n="blog.stopLosing.fig.3.caption">Takt tab lifecycle.</figcaption>
         </figure>
-        <h2>The result</h2>
-        <p>
+        <h2 data-i18n="blog.stopLosing.h2.6">The result</h2>
+        <p data-i18n="blog.stopLosing.p.17">
           One minute of setup. Zero minutes of ongoing maintenance. Your tab bar is color-coded by
           context, any tab is a few keystrokes away, and idle tabs are asleep instead of eating RAM.
         </p>
-        <p>
+        <p data-i18n="blog.stopLosing.cta.1">
           <a href="https://chromewebstore.google.com/detail/takt/plgfdnbgkjocmgegnkbihoeojcfphdic">Add Takt to Chrome</a> it's free, no account needed. Nothing leaves your browser.
         </p>
       </div>
       <footer class="blog-post-footer">
-        <a href="../blog/">Back to blog</a>
+        <a data-i18n="blog.stopLosing.footer.back" href="../blog/">Back to blog</a>
       </footer>
     </article>
   </main>
