@@ -136,6 +136,7 @@
   "docs.sidebar.rules": "Rule Reference",
   "docs.sidebar.duplicates": "Duplicate Prevention",
   "docs.sidebar.groupActions": "Group Actions",
+  "docs.sidebar.groupByCategory": "Group by Category",
   "docs.sidebar.autoCollapse": "Auto-collapse",
   "docs.sidebar.resources": "Resource Dashboard",
   "docs.sidebar.profiles": "Profiles & Schedules",
