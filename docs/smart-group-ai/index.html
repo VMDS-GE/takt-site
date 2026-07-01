@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Smart Group with AI — Takt</title>
+    <meta name="description" content="Use Chrome's on-device Prompt API to group tabs by meaning — no rules, no internet connection required." />
+
+    <link rel="icon" type="image/png" sizes="32x32" href="../../assets/favicon-32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="../../assets/favicon-16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="../../assets/apple-touch-icon.png" />
+
+    <meta name="theme-color" content="#FF3B30" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../../css/tokens.css" />
+    <link rel="stylesheet" href="../../css/base.css" />
+    <link rel="stylesheet" href="../../css/layout.css" />
+    <link rel="stylesheet" href="../../css/docs.css" />
+
+    <script src="../../js/theme.js"></script>
+    <script type="module" src="../../js/i18n.js"></script>
+  </head>
+  <body>
+    <header id="site-header"></header>
+
+    <div class="docs-layout">
+      <aside class="docs-sidebar">
+        <h4 data-i18n="docs.sidebar.heading">Documentation</h4>
+        <ul>
+          <li><a href="../../getting-started/" data-i18n="docs.sidebar.gettingStarted">Getting Started</a></li>
+          <li><a href="../rules/" data-i18n="docs.sidebar.rules">Rule Reference</a></li>
+          <li><a href="../duplicates/" data-i18n="docs.sidebar.duplicates">Duplicate Prevention</a></li>
+          <li><a href="../group-actions/" data-i18n="docs.sidebar.groupActions">Group Actions</a></li>
+          <li><a href="../group-by-category/" data-i18n="docs.sidebar.groupByCategory">Group by Category</a></li>
+          <li><a href="./" class="active" data-i18n="docs.sidebar.smartGroupAi">Smart Group with AI</a></li>
+          <li><a href="../auto-collapse/" data-i18n="docs.sidebar.autoCollapse">Auto-collapse</a></li>
+          <li><a href="../resources/" data-i18n="docs.sidebar.resources">Resource Dashboard</a></li>
+          <li><a href="../profiles/" data-i18n="docs.sidebar.profiles">Profiles &amp; Schedules</a></li>
+          <li><a href="../sessions/" data-i18n="docs.sidebar.sessions">Sessions</a></li>
+          <li><a href="../hibernation/" data-i18n="docs.sidebar.hibernation">Hibernation</a></li>
+          <li><a href="../sync/" data-i18n="docs.sidebar.sync">File Sync</a></li>
+          <li><a href="../drive-sync/" data-i18n="docs.sidebar.driveSync">Drive Sync</a></li>
+          <li><a href="../shortcuts/" data-i18n="docs.sidebar.shortcuts">Keyboard Shortcuts</a></li>
+          <li><a href="../quick-switch/" data-i18n="docs.sidebar.quickSwitch">Quick Switch</a></li>
+          <li><a href="../insights/" data-i18n="docs.sidebar.insights">Insights &amp; Suggestions</a></li>
+          <li><a href="../permissions/" data-i18n="docs.sidebar.permissions">Permissions</a></li>
+        </ul>
+      </aside>
+
+      <main class="docs-content">
+        <h1>Smart Group with AI</h1>
+        <p class="lead">
+          Let Chrome's on-device AI read your tabs and invent semantic groups — no rules, no fixed
+          categories, no internet connection.
+        </p>
+
+        <h2 id="overview"><span data-i18n="docs.smartGroupAi.overview.heading">Overview</span> <a href="#overview" class="anchor-link">#</a></h2>
+        <p>
+          Smart Group with AI uses Chrome's built-in Prompt API to analyze tab titles and page
+          content, then groups tabs by meaning. Unlike Group by Category (which maps domains to a
+          fixed taxonomy), Smart Group with AI invents its own group labels from the actual content
+          of your open tabs. The result is dynamic, context-aware grouping that adapts to whatever
+          you are working on. Smart Group with AI is available to all Takt users — Free tier
+          included.
+        </p>
+
+        <h2 id="how"><span data-i18n="docs.smartGroupAi.how.heading">How it works</span> <a href="#how" class="anchor-link">#</a></h2>
+        <p>
+          When you trigger Smart Group with AI, Takt sends each tab's title and a short excerpt of
+          its page content to Chrome's on-device Prompt API (powered by Gemini Nano). The model
+          returns a semantic label for each tab. Takt collects those labels, deduplicates them, and
+          batches tabs into Chrome tab groups using the model-generated names.
+        </p>
+        <p>
+          Because the model runs entirely on your device, grouping happens in seconds without any
+          network round-trip. The group labels change every time you run the feature — they reflect
+          the current state of your open tabs, not a fixed list.
+        </p>
+
+        <h2 id="enable"><span data-i18n="docs.smartGroupAi.enable.heading">How to enable</span> <a href="#enable" class="anchor-link">#</a></h2>
+        <p>
+          Chrome's on-device Prompt API must be enabled before Takt can use it. Follow these steps
+          to activate it:
+        </p>
+        <ol>
+          <li>
+            Open Chrome and navigate to
+            <code>chrome://on-device-internals</code> — paste this into your address bar (you
+            cannot click a link to a <code>chrome://</code> address from a web page).
+          </li>
+          <li>
+            On the on-device AI page, check that the <strong>Gemini Nano</strong> model status is
+            <strong>Available</strong>. If it shows <strong>Not installed</strong>, click
+            <strong>Download</strong> and wait for the model to finish installing.
+          </li>
+          <li>
+            If the Prompt API is still not available, open
+            <code>chrome://flags/#optimization-guide-on-device-model</code> and set the flag to
+            <strong>Enabled BypassPerfRequirement</strong>, then relaunch Chrome.
+          </li>
+          <li>
+            Return to Takt and trigger Smart Group with AI. Takt checks API availability on each
+            invocation and will activate the full AI path once the model is ready.
+          </li>
+        </ol>
+
+        <h2 id="fallback"><span data-i18n="docs.smartGroupAi.fallback.heading">Semantic fallback</span> <a href="#fallback" class="anchor-link">#</a></h2>
+        <p>
+          If the Prompt API is unavailable on your device — because the model has not been
+          downloaded, the hardware does not meet Chrome's requirements, or you are running an older
+          Chrome version — Takt automatically falls back to a semantic similarity algorithm. The
+          fallback clusters tabs by computing similarity scores across tab titles and snippets, then
+          groups tabs whose content is closest to each other.
+        </p>
+        <p>
+          The fallback fires silently, with no user action required. You still get AI-like grouping
+          — just without the on-device language model. Both paths produce dynamic, content-aware
+          groups; the model-backed path typically produces more descriptive labels.
+        </p>
+
+        <h2 id="privacy"><span data-i18n="docs.smartGroupAi.privacy.heading">Privacy</span> <a href="#privacy" class="anchor-link">#</a></h2>
+        <p>
+          All processing happens on-device. Tab titles and page content are passed to the Prompt
+          API running locally inside Chrome — no data leaves the browser. Takt does not send any
+          tab content to Anthropic, Google, or any external server. The Gemini Nano model itself is
+          downloaded from Google when you install it, but inference runs entirely in your local
+          Chrome process.
+        </p>
+
+        <h2 id="gotchas"><span data-i18n="docs.smartGroupAi.gotchas.heading">Edge cases &amp; gotchas</span> <a href="#gotchas" class="anchor-link">#</a></h2>
+        <ul>
+          <li>
+            <strong>Chrome 127+ required.</strong> The Prompt API is only available in Chrome 127
+            and later. If you are on an older version, Takt will use the semantic fallback
+            automatically.
+          </li>
+          <li>
+            <strong>Model download required.</strong> Gemini Nano must be installed before the
+            Prompt API activates. The download is a one-time step; once installed, the model
+            persists across Chrome sessions.
+          </li>
+          <li>
+            <strong>Hardware requirements.</strong> Chrome imposes minimum hardware requirements
+            for on-device AI. Most modern laptops and desktops qualify; older or low-powered
+            devices may not. The semantic fallback fires automatically if your device does not meet
+            the threshold.
+          </li>
+          <li>
+            <strong>Labels change each run.</strong> Smart Group with AI generates labels from the
+            current content of your tabs. Running the feature twice on the same set of tabs may
+            produce slightly different group names.
+          </li>
+          <li>
+            <strong>Free tier — no Premium gate.</strong> Smart Group with AI is available to all
+            Takt users. No subscription is required to access either the Prompt API path or the
+            semantic fallback. Free users get the full feature.
+          </li>
+        </ul>
+
+        <div class="docs-nav-prev-next">
+          <a href="../group-by-category/">&larr; Group by Category</a>
+          <a href="../auto-collapse/" class="next">Auto-collapse &rarr;</a>
+        </div>
+      </main>
+    </div>
+
+    <footer id="site-footer"></footer>
+    <script src="../../js/includes.js"></script>
+    <script src="../../js/nav.js"></script>
+  </body>
+</html>
