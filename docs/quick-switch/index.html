@@ -104,7 +104,7 @@
         </ul>
 
         <h2 id="ranking"><span data-i18n="docs.quickSwitch.ranking.heading">How results are ranked</span> <a href="#ranking" class="anchor-link">#</a></h2>
-        <p data-i18n="docs.quickSwitch.ranking.intro">Results appear in three groups, always in this order:</p>
+        <p data-i18n="docs.quickSwitch.ranking.intro">Results appear in four groups, always in this order:</p>
         <ol>
           <li>
             <strong>Open tabs</strong> — returned by <code>chrome.tabs.query({})</code> in Chrome's
@@ -118,11 +118,38 @@
             <strong>History results</strong> — returned by <code>chrome.history.search</code> using
             Chrome's built-in relevance and recency ranking. Up to 20 history items are shown.
           </li>
+          <li data-i18n="docs.quickSwitch.ranking.liDownloads">
+            <strong>Downloads</strong> — filenames of completed downloads, returned by
+            chrome.downloads.search. Up to 20 downloads are shown, and only when the Downloads
+            source is enabled.
+          </li>
         </ol>
         <p data-i18n="docs.quickSwitch.ranking.p2">
           Takt does not apply any additional scoring or re-ordering beyond what Chrome provides. The
-          combined list is always ordered: open tabs → hibernated tabs → history items.
+          combined list is always ordered: open tabs → hibernated tabs → history items → downloads.
         </p>
+
+        <h2 id="downloads"><span data-i18n="docs.quickSwitch.downloads.heading">Downloads search source</span> <a href="#downloads" class="anchor-link">#</a></h2>
+        <p data-i18n="docs.quickSwitch.downloads.p1">
+          Quick Switch can search the filenames of your completed downloads. It is a Premium feature
+          and requires granting the optional Downloads permission.
+        </p>
+        <h3><span data-i18n="docs.quickSwitch.downloads.permission.heading">Granting the Downloads permission</span></h3>
+        <p data-i18n="docs.quickSwitch.downloads.permission.p1">
+          Grant the optional Downloads permission from Options → Settings → Permissions. The
+          Downloads permission can be revoked; revoking it removes the Downloads source.
+        </p>
+        <h3><span data-i18n="docs.quickSwitch.downloads.privacy.heading">Privacy</span></h3>
+        <p>
+          The search runs on-device via <code>chrome.downloads.search</code> and filenames never
+          leave the browser.
+        </p>
+        <ul>
+          <li data-i18n="docs.quickSwitch.downloads.liFilenames">Only filenames are searched, not file contents.</li>
+          <li data-i18n="docs.quickSwitch.downloads.liQueryOnly">Downloads appear only when you are typing a query, not in the default unfiltered list.</li>
+          <li data-i18n="docs.quickSwitch.downloads.liOpenFile">Selecting a download result opens the file locally, not a browser tab.</li>
+          <li data-i18n="docs.quickSwitch.downloads.liLimit">Up to 20 download results are shown, and only files that still exist on disk.</li>
+        </ul>
 
         <h2 id="tiers"><span data-i18n="docs.quickSwitch.tiers.heading">Free vs Premium</span> <a href="#tiers" class="anchor-link">#</a></h2>
         <p data-i18n="docs.quickSwitch.tiers.p1">
@@ -135,7 +162,9 @@
           For Premium users, Quick Switch searches open tabs and hibernated tabs by default. To also
           include browsing history results, grant the optional <strong>History</strong> permission
           from Options → Settings → Permissions. Without the History permission, Quick Switch is
-          fully functional but no history results appear.
+          fully functional but no history results appear. The Downloads source is also Premium-gated
+          and requires the optional Downloads permission (grant via Options → Settings →
+          Permissions).
         </p>
 
         <h2 id="gotchas"><span data-i18n="docs.quickSwitch.gotchas.heading">Edge cases and gotchas</span> <a href="#gotchas" class="anchor-link">#</a></h2>
