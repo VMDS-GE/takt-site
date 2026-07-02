@@ -9,7 +9,15 @@
  * Only the pure helpers in i18n-helpers.js are unit-tested. This controller
  * requires a DOM + fetch + localStorage and is verified via manual browser preview.
  *
+ * Trust boundary: docs/locales/*.json files are trusted HTML content. They are
+ * checked into the repository, reviewed by humans, and served from the same
+ * origin as the pages. No user-generated content ever flows into these files.
+ * The innerHTML assignment in applyTranslations is therefore safe. Do NOT use
+ * innerHTML on values coming from any dynamic source (URL params, form input,
+ * postMessage, etc.).
+ *
  * Feature #86 — Website i18n Infrastructure
+ * Feature #162 — text branch switched to innerHTML (trusted catalog, fallback preserves child elements)
  */
 
 import {
@@ -60,7 +68,9 @@ function getBasePath() {
 function applyTranslations(catalog) {
   var textEls = document.querySelectorAll('[data-i18n]');
   textEls.forEach(function (el) {
-    el.textContent = lookupKey(catalog, el.dataset.i18n, el.textContent);
+    var current = el.innerHTML;
+    var next = lookupKey(catalog, el.dataset.i18n, current);
+    if (next !== current) el.innerHTML = next;
   });
 
   var attrEls = document.querySelectorAll('[data-i18n-attr]');
