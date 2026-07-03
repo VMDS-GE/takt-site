@@ -51,21 +51,14 @@
       </aside>
 
       <main class="docs-content">
-        <h1>Group by Category</h1>
-        <p class="lead">
-          Automatically sort all your open tabs into named category groups — no rule setup required.
-        </p>
+        <h1 data-i18n="docs.sidebar.groupByCategory">Group by Category</h1>
+        <p class="lead" data-i18n="docs.groupByCategory.lead">Automatically sort all your open tabs into named category groups — no rule setup required.</p>
 
-        <h2 id="overview"><span>Overview</span> <a href="#overview" class="anchor-link">#</a></h2>
-        <p>
-          Group by Category organizes your open tabs into named tab groups based on the domain of
-          each tab's URL. Takt maps each domain to one of 20 built-in categories and groups all
-          matching tabs together in one pass. No rules are needed — every tab is automatically placed
-          into a category group. Group by Category is available to all users, including the free tier.
-        </p>
+        <h2 id="overview"><span data-i18n="docs.groupByCategory.overview.heading">Overview</span> <a href="#overview" class="anchor-link">#</a></h2>
+        <p data-i18n="docs.groupByCategory.overview.body">Group by Category organizes your open tabs into named tab groups based on the domain of each tab's URL. Takt maps each domain to one of 20 built-in categories and groups all matching tabs together in one pass. No rules are needed — every tab is automatically placed into a category group. Group by Category is available to all users, including the free tier.</p>
 
-        <h2 id="categories"><span>Categories</span> <a href="#categories" class="anchor-link">#</a></h2>
-        <p>Takt recognizes 20 named categories. Each category covers a set of well-known domains:</p>
+        <h2 id="categories"><span data-i18n="docs.groupByCategory.categories.heading">Categories</span> <a href="#categories" class="anchor-link">#</a></h2>
+        <p data-i18n="docs.groupByCategory.categories.intro">Takt recognizes 20 named categories. Each category covers a set of well-known domains:</p>
         <ul>
           <li><strong>Development</strong> — github.com, stackoverflow.com, npmjs.com, gitlab.com</li>
           <li><strong>AI Tools</strong> — claude.ai, chat.openai.com, huggingface.co</li>
@@ -88,44 +81,26 @@
           <li><strong>Education</strong> — coursera.org, udemy.com, khanacademy.org, duolingo.com</li>
           <li><strong>Cloud</strong> — aws.amazon.com, cloud.google.com, azure.microsoft.com, cloudflare.com</li>
         </ul>
-        <p>Tabs that do not match any category are placed in an <strong>Other</strong> group.</p>
+        <p><span data-i18n="docs.groupByCategory.categories.otherPrefix">Tabs that do not match any category are placed in an </span><strong>Other</strong><span data-i18n="docs.groupByCategory.categories.otherSuffix"> group.</span></p>
 
-        <h2 id="how"><span>How it works</span> <a href="#how" class="anchor-link">#</a></h2>
-        <p>
-          When you run Group by Category, Takt performs a host lookup for each open tab's URL
-          against the built-in taxonomy:
-        </p>
+        <h2 id="how"><span data-i18n="docs.groupByCategory.how.heading">How it works</span> <a href="#how" class="anchor-link">#</a></h2>
+        <p data-i18n="docs.groupByCategory.how.intro">When you run Group by Category, Takt performs a host lookup for each open tab's URL against the built-in taxonomy:</p>
         <ol>
-          <li><strong>Exact lookup</strong> — Takt checks whether the tab's hostname matches an entry in the taxonomy directly.</li>
-          <li><strong>Parent-domain walk</strong> — If the exact host is not found, Takt strips the leftmost subdomain label and retries. This repeats until a match is found or the apex domain is reached.</li>
+          <li><strong><span data-i18n="docs.groupByCategory.how.exact.label">Exact lookup</span></strong><span data-i18n="docs.groupByCategory.how.exact.desc"> — Takt checks whether the tab's hostname matches an entry in the taxonomy directly.</span></li>
+          <li><strong><span data-i18n="docs.groupByCategory.how.parentWalk.label">Parent-domain walk</span></strong><span data-i18n="docs.groupByCategory.how.parentWalk.desc"> — If the exact host is not found, Takt strips the leftmost subdomain label and retries. This repeats until a match is found or the apex domain is reached.</span></li>
         </ol>
         <p>
           For example: a tab at <code>docs.github.com</code> is not in the taxonomy directly.
           Takt strips the subdomain to get <code>github.com</code>, which maps to
           <strong>Development</strong>. The tab is placed in the Development group.
         </p>
-        <p>
-          Takt creates groups largest first: the category with the most tabs becomes the first
-          group, then the next largest, proceeding in decreasing size order. Single tabs that are
-          the only member of their category stay ungrouped. On the Free plan, a single run creates
-          up to 5 groups — the 5 largest categories — and any remaining smaller categories stay
-          ungrouped.
-        </p>
+        <p data-i18n="docs.groupByCategory.how.largestFirst">Takt creates groups largest first: the category with the most tabs becomes the first group, then the next largest, proceeding in decreasing size order. Single tabs that are the only member of their category stay ungrouped. On the Free plan, a single run creates up to 5 groups — the 5 largest categories — and any remaining smaller categories stay ungrouped.</p>
 
-        <h2 id="other"><span>Other group</span> <a href="#other" class="anchor-link">#</a></h2>
-        <p>
-          Any tab whose URL host does not match any taxonomy entry (even after the parent-domain
-          walk) is placed in the <strong>Other</strong> group. Nothing is dropped or hidden —
-          every tab lands somewhere. Tabs with no recognisable hostname
-          (such as <code>chrome://newtab</code>, <code>about:blank</code>, or unparseable URLs)
-          also fall to Other.
-        </p>
+        <h2 id="other"><span data-i18n="docs.groupByCategory.other.heading">Other group</span> <a href="#other" class="anchor-link">#</a></h2>
+        <p><span data-i18n="docs.groupByCategory.other.bodyPrefix">Any tab whose URL host does not match any taxonomy entry (even after the parent-domain walk) is placed in the </span><strong>Other</strong><span data-i18n="docs.groupByCategory.other.bodyMid"> group. Nothing is dropped or hidden — every tab lands somewhere. Tabs with no recognisable hostname (such as </span><code>chrome://newtab</code>, <code>about:blank</code><span data-i18n="docs.groupByCategory.other.bodySuffix">, or unparseable URLs) also fall to Other.</span></p>
 
-        <h2 id="invoke"><span>How to invoke</span> <a href="#invoke" class="anchor-link">#</a></h2>
-        <p>
-          Click the <strong>Group by Category</strong> button in the Takt popup to group all open
-          tabs instantly. For programmatic access, you can also invoke it via the Takt message bus:
-        </p>
+        <h2 id="invoke"><span data-i18n="docs.groupByCategory.invoke.heading">How to invoke</span> <a href="#invoke" class="anchor-link">#</a></h2>
+        <p><span data-i18n="docs.groupByCategory.invoke.bodyPrefix">Click the </span><strong>Group by Category</strong><span data-i18n="docs.groupByCategory.invoke.bodyMid"> button in the Takt popup to group all open tabs instantly. For programmatic access, you can also invoke it via the Takt message bus:</span></p>
         <pre><code>chrome.runtime.sendMessage({ action: 'organizeAllByCategory' });</code></pre>
         <p>
           The call returns <code>{ success: true, data: { organized, groups } }</code> where
@@ -133,44 +108,36 @@
           of groups created.
         </p>
 
-        <h2 id="tiers"><span>Availability <span style="color: var(--muted); font-weight: 400; font-size: 0.85rem;">Free</span></span> <a href="#tiers" class="anchor-link">#</a></h2>
-        <p>
+        <h2 id="tiers"><span data-i18n="docs.groupByCategory.tiers.heading">Availability</span> <span style="color: var(--muted); font-weight: 400; font-size: 0.85rem;">Free</span> <a href="#tiers" class="anchor-link">#</a></h2>
+        <p data-i18n="docs.groupByCategory.tiers.body">
           Group by Category is a free feature available to all Takt users. No Premium subscription
           is required. All 20 category groups are available, but on the Free tier each run is
           capped at 5 groups (the 5 largest buckets are kept); Premium unlocks unlimited groups
           per run.
         </p>
 
-        <h2 id="gotchas"><span>Edge cases &amp; gotchas</span> <a href="#gotchas" class="anchor-link">#</a></h2>
+        <h2 id="gotchas"><span data-i18n="docs.groupByCategory.gotchas.heading">Edge cases &amp; gotchas</span> <a href="#gotchas" class="anchor-link">#</a></h2>
         <ul>
           <li>
-            <strong>Subdomains inherit their parent category.</strong> A tab at
+            <strong><span data-i18n="docs.groupByCategory.gotchas.subdomains.label">Subdomains inherit their parent category.</span></strong> A tab at
             <code>docs.github.com</code> is placed in Development, not Other, because the
             parent-domain walk resolves <code>github.com</code> → Development.
           </li>
           <li>
-            <strong>No recognisable hostname → Other.</strong> Tabs like <code>chrome://newtab</code>,
+            <strong><span data-i18n="docs.groupByCategory.gotchas.noHostname.label">No recognisable hostname → Other.</span></strong> Tabs like <code>chrome://newtab</code>,
             <code>about:blank</code>, extension pages, or any URL that cannot be parsed fall to Other.
           </li>
           <li>
-            <strong>Category labels cannot be renamed via Takt's rule UI.</strong> The group name
-            comes from the built-in taxonomy. You can rename the Chrome tab group manually after
-            organizing, but Takt will use the canonical name again next time you run Group by Category.
+            <strong><span data-i18n="docs.groupByCategory.gotchas.noRename.label">Category labels cannot be renamed via Takt's rule UI.</span></strong><span data-i18n="docs.groupByCategory.gotchas.noRename.desc"> The group name comes from the built-in taxonomy. You can rename the Chrome tab group manually after organizing, but Takt will use the canonical name again next time you run Group by Category.</span>
           </li>
           <li>
-            <strong>Multiple categories may share a color.</strong> Takt assigns one of Chrome's
-            eight tab group colors to each category, but 20 categories share only 8 colors. The label
-            is the identity — not the color. Two groups with the same color are still distinct groups.
+            <strong><span data-i18n="docs.groupByCategory.gotchas.sharedColor.label">Multiple categories may share a color.</span></strong><span data-i18n="docs.groupByCategory.gotchas.sharedColor.desc"> Takt assigns one of Chrome's eight tab group colors to each category, but 20 categories share only 8 colors. The label is the identity — not the color. Two groups with the same color are still distinct groups.</span>
           </li>
           <li>
-            <strong>Only the URL host is used.</strong> No page content is read. Category matching
-            is based entirely on the hostname extracted from each tab's URL, not on the page title,
-            page body, or any other content.
+            <strong><span data-i18n="docs.groupByCategory.gotchas.hostOnly.label">Only the URL host is used.</span></strong><span data-i18n="docs.groupByCategory.gotchas.hostOnly.desc"> No page content is read. Category matching is based entirely on the hostname extracted from each tab's URL, not on the page title, page body, or any other content.</span>
           </li>
           <li>
-            <strong>The category list is static.</strong> Users cannot add custom categories or
-            modify the taxonomy in this release. The built-in list covers the 20 most common browsing
-            contexts; additional categories may be added in future releases.
+            <strong><span data-i18n="docs.groupByCategory.gotchas.staticList.label">The category list is static.</span></strong><span data-i18n="docs.groupByCategory.gotchas.staticList.desc"> Users cannot add custom categories or modify the taxonomy in this release. The built-in list covers the 20 most common browsing contexts; additional categories may be added in future releases.</span>
           </li>
         </ul>
 
