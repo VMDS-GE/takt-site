@@ -36,34 +36,32 @@
           Compound rules in Takt let you match on URL <strong>and</strong> title (or any combination,
           AND/OR). That covers the cases a single-condition rule can't.
         </p>
-        <p data-i18n="blog.compound.p.2">
-          This is a <a href="https://taktabs.com/#pricing">Premium</a> feature.
-        </p>
+        <div><span data-i18n="blog.compound.p.2.before">This is a</span> <a href="https://taktabs.com/#pricing">Premium</a> <span data-i18n="blog.compound.p.2.after">feature.</span></div>
 
         <h2 data-i18n="blog.compound.h2.1">When a single condition isn't enough</h2>
-        <p data-i18n="blog.compound.p.3">
+        <div data-i18n="blog.compound.p.3">
           A few real cases where URL alone doesn't tell you which group a tab belongs to:
-        </p>
+        </div>
         <ul>
           <li data-i18n="blog.compound.li.single.1"><strong>GitHub/GitLab PRs/MRs you authored vs PRs/MRs you're reviewing.</strong> Same domain, same pull path but different mental context. Authoring is "in flight." Reviewing is "todo."</li>
           <li data-i18n="blog.compound.li.single.2"><strong>Google Docs drafts vs published docs.</strong> Same <code>docs.google.com</code>. The title is <code>[DRAFT] X</code> or <code>X</code> for example.</li>
           <li data-i18n="blog.compound.li.single.3"><strong>Linear issues assigned to you vs everyone else's.</strong> Same workspace URL. Title contains your name or doesn't.</li>
           <li data-i18n="blog.compound.li.single.4"><strong>Slack channels by team.</strong> Same <code>app.slack.com</code>. The title carries the channel name: <code>#eng-backend - Acme Slack</code>.</li>
         </ul>
-        <p data-i18n="blog.compound.p.4">
+        <div data-i18n="blog.compound.p.4">
           Each of these needs two pieces of info to sort correctly. Those are just examples that are
           highly software-development oriented, but you can apply the same principles to many other
           domains that are not necessarily related to a particular profession.
-        </p>
+        </div>
 
         <h2 data-i18n="blog.compound.h2.2">How a compound rule looks</h2>
-        <p data-i18n="blog.compound.p.5">
+        <div data-i18n="blog.compound.p.5">
           Open Takt, go to "Manage rules," click "+ New rule." Switch the condition block to
           <strong>AND</strong> (or <strong>OR</strong>, depending on what you need). Add multiple conditions.
-        </p>
-        <p data-i18n="blog.compound.p.6">
+        </div>
+        <div data-i18n="blog.compound.p.6">
           Example with a "My open PRs" rule:
-        </p>
+        </div>
         <ul>
           <li data-i18n="blog.compound.li.howLooks.1"><strong>Condition 1:</strong> URL contains <code>github.com/{yourusername}/{yourrepository}/pull/</code></li>
           <li data-i18n="blog.compound.li.howLooks.2"><strong>Condition 2:</strong> Title contains <code>[your username]</code></li>
@@ -74,10 +72,10 @@
           <img data-i18n-attr="alt:blog.compound.fig.1.alt" src="../assets/screenshots/compound-and-or-rules-github-example.png" alt="Takt GitHub example for pull tabs" loading="lazy">
           <figcaption data-i18n="blog.compound.fig.1.caption">Rule creation example to capture Takt GitHub example for pull tabs.</figcaption>
         </figure>
-        <p data-i18n="blog.compound.p.7">
+        <div data-i18n="blog.compound.p.7">
           Now every PR with you in the title lands in red. Every other PR you happen to open lands
           in the regular Dev group via your domain rule.
-        </p>
+        </div>
 
         <h2 data-i18n="blog.compound.h2.3">Three setups that pay off immediately</h2>
 
@@ -88,10 +86,10 @@
           <li data-i18n="blog.compound.li.drafts.3"><strong>Title contains:</strong> <code>[DRAFT]</code></li>
           <li data-i18n="blog.compound.li.drafts.4"><strong>Group:</strong> Drafts (orange)</li>
         </ul>
-        <p data-i18n="blog.compound.p.8">
+        <div data-i18n="blog.compound.p.8">
           Anything you tag with <code>[DRAFT]</code> in the doc title gets pulled into Drafts. The
           rest stay in your normal Docs group.
-        </p>
+        </div>
 
         <h3 data-i18n="blog.compound.h3.2">Authored PRs vs review queue</h3>
         <ul>
@@ -108,18 +106,18 @@
           <li data-i18n="blog.compound.li.slack.3"><strong>Title contains:</strong> <code>#project-alpha</code></li>
           <li data-i18n="blog.compound.li.slack.4"><strong>Group:</strong> Alpha (purple)</li>
         </ul>
-        <p data-i18n="blog.compound.p.9">
+        <div data-i18n="blog.compound.p.9">
           Repeat per project. All your Acme Slack tabs route to the right project group based on
           which channel is open.
-        </p>
+        </div>
 
         <h2 data-i18n="blog.compound.h2.4">OR for catch-alls</h2>
-        <p data-i18n="blog.compound.p.10">
+        <div data-i18n="blog.compound.p.10">
           OR is useful when several distinct conditions all belong in the same bucket.
-        </p>
-        <p data-i18n="blog.compound.p.11">
+        </div>
+        <div data-i18n="blog.compound.p.11">
           <strong>All your monitoring tabs in one group:</strong>
-        </p>
+        </div>
         <ul>
           <li data-i18n="blog.compound.li.or.1">URL contains: <code>datadoghq.com</code></li>
           <li data-i18n="blog.compound.li.or.2">OR</li>
@@ -132,32 +130,30 @@
           <img data-i18n-attr="alt:blog.compound.fig.2.alt" src="../assets/screenshots/compound-and-or-rules-monitoring-example.png" alt="Takt example for a simple monitoring rule" loading="lazy">
           <figcaption data-i18n="blog.compound.fig.2.caption">Simple rule creation example to capture in a dedicated group tabs belonging to monitoring systems.</figcaption>
         </figure>
-        <p data-i18n="blog.compound.p.12">
+        <div data-i18n="blog.compound.p.12">
           You could write three separate rules, but OR keeps it as one rule for the same group.
           Easier to manage and only counts as one rule against your quota.
-        </p>
+        </div>
 
         <h2 data-i18n="blog.compound.h2.5">What this actually fixes</h2>
-        <p data-i18n="blog.compound.p.13">
+        <div data-i18n="blog.compound.p.13">
           Single-condition rules force a choice: either everything from a domain goes into one group,
           or you have to manually move the exceptions.
-        </p>
-        <p data-i18n="blog.compound.p.14">
+        </div>
+        <div data-i18n="blog.compound.p.14">
           Compound rules let you describe context: "GitHub PRs where I'm the author" is a context,
           "Google Docs in draft state" is another one. The URL and title alone can't see it, but
           together they can.
-        </p>
-        <p data-i18n="blog.compound.p.15">
+        </div>
+        <div data-i18n="blog.compound.p.15">
           A few practical notes:
-        </p>
+        </div>
         <ul>
           <li data-i18n="blog.compound.li.notes.1"><strong>Title matching is also a Premium feature</strong> on its own, useful even without AND/OR.</li>
           <li data-i18n="blog.compound.li.notes.2"><strong>Specificity matters.</strong> A compound rule with three AND conditions runs against fewer tabs, so order from cheapest to most specific in your head when you write them.</li>
           <li data-i18n="blog.compound.li.notes.3"><strong>Why this is a Premium feature.</strong> Simple rules sort by where a tab lives. Compound rules sort by what it is: "PRs I authored", "docs in draft", "channel #project-alpha." That's a different category of capability, and a different category of work for the matcher (observing title changes, evaluating multiple conditions on every tab event). The free tier covers location-based sorting because that's enough for basic users. Compound matching is a more advanced capability that benefits power users.</li>
         </ul>
-        <p data-i18n="blog.compound.cta.1">
-          <a href="https://chromewebstore.google.com/detail/takt/plgfdnbgkjocmgegnkbihoeojcfphdic">Add Takt to Chrome</a> it's free, no account needed. Nothing leaves your browser.
-        </p>
+        <div><a href="https://chromewebstore.google.com/detail/takt/plgfdnbgkjocmgegnkbihoeojcfphdic" data-i18n="blog.compound.cta.1.linkText">Add Takt to Chrome</a><span data-i18n="blog.compound.cta.1.after"> it's free, no account needed. Nothing leaves your browser.</span></div>
       </div>
       <footer class="blog-post-footer">
         <a data-i18n="blog.compound.footer.back" href="../blog/">Back to blog</a>
