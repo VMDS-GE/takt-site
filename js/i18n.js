@@ -46,6 +46,11 @@ const LOCALE_LABELS = {
   pt: 'Português',
 };
 
+// Feature #168 — module-scope caches for in-place language switching
+const originalTextCache = new WeakMap();
+const originalAttrCache = new WeakMap();
+let latestRequestedLocale = null;
+
 /**
  * Determine the base path to the docs/ root from the current page URL.
  * Mirrors the logic in includes.js so locale JSON is always fetched from
@@ -66,18 +71,24 @@ function getBasePath() {
 
 /** Apply translations from the catalog to all [data-i18n] and [data-i18n-attr] elements. */
 function applyTranslations(catalog) {
+  if (!catalog) return;
+
   var textEls = document.querySelectorAll('[data-i18n]');
   textEls.forEach(function (el) {
+    if (!originalTextCache.has(el)) originalTextCache.set(el, el.innerHTML);
     var current = el.innerHTML;
-    var next = lookupKey(catalog, el.dataset.i18n, current);
+    var next = lookupKey(catalog, el.dataset.i18n, originalTextCache.get(el));
     if (next !== current) el.innerHTML = next;
   });
 
   var attrEls = document.querySelectorAll('[data-i18n-attr]');
   attrEls.forEach(function (el) {
+    if (!originalAttrCache.has(el)) originalAttrCache.set(el, {});
+    var attrMap = originalAttrCache.get(el);
     var pairs = parseI18nAttrSpec(el.dataset.i18nAttr);
     pairs.forEach(function (pair) {
-      el.setAttribute(pair.attr, lookupKey(catalog, pair.key, el.getAttribute(pair.attr) || ''));
+      if (attrMap[pair.attr] === undefined) attrMap[pair.attr] = el.getAttribute(pair.attr) || '';
+      el.setAttribute(pair.attr, lookupKey(catalog, pair.key, attrMap[pair.attr]));
     });
   });
 }
@@ -105,9 +116,28 @@ function injectSwitcher(activeLocale) {
   var select = (container || document).querySelector('.lang-select');
   if (select) {
     select.addEventListener('change', function () {
-      localStorage.setItem('takt.lang', select.value);
-      window.location.reload();
+      switchLocale(select.value);
     });
+  }
+}
+
+/** Fetch a new locale catalog, re-translate the page in place, and update state. */
+async function switchLocale(newLocale) {
+  latestRequestedLocale = newLocale;
+  try {
+    var response = await fetch(getBasePath() + 'locales/' + newLocale + '.json');
+    if (!response.ok) return false;
+    if (latestRequestedLocale !== newLocale) return false;
+    var catalog = await response.json();
+    if (latestRequestedLocale !== newLocale) return false;
+    applyTranslations(catalog);
+    localStorage.setItem('takt.lang', newLocale);
+    document.documentElement.lang = newLocale;
+    var sel = document.querySelector('.lang-select');
+    if (sel) sel.value = newLocale;
+    return true;
+  } catch (_) {
+    return false;
   }
 }
 
