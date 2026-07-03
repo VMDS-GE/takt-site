@@ -116,14 +116,14 @@
 
         <h2 id="invoke"><span>How to invoke</span> <a href="#invoke" class="anchor-link">#</a></h2>
         <p>
-          As of the current release, Group by Category does not have a popup button or context menu
-          entry. It is invocable programmatically via the Takt message bus:
+          Click the <strong>Group by Category</strong> button in the Takt popup to group all open
+          tabs instantly. For programmatic access, you can also invoke it via the Takt message bus:
         </p>
         <pre><code>chrome.runtime.sendMessage({ action: 'organizeAllByCategory' });</code></pre>
         <p>
           The call returns <code>{ success: true, data: { organized, groups } }</code> where
           <code>organized</code> is the number of tabs placed and <code>groups</code> is the number
-          of groups created. A popup button for one-click access is planned for a future release.
+          of groups created.
         </p>
 
         <h2 id="tiers"><span>Availability <span style="color: var(--muted); font-weight: 400; font-size: 0.85rem;">Free</span></span> <a href="#tiers" class="anchor-link">#</a></h2>
