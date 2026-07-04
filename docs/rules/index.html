@@ -269,6 +269,20 @@
           catch-all rules lower.
         </p>
 
+        <h2 id="import-export"><span data-i18n="docs.rules.importExport.heading">Import &amp; Export</span> <a href="#import-export" class="anchor-link">#</a></h2>
+        <p data-i18n="docs.rules.importExport.intro">Back up and restore your rules from Options → Settings.</p>
+        <p data-i18n="docs.rules.importExport.rulesOnly">Export rules saves a takt-rules.json file with your rules. Import rules reads a JSON file and adds the rules to your list — existing rules are preserved; imported rules are appended.</p>
+        <p data-i18n="docs.rules.importExport.fullBackup">Export backup saves takt-backup.json with your rules, settings, profiles, sessions, and hibernated tabs. Import backup restores all of these. You may be prompted to re-grant permissions after importing a backup.</p>
+        <p data-i18n="docs.rules.importExport.conflicts">On import, existing rules are not replaced — imported rules are added to the end of your list.</p>
+
+        <h2 id="context-menu-rule"><span data-i18n="docs.rules.contextMenu.heading">Create rule from context menu</span> <a href="#context-menu-rule" class="anchor-link">#</a></h2>
+        <div class="callout">
+          <p data-i18n="docs.rules.contextMenu.premiumCallout">Premium feature. Requires an active Takt Premium subscription.</p>
+        </div>
+        <p data-i18n="docs.rules.contextMenu.intro">Right-click any web page and choose "Create rule from this tab" to open the rule editor with the URL already populated.</p>
+        <p data-i18n="docs.rules.contextMenu.prefill">Takt derives a Glob pattern of the form *://host/* from the current tab's URL and pre-fills the new-rule form in the Options page.</p>
+        <p data-i18n="docs.rules.contextMenu.notAutoSaved">Review the pre-filled form and click Save — the rule is not committed until you do.</p>
+
         <h2 id="colors"><span data-i18n="docs.rules.colors.heading">Group colors</span> <a href="#colors" class="anchor-link">#</a></h2>
         <p data-i18n="docs.rules.colors.p1">
           Chrome supports 8 tab group colors: <strong>grey</strong>, <strong>blue</strong>,
