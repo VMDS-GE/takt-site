@@ -25,6 +25,7 @@ import {
   parseI18nAttrSpec,
   lookupKey,
   renderSwitcherHtml,
+  basePathFromHref,
 } from './i18n-helpers.js';
 
 /** Hard-coded list of available locale codes. Adding a new locale (e.g. 'fr') requires:
@@ -52,21 +53,19 @@ const originalAttrCache = new WeakMap();
 let latestRequestedLocale = null;
 
 /**
- * Determine the base path to the docs/ root from the current page URL.
- * Mirrors the logic in includes.js so locale JSON is always fetched from
- * the correct absolute location regardless of directory depth.
+ * Determine the base path to the site root from the current page URL.
+ * Feature #198 fix: the previous implementation counted URL path segments
+ * from a 'docs' segment (mirroring includes.js's private-repo version), which
+ * only resolves correctly for includes.js because a deploy-time script
+ * (.github/scripts/patch-includes.py) rewrites *that* file's getBasePath()
+ * for the public site — it never patched this file, so locale JSON 404'd on
+ * every page nested under /docs/<page>/ and translations silently never
+ * applied. Reading the already-correct relative prefix off the page's own
+ * tokens.css <link> works on every deployment shape with no patch needed.
  */
 function getBasePath() {
-  var depth = 0;
-  var path = window.location.pathname;
-  var segments = path.replace(/\/+$/, '').split('/');
-  var docsIdx = segments.indexOf('docs');
-  if (docsIdx === -1) return './';
-  depth = segments.length - docsIdx - 2;
-  if (depth <= 0) return './';
-  var prefix = '';
-  for (var i = 0; i < depth; i++) prefix += '../';
-  return prefix;
+  var link = document.querySelector('link[rel="stylesheet"][href*="tokens.css"]');
+  return basePathFromHref(link && link.getAttribute('href'));
 }
 
 /** Apply translations from the catalog to all [data-i18n] and [data-i18n-attr] elements. */

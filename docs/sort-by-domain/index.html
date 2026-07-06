@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sort by Domain — Takt</title>
+    <meta
+      name="description"
+      content="Sort by Domain reorders your open tabs alphabetically by domain, so tabs on the same site sit next to each other."
+    />
+
+    <link rel="icon" type="image/png" sizes="32x32" href="../../assets/favicon-32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="../../assets/favicon-16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="../../assets/apple-touch-icon.png" />
+
+    <meta name="theme-color" content="#FF3B30" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../../css/tokens.css" />
+    <link rel="stylesheet" href="../../css/base.css" />
+    <link rel="stylesheet" href="../../css/layout.css" />
+    <link rel="stylesheet" href="../../css/docs.css" />
+
+    <script src="../../js/theme.js"></script>
+    <script type="module" src="../../js/i18n.js"></script>
+  </head>
+  <body>
+    <header id="site-header"></header>
+
+    <div class="docs-layout">
+      <aside class="docs-sidebar">
+        <h4 data-i18n="docs.sidebar.heading">Documentation</h4>
+        <ul>
+          <li><a href="../../getting-started/" data-i18n="docs.sidebar.gettingStarted">Getting Started</a></li>
+          <li><a href="../rules/" data-i18n="docs.sidebar.rules">Rule Reference</a></li>
+          <li><a href="../duplicates/" data-i18n="docs.sidebar.duplicates">Duplicate Prevention</a></li>
+          <li><a href="../group-actions/" data-i18n="docs.sidebar.groupActions">Group Actions</a></li>
+          <li><a href="../group-by-category/" data-i18n="docs.sidebar.groupByCategory">Group by Category</a></li>
+          <li><a href="../smart-group-ai/" data-i18n="docs.sidebar.smartGroupAi">Smart Group with AI</a></li>
+          <li><a href="../auto-collapse/" data-i18n="docs.sidebar.autoCollapse">Auto-collapse</a></li>
+          <li><!-- ../sort-by-domain/ --><a href="./" class="active" data-i18n="docs.sidebar.sortByDomain">Sort by Domain</a></li>
+          <li><a href="../resources/" data-i18n="docs.sidebar.resources">Resource Dashboard</a></li>
+          <li><a href="../profiles/" data-i18n="docs.sidebar.profiles">Profiles &amp; Schedules</a></li>
+          <li><a href="../sessions/" data-i18n="docs.sidebar.sessions">Sessions</a></li>
+          <li><a href="../hibernation/" data-i18n="docs.sidebar.hibernation">Hibernation</a></li>
+          <li><a href="../sync/" data-i18n="docs.sidebar.sync">File Sync</a></li>
+          <li><a href="../drive-sync/" data-i18n="docs.sidebar.driveSync">Drive Sync</a></li>
+          <li><a href="../shortcuts/" data-i18n="docs.sidebar.shortcuts">Keyboard Shortcuts</a></li>
+          <li><a href="../quick-switch/" data-i18n="docs.sidebar.quickSwitch">Quick Switch</a></li>
+          <li><a href="../insights/" data-i18n="docs.sidebar.insights">Insights &amp; Suggestions</a></li>
+          <li><a href="../permissions/" data-i18n="docs.sidebar.permissions">Permissions</a></li>
+        </ul>
+      </aside>
+
+      <main class="docs-content">
+        <h1 data-i18n="docs.sidebar.sortByDomain">Sort by Domain</h1>
+        <p class="lead" data-i18n="docs.sortByDomain.lead">
+          Reorder the tabs in a window alphabetically by domain — tabs on the same site end up
+          next to each other, without changing which tabs belong to which group.
+        </p>
+
+        <h2 id="overview"><span data-i18n="docs.sortByDomain.overview.heading">Overview</span> <a href="#overview" class="anchor-link">#</a></h2>
+        <p data-i18n="docs.sortByDomain.overview.p1">
+          Click <strong>Sort by Domain</strong> in the Takt popup and every tab in scope is
+          reordered alphabetically by domain. It is a one-time action, not a continuous mode —
+          run it again any time you want to re-sort after opening new tabs.
+        </p>
+        <p data-i18n="docs.sortByDomain.overview.p2">
+          <span class="badge">Free</span> sorts the tabs in your <strong>active window</strong>.
+          <span class="badge">Premium</span> sorts the tabs in <strong>every open window</strong>
+          in one click.
+        </p>
+
+        <h2 id="how-it-works"><span data-i18n="docs.sortByDomain.howItWorks.heading">How it works</span> <a href="#how-it-works" class="anchor-link">#</a></h2>
+        <p data-i18n="docs.sortByDomain.howItWorks.p1">
+          Takt reads the domain from each tab's URL — the registrable domain, not the full
+          hostname, so <code>mail.google.com</code> and <code>drive.google.com</code> both sort
+          under <code>google.com</code> — and reorders tabs alphabetically by that value.
+        </p>
+        <p data-i18n="docs.sortByDomain.howItWorks.p2">
+          Grouped and ungrouped tabs are sorted independently. Tabs inside an existing tab group
+          are reordered among themselves, and stay in that group. Ungrouped tabs are reordered
+          among themselves too. Sorting never moves a tab into or out of a group, and never
+          merges groups.
+        </p>
+
+        <h2 id="tiers"><span data-i18n="docs.sortByDomain.tiers.heading">Free vs Premium</span> <a href="#tiers" class="anchor-link">#</a></h2>
+        <table class="docs-table">
+          <thead>
+            <tr>
+              <th>Tier</th>
+              <th>Scope</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Free</td>
+              <td>Active window only</td>
+            </tr>
+            <tr>
+              <td>Premium</td>
+              <td>Every open window</td>
+            </tr>
+          </tbody>
+        </table>
+        <p data-i18n="docs.sortByDomain.tiers.p1">
+          No settings toggle is needed — the popup button always sorts the widest scope your
+          plan allows. Free users sort one window at a time; Premium subscribers sort their
+          whole browser session in a single click.
+        </p>
+
+        <h2 id="gotchas"><span data-i18n="docs.sortByDomain.gotchas.heading">Edge cases and gotchas</span> <a href="#gotchas" class="anchor-link">#</a></h2>
+        <ul>
+          <li data-i18n="docs.sortByDomain.gotchas.li1">
+            <strong>One-time action, not automatic.</strong> Sort by Domain does not keep tabs
+            sorted as you open new ones — click the button again whenever you want to re-sort.
+          </li>
+          <li data-i18n="docs.sortByDomain.gotchas.li2">
+            <strong>Domain grouping is a two-label heuristic.</strong> Takt compares the last two
+            dot-separated labels of the hostname. This correctly groups subdomains like
+            <code>mail.google.com</code> under <code>google.com</code>, but can misgroup
+            two-part public suffixes such as <code>.co.uk</code> (e.g. <code>example.co.uk</code>
+            sorts as if its domain were <code>co.uk</code>).
+          </li>
+          <li data-i18n="docs.sortByDomain.gotchas.li3">
+            <strong>Groups and ungrouped tabs sort separately.</strong> Sorting never moves a
+            tab between a group and the ungrouped area, and never reorders groups relative to
+            each other — only the tabs within each of those buckets are reordered.
+          </li>
+        </ul>
+
+        <div class="docs-nav-prev-next">
+          <a href="../auto-collapse/">&larr; Auto-collapse</a>
+          <a href="../resources/" class="next">Resource Dashboard &rarr;</a>
+        </div>
+      </main>
+    </div>
+
+    <footer id="site-footer"></footer>
+
+    <script src="../../js/includes.js"></script>
+    <script src="../../js/nav.js"></script>
+  </body>
+</html>

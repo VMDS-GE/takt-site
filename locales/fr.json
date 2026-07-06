@@ -780,5 +780,20 @@
   "gridCard.groupByCategory.title": "Grouper par catégorie",
   "gridCard.groupByCategory.body": "Un clic dans le popup organise les onglets non groupés en jusqu'à 20 catégories sémantiques — Actualités, Shopping, Finance, et plus. Gratuit : jusqu'à 5 groupes par exécution. Premium : illimité.",
   "gridCard.smartGroupAi.title": "Groupe intelligent avec IA",
-  "gridCard.smartGroupAi.body": "L'API Prompt intégrée de Chrome regroupe les onglets par sens. Correspondance par mots-clés sémantiques en secours. Aucune donnée ne quitte votre navigateur. Gratuit : jusqu'à 5 groupes par exécution. Premium : illimité."
+  "gridCard.smartGroupAi.body": "L'API Prompt intégrée de Chrome regroupe les onglets par sens. Correspondance par mots-clés sémantiques en secours. Aucune donnée ne quitte votre navigateur. Gratuit : jusqu'à 5 groupes par exécution. Premium : illimité.",
+  "docs.sidebar.sortByDomain": "Sort by Domain",
+  "docs.sortByDomain.lead": "Réorganisez les onglets d'une fenêtre par ordre alphabétique de domaine — les onglets d'un même site se retrouvent côte à côte, sans changer les groupes auxquels ils appartiennent.",
+  "docs.sortByDomain.overview.heading": "Aperçu",
+  "docs.sortByDomain.overview.p1": "Cliquez sur Sort by Domain dans le popup de Takt et tous les onglets concernés sont réorganisés par ordre alphabétique de domaine. C'est une action ponctuelle, pas un mode continu — relancez-la à tout moment pour retrier après avoir ouvert de nouveaux onglets.",
+  "docs.sortByDomain.overview.p2": "La version Free trie les onglets de votre fenêtre active. La version Premium trie les onglets de toutes les fenêtres ouvertes en un seul clic.",
+  "docs.sortByDomain.howItWorks.heading": "Fonctionnement",
+  "docs.sortByDomain.howItWorks.p1": "Takt lit le domaine de l'URL de chaque onglet — le domaine enregistrable, pas le nom d'hôte complet, si bien que mail.google.com et drive.google.com se trient tous deux sous google.com — et réorganise les onglets par ordre alphabétique selon cette valeur.",
+  "docs.sortByDomain.howItWorks.p2": "Les onglets groupés et non groupés sont triés indépendamment. Les onglets d'un groupe existant sont réorganisés entre eux et restent dans ce groupe. Les onglets non groupés sont eux aussi réorganisés entre eux. Le tri ne déplace jamais un onglet vers ou hors d'un groupe, et ne fusionne jamais de groupes.",
+  "docs.sortByDomain.tiers.heading": "Free vs Premium",
+  "docs.sortByDomain.tiers.p1": "Aucun réglage n'est nécessaire — le bouton du popup trie toujours la portée la plus large que votre forfait autorise. Les utilisateurs Free trient une fenêtre à la fois ; les abonnés Premium trient toute leur session de navigateur en un seul clic.",
+  "docs.sortByDomain.gotchas.heading": "Cas particuliers et pièges",
+  "docs.sortByDomain.gotchas.li1": "Action ponctuelle, pas automatique. Sort by Domain ne maintient pas les onglets triés au fur et à mesure que vous en ouvrez de nouveaux — cliquez à nouveau sur le bouton chaque fois que vous souhaitez retrier.",
+  "docs.sortByDomain.gotchas.li2": "Le regroupement par domaine est une heuristique à deux étiquettes. Takt compare les deux derniers segments du nom d'hôte séparés par un point. Cela regroupe correctement des sous-domaines comme mail.google.com sous google.com, mais peut mal regrouper les suffixes publics à deux parties comme .co.uk (par exemple, example.co.uk est trié comme si son domaine était co.uk).",
+  "docs.sortByDomain.gotchas.li3": "Les groupes et les onglets non groupés se trient séparément. Le tri ne déplace jamais un onglet entre un groupe et la zone non groupée, et ne réorganise jamais les groupes entre eux — seuls les onglets à l'intérieur de chacun de ces ensembles sont réorganisés.",
+  "docs.smartGroupAi.fallback.p1b": "Le même repli se déclenche également si le modèle embarqué prend trop de temps à répondre — Takt lui accorde un délai fixe puis poursuit plutôt que de laisser le bouton bloqué indéfiniment."
 }

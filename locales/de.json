@@ -780,5 +780,20 @@
   "gridCard.groupByCategory.title": "Nach Kategorie gruppieren",
   "gridCard.groupByCategory.body": "Ein Klick im Popup organisiert nicht gruppierte Tabs in bis zu 20 semantische Kategorien — Nachrichten, Shopping, Finanzen und mehr. Kostenlos: bis zu 5 Gruppen pro Durchlauf. Premium: unbegrenzt.",
   "gridCard.smartGroupAi.title": "Smart Group mit KI",
-  "gridCard.smartGroupAi.body": "Chromes integrierte Prompt API gruppiert Tabs nach Bedeutung. Semantisches Schlüsselwort-Matching als Fallback. Keine Daten verlassen Ihren Browser. Kostenlos: bis zu 5 Gruppen pro Durchlauf. Premium: unbegrenzt."
+  "gridCard.smartGroupAi.body": "Chromes integrierte Prompt API gruppiert Tabs nach Bedeutung. Semantisches Schlüsselwort-Matching als Fallback. Keine Daten verlassen Ihren Browser. Kostenlos: bis zu 5 Gruppen pro Durchlauf. Premium: unbegrenzt.",
+  "docs.sidebar.sortByDomain": "Sort by Domain",
+  "docs.sortByDomain.lead": "Die Tabs eines Fensters alphabetisch nach Domain neu anordnen — Tabs derselben Website landen nebeneinander, ohne dass sich ändert, zu welcher Gruppe die Tabs gehören.",
+  "docs.sortByDomain.overview.heading": "Übersicht",
+  "docs.sortByDomain.overview.p1": "Klicken Sie im Takt-Popup auf „Nach Domain sortieren“, und alle Tabs im jeweiligen Bereich werden alphabetisch nach Domain neu angeordnet. Es handelt sich um eine einmalige Aktion, keinen fortlaufenden Modus — führen Sie sie jederzeit erneut aus, wenn Sie nach dem Öffnen neuer Tabs erneut sortieren möchten.",
+  "docs.sortByDomain.overview.p2": "Free sortiert die Tabs in Ihrem aktiven Fenster. Premium sortiert die Tabs in jedem geöffneten Fenster mit einem Klick.",
+  "docs.sortByDomain.howItWorks.heading": "Funktionsweise",
+  "docs.sortByDomain.howItWorks.p1": "Takt liest die Domain aus der URL jedes Tabs aus — die registrierbare Domain, nicht den vollständigen Hostnamen, sodass mail.google.com und drive.google.com beide unter google.com sortiert werden — und ordnet die Tabs alphabetisch nach diesem Wert neu an.",
+  "docs.sortByDomain.howItWorks.p2": "Gruppierte und nicht gruppierte Tabs werden unabhängig voneinander sortiert. Tabs innerhalb einer bestehenden Tab-Gruppe werden untereinander neu angeordnet und bleiben in dieser Gruppe. Nicht gruppierte Tabs werden ebenfalls untereinander neu angeordnet. Das Sortieren verschiebt einen Tab niemals in eine Gruppe hinein oder aus ihr heraus und führt Gruppen niemals zusammen.",
+  "docs.sortByDomain.tiers.heading": "Free vs Premium",
+  "docs.sortByDomain.tiers.p1": "Ein Einstellungsschalter ist nicht nötig — die Popup-Schaltfläche sortiert immer den größtmöglichen Bereich, den Ihr Plan erlaubt. Free-Nutzer sortieren jeweils ein Fenster; Premium-Abonnenten sortieren ihre gesamte Browser-Sitzung mit einem einzigen Klick.",
+  "docs.sortByDomain.gotchas.heading": "Sonderfälle und Fallstricke",
+  "docs.sortByDomain.gotchas.li1": "Einmalige Aktion, nicht automatisch. „Nach Domain sortieren“ hält die Tabs nicht automatisch sortiert, wenn Sie neue öffnen — klicken Sie die Schaltfläche erneut an, wann immer Sie neu sortieren möchten.",
+  "docs.sortByDomain.gotchas.li2": "Die Domain-Gruppierung ist eine Zwei-Label-Heuristik. Takt vergleicht die letzten beiden durch Punkte getrennten Labels des Hostnamens. Das gruppiert Subdomains wie mail.google.com korrekt unter google.com, kann aber zweiteilige öffentliche Suffixe wie .co.uk falsch gruppieren (z. B. wird example.co.uk so sortiert, als wäre seine Domain co.uk).",
+  "docs.sortByDomain.gotchas.li3": "Gruppen und nicht gruppierte Tabs werden getrennt sortiert. Das Sortieren verschiebt einen Tab niemals zwischen einer Gruppe und dem nicht gruppierten Bereich und ordnet Gruppen niemals relativ zueinander neu an — nur die Tabs innerhalb jedes dieser Bereiche werden neu angeordnet.",
+  "docs.smartGroupAi.fallback.p1b": "Dasselbe Fallback greift auch dann, wenn das Modell auf dem Gerät zu lange braucht, um zu antworten — Takt gewährt ihm ein festes Zeitbudget und macht weiter, anstatt die Schaltfläche endlos wartend hängen zu lassen."
 }

@@ -780,5 +780,20 @@
   "gridCard.groupByCategory.title": "Agrupar por categoría",
   "gridCard.groupByCategory.body": "Un clic en el popup organiza las pestañas no agrupadas en hasta 20 categorías semánticas — Noticias, Compras, Finanzas y más. Gratis: hasta 5 grupos por ejecución. Premium: ilimitado.",
   "gridCard.smartGroupAi.title": "Grupo inteligente con IA",
-  "gridCard.smartGroupAi.body": "La API Prompt integrada de Chrome agrupa las pestañas por significado. Coincidencia de palabras clave semánticas como alternativa. Ningún dato sale de tu navegador. Gratis: hasta 5 grupos por ejecución. Premium: ilimitado."
+  "gridCard.smartGroupAi.body": "La API Prompt integrada de Chrome agrupa las pestañas por significado. Coincidencia de palabras clave semánticas como alternativa. Ningún dato sale de tu navegador. Gratis: hasta 5 grupos por ejecución. Premium: ilimitado.",
+  "docs.sidebar.sortByDomain": "Sort by Domain",
+  "docs.sortByDomain.lead": "Reordena las pestañas de una ventana alfabéticamente por dominio — las pestañas del mismo sitio terminan una junto a la otra, sin cambiar a qué grupo pertenece cada pestaña.",
+  "docs.sortByDomain.overview.heading": "Descripción general",
+  "docs.sortByDomain.overview.p1": "Haz clic en Sort by Domain en el popup de Takt y todas las pestañas dentro del ámbito se reordenan alfabéticamente por dominio. Es una acción puntual, no un modo continuo — vuelve a ejecutarla cuando quieras volver a ordenar después de abrir nuevas pestañas.",
+  "docs.sortByDomain.overview.p2": "Free ordena las pestañas de tu ventana activa. Premium ordena las pestañas de todas las ventanas abiertas con un solo clic.",
+  "docs.sortByDomain.howItWorks.heading": "Cómo funciona",
+  "docs.sortByDomain.howItWorks.p1": "Takt lee el dominio de la URL de cada pestaña — el dominio registrable, no el nombre de host completo, de modo que mail.google.com y drive.google.com se ordenan ambos bajo google.com — y reordena las pestañas alfabéticamente según ese valor.",
+  "docs.sortByDomain.howItWorks.p2": "Las pestañas agrupadas y las no agrupadas se ordenan de forma independiente. Las pestañas dentro de un grupo de pestañas existente se reordenan entre sí y permanecen en ese grupo. Las pestañas no agrupadas también se reordenan entre sí. El ordenamiento nunca mueve una pestaña dentro o fuera de un grupo, y nunca fusiona grupos.",
+  "docs.sortByDomain.tiers.heading": "Free y Premium",
+  "docs.sortByDomain.tiers.p1": "No se necesita ningún interruptor de configuración — el botón del popup siempre ordena el ámbito más amplio que permite tu plan. Los usuarios Free ordenan una ventana a la vez; los suscriptores Premium ordenan toda su sesión del navegador con un solo clic.",
+  "docs.sortByDomain.gotchas.heading": "Casos extremos y advertencias",
+  "docs.sortByDomain.gotchas.li1": "Acción puntual, no automática. Sort by Domain no mantiene las pestañas ordenadas a medida que abres nuevas — haz clic en el botón otra vez cuando quieras volver a ordenar.",
+  "docs.sortByDomain.gotchas.li2": "La agrupación por dominio es una heurística de dos etiquetas. Takt compara las últimas dos etiquetas separadas por puntos del nombre de host. Esto agrupa correctamente subdominios como mail.google.com bajo google.com, pero puede agrupar mal sufijos públicos de dos partes como .co.uk (por ejemplo, example.co.uk se ordena como si su dominio fuera co.uk).",
+  "docs.sortByDomain.gotchas.li3": "Los grupos y las pestañas no agrupadas se ordenan por separado. El ordenamiento nunca mueve una pestaña entre un grupo y el área sin agrupar, y nunca reordena los grupos entre sí — solo se reordenan las pestañas dentro de cada uno de esos conjuntos.",
+  "docs.smartGroupAi.fallback.p1b": "El mismo respaldo también se activa si el modelo integrado en el dispositivo tarda demasiado en responder — Takt le asigna un tiempo límite fijo y continúa en lugar de dejar el botón atascado esperando indefinidamente."
 }

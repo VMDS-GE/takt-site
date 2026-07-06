@@ -37,6 +37,7 @@
           <li><a href="../group-by-category/" data-i18n="docs.sidebar.groupByCategory">Group by Category</a></li>
           <li><a href="./" class="active" data-i18n="docs.sidebar.smartGroupAi">Smart Group with AI</a></li>
           <li><a href="../auto-collapse/" data-i18n="docs.sidebar.autoCollapse">Auto-collapse</a></li>
+          <li><a href="../sort-by-domain/" data-i18n="docs.sidebar.sortByDomain">Sort by Domain</a></li>
           <li><a href="../resources/" data-i18n="docs.sidebar.resources">Resource Dashboard</a></li>
           <li><a href="../profiles/" data-i18n="docs.sidebar.profiles">Profiles &amp; Schedules</a></li>
           <li><a href="../sessions/" data-i18n="docs.sidebar.sessions">Sessions</a></li>
@@ -132,6 +133,11 @@
           Chrome version — Takt automatically falls back to a semantic similarity algorithm. The
           fallback clusters tabs by computing similarity scores across tab titles and snippets, then
           groups tabs whose content is closest to each other.
+        </p>
+        <p data-i18n="docs.smartGroupAi.fallback.p1b">
+          The same fallback also fires if the on-device model takes too long to respond — Takt
+          gives it a fixed time budget and moves on rather than leaving the button stuck waiting
+          indefinitely.
         </p>
         <p data-i18n="docs.smartGroupAi.fallback.p2">
           The fallback fires silently, with no user action required. You still get AI-like grouping

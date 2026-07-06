@@ -780,5 +780,20 @@
   "gridCard.groupByCategory.title": "Agrupar por categoria",
   "gridCard.groupByCategory.body": "Um clique no popup organiza as abas não agrupadas em até 20 categorias semânticas — Notícias, Compras, Finanças e mais. Grátis: até 5 grupos por execução. Premium: ilimitado.",
   "gridCard.smartGroupAi.title": "Grupo inteligente com IA",
-  "gridCard.smartGroupAi.body": "A API Prompt integrada do Chrome agrupa as abas por significado. Correspondência por palavras-chave semânticas como alternativa. Nenhum dado sai do seu navegador. Grátis: até 5 grupos por execução. Premium: ilimitado."
+  "gridCard.smartGroupAi.body": "A API Prompt integrada do Chrome agrupa as abas por significado. Correspondência por palavras-chave semânticas como alternativa. Nenhum dado sai do seu navegador. Grátis: até 5 grupos por execução. Premium: ilimitado.",
+  "docs.sidebar.sortByDomain": "Sort by Domain",
+  "docs.sortByDomain.lead": "Reordene as abas de uma janela em ordem alfabética por domínio — abas do mesmo site ficam próximas umas das outras, sem alterar a quais grupos as abas pertencem.",
+  "docs.sortByDomain.overview.heading": "Visão geral",
+  "docs.sortByDomain.overview.p1": "Clique em Sort by Domain no popup do Takt e todas as abas dentro do escopo são reordenadas em ordem alfabética por domínio. É uma ação pontual, não um modo contínuo — execute novamente sempre que quiser reordenar depois de abrir novas abas.",
+  "docs.sortByDomain.overview.p2": "O plano Free ordena as abas da sua janela ativa. O Premium ordena as abas de todas as janelas abertas em um único clique.",
+  "docs.sortByDomain.howItWorks.heading": "Como funciona",
+  "docs.sortByDomain.howItWorks.p1": "O Takt lê o domínio da URL de cada aba — o domínio registrável, não o hostname completo, de modo que mail.google.com e drive.google.com sejam ambos ordenados sob google.com — e reordena as abas em ordem alfabética por esse valor.",
+  "docs.sortByDomain.howItWorks.p2": "Abas agrupadas e não agrupadas são ordenadas de forma independente. Abas dentro de um grupo de abas existente são reordenadas entre si e permanecem naquele grupo. Abas não agrupadas também são reordenadas entre si. A ordenação nunca move uma aba para dentro ou para fora de um grupo, e nunca mescla grupos.",
+  "docs.sortByDomain.tiers.heading": "Free vs Premium",
+  "docs.sortByDomain.tiers.p1": "Nenhuma alternância de configuração é necessária — o botão do popup sempre ordena o escopo mais amplo que seu plano permitir. Usuários Free ordenam uma janela por vez; assinantes Premium ordenam toda a sessão do navegador em um único clique.",
+  "docs.sortByDomain.gotchas.heading": "Casos extremos e armadilhas",
+  "docs.sortByDomain.gotchas.li1": "Ação pontual, não automática. O Sort by Domain não mantém as abas ordenadas conforme você abre novas — clique no botão novamente sempre que quiser reordenar.",
+  "docs.sortByDomain.gotchas.li2": "O agrupamento por domínio é uma heurística de dois rótulos. O Takt compara os dois últimos rótulos separados por ponto do hostname. Isso agrupa corretamente subdomínios como mail.google.com sob google.com, mas pode agrupar incorretamente sufixos públicos de duas partes como .co.uk (por exemplo, example.co.uk é ordenado como se seu domínio fosse co.uk).",
+  "docs.sortByDomain.gotchas.li3": "Grupos e abas não agrupadas são ordenados separadamente. A ordenação nunca move uma aba entre um grupo e a área não agrupada, e nunca reordena grupos em relação uns aos outros — apenas as abas dentro de cada um desses conjuntos são reordenadas.",
+  "docs.smartGroupAi.fallback.p1b": "O mesmo fallback também é acionado se o modelo local no dispositivo demorar demais para responder — o Takt dá a ele um orçamento de tempo fixo e segue adiante em vez de deixar o botão travado esperando indefinidamente."
 }

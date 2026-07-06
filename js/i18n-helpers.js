@@ -93,6 +93,24 @@ export function lookupKey(catalog, key, fallback) {
 }
 
 /**
+ * Extract the leading '../' repetitions from a stylesheet href, giving the
+ * relative path prefix from the current page back to the site root. Used
+ * instead of counting URL path segments (Feature #198) because that approach
+ * requires knowing which segment marks the site root, which differs between
+ * the private repo (nested under a 'docs' segment) and the public deployed
+ * site (served from the repo root) — the href is already correct either way,
+ * since it's authored per-page to point at the real site-root-relative CSS.
+ *
+ * @param {string|null|undefined} href — e.g. "../../css/tokens.css"
+ * @returns {string} e.g. "../../", or "./" when there is no leading '../'
+ */
+export function basePathFromHref(href) {
+  if (!href) return './';
+  var match = href.match(/^((?:\.\.\/)*)/);
+  return (match && match[1]) || './';
+}
+
+/**
  * Render a <select> language-switcher HTML string.
  *
  * Labels and codes are HTML-entity-escaped.
