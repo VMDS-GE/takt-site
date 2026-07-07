@@ -102,13 +102,6 @@ function injectSwitcher(activeLocale) {
   var container = document.getElementById('lang-switcher-container');
   if (container) {
     container.innerHTML = html;
-  } else {
-    var themeToggle = document.getElementById('theme-toggle');
-    if (themeToggle) {
-      var wrapper = document.createElement('span');
-      wrapper.innerHTML = html;
-      themeToggle.parentNode.insertBefore(wrapper, themeToggle.nextSibling);
-    }
   }
 
   // Attach change listener to the rendered <select>
