@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grouping Mode — Takt</title>
+    <meta name="description" content="Choose how Takt groups your open tabs — three exclusive modes (Rules, Domain, AI) controlled by a single popup toggle." />
+
+    <link rel="icon" type="image/png" sizes="32x32" href="../../assets/favicon-32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="../../assets/favicon-16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="../../assets/apple-touch-icon.png" />
+
+    <meta name="theme-color" content="#FF3B30" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../../css/tokens.css" />
+    <link rel="stylesheet" href="../../css/base.css" />
+    <link rel="stylesheet" href="../../css/layout.css" />
+    <link rel="stylesheet" href="../../css/docs.css" />
+
+    <script src="../../js/theme.js"></script>
+    <script type="module" src="../../js/i18n.js"></script>
+  </head>
+  <body>
+    <header id="site-header"></header>
+
+    <div class="docs-layout">
+      <aside class="docs-sidebar">
+        <h4 data-i18n="docs.sidebar.heading">Documentation</h4>
+        <ul>
+          <li><a href="../../getting-started/" data-i18n="docs.sidebar.gettingStarted">Getting Started</a></li>
+          <li><a href="../rules/" data-i18n="docs.sidebar.rules">Rule Reference</a></li>
+          <li><a href="../duplicates/" data-i18n="docs.sidebar.duplicates">Duplicate Prevention</a></li>
+          <li><a href="../group-actions/" data-i18n="docs.sidebar.groupActions">Group Actions</a></li>
+          <li><a href="../group-by-category/" data-i18n="docs.sidebar.groupByCategory">Group by Category</a></li>
+          <li><!-- ../grouping-mode/ --><a href="./" class="active" data-i18n="docs.sidebar.groupingMode">Grouping Mode</a></li>
+          <li><a href="../smart-group-ai/" data-i18n="docs.sidebar.smartGroupAi">Smart Group with AI</a></li>
+          <li><a href="../auto-collapse/" data-i18n="docs.sidebar.autoCollapse">Auto-collapse</a></li>
+          <li><a href="../sort-by-domain/" data-i18n="docs.sidebar.sortByDomain">Sort by Domain</a></li>
+          <li><a href="../others-group/" data-i18n="docs.sidebar.othersGroup">Others catch-all group</a></li>
+          <li><a href="../resources/" data-i18n="docs.sidebar.resources">Resource Dashboard</a></li>
+          <li><a href="../profiles/" data-i18n="docs.sidebar.profiles">Profiles &amp; Schedules</a></li>
+          <li><a href="../sessions/" data-i18n="docs.sidebar.sessions">Sessions</a></li>
+          <li><a href="../hibernation/" data-i18n="docs.sidebar.hibernation">Hibernation</a></li>
+          <li><a href="../sync/" data-i18n="docs.sidebar.sync">File Sync</a></li>
+          <li><a href="../drive-sync/" data-i18n="docs.sidebar.driveSync">Drive Sync</a></li>
+          <li><a href="../shortcuts/" data-i18n="docs.sidebar.shortcuts">Keyboard Shortcuts</a></li>
+          <li><a href="../quick-switch/" data-i18n="docs.sidebar.quickSwitch">Quick Switch</a></li>
+          <li><a href="../insights/" data-i18n="docs.sidebar.insights">Insights &amp; Suggestions</a></li>
+          <li><a href="../permissions/" data-i18n="docs.sidebar.permissions">Permissions</a></li>
+        </ul>
+      </aside>
+
+      <main class="docs-content">
+        <h1 data-i18n="docs.sidebar.groupingMode">Grouping Mode</h1>
+        <p class="lead" data-i18n="docs.groupingMode.lead">
+          Choose how Takt groups your open tabs — three exclusive modes to match your workflow.
+        </p>
+
+        <h2 id="overview"><span data-i18n="docs.groupingMode.overview.heading">Overview</span> <a href="#overview" class="anchor-link">#</a></h2>
+        <p data-i18n="docs.groupingMode.overview.p1">
+          Grouping Mode determines how Takt organizes your tabs into tab groups. Each window uses
+          exactly one mode at a time, selected from a radio group in the Takt popup. Your choice
+          persists across sessions so you never have to re-select it.
+        </p>
+        <p data-i18n="docs.groupingMode.overview.p2">
+          The three available modes are: <strong>Rules</strong> (the default), <strong>Domain</strong>,
+          and <strong>AI</strong>. Each mode is mutually exclusive — selecting one deactivates the others.
+        </p>
+
+        <h2 id="modes"><span data-i18n="docs.groupingMode.modes.heading">Modes</span> <a href="#modes" class="anchor-link">#</a></h2>
+        <p data-i18n="docs.groupingMode.modes.p1">
+          Compare the three grouping modes side by side:
+        </p>
+        <table class="docs-table">
+          <thead>
+            <tr>
+              <th>Mode</th>
+              <th>What it does</th>
+              <th>Tier</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><a href="../smart-group-ai/"><strong>AI</strong></a></td>
+              <td>Uses Chrome's on-device Prompt API to invent semantic group labels from tab content</td>
+              <td>Premium</td>
+            </tr>
+            <tr>
+              <td><a href="../sort-by-domain/"><strong>Domain</strong></a></td>
+              <td>Groups tabs by their registrable domain so same-site tabs share a group</td>
+              <td>Free</td>
+            </tr>
+            <tr>
+              <td><strong>Rules</strong></td>
+              <td>Groups tabs using your configured rules — color, name, and conditions you define</td>
+              <td>Free</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h2 id="toggle"><span data-i18n="docs.groupingMode.toggle.heading">Toggle</span> <a href="#toggle" class="anchor-link">#</a></h2>
+        <p data-i18n="docs.groupingMode.toggle.p1">
+          The Takt popup shows a radio group with three options — Rules, Domain, and AI. Select
+          the option you want, then click <strong>Group Tabs</strong>. Takt uses the selected mode
+          for that grouping action.
+        </p>
+        <p data-i18n="docs.groupingMode.toggle.p2">
+          Your choice persists across sessions (stored in <code>chrome.storage.sync</code> via
+          <code>saveSettings</code>). Switching modes does <strong>not</strong> retroactively
+          regroup already-open tabs — only the next <strong>Group Tabs</strong> action uses the
+          newly selected mode.
+        </p>
+
+        <h2 id="profiles-schedules"><span data-i18n="docs.groupingMode.profilesSchedules.heading">Profiles &amp; Schedules</span> <a href="#profiles-schedules" class="anchor-link">#</a></h2>
+        <p data-i18n="docs.groupingMode.profilesSchedules.p1">
+          <a href="../profiles/">Profiles and Schedules</a> only apply when <strong>Rules</strong>
+          mode is active. If you switch to AI or Domain mode, Profiles and Schedules become inert
+          and have no effect until you return to Rules mode.
+        </p>
+
+        <div class="docs-nav-prev-next">
+          <a href="../group-by-category/">&larr; Group by Category</a>
+          <a href="../smart-group-ai/" class="next">Smart Group with AI &rarr;</a>
+        </div>
+      </main>
+    </div>
+
+    <footer id="site-footer"></footer>
+
+    <script src="../../js/includes.js"></script>
+    <script src="../../js/nav.js"></script>
+  </body>
+</html>

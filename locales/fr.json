@@ -810,5 +810,19 @@
   "docs.othersGroup.gotchas.li1": "Others désactivé : si le paramètre est éteint, les onglets sans règle restent non groupés. Aucun groupe Others n’est créé.",
   "docs.othersGroup.gotchas.li2": "Tous les onglets correspondent à des règles : si chaque onglet non épinglé et non restreint est attribué par une règle, aucun groupe Others n’est créé — même si le paramètre est activé.",
   "docs.othersGroup.gotchas.li3": "Raccourci clavier : utiliser le raccourci Tout grouper se comporte exactement comme cliquer sur le bouton Tout grouper — le paramètre Others est respecté dans les deux cas.",
-  "docs.smartGroupAi.fallback.p1b": "Le même repli se déclenche également si le modèle embarqué prend trop de temps à répondre — Takt lui accorde un délai fixe puis poursuit plutôt que de laisser le bouton bloqué indéfiniment."
+  "docs.smartGroupAi.fallback.p1b": "Le même repli se déclenche également si le modèle embarqué prend trop de temps à répondre — Takt lui accorde un délai fixe puis poursuit plutôt que de laisser le bouton bloqué indéfiniment.",
+  "docs.sidebar.groupingMode": "Grouping Mode",
+  "docs.groupingMode.lead": "Choisissez comment Takt regroupe vos onglets — trois modes exclusifs adaptés à votre flux de travail.",
+  "docs.groupingMode.overview.heading": "Aperçu",
+  "docs.groupingMode.overview.p1": "Le mode de regroupement détermine comment Takt organise vos onglets en groupes. Chaque fenêtre utilise exactement un mode à la fois, sélectionné dans un groupe de boutons radio dans le popup Takt. Votre choix persiste d'une session à l'autre.",
+  "docs.groupingMode.overview.p2": "Les trois modes disponibles sont : Règles (le mode par défaut), Domaine et IA. Chaque mode est exclusif — en sélectionner un désactive les autres.",
+  "docs.groupingMode.modes.heading": "Modes",
+  "docs.groupingMode.modes.p1": "Comparez les trois modes de regroupement côte à côte :",
+  "docs.groupingMode.toggle.heading": "Basculer",
+  "docs.groupingMode.toggle.p1": "Le popup Takt affiche un groupe de boutons radio avec trois options — Règles, Domaine et IA. Sélectionnez l'option souhaitée, puis cliquez sur Regrouper les onglets. Takt utilise le mode sélectionné pour cette action.",
+  "docs.groupingMode.toggle.p2": "Votre choix persiste d'une session à l'autre (stocké dans chrome.storage.sync via saveSettings). Changer de mode ne regroupe pas rétroactivement les onglets déjà ouverts — seule la prochaine action Regrouper les onglets utilise le nouveau mode.",
+  "docs.groupingMode.profilesSchedules.heading": "Profils & Planifications",
+  "docs.groupingMode.profilesSchedules.p1": "Les profils et planifications ne s'appliquent que lorsque le mode Règles est actif. Si vous passez au mode IA ou Domaine, les profils et planifications deviennent inactifs jusqu'à ce que vous reveniez au mode Règles.",
+  "docs.shortcuts.buttonStates.heading": "États des boutons",
+  "docs.shortcuts.buttonStates.p1": "Chaque bouton du popup est activé ou désactivé selon l'état actuel des onglets. Ces règles s'appliquent aux utilisateurs Free et Premium — la seule différence entre les niveaux est la portée inter-fenêtres (déjà documentée ci-dessus)."
 }

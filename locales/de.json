@@ -810,5 +810,19 @@
   "docs.othersGroup.gotchas.li1": "Others deaktiviert: Wenn die Einstellung ausgeschaltet ist, bleiben Tabs ohne übereinstimmende Regel nicht gruppiert. Es wird keine Others-Gruppe erstellt.",
   "docs.othersGroup.gotchas.li2": "Alle Tabs entsprechen Regeln: Wenn jeder nicht angeheftete, nicht eingeschränkte Tab einer Regel zugewiesen ist, wird keine Others-Gruppe erstellt — selbst wenn die Einstellung aktiv ist.",
   "docs.othersGroup.gotchas.li3": "Tastaturbelegung: Die Verwendung des Tastaturkürzels Alle gruppieren verhält sich genau wie ein Klick auf die Schaltfläche Alle gruppieren — die Others-Einstellung wird in beiden Fällen berücksichtigt.",
-  "docs.smartGroupAi.fallback.p1b": "Dasselbe Fallback greift auch dann, wenn das Modell auf dem Gerät zu lange braucht, um zu antworten — Takt gewährt ihm ein festes Zeitbudget und macht weiter, anstatt die Schaltfläche endlos wartend hängen zu lassen."
+  "docs.smartGroupAi.fallback.p1b": "Dasselbe Fallback greift auch dann, wenn das Modell auf dem Gerät zu lange braucht, um zu antworten — Takt gewährt ihm ein festes Zeitbudget und macht weiter, anstatt die Schaltfläche endlos wartend hängen zu lassen.",
+  "docs.sidebar.groupingMode": "Grouping Mode",
+  "docs.groupingMode.lead": "Legen Sie fest, wie Takt Ihre offenen Tabs gruppiert — drei exklusive Modi für Ihren Arbeitsablauf.",
+  "docs.groupingMode.overview.heading": "Übersicht",
+  "docs.groupingMode.overview.p1": "Der Gruppiermodus bestimmt, wie Takt Ihre Tabs in Tab-Gruppen organisiert. Jedes Fenster verwendet genau einen Modus gleichzeitig, der im Takt-Popup über eine Optionsfeld-Gruppe ausgewählt wird. Ihre Wahl bleibt sitzungsübergreifend erhalten.",
+  "docs.groupingMode.overview.p2": "Die drei verfügbaren Modi sind: Regeln (der Standard), Domain und KI. Jeder Modus ist gegenseitig ausschließend — die Auswahl eines Modus deaktiviert die anderen.",
+  "docs.groupingMode.modes.heading": "Modi",
+  "docs.groupingMode.modes.p1": "Vergleichen Sie die drei Gruppiermodi nebeneinander:",
+  "docs.groupingMode.toggle.heading": "Umschalten",
+  "docs.groupingMode.toggle.p1": "Das Takt-Popup zeigt eine Optionsfeld-Gruppe mit drei Optionen — Regeln, Domain und KI. Wählen Sie die gewünschte Option und klicken Sie auf Tabs gruppieren. Takt verwendet den ausgewählten Modus für diese Aktion.",
+  "docs.groupingMode.toggle.p2": "Ihre Wahl bleibt sitzungsübergreifend erhalten (in chrome.storage.sync über saveSettings gespeichert). Ein Moduswechsel gruppiert bereits geöffnete Tabs nicht nachträglich um — nur die nächste Aktion Tabs gruppieren verwendet den neu ausgewählten Modus.",
+  "docs.groupingMode.profilesSchedules.heading": "Profile & Zeitpläne",
+  "docs.groupingMode.profilesSchedules.p1": "Profile und Zeitpläne gelten nur, wenn der Regeln-Modus aktiv ist. Wenn Sie zum KI- oder Domain-Modus wechseln, werden Profile und Zeitpläne inaktiv und haben keine Auswirkung, bis Sie zum Regeln-Modus zurückkehren.",
+  "docs.shortcuts.buttonStates.heading": "Schaltflächenzustände",
+  "docs.shortcuts.buttonStates.p1": "Jede Popup-Schaltfläche wird je nach aktuellem Tab-Status aktiviert oder deaktiviert. Diese Regeln gelten für Free- und Premium-Nutzer — der einzige Unterschied zwischen den Stufen ist der fensterübergreifende Umfang (bereits oben dokumentiert)."
 }

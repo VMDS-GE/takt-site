@@ -810,5 +810,19 @@
   "docs.othersGroup.gotchas.li1": "Others desativado: se a definição estiver desligada, os separadores sem correspondência permanecem sem agrupar. Nenhum grupo Others é criado.",
   "docs.othersGroup.gotchas.li2": "Todos os separadores correspondem a regras: se cada separador não fixado e não restrito estiver atribuído por uma regra, nenhum grupo Others é criado — mesmo quando a definição está ativa.",
   "docs.othersGroup.gotchas.li3": "Atalho de teclado: usar o atalho Agrupar tudo comporta-se exatamente da mesma forma que clicar no botão Agrupar tudo — a definição Others é respeitada em ambos os casos.",
-  "docs.smartGroupAi.fallback.p1b": "O mesmo fallback também é acionado se o modelo local no dispositivo demorar demais para responder — o Takt dá a ele um orçamento de tempo fixo e segue adiante em vez de deixar o botão travado esperando indefinidamente."
+  "docs.smartGroupAi.fallback.p1b": "O mesmo fallback também é acionado se o modelo local no dispositivo demorar demais para responder — o Takt dá a ele um orçamento de tempo fixo e segue adiante em vez de deixar o botão travado esperando indefinidamente.",
+  "docs.sidebar.groupingMode": "Grouping Mode",
+  "docs.groupingMode.lead": "Escolha como o Takt agrupa suas abas abertas — três modos exclusivos para se adaptar ao seu fluxo de trabalho.",
+  "docs.groupingMode.overview.heading": "Visão geral",
+  "docs.groupingMode.overview.p1": "O modo de agrupamento determina como o Takt organiza suas abas em grupos. Cada janela usa exatamente um modo por vez, selecionado a partir de um grupo de botões de opção no popup do Takt. Sua escolha persiste entre as sessões.",
+  "docs.groupingMode.overview.p2": "Os três modos disponíveis são: Regras (o padrão), Domínio e IA. Cada modo é mutuamente exclusivo — selecionar um desativa os outros.",
+  "docs.groupingMode.modes.heading": "Modos",
+  "docs.groupingMode.modes.p1": "Compare os três modos de agrupamento lado a lado:",
+  "docs.groupingMode.toggle.heading": "Alternar",
+  "docs.groupingMode.toggle.p1": "O popup do Takt exibe um grupo de botões de opção com três opções — Regras, Domínio e IA. Selecione a opção desejada e clique em Agrupar abas. O Takt usa o modo selecionado para essa ação.",
+  "docs.groupingMode.toggle.p2": "Sua escolha persiste entre as sessões (armazenada em chrome.storage.sync via saveSettings). Trocar de modo não reagrupa retroativamente as abas já abertas — apenas a próxima ação Agrupar abas usa o modo recém-selecionado.",
+  "docs.groupingMode.profilesSchedules.heading": "Perfis e Agendamentos",
+  "docs.groupingMode.profilesSchedules.p1": "Os perfis e agendamentos só se aplicam quando o modo Regras está ativo. Se você mudar para o modo IA ou Domínio, os perfis e agendamentos ficam inativos até você retornar ao modo Regras.",
+  "docs.shortcuts.buttonStates.heading": "Estados dos botões",
+  "docs.shortcuts.buttonStates.p1": "Cada botão do popup é habilitado ou desabilitado com base no estado atual das abas. Essas regras se aplicam aos usuários Free e Premium — a única diferença entre os níveis é o escopo entre janelas (já documentado acima)."
 }

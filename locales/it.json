@@ -810,5 +810,19 @@
   "docs.othersGroup.gotchas.li1": "Others disabilitato: se l’impostazione è disattivata, le schede senza corrispondenza rimangono non raggruppate. Nessun gruppo Others viene creato.",
   "docs.othersGroup.gotchas.li2": "Tutte le schede corrispondono alle regole: se ogni scheda non bloccata e non limitata è assegnata da una regola, non viene creato alcun gruppo Others — anche quando l’impostazione è attiva.",
   "docs.othersGroup.gotchas.li3": "Scorciatoia da tastiera: utilizzare la scorciatoia Raggruppa tutto si comporta esattamente come fare clic sul pulsante Raggruppa tutto — l’impostazione Others viene rispettata in entrambi i casi.",
-  "docs.smartGroupAi.fallback.p1b": "Lo stesso fallback si attiva anche se il modello sul dispositivo richiede troppo tempo per rispondere — Takt gli assegna un budget di tempo fisso e procede oltre invece di lasciare il pulsante bloccato in attesa indefinita."
+  "docs.smartGroupAi.fallback.p1b": "Lo stesso fallback si attiva anche se il modello sul dispositivo richiede troppo tempo per rispondere — Takt gli assegna un budget di tempo fisso e procede oltre invece di lasciare il pulsante bloccato in attesa indefinita.",
+  "docs.sidebar.groupingMode": "Grouping Mode",
+  "docs.groupingMode.lead": "Scegli come Takt raggruppa le tue schede aperte — tre modalità esclusive per adattarsi al tuo flusso di lavoro.",
+  "docs.groupingMode.overview.heading": "Panoramica",
+  "docs.groupingMode.overview.p1": "La modalità di raggruppamento determina come Takt organizza le schede in gruppi. Ogni finestra usa esattamente una modalità alla volta, selezionata da un gruppo di pulsanti radio nel popup di Takt. La tua scelta persiste tra le sessioni.",
+  "docs.groupingMode.overview.p2": "Le tre modalità disponibili sono: Regole (quella predefinita), Dominio e IA. Ogni modalità è mutualmente esclusiva — selezionarne una disattiva le altre.",
+  "docs.groupingMode.modes.heading": "Modalità",
+  "docs.groupingMode.modes.p1": "Confronta le tre modalità di raggruppamento fianco a fianco:",
+  "docs.groupingMode.toggle.heading": "Attiva/disattiva",
+  "docs.groupingMode.toggle.p1": "Il popup di Takt mostra un gruppo di pulsanti radio con tre opzioni — Regole, Dominio e IA. Seleziona l'opzione desiderata, poi fai clic su Raggruppa schede. Takt usa la modalità selezionata per quell'azione.",
+  "docs.groupingMode.toggle.p2": "La tua scelta persiste tra le sessioni (memorizzata in chrome.storage.sync tramite saveSettings). Cambiare modalità non raggruppa retroattivamente le schede già aperte — solo la prossima azione Raggruppa schede usa la nuova modalità.",
+  "docs.groupingMode.profilesSchedules.heading": "Profili e Pianificazioni",
+  "docs.groupingMode.profilesSchedules.p1": "I profili e le pianificazioni si applicano solo quando la modalità Regole è attiva. Se passi alla modalità IA o Dominio, i profili e le pianificazioni diventano inattivi fino a quando non torni alla modalità Regole.",
+  "docs.shortcuts.buttonStates.heading": "Stati dei pulsanti",
+  "docs.shortcuts.buttonStates.p1": "Ogni pulsante del popup è abilitato o disabilitato in base allo stato corrente delle schede. Queste regole si applicano sia agli utenti Free che Premium — l'unica differenza tra i livelli è il campo di applicazione tra finestre (già documentato sopra)."
 }

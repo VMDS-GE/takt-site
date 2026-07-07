@@ -35,6 +35,7 @@
           <li><a href="../duplicates/" data-i18n="docs.sidebar.duplicates">Duplicate Prevention</a></li>
           <li><a href="../group-actions/" data-i18n="docs.sidebar.groupActions">Group Actions</a></li>
           <li><a href="../group-by-category/" data-i18n="docs.sidebar.groupByCategory">Group by Category</a></li>
+          <li><a href="../grouping-mode/" data-i18n="docs.sidebar.groupingMode">Grouping Mode</a></li>
           <li><a href="../smart-group-ai/" data-i18n="docs.sidebar.smartGroupAi">Smart Group with AI</a></li>
           <li><a href="../auto-collapse/" data-i18n="docs.sidebar.autoCollapse">Auto-collapse</a></li>
           <li><a href="../sort-by-domain/" data-i18n="docs.sidebar.sortByDomain">Sort by Domain</a></li>
@@ -158,6 +159,40 @@
           </tbody>
         </table>
         <p data-i18n="docs.shortcuts.popup.p2">Both the popup buttons and keyboard shortcuts apply to all open windows.</p>
+
+        <h2 id="button-states"><span data-i18n="docs.shortcuts.buttonStates.heading">Button states</span> <a href="#button-states" class="anchor-link">#</a></h2>
+        <p data-i18n="docs.shortcuts.buttonStates.p1">Each popup button is enabled or disabled based on the current tab state. These rules apply to both Free and Premium users — the only difference between tiers is cross-window scope (already documented above).</p>
+        <table class="docs-table">
+          <thead>
+            <tr>
+              <th>Button</th>
+              <th>Enabled when</th>
+              <th>Disabled when</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Group All</strong></td>
+              <td>there are ungrouped tabs</td>
+              <td>no ungrouped tabs</td>
+            </tr>
+            <tr>
+              <td><strong>Ungroup All</strong></td>
+              <td>there are tab groups</td>
+              <td>no tab groups exist</td>
+            </tr>
+            <tr>
+              <td><strong>Collapse All</strong></td>
+              <td>at least one group is expanded</td>
+              <td>all groups are already collapsed</td>
+            </tr>
+            <tr>
+              <td><strong>Expand All</strong></td>
+              <td>at least one group is collapsed</td>
+              <td>all groups are already expanded</td>
+            </tr>
+          </tbody>
+        </table>
 
         <div class="docs-nav-prev-next">
           <a href="../drive-sync/">&larr; Drive Sync</a>
