@@ -363,7 +363,7 @@
   "docs.groupByCategory.how.exact.desc": " — Takt checks whether the tab's hostname matches an entry in the taxonomy directly.",
   "docs.groupByCategory.how.parentWalk.label": "Parent-domain walk",
   "docs.groupByCategory.how.parentWalk.desc": " — If the exact host is not found, Takt strips the leftmost subdomain label and retries. This repeats until a match is found or the apex domain is reached.",
-  "docs.groupByCategory.how.largestFirst": "Takt creates groups largest first: the category with the most tabs becomes the first group, then the next largest, proceeding in decreasing size order. Single tabs that are the only member of their category stay ungrouped. On the Free plan, a single run creates up to 5 groups — the 5 largest categories — and any remaining smaller categories stay ungrouped.",
+  "docs.groupByCategory.how.largestFirst": "Takt creates groups largest first: the category with the most tabs becomes the first group, then the next largest, proceeding in decreasing size order. Every non-empty category — including Other, which catches any tab with no matching hostname — gets its own group. The Other group always appears last in the tab strip. On the Free plan, a single run creates up to 5 groups — the 5 largest categories — and any remaining categories are left ungrouped.",
   "docs.groupByCategory.other.heading": "Other group",
   "docs.groupByCategory.other.bodyPrefix": "Any tab whose URL host does not match any taxonomy entry (even after the parent-domain walk) is placed in the ",
   "docs.groupByCategory.other.bodyMid": " group. Nothing is dropped or hidden — every tab lands somewhere. Tabs with no recognisable hostname (such as ",
