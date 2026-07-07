@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Others catch-all group — Takt</title>
+    <meta
+      name="description"
+      content="Others catch-all group collects every unmatched tab into a named group when you run Group All, so no tab is left without a home."
+    />
+
+    <link rel="icon" type="image/png" sizes="32x32" href="../../assets/favicon-32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="../../assets/favicon-16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="../../assets/apple-touch-icon.png" />
+
+    <meta name="theme-color" content="#FF3B30" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../../css/tokens.css" />
+    <link rel="stylesheet" href="../../css/base.css" />
+    <link rel="stylesheet" href="../../css/layout.css" />
+    <link rel="stylesheet" href="../../css/docs.css" />
+
+    <script src="../../js/theme.js"></script>
+    <script type="module" src="../../js/i18n.js"></script>
+  </head>
+  <body>
+    <header id="site-header"></header>
+
+    <div class="docs-layout">
+      <aside class="docs-sidebar">
+        <h4 data-i18n="docs.sidebar.heading">Documentation</h4>
+        <ul>
+          <li><a href="../../getting-started/" data-i18n="docs.sidebar.gettingStarted">Getting Started</a></li>
+          <li><a href="../rules/" data-i18n="docs.sidebar.rules">Rule Reference</a></li>
+          <li><a href="../duplicates/" data-i18n="docs.sidebar.duplicates">Duplicate Prevention</a></li>
+          <li><a href="../group-actions/" data-i18n="docs.sidebar.groupActions">Group Actions</a></li>
+          <li><a href="../group-by-category/" data-i18n="docs.sidebar.groupByCategory">Group by Category</a></li>
+          <li><a href="../smart-group-ai/" data-i18n="docs.sidebar.smartGroupAi">Smart Group with AI</a></li>
+          <li><a href="../auto-collapse/" data-i18n="docs.sidebar.autoCollapse">Auto-collapse</a></li>
+          <li><a href="../sort-by-domain/" data-i18n="docs.sidebar.sortByDomain">Sort by Domain</a></li>
+          <li><!-- ../others-group/ --><a href="./" class="active" data-i18n="docs.sidebar.othersGroup">Others catch-all group</a></li>
+          <li><a href="../resources/" data-i18n="docs.sidebar.resources">Resource Dashboard</a></li>
+          <li><a href="../profiles/" data-i18n="docs.sidebar.profiles">Profiles &amp; Schedules</a></li>
+          <li><a href="../sessions/" data-i18n="docs.sidebar.sessions">Sessions</a></li>
+          <li><a href="../hibernation/" data-i18n="docs.sidebar.hibernation">Hibernation</a></li>
+          <li><a href="../sync/" data-i18n="docs.sidebar.sync">File Sync</a></li>
+          <li><a href="../drive-sync/" data-i18n="docs.sidebar.driveSync">Drive Sync</a></li>
+          <li><a href="../shortcuts/" data-i18n="docs.sidebar.shortcuts">Keyboard Shortcuts</a></li>
+          <li><a href="../quick-switch/" data-i18n="docs.sidebar.quickSwitch">Quick Switch</a></li>
+          <li><a href="../insights/" data-i18n="docs.sidebar.insights">Insights &amp; Suggestions</a></li>
+          <li><a href="../permissions/" data-i18n="docs.sidebar.permissions">Permissions</a></li>
+        </ul>
+      </aside>
+
+      <main class="docs-content">
+        <h1 data-i18n="docs.sidebar.othersGroup">Others catch-all group</h1>
+        <p class="lead" data-i18n="docs.othersGroup.lead">
+          Others catch-all group collects every non-pinned, unmatched tab into a named tab group
+          when you run Group All — so no tab is left without a home.
+        </p>
+
+        <h2 id="overview"><span data-i18n="docs.othersGroup.overview.heading">Overview</span> <a href="#overview" class="anchor-link">#</a></h2>
+        <p data-i18n="docs.othersGroup.overview.p1">
+          Others catch-all group is a <span class="badge">Premium</span> opt-in feature. When
+          enabled, running Group All creates an "Others" tab group that catches any tab not matched
+          by a rule. The feature is off by default — ungrouped tabs stay ungrouped until you turn
+          it on.
+        </p>
+
+        <h2 id="how-to-enable"><span data-i18n="docs.othersGroup.howToEnable.heading">How to enable</span> <a href="#how-to-enable" class="anchor-link">#</a></h2>
+        <p data-i18n="docs.othersGroup.howToEnable.p1">
+          Open Takt Settings → TAB GROUPS and turn on "Others catch-all group". The toggle is
+          locked for free users — this is a Premium-only feature.
+        </p>
+
+        <h2 id="what-ends-up-in-others"><span data-i18n="docs.othersGroup.whatEndsUp.heading">What ends up in Others</span> <a href="#what-ends-up-in-others" class="anchor-link">#</a></h2>
+        <p data-i18n="docs.othersGroup.whatEndsUp.p1">
+          Any non-pinned tab that is not matched by a rule and is not a restricted browser page
+          (<code>chrome://</code>, <code>chrome-extension://</code>, or <code>javascript:</code>)
+          is collected into the Others group when Group All runs.
+        </p>
+
+        <h2 id="interaction-with-rules"><span data-i18n="docs.othersGroup.interactionWithRules.heading">How Others interacts with rules</span> <a href="#interaction-with-rules" class="anchor-link">#</a></h2>
+        <p data-i18n="docs.othersGroup.interactionWithRules.p1">
+          Rules run first. Tabs that match a rule go to their assigned group as normal. Only the
+          leftover unmatched tabs land in Others.
+        </p>
+        <p data-i18n="docs.othersGroup.interactionWithRules.p2">
+          Running Group All again is idempotent — Takt reuses the existing Others group rather
+          than creating a new one.
+        </p>
+
+        <h2 id="gotchas"><span data-i18n="docs.othersGroup.gotchas.heading">Edge cases and gotchas</span> <a href="#gotchas" class="anchor-link">#</a></h2>
+        <ul>
+          <li data-i18n="docs.othersGroup.gotchas.li1">
+            <strong>Others disabled:</strong> if the setting is off, tabs that don't match any
+            rule stay ungrouped. No Others group is created.
+          </li>
+          <li data-i18n="docs.othersGroup.gotchas.li2">
+            <strong>All tabs match rules:</strong> if every non-pinned, non-restricted tab is
+            claimed by a rule, no Others group is created — even when the setting is on.
+          </li>
+          <li data-i18n="docs.othersGroup.gotchas.li3">
+            <strong>Keyboard shortcut path:</strong> using the Group All keyboard shortcut behaves
+            exactly the same as clicking the Group All button — the Others setting is respected in
+            both cases.
+          </li>
+        </ul>
+
+        <div class="docs-nav-prev-next">
+          <a href="../sort-by-domain/">&larr; Sort by Domain</a>
+          <a href="../resources/" class="next">Resource Dashboard &rarr;</a>
+        </div>
+      </main>
+    </div>
+
+    <footer id="site-footer"></footer>
+
+    <script src="../../js/includes.js"></script>
+    <script src="../../js/nav.js"></script>
+  </body>
+</html>
