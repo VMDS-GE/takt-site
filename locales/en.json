@@ -797,7 +797,7 @@
   "docs.sortByDomain.overview.p1": "Click Sort by Domain in the Takt popup and every tab in scope is reordered alphabetically by domain. It is a one-time action, not a continuous mode — run it again any time you want to re-sort after opening new tabs.",
   "docs.sortByDomain.overview.p2": "Free sorts the tabs in your active window. Premium sorts the tabs in every open window in one click.",
   "docs.sortByDomain.howItWorks.heading": "How it works",
-  "docs.sortByDomain.howItWorks.p1": "Takt reads the domain from each tab's URL — the registrable domain, not the full hostname, so mail.google.com and drive.google.com both sort under google.com — and reorders tabs alphabetically by that value.",
+  "docs.sortByDomain.howItWorks.p1": "Takt reads the domain from each tab's URL — the registrable domain, not the full hostname, so mail.google.com and drive.google.com both sort under google.com — and reorders tabs alphabetically by that value. Tabs that share the same registrable domain are then sorted alphabetically by their full hostname, so drive.google.com sorts before mail.google.com.",
   "docs.sortByDomain.howItWorks.p2": "Grouped and ungrouped tabs are sorted independently. Tabs inside an existing tab group are reordered among themselves, and stay in that group. Ungrouped tabs are reordered among themselves too. Sorting never moves a tab into or out of a group, and never merges groups.",
   "docs.sortByDomain.tiers.heading": "Free vs Premium",
   "docs.sortByDomain.tiers.p1": "No settings toggle is needed — the popup button always sorts the widest scope your plan allows. Free users sort one window at a time; Premium subscribers sort their whole browser session in a single click.",
