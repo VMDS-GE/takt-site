@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Grouping Mode — Takt</title>
-    <meta name="description" content="Choose how Takt groups your open tabs — three exclusive modes (Rules, Domain, AI) controlled by a single popup toggle." />
+    <meta name="description" content="Choose how Takt groups your open tabs — three exclusive modes (Rules, Category, AI) controlled by a single popup toggle." />
 
     <link rel="icon" type="image/png" sizes="32x32" href="../../assets/favicon-32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="../../assets/favicon-16.png" />
@@ -66,7 +66,7 @@
           persists across sessions so you never have to re-select it.
         </p>
         <p data-i18n="docs.groupingMode.overview.p2">
-          The three available modes are: <strong>Rules</strong> (the default), <strong>Domain</strong>,
+          The three available modes are: <strong>Rules</strong> (the default), <strong>Category</strong>,
           and <strong>AI</strong>. Each mode is mutually exclusive — selecting one deactivates the others.
         </p>
 
@@ -85,17 +85,17 @@
           <tbody>
             <tr>
               <td><a href="../smart-group-ai/"><strong>AI</strong></a></td>
-              <td>Uses Chrome's on-device Prompt API to invent semantic group labels from tab content</td>
+              <td>Group tabs automatically using Chrome's built-in AI model</td>
               <td>Premium</td>
             </tr>
             <tr>
-              <td><a href="../sort-by-domain/"><strong>Domain</strong></a></td>
-              <td>Groups tabs by their registrable domain so same-site tabs share a group</td>
+              <td><a href="../group-by-category/"><strong>Category</strong></a></td>
+              <td>Group tabs by predefined rules (see the category list). Formerly Domain — see also <a href="../sort-by-domain/">Sort by Domain</a>.</td>
               <td>Free</td>
             </tr>
             <tr>
               <td><strong>Rules</strong></td>
-              <td>Groups tabs using your configured rules — color, name, and conditions you define</td>
+              <td>Group tabs by your own defined rules</td>
               <td>Free</td>
             </tr>
           </tbody>
@@ -103,7 +103,7 @@
 
         <h2 id="toggle"><span data-i18n="docs.groupingMode.toggle.heading">Toggle</span> <a href="#toggle" class="anchor-link">#</a></h2>
         <p data-i18n="docs.groupingMode.toggle.p1">
-          The Takt popup shows a radio group with three options — Rules, Domain, and AI. Select
+          The Takt popup shows a radio group with three options — Rules, Category, and AI. Select
           the option you want, then click <strong>Group Tabs</strong>. Takt uses the selected mode
           for that grouping action.
         </p>
@@ -117,7 +117,7 @@
         <h2 id="profiles-schedules"><span data-i18n="docs.groupingMode.profilesSchedules.heading">Profiles &amp; Schedules</span> <a href="#profiles-schedules" class="anchor-link">#</a></h2>
         <p data-i18n="docs.groupingMode.profilesSchedules.p1">
           <a href="../profiles/">Profiles and Schedules</a> only apply when <strong>Rules</strong>
-          mode is active. If you switch to AI or Domain mode, Profiles and Schedules become inert
+          mode is active. If you switch to AI or Category mode, Profiles and Schedules become inert
           and have no effect until you return to Rules mode.
         </p>
 
