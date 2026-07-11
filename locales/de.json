@@ -837,5 +837,12 @@
   "docs.groupingMode.profilesSchedules.heading": "Profile & Zeitpläne",
   "docs.groupingMode.profilesSchedules.p1": "Profile und Zeitpläne gelten nur, wenn der Regeln-Modus aktiv ist. Wenn Sie zum KI- oder Kategorie-Modus wechseln, werden Profile und Zeitpläne inaktiv und haben keine Auswirkung, bis Sie zum Regeln-Modus zurückkehren.",
   "docs.shortcuts.buttonStates.heading": "Schaltflächenzustände",
-  "docs.shortcuts.buttonStates.p1": "Jede Popup-Schaltfläche wird je nach aktuellem Tab-Status aktiviert oder deaktiviert. Diese Regeln gelten für Free- und Premium-Nutzer — der einzige Unterschied zwischen den Stufen ist der fensterübergreifende Umfang (bereits oben dokumentiert)."
+  "docs.shortcuts.buttonStates.p1": "Jede Popup-Schaltfläche wird je nach aktuellem Tab-Status aktiviert oder deaktiviert. Diese Regeln gelten für Free- und Premium-Nutzer — der einzige Unterschied zwischen den Stufen ist der fensterübergreifende Umfang (bereits oben dokumentiert).",
+  "docs.rules.aiSuggest.heading": "KI-Vorschläge",
+  "docs.rules.aiSuggest.intro": "Der Abschnitt Regeln der Optionsseite enthält ein KI-Vorschläge-Panel, das neue Tab-Gruppierungsregeln basierend auf den aktuell im Browser geöffneten Domains vorschlägt.",
+  "docs.rules.aiSuggest.howTo": "Klicken Sie im KI-Vorschläge-Panel im Reiter Regeln der Optionen auf die Schaltfläche Regeln vorschlagen, um Vorschläge zu generieren.",
+  "docs.rules.aiSuggest.onDeviceCallout": "Vorschläge werden auf Ihrem Gerät mithilfe der integrierten Prompt API von Chrome generiert. Keine Tab-Daten, URLs oder Regelinhalte verlassen jemals Ihren Browser — es gibt keinen Server, keine Telemetrie und keinen Drittanbieter für KI.",
+  "docs.rules.aiSuggest.freeTier": "Free-Nutzer können Vorschläge erhalten, aber die Gesamtanzahl der Regeln ist auf 5 begrenzt. Das Akzeptieren eines Vorschlags, der diesen Wert überschreiten würde, wird mit derselben Upgrade-Meldung wie bei der manuellen Regelerstellung blockiert.",
+  "docs.rules.aiSuggest.availability": "Das KI-Vorschläge-Panel wird still ausgeblendet, wenn die Prompt API von Chrome nicht verfügbar ist (ältere Chrome-Version, Flag deaktiviert oder nicht unterstützte Hardware). Um die Geräteintelligenz zu aktivieren, lesen Sie Chromes Leitfaden zur lokalen KI.",
+  "docs.rules.aiSuggest.insightsRef": "Takt bietet auch heuristische Vorschläge im Insights-Bereich — siehe die Insights-Dokumentationsseite."
 }

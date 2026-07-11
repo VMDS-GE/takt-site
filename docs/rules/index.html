@@ -286,6 +286,16 @@
         <p data-i18n="docs.rules.contextMenu.prefill">Takt derives a Glob pattern of the form *://host/* from the current tab's URL and pre-fills the new-rule form in the Options page.</p>
         <p data-i18n="docs.rules.contextMenu.notAutoSaved">Review the pre-filled form and click Save — the rule is not committed until you do.</p>
 
+        <h2 id="ai-suggest"><span data-i18n="docs.rules.aiSuggest.heading">AI Suggestions</span> <a href="#ai-suggest" class="anchor-link">#</a></h2>
+        <p data-i18n="docs.rules.aiSuggest.intro">The Rules section of the Options page includes an AI Suggestions panel that proposes new tab-grouping rules based on the domains currently open in your browser.</p>
+        <p data-i18n="docs.rules.aiSuggest.howTo">Click the <strong>Suggest rules</strong> button in the AI Suggestions panel within the Rules tab of Options to generate suggestions.</p>
+        <div class="callout">
+          <p data-i18n="docs.rules.aiSuggest.onDeviceCallout">Suggestions are generated on your device using Chrome's built-in Prompt API. No tab data, URL, or rule content ever leaves your browser — there is no server, no telemetry, and no third-party AI provider.</p>
+        </div>
+        <p data-i18n="docs.rules.aiSuggest.freeTier">Free users can receive suggestions, but the total rule count is capped at 5. Accepting a suggestion that would push the total above 5 is blocked with the same upgrade prompt as manual rule creation.</p>
+        <p data-i18n="docs.rules.aiSuggest.availability">The AI Suggestions panel is silently hidden when Chrome's Prompt API is unavailable (older Chrome version, flag disabled, or unsupported hardware). To enable on-device AI, see <a href="https://developer.chrome.com/docs/ai/get-started">Chrome's on-device AI guide</a>.</p>
+        <p data-i18n="docs.rules.aiSuggest.insightsRef">Takt also offers heuristic suggestions in the Insights pane — see the <a href="../../insights/">Insights doc page</a>.</p>
+
         <h2 id="colors"><span data-i18n="docs.rules.colors.heading">Group colors</span> <a href="#colors" class="anchor-link">#</a></h2>
         <p data-i18n="docs.rules.colors.p1">
           Chrome supports 8 tab group colors: <strong>grey</strong>, <strong>blue</strong>,

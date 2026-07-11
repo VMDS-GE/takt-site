@@ -837,5 +837,12 @@
   "docs.groupingMode.profilesSchedules.heading": "Perfis e Agendamentos",
   "docs.groupingMode.profilesSchedules.p1": "Os perfis e agendamentos só se aplicam quando o modo Regras está ativo. Se você mudar para o modo IA ou Categoria, os perfis e agendamentos ficam inativos até você retornar ao modo Regras.",
   "docs.shortcuts.buttonStates.heading": "Estados dos botões",
-  "docs.shortcuts.buttonStates.p1": "Cada botão do popup é habilitado ou desabilitado com base no estado atual das abas. Essas regras se aplicam aos usuários Free e Premium — a única diferença entre os níveis é o escopo entre janelas (já documentado acima)."
+  "docs.shortcuts.buttonStates.p1": "Cada botão do popup é habilitado ou desabilitado com base no estado atual das abas. Essas regras se aplicam aos usuários Free e Premium — a única diferença entre os níveis é o escopo entre janelas (já documentado acima).",
+  "docs.rules.aiSuggest.heading": "Sugestões de IA",
+  "docs.rules.aiSuggest.intro": "A seção Regras da página Opções inclui um painel de Sugestões de IA que propõe novas regras de agrupamento de abas com base nos domínios atualmente abertos no seu navegador.",
+  "docs.rules.aiSuggest.howTo": "Clique no botão Sugerir regras no painel de Sugestões de IA na aba Regras de Opções para gerar sugestões.",
+  "docs.rules.aiSuggest.onDeviceCallout": "As sugestões são geradas no seu dispositivo usando a API Prompt integrada do Chrome. Nenhum dado de aba, URL ou regra sai do seu navegador — não há servidor, telemetria nem provedor de IA de terceiros.",
+  "docs.rules.aiSuggest.freeTier": "Usuários Free podem receber sugestões, mas o número total de regras é limitado a 5. Aceitar uma sugestão que ultrapassaria esse total é bloqueado com a mesma mensagem de atualização da criação manual de regras.",
+  "docs.rules.aiSuggest.availability": "O painel de Sugestões de IA fica oculto silenciosamente quando a API Prompt do Chrome não está disponível (versão mais antiga do Chrome, flag desativado ou hardware não suportado). Para ativar a IA no dispositivo, consulte o guia de IA local do Chrome.",
+  "docs.rules.aiSuggest.insightsRef": "O Takt também oferece sugestões heurísticas no painel Insights — veja a página de documentação do Insights."
 }

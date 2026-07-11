@@ -837,5 +837,12 @@
   "docs.groupingMode.profilesSchedules.heading": "Profili e Pianificazioni",
   "docs.groupingMode.profilesSchedules.p1": "I profili e le pianificazioni si applicano solo quando la modalità Regole è attiva. Se passi alla modalità IA o Categoria, i profili e le pianificazioni diventano inattivi fino a quando non torni alla modalità Regole.",
   "docs.shortcuts.buttonStates.heading": "Stati dei pulsanti",
-  "docs.shortcuts.buttonStates.p1": "Ogni pulsante del popup è abilitato o disabilitato in base allo stato corrente delle schede. Queste regole si applicano sia agli utenti Free che Premium — l'unica differenza tra i livelli è il campo di applicazione tra finestre (già documentato sopra)."
+  "docs.shortcuts.buttonStates.p1": "Ogni pulsante del popup è abilitato o disabilitato in base allo stato corrente delle schede. Queste regole si applicano sia agli utenti Free che Premium — l'unica differenza tra i livelli è il campo di applicazione tra finestre (già documentato sopra).",
+  "docs.rules.aiSuggest.heading": "Suggerimenti IA",
+  "docs.rules.aiSuggest.intro": "La sezione Regole della pagina Opzioni include un pannello Suggerimenti IA che propone nuove regole di raggruppamento delle schede basate sui domini attualmente aperti nel browser.",
+  "docs.rules.aiSuggest.howTo": "Fai clic sul pulsante Suggerisci regole nel pannello Suggerimenti IA nella scheda Regole delle Opzioni per generare suggerimenti.",
+  "docs.rules.aiSuggest.onDeviceCallout": "I suggerimenti vengono generati sul tuo dispositivo utilizzando la Prompt API integrata di Chrome. Nessun dato di scheda, URL o regola lascia mai il tuo browser — non c'è alcun server, telemetria o provider di IA di terze parti.",
+  "docs.rules.aiSuggest.freeTier": "Gli utenti Free possono ricevere suggerimenti, ma il numero totale di regole è limitato a 5. L'accettazione di un suggerimento che farebbe superare questo totale viene bloccata con lo stesso messaggio di aggiornamento della creazione manuale di regole.",
+  "docs.rules.aiSuggest.availability": "Il pannello Suggerimenti IA viene nascosto silenziosamente quando la Prompt API di Chrome non è disponibile (versione di Chrome precedente, flag disabilitato o hardware non supportato). Per abilitare l'IA sul dispositivo, consulta la guida IA sul dispositivo di Chrome.",
+  "docs.rules.aiSuggest.insightsRef": "Takt offre anche suggerimenti euristici nel pannello Insights — consulta la pagina della documentazione di Insights."
 }

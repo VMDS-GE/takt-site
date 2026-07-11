@@ -837,5 +837,12 @@
   "docs.groupingMode.profilesSchedules.heading": "Profiles & Schedules",
   "docs.groupingMode.profilesSchedules.p1": "Profiles and Schedules only apply when Rules mode is active. If you switch to AI or Category mode, Profiles and Schedules become inert and have no effect until you return to Rules mode.",
   "docs.shortcuts.buttonStates.heading": "Button states",
-  "docs.shortcuts.buttonStates.p1": "Each popup button is enabled or disabled based on the current tab state. These rules apply to both Free and Premium users — the only difference between tiers is cross-window scope (already documented above)."
+  "docs.shortcuts.buttonStates.p1": "Each popup button is enabled or disabled based on the current tab state. These rules apply to both Free and Premium users — the only difference between tiers is cross-window scope (already documented above).",
+  "docs.rules.aiSuggest.heading": "AI Suggestions",
+  "docs.rules.aiSuggest.intro": "The Rules section of the Options page includes an AI Suggestions panel that proposes new tab-grouping rules based on the domains currently open in your browser.",
+  "docs.rules.aiSuggest.howTo": "Click the Suggest rules button in the AI Suggestions panel within the Rules tab of Options to generate suggestions.",
+  "docs.rules.aiSuggest.onDeviceCallout": "Suggestions are generated on your device using Chrome's built-in Prompt API. No tab data, URL, or rule content ever leaves your browser — there is no server, no telemetry, and no third-party AI provider.",
+  "docs.rules.aiSuggest.freeTier": "Free users can receive suggestions, but the total rule count is capped at 5. Accepting a suggestion that would push the total above 5 is blocked with the same upgrade prompt as manual rule creation.",
+  "docs.rules.aiSuggest.availability": "The AI Suggestions panel is silently hidden when Chrome's Prompt API is unavailable (older Chrome version, flag disabled, or unsupported hardware). To enable on-device AI, see Chrome's on-device AI guide.",
+  "docs.rules.aiSuggest.insightsRef": "Takt also offers heuristic suggestions in the Insights pane — see the Insights doc page."
 }
