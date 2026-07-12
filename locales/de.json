@@ -844,5 +844,11 @@
   "docs.rules.aiSuggest.onDeviceCallout": "Vorschläge werden auf Ihrem Gerät mithilfe der integrierten Prompt API von Chrome generiert. Keine Tab-Daten, URLs oder Regelinhalte verlassen jemals Ihren Browser — es gibt keinen Server, keine Telemetrie und keinen Drittanbieter für KI.",
   "docs.rules.aiSuggest.freeTier": "Free-Nutzer können Vorschläge erhalten, aber die Gesamtanzahl der Regeln ist auf 5 begrenzt. Das Akzeptieren eines Vorschlags, der diesen Wert überschreiten würde, wird mit derselben Upgrade-Meldung wie bei der manuellen Regelerstellung blockiert.",
   "docs.rules.aiSuggest.availability": "Das KI-Vorschläge-Panel wird still ausgeblendet, wenn die Prompt API von Chrome nicht verfügbar ist (ältere Chrome-Version, Flag deaktiviert oder nicht unterstützte Hardware). Um die Geräteintelligenz zu aktivieren, lesen Sie Chromes Leitfaden zur lokalen KI.",
-  "docs.rules.aiSuggest.insightsRef": "Takt bietet auch heuristische Vorschläge im Insights-Bereich — siehe die Insights-Dokumentationsseite."
+  "docs.rules.aiSuggest.insightsRef": "Takt bietet auch heuristische Vorschläge im Insights-Bereich — siehe die Insights-Dokumentationsseite.",
+  "docs.sessions.autoSave.heading": "Automatisches Speichern beim Schließen",
+  "docs.sessions.autoSave.intro": "Wenn ein Browserfenster mit 2 oder mehr Tabs geschlossen wird, speichert Takt diese Tabs automatisch als Sitzung. Dazu ist ein Premium-Abonnement erforderlich.",
+  "docs.sessions.autoSave.howToEnable": "Um die automatische Speicherung zu aktivieren, öffnen Sie das Takt-Popup, gehen Sie zu Einstellungen und aktivieren Sie die Option \"Automatisch speichern beim Schließen\" im Bereich Sitzungen.",
+  "docs.sessions.autoSave.naming": "Automatisch gespeicherte Sitzungen werden nach dem Muster Autospeicherung — YYYY-MM-DD HH:MM benannt, wobei Datum und Uhrzeit dem Schließzeitpunkt des Fensters entsprechen.",
+  "docs.sessions.autoSave.premiumCallout": "Das automatische Speichern beim Schließen ist eine Premium-Funktion. Wechseln Sie zu einem Premium-Plan, um es zu aktivieren.",
+  "docs.sessions.autoSave.freeRestore": "Kostenlose Nutzer können automatisch gespeicherte Sitzungen anzeigen und wiederherstellen, auch ohne Premium-Abonnement."
 }

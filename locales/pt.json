@@ -844,5 +844,11 @@
   "docs.rules.aiSuggest.onDeviceCallout": "As sugestões são geradas no seu dispositivo usando a API Prompt integrada do Chrome. Nenhum dado de aba, URL ou regra sai do seu navegador — não há servidor, telemetria nem provedor de IA de terceiros.",
   "docs.rules.aiSuggest.freeTier": "Usuários Free podem receber sugestões, mas o número total de regras é limitado a 5. Aceitar uma sugestão que ultrapassaria esse total é bloqueado com a mesma mensagem de atualização da criação manual de regras.",
   "docs.rules.aiSuggest.availability": "O painel de Sugestões de IA fica oculto silenciosamente quando a API Prompt do Chrome não está disponível (versão mais antiga do Chrome, flag desativado ou hardware não suportado). Para ativar a IA no dispositivo, consulte o guia de IA local do Chrome.",
-  "docs.rules.aiSuggest.insightsRef": "O Takt também oferece sugestões heurísticas no painel Insights — veja a página de documentação do Insights."
+  "docs.rules.aiSuggest.insightsRef": "O Takt também oferece sugestões heurísticas no painel Insights — veja a página de documentação do Insights.",
+  "docs.sessions.autoSave.heading": "Salvamento automático ao fechar",
+  "docs.sessions.autoSave.intro": "Quando uma janela do navegador com 2 ou mais abas é fechada, o Takt salva automaticamente essas abas como uma sessão. Isso requer uma assinatura Premium.",
+  "docs.sessions.autoSave.howToEnable": "Para ativar o salvamento automático, abra o popup do Takt, vá em Configurações e ative a opção \"Salvamento automático ao fechar\" na seção Sessões.",
+  "docs.sessions.autoSave.naming": "As sessões salvas automaticamente são nomeadas com o padrão Salvamento auto — YYYY-MM-DD HH:MM, onde a data e a hora refletem quando a janela foi fechada.",
+  "docs.sessions.autoSave.premiumCallout": "O salvamento automático ao fechar é um recurso Premium. Atualize para um plano Premium para ativá-lo.",
+  "docs.sessions.autoSave.freeRestore": "Usuários gratuitos podem visualizar e restaurar sessões salvas automaticamente, mesmo sem uma assinatura Premium ativa."
 }

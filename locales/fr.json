@@ -844,5 +844,11 @@
   "docs.rules.aiSuggest.onDeviceCallout": "Les suggestions sont générées sur votre appareil grâce à l'API Prompt intégrée de Chrome. Aucune donnée d'onglet, URL ou règle ne quitte jamais votre navigateur — il n'y a ni serveur, ni télémétrie, ni fournisseur d'IA tiers.",
   "docs.rules.aiSuggest.freeTier": "Les utilisateurs Free peuvent recevoir des suggestions, mais le nombre total de règles est plafonné à 5. L'acceptation d'une suggestion qui ferait dépasser ce total est bloquée avec le même message de mise à niveau que la création manuelle de règles.",
   "docs.rules.aiSuggest.availability": "Le panneau Suggestions IA est masqué silencieusement lorsque l'API Prompt de Chrome n'est pas disponible (ancienne version de Chrome, indicateur désactivé ou matériel non pris en charge). Pour activer l'IA sur l'appareil, consultez le guide IA sur l'appareil de Chrome.",
-  "docs.rules.aiSuggest.insightsRef": "Takt propose également des suggestions heuristiques dans le volet Insights — consultez la page de documentation Insights."
+  "docs.rules.aiSuggest.insightsRef": "Takt propose également des suggestions heuristiques dans le volet Insights — consultez la page de documentation Insights.",
+  "docs.sessions.autoSave.heading": "Sauvegarde automatique à la fermeture",
+  "docs.sessions.autoSave.intro": "Quand une fenêtre de navigateur contenant 2 onglets ou plus est fermée, Takt enregistre automatiquement ces onglets en tant que session. Cela nécessite un abonnement Premium.",
+  "docs.sessions.autoSave.howToEnable": "Pour activer la sauvegarde automatique, ouvrez le popup Takt, allez dans Paramètres et activez l'option \"Sauvegarde automatique à la fermeture\" dans la section Sessions.",
+  "docs.sessions.autoSave.naming": "Les sessions sauvegardées automatiquement sont nommées selon le modèle Sauvegarde auto — YYYY-MM-DD HH:MM, où la date et l'heure correspondent à la fermeture de la fenêtre.",
+  "docs.sessions.autoSave.premiumCallout": "La sauvegarde automatique à la fermeture est une fonctionnalité Premium. Passez à un plan Premium pour l'activer.",
+  "docs.sessions.autoSave.freeRestore": "Les utilisateurs gratuits peuvent consulter et restaurer les sessions sauvegardées automatiquement, même sans abonnement Premium."
 }

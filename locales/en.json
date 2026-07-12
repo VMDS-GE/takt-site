@@ -844,5 +844,11 @@
   "docs.rules.aiSuggest.onDeviceCallout": "Suggestions are generated on your device using Chrome's built-in Prompt API. No tab data, URL, or rule content ever leaves your browser — there is no server, no telemetry, and no third-party AI provider.",
   "docs.rules.aiSuggest.freeTier": "Free users can receive suggestions, but the total rule count is capped at 5. Accepting a suggestion that would push the total above 5 is blocked with the same upgrade prompt as manual rule creation.",
   "docs.rules.aiSuggest.availability": "The AI Suggestions panel is silently hidden when Chrome's Prompt API is unavailable (older Chrome version, flag disabled, or unsupported hardware). To enable on-device AI, see Chrome's on-device AI guide.",
-  "docs.rules.aiSuggest.insightsRef": "Takt also offers heuristic suggestions in the Insights pane — see the Insights doc page."
+  "docs.rules.aiSuggest.insightsRef": "Takt also offers heuristic suggestions in the Insights pane — see the Insights doc page.",
+  "docs.sessions.autoSave.heading": "Auto-save on window close",
+  "docs.sessions.autoSave.intro": "When a browser window with 2 or more tabs is closed, Takt automatically saves those tabs as a session. This requires a Premium subscription.",
+  "docs.sessions.autoSave.howToEnable": "To enable auto-save, open the Takt popup, go to Settings, and turn on the \"Auto-save on window close\" toggle in the Sessions section.",
+  "docs.sessions.autoSave.naming": "Auto-saved sessions are named using the pattern Auto-save — YYYY-MM-DD HH:MM, where the date and time reflect when the window was closed.",
+  "docs.sessions.autoSave.premiumCallout": "Auto-save on window close is a Premium feature. Upgrade to a Premium plan to enable it.",
+  "docs.sessions.autoSave.freeRestore": "Free users can view and restore auto-saved sessions even without a Premium subscription."
 }

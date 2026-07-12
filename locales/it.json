@@ -844,5 +844,11 @@
   "docs.rules.aiSuggest.onDeviceCallout": "I suggerimenti vengono generati sul tuo dispositivo utilizzando la Prompt API integrata di Chrome. Nessun dato di scheda, URL o regola lascia mai il tuo browser — non c'è alcun server, telemetria o provider di IA di terze parti.",
   "docs.rules.aiSuggest.freeTier": "Gli utenti Free possono ricevere suggerimenti, ma il numero totale di regole è limitato a 5. L'accettazione di un suggerimento che farebbe superare questo totale viene bloccata con lo stesso messaggio di aggiornamento della creazione manuale di regole.",
   "docs.rules.aiSuggest.availability": "Il pannello Suggerimenti IA viene nascosto silenziosamente quando la Prompt API di Chrome non è disponibile (versione di Chrome precedente, flag disabilitato o hardware non supportato). Per abilitare l'IA sul dispositivo, consulta la guida IA sul dispositivo di Chrome.",
-  "docs.rules.aiSuggest.insightsRef": "Takt offre anche suggerimenti euristici nel pannello Insights — consulta la pagina della documentazione di Insights."
+  "docs.rules.aiSuggest.insightsRef": "Takt offre anche suggerimenti euristici nel pannello Insights — consulta la pagina della documentazione di Insights.",
+  "docs.sessions.autoSave.heading": "Salvataggio automatico alla chiusura",
+  "docs.sessions.autoSave.intro": "Quando si chiude una finestra del browser con 2 o più schede, Takt salva automaticamente quelle schede come sessione. Questa funzione richiede un abbonamento Premium.",
+  "docs.sessions.autoSave.howToEnable": "Per abilitare il salvataggio automatico, apri il popup di Takt, vai in Impostazioni e attiva l'opzione \"Salvataggio automatico alla chiusura\" nella sezione Sessioni.",
+  "docs.sessions.autoSave.naming": "Le sessioni salvate automaticamente vengono nominate con il formato Salvataggio auto — YYYY-MM-DD HH:MM, dove la data e l'ora indicano quando la finestra è stata chiusa.",
+  "docs.sessions.autoSave.premiumCallout": "Il salvataggio automatico alla chiusura è una funzione Premium. Passa a un piano Premium per abilitarla.",
+  "docs.sessions.autoSave.freeRestore": "Gli utenti gratuiti possono visualizzare e ripristinare le sessioni salvate automaticamente anche senza un abbonamento Premium attivo."
 }

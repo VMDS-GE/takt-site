@@ -844,5 +844,11 @@
   "docs.rules.aiSuggest.onDeviceCallout": "Las sugerencias se generan en tu dispositivo usando la API Prompt integrada de Chrome. Ningún dato de pestaña, URL o regla abandona tu navegador — no hay servidor, telemetría ni proveedor de IA de terceros.",
   "docs.rules.aiSuggest.freeTier": "Los usuarios Free pueden recibir sugerencias, pero el número total de reglas está limitado a 5. Aceptar una sugerencia que haría superar ese total se bloquea con el mismo mensaje de actualización que la creación manual de reglas.",
   "docs.rules.aiSuggest.availability": "El panel de Sugerencias de IA se oculta silenciosamente cuando la API Prompt de Chrome no está disponible (versión de Chrome más antigua, indicador desactivado o hardware no compatible). Para activar la IA en el dispositivo, consulta la guía de IA en el dispositivo de Chrome.",
-  "docs.rules.aiSuggest.insightsRef": "Takt también ofrece sugerencias heurísticas en el panel Insights — consulta la página de documentación de Insights."
+  "docs.rules.aiSuggest.insightsRef": "Takt también ofrece sugerencias heurísticas en el panel Insights — consulta la página de documentación de Insights.",
+  "docs.sessions.autoSave.heading": "Guardado automático al cerrar",
+  "docs.sessions.autoSave.intro": "Cuando se cierra una ventana del navegador con 2 o más pestañas, Takt guarda automáticamente esas pestañas como una sesión. Esto requiere una suscripción Premium.",
+  "docs.sessions.autoSave.howToEnable": "Para activar el guardado automático, abra el popup de Takt, vaya a Configuración y active la opción \"Guardado automático al cerrar\" en la sección Sesiones.",
+  "docs.sessions.autoSave.naming": "Las sesiones guardadas automáticamente se nombran con el patrón Guardado auto — YYYY-MM-DD HH:MM, donde la fecha y la hora reflejan cuándo se cerró la ventana.",
+  "docs.sessions.autoSave.premiumCallout": "El guardado automático al cerrar es una función Premium. Actualice a un plan Premium para activarlo.",
+  "docs.sessions.autoSave.freeRestore": "Los usuarios gratuitos pueden ver y restaurar las sesiones guardadas automáticamente, incluso sin una suscripción Premium activa."
 }
