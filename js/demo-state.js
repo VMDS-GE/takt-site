@@ -77,5 +77,6 @@ export const initialState = {
     theme: 'system',
     automation: 'auto',
     autoCollapse: true,
+    groupingMode: 'rules',
   },
 };

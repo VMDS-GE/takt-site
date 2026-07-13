@@ -197,7 +197,7 @@ export function setActiveProfile(state, profileId) {
 // ponytail: allowlist guard prevents stray keys; direct assignment, no coercion; no DOM/clock/rng
 export function setSetting(state, key, value) {
   if (!state?.settings) return;
-  if (!['theme', 'automation', 'autoCollapse'].includes(key)) return;
+  if (!['theme', 'automation', 'autoCollapse', 'groupingMode'].includes(key)) return;
   state.settings[key] = value;
 }
 
@@ -489,6 +489,9 @@ export function wireController(
         type: 'success',
         duration: 1500,
       });
+    } else if (e.target.name === 'opt-settings-grouping-mode') {
+      setSetting(state, 'groupingMode', e.target.value);
+      el.showToast('Grouping mode: ' + e.target.value, { type: 'success', duration: 1500 });
     }
   });
   // ponytail: palette input delegation — filter results on every keystroke
