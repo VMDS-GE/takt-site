@@ -489,15 +489,19 @@ export function wireController(
         type: 'success',
         duration: 1500,
       });
-    } else if (e.target.name === 'opt-settings-grouping-mode') {
-      setSetting(state, 'groupingMode', e.target.value);
-      el.showToast('Grouping mode: ' + e.target.value, { type: 'success', duration: 1500 });
     }
   });
   // ponytail: palette input delegation — filter results on every keystroke
   popupRoot.addEventListener('input', (e) => {
     if (e.target.id === 'cmd-palette-input') {
       renderPalette(state, popupRoot, e.target.value);
+    }
+  });
+  popupRoot.addEventListener('change', (e) => {
+    if (e.target.name === 'groupingMode') {
+      setSetting(state, 'groupingMode', e.target.value);
+      renderHome(state, popupRoot);
+      el.showToast('Grouping mode: ' + e.target.value, { type: 'success', duration: 1500 });
     }
   });
   // ponytail: keyboardRoot defaults to document; use optional chaining so Node tests (no document) don't crash

@@ -786,15 +786,6 @@
             <label for="opt-settings-autoCollapse">Auto-collapse groups</label>
             <input type="checkbox" id="opt-settings-autoCollapse" checked>
           </div>
-          <div class="opt-settings-row">
-            <fieldset>
-              <legend>Grouping Mode</legend>
-              <label><input type="radio" name="opt-settings-grouping-mode" value="rules" checked> Rules</label>
-              <label><input type="radio" name="opt-settings-grouping-mode" value="category"> Category</label>
-              <label><input type="radio" name="opt-settings-grouping-mode" value="ai"> AI</label>
-              <label><input type="radio" name="opt-settings-grouping-mode" value="none"> None</label>
-            </fieldset>
-          </div>
         </div>
       </section>
 
@@ -848,6 +839,14 @@
             <fieldset class="tp-section" style="margin:8px 16px 0;padding:10px 16px 14px">
               <legend>Current tab</legend>
               <div id="tp-status" class="tp-status"></div>
+            </fieldset>
+
+            <fieldset class="tp-section" style="margin:8px 16px 0;padding:6px 16px 10px">
+              <legend>Grouping Mode</legend>
+              <label><input type="radio" name="groupingMode" value="rules" checked> Rules</label>
+              <label><input type="radio" name="groupingMode" value="category"> Category</label>
+              <label><input type="radio" name="groupingMode" value="ai"> AI</label>
+              <label><input type="radio" name="groupingMode" value="none"> None</label>
             </fieldset>
 
             <fieldset class="tp-section" style="margin:8px 16px 0;padding:6px 16px 10px">
