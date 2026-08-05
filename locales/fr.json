@@ -815,7 +815,6 @@
   "docs.sortByDomain.gotchas.li3": "Les groupes et les onglets non groupés se trient séparément. Le tri ne déplace jamais un onglet entre un groupe et la zone non groupée, et ne réorganise jamais les groupes entre eux — seuls les onglets à l'intérieur de chacun de ces ensembles sont réorganisés.",
   "docs.sidebar.othersGroup": "Others catch-all group",
   "docs.othersGroup.lead": "Le groupe « Others » rassemble tous les onglets non épinglés et non attribués dans un groupe d’onglets nommé lorsque vous lancez Tout grouper — ainsi aucun onglet n’est laissé sans destination.",
-
   "docs.othersGroup.premiumOnly.heading": "Premium uniquement",
   "docs.othersGroup.premiumOnly.p1": "Le groupe Others est une fonctionnalité réservée à Premium. Il n'apparaîtra pas pour les utilisateurs gratuits quel que soit le mode de regroupement — les onglets non associés restent sans groupe.",
   "docs.othersGroup.overview.heading": "Aperçu",
@@ -842,7 +841,6 @@
   "docs.groupingMode.modes.rulesDesc": "Regroupez les onglets selon vos règles personnalisées",
   "docs.groupingMode.modes.categoryDesc": "Regroupez les onglets par règles prédéfinies (voir la liste des catégories)",
   "docs.groupingMode.modes.aiDesc": "Regroupez les onglets automatiquement avec l'IA intégrée de Chrome",
-
   "docs.groupingMode.tiers.heading": "Limites du niveau gratuit",
   "docs.groupingMode.tiers.p1": "Les limites du niveau gratuit varient selon le mode de regroupement :",
   "docs.groupingMode.tiers.rules": "Rules : les utilisateurs gratuits peuvent créer et activer au maximum 5 règles ; les règles actives sont appliquées lors du regroupement. Premium supprime cette limite.",
@@ -869,5 +867,10 @@
   "docs.sessions.autoSave.howToEnable": "Pour activer la sauvegarde automatique, ouvrez le popup Takt, allez dans Paramètres et activez l'option \"Sauvegarde automatique à la fermeture\" dans la section Sessions.",
   "docs.sessions.autoSave.naming": "Les sessions sauvegardées automatiquement sont nommées selon le modèle Sauvegarde auto — YYYY-MM-DD HH:MM, où la date et l'heure correspondent à la fermeture de la fenêtre.",
   "docs.sessions.autoSave.premiumCallout": "La sauvegarde automatique à la fermeture est une fonctionnalité Premium. Passez à un plan Premium pour l'activer.",
-  "docs.sessions.autoSave.freeRestore": "Les utilisateurs gratuits peuvent consulter et restaurer les sessions sauvegardées automatiquement, même sans abonnement Premium."
+  "docs.sessions.autoSave.freeRestore": "Les utilisateurs gratuits peuvent consulter et restaurer les sessions sauvegardées automatiquement, même sans abonnement Premium.",
+  "docs.sessions.rename.heading": "Renommer une session",
+  "docs.sessions.rename.intro": "Vous pouvez renommer n'importe quelle session enregistrée depuis le volet Sessions de la fenêtre contextuelle ou depuis l'onglet Sessions des Options.",
+  "docs.sessions.rename.howToDoubleClick": "Double-cliquez sur le nom de la session dans le volet Sessions pour le modifier en ligne. Appuyez sur Entrée pour enregistrer le nouveau nom.",
+  "docs.sessions.rename.howToPencil": "Cliquez sur l'icône crayon (✎) à côté du nom d'une session dans la fenêtre contextuelle ou sur la page Options pour commencer le renommage.",
+  "docs.sessions.rename.validation": "Le nouveau nom ne doit pas être vide et doit être unique. La modification est enregistrée immédiatement — aucune étape de confirmation n'est requise."
 }

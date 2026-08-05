@@ -815,7 +815,6 @@
   "docs.sortByDomain.gotchas.li3": "I gruppi e le schede non raggruppate vengono ordinati separatamente. L'ordinamento non sposta mai una scheda tra un gruppo e l'area delle schede non raggruppate, e non riordina mai i gruppi l'uno rispetto all'altro — vengono riordinate solo le schede all'interno di ciascuno di questi insiemi.",
   "docs.sidebar.othersGroup": "Others catch-all group",
   "docs.othersGroup.lead": "Il gruppo Others raccoglie tutte le schede non bloccate e non assegnate in un gruppo di schede denominato quando esegui Raggruppa tutto — così nessuna scheda rimane senza destinazione.",
-
   "docs.othersGroup.premiumOnly.heading": "Solo Premium",
   "docs.othersGroup.premiumOnly.p1": "Il gruppo Others è una funzionalità riservata a Premium. Non apparirà per gli utenti gratuiti indipendentemente dalla modalità di raggruppamento — le schede non corrispondenti rimangono non raggruppate.",
   "docs.othersGroup.overview.heading": "Panoramica",
@@ -842,7 +841,6 @@
   "docs.groupingMode.modes.rulesDesc": "Raggruppa le schede secondo le tue regole personalizzate",
   "docs.groupingMode.modes.categoryDesc": "Raggruppa le schede per regole predefinite (vedi la lista delle categorie)",
   "docs.groupingMode.modes.aiDesc": "Raggruppa le schede automaticamente usando il modello IA integrato di Chrome",
-
   "docs.groupingMode.tiers.heading": "Limiti del livello gratuito",
   "docs.groupingMode.tiers.p1": "I limiti del livello gratuito variano in base alla modalità di raggruppamento:",
   "docs.groupingMode.tiers.rules": "Rules: gli utenti gratuiti possono creare e attivare al massimo 5 regole; le regole attive vengono applicate durante il raggruppamento. Premium rimuove il limite.",
@@ -869,5 +867,10 @@
   "docs.sessions.autoSave.howToEnable": "Per abilitare il salvataggio automatico, apri il popup di Takt, vai in Impostazioni e attiva l'opzione \"Salvataggio automatico alla chiusura\" nella sezione Sessioni.",
   "docs.sessions.autoSave.naming": "Le sessioni salvate automaticamente vengono nominate con il formato Salvataggio auto — YYYY-MM-DD HH:MM, dove la data e l'ora indicano quando la finestra è stata chiusa.",
   "docs.sessions.autoSave.premiumCallout": "Il salvataggio automatico alla chiusura è una funzione Premium. Passa a un piano Premium per abilitarla.",
-  "docs.sessions.autoSave.freeRestore": "Gli utenti gratuiti possono visualizzare e ripristinare le sessioni salvate automaticamente anche senza un abbonamento Premium attivo."
+  "docs.sessions.autoSave.freeRestore": "Gli utenti gratuiti possono visualizzare e ripristinare le sessioni salvate automaticamente anche senza un abbonamento Premium attivo.",
+  "docs.sessions.rename.heading": "Rinominare una sessione",
+  "docs.sessions.rename.intro": "Puoi rinominare qualsiasi sessione salvata dal pannello Sessioni del popup o dalla scheda Sessioni nelle Opzioni.",
+  "docs.sessions.rename.howToDoubleClick": "Fai doppio clic sul nome della sessione nel pannello Sessioni del popup per modificarlo in linea. Premi Invio per salvare il nuovo nome.",
+  "docs.sessions.rename.howToPencil": "Fai clic sull'icona a matita (✎) accanto al nome di una sessione nel popup o nella pagina Opzioni per avviare la rinomina.",
+  "docs.sessions.rename.validation": "Il nuovo nome non deve essere vuoto e deve essere univoco. La modifica viene salvata immediatamente — non è necessario alcun passaggio di conferma."
 }

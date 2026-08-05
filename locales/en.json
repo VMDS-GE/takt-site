@@ -815,7 +815,6 @@
   "docs.sortByDomain.gotchas.li3": "Groups and ungrouped tabs sort separately. Sorting never moves a tab between a group and the ungrouped area, and never reorders groups relative to each other — only the tabs within each of those buckets are reordered.",
   "docs.sidebar.othersGroup": "Others catch-all group",
   "docs.othersGroup.lead": "Others catch-all group collects every non-pinned, unmatched tab into a named tab group when you run Group All — so no tab is left without a home.",
-
   "docs.othersGroup.premiumOnly.heading": "Premium only",
   "docs.othersGroup.premiumOnly.p1": "The Others catch-all group is a Premium-only feature. It will not appear for free users regardless of grouping mode — unmatched tabs stay ungrouped.",
   "docs.othersGroup.overview.heading": "Overview",
@@ -842,7 +841,6 @@
   "docs.groupingMode.modes.rulesDesc": "Group tabs by your own defined rules",
   "docs.groupingMode.modes.categoryDesc": "Group tabs by predefined rules (see the category list)",
   "docs.groupingMode.modes.aiDesc": "Group tabs automatically using Chrome's built-in AI model",
-
   "docs.groupingMode.tiers.heading": "Free tier limits",
   "docs.groupingMode.tiers.p1": "Free-tier limits vary by grouping mode:",
   "docs.groupingMode.tiers.rules": "Rules: free users can create and activate at most 5 rules; the active rules are applied on grouping. Premium removes the cap.",
@@ -869,5 +867,10 @@
   "docs.sessions.autoSave.howToEnable": "To enable auto-save, open the Takt popup, go to Settings, and turn on the \"Auto-save on window close\" toggle in the Sessions section.",
   "docs.sessions.autoSave.naming": "Auto-saved sessions are named using the pattern Auto-save — YYYY-MM-DD HH:MM, where the date and time reflect when the window was closed.",
   "docs.sessions.autoSave.premiumCallout": "Auto-save on window close is a Premium feature. Upgrade to a Premium plan to enable it.",
-  "docs.sessions.autoSave.freeRestore": "Free users can view and restore auto-saved sessions even without a Premium subscription."
+  "docs.sessions.autoSave.freeRestore": "Free users can view and restore auto-saved sessions even without a Premium subscription.",
+  "docs.sessions.rename.heading": "Rename a session",
+  "docs.sessions.rename.intro": "You can rename any saved session from the popup Sessions pane or from the Options page Sessions tab.",
+  "docs.sessions.rename.howToDoubleClick": "Double-click the session name in the popup Sessions pane to edit it inline. Press Enter to save the new name.",
+  "docs.sessions.rename.howToPencil": "Click the pencil icon (✎) next to a session name in the popup or on the Options page to start renaming.",
+  "docs.sessions.rename.validation": "The new name must not be empty and must be unique. The change is saved immediately — no confirmation step is needed."
 }

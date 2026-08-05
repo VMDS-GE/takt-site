@@ -815,7 +815,6 @@
   "docs.sortByDomain.gotchas.li3": "Gruppen und nicht gruppierte Tabs werden getrennt sortiert. Das Sortieren verschiebt einen Tab niemals zwischen einer Gruppe und dem nicht gruppierten Bereich und ordnet Gruppen niemals relativ zueinander neu an — nur die Tabs innerhalb jedes dieser Bereiche werden neu angeordnet.",
   "docs.sidebar.othersGroup": "Others catch-all group",
   "docs.othersGroup.lead": "Die Others-Gruppe sammelt alle nicht angehefteten und nicht zugewiesenen Tabs in einer benannten Tab-Gruppe, wenn Sie Alle gruppieren ausführen — damit kein Tab ohne Ziel bleibt.",
-
   "docs.othersGroup.premiumOnly.heading": "Nur Premium",
   "docs.othersGroup.premiumOnly.p1": "Die Others-Sammelgruppe ist eine Premium-Funktion. Sie wird für Nutzer der kostenlosen Version nicht angezeigt, unabhängig vom Gruppierungsmodus — nicht zugeordnete Tabs bleiben ungruppiert.",
   "docs.othersGroup.overview.heading": "Übersicht",
@@ -842,7 +841,6 @@
   "docs.groupingMode.modes.rulesDesc": "Tabs nach Ihren eigenen definierten Regeln gruppieren",
   "docs.groupingMode.modes.categoryDesc": "Tabs nach vordefinierten Regeln gruppieren (siehe Kategorieliste)",
   "docs.groupingMode.modes.aiDesc": "Tabs automatisch mit dem integrierten KI-Modell von Chrome gruppieren",
-
   "docs.groupingMode.tiers.heading": "Limits der kostenlosen Version",
   "docs.groupingMode.tiers.p1": "Die Limits der kostenlosen Version variieren je nach Gruppierungsmodus:",
   "docs.groupingMode.tiers.rules": "Rules: Nutzer der kostenlosen Version können maximal 5 Regeln erstellen und aktivieren; die aktiven Regeln werden beim Gruppieren angewendet. Premium hebt das Limit auf.",
@@ -869,5 +867,10 @@
   "docs.sessions.autoSave.howToEnable": "Um die automatische Speicherung zu aktivieren, öffnen Sie das Takt-Popup, gehen Sie zu Einstellungen und aktivieren Sie die Option \"Automatisch speichern beim Schließen\" im Bereich Sitzungen.",
   "docs.sessions.autoSave.naming": "Automatisch gespeicherte Sitzungen werden nach dem Muster Autospeicherung — YYYY-MM-DD HH:MM benannt, wobei Datum und Uhrzeit dem Schließzeitpunkt des Fensters entsprechen.",
   "docs.sessions.autoSave.premiumCallout": "Das automatische Speichern beim Schließen ist eine Premium-Funktion. Wechseln Sie zu einem Premium-Plan, um es zu aktivieren.",
-  "docs.sessions.autoSave.freeRestore": "Kostenlose Nutzer können automatisch gespeicherte Sitzungen anzeigen und wiederherstellen, auch ohne Premium-Abonnement."
+  "docs.sessions.autoSave.freeRestore": "Kostenlose Nutzer können automatisch gespeicherte Sitzungen anzeigen und wiederherstellen, auch ohne Premium-Abonnement.",
+  "docs.sessions.rename.heading": "Eine Sitzung umbenennen",
+  "docs.sessions.rename.intro": "Sie können jede gespeicherte Sitzung über den Sitzungsbereich im Popup oder über den Sitzungs-Tab in den Optionen umbenennen.",
+  "docs.sessions.rename.howToDoubleClick": "Doppelklicken Sie auf den Sitzungsnamen im Popup-Sitzungsbereich, um ihn direkt zu bearbeiten. Drücken Sie die Eingabetaste, um den neuen Namen zu speichern.",
+  "docs.sessions.rename.howToPencil": "Klicken Sie auf das Bleistiftsymbol (✎) neben einem Sitzungsnamen im Popup oder auf der Optionsseite, um den Umbenennungsvorgang zu starten.",
+  "docs.sessions.rename.validation": "Der neue Name darf nicht leer sein und muss eindeutig sein. Die Änderung wird sofort gespeichert — kein Bestätigungsschritt erforderlich."
 }

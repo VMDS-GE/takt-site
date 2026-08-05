@@ -815,7 +815,6 @@
   "docs.sortByDomain.gotchas.li3": "Los grupos y las pestañas no agrupadas se ordenan por separado. El ordenamiento nunca mueve una pestaña entre un grupo y el área sin agrupar, y nunca reordena los grupos entre sí — solo se reordenan las pestañas dentro de cada uno de esos conjuntos.",
   "docs.sidebar.othersGroup": "Others catch-all group",
   "docs.othersGroup.lead": "El grupo Others recoge todas las pestañas no ancladas y no asignadas en un grupo de pestañas cuando ejecutas Agrupar todo — para que ninguna pestaña quede sin destino.",
-
   "docs.othersGroup.premiumOnly.heading": "Solo Premium",
   "docs.othersGroup.premiumOnly.p1": "El grupo Others es una función exclusiva de Premium. No aparecerá para los usuarios gratuitos independientemente del modo de agrupación — las pestañas no coincidentes permanecen sin agrupar.",
   "docs.othersGroup.overview.heading": "Descripción general",
@@ -842,7 +841,6 @@
   "docs.groupingMode.modes.rulesDesc": "Agrupa las pestañas según tus propias reglas definidas",
   "docs.groupingMode.modes.categoryDesc": "Agrupa las pestañas por reglas predefinidas (ver la lista de categorías)",
   "docs.groupingMode.modes.aiDesc": "Agrupa las pestañas automáticamente usando el modelo de IA integrado de Chrome",
-
   "docs.groupingMode.tiers.heading": "Límites del nivel gratuito",
   "docs.groupingMode.tiers.p1": "Los límites del nivel gratuito varían según el modo de agrupación:",
   "docs.groupingMode.tiers.rules": "Rules: los usuarios gratuitos pueden crear y activar como máximo 5 reglas; las reglas activas se aplican al agrupar. Premium elimina el límite.",
@@ -869,5 +867,10 @@
   "docs.sessions.autoSave.howToEnable": "Para activar el guardado automático, abra el popup de Takt, vaya a Configuración y active la opción \"Guardado automático al cerrar\" en la sección Sesiones.",
   "docs.sessions.autoSave.naming": "Las sesiones guardadas automáticamente se nombran con el patrón Guardado auto — YYYY-MM-DD HH:MM, donde la fecha y la hora reflejan cuándo se cerró la ventana.",
   "docs.sessions.autoSave.premiumCallout": "El guardado automático al cerrar es una función Premium. Actualice a un plan Premium para activarlo.",
-  "docs.sessions.autoSave.freeRestore": "Los usuarios gratuitos pueden ver y restaurar las sesiones guardadas automáticamente, incluso sin una suscripción Premium activa."
+  "docs.sessions.autoSave.freeRestore": "Los usuarios gratuitos pueden ver y restaurar las sesiones guardadas automáticamente, incluso sin una suscripción Premium activa.",
+  "docs.sessions.rename.heading": "Renombrar una sesión",
+  "docs.sessions.rename.intro": "Puede renombrar cualquier sesión guardada desde el panel de Sesiones de la ventana emergente o desde la pestaña Sesiones de las Opciones.",
+  "docs.sessions.rename.howToDoubleClick": "Haga doble clic en el nombre de la sesión en el panel de Sesiones de la ventana emergente para editarlo en línea. Pulse Enter para guardar el nuevo nombre.",
+  "docs.sessions.rename.howToPencil": "Haga clic en el icono de lápiz (✎) junto al nombre de una sesión en la ventana emergente o en la página de Opciones para comenzar a renombrar.",
+  "docs.sessions.rename.validation": "El nuevo nombre no debe estar vacío y debe ser único. El cambio se guarda inmediatamente — no se necesita ningún paso de confirmación."
 }
