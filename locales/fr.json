@@ -882,5 +882,22 @@
   "docs.sessions.rename.intro": "Vous pouvez renommer n'importe quelle session enregistrée depuis le volet Sessions de la fenêtre contextuelle ou depuis l'onglet Sessions des Options.",
   "docs.sessions.rename.howToDoubleClick": "Double-cliquez sur le nom de la session dans le volet Sessions pour le modifier en ligne. Appuyez sur Entrée pour enregistrer le nouveau nom.",
   "docs.sessions.rename.howToPencil": "Cliquez sur l'icône crayon (✎) à côté du nom d'une session dans la fenêtre contextuelle ou sur la page Options pour commencer le renommage.",
-  "docs.sessions.rename.validation": "Le nouveau nom ne doit pas être vide et doit être unique. La modification est enregistrée immédiatement — aucune étape de confirmation n'est requise."
+  "docs.sessions.rename.validation": "Le nouveau nom ne doit pas être vide et doit être unique. La modification est enregistrée immédiatement — aucune étape de confirmation n'est requise.",
+  "hero.tabbarAlt": "Une barre d’onglets où chaque onglet est classé dans un groupe nommé et coloré : Work, GitHub, AI et Reddit",
+  "builtInPublic.eyebrow": "Développé en public",
+  "builtInPublic.headline": "Pas encore de témoignages. Voici les faits à la place.",
+  "builtInPublic.lede": "Takt est récent. Plutôt que d’inventer une preuve sociale, voici ce qui existe réellement : ce qui est livré, ce qui est documenté, et qui se trouve derrière.",
+  "builtInPublic.card1.title": "Livré, pas promis",
+  "builtInPublic.card1.body": "Chaque fonctionnalité décrite sur cette page se trouve dans la version que vous pouvez installer maintenant. Rien ici n’est une promesse de feuille de route.",
+  "builtInPublic.card1.link": "Lire la documentation",
+  "builtInPublic.card2.title": "Documenté, fonctionnalité par fonctionnalité",
+  "builtInPublic.card2.body": "Dix-neuf fonctionnalités disposent de leur propre page de référence — limites et pièges compris, pas seulement le cas idéal.",
+  "builtInPublic.card2.link": "Lire le blog",
+  "builtInPublic.card3.title": "Analyse, comptes, traceurs",
+  "builtInPublic.card3.body": "La seule requête sortante de Takt est la validation de licence pour les fonctionnalités payantes. Il n’y a aucun serveur auquel envoyer vos onglets.",
+  "builtInPublic.card3.link": "Lire la politique de confidentialité",
+  "builtInPublic.who.title": "Qui développe Takt",
+  "builtInPublic.who.body": "Takt est développé par un ingénieur en sécurité applicative qui n’arrivait pas à cesser d’accumuler les onglets. C’est ce parcours qui explique pourquoi l’extension demande les autorisations les plus restreintes possibles, conserve chaque règle et chaque session sur votre propre machine, et publie une politique de confidentialité réellement lisible. Le « local d’abord » n’est pas un positionnement : c’est la seule conception qui résiste à son propre modèle de menace.",
+  "builtInPublic.reviewCta.before": "Aucun avis pour l’instant, et aucun acheté.",
+  "builtInPublic.reviewCta.linkText": "Si Takt en mérite un, laissez-le ici."
 }

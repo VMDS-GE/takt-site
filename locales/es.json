@@ -882,5 +882,22 @@
   "docs.sessions.rename.intro": "Puede renombrar cualquier sesión guardada desde el panel de Sesiones de la ventana emergente o desde la pestaña Sesiones de las Opciones.",
   "docs.sessions.rename.howToDoubleClick": "Haga doble clic en el nombre de la sesión en el panel de Sesiones de la ventana emergente para editarlo en línea. Pulse Enter para guardar el nuevo nombre.",
   "docs.sessions.rename.howToPencil": "Haga clic en el icono de lápiz (✎) junto al nombre de una sesión en la ventana emergente o en la página de Opciones para comenzar a renombrar.",
-  "docs.sessions.rename.validation": "El nuevo nombre no debe estar vacío y debe ser único. El cambio se guarda inmediatamente — no se necesita ningún paso de confirmación."
+  "docs.sessions.rename.validation": "El nuevo nombre no debe estar vacío y debe ser único. El cambio se guarda inmediatamente — no se necesita ningún paso de confirmación.",
+  "hero.tabbarAlt": "Una barra de pestañas donde cada pestaña está archivada en un grupo con nombre y color: Work, GitHub, AI y Reddit",
+  "builtInPublic.eyebrow": "Construido en público",
+  "builtInPublic.headline": "Aún no hay testimonios. Estos son los hechos.",
+  "builtInPublic.lede": "Takt es reciente. En lugar de inventar prueba social, esto es lo que existe de verdad: qué se ha publicado, qué está documentado y quién está detrás.",
+  "builtInPublic.card1.title": "Publicado, no prometido",
+  "builtInPublic.card1.body": "Cada función descrita en esta página está en la versión que puedes instalar ahora mismo. Aquí no hay nada que sea solo una idea de hoja de ruta.",
+  "builtInPublic.card1.link": "Leer la documentación",
+  "builtInPublic.card2.title": "Documentado, función por función",
+  "builtInPublic.card2.body": "Diecinueve funciones tienen su propia página de referencia, con sus límites y sus trampas, no solo el caso ideal.",
+  "builtInPublic.card2.link": "Leer el blog",
+  "builtInPublic.card3.title": "Analítica, cuentas, rastreadores",
+  "builtInPublic.card3.body": "La única petición saliente de Takt es la validación de licencia para las funciones de pago. No hay ningún servidor al que enviar tus pestañas.",
+  "builtInPublic.card3.link": "Leer la política de privacidad",
+  "builtInPublic.who.title": "Quién lo construye",
+  "builtInPublic.who.body": "Takt lo construye un ingeniero de seguridad de aplicaciones que no podía dejar de acumular pestañas. Ese trasfondo explica por qué la extensión pide los permisos más estrechos posibles, mantiene cada regla y cada sesión en tu propia máquina y publica una política de privacidad que se puede leer de verdad. «Local primero» no es un posicionamiento: es el único diseño que resiste su propio modelo de amenazas.",
+  "builtInPublic.reviewCta.before": "Todavía sin reseñas, y ninguna comprada.",
+  "builtInPublic.reviewCta.linkText": "Si Takt se gana una, déjala aquí."
 }

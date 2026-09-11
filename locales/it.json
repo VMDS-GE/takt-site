@@ -882,5 +882,22 @@
   "docs.sessions.rename.intro": "Puoi rinominare qualsiasi sessione salvata dal pannello Sessioni del popup o dalla scheda Sessioni nelle Opzioni.",
   "docs.sessions.rename.howToDoubleClick": "Fai doppio clic sul nome della sessione nel pannello Sessioni del popup per modificarlo in linea. Premi Invio per salvare il nuovo nome.",
   "docs.sessions.rename.howToPencil": "Fai clic sull'icona a matita (✎) accanto al nome di una sessione nel popup o nella pagina Opzioni per avviare la rinomina.",
-  "docs.sessions.rename.validation": "Il nuovo nome non deve essere vuoto e deve essere univoco. La modifica viene salvata immediatamente — non è necessario alcun passaggio di conferma."
+  "docs.sessions.rename.validation": "Il nuovo nome non deve essere vuoto e deve essere univoco. La modifica viene salvata immediatamente — non è necessario alcun passaggio di conferma.",
+  "hero.tabbarAlt": "Una barra delle schede in cui ogni scheda è archiviata in un gruppo con nome e colore: Work, GitHub, AI e Reddit",
+  "builtInPublic.eyebrow": "Sviluppato in pubblico",
+  "builtInPublic.headline": "Nessuna testimonianza, per ora. Ecco i fatti.",
+  "builtInPublic.lede": "Takt è recente. Invece di inventare riprove sociali, ecco ciò che esiste davvero: che cosa è stato rilasciato, che cosa è documentato e chi c’è dietro.",
+  "builtInPublic.card1.title": "Rilasciato, non promesso",
+  "builtInPublic.card1.body": "Ogni funzione descritta in questa pagina è nella versione che puoi installare ora. Qui non c’è nulla di solo pianificato.",
+  "builtInPublic.card1.link": "Leggi la documentazione",
+  "builtInPublic.card2.title": "Documentato, funzione per funzione",
+  "builtInPublic.card2.body": "Diciannove funzioni hanno una pagina di riferimento dedicata — limiti e insidie compresi, non solo il percorso ideale.",
+  "builtInPublic.card2.link": "Leggi il blog",
+  "builtInPublic.card3.title": "Analisi, account, tracker",
+  "builtInPublic.card3.body": "L’unica richiesta in uscita di Takt è la convalida della licenza per le funzioni a pagamento. Non esiste alcun server a cui inviare le tue schede.",
+  "builtInPublic.card3.link": "Leggi l’informativa sulla privacy",
+  "builtInPublic.who.title": "Chi lo sviluppa",
+  "builtInPublic.who.body": "Takt è sviluppato da un ingegnere della sicurezza applicativa che non riusciva a smettere di accumulare schede. È questo background a spiegare perché l’estensione richiede i permessi più ristretti possibili, conserva ogni regola e ogni sessione sulla tua macchina e pubblica un’informativa sulla privacy davvero leggibile. Il «local-first» non è un posizionamento: è l’unico progetto che regge il proprio modello di minaccia.",
+  "builtInPublic.reviewCta.before": "Ancora nessuna recensione, e nessuna comprata.",
+  "builtInPublic.reviewCta.linkText": "Se Takt se la merita, lasciala qui."
 }

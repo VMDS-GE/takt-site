@@ -882,5 +882,22 @@
   "docs.sessions.rename.intro": "Sie können jede gespeicherte Sitzung über den Sitzungsbereich im Popup oder über den Sitzungs-Tab in den Optionen umbenennen.",
   "docs.sessions.rename.howToDoubleClick": "Doppelklicken Sie auf den Sitzungsnamen im Popup-Sitzungsbereich, um ihn direkt zu bearbeiten. Drücken Sie die Eingabetaste, um den neuen Namen zu speichern.",
   "docs.sessions.rename.howToPencil": "Klicken Sie auf das Bleistiftsymbol (✎) neben einem Sitzungsnamen im Popup oder auf der Optionsseite, um den Umbenennungsvorgang zu starten.",
-  "docs.sessions.rename.validation": "Der neue Name darf nicht leer sein und muss eindeutig sein. Die Änderung wird sofort gespeichert — kein Bestätigungsschritt erforderlich."
+  "docs.sessions.rename.validation": "Der neue Name darf nicht leer sein und muss eindeutig sein. Die Änderung wird sofort gespeichert — kein Bestätigungsschritt erforderlich.",
+  "hero.tabbarAlt": "Eine Tableiste, in der jeder Tab in einer benannten, farbigen Gruppe abgelegt ist: Work, GitHub, AI und Reddit",
+  "builtInPublic.eyebrow": "Öffentlich entwickelt",
+  "builtInPublic.headline": "Noch keine Testimonials. Stattdessen die Fakten.",
+  "builtInPublic.lede": "Takt ist neu. Statt Social Proof zu erfinden, hier das, was tatsächlich existiert: was ausgeliefert ist, was dokumentiert ist und wer dahintersteht.",
+  "builtInPublic.card1.title": "Ausgeliefert, nicht versprochen",
+  "builtInPublic.card1.body": "Jede auf dieser Seite beschriebene Funktion steckt in der Version, die du jetzt installieren kannst. Nichts davon ist ein Roadmap-Eintrag.",
+  "builtInPublic.card1.link": "Zur Dokumentation",
+  "builtInPublic.card2.title": "Dokumentiert, Funktion für Funktion",
+  "builtInPublic.card2.body": "Neunzehn Funktionen haben eine eigene Referenzseite — samt Grenzen und Fallstricken, nicht nur dem Idealfall.",
+  "builtInPublic.card2.link": "Zum Blog",
+  "builtInPublic.card3.title": "Analyse, Konten, Tracker",
+  "builtInPublic.card3.body": "Die einzige ausgehende Anfrage von Takt ist die Lizenzprüfung für kostenpflichtige Funktionen. Es gibt keinen Server, an den deine Tabs gehen könnten.",
+  "builtInPublic.card3.link": "Zur Datenschutzerklärung",
+  "builtInPublic.who.title": "Wer das baut",
+  "builtInPublic.who.body": "Takt wird von einem Application-Security-Engineer gebaut, der nicht aufhören konnte, Tabs zu horten. Dieser Hintergrund erklärt, warum die Erweiterung die engstmöglichen Berechtigungen anfordert, jede Regel und jede Sitzung auf deinem eigenen Rechner behält und eine Datenschutzerklärung veröffentlicht, die man tatsächlich lesen kann. „Local-first“ ist hier keine Positionierung, sondern das einzige Design, das dem eigenen Bedrohungsmodell standhält.",
+  "builtInPublic.reviewCta.before": "Noch keine Bewertungen — und keine gekauft.",
+  "builtInPublic.reviewCta.linkText": "Wenn Takt eine verdient, hinterlasse sie hier."
 }

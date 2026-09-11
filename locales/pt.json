@@ -882,5 +882,22 @@
   "docs.sessions.rename.intro": "Você pode renomear qualquer sessão salva no painel Sessões do popup ou na aba Sessões das Opções.",
   "docs.sessions.rename.howToDoubleClick": "Clique duas vezes no nome da sessão no painel Sessões do popup para editá-lo diretamente. Pressione Enter para salvar o novo nome.",
   "docs.sessions.rename.howToPencil": "Clique no ícone de lápis (✎) ao lado do nome de uma sessão no popup ou na página de Opções para iniciar a renomeação.",
-  "docs.sessions.rename.validation": "O novo nome não pode estar vazio e deve ser exclusivo. A alteração é salva imediatamente — nenhuma etapa de confirmação é necessária."
+  "docs.sessions.rename.validation": "O novo nome não pode estar vazio e deve ser exclusivo. A alteração é salva imediatamente — nenhuma etapa de confirmação é necessária.",
+  "hero.tabbarAlt": "Uma barra de abas em que cada aba está arquivada num grupo com nome e cor: Work, GitHub, AI e Reddit",
+  "builtInPublic.eyebrow": "Construído em público",
+  "builtInPublic.headline": "Ainda sem depoimentos. Estes são os fatos.",
+  "builtInPublic.lede": "O Takt é recente. Em vez de inventar prova social, aqui está o que existe de verdade: o que foi lançado, o que está documentado e quem está por trás.",
+  "builtInPublic.card1.title": "Lançado, não prometido",
+  "builtInPublic.card1.body": "Todo recurso descrito nesta página está na versão que você pode instalar agora. Nada aqui é item de roadmap.",
+  "builtInPublic.card1.link": "Ler a documentação",
+  "builtInPublic.card2.title": "Documentado, recurso por recurso",
+  "builtInPublic.card2.body": "Dezenove recursos têm a própria página de referência — incluindo limites e pegadinhas, não só o caminho feliz.",
+  "builtInPublic.card2.link": "Ler o blog",
+  "builtInPublic.card3.title": "Análises, contas, rastreadores",
+  "builtInPublic.card3.body": "A única requisição de saída do Takt é a validação de licença para recursos pagos. Não existe servidor para onde enviar suas abas.",
+  "builtInPublic.card3.link": "Ler a política de privacidade",
+  "builtInPublic.who.title": "Quem constrói isto",
+  "builtInPublic.who.body": "O Takt é construído por um engenheiro de segurança de aplicações que não conseguia parar de acumular abas. Esse histórico explica por que a extensão pede as permissões mais restritas possíveis, mantém cada regra e cada sessão na sua própria máquina e publica uma política de privacidade que dá para ler. O «local primeiro» não é posicionamento: é o único design que resiste ao próprio modelo de ameaças.",
+  "builtInPublic.reviewCta.before": "Ainda sem avaliações, e nenhuma comprada.",
+  "builtInPublic.reviewCta.linkText": "Se o Takt merecer uma, deixe aqui."
 }

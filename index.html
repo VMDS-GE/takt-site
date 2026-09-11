@@ -121,9 +121,79 @@
           <a href="https://chromewebstore.google.com/detail/takt/plgfdnbgkjocmgegnkbihoeojcfphdic" class="btn-primary" data-i18n="hero.ctaPrimary">Add to Chrome — it's free</a>
         </div>
         <p class="hero-sub" data-i18n="hero.subCta">No account needed. Free to start.</p>
-        <div class="hero-screenshot">
-          <img src="assets/screenshots/tab-groups.webp" alt="Chrome browser with tabs automatically organized into color-coded groups by Takt" width="1080" loading="eager" data-i18n="hero.screenshotAlt" data-i18n-attr="alt:hero.screenshotAlt">
+        <div class="hero-tabbar">
+          <svg class="tabbar-svg" viewBox="0 0 1300 190" role="img" aria-labelledby="tabbar-title" preserveAspectRatio="xMidYMid meet">
+            <title id="tabbar-title" data-i18n="hero.tabbarAlt">A browser tab strip with every tab filed into a colored, named group: Work, GitHub, AI and Reddit</title>
+            <rect x="0.5" y="0.5" width="1299" height="189" rx="16" fill="var(--mist)" stroke="var(--hairline)"/>
+            <circle cx="32" cy="26" r="6" fill="#FF5F57"/>
+            <circle cx="54" cy="26" r="6" fill="#FEBC2E"/>
+            <circle cx="76" cy="26" r="6" fill="#28C840"/>
+
+            <g class="tabgroup">
+              <rect x="24" y="52" width="326" height="64" rx="14" fill="var(--blue)" fill-opacity="0.12"/>
+              <rect x="32" y="64" width="66" height="40" rx="12" fill="var(--blue)"/>
+              <text x="65" y="89" text-anchor="middle" class="tg-pill">Work</text>
+              <rect x="104" y="64" width="116" height="40" rx="10" fill="var(--paper)"/>
+              <circle cx="120" cy="84" r="5" fill="var(--blue)"/>
+              <text x="134" y="89" class="tg-tab">Calendar</text>
+              <rect x="226" y="64" width="116" height="40" rx="10" fill="var(--paper)"/>
+              <circle cx="242" cy="84" r="5" fill="var(--blue)"/>
+              <text x="256" y="89" class="tg-tab">Docs</text>
+            </g>
+
+            <g class="tabgroup">
+              <rect x="362" y="52" width="340" height="64" rx="14" fill="var(--purple)" fill-opacity="0.12"/>
+              <rect x="370" y="64" width="80" height="40" rx="12" fill="var(--purple)"/>
+              <text x="410" y="89" text-anchor="middle" class="tg-pill">GitHub</text>
+              <rect x="456" y="64" width="116" height="40" rx="10" fill="var(--paper)"/>
+              <circle cx="472" cy="84" r="5" fill="var(--purple)"/>
+              <text x="486" y="89" class="tg-tab">PR #482</text>
+              <rect x="578" y="64" width="116" height="40" rx="10" fill="var(--paper)"/>
+              <circle cx="594" cy="84" r="5" fill="var(--purple)"/>
+              <text x="608" y="89" class="tg-tab">Issues</text>
+            </g>
+
+            <g class="tabgroup">
+              <rect x="714" y="52" width="182" height="64" rx="14" fill="var(--yellow)" fill-opacity="0.16"/>
+              <rect x="722" y="64" width="44" height="40" rx="12" fill="var(--yellow)"/>
+              <text x="744" y="89" text-anchor="middle" class="tg-pill tg-pill-dark">AI</text>
+              <rect x="772" y="64" width="116" height="40" rx="10" fill="var(--paper)"/>
+              <circle cx="788" cy="84" r="5" fill="var(--yellow)"/>
+              <text x="802" y="89" class="tg-tab">Claude</text>
+            </g>
+
+            <g class="tabgroup">
+              <rect x="908" y="52" width="336" height="64" rx="14" fill="var(--red)" fill-opacity="0.12"/>
+              <rect x="916" y="64" width="76" height="40" rx="12" fill="var(--red)"/>
+              <text x="954" y="89" text-anchor="middle" class="tg-pill">Reddit</text>
+              <rect x="998" y="64" width="116" height="40" rx="10" fill="var(--paper)"/>
+              <circle cx="1014" cy="84" r="5" fill="var(--red)"/>
+              <text x="1028" y="89" class="tg-tab">r/rust</text>
+              <rect x="1120" y="64" width="116" height="40" rx="10" fill="var(--paper)"/>
+              <circle cx="1136" cy="84" r="5" fill="var(--red)"/>
+              <text x="1150" y="89" class="tg-tab">r/chrome</text>
+            </g>
+
+            <path d="M1258 76v16M1250 84h16" stroke="var(--ink-3)" stroke-width="2.5" stroke-linecap="round"/>
+
+            <rect x="24.5" y="134.5" width="1251" height="35" rx="17.5" fill="var(--paper)" stroke="var(--hairline)"/>
+            <circle cx="52" cy="152" r="6" fill="var(--ink-3)" fill-opacity="0.35"/>
+            <rect x="72" y="147" width="240" height="10" rx="5" fill="var(--ink-3)" fill-opacity="0.22"/>
+          </svg>
         </div>
+      </div>
+    </section>
+
+    <!-- Interactive Demo -->
+    <section id="demo" class="section">
+      <div class="container">
+        <h2 data-i18n="demo.title">See it in action</h2>
+        <p data-i18n="demo.subtitle">Watch Takt organize tabs automatically as you browse.</p>
+        <iframe
+          class="demo-iframe"
+          src="demo.html"
+          title="Takt interactive demo"
+          loading="lazy"></iframe>
       </div>
     </section>
 
@@ -139,19 +209,6 @@
           <div class="mark-chip"><svg width="48" height="48" style="color:var(--purple)"><use href="#takt-mark"/></svg></div>
         </div>
         <h2 class="title" data-i18n="mark.title">One extension. Every color Chrome gives you.</h2>
-      </div>
-    </section>
-
-    <!-- Interactive Demo -->
-    <section id="demo" class="section">
-      <div class="container">
-        <h2 data-i18n="demo.title">See it in action</h2>
-        <p data-i18n="demo.subtitle">Watch Takt organize tabs automatically as you browse.</p>
-        <iframe
-          class="demo-iframe"
-          src="demo.html"
-          title="Takt interactive demo"
-          loading="lazy"></iframe>
       </div>
     </section>
 
@@ -396,6 +453,68 @@
             <p data-i18n="howItWorks.step3.body">Enable auto-mode. Takt watches every new tab and groups it. You never touch it again.</p>
           </div>
         </div>
+      </div>
+    </section>
+
+    <!-- Built in Public -->
+    <section id="built-in-public" class="section built-public">
+      <div class="container">
+        <span class="eyebrow" style="color: var(--blue)" data-i18n="builtInPublic.eyebrow">Built in public</span>
+        <h2 class="headline" data-i18n="builtInPublic.headline">No testimonials yet. Here is the record instead.</h2>
+        <p class="lede" data-i18n="builtInPublic.lede">Takt is new. Rather than invent social proof, here is what actually exists: what has shipped, what has been written down, and who is behind it.</p>
+
+        <div class="bip-grid">
+          <div class="bip-card">
+            <span class="bip-stat" data-i18n="builtInPublic.card1.stat">v2.1.0</span>
+            <h3 data-i18n="builtInPublic.card1.title">Shipped, not promised</h3>
+            <p data-i18n="builtInPublic.card1.body">Every feature described on this page is in the build you can install right now. Nothing here is a roadmap item.</p>
+            <a href="docs/rules/" data-i18n="builtInPublic.card1.link">Read the documentation</a>
+          </div>
+          <div class="bip-card">
+            <span class="bip-stat" data-i18n="builtInPublic.card2.stat">19</span>
+            <h3 data-i18n="builtInPublic.card2.title">Documented, feature by feature</h3>
+            <p data-i18n="builtInPublic.card2.body">Nineteen features have their own reference page — including the limits and the gotchas, not just the happy path.</p>
+            <a href="blog/" data-i18n="builtInPublic.card2.link">Read the blog</a>
+          </div>
+          <div class="bip-card">
+            <span class="bip-stat" data-i18n="builtInPublic.card3.stat">0</span>
+            <h3 data-i18n="builtInPublic.card3.title">Analytics, accounts, trackers</h3>
+            <p data-i18n="builtInPublic.card3.body">The only outbound request Takt makes is license validation for paid features. There is no server to send your tabs to.</p>
+            <a href="privacy/" data-i18n="builtInPublic.card3.link">Read the privacy policy</a>
+          </div>
+        </div>
+
+        <div class="bip-who">
+          <h3 data-i18n="builtInPublic.who.title">Who builds this</h3>
+          <p data-i18n="builtInPublic.who.body">Takt is built by an application-security engineer who could not stop hoarding tabs. That background is why the extension asks for the narrowest permissions it can, keeps every rule and session on your own machine, and ships a privacy policy you can actually read. Local-first is not a positioning choice here — it is the only design that survives its own threat model.</p>
+        </div>
+
+        <p class="bip-review">
+          <span data-i18n="builtInPublic.reviewCta.before">No reviews yet, and none bought.</span>
+          <a href="https://chromewebstore.google.com/detail/takt/plgfdnbgkjocmgegnkbihoeojcfphdic/reviews" data-i18n="builtInPublic.reviewCta.linkText">If Takt earns one, leave it here.</a>
+        </p>
+
+        <!--
+          ============================================================
+          TESTIMONIALS — swap-in block
+          ------------------------------------------------------------
+          When you have real, attributable quotes, delete the <p class="bip-review">
+          above and uncomment this block. Styles are already in components.css.
+          One <figure> per testimonial. Never add a quote you cannot attribute
+          to a real, named user who agreed to it.
+          ============================================================
+
+        <div class="testimonial-grid">
+          <figure class="testimonial">
+            <blockquote>Quote, verbatim, no cleanup beyond trimming.</blockquote>
+            <figcaption>
+              <span class="testimonial-name">Full name</span>
+              <span class="testimonial-role">Role, Company</span>
+            </figcaption>
+          </figure>
+        </div>
+
+        -->
       </div>
     </section>
 

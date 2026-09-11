@@ -683,3 +683,189 @@ kbd {
 .newsletter-form button[disabled] { opacity: 0.6; cursor: not-allowed; }
 .newsletter-status { font-size: 14px; color: var(--ink-2); margin-top: 4px; }
 .newsletter-status[data-state="error"] { color: var(--red); }
+
+/* Hero tab-bar visual (replaces the old hero screenshot) */
+
+.hero-tabbar {
+  max-width: 1080px;
+  margin: 48px auto 0;
+}
+
+.tabbar-svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius-card);
+  filter: drop-shadow(0 18px 40px rgba(0, 0, 0, 0.10));
+}
+
+.tabbar-svg .tg-pill {
+  font-family: var(--font-body);
+  font-size: 15px;
+  font-weight: 600;
+  fill: #FFFFFF;
+}
+
+.tabbar-svg .tg-pill-dark {
+  fill: #1D1D1F;
+}
+
+.tabbar-svg .tg-tab {
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 500;
+  fill: var(--ink-2);
+}
+
+@media (max-width: 768px) {
+  .hero-tabbar {
+    margin-top: 32px;
+  }
+  .tabbar-svg {
+    filter: none;
+  }
+}
+
+/* Built in Public */
+
+.built-public {
+  text-align: center;
+}
+
+.built-public .lede {
+  max-width: 680px;
+  margin: 0 auto 48px;
+}
+
+.bip-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  text-align: left;
+}
+
+.bip-card {
+  background: var(--mist);
+  border-radius: var(--radius-card);
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+}
+
+.bip-stat {
+  font-family: var(--font-mono);
+  font-size: 32px;
+  font-weight: 600;
+  color: var(--blue);
+  line-height: 1.1;
+  margin-bottom: 12px;
+}
+
+.bip-card h3 {
+  font-size: 19px;
+  font-weight: 600;
+  margin: 0 0 10px;
+}
+
+.bip-card p {
+  color: var(--ink-2);
+  margin: 0 0 20px;
+}
+
+.bip-card a {
+  margin-top: auto;
+  color: var(--link);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.bip-card a:hover {
+  text-decoration: underline;
+}
+
+.bip-who {
+  max-width: 720px;
+  margin: 48px auto 0;
+  text-align: left;
+  padding: 32px;
+  border: 1px solid var(--hairline);
+  border-radius: var(--radius-card);
+}
+
+.bip-who h3 {
+  font-size: 19px;
+  font-weight: 600;
+  margin: 0 0 12px;
+}
+
+.bip-who p {
+  color: var(--ink-2);
+  margin: 0;
+}
+
+.bip-review {
+  margin: 32px auto 0;
+  color: var(--ink-3);
+}
+
+.bip-review a {
+  color: var(--link);
+  font-weight: 600;
+}
+
+/* Testimonials — markup is commented out in index.html until real quotes exist */
+
+.testimonial-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-top: 48px;
+  text-align: left;
+}
+
+.testimonial {
+  background: var(--mist);
+  border-radius: var(--radius-card);
+  padding: 32px;
+  margin: 0;
+}
+
+.testimonial blockquote {
+  margin: 0 0 20px;
+  font-size: 17px;
+  color: var(--ink);
+}
+
+.testimonial figcaption {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.testimonial-name {
+  font-weight: 600;
+}
+
+.testimonial-role {
+  color: var(--ink-3);
+  font-size: 14px;
+}
+
+@media (max-width: 1024px) {
+  .bip-grid,
+  .testimonial-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .bip-grid,
+  .testimonial-grid {
+    grid-template-columns: 1fr;
+  }
+  .bip-card,
+  .bip-who,
+  .testimonial {
+    padding: 24px;
+  }
+}
