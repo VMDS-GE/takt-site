@@ -67,8 +67,8 @@
           fixed taxonomy), Smart Group with AI invents its own group labels from the actual content
           of your open tabs. The result is dynamic, context-aware grouping that adapts to whatever
           you are working on. Smart Group with AI is available to all Takt users — Free tier
-          included. On the Free tier, grouping is capped at 5 groups per run; Premium unlocks
-          unlimited groups per run.
+          included. On the Free tier, grouping is capped at 5 groups total across all open Chrome windows; Premium unlocks
+          unlimited groups.
         </p>
 
         <h2 id="how"><span data-i18n="docs.smartGroupAi.how.heading">How it works</span> <a href="#how" class="anchor-link">#</a></h2>
@@ -86,8 +86,8 @@
         <p data-i18n="docs.smartGroupAi.how.p3">
           Takt creates groups largest first: the biggest cluster of tabs becomes the first group,
           then the next largest, proceeding in decreasing size order. Single tabs that don't share
-          a cluster with any other tab stay ungrouped. On the Free plan, a single run creates up to
-          5 groups — the 5 largest clusters — and any remaining smaller clusters stay ungrouped.
+          a cluster with any other tab stay ungrouped. On the Free plan, there is a total of 5 groups
+          across all open Chrome windows — the 5 largest clusters are created; any remaining smaller clusters stay ungrouped.
         </p>
 
         <h2 id="enable"><span data-i18n="docs.smartGroupAi.enable.heading">How to enable</span> <a href="#enable" class="anchor-link">#</a></h2>
@@ -127,6 +127,17 @@
             <span data-i18n="docs.smartGroupAi.enable.step4b">button in the Takt popup. Takt checks API availability on each invocation and will activate the full AI path once the model is ready.</span>
           </li>
         </ol>
+
+        <h2 id="first-run"><span data-i18n="docs.smartGroupAi.firstRun.heading">First run — model download</span> <a href="#first-run" class="anchor-link">#</a></h2>
+        <p data-i18n="docs.smartGroupAi.firstRun.p1">
+          The first time you click Smart Group with AI, Chrome starts a one-time download of the
+          on-device AI model. Takt shows a preparing indicator in the popup while the download
+          runs — no action needed from you.
+        </p>
+        <p data-i18n="docs.smartGroupAi.firstRun.p2">
+          Grouping resumes automatically once the model is ready. You do not need to click Group
+          Tabs again. The download only happens once per Chrome installation.
+        </p>
 
         <h2 id="fallback"><span data-i18n="docs.smartGroupAi.fallback.heading">Semantic fallback</span> <a href="#fallback" class="anchor-link">#</a></h2>
         <p data-i18n="docs.smartGroupAi.fallback.p1">
@@ -176,7 +187,7 @@
           </li>
           <li>
             <strong data-i18n="docs.smartGroupAi.gotchas.item5Title">Free tier — no Premium gate.</strong>
-            <span data-i18n="docs.smartGroupAi.gotchas.item5Body"> Smart Group with AI is available to all Takt users. No subscription is required to access either the Prompt API path or the semantic fallback. On the Free tier, each run is capped at 5 groups (the 5 largest buckets are kept); Premium unlocks unlimited groups per run.</span>
+            <span data-i18n="docs.smartGroupAi.gotchas.item5Body"> Smart Group with AI is available to all Takt users. No subscription is required to access either the Prompt API path or the semantic fallback. On the Free tier, you can have up to 5 groups total across all open Chrome windows; when a run would push the total beyond 5, the largest buckets are kept. Premium unlocks unlimited groups.</span>
           </li>
           <li>
             <strong data-i18n="docs.smartGroupAi.gotchas.item6Title">Partial content-read fallback.</strong>
