@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-i18n="blog.release42.title">Takt 4.1 and 4.2: duplicate prevention is now free — Takt</title>
+  <meta name="description" data-i18n-attr="content:blog.release42.metaDescription" content="Takt v4.1.0 and v4.2.0 are live: duplicate prevention is free and on by default, plus a rule tester, a tabs pane, Group by Category, on-device AI grouping and six languages.">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon-16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../assets/apple-touch-icon.png">
+
+  <meta name="theme-color" content="#FF3B30">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/tokens.css">
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/layout.css">
+  <link rel="stylesheet" href="../css/blog.css">
+
+  <script src="../js/theme.js"></script>
+  <script type="module" src="../js/i18n.js"></script>
+</head>
+<body>
+  <header id="site-header"></header>
+
+  <main class="blog-main">
+    <article class="blog-post">
+      <h1 class="blog-post-title" data-i18n="blog.release42.h1">Takt 4.1 and 4.2: duplicate prevention is now free</h1>
+      <p class="blog-post-meta" data-i18n="blog.release42.meta">September 2026 · 3 min read</p>
+      <div class="blog-post-body">
+        <p data-i18n="blog.release42.p.1">Takt v4.1.0 and v4.2.0 went live in the Chrome Web Store last week. The version jump is because, by the end, there was more in it than what 3.0.0 was going to be.</p>
+        <p data-i18n="blog.release42.p.2">Our user base has also grown, to 10 users now 🎉.</p>
+
+        <h2 data-i18n="blog.release42.h2.free">Duplicate prevention is now free</h2>
+        <p data-i18n="blog.release42.p.3">This release changes what the free tier includes: duplicate prevention is now free, unrestricted and enabled by default. It was previously a paid feature. It is the thing that helps most users on day one, and putting it behind the paywall didn't make any sense.</p>
+
+        <h2 data-i18n="blog.release42.h2.new">New features</h2>
+        <p data-i18n="blog.release42.p.4">This release also adds new features and ships the work announced in previous updates:</p>
+        <ul>
+          <li data-i18n="blog.release42.li.new.1"><strong>A rule tester.</strong> Paste a URL and it tells you which of your rules actually fires for it. There are also match previews before you save a rule, and up/down reordering that sets match priority. Debugging rules by opening tabs and guessing was miserable.</li>
+          <li data-i18n="blog.release42.li.new.2"><strong>A tabs pane in the popup</strong> listing every open tab by group, with live search on title or URL and click to focus.</li>
+          <li data-i18n="blog.release42.li.new.3"><strong>Sort by domain</strong> inside a group, and an <strong>Expand All</strong> command to complete the Group/Ungroup/Collapse/Expand set.</li>
+          <li data-i18n="blog.release42.li.new.4"><strong>Group by Category</strong>, covering 20+ categories and hundreds of recognized domains, with no rules to write.</li>
+          <li data-i18n="blog.release42.li.new.5"><strong>Smart Group with AI</strong>, using Chrome's built-in on-device model. Nothing leaves the browser.</li>
+          <li data-i18n="blog.release42.li.new.6"><strong>Six languages</strong> across the extension, the website and the documentation.</li>
+        </ul>
+
+        <h2 data-i18n="blog.release42.h2.improvements">Improvements</h2>
+        <ul>
+          <li data-i18n="blog.release42.li.imp.1"><strong>Onboarding</strong> has been reworked. It groups your tabs immediately after you create your first rule.</li>
+        </ul>
+
+        <h2 data-i18n="blog.release42.h2.fixes">Bug fixes</h2>
+        <ul>
+          <li data-i18n="blog.release42.li.fix.1"><strong>AI grouping behaving strangely.</strong> It no longer stalls with a stuck button, it assigns every tab to a matching group, and it keeps same-domain tabs together. It now also includes hostnames in what the model sees, which made the results much better. The first run starts Chrome's model download and shows progress instead of silently falling back to heuristic grouping (expect a few small bugs here, as this hasn't been extensively tested yet).</li>
+          <li data-i18n="blog.release42.li.fix.2">Restarting Chrome no longer creates a second set of groups on top of the ones Chrome restored.</li>
+          <li data-i18n="blog.release42.li.fix.3">Tabs no longer switch on their own while you browse or while a session is being restored.</li>
+          <li data-i18n="blog.release42.li.fix.4">URL protocol validation on tab creation.</li>
+        </ul>
+
+        <p data-i18n="blog.release42.p.5">Takt stays local-first: no account, no telemetry, nothing leaving your browser.</p>
+        <div><span data-i18n="blog.release42.cta.feedback.before">What should we build next?</span> <a href="mailto:takt.extension@gmail.com?subject=Feature%20Request%20%E2%80%94%20Takt&amp;body=Describe%20the%20feature%20you%27d%20like%3A%0A%0AWhy%20it%20would%20be%20useful%3A" data-i18n="blog.release42.cta.feedback.linkText">Tell us</a></div>
+        <div><a href="https://chromewebstore.google.com/detail/takt/plgfdnbgkjocmgegnkbihoeojcfphdic" data-i18n="blog.release42.cta.install.linkText">Add Takt to Chrome</a><span data-i18n="blog.release42.cta.install.after"> it's free, no account needed. Nothing leaves your browser.</span></div>
+      </div>
+      <footer class="blog-post-footer">
+        <a data-i18n="blog.release42.footer.back" href="../blog/">Back to blog</a>
+      </footer>
+    </article>
+  </main>
+
+  <footer id="site-footer"></footer>
+
+  <script src="../js/includes.js"></script>
+  <script src="../js/nav.js"></script>
+</body>
+</html>
