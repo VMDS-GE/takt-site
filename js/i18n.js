@@ -26,6 +26,7 @@ import {
   lookupKey,
   renderSwitcherHtml,
   basePathFromHref,
+  localeFromSearch,
 } from './i18n-helpers.js';
 
 /** Hard-coded list of available locale codes. Adding a new locale (e.g. 'fr') requires:
@@ -134,7 +135,7 @@ async function switchLocale(newLocale) {
 }
 
 async function init() {
-  var savedLocale = localStorage.getItem('takt.lang');
+  var savedLocale = localeFromSearch(location.search, availableLocales) || localStorage.getItem('takt.lang');
   var activeLocale = pickLocale(
     Array.from(navigator.languages || []),
     availableLocales,

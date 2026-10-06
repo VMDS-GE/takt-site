@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://unpkg.com/@botpoison/browser@1.0.0/dist/index.js; connect-src 'self' https://submit-form.com https://api.botpoison.com; style-src 'self'; img-src 'self' data:; object-src 'none'; base-uri 'none'; form-action 'none'">
+  <meta name="referrer" content="no-referrer">
+  <meta name="robots" content="noindex">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-i18n="uninstall.meta.title">Sorry to see you go — Takt</title>
+
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon-16.png">
+  <link rel="stylesheet" href="../css/tokens.css">
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="uninstall.css">
+
+  <script src="../js/theme.js"></script>
+  <script defer src="https://unpkg.com/@botpoison/browser@1.0.0/dist/index.js" integrity="sha384-PFiLHBpPgn3HAiDbMGBi5tI9ZL1FmZ8nr02DaNOQzuw3N1M+dpas2X6iilR9PmhW" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script type="module" src="../js/i18n.js"></script>
+  <script type="module" src="uninstall.js"></script>
+</head>
+<body>
+  <div id="lang-switcher-container"></div>
+
+  <main class="uninstall">
+    <h1 data-i18n="uninstall.heading">Sorry to see you go</h1>
+    <p data-i18n="uninstall.intro">Tell us why you uninstalled Takt. It takes 30 seconds and helps us fix what went wrong.</p>
+
+    <form id="uninstall-form" novalidate data-i18n-attr="aria-label:uninstall.form.ariaLabel" aria-label="Uninstall feedback">
+      <p id="q1-label" class="field-label" data-i18n="uninstall.q1.label">What's the main reason you uninstalled Takt?</p>
+      <div id="reason-list" role="radiogroup" aria-labelledby="q1-label">
+        <label class="reason-option" data-reason="too_complex"><input type="radio" name="reason" value="too_complex"> <span data-i18n="uninstall.reason.tooComplex">Too complicated to set up or use</span></label>
+        <label class="reason-option" data-reason="not_expected"><input type="radio" name="reason" value="not_expected"> <span data-i18n="uninstall.reason.notExpected">It didn't do what I expected</span></label>
+        <label class="reason-option" data-reason="broken"><input type="radio" name="reason" value="broken"> <span data-i18n="uninstall.reason.broken">Something broke (tabs grouped wrong, a tab I needed got closed)</span></label>
+        <label class="reason-option" data-reason="slow"><input type="radio" name="reason" value="slow"> <span data-i18n="uninstall.reason.slow">It slowed down my browser</span></label>
+        <label class="reason-option" data-reason="privacy"><input type="radio" name="reason" value="privacy"> <span data-i18n="uninstall.reason.privacy">Privacy concerns / too many permissions</span></label>
+        <label class="reason-option" data-reason="pricing"><input type="radio" name="reason" value="pricing"> <span data-i18n="uninstall.reason.pricing">Free version too limited / Premium too expensive</span></label>
+        <label class="reason-option" data-reason="switched"><input type="radio" name="reason" value="switched"> <span data-i18n="uninstall.reason.switched">I switched to another extension</span></label>
+        <label class="reason-option" data-reason="no_longer_needed"><input type="radio" name="reason" value="no_longer_needed"> <span data-i18n="uninstall.reason.noLongerNeeded">I don't need it anymore / only needed it temporarily</span></label>
+        <label class="reason-option" data-reason="interruptions"><input type="radio" name="reason" value="interruptions"> <span data-i18n="uninstall.reason.interruptions">Too many interruptions (pop-ups, banners, prompts)</span></label>
+        <label class="reason-option" data-reason="other"><input type="radio" name="reason" value="other"> <span data-i18n="uninstall.reason.other">Other</span></label>
+      </div>
+
+      <div id="which-extension-field" class="field" hidden>
+        <label for="which-extension" data-i18n="uninstall.whichExtension.label">Which extension?</label>
+        <input type="text" id="which-extension" maxlength="100" autocomplete="off">
+      </div>
+      <div id="other-detail-field" class="field" hidden>
+        <label for="other-detail" data-i18n="uninstall.otherDetail.label">Tell us more</label>
+        <input type="text" id="other-detail" maxlength="100" autocomplete="off">
+      </div>
+      <p id="error-reason" class="error" role="alert" hidden data-i18n="uninstall.error.reasonRequired">Please choose a reason.</p>
+
+      <div id="follow-up-field" class="field" hidden>
+        <label for="follow-up" id="follow-up-label">
+          <span data-i18n="uninstall.q2.label.tooComplex" hidden>Where did you get stuck?</span>
+          <span data-i18n="uninstall.q2.label.notExpected" hidden>What did you want it to do instead?</span>
+          <span data-i18n="uninstall.q2.label.pricing" hidden>Which feature was missing, or what price would have felt fair?</span>
+          <span data-i18n="uninstall.q2.label.broken" hidden>What happened?</span>
+          <span data-i18n="uninstall.q2.label.switched" hidden>What does the other extension do better?</span>
+          <span data-i18n="uninstall.q2.label.default" hidden>What feature was missing?</span>
+        </label>
+        <textarea id="follow-up" rows="3" maxlength="2000"></textarea>
+      </div>
+
+      <div class="field">
+        <label for="come-back" data-i18n="uninstall.q3.label">What would make you come back?</label>
+        <textarea id="come-back" rows="3" maxlength="2000"></textarea>
+      </div>
+
+      <div class="field">
+        <label for="email" data-i18n="uninstall.email.label">Email (optional)</label>
+        <input type="email" id="email" maxlength="254" autocomplete="email" aria-describedby="email-hint" data-i18n-attr="placeholder:uninstall.email.placeholder" placeholder="you@example.com">
+        <p id="email-hint" class="hint" data-i18n="uninstall.email.hint">Only if you'd like a reply when it's fixed.</p>
+        <p id="error-email" class="error" role="alert" hidden data-i18n="uninstall.error.email">Please enter a valid email address, or leave it empty.</p>
+      </div>
+
+      <div class="hp" aria-hidden="true"><label for="hp-website">Website</label><input type="text" id="hp-website" name="website" tabindex="-1" autocomplete="off"></div>
+
+      <button type="submit" id="submit-btn" data-i18n="uninstall.submit">Send feedback</button>
+      <p id="status-sending" role="status" hidden data-i18n="uninstall.state.sending">Sending…</p>
+      <p id="status-error" class="error" role="alert" hidden data-i18n="uninstall.state.error">Something went wrong and your feedback was not sent. Your answers are still here, so please try again.</p>
+    </form>
+
+    <div id="thanks" role="status" hidden>
+      <h2 data-i18n="uninstall.thanks.title">Thank you!</h2>
+      <p data-i18n="uninstall.thanks.body">Your feedback was sent. It helps us make Takt better.</p>
+    </div>
+  </main>
+</body>
+</html>

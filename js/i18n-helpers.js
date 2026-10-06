@@ -141,3 +141,18 @@ export function renderSwitcherHtml(locales, active) {
 
   return '<select class="lang-select" aria-label="Select language">' + options + '</select>';
 }
+
+/**
+ * Read a locale from a URL query string (Feature #296). The only gate between
+ * the URL and the locale file path: returns the `lang` value only when it
+ * appears exactly once and is an exact, case-sensitive member of availableLocales.
+ *
+ * @param {string|null|undefined} search — e.g. "?lang=fr"
+ * @param {string[]|null|undefined} availableLocales
+ * @returns {string|null}
+ */
+export function localeFromSearch(search, availableLocales) {
+  var values = new URLSearchParams(typeof search === 'string' ? search : '').getAll('lang');
+  if (values.length !== 1) return null;
+  return (availableLocales || []).includes(values[0]) ? values[0] : null;
+}

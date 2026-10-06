@@ -105,6 +105,7 @@
           (<code>DEBOUNCE_MS = 300</code> in <code>src/shared/constants.js</code>). The debounce
           prevents thrashing when switching tabs in quick succession.
         </p>
+        <p data-i18n="docs.autoCollapse.windowFocus.p1">Switching focus between Chrome windows also triggers cross-window auto-collapse. When a window receives focus, the active tab in that window causes <code>tabs.onActivated</code> to fire, triggering the same cross-window collapse as clicking a tab. The focused window's active tab group expands and groups in other windows collapse. Requires the cross-window auto-collapse setting to be on (Premium). The same 300 ms debounce applies — brief window switches do not trigger collapse.</p>
 
         <h2 id="tiers"><span data-i18n="docs.autoCollapse.tiers.heading">Free vs Premium</span> <a href="#tiers" class="anchor-link">#</a></h2>
         <p data-i18n="docs.autoCollapse.tiers.intro">

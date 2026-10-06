@@ -114,9 +114,8 @@
         <h2 id="ranking"><span data-i18n="docs.quickSwitch.ranking.heading">How results are ranked</span> <a href="#ranking" class="anchor-link">#</a></h2>
         <p data-i18n="docs.quickSwitch.ranking.intro">Results appear in four groups, always in this order:</p>
         <ol>
-          <li>
-            <strong>Open tabs</strong> — returned by <code>chrome.tabs.query({})</code> in Chrome's
-            natural tab order. Up to 50 open tabs are shown.
+          <li data-i18n="docs.quickSwitch.ranking.liOpenTabs">
+            Open tabs — all matching open tabs are shown, ordered by most recent use.
           </li>
           <li data-i18n="docs.quickSwitch.ranking.liHibernated">
             <strong>Hibernated tabs</strong> — returned from the hibernation store in insertion
@@ -133,8 +132,10 @@
           </li>
         </ol>
         <p data-i18n="docs.quickSwitch.ranking.p2">
-          Takt does not apply any additional scoring or re-ordering beyond what Chrome provides. The
-          combined list is always ordered: open tabs → hibernated tabs → history items → downloads.
+          Open tabs are sorted by the time they were last focused, most recent first. Tabs that have
+          never been focused (such as newly opened background tabs) appear at the end of the
+          open-tabs section in creation order. The combined list is always ordered: open tabs →
+          hibernated tabs → history items → downloads.
         </p>
 
         <h2 id="downloads"><span data-i18n="docs.quickSwitch.downloads.heading">Downloads search source</span> <a href="#downloads" class="anchor-link">#</a></h2>
