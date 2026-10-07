@@ -128,10 +128,8 @@ export function normalizeEmail(value) {
   return EMAIL_RE.test(s) ? s : null;
 }
 
-export function isConfigured(formId, publicKey) {
-  return [formId, publicKey].every(function (v) {
-    return typeof v === 'string' && v !== '' && !v.includes(PLACEHOLDER_MARKER);
-  });
+export function isConfigured(formId) {
+  return typeof formId === 'string' && formId !== '' && !formId.includes(PLACEHOLDER_MARKER);
 }
 
 export function checkSubmitGate(input) {
@@ -139,7 +137,7 @@ export function checkSubmitGate(input) {
   if (typeof g.honeypot === 'string' && g.honeypot !== '') return 'honeypot';
   if (!REASON_CODES.includes(g.reason)) return 'no_reason';
   if (normalizeEmail(g.email) === null) return 'invalid_email';
-  if (!isConfigured(g.formId, g.publicKey)) return 'not_configured';
+  if (!isConfigured(g.formId)) return 'not_configured';
   if (
     !Number.isFinite(g.loadedAt) ||
     !Number.isFinite(g.now) ||
@@ -150,7 +148,7 @@ export function checkSubmitGate(input) {
   return 'ok';
 }
 
-export function buildPayload(fields, context, displayedLocale, botpoisonSolution) {
+export function buildPayload(fields, context, displayedLocale) {
   var f = fields || {};
   if (!REASON_CODES.includes(f.reason)) return null;
   var ctx = context || {};
@@ -173,8 +171,5 @@ export function buildPayload(fields, context, displayedLocale, botpoisonSolution
     if (isValidContextValue(k, ctx[k])) result[k] = ctx[k];
   }
   if (SUPPORTED_LOCALES.includes(displayedLocale)) result.locale = displayedLocale;
-  if (typeof botpoisonSolution === 'string' && botpoisonSolution !== '') {
-    result._botpoison = botpoisonSolution;
-  }
   return result;
 }

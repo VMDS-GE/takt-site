@@ -14,7 +14,7 @@ import {
   checkSubmitGate,
   buildPayload,
 } from './uninstall-helpers.js';
-import { FORMSPARK_FORM_ID, BOTPOISON_PUBLIC_KEY } from './config.js';
+import { FORMSPARK_FORM_ID } from './config.js';
 
 const loadedAt = Date.now();
 const context = parseContext(location.search);
@@ -86,7 +86,6 @@ function init() {
       reason,
       email: emailInput.value,
       formId: FORMSPARK_FORM_ID,
-      publicKey: BOTPOISON_PUBLIC_KEY,
       loadedAt,
       now: Date.now(),
     });
@@ -118,8 +117,6 @@ function init() {
     errorReason.hidden = true;
 
     try {
-      if (typeof window.Botpoison !== 'function') throw new Error('botpoison unavailable');
-      const { solution } = await new window.Botpoison({ publicKey: BOTPOISON_PUBLIC_KEY }).challenge();
       const payload = buildPayload(
         {
           reason,
@@ -130,8 +127,7 @@ function init() {
           email: emailInput.value,
         },
         context,
-        document.documentElement.lang,
-        solution
+        document.documentElement.lang
       );
       const response = await fetch(FORMSPARK_ORIGIN + '/' + encodeURIComponent(FORMSPARK_FORM_ID), {
         method: 'POST',
