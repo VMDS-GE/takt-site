@@ -93,9 +93,15 @@
           <a href="#scope" class="anchor-link">#</a>
         </h2>
         <p data-i18n="docs.duplicates.scope.body">
-          Duplicate prevention runs regardless of which grouping mode is active (Rules, Category,
-          AI, or None). It applies only to newly opened tabs — navigating within an existing tab
-          to a URL that is already open elsewhere does not trigger the check.
+          Duplicate prevention runs regardless of which grouping mode is active (Rules,
+          Category, AI, or None). Takt checks a new tab once, on its first page load. A new tab
+          page that is still waiting for an address has not loaded a page yet: the check runs on
+          the first address you open in it, as long as that happens within a minute of opening
+          the tab. A redirect during that first load is part of it: the check uses the address
+          the tab lands on. Later navigations and redirects in the same tab are not checked.
+          Duplicate prevention therefore never closes a tab that has already loaded a page, even
+          if it moves to a URL that is already open elsewhere. Tabs that Chrome restores when
+          the browser starts are not new tabs and are not checked.
         </p>
 
         <h2 id="strategies">

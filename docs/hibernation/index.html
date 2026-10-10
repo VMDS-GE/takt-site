@@ -202,10 +202,12 @@
           automatically hibernated.
         </p>
         <p data-i18n="docs.hibernation.idleThreshold.p2">
-          <strong>Idle time</strong> is measured from the last moment you interacted with the tab —
-          clicked, scrolled, typed, or activated it. Tabs you have never interacted with since the
-          extension was installed report an infinite idle time and are treated as the most stale
-          candidates.
+          <strong>Idle time</strong> is measured from the last moment you interacted with the
+          tab — clicked, scrolled, typed, or activated it — or the tab finished loading a page,
+          whichever is most recent. A tab that has not been loaded, activated or used since the
+          browser started (or since the extension was installed or updated) has no known idle
+          time. Takt does not treat such a tab as idle: every trigger that depends on idle time,
+          including the tab ceiling, skips it until it has been loaded, activated or used.
         </p>
 
         <div class="callout">
@@ -231,8 +233,11 @@
         <h3 id="tab-ceiling"><span data-i18n="docs.hibernation.tabCeiling.heading">Tab ceiling</span></h3>
         <p data-i18n="docs.hibernation.tabCeiling.p1">
           Enable <strong>Hibernate oldest tabs when a window exceeds N tabs</strong> and set a
-          limit. Whenever a window goes over that number — including the moment you open a new tab —
-          Takt hibernates the least-recently-used tabs until the count is back at the limit.
+          limit. Whenever a window goes over that number — including the moment you open a new
+          tab — Takt hibernates the least-recently-used tabs until the count is back at the
+          limit. Takt never hibernates a tab it has not tracked yet, or one that was opened,
+          loaded or used in the last minute, so a window can stay over the limit for a short
+          time.
         </p>
         <p data-i18n="docs.hibernation.tabCeiling.p2">
           When the window drops <em>below</em> the limit (because you close a tab), Takt
