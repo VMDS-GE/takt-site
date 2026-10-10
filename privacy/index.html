@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Privacy Policy — Takt</title>
-  <meta name="description" content="Takt privacy policy. No accounts, no analytics. All extension data stays in your browser unless you turn on Google Drive sync.">
+  <meta name="description" content="Takt privacy policy. No accounts, no analytics. Your data is kept in your browser's storage. Google Drive sync, File Sync and a backup export copy data out of it when you use them.">
 
   <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon-16.png">
@@ -41,7 +41,7 @@
       <p class="lead" style="color: var(--muted); font-size: 0.9rem;">Last updated: October 10, 2026</p>
 
       <h2 id="summary">Summary <a href="#summary" class="anchor-link">#</a></h2>
-      <p>The Takt extension sends no analytics, telemetry or usage data. Your rules, settings and tabs stay in your browser's storage unless you turn on Google Drive sync, which copies your Takt data to your own Google Drive. The extension goes online only to check your license and, if you turned it on, to sync with Google Drive. When you uninstall Takt, Chrome opens an optional feedback page; what that page receives is described under <a href="#uninstall-feedback">Uninstall feedback</a>.</p>
+      <p>The Takt extension sends no analytics, telemetry or usage data. Your rules, settings and tabs are kept in your browser's storage. Takt copies parts of this data out of the browser when you turn on or use one of these features: Google Drive sync (to your own Google Drive), File Sync (to a folder you choose) and export (to a file you download: your rules, or a full backup). If Chrome Sync is on, Chrome may also sync part of this data through your Google account; see <a href="#data-stored">What data Takt stores</a>. The extension goes online only to check your license and, if you turned it on, to sync with Google Drive. When you uninstall Takt, Chrome opens an optional feedback page; what that page receives is described under <a href="#uninstall-feedback">Uninstall feedback</a>.</p>
 
       <h2 id="data-stored">What data Takt stores <a href="#data-stored" class="anchor-link">#</a></h2>
       <p>All data is stored locally using Chrome's built-in storage APIs (<code>chrome.storage.sync</code>, <code>chrome.storage.local</code>, <code>chrome.storage.session</code>):</p>
@@ -118,7 +118,7 @@
           <tr><td><code>tabGroups</code></td><td>Create and manage Chrome tab groups</td></tr>
           <tr><td><code>storage</code></td><td>Save your rules, settings, and profiles</td></tr>
           <tr><td><code>contextMenus</code></td><td>Right-click "Create rule from this tab" menu item</td></tr>
-          <tr><td><code>scripting</code></td><td>Inject the duplicate-prevention toast notification</td></tr>
+          <tr><td><code>scripting</code></td><td>Run small scripts in a page Takt has access to: the current tab when you invoke Takt, or any site if you granted the optional <code>&lt;all_urls&gt;</code> access. Takt uses this to show its messages in the page (a notice when Takt closed a duplicate tab, an offer to group a tab that matches a rule, and an offer to create a rule for a site with several open tabs) and to draw the Quick Switch overlay over the current page; to notice a Shift+click on a link and pass that link's address to the extension, so that duplicate prevention lets the link open; to read a tab's scroll position when the tab is hibernated and scroll back to it when the tab is woken; to measure how much memory a tab uses, as numbers (JavaScript memory, number of page elements, size of loaded resources and of canvases); and, when you run Smart Group, to read each tab's title and the first 500 characters of its visible text, which are processed on your device to choose the groups.</td></tr>
           <tr><td><code>notifications</code></td><td>Alert you when tab groups exceed memory budgets</td></tr>
           <tr><td><code>alarms</code></td><td>Periodic budget checks and scheduled profile switching</td></tr>
         </tbody>
@@ -150,6 +150,7 @@
 
       <h2 id="deletion">Data deletion <a href="#deletion" class="anchor-link">#</a></h2>
       <p>Uninstalling Takt from Chrome automatically deletes all locally stored data. To delete synced data, disable Chrome Sync or clear extension data from your Google account settings before uninstalling.</p>
+      <p>Uninstalling Takt does not remove copies of your data that Takt made outside its own storage. You delete each one where it is kept. If you used Google Drive sync, Takt's files stay in the hidden app folder of your Google Drive; you can delete them in your Google Drive settings, under Manage apps. If you used File Sync, the files stay in the folder you chose; if a cloud service syncs that folder, it holds them too. Files you exported (<code>takt-rules.json</code>, or the full backup <code>takt-backup.json</code>) stay wherever you saved them. If you saved a group's tabs as bookmarks, the folders under "Takt Bookmarks" stay in Chrome's bookmarks; delete them in Chrome's bookmark manager.</p>
       <p>To delete an uninstall survey submission, email <strong>takt.extension@gmail.com</strong> (see <a href="#uninstall-feedback">Uninstall feedback</a>).</p>
 
       <h2 id="children">Children's privacy <a href="#children" class="anchor-link">#</a></h2>
