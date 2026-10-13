@@ -81,7 +81,7 @@
 
         <h2 id="how-it-works"><span data-i18n="docs.sync.howItWorks.heading">How it works</span> <a href="#how-it-works" class="anchor-link">#</a></h2>
         <p data-i18n="docs.sync.howItWorks.p1">
-          Takt writes four JSON files to a folder you choose. Your cloud desktop client — Google
+          Takt writes five JSON files to a folder you choose. Your cloud desktop client — Google
           Drive, iCloud Drive, Dropbox, or any other — detects the new or changed files and uploads
           them. On your other devices, the client downloads the files, and you can pull them into
           Takt with <strong>Import from Folder</strong>.
@@ -119,7 +119,7 @@
         </div>
 
         <h2 id="sync-files"><span data-i18n="docs.sync.syncFiles.heading">What gets synced</span> <a href="#sync-files" class="anchor-link">#</a></h2>
-        <p data-i18n="docs.sync.syncFiles.intro">Takt writes four files to the chosen folder:</p>
+        <p data-i18n="docs.sync.syncFiles.intro">Takt writes five files to the chosen folder:</p>
         <table>
           <thead>
             <tr>
@@ -141,6 +141,10 @@
               <td>All your saved sessions</td>
             </tr>
             <tr>
+              <td><code>hibernated.json</code></td>
+              <td>All your hibernated tabs</td>
+            </tr>
+            <tr>
               <td><code>meta.json</code></td>
               <td>Sync timestamp and extension version</td>
             </tr>
@@ -154,7 +158,7 @@
 
         <h2 id="sync-now"><span data-i18n="docs.sync.syncNow.heading">Sync Now</span> <a href="#sync-now" class="anchor-link">#</a></h2>
         <p data-i18n="docs.sync.syncNow.p1">
-          Click <strong>Sync Now</strong> to write all four files to the folder immediately. The
+          Click <strong>Sync Now</strong> to write all five files to the folder immediately. The
           <em>Last synced</em> timestamp updates when the write succeeds.
         </p>
         <p data-i18n="docs.sync.syncNow.p2">
@@ -261,7 +265,7 @@
               <td>Files written</td>
               <td>
                 <code>rules.json</code>, <code>profiles.json</code>, <code>sessions.json</code>,
-                <code>meta.json</code>
+                <code>hibernated.json</code>, <code>meta.json</code>
               </td>
             </tr>
             <tr>
