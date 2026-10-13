@@ -594,7 +594,7 @@
   "docs.resources.permissions.intro": "The resource dashboard needs two optional permissions to show full data:",
   "docs.resources.permissions.callout": "Memory shows \"—\"? This means the all_urls permission is not granted. Takt injects a lightweight script into each tab to sample its memory — without host access, the measurement cannot run. Go to Settings → Permissions and grant All website access. Memory values will appear on the next dashboard refresh (within 10 seconds).",
   "docs.sessions.lead": "Snapshot your browser windows and restore them later — including tab groups, ungrouped tabs, and multiple windows.",
-  "docs.sessions.premiumCallout": "Premium feature. Saving and restoring sessions requires a Premium subscription. You can browse saved sessions for free.",
+  "docs.sessions.premiumCallout": "Premium feature. Saving and restoring sessions requires a Premium subscription. You can browse and delete saved sessions for free.",
   "docs.sessions.whatIsASession.heading": "What is a session",
   "docs.sessions.whatIsASession.intro": "A session is a named snapshot of one or more Chrome windows. Each session captures:",
   "docs.sessions.whatIsASession.li1": "Every open tab — URL, title, and pinned state",

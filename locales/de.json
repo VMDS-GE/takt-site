@@ -587,7 +587,7 @@
   "docs.resources.permissions.intro": "Das Ressourcen-Dashboard benötigt zwei optionale Berechtigungen, um vollständige Daten anzuzeigen:",
   "docs.resources.permissions.callout": "Arbeitsspeicher zeigt \"—\"? Das bedeutet, dass die all_urls-Berechtigung nicht erteilt wurde. Takt fügt ein leichtes Skript in jeden Tab ein, um seinen Arbeitsspeicher zu messen — ohne Host-Zugriff kann die Messung nicht durchgeführt werden. Gehen Sie zu Einstellungen → Berechtigungen und erteilen Sie den Zugriff auf alle Websites. Arbeitsspeicher-Werte erscheinen beim nächsten Dashboard-Update (innerhalb von 10 Sekunden).",
   "docs.sessions.lead": "Erstellen Sie Schnappschüsse Ihrer Browser-Fenster und stellen Sie sie später wieder her — einschließlich Tab-Gruppen, nicht gruppierten Tabs und mehreren Fenstern.",
-  "docs.sessions.premiumCallout": "Premium-Funktion. Das Speichern und Wiederherstellen von Sitzungen erfordert ein Premium-Abonnement. Sie können gespeicherte Sitzungen kostenlos durchsuchen.",
+  "docs.sessions.premiumCallout": "Premium-Funktion. Das Speichern und Wiederherstellen von Sitzungen erfordert ein Premium-Abonnement. Sie können gespeicherte Sitzungen kostenlos durchsuchen und löschen.",
   "docs.sessions.whatIsASession.heading": "Was ist eine Sitzung",
   "docs.sessions.whatIsASession.intro": "Eine Sitzung ist ein benannter Schnappschuss eines oder mehrerer Chrome-Fenster. Jede Sitzung erfasst:",
   "docs.sessions.whatIsASession.li1": "Jeden geöffneten Tab — URL, Titel und Anheftungsstatus",

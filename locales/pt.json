@@ -587,7 +587,7 @@
   "docs.resources.permissions.intro": "O painel de recursos precisa de duas permissões opcionais para mostrar dados completos:",
   "docs.resources.permissions.callout": "Memória mostra \"—\"? Isso significa que a permissão all_urls não está concedida. O Takt injeta um script leve em cada aba para medir sua memória — sem acesso ao host, a medição não pode ser executada. Vá para Configurações → Permissões e conceda acesso a todos os sites. Os valores de memória aparecerão na próxima atualização do painel (em até 10 segundos).",
   "docs.sessions.lead": "Capture um instantâneo das suas janelas do navegador e restaure-as mais tarde — incluindo grupos de abas, abas desagrupadas e múltiplas janelas.",
-  "docs.sessions.premiumCallout": "Funcionalidade Premium. Salvar e restaurar sessões requer uma assinatura Premium. Você pode navegar pelas sessões salvas gratuitamente.",
+  "docs.sessions.premiumCallout": "Funcionalidade Premium. Salvar e restaurar sessões requer uma assinatura Premium. Você pode navegar pelas sessões salvas e excluí-las gratuitamente.",
   "docs.sessions.whatIsASession.heading": "O que é uma sessão",
   "docs.sessions.whatIsASession.intro": "Uma sessão é um instantâneo nomeado de uma ou mais janelas do Chrome. Cada sessão captura:",
   "docs.sessions.whatIsASession.li1": "Cada aba aberta — URL, título e estado de fixação",

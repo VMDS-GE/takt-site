@@ -587,7 +587,7 @@
   "docs.resources.permissions.intro": "La dashboard delle risorse necessita di due autorizzazioni opzionali per mostrare dati completi:",
   "docs.resources.permissions.callout": "La memoria mostra \"—\"? Questo significa che l'autorizzazione all_urls non è stata concessa. Takt inietta uno script leggero in ogni scheda per campionare la sua memoria — senza accesso all'host, la misurazione non può essere eseguita. Vai a Impostazioni → Autorizzazioni e concedi l'accesso a tutti i siti web. I valori di memoria appariranno al prossimo aggiornamento della dashboard (entro 10 secondi).",
   "docs.sessions.lead": "Cattura uno snapshot delle finestre del browser e ripristinale in seguito — inclusi i gruppi di schede, le schede non raggruppate e le finestre multiple.",
-  "docs.sessions.premiumCallout": "Funzione Premium. Salvare e ripristinare le sessioni richiede un abbonamento Premium. Puoi sfogliare le sessioni salvate gratuitamente.",
+  "docs.sessions.premiumCallout": "Funzione Premium. Salvare e ripristinare le sessioni richiede un abbonamento Premium. Puoi sfogliare ed eliminare le sessioni salvate gratuitamente.",
   "docs.sessions.whatIsASession.heading": "Cos'è una sessione",
   "docs.sessions.whatIsASession.intro": "Una sessione è uno snapshot con nome di una o più finestre Chrome. Ogni sessione cattura:",
   "docs.sessions.whatIsASession.li1": "Ogni scheda aperta — URL, titolo e stato di blocco",

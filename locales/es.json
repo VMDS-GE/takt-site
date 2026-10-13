@@ -587,7 +587,7 @@
   "docs.resources.permissions.intro": "El panel de recursos necesita dos permisos opcionales para mostrar datos completos:",
   "docs.resources.permissions.callout": "¿La memoria muestra \"—\"? Esto significa que el permiso all_urls no está concedido. Takt inyecta un script ligero en cada pestaña para medir su memoria — sin acceso al host, la medición no puede ejecutarse. Ve a Ajustes → Permisos y concede acceso a todos los sitios web. Los valores de memoria aparecerán en la próxima actualización del panel (en los próximos 10 segundos).",
   "docs.sessions.lead": "Toma una instantánea de tus ventanas del navegador y restáuralas más tarde — incluyendo grupos de pestañas, pestañas sin agrupar y múltiples ventanas.",
-  "docs.sessions.premiumCallout": "Función Premium. Guardar y restaurar sesiones requiere una suscripción Premium. Puedes explorar las sesiones guardadas de forma gratuita.",
+  "docs.sessions.premiumCallout": "Función Premium. Guardar y restaurar sesiones requiere una suscripción Premium. Puedes explorar y eliminar las sesiones guardadas de forma gratuita.",
   "docs.sessions.whatIsASession.heading": "Qué es una sesión",
   "docs.sessions.whatIsASession.intro": "Una sesión es una instantánea con nombre de una o más ventanas de Chrome. Cada sesión captura:",
   "docs.sessions.whatIsASession.li1": "Cada pestaña abierta — URL, título y estado de fijación",

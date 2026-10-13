@@ -587,7 +587,7 @@
   "docs.resources.permissions.intro": "Le tableau de bord des ressources a besoin de deux permissions optionnelles pour afficher les données complètes :",
   "docs.resources.permissions.callout": "La mémoire affiche \"—\" ? Cela signifie que la permission all_urls n'est pas accordée. Takt injecte un script léger dans chaque onglet pour mesurer sa mémoire — sans accès hôte, la mesure ne peut pas s'exécuter. Allez dans Paramètres → Permissions et accordez l'accès à tous les sites. Les valeurs de mémoire apparaîtront lors de la prochaine actualisation du tableau de bord (dans les 10 secondes).",
   "docs.sessions.lead": "Capturez vos fenêtres de navigateur et restaurez-les plus tard — y compris les groupes d'onglets, les onglets non groupés et plusieurs fenêtres.",
-  "docs.sessions.premiumCallout": "Fonctionnalité Premium. L'enregistrement et la restauration des sessions nécessitent un abonnement Premium. Vous pouvez parcourir les sessions enregistrées gratuitement.",
+  "docs.sessions.premiumCallout": "Fonctionnalité Premium. L'enregistrement et la restauration des sessions nécessitent un abonnement Premium. Vous pouvez parcourir et supprimer les sessions enregistrées gratuitement.",
   "docs.sessions.whatIsASession.heading": "Qu'est-ce qu'une session",
   "docs.sessions.whatIsASession.intro": "Une session est un instantané nommé d'une ou plusieurs fenêtres Chrome. Chaque session capture :",
   "docs.sessions.whatIsASession.li1": "Chaque onglet ouvert — URL, titre et état épinglé",
