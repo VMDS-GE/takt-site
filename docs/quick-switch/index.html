@@ -76,19 +76,14 @@
         <h2 id="open"><span data-i18n="docs.quickSwitch.open.heading">Opening the overlay</span> <a href="#open" class="anchor-link">#</a></h2>
         <p data-i18n="docs.quickSwitch.open.p1">
           Quick Switch requires Premium. Press <kbd>Alt</kbd> + <kbd>Shift</kbd> +
-          <kbd>Space</kbd> on any regular web page to open the overlay inline.
+          <kbd>Space</kbd> on any page to open it.
         </p>
         <p data-i18n="docs.quickSwitch.open.p2">
-          On pages where content scripts cannot be injected, Takt opens a standalone popup window
-          (560 × 480 px) instead. This fallback activates on URLs that match any of the following:
+          Quick Switch always opens in a small Takt window of its own (560 × 480 px), placed over
+          the current browser window. It is never drawn inside the page you are visiting, and it
+          works the same way on every page, including <code>chrome://</code> pages and the Chrome
+          Web Store.
         </p>
-        <ul>
-          <li><code>chrome://</code></li>
-          <li><code>chrome-extension://</code></li>
-          <li><code>about:</code></li>
-          <li><code>chrome-untrusted://</code></li>
-          <li><code>chromewebstore.google.com</code></li>
-        </ul>
 
         <h2 id="navigate">
           <span data-i18n="docs.quickSwitch.navigate.heading">Searching and navigating</span> <a href="#navigate" class="anchor-link">#</a>
@@ -156,7 +151,7 @@
         <ul>
           <li data-i18n="docs.quickSwitch.downloads.liFilenames">Only filenames are searched, not file contents.</li>
           <li data-i18n="docs.quickSwitch.downloads.liQueryOnly">Downloads appear only when you are typing a query, not in the default unfiltered list.</li>
-          <li data-i18n="docs.quickSwitch.downloads.liOpenFile">Selecting a download result opens the file locally, not a browser tab.</li>
+          <li data-i18n="docs.quickSwitch.downloads.liOpenFile">Selecting a download result shows the file in its folder (Finder on macOS, File Explorer on Windows). Takt does not open the file.</li>
           <li data-i18n="docs.quickSwitch.downloads.liLimit">Up to 20 download results are shown, and only files that still exist on disk.</li>
         </ul>
 
@@ -179,10 +174,9 @@
         <h2 id="gotchas"><span data-i18n="docs.quickSwitch.gotchas.heading">Edge cases and gotchas</span> <a href="#gotchas" class="anchor-link">#</a></h2>
         <ul>
           <li>
-            <strong>Blocked pages open a popup.</strong> On <code>chrome://</code>,
-            <code>chrome-extension://</code>, <code>about:</code>, <code>chrome-untrusted://</code>,
-            and <code>chromewebstore.google.com</code> pages the shortcut opens a 560 × 480 popup
-            window instead of an inline overlay.
+            <strong>Always a separate window.</strong> On every page, including
+            <code>chrome://</code> pages and <code>chromewebstore.google.com</code>, the shortcut
+            opens the same 560 × 480 Takt window. Quick Switch is never drawn inside the page.
           </li>
           <li data-i18n="docs.quickSwitch.gotchas.li2">
             <strong>No minimum query length.</strong> Results update on every keystroke. Clearing
@@ -210,8 +204,9 @@
             shows "No matches found".
           </li>
           <li>
-            <strong>The overlay closes automatically</strong> if you switch to a different tab or
-            focus a different window while the overlay is open.
+            <strong>The Quick Switch window closes automatically</strong> when any other tab
+            becomes active or when you focus another Chrome window. It stays open if you switch to
+            another application.
           </li>
         </ul>
 
