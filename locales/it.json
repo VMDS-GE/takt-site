@@ -240,7 +240,7 @@
   "docs.driveSync.setup.li5": "Una volta connesso, l'email del tuo account appare accanto al pulsante. Ora puoi sincronizzare.",
   "docs.driveSync.setup.callout": "La finestra di accesso appare solo una volta. Dopodiché, Chrome memorizza nella cache il token di autenticazione e lo rinnova silenziosamente. Non ti verrà chiesto di nuovo a meno che non ti disconnetti esplicitamente o revochi l'accesso dalle impostazioni del tuo account Google.",
   "docs.driveSync.syncFiles.heading": "Cosa viene sincronizzato",
-  "docs.driveSync.syncFiles.intro": "Takt archivia quattro file nella cartella app di Google Drive:",
+  "docs.driveSync.syncFiles.intro": "Takt archivia sei file nella cartella app di Google Drive:",
   "docs.driveSync.syncFiles.conclusion": "I file vengono scritti in modo indipendente. Una modifica alle regole sul dispositivo A e ai profili sul dispositivo B non causerà un conflitto tra quei due file.",
   "docs.driveSync.syncNow.heading": "Sincronizza ora",
   "docs.driveSync.syncNow.p1": "Fai clic su Sincronizza ora per avviare una sincronizzazione immediata. Takt confronta i timestamp e invia o riceve automaticamente:",
@@ -257,7 +257,7 @@
   "docs.driveSync.forcePushPull.callout": "Forza invio e Forza ricezione sono operazioni distruttive. Forza invio sovrascrive Drive incondizionatamente. Forza ricezione sostituisce tutte le regole, i profili e le sessioni locali con la copia remota. Entrambe le operazioni sono immediate e non possono essere annullate da Takt.",
   "docs.driveSync.disconnect.heading": "Disconnessione",
   "docs.driveSync.disconnect.p1": "Fai clic su Disconnetti per uscire da Google Drive. Takt revoca il suo token di accesso memorizzato nella cache, cancella l'email del tuo account da Impostazioni e disattiva la sincronizzazione automatica. I tuoi dati su Drive non vengono eliminati — i file rimangono nella cartella app nascosta e possono essere accessibili di nuovo se ti riconnetti.",
-  "docs.driveSync.disconnect.p2": "Per eliminare completamente i dati da Drive, disconnettiti, quindi vai su Account Google → Sicurezza → Accesso di terze parti e rimuovi l'accesso di Takt. Questo rimuove anche i file dalla cartella app nascosta.",
+  "docs.driveSync.disconnect.p2": "La disconnessione non elimina nulla da Google Drive. Per eliminare i file, usa Elimina i miei dati di Drive prima di disconnetterti; vedi Eliminare i tuoi dati di Drive più sotto.",
   "docs.driveSync.privacySection.heading": "Privacy",
   "docs.driveSync.privacySection.intro": "Takt richiede due scope OAuth a Google:",
   "docs.driveSync.privacySection.liDriveFolder": "Cartella app Drive — accesso in lettura e scrittura a una cartella nascosta che solo Takt può vedere. Takt non può leggere, elencare o modificare nessun file nel tuo Google Drive normale.",
@@ -1032,5 +1032,11 @@
   "pricing.compareLink": "Confronta tutti i limiti, fianco a fianco →",
   "privacy.articleLink": "Cosa invia Takt e cosa no →",
   "docs.blog.posts.pageTitle": "Articoli — Takt",
-  "docs.blog.releases.pageTitle": "Note di rilascio — Takt"
+  "docs.blog.releases.pageTitle": "Note di rilascio — Takt",
+  "docs.driveSync.deleteData.heading": "Eliminare i tuoi dati di Drive",
+  "docs.driveSync.deleteData.p1": "Per eliminare i file che Takt ha salvato in Google Drive, apri la pagina Opzioni di Takt, vai alla scheda Impostazioni, scorri fino alla sezione Sincronizzazione Drive e fai clic su Elimina i miei dati di Drive. Il pulsante è visibile solo mentre Google Drive è connesso. Takt ti chiede prima di confermare. L'eliminazione non può essere annullata.",
+  "docs.driveSync.deleteData.p2": "Takt elimina tutti i file della sua cartella app nascosta: i sei file elencati in Cosa viene sincronizzato. I dati di questo browser non vengono eliminati: le tue regole, i profili, le sessioni e le schede ibernate restano come sono. Nemmeno i file di una cartella di sincronizzazione file e i file di backup che hai esportato vengono eliminati.",
+  "docs.driveSync.deleteData.p3": "Quando tutti i file sono stati eliminati, Takt disattiva la sincronizzazione Drive e la sincronizzazione automatica in questo browser, rimuove dal browser il suo token di accesso Google e chiede a Google di revocarlo, così questo browser non riscrive i file alla sincronizzazione successiva. Se un file non può essere eliminato, Takt mostra un errore e non disattiva la sincronizzazione Drive, quindi puoi fare di nuovo clic sul pulsante.",
+  "docs.driveSync.deleteData.callout": "Se la sincronizzazione Drive è connessa in un altro browser, quel browser può riscrivere i file alla sincronizzazione successiva. Disconnettila lì prima di eliminare.",
+  "docs.driveSync.deleteData.p4": "Elimina i miei dati di Drive funziona anche dopo la fine di un piano Premium, purché questo browser sia ancora connesso a Google Drive. Se Takt non riesce più ad accedere a Google Drive da questo browser, puoi eliminare i file nelle impostazioni di Google Drive, in Gestisci applicazioni."
 }

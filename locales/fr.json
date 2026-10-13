@@ -240,7 +240,7 @@
   "docs.driveSync.setup.li5": "Une fois connecté, l'adresse e-mail de votre compte apparaît à côté du bouton. Vous pouvez maintenant synchroniser.",
   "docs.driveSync.setup.callout": "La fenêtre de connexion n'apparaît qu'une seule fois. Ensuite, Chrome met en cache le jeton d'authentification et le renouvelle silencieusement. Vous ne serez plus invité à vous connecter sauf si vous vous déconnectez explicitement ou révoquez l'accès depuis les paramètres de votre compte Google.",
   "docs.driveSync.syncFiles.heading": "Ce qui est synchronisé",
-  "docs.driveSync.syncFiles.intro": "Takt stocke quatre fichiers dans le dossier d'application de Google Drive :",
+  "docs.driveSync.syncFiles.intro": "Takt stocke six fichiers dans le dossier d'application de Google Drive :",
   "docs.driveSync.syncFiles.conclusion": "Les fichiers sont écrits indépendamment. Une modification des règles sur l'appareil A et des profils sur l'appareil B ne créera pas de conflit entre ces deux fichiers.",
   "docs.driveSync.syncNow.heading": "Synchroniser maintenant",
   "docs.driveSync.syncNow.p1": "Cliquez sur Synchroniser maintenant pour déclencher une synchronisation immédiate. Takt compare les horodatages et envoie ou reçoit automatiquement :",
@@ -257,7 +257,7 @@
   "docs.driveSync.forcePushPull.callout": "Forcer l'envoi et Forcer la réception sont des opérations destructives. Forcer l'envoi écrase Drive inconditionnellement. Forcer la réception remplace toutes les règles, profils et sessions locaux par la copie distante. Les deux opérations sont immédiates et ne peuvent pas être annulées depuis Takt.",
   "docs.driveSync.disconnect.heading": "Déconnexion",
   "docs.driveSync.disconnect.p1": "Cliquez sur Déconnecter pour vous déconnecter de Google Drive. Takt révoque son jeton d'accès en cache, efface l'adresse e-mail de votre compte dans Paramètres et désactive la synchronisation automatique. Vos données sur Drive ne sont pas supprimées — les fichiers restent dans le dossier d'application caché et sont accessibles à nouveau si vous vous reconnectez.",
-  "docs.driveSync.disconnect.p2": "Pour supprimer complètement les données de Drive, déconnectez-vous, puis allez dans Compte Google → Sécurité → Accès tiers et supprimez l'accès de Takt. Cela supprime également les fichiers du dossier d'application caché.",
+  "docs.driveSync.disconnect.p2": "La déconnexion ne supprime rien de Google Drive. Pour supprimer les fichiers, utilisez Supprimer mes données Drive avant de vous déconnecter ; voir Supprimer vos données Drive ci-dessous.",
   "docs.driveSync.privacySection.heading": "Confidentialité",
   "docs.driveSync.privacySection.intro": "Takt demande deux portées OAuth à Google :",
   "docs.driveSync.privacySection.liDriveFolder": "Dossier d'application Drive — accès en lecture et écriture à un dossier caché visible uniquement par Takt. Takt ne peut pas lire, lister ou modifier les fichiers de votre Google Drive habituel.",
@@ -1032,5 +1032,11 @@
   "pricing.compareLink": "Comparer toutes les limites, côte à côte →",
   "privacy.articleLink": "Ce que Takt envoie, et ce qu'il n'envoie pas →",
   "docs.blog.posts.pageTitle": "Articles — Takt",
-  "docs.blog.releases.pageTitle": "Notes de version — Takt"
+  "docs.blog.releases.pageTitle": "Notes de version — Takt",
+  "docs.driveSync.deleteData.heading": "Supprimer vos données Drive",
+  "docs.driveSync.deleteData.p1": "Pour supprimer les fichiers que Takt a enregistrés dans Google Drive, ouvrez la page Options de Takt, allez dans l'onglet Paramètres, faites défiler jusqu'à la section Synchronisation Drive et cliquez sur Supprimer mes données Drive. Le bouton n'est affiché que lorsque Google Drive est connecté. Takt vous demande d'abord de confirmer. La suppression est irréversible.",
+  "docs.driveSync.deleteData.p2": "Takt supprime tous les fichiers de son dossier d'application caché : les six fichiers listés sous Ce qui est synchronisé. Les données de ce navigateur ne sont pas supprimées : vos règles, profils, sessions et onglets hibernés restent tels quels. Les fichiers d'un dossier de synchronisation fichier et les fichiers de sauvegarde que vous avez exportés ne sont pas supprimés non plus.",
+  "docs.driveSync.deleteData.p3": "Une fois tous les fichiers supprimés, Takt désactive la synchronisation Drive et la synchronisation automatique dans ce navigateur, retire son jeton d'accès Google du navigateur et demande à Google de le révoquer ; ce navigateur ne réécrit donc pas les fichiers à sa prochaine synchronisation. Si un fichier ne peut pas être supprimé, Takt affiche une erreur et ne désactive pas la synchronisation Drive : vous pouvez cliquer de nouveau sur le bouton.",
+  "docs.driveSync.deleteData.callout": "Si la synchronisation Drive est connectée dans un autre navigateur, celui-ci peut réécrire les fichiers à sa prochaine synchronisation. Déconnectez-la dans cet autre navigateur avant de supprimer.",
+  "docs.driveSync.deleteData.p4": "Supprimer mes données Drive fonctionne aussi après la fin d'un abonnement Premium, tant que ce navigateur est encore connecté à Google Drive. Si Takt ne peut plus accéder à Google Drive depuis ce navigateur, vous pouvez supprimer les fichiers dans les paramètres de Google Drive, sous Gérer les applications."
 }

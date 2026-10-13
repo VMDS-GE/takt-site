@@ -164,7 +164,7 @@
         </div>
 
         <h2 id="sync-files"><span data-i18n="docs.driveSync.syncFiles.heading">What gets synced</span> <a href="#sync-files" class="anchor-link">#</a></h2>
-        <p data-i18n="docs.driveSync.syncFiles.intro">Takt stores four files in Google Drive's app folder:</p>
+        <p data-i18n="docs.driveSync.syncFiles.intro">Takt stores six files in Google Drive's app folder:</p>
         <table>
           <thead>
             <tr>
@@ -184,6 +184,14 @@
             <tr>
               <td><code>sessions.json</code></td>
               <td>All your saved sessions</td>
+            </tr>
+            <tr>
+              <td><code>hibernated.json</code></td>
+              <td>All your hibernated tabs</td>
+            </tr>
+            <tr>
+              <td><code>settings.json</code></td>
+              <td>Your hibernation settings</td>
             </tr>
             <tr>
               <td><code>meta.json</code></td>
@@ -256,13 +264,16 @@
           on Drive is not deleted — the files remain in the hidden app folder and can be accessed
           again if you reconnect.
         </p>
-        <p data-i18n="docs.driveSync.disconnect.p2">
-          To delete the data from Drive entirely, disconnect, then go to
-          <a href="https://myaccount.google.com/permissions" target="_blank" rel="noopener"
-            >Google Account → Security → Third-party access</a
-          >
-          and remove Takt's access there. This also removes the files from the hidden app folder.
-        </p>
+        <p data-i18n="docs.driveSync.disconnect.p2">Disconnecting does not delete anything from Google Drive. To delete the files, use Delete my Drive data before you disconnect; see Deleting your Drive data below.</p>
+
+        <h2 id="delete-data"><span data-i18n="docs.driveSync.deleteData.heading">Deleting your Drive data</span> <a href="#delete-data" class="anchor-link">#</a></h2>
+        <p data-i18n="docs.driveSync.deleteData.p1">To delete the files Takt stored in Google Drive, open the Takt Options page, go to the Settings tab, scroll to the Drive Sync section and click Delete my Drive data. The button is shown only while Google Drive is connected. Takt asks you to confirm first. The deletion cannot be undone.</p>
+        <p data-i18n="docs.driveSync.deleteData.p2">Takt deletes every file in its hidden app folder: the six files listed under What gets synced. The data in this browser is not deleted: your rules, profiles, sessions and hibernated tabs stay as they are. Files in a File Sync folder and backup files you exported are not deleted either.</p>
+        <p data-i18n="docs.driveSync.deleteData.p3">When every file has been deleted, Takt turns off Drive Sync and auto-sync in this browser, removes its Google access token from the browser and asks Google to revoke it, so this browser does not write the files again at its next sync. If a file cannot be deleted, Takt shows an error and does not turn Drive Sync off, so you can click the button again.</p>
+        <div class="callout callout-warning">
+          <p data-i18n="docs.driveSync.deleteData.callout">If Drive Sync is connected in another browser, that browser can write the files again at its next sync. Disconnect it there before you delete.</p>
+        </div>
+        <p data-i18n="docs.driveSync.deleteData.p4">Delete my Drive data also works after a Premium plan has ended, as long as this browser is still connected to Google Drive. If Takt can no longer reach Google Drive from this browser, you can delete the files in your Google Drive settings, under Manage apps.</p>
 
         <h2 id="privacy"><span data-i18n="docs.driveSync.privacySection.heading">Privacy</span> <a href="#privacy" class="anchor-link">#</a></h2>
         <p data-i18n="docs.driveSync.privacySection.intro">Takt requests two OAuth scopes from Google:</p>
@@ -302,7 +313,7 @@
               <td>Files synced</td>
               <td>
                 <code>rules.json</code>, <code>profiles.json</code>, <code>sessions.json</code>,
-                <code>meta.json</code>
+                <code>hibernated.json</code>, <code>settings.json</code>, <code>meta.json</code>
               </td>
             </tr>
             <tr>

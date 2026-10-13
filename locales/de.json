@@ -240,7 +240,7 @@
   "docs.driveSync.setup.li5": "Nach der Verbindung erscheint Ihre Konto-E-Mail neben der Schaltfläche. Sie können jetzt synchronisieren.",
   "docs.driveSync.setup.callout": "Das Anmeldefenster erscheint nur einmal. Danach speichert Chrome das Authentifizierungstoken und erneuert es stillschweigend. Sie werden nicht erneut aufgefordert, es sei denn, Sie trennen die Verbindung ausdrücklich oder widerrufen den Zugriff in Ihren Google-Kontoeinstellungen.",
   "docs.driveSync.syncFiles.heading": "Was synchronisiert wird",
-  "docs.driveSync.syncFiles.intro": "Takt speichert vier Dateien im App-Ordner von Google Drive:",
+  "docs.driveSync.syncFiles.intro": "Takt speichert sechs Dateien im App-Ordner von Google Drive:",
   "docs.driveSync.syncFiles.conclusion": "Die Dateien werden unabhängig voneinander geschrieben. Eine Änderung der Regeln auf Gerät A und der Profile auf Gerät B führt nicht zu einem Konflikt zwischen diesen beiden Dateien.",
   "docs.driveSync.syncNow.heading": "Jetzt synchronisieren",
   "docs.driveSync.syncNow.p1": "Klicken Sie auf Jetzt synchronisieren, um eine sofortige Synchronisierung auszulösen. Takt vergleicht Zeitstempel und pusht oder pullt automatisch:",
@@ -257,7 +257,7 @@
   "docs.driveSync.forcePushPull.callout": "Erzwungener Push und erzwungener Pull sind destruktiv. Erzwungener Push überschreibt Drive bedingungslos. Erzwungener Pull ersetzt alle lokalen Regeln, Profile und Sitzungen durch die Remote-Kopie. Beide Vorgänge sind sofort und können innerhalb von Takt nicht rückgängig gemacht werden.",
   "docs.driveSync.disconnect.heading": "Verbindung trennen",
   "docs.driveSync.disconnect.p1": "Klicken Sie auf Trennen, um sich von Google Drive abzumelden. Takt widerruft sein gespeichertes Zugriffstoken, löscht Ihre Konto-E-Mail aus den Einstellungen und schaltet die automatische Synchronisierung aus. Ihre Daten auf Drive werden nicht gelöscht — die Dateien verbleiben im versteckten App-Ordner und können erneut aufgerufen werden, wenn Sie die Verbindung wiederherstellen.",
-  "docs.driveSync.disconnect.p2": "Um die Daten vollständig von Drive zu löschen, trennen Sie die Verbindung und gehen Sie dann zu Google-Konto → Sicherheit → Drittanbieterzugriff und entfernen Sie dort den Zugriff von Takt. Dadurch werden auch die Dateien aus dem versteckten App-Ordner entfernt.",
+  "docs.driveSync.disconnect.p2": "Das Trennen löscht nichts aus Google Drive. Um die Dateien zu löschen, verwenden Sie Meine Drive-Daten löschen, bevor Sie die Verbindung trennen; siehe Ihre Drive-Daten löschen weiter unten.",
   "docs.driveSync.privacySection.heading": "Datenschutz",
   "docs.driveSync.privacySection.intro": "Takt fordert zwei OAuth-Berechtigungen von Google an:",
   "docs.driveSync.privacySection.liDriveFolder": "Drive-App-Ordner — Lese- und Schreibzugriff auf einen versteckten Ordner, den nur Takt sehen kann. Takt kann keine Dateien in Ihrem regulären Google Drive lesen, auflisten oder ändern.",
@@ -1032,5 +1032,11 @@
   "pricing.compareLink": "Alle Limits im direkten Vergleich →",
   "privacy.articleLink": "Was Takt sendet und was nicht →",
   "docs.blog.posts.pageTitle": "Blogbeiträge — Takt",
-  "docs.blog.releases.pageTitle": "Versionshinweise — Takt"
+  "docs.blog.releases.pageTitle": "Versionshinweise — Takt",
+  "docs.driveSync.deleteData.heading": "Ihre Drive-Daten löschen",
+  "docs.driveSync.deleteData.p1": "Um die Dateien zu löschen, die Takt in Google Drive gespeichert hat, öffnen Sie die Takt-Optionsseite, wechseln Sie zum Einstellungen-Tab, scrollen Sie zum Abschnitt Drive-Synchronisierung und klicken Sie auf Meine Drive-Daten löschen. Die Schaltfläche wird nur angezeigt, solange Google Drive verbunden ist. Takt bittet Sie zuerst um Bestätigung. Das Löschen kann nicht rückgängig gemacht werden.",
+  "docs.driveSync.deleteData.p2": "Takt löscht alle Dateien in seinem versteckten App-Ordner: die sechs Dateien, die unter Was synchronisiert wird aufgeführt sind. Die Daten in diesem Browser werden nicht gelöscht: Ihre Regeln, Profile, Sitzungen und hibernierten Tabs bleiben unverändert. Dateien in einem Ordner der Dateisynchronisierung und von Ihnen exportierte Sicherungsdateien werden ebenfalls nicht gelöscht.",
+  "docs.driveSync.deleteData.p3": "Sobald alle Dateien gelöscht sind, schaltet Takt die Drive-Synchronisierung und die automatische Synchronisierung in diesem Browser aus, entfernt sein Google-Zugriffstoken aus dem Browser und bittet Google, es zu widerrufen. So schreibt dieser Browser die Dateien bei der nächsten Synchronisierung nicht erneut. Wenn eine Datei nicht gelöscht werden kann, zeigt Takt einen Fehler an und schaltet die Drive-Synchronisierung nicht aus, sodass Sie erneut auf die Schaltfläche klicken können.",
+  "docs.driveSync.deleteData.callout": "Wenn die Drive-Synchronisierung in einem anderen Browser verbunden ist, kann dieser Browser die Dateien bei seiner nächsten Synchronisierung erneut schreiben. Trennen Sie dort die Verbindung, bevor Sie löschen.",
+  "docs.driveSync.deleteData.p4": "Meine Drive-Daten löschen funktioniert auch, nachdem ein Premium-Abo beendet wurde, solange dieser Browser noch mit Google Drive verbunden ist. Wenn Takt von diesem Browser aus nicht mehr auf Google Drive zugreifen kann, können Sie die Dateien in den Google Drive-Einstellungen unter Apps verwalten löschen."
 }

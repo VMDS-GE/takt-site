@@ -290,7 +290,7 @@
   "docs.driveSync.setup.li5": "Once connected, your account email appears next to the button. You can now sync.",
   "docs.driveSync.setup.callout": "The sign-in window appears only once. After that, Chrome caches the authentication token and renews it silently. You will not be prompted again unless you explicitly disconnect or revoke access from your Google account settings.",
   "docs.driveSync.syncFiles.heading": "What gets synced",
-  "docs.driveSync.syncFiles.intro": "Takt stores four files in Google Drive's app folder:",
+  "docs.driveSync.syncFiles.intro": "Takt stores six files in Google Drive's app folder:",
   "docs.driveSync.syncFiles.conclusion": "The files are written independently. A change to rules on device A and profiles on device B will not cause a conflict between those two files.",
   "docs.driveSync.syncNow.heading": "Sync Now",
   "docs.driveSync.syncNow.p1": "Click Sync Now to trigger an immediate sync. Takt compares timestamps and automatically pushes or pulls:",
@@ -307,7 +307,7 @@
   "docs.driveSync.forcePushPull.callout": "Force Push and Force Pull are destructive. Force Push overwrites Drive unconditionally. Force Pull replaces all local rules, profiles, and sessions with the remote copy. Both operations are immediate and cannot be undone from within Takt.",
   "docs.driveSync.disconnect.heading": "Disconnecting",
   "docs.driveSync.disconnect.p1": "Click Disconnect to sign out of Google Drive. Takt revokes its cached access token, clears your account email from Settings, and turns off auto-sync. Your data on Drive is not deleted — the files remain in the hidden app folder and can be accessed again if you reconnect.",
-  "docs.driveSync.disconnect.p2": "To delete the data from Drive entirely, disconnect, then go to Google Account → Security → Third-party access and remove Takt's access there. This also removes the files from the hidden app folder.",
+  "docs.driveSync.disconnect.p2": "Disconnecting does not delete anything from Google Drive. To delete the files, use Delete my Drive data before you disconnect; see Deleting your Drive data below.",
   "docs.driveSync.privacySection.heading": "Privacy",
   "docs.driveSync.privacySection.intro": "Takt requests two OAuth scopes from Google:",
   "docs.driveSync.privacySection.liDriveFolder": "Drive app folder — read and write access to a hidden folder only Takt can see. Takt cannot read, list, or modify any file in your regular Google Drive.",
@@ -1032,5 +1032,11 @@
   "pricing.compareLink": "Compare every limit, side by side →",
   "privacy.articleLink": "What Takt sends, and what it doesn't →",
   "docs.blog.posts.pageTitle": "Blog posts — Takt",
-  "docs.blog.releases.pageTitle": "Patch releases — Takt"
+  "docs.blog.releases.pageTitle": "Patch releases — Takt",
+  "docs.driveSync.deleteData.heading": "Deleting your Drive data",
+  "docs.driveSync.deleteData.p1": "To delete the files Takt stored in Google Drive, open the Takt Options page, go to the Settings tab, scroll to the Drive Sync section and click Delete my Drive data. The button is shown only while Google Drive is connected. Takt asks you to confirm first. The deletion cannot be undone.",
+  "docs.driveSync.deleteData.p2": "Takt deletes every file in its hidden app folder: the six files listed under What gets synced. The data in this browser is not deleted: your rules, profiles, sessions and hibernated tabs stay as they are. Files in a File Sync folder and backup files you exported are not deleted either.",
+  "docs.driveSync.deleteData.p3": "When every file has been deleted, Takt turns off Drive Sync and auto-sync in this browser, removes its Google access token from the browser and asks Google to revoke it, so this browser does not write the files again at its next sync. If a file cannot be deleted, Takt shows an error and does not turn Drive Sync off, so you can click the button again.",
+  "docs.driveSync.deleteData.callout": "If Drive Sync is connected in another browser, that browser can write the files again at its next sync. Disconnect it there before you delete.",
+  "docs.driveSync.deleteData.p4": "Delete my Drive data also works after a Premium plan has ended, as long as this browser is still connected to Google Drive. If Takt can no longer reach Google Drive from this browser, you can delete the files in your Google Drive settings, under Manage apps."
 }
