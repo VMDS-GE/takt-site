@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Comment éviter les onglets en double dans Chrome — Takt</title>
+    <meta
+      name="description"
+      content="Chrome ouvre la même page dans autant d'onglets que vous le lui demandez. Voici comment bloquer les onglets en double dès leur ouverture, choisir ce qui compte comme une même URL, et fermer ceux qui sont déjà ouverts."
+    />
+    <link rel="canonical" href="https://taktabs.com/fr/blog/prevent-duplicate-tabs/" />
+<!-- TAKT-LANG:head -->
+<link rel="alternate" hreflang="en" href="https://taktabs.com/blog/prevent-duplicate-tabs/" />
+<link rel="alternate" hreflang="fr" href="https://taktabs.com/fr/blog/prevent-duplicate-tabs/" />
+<link rel="alternate" hreflang="es" href="https://taktabs.com/es/blog/prevent-duplicate-tabs/" />
+<link rel="alternate" hreflang="it" href="https://taktabs.com/it/blog/prevent-duplicate-tabs/" />
+<link rel="alternate" hreflang="de" href="https://taktabs.com/de/blog/prevent-duplicate-tabs/" />
+<link rel="alternate" hreflang="pt" href="https://taktabs.com/pt/blog/prevent-duplicate-tabs/" />
+<link rel="alternate" hreflang="x-default" href="https://taktabs.com/blog/prevent-duplicate-tabs/" />
+<!-- /TAKT-LANG:head -->
+    <meta property="og:type" content="article" />
+    <meta property="og:locale" content="fr_FR" />
+    <meta property="og:title" content="Comment éviter les onglets en double dans Chrome" />
+    <meta property="og:description" content="Ouvrez une page déjà ouverte et Takt vous ramène à l'onglet d'origine. Activé par défaut, gratuit." />
+    <meta property="og:url" content="https://taktabs.com/fr/blog/prevent-duplicate-tabs/" />
+    <meta property="og:image" content="https://taktabs.com/fr/blog/img/popup-home.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <link rel="icon" type="image/png" sizes="32x32" href="../../../assets/favicon-32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="../../../assets/favicon-16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="../../../assets/apple-touch-icon.png" />
+    <meta name="theme-color" content="#FF3B30" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../../../css/tokens.css" />
+    <link rel="stylesheet" href="../../../css/base.css" />
+    <link rel="stylesheet" href="../../../css/layout.css" />
+    <link rel="stylesheet" href="../../../css/blog.css" />
+    <link rel="stylesheet" href="../../../css/articles.css" />
+    <script src="../../../js/theme.js"></script>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Article",
+            "headline": "Comment éviter les onglets en double dans Chrome",
+            "description": "Bloquez les onglets en double dès leur ouverture, choisissez ce qui compte comme une même URL, et fermez les doublons déjà ouverts.",
+            "inLanguage": "fr",
+            "datePublished": "2026-10-08",
+            "dateModified": "2026-10-08",
+            "author": { "@type": "Person", "name": "Vitor" },
+            "publisher": { "@type": "Organization", "name": "Takt", "url": "https://taktabs.com" },
+            "image": "https://taktabs.com/fr/blog/img/popup-home.png",
+            "mainEntityOfPage": "https://taktabs.com/fr/blog/prevent-duplicate-tabs/"
+          },
+          {
+            "@type": "HowTo",
+            "name": "Éviter les onglets en double dans Chrome",
+            "step": [
+              { "@type": "HowToStep", "text": "Installez Takt depuis le Chrome Web Store. La prévention des doublons est activée par défaut." },
+              { "@type": "HowToStep", "text": "Pour changer ce qui compte comme un doublon, ouvrez la page d'options de Takt, allez dans Settings, Duplicate Prevention, et choisissez une stratégie de correspondance d'URL." },
+              { "@type": "HowToStep", "text": "Pour supprimer les doublons déjà ouverts, cliquez sur Fermer les doublons dans le popup de Takt." }
+            ]
+          },
+          {
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "Chrome peut-il empêcher les onglets en double tout seul ?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Non. Chrome n'a aucun réglage pour bloquer les onglets en double. Chaque nouvel onglet s'ouvre indépendamment des autres : il faut donc une extension comme Takt." }
+              },
+              {
+                "@type": "Question",
+                "name": "La prévention des doublons de Takt est-elle gratuite ?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Oui. La prévention des doublons, les cinq stratégies de correspondance d'URL et Fermer les doublons sont gratuits, sans limite." }
+              },
+              {
+                "@type": "Question",
+                "name": "Comment ouvrir volontairement un onglet en double ?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Faites un clic droit sur le lien et choisissez Ouvrir dans un nouvel onglet (autoriser le doublon), ou cliquez sur Ouvrir quand même dans la notification que Takt affiche après un blocage." }
+              },
+              {
+                "@type": "Question",
+                "name": "Est-ce que ça fonctionne dans tous les modes de regroupement ?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Oui. La prévention des doublons fonctionne dans les modes Par règles, Par catégorie, Par IA et Aucun." }
+              }
+            ]
+          },
+          {
+            "@type": "SoftwareApplication",
+            "name": "Takt",
+            "applicationCategory": "BrowserApplication",
+            "operatingSystem": "Chrome",
+            "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <header id="site-header"></header>
+
+    <main class="blog-main">
+      <article class="blog-post article">
+        <p class="eyebrow">Prévention des doublons</p>
+        <h1 class="blog-post-title">Comment éviter les onglets en double dans Chrome</h1>
+        <p class="lede">Pour éviter les onglets en double dans Chrome, il vous faut une extension : Chrome ouvre la même page dans dix onglets si vous cliquez dix fois. Takt vérifie chaque nouvel onglet à son ouverture. Si la page est déjà ouverte, il ferme le nouvel onglet et vous ramène à l'original.</p>
+        <p class="blog-post-meta">Mis à jour le 8 octobre 2026 · 5 min de lecture</p>
+<!-- TAKT-LANG:nav -->
+<p class="lang-links"><a href="../../../blog/prevent-duplicate-tabs/" hreflang="en" lang="en">English</a> · <span aria-current="true">Français</span> · <a href="../../../es/blog/prevent-duplicate-tabs/" hreflang="es" lang="es">Español</a> · <a href="../../../it/blog/prevent-duplicate-tabs/" hreflang="it" lang="it">Italiano</a> · <a href="../../../de/blog/prevent-duplicate-tabs/" hreflang="de" lang="de">Deutsch</a> · <a href="../../../pt/blog/prevent-duplicate-tabs/" hreflang="pt" lang="pt">Português</a></p>
+<!-- /TAKT-LANG:nav -->
+
+        <div class="blog-post-body">
+          <div class="tldr">
+            <p><strong>En bref :</strong> installez Takt. La prévention des doublons est activée par défaut et gratuite. Ouvrez un lien déjà ouvert dans un autre onglet, et vous arrivez sur l'onglet existant.</p>
+            <ul>
+              <li>5 stratégies de correspondance d'URL déterminent ce qui compte comme « la même page ». Par défaut, le <code>#fragment</code> est ignoré.</li>
+              <li>Vous voulez quand même le doublon ? Faites un clic droit sur le lien, ou cliquez sur <em>Ouvrir quand même</em>.</li>
+              <li><strong>Fermer les doublons</strong> fait le ménage dans la fenêtre actuelle en un clic.</li>
+            </ul>
+          </div>
+
+          <h2 id="why">Pourquoi Chrome ouvre-t-il des onglets en double ?</h2>
+          <p>Chrome traite chaque nouvel onglet comme une requête distincte. Il ne vérifie jamais si la page est déjà ouverte. Le même tableau de bord, le même ticket ou le même document s'accumulent donc au fil des liens reçus par e-mail, par messagerie ou dans les résultats de recherche.</p>
+          <p>Chaque copie est une page complète qui continue de tourner. Pour la fermer à la main, il faut d'abord la retrouver.</p>
+
+          <h2 id="how">Que se passe-t-il quand Takt bloque un doublon ?</h2>
+          <ol class="steps">
+            <li>Vous ouvrez un lien vers une page déjà ouverte dans un autre onglet.</li>
+            <li>Takt ferme le nouvel onglet.</li>
+            <li>Il vous amène sur l'onglet existant, quelle que soit sa fenêtre.</li>
+            <li>Le popup affiche « Doublon évité » avec un bouton <strong>Ouvrir quand même</strong> pendant 10 secondes.</li>
+          </ol>
+          <p>Si vous avez accordé à Takt la permission facultative « Accès à tous les sites web », une notification apparaît aussi dans la page : « Takt a détecté une URL en double et a basculé vers cet onglet », avec <em>Ignorer</em> et <em>Ouvrir quand même</em>.</p>
+          <p>La vérification fonctionne dans tous les modes de regroupement : Par règles, Par catégorie, Par IA et Aucun. Elle ne regarde les onglets qu'à leur ouverture. Faire naviguer un onglet existant vers une page ouverte ailleurs ne la déclenche pas.</p>
+
+          <figure class="narrow">
+            <img src="../img/popup-home.png" alt="Volet Accueil du popup de Takt avec un bandeau jaune Doublon évité pour en.wikipedia.org/wiki/Takt_time et un bouton Ouvrir quand même, au-dessus des sections Mode de regroupement et Actions rapides" width="420" loading="lazy" />
+            <figcaption>Après un blocage, le popup indique la page et propose Ouvrir quand même.</figcaption>
+          </figure>
+
+          <h2 id="same-url">Qu'est-ce qui compte comme une même URL ?</h2>
+          <p>D'abord, Takt normalise chaque URL de la même façon. Il retire <code>www.</code>, supprime la barre oblique finale et décode l'encodage pourcentage sans incidence, comme <code>%41</code> en <code>A</code>. Ainsi, <code>https://www.example.com/docs/</code> et <code>https://example.com/docs</code> sont la même page.</p>
+          <p>Ensuite, votre stratégie de correspondance détermine le niveau de rigueur. Choisissez-la dans Options → Settings → Duplicate Prevention.</p>
+          <table>
+            <thead><tr><th>Stratégie</th><th>Compare</th><th>Considérés comme identiques</th></tr></thead>
+            <tbody>
+              <tr><td>Exact URL</td><td>Tout, avec les paramètres de requête triés</td><td><code>?a=1&amp;b=2</code> et <code>?b=2&amp;a=1</code></td></tr>
+              <tr><td>Ignore fragment (#hash) <span class="badge">Par défaut</span></td><td>Tout sauf le <code>#fragment</code></td><td><code>/page#top</code> et <code>/page#bottom</code></td></tr>
+              <tr><td>Ignore query string</td><td>Schéma, hôte et chemin</td><td><code>/page?ref=mail</code> et <code>/page?ref=chat</code></td></tr>
+              <tr><td>Ignore query + fragment</td><td>Schéma, hôte et chemin</td><td>Comme ci-dessus</td></tr>
+              <tr><td>Origin + path only</td><td>Schéma, hôte et chemin</td><td>Comme ci-dessus</td></tr>
+            </tbody>
+          </table>
+          <p>Dans la version actuelle, les trois dernières comparent les URL de la même façon. Choisissez l'une d'elles si vous voulez ignorer les paramètres de suivi.</p>
+          <p>Prudence avec les stratégies souples sur les pages de recherche et les applications web. <code>/search?q=chairs</code> et <code>/search?q=tables</code> ont le même chemin : en ignorant la requête, elles sont traitées comme une seule page.</p>
+
+          <figure>
+            <img src="../img/settings-duplicate-prevention.png" alt="Settings de Takt, section Duplicate Prevention avec la case Enable duplicate tab prevention cochée et le menu de stratégie de correspondance d'URL réglé sur Ignore fragment (#hash)" width="700" loading="lazy" />
+            <figcaption>L'interrupteur général et la stratégie par défaut, dans Options → Settings.</figcaption>
+          </figure>
+
+          <h2 id="allow">Comment ouvrir volontairement un doublon ?</h2>
+          <ul>
+            <li><strong>Faites un clic droit sur le lien</strong> et choisissez <em>Ouvrir dans un nouvel onglet (autoriser le doublon)</em>. Cela fonctionne sur n'importe quelle page.</li>
+            <li><strong>Cliquez sur Ouvrir quand même</strong> dans la notification de la page ou dans le popup, juste après un blocage.</li>
+            <li><strong>Faites Shift+clic sur le lien</strong>, en mode Par règles, sur les pages auxquelles Takt a accès.</li>
+          </ul>
+          <p>Ou décochez <em>Enable duplicate tab prevention</em> dans Settings pour désactiver complètement la fonctionnalité.</p>
+
+          <h2 id="close">Comment fermer les onglets en double déjà ouverts ?</h2>
+          <p>Cliquez sur <strong>Fermer les doublons</strong> dans le volet Accueil du popup. Takt analyse la fenêtre actuelle avec votre stratégie de correspondance et garde le premier onglet de chaque page, en partant de la gauche. Les autres se ferment aussitôt, sans confirmation, et le popup indique combien ont été fermés. Le bouton est grisé quand il n'y a rien à fermer.</p>
+
+          <h2 id="per-rule">Un site peut-il utiliser une stratégie différente ?</h2>
+          <p>Oui, en mode Par règles. Ouvrez une règle, cochez <strong>Prevent duplicate tabs in this group</strong>, et choisissez une stratégie de correspondance d'URL pour les onglets de cette règle.</p>
+          <p>C'est utile pour une application monopage où chaque <code>#fragment</code> est une vue différente : réglez cette règle sur <em>Exact URL</em> et gardez la valeur par défaut globale pour tout le reste. L'interrupteur général reste prioritaire. Désactivé, il ne bloque aucun onglet, même dans une règle dont la case est cochée.</p>
+
+          <h2 id="compare">Comment cela se compare-t-il aux autres solutions ?</h2>
+          <table>
+            <thead><tr><th></th><th>Chrome seul</th><th>Bloqueur à usage unique</th><th>Takt</th></tr></thead>
+            <tbody>
+              <tr><td>Bloque les doublons à l'ouverture</td><td>Non</td><td>Oui</td><td>Oui, activé par défaut</td></tr>
+              <tr><td>Choisir ce qui compte comme une même page</td><td>Non</td><td>Variable</td><td>5 stratégies, également par règle</td></tr>
+              <tr><td>Fermer les doublons existants</td><td>Non</td><td>Variable</td><td>Un clic, fenêtre actuelle</td></tr>
+              <tr><td>Regroupe et met aussi les onglets en hibernation</td><td>Non</td><td>Non</td><td>Oui</td></tr>
+            </tbody>
+          </table>
+          <p>Vérifiez qu'une extension à usage unique est toujours maintenue. Duplicate Tabs Preventor, par exemple, n'est plus maintenue depuis avril 2026.</p>
+
+          <h2 id="limits">Ce que la prévention des doublons ne fait pas</h2>
+          <ul>
+            <li>Elle ne fusionne pas les onglets déjà ouverts avant l'installation de Takt. Utilisez Fermer les doublons pour ceux-là.</li>
+            <li>Fermer les doublons ne fonctionne que dans la fenêtre actuelle.</li>
+            <li>La notification dans la page et le Shift+clic nécessitent la permission facultative d'accès aux pages. Le bandeau du popup et l'option du clic droit, non.</li>
+          </ul>
+
+          <div class="cta">
+            <p>Cliquez deux fois sur le même lien. Vous retrouvez l'onglet que vous aviez déjà.</p>
+            <a class="btn" href="https://chromewebstore.google.com/detail/takt/plgfdnbgkjocmgegnkbihoeojcfphdic">Ajouter Takt à Chrome, gratuitement</a>
+          </div>
+
+          <h2 id="faq">Questions fréquentes</h2>
+          <div class="faq">
+            <details>
+              <summary>Chrome peut-il empêcher les onglets en double tout seul ?</summary>
+              <p>Non. Chrome n'a aucun réglage pour bloquer les onglets en double : il faut une extension.</p>
+            </details>
+            <details>
+              <summary>La prévention des doublons de Takt est-elle gratuite ?</summary>
+              <p>Oui. La prévention, les cinq stratégies et Fermer les doublons sont gratuits, sans limite.</p>
+            </details>
+            <details>
+              <summary>Comment ouvrir volontairement un onglet en double ?</summary>
+              <p>Faites un clic droit sur le lien et choisissez <em>Ouvrir dans un nouvel onglet (autoriser le doublon)</em>, ou cliquez sur <em>Ouvrir quand même</em> après un blocage.</p>
+            </details>
+            <details>
+              <summary>Est-ce que ça fonctionne dans tous les modes de regroupement ?</summary>
+              <p>Oui : Par règles, <a href="../group-tabs-by-category-or-ai/">Par catégorie, Par IA</a> et Aucun.</p>
+            </details>
+          </div>
+
+          <h2 id="next">À lire ensuite</h2>
+          <div class="read-next">
+            <a href="../one-click-tab-cleanup/">Ranger toutes les fenêtres en un clic<span>Grouper, dégrouper, réduire et trier.</span></a>
+            <a href="../hibernate-tabs-free-memory/">Mettre en hibernation les onglets inutilisés<span>Fermez-les, gardez-les, rouvrez-les.</span></a>
+          </div>
+        </div>
+
+        <footer class="blog-post-footer">
+          <a href="../../../blog/">Tous les articles</a> · <a href="../../../docs/duplicates/">Référence : prévention des doublons</a>
+        </footer>
+      </article>
+    </main>
+
+    <footer id="site-footer"></footer>
+    <script src="../../../js/includes.js"></script>
+    <script src="../../../js/nav.js"></script>
+  </body>
+</html>

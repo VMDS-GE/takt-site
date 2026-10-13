@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chrome-Tabs als Sitzung speichern und wiederherstellen — Takt</title>
+    <meta
+      name="description"
+      content="Speichern Sie Ihre Chrome-Fenster, Tab-Gruppen und losen Tabs als benannte Sitzung und stellen Sie sie später in einem neuen Fenster oder anstelle des aktuellen wieder her. Bis zu 50 Sitzungen, gespeichert auf Ihrem Computer."
+    />
+    <link rel="canonical" href="https://taktabs.com/de/blog/save-restore-tab-sessions/" />
+<!-- TAKT-LANG:head -->
+<link rel="alternate" hreflang="en" href="https://taktabs.com/blog/save-restore-tab-sessions/" />
+<link rel="alternate" hreflang="fr" href="https://taktabs.com/fr/blog/save-restore-tab-sessions/" />
+<link rel="alternate" hreflang="es" href="https://taktabs.com/es/blog/save-restore-tab-sessions/" />
+<link rel="alternate" hreflang="it" href="https://taktabs.com/it/blog/save-restore-tab-sessions/" />
+<link rel="alternate" hreflang="de" href="https://taktabs.com/de/blog/save-restore-tab-sessions/" />
+<link rel="alternate" hreflang="pt" href="https://taktabs.com/pt/blog/save-restore-tab-sessions/" />
+<link rel="alternate" hreflang="x-default" href="https://taktabs.com/blog/save-restore-tab-sessions/" />
+<!-- /TAKT-LANG:head -->
+    <meta property="og:type" content="article" />
+    <meta property="og:locale" content="de_DE" />
+    <meta property="og:title" content="Chrome-Tabs als Sitzung speichern und wiederherstellen" />
+    <meta property="og:description" content="Ein benannter Schnappschuss Ihrer Fenster und Gruppen. Mit einem Klick zurückholen, samt Gruppen und Farben." />
+    <meta property="og:url" content="https://taktabs.com/de/blog/save-restore-tab-sessions/" />
+    <meta property="og:image" content="https://taktabs.com/de/blog/img/options-sessions-list.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <link rel="icon" type="image/png" sizes="32x32" href="../../../assets/favicon-32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="../../../assets/favicon-16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="../../../assets/apple-touch-icon.png" />
+    <meta name="theme-color" content="#FF3B30" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../../../css/tokens.css" />
+    <link rel="stylesheet" href="../../../css/base.css" />
+    <link rel="stylesheet" href="../../../css/layout.css" />
+    <link rel="stylesheet" href="../../../css/blog.css" />
+    <link rel="stylesheet" href="../../../css/articles.css" />
+    <script src="../../../js/theme.js"></script>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Article",
+            "inLanguage": "de",
+            "headline": "Chrome-Tabs als Sitzung speichern und wiederherstellen",
+            "description": "Chrome-Fenster, Tab-Gruppen und lose Tabs als benannte Sitzung speichern und später in einem neuen Fenster oder anstelle des aktuellen wiederherstellen.",
+            "datePublished": "2026-10-08",
+            "dateModified": "2026-10-08",
+            "author": { "@type": "Person", "name": "Vitor" },
+            "publisher": { "@type": "Organization", "name": "Takt", "url": "https://taktabs.com" },
+            "image": "https://taktabs.com/de/blog/img/options-sessions-list.png",
+            "mainEntityOfPage": "https://taktabs.com/de/blog/save-restore-tab-sessions/"
+          },
+          {
+            "@type": "HowTo",
+            "name": "Eine Tab-Sitzung in Chrome speichern und wiederherstellen",
+            "step": [
+              { "@type": "HowToStep", "text": "Installieren Sie Takt aus dem Chrome Web Store und öffnen Sie das Popup." },
+              { "@type": "HowToStep", "text": "Gehen Sie zum Bereich Sitzungen und klicken Sie auf + Speichern." },
+              { "@type": "HowToStep", "text": "Geben Sie einen Namen mit bis zu 60 Zeichen ein, wählen Sie Dieses Fenster oder Alle Fenster und klicken Sie auf Speichern." },
+              { "@type": "HowToStep", "text": "Klicken Sie später neben der Sitzung auf Wiederherstellen und wählen Sie In neuem Fenster öffnen oder Aktuelles Fenster ersetzen." }
+            ]
+          },
+          {
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "Speichert Chrome Tab-Sitzungen von selbst?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Chromes Einstellung „Zuletzt geöffnete Seiten öffnen“ öffnet beim Start von Chrome Ihre letzte Browsersitzung wieder. Sie behält eine Sitzung, die letzte. Eine Liste benannter Schnappschüsse, zu denen Sie später zurückkehren können, führt sie nicht." }
+              },
+              {
+                "@type": "Question",
+                "name": "Wie viele Sitzungen kann ich in Takt speichern?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Bis zu 50. Ist die Liste voll, löschen Sie eine ältere Sitzung, bevor Sie eine neue speichern. Automatisch gespeicherte Sitzungen schaffen Platz, indem sie die älteste automatische Speicherung ersetzen." }
+              },
+              {
+                "@type": "Question",
+                "name": "Sind Tab-Sitzungen in Takt kostenlos?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Nein. Speichern, Wiederherstellen, Umbenennen und automatisches Speichern von Sitzungen sind Premium-Funktionen ($3/Monat oder $30/Jahr). Im kostenlosen Plan können Sie die Liste der gespeicherten Sitzungen sehen." }
+              },
+              {
+                "@type": "Question",
+                "name": "Werden meine Sitzungen irgendwohin hochgeladen?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Nein. Sitzungen liegen im lokalen Speicher von Chrome auf Ihrem Computer. Sie verlassen ihn nur, wenn Sie selbst ein Backup exportieren oder die Datei- oder Drive-Synchronisierung einschalten." }
+              }
+            ]
+          },
+          {
+            "@type": "SoftwareApplication",
+            "name": "Takt",
+            "applicationCategory": "BrowserApplication",
+            "operatingSystem": "Chrome",
+            "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <header id="site-header"></header>
+
+    <main class="blog-main">
+      <article class="blog-post article">
+        <p class="eyebrow">Sitzungen</p>
+        <h1 class="blog-post-title">Chrome-Tabs als Sitzung speichern und wiederherstellen</h1>
+        <p class="lede">Um eine Tab-Sitzung in Chrome zu speichern, halten Sie Ihre Fenster und Gruppen unter einem Namen fest und stellen diesen Namen wieder her, wenn Sie ihn erneut brauchen. Chrome öffnet Ihre letzte Sitzung wieder. Eine Sammlung benannter Sitzungen führt es nicht.</p>
+        <p class="blog-post-meta">Aktualisiert am 8. Oktober 2026 · 5 Min. Lesezeit</p>
+<!-- TAKT-LANG:nav -->
+<p class="lang-links"><a href="../../../blog/save-restore-tab-sessions/" hreflang="en" lang="en">English</a> · <a href="../../../fr/blog/save-restore-tab-sessions/" hreflang="fr" lang="fr">Français</a> · <a href="../../../es/blog/save-restore-tab-sessions/" hreflang="es" lang="es">Español</a> · <a href="../../../it/blog/save-restore-tab-sessions/" hreflang="it" lang="it">Italiano</a> · <span aria-current="true">Deutsch</span> · <a href="../../../pt/blog/save-restore-tab-sessions/" hreflang="pt" lang="pt">Português</a></p>
+<!-- /TAKT-LANG:nav -->
+
+        <div class="blog-post-body">
+          <div class="tldr">
+            <p><strong>Kurz gesagt:</strong> Öffnen Sie im Takt-Popup <strong>Sitzungen</strong>, klicken Sie auf <strong>+ Speichern</strong>, vergeben Sie einen Namen und wählen Sie <em>Dieses Fenster</em> oder <em>Alle Fenster</em>. Mit <strong>Wiederherstellen</strong> erhalten Sie später dieselben Tabs zurück, in denselben benannten, farbigen Gruppen.</p>
+            <ul>
+              <li>Speichert jeden Tab, jede Gruppe (Name, Farbe, Einklappzustand), lose Tabs und Ihre Liste hibernierter Tabs.</li>
+              <li>Wiederherstellen in einem neuen Fenster oder anstelle des aktuellen.</li>
+              <li>Bis zu 50 Sitzungen, gespeichert auf Ihrem Computer. <span class="badge badge-premium">Premium</span></li>
+            </ul>
+          </div>
+
+          <h2 id="why">Warum reicht Chromes „Zuletzt geöffnete Seiten öffnen“ nicht?</h2>
+          <p>Für eine Aufgabe reicht es. Schalten Sie es ein, und Chrome öffnet beim Start die Tabs Ihrer letzten Sitzung wieder. Wenn das alles ist, was Sie brauchen, brauchen Sie keine Erweiterung.</p>
+          <p>An seine Grenzen kommt es, wenn Sie zwischen verschiedenen Arbeiten wechseln. Die Tabs für Ihre Abschlussarbeit, für das Montags-Standup und für die Reiseplanung können nicht alle „die letzte Sitzung“ sein. Schließen Sie das Fenster der Abschlussarbeit, um Platz für das Standup zu schaffen, und deren Tabs sind aus dieser Liste verschwunden.</p>
+          <p>Eine benannte Sitzung ist ein Lesezeichen für einen ganzen Arbeitsbereich. Sie schließen das Fenster ohne Sorge, denn Sie holen es über seinen Namen zurück.</p>
+
+          <h2 id="save">Wie speichere ich eine Tab-Sitzung?</h2>
+          <ol class="steps">
+            <li>Installieren Sie <a href="https://chromewebstore.google.com/detail/takt/plgfdnbgkjocmgegnkbihoeojcfphdic">Takt aus dem Chrome Web Store</a>.</li>
+            <li>Öffnen Sie das Popup und gehen Sie zum Bereich <strong>Sitzungen</strong>.</li>
+            <li>Klicken Sie auf <strong>+ Speichern</strong> und geben Sie einen Namen mit bis zu 60 Zeichen ein. Namen müssen eindeutig sein.</li>
+            <li>Wählen Sie <em>Dieses Fenster</em> (Standard) oder <em>Alle Fenster</em> und klicken Sie auf <strong>Speichern</strong>.</li>
+          </ol>
+
+          <figure class="narrow">
+            <img src="../img/popup-sessions.png" alt="Takt-Popup im Bereich Sitzungen mit einer Schaltfläche + Speichern, einem Suchfeld und zwei gespeicherten Sitzungen, Thesis research und Monday standup, jeweils mit 14 Tabs, 5 Gruppen und 2 hibernierten Tabs sowie den Schaltflächen Wiederherstellen und Löschen" width="420" loading="lazy" />
+            <figcaption>Der Bereich Sitzungen im Popup. Jeder Eintrag zeigt die Anzahl der Tabs, Gruppen und hibernierten Tabs.</figcaption>
+          </figure>
+
+          <h2 id="what">Was hält eine Sitzung fest?</h2>
+          <table>
+            <thead><tr><th>Gespeichert</th><th>Details</th></tr></thead>
+            <tbody>
+              <tr><td>Tabs</td><td>URL und Titel jedes Tabs</td></tr>
+              <tr><td>Tab-Gruppen</td><td>Name, Farbe, Einklappzustand und welche Tabs zu jeder gehören</td></tr>
+              <tr><td>Lose Tabs</td><td>Tabs außerhalb jeder Gruppe</td></tr>
+              <tr><td>Fenster</td><td>Ein Fenster, oder mit <em>Alle Fenster</em> jedes normale Fenster</td></tr>
+              <tr><td>Hibernierte Tabs</td><td>Ihre Liste hibernierter Tabs, die beim Wiederherstellen wieder dort landet</td></tr>
+            </tbody>
+          </table>
+          <p>Chrome erlaubt Erweiterungen nicht, <code>chrome://</code>-, <code>about:</code>- oder Erweiterungsseiten zu öffnen, deshalb werden diese Tabs übersprungen.</p>
+
+          <h2 id="restore">Wie stelle ich eine Sitzung wieder her?</h2>
+          <p>Klicken Sie auf <strong>Wiederherstellen</strong>. Ein Dialog bietet zwei Modi an:</p>
+          <ul>
+            <li><strong>In neuem Fenster öffnen.</strong> Ihr aktuelles Fenster bleibt, wie es ist.</li>
+            <li><strong>Aktuelles Fenster ersetzen.</strong> Die gespeicherten Tabs öffnen sich im aktuellen Fenster, danach schließen sich die Tabs, die vorher dort waren.</li>
+          </ul>
+          <p>Der Dialog zählt 7 Sekunden herunter und stellt dann im gewählten Modus wieder her. Klicken Sie im Dialog auf <strong>Wiederherstellen</strong>, um nicht zu warten, oder auf <strong>Abbrechen</strong>. Bei einer Sitzung mit mehreren Fenstern folgt das erste Fenster Ihrer Wahl, und jedes weitere öffnet sich als neues Fenster.</p>
+
+          <h2 id="manage">Kann ich Sitzungen umbenennen oder automatisch speichern?</h2>
+          <p>Beides ja.</p>
+          <ul>
+            <li><strong>Umbenennen:</strong> Doppelklicken Sie im Popup auf einen Namen oder nutzen Sie <strong>Rename</strong> im Tab Sessions der Optionsseite. Mit Enter speichern.</li>
+            <li><strong>Automatisch speichern:</strong> Schalten Sie unter Settings <em>Automatisch speichern beim Schließen</em> ein. Wenn Sie ein Fenster schließen, werden seine Tabs als Sitzung gespeichert, benannt mit „Auto-Speicherung“ plus Datum und Uhrzeit.</li>
+          </ul>
+          <p>Auf der Optionsseite können Sie eine Sitzung außerdem aufklappen und vor dem Wiederherstellen jede Gruppe und jeden Tab darin sehen.</p>
+
+          <figure>
+            <img src="../img/options-sessions-list.png" alt="Takt-Optionsseite, Tab Sessions: 2 gespeicherte Sitzungen, Thesis research und Monday standup, jeweils mit 14 Tabs, 5 Gruppen, 2 hibernierten Tabs, einem Erstellungsdatum und den Schaltflächen Restore, Rename und Delete" width="700" loading="lazy" />
+            <figcaption>Der Tab Sessions auf der Optionsseite. Klicken Sie auf eine Zeile, um ihre Gruppen und Tabs zu sehen.</figcaption>
+          </figure>
+
+          <h2 id="compare">Takt-Sitzungen im Vergleich zu Chromes eingebauten Optionen</h2>
+          <table>
+            <thead><tr><th></th><th>Chrome „Zuletzt geöffnete Seiten öffnen“</th><th>Takt-Sitzungen</th></tr></thead>
+            <tbody>
+              <tr><td>Wie viele</td><td>Die letzte Sitzung</td><td>Bis zu 50, benannt</td></tr>
+              <tr><td>Was gespeichert wird</td><td>Die Tabs, die beim letzten Mal offen waren</td><td>Jeder gespeicherte Schnappschuss oder eine automatische Speicherung beim Schließen eines Fensters</td></tr>
+              <tr><td>Wann wiederhergestellt wird</td><td>Beim Start von Chrome</td><td>Wann immer Sie auf Wiederherstellen klicken</td></tr>
+              <tr><td>Kosten</td><td>Kostenlos, eingebaut</td><td>Premium</td></tr>
+            </tbody>
+          </table>
+
+          <h2 id="limits">Was Sitzungen nicht tun</h2>
+          <ul>
+            <li><strong>Sie bleiben auf diesem Computer.</strong> Sitzungen liegen im lokalen Speicher von Chrome und folgen nicht Ihrem Google-Konto. Um sie zu übertragen, nutzen Sie ein <a href="../backup-and-sync-tabs/">Backup oder eine Synchronisierung</a>.</li>
+            <li><strong>Sie sind Schnappschüsse.</strong> Eine gespeicherte Sitzung ändert sich nicht, wenn Sie das Fenster ändern. Speichern Sie erneut unter einem neuen Namen, um eine neuere Version zu behalten.</li>
+            <li><strong>50 ist die Obergrenze.</strong> Löschen Sie alte Sitzungen, um Platz zu schaffen. Automatische Speicherungen ersetzen die älteste automatische Speicherung, nie eine Sitzung, die Sie benannt haben.</li>
+            <li><strong>Kein Seitenzustand.</strong> Beim Wiederherstellen werden die URLs neu geöffnet. Formularinhalte und Scrollpositionen werden nicht gespeichert.</li>
+          </ul>
+
+          <div class="cta">
+            <p>Das Fenster schließen. Die Arbeit behalten.</p>
+            <a class="btn" href="https://chromewebstore.google.com/detail/takt/plgfdnbgkjocmgegnkbihoeojcfphdic">Zu Chrome hinzufügen — kostenlos</a>
+          </div>
+
+          <h2 id="faq">Häufige Fragen</h2>
+          <div class="faq">
+            <details>
+              <summary>Speichert Chrome Tab-Sitzungen von selbst?</summary>
+              <p>„Zuletzt geöffnete Seiten öffnen“ öffnet beim Start von Chrome Ihre letzte Sitzung wieder. Es behält diese eine Sitzung, keine Liste benannter Schnappschüsse.</p>
+            </details>
+            <details>
+              <summary>Wie viele Sitzungen kann ich in Takt speichern?</summary>
+              <p>Bis zu 50. Ist die Liste voll, löschen Sie zuerst eine ältere Sitzung. Automatische Speicherungen schaffen Platz, indem sie die älteste automatische Speicherung ersetzen.</p>
+            </details>
+            <details>
+              <summary>Sind Tab-Sitzungen in Takt kostenlos?</summary>
+              <p>Nein. Speichern, Wiederherstellen, Umbenennen und automatisches Speichern sind Premium ($3/Monat oder $30/Jahr). Im kostenlosen Plan können Sie die Liste der gespeicherten Sitzungen sehen.</p>
+            </details>
+            <details>
+              <summary>Werden meine Sitzungen irgendwohin hochgeladen?</summary>
+              <p>Nein. Sie liegen im lokalen Speicher von Chrome auf Ihrem Computer. Sie verlassen ihn nur, wenn Sie ein Backup exportieren oder die Datei- oder Drive-Synchronisierung einschalten. Siehe <a href="../privacy-local-first/">wie Takt Daten lokal hält</a>.</p>
+            </details>
+          </div>
+
+          <h2 id="next">Weiterlesen</h2>
+          <div class="read-next">
+            <a href="../hibernate-tabs-free-memory/">Inaktive Tabs schlafen legen<span>Die Hibernierung gibt Speicher frei, ohne den Tab zu verlieren.</span></a>
+            <a href="../backup-and-sync-tabs/">Ihre Einrichtung sichern und synchronisieren<span>JSON-Export, Ordner-Synchronisierung und Google Drive.</span></a>
+          </div>
+        </div>
+
+        <footer class="blog-post-footer">
+          <a href="../../../blog/">Alle Artikel zu den Funktionen</a> · <a href="../../../docs/sessions/">Referenz: Sitzungen</a>
+        </footer>
+      </article>
+    </main>
+
+    <footer id="site-footer"></footer>
+    <script src="../../../js/includes.js"></script>
+    <script src="../../../js/nav.js"></script>
+  </body>
+</html>

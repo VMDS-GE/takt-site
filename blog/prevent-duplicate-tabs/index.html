@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>How to prevent duplicate tabs in Chrome — Takt</title>
+    <meta
+      name="description"
+      content="Chrome opens the same page in as many tabs as you ask for. Here is how to stop duplicate tabs as they open, choose what counts as the same URL, and close the ones already open."
+    />
+    <link rel="canonical" href="https://taktabs.com/blog/prevent-duplicate-tabs/" />
+<!-- TAKT-LANG:head -->
+<link rel="alternate" hreflang="en" href="https://taktabs.com/blog/prevent-duplicate-tabs/" />
+<link rel="alternate" hreflang="fr" href="https://taktabs.com/fr/blog/prevent-duplicate-tabs/" />
+<link rel="alternate" hreflang="es" href="https://taktabs.com/es/blog/prevent-duplicate-tabs/" />
+<link rel="alternate" hreflang="it" href="https://taktabs.com/it/blog/prevent-duplicate-tabs/" />
+<link rel="alternate" hreflang="de" href="https://taktabs.com/de/blog/prevent-duplicate-tabs/" />
+<link rel="alternate" hreflang="pt" href="https://taktabs.com/pt/blog/prevent-duplicate-tabs/" />
+<link rel="alternate" hreflang="x-default" href="https://taktabs.com/blog/prevent-duplicate-tabs/" />
+<!-- /TAKT-LANG:head -->
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="How to prevent duplicate tabs in Chrome" />
+    <meta property="og:description" content="Open a page that's already open and Takt switches you to the original instead. On by default, free." />
+    <meta property="og:url" content="https://taktabs.com/blog/prevent-duplicate-tabs/" />
+    <meta property="og:image" content="https://taktabs.com/blog/img/popup-home.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <link rel="icon" type="image/png" sizes="32x32" href="../../assets/favicon-32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="../../assets/favicon-16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="../../assets/apple-touch-icon.png" />
+    <meta name="theme-color" content="#FF3B30" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../../css/tokens.css" />
+    <link rel="stylesheet" href="../../css/base.css" />
+    <link rel="stylesheet" href="../../css/layout.css" />
+    <link rel="stylesheet" href="../../css/blog.css" />
+    <link rel="stylesheet" href="../../css/articles.css" />
+    <script src="../../js/theme.js"></script>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Article",
+            "headline": "How to prevent duplicate tabs in Chrome",
+            "description": "Stop duplicate tabs as they open, choose what counts as the same URL, and close the duplicates already open.",
+            "datePublished": "2026-10-08",
+            "dateModified": "2026-10-08",
+            "author": { "@type": "Person", "name": "Vitor" },
+            "publisher": { "@type": "Organization", "name": "Takt", "url": "https://taktabs.com" },
+            "image": "https://taktabs.com/blog/img/popup-home.png",
+            "mainEntityOfPage": "https://taktabs.com/blog/prevent-duplicate-tabs/"
+          },
+          {
+            "@type": "HowTo",
+            "name": "Prevent duplicate tabs in Chrome",
+            "step": [
+              { "@type": "HowToStep", "text": "Install Takt from the Chrome Web Store. Duplicate prevention is on by default." },
+              { "@type": "HowToStep", "text": "To change what counts as a duplicate, open Takt's options page, go to Settings, Duplicate Prevention, and pick a URL matching strategy." },
+              { "@type": "HowToStep", "text": "To clean up duplicates already open, click Close Duplicates in the Takt popup." }
+            ]
+          },
+          {
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "Can Chrome prevent duplicate tabs on its own?",
+                "acceptedAnswer": { "@type": "Answer", "text": "No. Chrome has no setting to block duplicate tabs. Every new tab is opened independently, so you need an extension such as Takt." }
+              },
+              {
+                "@type": "Question",
+                "name": "Is Takt's duplicate prevention free?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Yes. Duplicate prevention, all five URL matching strategies and Close Duplicates are free, with no limit." }
+              },
+              {
+                "@type": "Question",
+                "name": "How do I open a duplicate tab on purpose?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Right-click the link and choose Open in new tab (allow duplicate), or click Open anyway on the notice Takt shows after it blocks one." }
+              },
+              {
+                "@type": "Question",
+                "name": "Does it work in every grouping mode?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Yes. Duplicate prevention runs in Rules, Category, AI and None modes." }
+              }
+            ]
+          },
+          {
+            "@type": "SoftwareApplication",
+            "name": "Takt",
+            "applicationCategory": "BrowserApplication",
+            "operatingSystem": "Chrome",
+            "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <header id="site-header"></header>
+
+    <main class="blog-main">
+      <article class="blog-post article">
+        <p class="eyebrow">Duplicate prevention</p>
+        <h1 class="blog-post-title">How to prevent duplicate tabs in Chrome</h1>
+        <p class="lede">To prevent duplicate tabs in Chrome, you need an extension: Chrome itself will open the same page in ten tabs if you click ten times. Takt checks each new tab as it opens. If the page is already open, it closes the new tab and switches you to the original.</p>
+        <p class="blog-post-meta">Updated 8 October 2026 · 5 min read</p>
+<!-- TAKT-LANG:nav -->
+<p class="lang-links"><span aria-current="true">English</span> · <a href="../../fr/blog/prevent-duplicate-tabs/" hreflang="fr" lang="fr">Français</a> · <a href="../../es/blog/prevent-duplicate-tabs/" hreflang="es" lang="es">Español</a> · <a href="../../it/blog/prevent-duplicate-tabs/" hreflang="it" lang="it">Italiano</a> · <a href="../../de/blog/prevent-duplicate-tabs/" hreflang="de" lang="de">Deutsch</a> · <a href="../../pt/blog/prevent-duplicate-tabs/" hreflang="pt" lang="pt">Português</a></p>
+<!-- /TAKT-LANG:nav -->
+
+        <div class="blog-post-body">
+          <div class="tldr">
+            <p><strong>Short answer:</strong> install Takt. Duplicate prevention is on by default and free. Open a link that's already open in another tab, and you land on the existing tab instead.</p>
+            <ul>
+              <li>5 URL matching strategies decide what counts as "the same page". The default ignores the <code>#fragment</code>.</li>
+              <li>Need the duplicate anyway? Right-click the link, or click <em>Open anyway</em>.</li>
+              <li><strong>Close Duplicates</strong> cleans up the current window in one click.</li>
+            </ul>
+          </div>
+
+          <h2 id="why">Why does Chrome open duplicate tabs?</h2>
+          <p>Chrome treats every new tab as a separate request. It never checks whether that page is already open. So the same dashboard, ticket or doc piles up from links in mail, chat and search results.</p>
+          <p>Each copy is a full page that keeps running. Closing it by hand means finding it first.</p>
+
+          <h2 id="how">What happens when Takt blocks a duplicate?</h2>
+          <ol class="steps">
+            <li>You open a link to a page that's already open in another tab.</li>
+            <li>Takt closes the new tab.</li>
+            <li>It switches you to the existing tab, in whichever window it lives.</li>
+            <li>The popup shows "Duplicate prevented" with an <strong>Open anyway</strong> button for 10 seconds.</li>
+          </ol>
+          <p>If you've granted Takt's optional "All website access" permission, a notice also appears on the page: "Takt detected a duplicate URL and switched to this tab", with <em>Dismiss</em> and <em>Open anyway</em>.</p>
+          <p>The check runs in every grouping mode: Rules, Category, AI and None. It only looks at tabs as they open. Navigating an existing tab to a page that's open elsewhere doesn't trigger it.</p>
+
+          <figure class="narrow">
+            <img src="../img/popup-home.png" alt="Takt popup Home pane with a yellow Duplicate prevented banner for en.wikipedia.org/wiki/Takt_time and an Open anyway button, above the Grouping mode and Quick actions sections" width="420" loading="lazy" />
+            <figcaption>After a block, the popup names the page and offers Open anyway.</figcaption>
+          </figure>
+
+          <h2 id="same-url">What counts as the same URL?</h2>
+          <p>First, Takt cleans up every URL the same way. It drops <code>www.</code>, removes a trailing slash, and decodes harmless percent-encoding such as <code>%41</code> to <code>A</code>. So <code>https://www.example.com/docs/</code> and <code>https://example.com/docs</code> are the same page.</p>
+          <p>Then your matching strategy decides how strict to be. Pick it in Options → Settings → Duplicate Prevention.</p>
+          <table>
+            <thead><tr><th>Strategy</th><th>Compares</th><th>Treated as the same</th></tr></thead>
+            <tbody>
+              <tr><td>Exact URL</td><td>Everything, with query parameters sorted</td><td><code>?a=1&amp;b=2</code> and <code>?b=2&amp;a=1</code></td></tr>
+              <tr><td>Ignore fragment (#hash) <span class="badge">Default</span></td><td>Everything except the <code>#fragment</code></td><td><code>/page#top</code> and <code>/page#bottom</code></td></tr>
+              <tr><td>Ignore query string</td><td>Scheme, host and path</td><td><code>/page?ref=mail</code> and <code>/page?ref=chat</code></td></tr>
+              <tr><td>Ignore query + fragment</td><td>Scheme, host and path</td><td>Same as above</td></tr>
+              <tr><td>Origin + path only</td><td>Scheme, host and path</td><td>Same as above</td></tr>
+            </tbody>
+          </table>
+          <p>In the current version, the last three compare URLs the same way. Choose any of them when you want tracking parameters ignored.</p>
+          <p>Be careful with the loose strategies on search and app pages. <code>/search?q=chairs</code> and <code>/search?q=tables</code> share a path, so ignoring the query treats them as one page.</p>
+
+          <figure>
+            <img src="../img/settings-duplicate-prevention.png" alt="Takt Settings, Duplicate Prevention section with the Enable duplicate tab prevention checkbox ticked and the URL matching strategy dropdown set to Ignore fragment (#hash)" width="700" loading="lazy" />
+            <figcaption>The global switch and the default strategy, in Options → Settings.</figcaption>
+          </figure>
+
+          <h2 id="allow">How do I open a duplicate on purpose?</h2>
+          <ul>
+            <li><strong>Right-click the link</strong> and choose <em>Open in new tab (allow duplicate)</em>. This works on any page.</li>
+            <li><strong>Click Open anyway</strong> on the page notice or in the popup, right after a block.</li>
+            <li><strong>Shift+click the link</strong>, in Rules mode, on pages where Takt has page access.</li>
+          </ul>
+          <p>Or untick <em>Enable duplicate tab prevention</em> in Settings to turn the whole feature off.</p>
+
+          <h2 id="close">How do I close duplicate tabs already open?</h2>
+          <p>Click <strong>Close Duplicates</strong> on the popup's Home pane. Takt scans the current window with your matching strategy and keeps the first tab of each page, counting from the left. The rest close at once, with no confirmation, and the popup reports how many it closed. The button is greyed out when there's nothing to close.</p>
+
+          <h2 id="per-rule">Can one site use a different strategy?</h2>
+          <p>Yes, in Rules mode. Open a rule, tick <strong>Prevent duplicate tabs in this group</strong>, and pick a URL matching strategy for that rule's tabs.</p>
+          <p>Use it for a single-page app where each <code>#fragment</code> is a different view: set that rule to <em>Exact URL</em> and keep the global default for everything else. The global switch stays the master switch. With it off, no tab is blocked, even in a rule with the box ticked.</p>
+
+          <h2 id="compare">How does this compare with other options?</h2>
+          <table>
+            <thead><tr><th></th><th>Chrome alone</th><th>Single-purpose blocker</th><th>Takt</th></tr></thead>
+            <tbody>
+              <tr><td>Blocks duplicates as they open</td><td>No</td><td>Yes</td><td>Yes, on by default</td></tr>
+              <tr><td>Choose what counts as the same page</td><td>No</td><td>Varies</td><td>5 strategies, per rule too</td></tr>
+              <tr><td>Close existing duplicates</td><td>No</td><td>Varies</td><td>One click, current window</td></tr>
+              <tr><td>Also groups and hibernates tabs</td><td>No</td><td>No</td><td>Yes</td></tr>
+            </tbody>
+          </table>
+          <p>Check that any single-purpose extension is still maintained. Duplicate Tabs Preventor, for example, has been unmaintained since April 2026.</p>
+
+          <h2 id="limits">What duplicate prevention doesn't do</h2>
+          <ul>
+            <li>It doesn't merge tabs that were already open before you installed Takt. Use Close Duplicates for those.</li>
+            <li>Close Duplicates works on the current window only.</li>
+            <li>The in-page notice and Shift+click need the optional page access permission. The popup banner and the right-click option don't.</li>
+          </ul>
+
+          <div class="cta">
+            <p>Click the same link twice. Land on the tab you already had.</p>
+            <a class="btn" href="https://chromewebstore.google.com/detail/takt/plgfdnbgkjocmgegnkbihoeojcfphdic">Add Takt to Chrome, free</a>
+          </div>
+
+          <h2 id="faq">FAQ</h2>
+          <div class="faq">
+            <details>
+              <summary>Can Chrome prevent duplicate tabs on its own?</summary>
+              <p>No. Chrome has no setting to block duplicate tabs, so you need an extension.</p>
+            </details>
+            <details>
+              <summary>Is Takt's duplicate prevention free?</summary>
+              <p>Yes. Prevention, all five strategies and Close Duplicates are free, with no limit.</p>
+            </details>
+            <details>
+              <summary>How do I open a duplicate tab on purpose?</summary>
+              <p>Right-click the link and choose <em>Open in new tab (allow duplicate)</em>, or click <em>Open anyway</em> after a block.</p>
+            </details>
+            <details>
+              <summary>Does it work in every grouping mode?</summary>
+              <p>Yes: Rules, <a href="../group-tabs-by-category-or-ai/">Category, AI</a> and None.</p>
+            </details>
+          </div>
+
+          <h2 id="next">Read next</h2>
+          <div class="read-next">
+            <a href="../one-click-tab-cleanup/">Tidy every window in one click<span>Group, ungroup, collapse and sort.</span></a>
+            <a href="../hibernate-tabs-free-memory/">Hibernate tabs you aren't using<span>Close them, keep them, bring them back.</span></a>
+          </div>
+        </div>
+
+        <footer class="blog-post-footer">
+          <a href="../">All feature articles</a> · <a href="../../docs/duplicates/">Duplicate prevention reference</a>
+        </footer>
+      </article>
+    </main>
+
+    <footer id="site-footer"></footer>
+    <script src="../../js/includes.js"></script>
+    <script src="../../js/nav.js"></script>
+  </body>
+</html>

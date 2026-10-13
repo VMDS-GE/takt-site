@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cómo saber qué pestañas de Chrome consumen más memoria — Takt</title>
+    <meta
+      name="description"
+      content="Descubre qué pestañas y grupos de pestañas de Chrome consumen más memoria: estimación por pestaña, nota de salud de A a F por grupo, actividad de red en segundo plano, barra de memoria del sistema y presupuestos de memoria por grupo. Cómo se calcula cada cifra."
+    />
+    <link rel="canonical" href="https://taktabs.com/es/blog/find-memory-hungry-tabs/" />
+<!-- TAKT-LANG:head -->
+<link rel="alternate" hreflang="en" href="https://taktabs.com/blog/find-memory-hungry-tabs/" />
+<link rel="alternate" hreflang="fr" href="https://taktabs.com/fr/blog/find-memory-hungry-tabs/" />
+<link rel="alternate" hreflang="es" href="https://taktabs.com/es/blog/find-memory-hungry-tabs/" />
+<link rel="alternate" hreflang="it" href="https://taktabs.com/it/blog/find-memory-hungry-tabs/" />
+<link rel="alternate" hreflang="de" href="https://taktabs.com/de/blog/find-memory-hungry-tabs/" />
+<link rel="alternate" hreflang="pt" href="https://taktabs.com/pt/blog/find-memory-hungry-tabs/" />
+<link rel="alternate" hreflang="x-default" href="https://taktabs.com/blog/find-memory-hungry-tabs/" />
+<!-- /TAKT-LANG:head -->
+    <meta property="og:type" content="article" />
+    <meta property="og:locale" content="es_ES" />
+    <meta property="og:title" content="Cómo saber qué pestañas de Chrome consumen más memoria" />
+    <meta property="og:description" content="Estimación de memoria por pestaña, notas de salud de A a F por grupo y presupuestos de memoria, todo medido dentro de tu navegador." />
+    <meta property="og:url" content="https://taktabs.com/es/blog/find-memory-hungry-tabs/" />
+    <meta property="og:image" content="https://taktabs.com/es/blog/img/options-dashboard-memory.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <link rel="icon" type="image/png" sizes="32x32" href="../../../assets/favicon-32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="../../../assets/favicon-16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="../../../assets/apple-touch-icon.png" />
+    <meta name="theme-color" content="#FF3B30" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../../../css/tokens.css" />
+    <link rel="stylesheet" href="../../../css/base.css" />
+    <link rel="stylesheet" href="../../../css/layout.css" />
+    <link rel="stylesheet" href="../../../css/blog.css" />
+    <link rel="stylesheet" href="../../../css/articles.css" />
+    <script src="../../../js/theme.js"></script>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Article",
+            "headline": "Cómo saber qué pestañas de Chrome consumen más memoria",
+            "description": "Estimación de memoria por pestaña, notas de salud de A a F por grupo de pestañas, actividad de red en segundo plano y presupuestos de memoria por grupo en el Panel de recursos de Takt, y cómo se calcula cada cifra.",
+            "inLanguage": "es",
+            "datePublished": "2026-10-08",
+            "dateModified": "2026-10-08",
+            "author": { "@type": "Person", "name": "Vitor" },
+            "publisher": { "@type": "Organization", "name": "Takt", "url": "https://taktabs.com" },
+            "image": "https://taktabs.com/es/blog/img/options-dashboard-memory.png",
+            "mainEntityOfPage": "https://taktabs.com/es/blog/find-memory-hungry-tabs/"
+          },
+          {
+            "@type": "HowTo",
+            "name": "Encontrar las pestañas de Chrome que consumen más memoria",
+            "step": [
+              { "@type": "HowToStep", "text": "Instala Takt y pasa a Premium; el Panel de recursos es una función Premium." },
+              { "@type": "HowToStep", "text": "En Opciones → Settings → Permisos, concede Acceso a todos los sitios web y, si quieres, Monitoreo de red y Acceso a memoria del sistema." },
+              { "@type": "HowToStep", "text": "Abre Opciones → Dashboard. Los grupos se ordenan por memoria estimada; cada tarjeta de grupo muestra sus pestañas ordenadas por memoria." },
+              { "@type": "HowToStep", "text": "Haz clic en Suspender junto a una recomendación de suspensión, o fija un presupuesto de memoria por grupo en Settings → Memory Budgets." }
+            ]
+          },
+          {
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "¿Cómo estima Takt la memoria de una pestaña?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Ejecuta un script breve en la pestaña y suma cuatro partes: el heap de JavaScript en uso, el número de nodos del DOM por unos 1,5 KB, el tamaño descodificado de los recursos que cargó la página y los búferes de canvas a ancho × alto × 4 bytes. Es una estimación, útil sobre todo para ordenar pestañas." }
+              },
+              {
+                "@type": "Question",
+                "name": "¿Por qué la columna Memoria muestra un guion?",
+                "acceptedAnswer": { "@type": "Answer", "text": "No se ha concedido el permiso Acceso a todos los sitios web, la pestaña está suspendida o es una página en la que las extensiones no pueden ejecutar scripts, como las páginas chrome://." }
+              },
+              {
+                "@type": "Question",
+                "name": "¿El Panel de recursos es gratis?",
+                "acceptedAnswer": { "@type": "Answer", "text": "No. El Panel de recursos y los presupuestos de memoria son Premium, por 3 $/mes o 30 $/año." }
+              },
+              {
+                "@type": "Question",
+                "name": "¿Envía Takt los datos de mis pestañas a algún sitio para medirlos?",
+                "acceptedAnswer": { "@type": "Answer", "text": "No. Todas las mediciones se hacen dentro de tu navegador. Ningún servicio externo mide nada." }
+              }
+            ]
+          },
+          {
+            "@type": "SoftwareApplication",
+            "name": "Takt",
+            "applicationCategory": "BrowserApplication",
+            "operatingSystem": "Chrome",
+            "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <header id="site-header"></header>
+
+    <main class="blog-main">
+      <article class="blog-post article">
+        <p class="eyebrow">Panel de recursos <span class="badge badge-premium">Premium</span></p>
+        <h1 class="blog-post-title">Cómo saber qué pestañas de Chrome consumen más memoria</h1>
+        <p class="lede">Para saber qué pestañas de Chrome consumen más memoria necesitas cifras de todas las pestañas, una junto a otra y agrupadas como trabajas. El Panel de recursos de Takt te da una estimación de memoria por pestaña, un total por grupo de pestañas y una nota de salud de A a F, actualizados cada 10 segundos.</p>
+        <p class="blog-post-meta">Actualizado el 8 de octubre de 2026 · 6 min de lectura</p>
+<!-- TAKT-LANG:nav -->
+<p class="lang-links"><a href="../../../blog/find-memory-hungry-tabs/" hreflang="en" lang="en">English</a> · <a href="../../../fr/blog/find-memory-hungry-tabs/" hreflang="fr" lang="fr">Français</a> · <span aria-current="true">Español</span> · <a href="../../../it/blog/find-memory-hungry-tabs/" hreflang="it" lang="it">Italiano</a> · <a href="../../../de/blog/find-memory-hungry-tabs/" hreflang="de" lang="de">Deutsch</a> · <a href="../../../pt/blog/find-memory-hungry-tabs/" hreflang="pt" lang="pt">Português</a></p>
+<!-- /TAKT-LANG:nav -->
+
+        <div class="blog-post-body">
+          <div class="tldr">
+            <p><strong>Respuesta corta:</strong> abre <strong>Opciones → Dashboard</strong> en Takt. Los grupos se ordenan por memoria estimada, y las pestañas de cada grupo, de mayor a menor.</p>
+            <ul>
+              <li>Estimación de memoria por pestaña, tiempo de inactividad, dominios de terceros y actividad en segundo plano.</li>
+              <li>Nota de salud de A a F por grupo de pestañas, barra de memoria del sistema y presupuestos de memoria que descargan pestañas por ti.</li>
+              <li>Premium (3 $/mes o 30 $/año). Se mide en tu navegador, y nada de fuera interviene.</li>
+            </ul>
+          </div>
+
+          <h2 id="why">¿Por qué cuesta tanto saber qué pestaña está usando memoria?</h2>
+          <p>Chrome muestra una cifra de memoria en la tarjeta que aparece al pasar el ratón por una pestaña, de una en una. Con 30 pestañas abiertas son 30 pasadas de ratón, y ningún total.</p>
+          <p>Además, una pestaña suelta casi nunca importa. Lo que quieres saber es si el grupo que conviene cerrar es "Research" o "Entertainment". Por eso Takt suma la memoria por grupo de pestañas.</p>
+
+          <figure>
+            <img src="../img/options-dashboard-memory.png" alt="Parte superior del Panel de recursos de Takt: una barra de RAM del sistema con 26,9 GB de 32,0 GB en uso (84 %), de los que las pestañas ocupan 0,2 GB, y 5,1 GB libres; un recuadro Ciclo de vida con 0 suspendidas, 2 hibernadas, 100 MB ahorrados estimados y 2 hoy; y un Desglose de grupos que ordena Code con 149 MB, Entertainment 71 MB, Research 15 MB, Docs 14 MB, News 2 MB y las pestañas sin grupo 1 MB, cada uno con una nota de salud A y un número de pestañas" width="700" loading="lazy" />
+            <figcaption>Memoria del sistema, contadores del ciclo de vida y grupos ordenados por memoria estimada.</figcaption>
+          </figure>
+
+          <h2 id="estimate">¿Cómo estima Takt la memoria de una pestaña?</h2>
+          <p>Takt ejecuta un script breve dentro de cada pestaña y suma cuatro partes:</p>
+          <table>
+            <thead><tr><th>Parte</th><th>Cómo se mide</th></tr></thead>
+            <tbody>
+              <tr><td>Heap de JavaScript</td><td>Heap en uso, tal como Chrome se lo comunica a la página</td></tr>
+              <tr><td>Árbol DOM</td><td>Número de elementos × unos 1,5 KB</td></tr>
+              <tr><td>Recursos cargados</td><td>Tamaño descodificado de cada archivo que cargó la página</td></tr>
+              <tr><td>Búferes de canvas</td><td>Ancho × alto × 4 bytes por canvas</td></tr>
+            </tbody>
+          </table>
+          <p>Toma el resultado como una clasificación, no como una factura. No incluye la sobrecarga propia del navegador por pestaña, así que la cifra de Chrome para la misma pestaña puede ser distinta.</p>
+          <p>Algunas pestañas no se pueden medir. En las suspendidas no hay nada en ejecución. Las páginas de Chrome (<code>chrome://</code>), las páginas de extensiones y Chrome Web Store no admiten scripts, así que aparecen en <strong>Pestañas no monitoreadas</strong>. Si una pestaña no responde en 3 segundos, Takt muestra su último valor conocido.</p>
+
+          <figure>
+            <img src="../img/options-dashboard-tab-table.png" alt="Tarjeta del grupo Code en el Panel de recursos de Takt: 4 pestañas, 149 MB, con un botón Cerrar todo y una tabla de pestañas ordenadas por memoria (49, 41, 29 y 29 MB), cada una con columnas de tiempo de inactividad, número de dominios de terceros y actividad en segundo plano" width="700" loading="lazy" />
+            <figcaption>Cada tarjeta de grupo muestra sus pestañas. Haz clic en el encabezado de una columna para ordenar.</figcaption>
+          </figure>
+
+          <h2 id="health">¿Qué significan las notas de salud de A a F?</h2>
+          <p>Cada grupo empieza con 100 puntos y pierde puntos por cuatro factores:</p>
+          <table>
+            <thead><tr><th>Factor</th><th>Condición</th><th>Penalización</th></tr></thead>
+            <tbody>
+              <tr><td>Memoria (total del grupo)</td><td>Más de 500 MB / más de 200 MB</td><td>−30 / −15</td></tr>
+              <tr><td>Tiempo medio de inactividad</td><td>Más de 60 min / más de 30 min</td><td>−20 / −10</td></tr>
+              <tr><td>Pestañas con actividad en segundo plano</td><td>Más de 3 / al menos 1</td><td>−20 / −10</td></tr>
+              <tr><td>Dominios de terceros</td><td>Más de 50 / más de 20</td><td>−15 / −5</td></tr>
+            </tbody>
+          </table>
+          <p>Notas: A es 90 o más, B de 75 a 89, C de 60 a 74, D de 40 a 59, F por debajo de 40. Un grupo que usa 300 MB con pestañas inactivas 45 minutos de media obtiene 75: una B.</p>
+          <p>"Actividad en segundo plano" significa que la pestaña completó una petición de red en los últimos 60 segundos. "De terceros" es cualquier dominio distinto del propio sitio de la pestaña y sus subdominios. Las CDN habituales se cuentan aparte para que no inflen la nota.</p>
+
+          <h2 id="act">¿Qué hago cuando ya he encontrado las pestañas pesadas?</h2>
+          <ul>
+            <li><strong>Recomendaciones de suspensión.</strong> Takt propone 5 pestañas para descargar, ordenadas por memoria y tiempo de inactividad, con más peso para la actividad en segundo plano. Deja fuera la pestaña activa, las fijadas y la pestaña que está sola en su grupo. Haz clic en <strong>Suspender</strong> para descargar una.</li>
+            <li><strong>Cerrar todo</strong>, en una tarjeta de grupo, cierra ese grupo.</li>
+            <li><strong>Hibernar</strong>, para la pestaña que quieras recuperar más tarde. Consulta <a href="../hibernate-tabs-free-memory/">cómo funciona la hibernación</a>.</li>
+          </ul>
+
+          <h2 id="budget">¿Puedo limitar la memoria que usa un grupo de pestañas?</h2>
+          <p>Sí. En <strong>Settings → Memory Budgets</strong>, escribe el nombre de un grupo y un límite en MB. Takt comprueba los presupuestos cada 15 segundos.</p>
+          <p>Cuando un grupo se pasa, recibes una notificación con el grupo, su uso, su presupuesto y el aviso "Suspending tabs in 10s — click to cancel". Si la ignoras, Takt descarga las pestañas más grandes de ese grupo hasta que vuelve a estar dentro del presupuesto. Nunca toca la pestaña activa, las fijadas ni las que están reproduciendo audio. Haz clic en la notificación para cancelar.</p>
+          <p>Los presupuestos usan las mismas estimaciones, así que también necesitan Acceso a todos los sitios web.</p>
+
+          <h2 id="permissions">¿Qué permisos necesita el panel?</h2>
+          <p>Ninguno al instalar. Concedes cada uno en <strong>Settings → Permisos</strong> y puedes revocarlo ahí cuando quieras.</p>
+          <table>
+            <thead><tr><th>Permiso</th><th>Qué añade</th><th>Sin él</th></tr></thead>
+            <tbody>
+              <tr><td>Acceso a todos los sitios web</td><td>Estimación de memoria por pestaña</td><td>La memoria muestra "—"</td></tr>
+              <tr><td>Monitoreo de red</td><td>Dominios de terceros y actividad en segundo plano (también necesita Acceso a todos los sitios web)</td><td>Sin columnas de red</td></tr>
+              <tr><td>Acceso a memoria del sistema</td><td>La barra de RAM del sistema</td><td>"Memoria del sistema no disponible"</td></tr>
+            </tbody>
+          </table>
+          <p>El monitoreo de red solo ve las peticiones hechas después de concederlo. Recarga las pestañas abiertas para empezar a contar. Takt lee las direcciones y los tiempos de las peticiones, no el contenido de las páginas.</p>
+
+          <figure>
+            <img src="../img/options-settings-permissions-dashboard.png" alt="Ajustes de Permisos de Takt con los botones Conceder todos los permisos y Revocar todos los permisos, e interruptores para Monitoreo de red, Acceso a memoria del sistema y Acceso a todos los sitios web, cada uno con las funciones del panel que activa y lo que falta sin él" width="700" loading="lazy" />
+            <figcaption>Cada permiso opcional indica qué funciones del panel añade.</figcaption>
+          </figure>
+
+          <h2 id="limits">Lo que el panel no puede decirte</h2>
+          <p>Estima la memoria de las páginas. No lee la lista de procesos de Chrome, así que no ve la memoria de la GPU, la de las extensiones ni la del propio navegador. Si la barra del sistema pone la mayor parte de tu RAM en "Otro", esa memoria la usan otras aplicaciones o el propio Chrome, no lo que contienen tus páginas.</p>
+
+          <div class="cta">
+            <p>Encuentra el grupo que se está comiendo tu RAM. Después, ponlo a dormir.</p>
+            <a class="btn" href="https://chromewebstore.google.com/detail/takt/plgfdnbgkjocmgegnkbihoeojcfphdic">Añadir Takt a Chrome</a>
+          </div>
+
+          <h2 id="faq">Preguntas frecuentes</h2>
+          <div class="faq">
+            <details>
+              <summary>¿Cómo estima Takt la memoria de una pestaña?</summary>
+              <p>Suma el heap de JavaScript en uso, el número de elementos × unos 1,5 KB, el tamaño descodificado de los recursos cargados y los búferes de canvas a ancho × alto × 4 bytes. Úsalo para ordenar pestañas.</p>
+            </details>
+            <details>
+              <summary>¿Por qué la columna Memoria muestra un guion?</summary>
+              <p>No se ha concedido Acceso a todos los sitios web, la pestaña está suspendida o es una página en la que las extensiones no pueden ejecutar scripts, como las páginas <code>chrome://</code>.</p>
+            </details>
+            <details>
+              <summary>¿El Panel de recursos es gratis?</summary>
+              <p>No. El panel y los presupuestos de memoria son Premium, por 3 $/mes o 30 $/año.</p>
+            </details>
+            <details>
+              <summary>¿Envía Takt los datos de mis pestañas a algún sitio para medirlos?</summary>
+              <p>No. Todas las mediciones se hacen dentro de tu navegador. Consulta <a href="../privacy-local-first/">cómo mantiene Takt tus datos en local</a>.</p>
+            </details>
+          </div>
+
+          <h2 id="next">Sigue leyendo</h2>
+          <div class="read-next">
+            <a href="../hibernate-tabs-free-memory/">Hiberna pestañas para liberar memoria<span>Descarga las pestañas inactivas y despiértalas donde las dejaste.</span></a>
+            <a href="../free-vs-premium/">Takt Free frente a Premium<span>Todos los límites, uno al lado del otro.</span></a>
+          </div>
+        </div>
+
+        <footer class="blog-post-footer">
+          <a href="../../../blog/">Todos los artículos</a> · <a href="../../../docs/resources/">Referencia del Panel de recursos</a>
+        </footer>
+      </article>
+    </main>
+
+    <footer id="site-footer"></footer>
+    <script src="../../../js/includes.js"></script>
+    <script src="../../../js/nav.js"></script>
+  </body>
+</html>

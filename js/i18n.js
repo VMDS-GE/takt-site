@@ -48,6 +48,14 @@ const LOCALE_LABELS = {
   pt: 'Português',
 };
 
+// Pages that exist once per language (the blog's feature articles) carry hreflang
+// alternates. Their own <html lang> wins over the saved preference, and switching
+// language navigates to that language's page instead of translating in place.
+// Read now: init() overwrites <html lang> later.
+const PAGE_LOCALE = document.querySelector('link[rel="alternate"][hreflang]')
+  ? document.documentElement.lang
+  : null;
+
 // Feature #168 — module-scope caches for in-place language switching
 const originalTextCache = new WeakMap();
 const originalAttrCache = new WeakMap();
@@ -93,6 +101,14 @@ function applyTranslations(catalog) {
   });
 }
 
+/** Point [data-l10n-href] links (e.g. "blog/getting-started/") at the page in `locale`. */
+function localizeLinks(locale) {
+  var base = getBasePath();
+  document.querySelectorAll('[data-l10n-href]').forEach(function (el) {
+    el.setAttribute('href', base + (locale === 'en' ? '' : locale + '/') + el.dataset.l10nHref);
+  });
+}
+
 /** Inject the language-switcher <select> into the header. */
 function injectSwitcher(activeLocale) {
   var localeList = availableLocales.map(function (code) {
@@ -109,6 +125,12 @@ function injectSwitcher(activeLocale) {
   var select = (container || document).querySelector('.lang-select');
   if (select) {
     select.addEventListener('change', function () {
+      var alt = PAGE_LOCALE && document.querySelector('.lang-links a[hreflang="' + select.value + '"]');
+      if (alt) {
+        rememberLocale(select.value);
+        location.href = alt.href;
+        return;
+      }
       switchLocale(select.value);
     });
   }
@@ -124,7 +146,8 @@ async function switchLocale(newLocale) {
     var catalog = await response.json();
     if (latestRequestedLocale !== newLocale) return false;
     applyTranslations(catalog);
-    localStorage.setItem('takt.lang', newLocale);
+    localizeLinks(newLocale);
+    rememberLocale(newLocale);
     document.documentElement.lang = newLocale;
     var sel = document.querySelector('.lang-select');
     if (sel) sel.value = newLocale;
@@ -134,8 +157,16 @@ async function switchLocale(newLocale) {
   }
 }
 
+/** The single place the preference is saved: only on an explicit user choice. */
+function rememberLocale(locale) {
+  localStorage.setItem('takt.lang', locale);
+}
+
 async function init() {
-  var savedLocale = localeFromSearch(location.search, availableLocales) || localStorage.getItem('takt.lang');
+  var savedLocale =
+    PAGE_LOCALE ||
+    localeFromSearch(location.search, availableLocales) ||
+    localStorage.getItem('takt.lang');
   var activeLocale = pickLocale(
     Array.from(navigator.languages || []),
     availableLocales,
@@ -158,7 +189,14 @@ async function init() {
   }
 
   applyTranslations(catalog);
+  localizeLinks(activeLocale);
   injectSwitcher(activeLocale);
+  // Clicking "Español" etc. on a per-language page is an explicit choice too.
+  document.querySelectorAll('.lang-links a[hreflang]').forEach(function (a) {
+    a.addEventListener('click', function () {
+      rememberLocale(a.getAttribute('hreflang'));
+    });
+  });
 }
 
 // Initialize on DOMContentLoaded (handles the case where it has already fired)

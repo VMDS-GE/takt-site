@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Un gestionnaire d'onglets Chrome respectueux de la vie privée : ce que Takt envoie, et ce qu'il n'envoie pas — Takt</title>
+    <meta
+      name="description"
+      content="Takt est un gestionnaire d'onglets Chrome sans compte, sans statistiques d'usage, avec une IA locale. Voici chaque serveur qu'il contacte, à quel moment, et à quoi sert chaque permission."
+    />
+    <link rel="canonical" href="https://taktabs.com/fr/blog/privacy-local-first/" />
+<!-- TAKT-LANG:head -->
+<link rel="alternate" hreflang="en" href="https://taktabs.com/blog/privacy-local-first/" />
+<link rel="alternate" hreflang="fr" href="https://taktabs.com/fr/blog/privacy-local-first/" />
+<link rel="alternate" hreflang="es" href="https://taktabs.com/es/blog/privacy-local-first/" />
+<link rel="alternate" hreflang="it" href="https://taktabs.com/it/blog/privacy-local-first/" />
+<link rel="alternate" hreflang="de" href="https://taktabs.com/de/blog/privacy-local-first/" />
+<link rel="alternate" hreflang="pt" href="https://taktabs.com/pt/blog/privacy-local-first/" />
+<link rel="alternate" hreflang="x-default" href="https://taktabs.com/blog/privacy-local-first/" />
+<!-- /TAKT-LANG:head -->
+    <meta property="og:type" content="article" />
+    <meta property="og:locale" content="fr_FR" />
+    <meta property="og:title" content="Un gestionnaire d'onglets Chrome respectueux de la vie privée : ce que Takt envoie, et ce qu'il n'envoie pas" />
+    <meta property="og:description" content="Chaque serveur que Takt contacte, à quel moment, et la raison d'être de chaque permission. Écrit pour tous ceux qui se souviennent encore de The Great Suspender." />
+    <meta property="og:url" content="https://taktabs.com/fr/blog/privacy-local-first/" />
+    <meta property="og:image" content="https://taktabs.com/fr/blog/img/options-settings-permissions.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <link rel="icon" type="image/png" sizes="32x32" href="../../../assets/favicon-32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="../../../assets/favicon-16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="../../../assets/apple-touch-icon.png" />
+    <meta name="theme-color" content="#FF3B30" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../../../css/tokens.css" />
+    <link rel="stylesheet" href="../../../css/base.css" />
+    <link rel="stylesheet" href="../../../css/layout.css" />
+    <link rel="stylesheet" href="../../../css/blog.css" />
+    <link rel="stylesheet" href="../../../css/articles.css" />
+    <script src="../../../js/theme.js"></script>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Article",
+            "headline": "Un gestionnaire d'onglets Chrome respectueux de la vie privée : ce que Takt envoie, et ce qu'il n'envoie pas",
+            "description": "Chaque serveur que l'extension Chrome Takt contacte, à quel moment, et la raison d'être de chaque permission.",
+            "inLanguage": "fr",
+            "datePublished": "2026-10-08",
+            "dateModified": "2026-10-08",
+            "author": { "@type": "Person", "name": "Vitor" },
+            "publisher": { "@type": "Organization", "name": "Takt", "url": "https://taktabs.com" },
+            "image": "https://taktabs.com/fr/blog/img/options-settings-permissions.png",
+            "mainEntityOfPage": "https://taktabs.com/fr/blog/privacy-local-first/"
+          },
+          {
+            "@type": "HowTo",
+            "name": "Vérifier les requêtes réseau d'une extension Chrome",
+            "step": [
+              { "@type": "HowToStep", "text": "Ouvrez chrome://extensions et activez le Mode développeur." },
+              { "@type": "HowToStep", "text": "Sur la carte de Takt, cliquez sur le lien service worker à côté d'Inspecter les vues." },
+              { "@type": "HowToStep", "text": "Ouvrez l'onglet Réseau dans la fenêtre des outils de développement qui s'affiche et laissez-la ouverte pendant que vous naviguez." }
+            ]
+          },
+          {
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "Takt envoie-t-il mon historique de navigation ou les URL de mes onglets quelque part ?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Non. Les règles, la correspondance, les sessions, les onglets en hibernation et les suggestions restent dans le stockage de Chrome sur votre machine. Les seules données qui sortent sont une vérification de licence auprès d'ExtensionPay et, si vous la connectez, un fichier de synchronisation dans votre propre Google Drive." }
+              },
+              {
+                "@type": "Question",
+                "name": "Takt nécessite-t-il un compte ?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Non. Il n'existe pas de compte Takt. Le paiement de Premium passe par ExtensionPay, qui utilise Stripe." }
+              },
+              {
+                "@type": "Question",
+                "name": "Le regroupement par IA de Takt se fait-il dans le cloud ?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Non. Le regroupement par IA utilise le modèle de langage local intégré à Chrome. Si le modèle n'est pas disponible, Takt se rabat sur un regroupement par similarité, lui aussi sur votre machine." }
+              },
+              {
+                "@type": "Question",
+                "name": "Pourquoi Takt a-t-il besoin de la permission tabs ?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Pour lire l'URL et le titre de chaque onglet afin de les comparer à vos règles. La correspondance se fait dans le navigateur ; rien n'est transmis." }
+              },
+              {
+                "@type": "Question",
+                "name": "Quelle différence avec The Great Suspender ?",
+                "acceptedAnswer": { "@type": "Answer", "text": "The Great Suspender a été retiré par Google en 2021 après la découverte de code malveillant dans une version publiée après sa revente. Takt ne peut pas charger de code distant : sa politique de sécurité du contenu n'autorise que les scripts intégrés à l'extension, donc tout changement doit être publié sous forme de nouvelle version sur le Chrome Web Store." }
+              }
+            ]
+          },
+          {
+            "@type": "SoftwareApplication",
+            "name": "Takt",
+            "applicationCategory": "BrowserApplication",
+            "operatingSystem": "Chrome",
+            "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <header id="site-header"></header>
+
+    <main class="blog-main">
+      <article class="blog-post article">
+        <p class="eyebrow">Confidentialité</p>
+        <h1 class="blog-post-title">Un gestionnaire d'onglets Chrome respectueux de la vie privée : ce que Takt envoie, et ce qu'il n'envoie pas</h1>
+        <p class="lede">Takt est un gestionnaire d'onglets Chrome qui garde vos onglets, vos règles et vos sessions sur votre machine. Il n'a ni compte ni statistiques d'usage, et il communique avec deux services au plus. Cette page les liste tous les deux, avec ce qu'ils reçoivent.</p>
+        <p class="blog-post-meta">Mis à jour le 8 octobre 2026 · 6 min de lecture</p>
+<!-- TAKT-LANG:nav -->
+<p class="lang-links"><a href="../../../blog/privacy-local-first/" hreflang="en" lang="en">English</a> · <span aria-current="true">Français</span> · <a href="../../../es/blog/privacy-local-first/" hreflang="es" lang="es">Español</a> · <a href="../../../it/blog/privacy-local-first/" hreflang="it" lang="it">Italiano</a> · <a href="../../../de/blog/privacy-local-first/" hreflang="de" lang="de">Deutsch</a> · <a href="../../../pt/blog/privacy-local-first/" hreflang="pt" lang="pt">Português</a></p>
+<!-- /TAKT-LANG:nav -->
+
+        <div class="blog-post-body">
+          <div class="tldr">
+            <p><strong>En bref :</strong> Takt n'envoie aucune donnée de navigation nulle part. Il effectue deux types de requêtes réseau, toutes deux listées ci-dessous.</p>
+            <ul>
+              <li><strong>Vérification de licence</strong> auprès d'ExtensionPay : au démarrage, toutes les 15 minutes, et quand vous ouvrez le popup.</li>
+              <li><strong>Synchronisation Google Drive</strong> : uniquement si vous la connectez (Premium).</li>
+              <li>Aucun compte, aucune statistique d'usage, aucune télémétrie. Le regroupement par IA s'exécute sur le modèle local de Chrome.</li>
+            </ul>
+          </div>
+
+          <h2 id="why">Pourquoi faire confiance à une extension d'onglets ?</h2>
+          <p>Vous n'êtes pas obligé, et c'est raisonnable. En 2021, Google a retiré The Great Suspender, une extension de suspension d'onglets, après la découverte de code malveillant dans une version publiée après sa revente. Ses utilisateurs avaient installé un outil utile, et une mise à jour l'a retourné contre eux.</p>
+          <p>Un gestionnaire d'onglets a besoin de lire les URL de vos onglets pour fonctionner. Les bonnes questions sont donc : qu'en fait-il, qui d'autre les reçoit, et cela peut-il changer sans que vous le remarquiez ? La suite de cette page y répond pour Takt, avec des éléments que vous pouvez vérifier vous-même.</p>
+
+          <h2 id="local">Qu'est-ce qui reste sur ma machine ?</h2>
+          <p>Tout ce que Takt sait de votre navigation se trouve dans le stockage d'extension propre à Chrome :</p>
+          <ul>
+            <li><strong>Règles, paramètres et profils</strong> dans <code>chrome.storage.sync</code>.</li>
+            <li><strong>Sessions, onglets en hibernation, compteurs de correspondances des règles</strong> et l'historique des domaines qui alimente les suggestions de règles dans <code>chrome.storage.local</code>.</li>
+          </ul>
+          <p>Une réserve : si la synchronisation Chrome est activée, Chrome copie lui-même <code>chrome.storage.sync</code> entre vos appareils via votre compte Google. C'est une fonctionnalité de Chrome, pas un serveur de Takt.</p>
+
+          <h2 id="servers">Quels serveurs Takt contacte-t-il ?</h2>
+          <table>
+            <thead>
+              <tr><th>Service</th><th>Quand</th><th>Ce qu'il reçoit</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>ExtensionPay (licence)</td><td>Au démarrage, toutes les 15 minutes, à l'ouverture du popup</td><td>Une clé de licence aléatoire. Aucune URL, aucune donnée d'onglet.</td></tr>
+              <tr><td>API Google Drive</td><td>Uniquement après avoir connecté Drive. Toutes les 15 minutes si la synchronisation automatique est activée.</td><td>Les fichiers de synchronisation de Takt, dans le dossier d'application caché de Drive</td></tr>
+              <tr><td>Connexion Google</td><td>Quand vous connectez ou déconnectez Drive</td><td>À la connexion, une recherche de votre e-mail pour indiquer quel compte est lié. À la déconnexion, une demande de révocation du jeton d'accès de Takt.</td></tr>
+            </tbody>
+          </table>
+          <p>Un détail utile : ExtensionPay ne crée cette clé de licence que lorsque vous ouvrez pour la première fois la page de passage à Premium ou de connexion. Jusque-là, la vérification ne trouve aucune clé et s'arrête sans requête réseau.</p>
+          <p>La synchronisation Drive utilise le périmètre <code>drive.appdata</code>. Takt peut lire et écrire ses propres fichiers dans un dossier caché et ne voit pas le reste de votre Drive. La synchronisation par dossier, l'autre option de sauvegarde, écrit dans un dossier de votre choix ; c'est votre propre client cloud qui se charge de l'envoi éventuel.</p>
+          <p>Deux autres éléments ouvrent une page web, et aucun n'est une requête en arrière-plan. Le lien pour laisser un avis ouvre le Chrome Web Store quand vous cliquez dessus. Et quand vous désinstallez Takt, Chrome ouvre une page de commentaires qui reçoit des valeurs générales comme la version, le plan et une fourchette du nombre de règles. La <a href="../../../privacy/">politique de confidentialité</a> liste chacune de ces valeurs.</p>
+
+          <h2 id="ai">Le regroupement par IA est-il local ?</h2>
+          <p>Oui. Le Groupe intelligent avec IA utilise le modèle de langage intégré à Chrome, qui s'exécute sur votre ordinateur. Chrome télécharge le modèle à la première utilisation, et Takt affiche la progression. Si le modèle n'est pas disponible, Takt regroupe plutôt par similarité, là aussi en local.</p>
+          <p>Pour être précis sur ce que voit le modèle : le titre de chaque onglet et, pour les pages que Chrome laisse Takt lire (c'est ce qu'accorde l'accès à tous les sites), les 500 premiers caractères du texte visible. Ce texte va au modèle sur votre machine et nulle part ailleurs. Il n'existe aucun serveur de Takt où l'envoyer.</p>
+          <p>Si un regroupement par IA occasionnel vous suffit, la fonction « Organize Similar Tabs » de Chrome s'exécute aussi en local et ne demande aucune extension. Takt apporte en plus des règles persistantes, le blocage des doublons, l'hibernation et les sessions.</p>
+
+          <h2 id="permissions">Pourquoi Takt demande-t-il chaque permission ?</h2>
+          <p>Huit permissions sont accordées à l'installation. Chacune correspond à une fonctionnalité :</p>
+          <table>
+            <thead><tr><th>Permission</th><th>Pourquoi</th></tr></thead>
+            <tbody>
+              <tr><td><code>tabs</code></td><td>Lire les URL et les titres des onglets pour appliquer vos règles</td></tr>
+              <tr><td><code>tabGroups</code></td><td>Créer, nommer, colorer et réduire les groupes</td></tr>
+              <tr><td><code>activeTab</code></td><td>Agir sur l'onglet actif quand vous cliquez dans le popup</td></tr>
+              <tr><td><code>storage</code></td><td>Enregistrer les règles, les paramètres, les sessions</td></tr>
+              <tr><td><code>scripting</code></td><td>Afficher la notification de doublon et le panneau Quick Switch ; lire le texte des pages pour le regroupement par IA</td></tr>
+              <tr><td><code>contextMenus</code></td><td>Entrées du clic droit comme Mettre cet onglet en veille</td></tr>
+              <tr><td><code>notifications</code></td><td>Alertes comme les avertissements de budget mémoire</td></tr>
+              <tr><td><code>alarms</code></td><td>Tâches planifiées : hibernation automatique, planifications de profils, vérification de licence</td></tr>
+            </tbody>
+          </table>
+          <p>Tout le reste est <strong>facultatif</strong> et désactivé tant qu'une fonctionnalité n'en a pas besoin : <code>webRequest</code>, <code>system.memory</code> et l'accès à tous les sites pour le tableau de bord des ressources (l'accès à tous les sites permet aussi au regroupement par IA de lire le texte des pages), <code>bookmarks</code> pour Mettre le groupe en signet, <code>history</code> pour la recherche de Quick Switch et les suggestions de règles, <code>downloads</code> pour la recherche de Quick Switch, <code>identity</code> pour la synchronisation Drive. Vous pouvez révoquer chacune d'elles dans Settings, ou régler Takt pour qu'il ne demande jamais.</p>
+
+          <figure>
+            <img src="../img/options-settings-permissions.png" alt="Settings de Takt, section Permissions avec les boutons Accorder toutes les permissions et Révoquer toutes les permissions et des interrupteurs désactivés pour Surveillance réseau, Accès à la mémoire système, Accès à tous les sites web, Accès aux signets et Accès à l'historique de navigation, chacun avec ce qu'il active et ce qui ne fonctionne plus sans lui" width="700" loading="lazy" />
+            <figcaption>Les permissions facultatives dans Settings. Chaque interrupteur indique ce qu'il active et ce qui ne fonctionne plus sans lui.</figcaption>
+          </figure>
+
+          <h2 id="verify">Comment le vérifier moi-même ?</h2>
+          <ol class="steps">
+            <li>Ouvrez <code>chrome://extensions</code> et activez le <strong>Mode développeur</strong>.</li>
+            <li>Sur la carte de Takt, cliquez sur <strong>service worker</strong> à côté de « Inspecter les vues ».</li>
+            <li>Ouvrez l'onglet <strong>Réseau</strong> et continuez à naviguer. Vous ne devriez voir que les requêtes du tableau ci-dessus, plus la lecture par Takt de ses propres fichiers <code>chrome-extension://</code>.</li>
+          </ol>
+          <p>La politique de sécurité du contenu de Takt est <code>script-src 'self'</code>. Il ne peut exécuter que du code intégré à l'extension : il ne peut donc pas récupérer de nouveau code sur un serveur. Tout changement de comportement doit être publié sous forme de nouvelle version sur le Chrome Web Store.</p>
+
+          <h2 id="limits">Ce dont cela ne vous protège pas</h2>
+          <ul>
+            <li><strong>Vous faites toujours confiance aux mises à jour.</strong> Chrome installe automatiquement les nouvelles versions. Aucune politique ne peut empêcher une future version de changer ; l'onglet Réseau est le moyen de vous en apercevoir.</li>
+            <li><strong>ExtensionPay est un tiers.</strong> Dès qu'une clé de licence existe, il voit cette clé et, comme tout serveur, votre adresse IP.</li>
+            <li><strong>La permission <code>tabs</code> est large.</strong> Takt peut lire l'URL et le titre de chaque onglet. C'est ainsi que fonctionnent les règles. Ce qui compte, c'est que ces données restent sur la machine.</li>
+          </ul>
+
+          <div class="cta">
+            <p>Un gestionnaire d'onglets qui n'a personne à qui rendre compte.</p>
+            <a class="btn" href="https://chromewebstore.google.com/detail/takt/plgfdnbgkjocmgegnkbihoeojcfphdic">Ajouter Takt à Chrome, gratuitement</a>
+          </div>
+
+          <h2 id="faq">Questions fréquentes</h2>
+          <div class="faq">
+            <details>
+              <summary>Takt envoie-t-il mon historique de navigation ou les URL de mes onglets quelque part ?</summary>
+              <p>Non. Les règles, la correspondance, les sessions, les onglets en hibernation et les suggestions restent dans le stockage de Chrome sur votre machine. Les seules données qui sortent sont la vérification de licence et, si vous la connectez, les fichiers de synchronisation de Takt dans votre propre Google Drive.</p>
+            </details>
+            <details>
+              <summary>Takt nécessite-t-il un compte ?</summary>
+              <p>Non. Il n'existe pas de compte Takt. Premium (3 $/mois ou 30 $/an) se paie via ExtensionPay, qui utilise Stripe.</p>
+            </details>
+            <details>
+              <summary>Le regroupement par IA de Takt se fait-il dans le cloud ?</summary>
+              <p>Non. Il utilise le modèle local intégré à Chrome. Sans le modèle, Takt regroupe par similarité, là aussi en local.</p>
+            </details>
+            <details>
+              <summary>Pourquoi Takt a-t-il besoin de la permission tabs ?</summary>
+              <p>Pour lire l'URL et le titre de chaque onglet et les comparer à vos règles. La correspondance se fait dans le navigateur ; rien n'est transmis.</p>
+            </details>
+            <details>
+              <summary>Quelle différence avec The Great Suspender ?</summary>
+              <p>The Great Suspender a été retiré en 2021 après l'apparition de code malveillant dans une version publiée après sa revente. La politique de sécurité du contenu de Takt n'autorise que les scripts intégrés : tout changement doit donc être publié sous forme de nouvelle version sur le Chrome Web Store, que vous pouvez inspecter.</p>
+            </details>
+          </div>
+
+          <h2 id="next">À lire ensuite</h2>
+          <div class="read-next">
+            <a href="../getting-started/">Bien démarrer avec Takt en 2 minutes<span>La page d'accueil, vos premières règles, où trouver chaque chose.</span></a>
+            <a href="../backup-and-sync-tabs/">Sauvegarder et synchroniser vos onglets<span>Un dossier de votre choix, ou le dossier d'application privé de Drive.</span></a>
+          </div>
+        </div>
+
+        <footer class="blog-post-footer">
+          <a href="../../../blog/">Tous les articles</a> · <a href="../../../docs/permissions/">Référence : permissions</a> · <a href="../../../privacy/">Politique de confidentialité</a>
+        </footer>
+      </article>
+    </main>
+
+    <footer id="site-footer"></footer>
+    <script src="../../../js/includes.js"></script>
+    <script src="../../../js/nav.js"></script>
+  </body>
+</html>

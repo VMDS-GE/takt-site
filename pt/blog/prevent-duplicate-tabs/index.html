@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Como evitar abas duplicadas no Chrome — Takt</title>
+    <meta
+      name="description"
+      content="O Chrome abre a mesma página em quantas abas você pedir. Veja como impedir abas duplicadas no momento em que abrem, escolher o que conta como a mesma URL e fechar as que já estão abertas."
+    />
+    <link rel="canonical" href="https://taktabs.com/pt/blog/prevent-duplicate-tabs/" />
+<!-- TAKT-LANG:head -->
+<link rel="alternate" hreflang="en" href="https://taktabs.com/blog/prevent-duplicate-tabs/" />
+<link rel="alternate" hreflang="fr" href="https://taktabs.com/fr/blog/prevent-duplicate-tabs/" />
+<link rel="alternate" hreflang="es" href="https://taktabs.com/es/blog/prevent-duplicate-tabs/" />
+<link rel="alternate" hreflang="it" href="https://taktabs.com/it/blog/prevent-duplicate-tabs/" />
+<link rel="alternate" hreflang="de" href="https://taktabs.com/de/blog/prevent-duplicate-tabs/" />
+<link rel="alternate" hreflang="pt" href="https://taktabs.com/pt/blog/prevent-duplicate-tabs/" />
+<link rel="alternate" hreflang="x-default" href="https://taktabs.com/blog/prevent-duplicate-tabs/" />
+<!-- /TAKT-LANG:head -->
+    <meta property="og:type" content="article" />
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:title" content="Como evitar abas duplicadas no Chrome" />
+    <meta property="og:description" content="Abra uma página que já está aberta e o Takt leva você para a original. Ativado por padrão, gratuito." />
+    <meta property="og:url" content="https://taktabs.com/pt/blog/prevent-duplicate-tabs/" />
+    <meta property="og:image" content="https://taktabs.com/pt/blog/img/popup-home.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <link rel="icon" type="image/png" sizes="32x32" href="../../../assets/favicon-32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="../../../assets/favicon-16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="../../../assets/apple-touch-icon.png" />
+    <meta name="theme-color" content="#FF3B30" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../../../css/tokens.css" />
+    <link rel="stylesheet" href="../../../css/base.css" />
+    <link rel="stylesheet" href="../../../css/layout.css" />
+    <link rel="stylesheet" href="../../../css/blog.css" />
+    <link rel="stylesheet" href="../../../css/articles.css" />
+    <script src="../../../js/theme.js"></script>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Article",
+            "headline": "Como evitar abas duplicadas no Chrome",
+            "description": "Impeça abas duplicadas no momento em que abrem, escolha o que conta como a mesma URL e feche as duplicatas que já estão abertas.",
+            "inLanguage": "pt",
+            "datePublished": "2026-10-08",
+            "dateModified": "2026-10-08",
+            "author": { "@type": "Person", "name": "Vitor" },
+            "publisher": { "@type": "Organization", "name": "Takt", "url": "https://taktabs.com" },
+            "image": "https://taktabs.com/pt/blog/img/popup-home.png",
+            "mainEntityOfPage": "https://taktabs.com/pt/blog/prevent-duplicate-tabs/"
+          },
+          {
+            "@type": "HowTo",
+            "name": "Evitar abas duplicadas no Chrome",
+            "step": [
+              { "@type": "HowToStep", "text": "Instale o Takt pela Chrome Web Store. A prevenção de duplicatas vem ativada por padrão." },
+              { "@type": "HowToStep", "text": "Para mudar o que conta como duplicata, abra a página de opções do Takt, vá em Settings, Duplicate Prevention, e escolha uma estratégia de correspondência de URL." },
+              { "@type": "HowToStep", "text": "Para limpar as duplicatas já abertas, clique em Fechar duplicadas no popup do Takt." }
+            ]
+          },
+          {
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "O Chrome consegue evitar abas duplicadas sozinho?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Não. O Chrome não tem nenhuma configuração para bloquear abas duplicadas, então você precisa de uma extensão." }
+              },
+              {
+                "@type": "Question",
+                "name": "A prevenção de duplicatas do Takt é gratuita?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Sim. A prevenção, as cinco estratégias e o Fechar duplicadas são gratuitos, sem limite." }
+              },
+              {
+                "@type": "Question",
+                "name": "Como abro uma aba duplicada de propósito?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Clique com o botão direito no link e escolha Abrir em nova aba (permitir duplicata), ou clique em Abrir mesmo assim depois de um bloqueio." }
+              },
+              {
+                "@type": "Question",
+                "name": "Funciona em todos os modos de agrupamento?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Sim: Por regras, Por categoria, Por IA e Nenhum." }
+              }
+            ]
+          },
+          {
+            "@type": "SoftwareApplication",
+            "name": "Takt",
+            "applicationCategory": "BrowserApplication",
+            "operatingSystem": "Chrome",
+            "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <header id="site-header"></header>
+
+    <main class="blog-main">
+      <article class="blog-post article">
+        <p class="eyebrow">Prevenção de duplicatas</p>
+        <h1 class="blog-post-title">Como evitar abas duplicadas no Chrome</h1>
+        <p class="lede">Para evitar abas duplicadas no Chrome, você precisa de uma extensão: o próprio Chrome abre a mesma página em dez abas se você clicar dez vezes. O Takt confere cada nova aba no momento em que ela abre. Se a página já estiver aberta, ele fecha a aba nova e leva você para a original.</p>
+        <p class="blog-post-meta">Atualizado em 8 de outubro de 2026 · 5 min de leitura</p>
+<!-- TAKT-LANG:nav -->
+<p class="lang-links"><a href="../../../blog/prevent-duplicate-tabs/" hreflang="en" lang="en">English</a> · <a href="../../../fr/blog/prevent-duplicate-tabs/" hreflang="fr" lang="fr">Français</a> · <a href="../../../es/blog/prevent-duplicate-tabs/" hreflang="es" lang="es">Español</a> · <a href="../../../it/blog/prevent-duplicate-tabs/" hreflang="it" lang="it">Italiano</a> · <a href="../../../de/blog/prevent-duplicate-tabs/" hreflang="de" lang="de">Deutsch</a> · <span aria-current="true">Português</span></p>
+<!-- /TAKT-LANG:nav -->
+
+        <div class="blog-post-body">
+          <div class="tldr">
+            <p><strong>Resposta curta:</strong> instale o Takt. A prevenção de duplicatas vem ativada por padrão e é gratuita. Abra um link que já está aberto em outra aba e você cai na aba existente.</p>
+            <ul>
+              <li>5 estratégias de correspondência de URL decidem o que conta como "a mesma página". O padrão ignora o <code>#fragmento</code>.</li>
+              <li>Precisa da duplicata mesmo assim? Clique com o botão direito no link, ou clique em <em>Abrir mesmo assim</em>.</li>
+              <li><strong>Fechar duplicadas</strong> limpa a janela atual com um clique.</li>
+            </ul>
+          </div>
+
+          <h2 id="why">Por que o Chrome abre abas duplicadas?</h2>
+          <p>O Chrome trata cada nova aba como um pedido separado. Ele nunca verifica se aquela página já está aberta. Assim, o mesmo painel, ticket ou documento vai se acumulando a partir de links no e-mail, no chat e nos resultados de busca.</p>
+          <p>Cada cópia é uma página inteira que continua rodando. Fechá-la à mão significa encontrá-la primeiro.</p>
+
+          <h2 id="how">O que acontece quando o Takt bloqueia uma duplicata?</h2>
+          <ol class="steps">
+            <li>Você abre um link para uma página que já está aberta em outra aba.</li>
+            <li>O Takt fecha a aba nova.</li>
+            <li>Ele leva você para a aba existente, em qualquer janela que ela esteja.</li>
+            <li>O popup mostra "Duplicata impedida" com um botão <strong>Abrir mesmo assim</strong> por 10 segundos.</li>
+          </ol>
+          <p>Se você concedeu ao Takt a permissão opcional "Acesso a todos os sites", um aviso também aparece na página: "Takt detectou uma URL duplicada e mudou para esta aba", com <em>Dispensar</em> e <em>Abrir assim mesmo</em>.</p>
+          <p>A verificação roda em todos os modos de agrupamento: Por regras, Por categoria, Por IA e Nenhum. Ela só olha as abas no momento em que abrem. Navegar numa aba existente até uma página que está aberta em outro lugar não a dispara.</p>
+
+          <figure class="narrow">
+            <img src="../img/popup-home.png" alt="Painel Início do popup do Takt com uma faixa amarela Duplicata impedida para en.wikipedia.org/wiki/Takt_time e um botão Abrir mesmo assim, acima das seções Modo de agrupamento e Ações rápidas" width="420" loading="lazy" />
+            <figcaption>Depois de um bloqueio, o popup mostra a página e oferece Abrir mesmo assim.</figcaption>
+          </figure>
+
+          <h2 id="same-url">O que conta como a mesma URL?</h2>
+          <p>Primeiro, o Takt normaliza todas as URLs do mesmo jeito. Ele tira o <code>www.</code>, remove a barra final e decodifica a codificação percentual inofensiva, como <code>%41</code> para <code>A</code>. Assim, <code>https://www.example.com/docs/</code> e <code>https://example.com/docs</code> são a mesma página.</p>
+          <p>Depois, a sua estratégia de correspondência decide o grau de rigor. Escolha em Opções → Settings → Duplicate Prevention.</p>
+          <table>
+            <thead><tr><th>Estratégia</th><th>Compara</th><th>Considerados iguais</th></tr></thead>
+            <tbody>
+              <tr><td>Exact URL</td><td>Tudo, com os parâmetros de consulta ordenados</td><td><code>?a=1&amp;b=2</code> e <code>?b=2&amp;a=1</code></td></tr>
+              <tr><td>Ignore fragment (#hash) <span class="badge">Padrão</span></td><td>Tudo, menos o <code>#fragmento</code></td><td><code>/page#top</code> e <code>/page#bottom</code></td></tr>
+              <tr><td>Ignore query string</td><td>Esquema, host e caminho</td><td><code>/page?ref=mail</code> e <code>/page?ref=chat</code></td></tr>
+              <tr><td>Ignore query + fragment</td><td>Esquema, host e caminho</td><td>Igual ao anterior</td></tr>
+              <tr><td>Origin + path only</td><td>Esquema, host e caminho</td><td>Igual ao anterior</td></tr>
+            </tbody>
+          </table>
+          <p>Na versão atual, as três últimas comparam as URLs do mesmo jeito. Escolha qualquer uma delas quando quiser ignorar parâmetros de rastreamento.</p>
+          <p>Cuidado com as estratégias mais soltas em páginas de busca e de aplicativos. <code>/search?q=chairs</code> e <code>/search?q=tables</code> têm o mesmo caminho, então ignorar a consulta faz delas uma página só.</p>
+
+          <figure>
+            <img src="../img/settings-duplicate-prevention.png" alt="Settings do Takt, seção Duplicate Prevention com a caixa Enable duplicate tab prevention marcada e o menu URL matching strategy em Ignore fragment (#hash)" width="700" loading="lazy" />
+            <figcaption>O interruptor geral e a estratégia padrão, em Opções → Settings.</figcaption>
+          </figure>
+
+          <h2 id="allow">Como abro uma duplicata de propósito?</h2>
+          <ul>
+            <li><strong>Clique com o botão direito no link</strong> e escolha <em>Abrir em nova aba (permitir duplicata)</em>. Funciona em qualquer página.</li>
+            <li><strong>Clique em Abrir mesmo assim</strong> no aviso da página ou no popup, logo depois de um bloqueio.</li>
+            <li><strong>Shift+clique no link</strong>, no modo Por regras, em páginas às quais o Takt tem acesso.</li>
+          </ul>
+          <p>Ou desmarque <em>Enable duplicate tab prevention</em> em Settings para desligar o recurso inteiro.</p>
+
+          <h2 id="close">Como fecho as abas duplicadas que já estão abertas?</h2>
+          <p>Clique em <strong>Fechar duplicadas</strong> no painel Início do popup. O Takt examina a janela atual com a sua estratégia de correspondência e mantém a primeira aba de cada página, contando da esquerda. As demais se fecham de uma vez, sem confirmação, e o popup informa quantas fechou. O botão fica cinza quando não há nada para fechar.</p>
+
+          <h2 id="per-rule">Um site pode usar outra estratégia?</h2>
+          <p>Sim, no modo Por regras. Abra uma regra, marque <strong>Prevent duplicate tabs in this group</strong> e escolha uma estratégia de correspondência de URL para as abas dessa regra.</p>
+          <p>Use isso num aplicativo de página única em que cada <code>#fragmento</code> é uma tela diferente: coloque essa regra em <em>Exact URL</em> e mantenha o padrão geral para todo o resto. O interruptor geral continua sendo o principal. Com ele desligado, nenhuma aba é bloqueada, nem mesmo numa regra com a caixa marcada.</p>
+
+          <h2 id="compare">Como isso se compara com as outras opções?</h2>
+          <table>
+            <thead><tr><th></th><th>Só o Chrome</th><th>Bloqueador de função única</th><th>Takt</th></tr></thead>
+            <tbody>
+              <tr><td>Bloqueia duplicatas quando abrem</td><td>Não</td><td>Sim</td><td>Sim, ativado por padrão</td></tr>
+              <tr><td>Escolher o que conta como a mesma página</td><td>Não</td><td>Depende</td><td>5 estratégias, também por regra</td></tr>
+              <tr><td>Fechar duplicatas existentes</td><td>Não</td><td>Depende</td><td>Um clique, janela atual</td></tr>
+              <tr><td>Também agrupa e hiberna abas</td><td>Não</td><td>Não</td><td>Sim</td></tr>
+            </tbody>
+          </table>
+          <p>Confira se a extensão de função única ainda recebe manutenção. A Duplicate Tabs Preventor, por exemplo, está sem manutenção desde abril de 2026.</p>
+
+          <h2 id="limits">O que a prevenção de duplicatas não faz</h2>
+          <ul>
+            <li>Ela não junta abas que já estavam abertas antes de você instalar o Takt. Para essas, use Fechar duplicadas.</li>
+            <li>Fechar duplicadas age só na janela atual.</li>
+            <li>O aviso na página e o Shift+clique precisam da permissão opcional de acesso às páginas. A faixa do popup e a opção do botão direito não precisam.</li>
+          </ul>
+
+          <div class="cta">
+            <p>Clique duas vezes no mesmo link. Caia na aba que você já tinha.</p>
+            <a class="btn" href="https://chromewebstore.google.com/detail/takt/plgfdnbgkjocmgegnkbihoeojcfphdic">Adicionar o Takt ao Chrome, grátis</a>
+          </div>
+
+          <h2 id="faq">Perguntas frequentes</h2>
+          <div class="faq">
+            <details>
+              <summary>O Chrome consegue evitar abas duplicadas sozinho?</summary>
+              <p>Não. O Chrome não tem nenhuma configuração para bloquear abas duplicadas, então você precisa de uma extensão.</p>
+            </details>
+            <details>
+              <summary>A prevenção de duplicatas do Takt é gratuita?</summary>
+              <p>Sim. A prevenção, as cinco estratégias e o Fechar duplicadas são gratuitos, sem limite.</p>
+            </details>
+            <details>
+              <summary>Como abro uma aba duplicada de propósito?</summary>
+              <p>Clique com o botão direito no link e escolha <em>Abrir em nova aba (permitir duplicata)</em>, ou clique em <em>Abrir mesmo assim</em> depois de um bloqueio.</p>
+            </details>
+            <details>
+              <summary>Funciona em todos os modos de agrupamento?</summary>
+              <p>Sim: Por regras, <a href="../group-tabs-by-category-or-ai/">Por categoria, Por IA</a> e Nenhum.</p>
+            </details>
+          </div>
+
+          <h2 id="next">Leia também</h2>
+          <div class="read-next">
+            <a href="../one-click-tab-cleanup/">Arrume todas as janelas com um clique<span>Agrupar, desagrupar, recolher e ordenar.</span></a>
+            <a href="../hibernate-tabs-free-memory/">Hiberne as abas que você não está usando<span>Feche, guarde e traga de volta.</span></a>
+          </div>
+        </div>
+
+        <footer class="blog-post-footer">
+          <a href="../../../blog/">Todos os artigos</a> · <a href="../../../docs/duplicates/">Referência: prevenção de duplicatas</a>
+        </footer>
+      </article>
+    </main>
+
+    <footer id="site-footer"></footer>
+    <script src="../../../js/includes.js"></script>
+    <script src="../../../js/nav.js"></script>
+  </body>
+</html>

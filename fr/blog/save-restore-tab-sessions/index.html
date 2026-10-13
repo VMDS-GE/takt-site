@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Comment enregistrer et restaurer une session d'onglets dans Chrome — Takt</title>
+    <meta
+      name="description"
+      content="Enregistrez vos fenêtres Chrome, vos groupes d'onglets et vos onglets isolés sous forme de session nommée, puis restaurez-la plus tard dans une nouvelle fenêtre ou à la place de la fenêtre actuelle. Jusqu'à 50 sessions, stockées sur votre machine."
+    />
+    <link rel="canonical" href="https://taktabs.com/fr/blog/save-restore-tab-sessions/" />
+<!-- TAKT-LANG:head -->
+<link rel="alternate" hreflang="en" href="https://taktabs.com/blog/save-restore-tab-sessions/" />
+<link rel="alternate" hreflang="fr" href="https://taktabs.com/fr/blog/save-restore-tab-sessions/" />
+<link rel="alternate" hreflang="es" href="https://taktabs.com/es/blog/save-restore-tab-sessions/" />
+<link rel="alternate" hreflang="it" href="https://taktabs.com/it/blog/save-restore-tab-sessions/" />
+<link rel="alternate" hreflang="de" href="https://taktabs.com/de/blog/save-restore-tab-sessions/" />
+<link rel="alternate" hreflang="pt" href="https://taktabs.com/pt/blog/save-restore-tab-sessions/" />
+<link rel="alternate" hreflang="x-default" href="https://taktabs.com/blog/save-restore-tab-sessions/" />
+<!-- /TAKT-LANG:head -->
+    <meta property="og:type" content="article" />
+    <meta property="og:locale" content="fr_FR" />
+    <meta property="og:title" content="Comment enregistrer et restaurer une session d'onglets dans Chrome" />
+    <meta property="og:description" content="Donnez un nom à un instantané de vos fenêtres et de vos groupes. Rouvrez-le en un clic, groupes et couleurs compris." />
+    <meta property="og:url" content="https://taktabs.com/fr/blog/save-restore-tab-sessions/" />
+    <meta property="og:image" content="https://taktabs.com/fr/blog/img/options-sessions-list.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <link rel="icon" type="image/png" sizes="32x32" href="../../../assets/favicon-32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="../../../assets/favicon-16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="../../../assets/apple-touch-icon.png" />
+    <meta name="theme-color" content="#FF3B30" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../../../css/tokens.css" />
+    <link rel="stylesheet" href="../../../css/base.css" />
+    <link rel="stylesheet" href="../../../css/layout.css" />
+    <link rel="stylesheet" href="../../../css/blog.css" />
+    <link rel="stylesheet" href="../../../css/articles.css" />
+    <script src="../../../js/theme.js"></script>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Article",
+            "headline": "Comment enregistrer et restaurer une session d'onglets dans Chrome",
+            "description": "Enregistrez vos fenêtres Chrome, vos groupes d'onglets et vos onglets isolés sous forme de session nommée, et restaurez-la plus tard dans une nouvelle fenêtre ou à la place de la fenêtre actuelle.",
+            "inLanguage": "fr",
+            "datePublished": "2026-10-08",
+            "dateModified": "2026-10-08",
+            "author": { "@type": "Person", "name": "Vitor" },
+            "publisher": { "@type": "Organization", "name": "Takt", "url": "https://taktabs.com" },
+            "image": "https://taktabs.com/fr/blog/img/options-sessions-list.png",
+            "mainEntityOfPage": "https://taktabs.com/fr/blog/save-restore-tab-sessions/"
+          },
+          {
+            "@type": "HowTo",
+            "name": "Enregistrer et restaurer une session d'onglets dans Chrome",
+            "step": [
+              { "@type": "HowToStep", "text": "Installez Takt depuis le Chrome Web Store et ouvrez son popup." },
+              { "@type": "HowToStep", "text": "Allez dans le volet Sessions et cliquez sur + Enregistrer." },
+              { "@type": "HowToStep", "text": "Tapez un nom de 60 caractères au maximum, choisissez Cette fenêtre ou Toutes les fenêtres, puis cliquez sur Enregistrer." },
+              { "@type": "HowToStep", "text": "Plus tard, cliquez sur Restaurer à côté de la session et choisissez Ouvrir dans une nouvelle fenêtre ou Remplacer la fenêtre actuelle." }
+            ]
+          },
+          {
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "Chrome enregistre-t-il les sessions d'onglets tout seul ?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Le réglage « Continue where you left off » de Chrome rouvre votre dernière session de navigation au démarrage. Il garde une seule session, la dernière. Il ne conserve pas de liste d'instantanés nommés à rouvrir plus tard." }
+              },
+              {
+                "@type": "Question",
+                "name": "Combien de sessions puis-je enregistrer dans Takt ?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Jusqu'à 50. Quand la liste est pleine, supprimez une ancienne session avant d'en enregistrer une nouvelle. Les sessions enregistrées automatiquement font de la place en remplaçant la plus ancienne sauvegarde automatique." }
+              },
+              {
+                "@type": "Question",
+                "name": "Les sessions d'onglets sont-elles gratuites dans Takt ?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Non. Enregistrer, restaurer, renommer et sauvegarder automatiquement des sessions sont des fonctionnalités Premium (3 $/mois ou 30 $/an). Avec le plan Free, vous pouvez voir la liste des sessions enregistrées." }
+              },
+              {
+                "@type": "Question",
+                "name": "Mes sessions sont-elles envoyées quelque part ?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Non. Les sessions sont stockées dans le stockage local de Chrome, sur votre ordinateur. Elles n'en sortent que si vous exportez une sauvegarde ou activez vous-même File Sync ou Drive Sync." }
+              }
+            ]
+          },
+          {
+            "@type": "SoftwareApplication",
+            "name": "Takt",
+            "applicationCategory": "BrowserApplication",
+            "operatingSystem": "Chrome",
+            "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <header id="site-header"></header>
+
+    <main class="blog-main">
+      <article class="blog-post article">
+        <p class="eyebrow">Sessions</p>
+        <h1 class="blog-post-title">Comment enregistrer et restaurer une session d'onglets dans Chrome</h1>
+        <p class="lede">Pour enregistrer une session d'onglets dans Chrome, prenez un instantané nommé de vos fenêtres et de vos groupes, puis restaurez-le quand vous en avez de nouveau besoin. Chrome rouvre votre dernière session. Il ne garde pas une étagère de sessions nommées.</p>
+        <p class="blog-post-meta">Mis à jour le 8 octobre 2026 · 5 min de lecture</p>
+<!-- TAKT-LANG:nav -->
+<p class="lang-links"><a href="../../../blog/save-restore-tab-sessions/" hreflang="en" lang="en">English</a> · <span aria-current="true">Français</span> · <a href="../../../es/blog/save-restore-tab-sessions/" hreflang="es" lang="es">Español</a> · <a href="../../../it/blog/save-restore-tab-sessions/" hreflang="it" lang="it">Italiano</a> · <a href="../../../de/blog/save-restore-tab-sessions/" hreflang="de" lang="de">Deutsch</a> · <a href="../../../pt/blog/save-restore-tab-sessions/" hreflang="pt" lang="pt">Português</a></p>
+<!-- /TAKT-LANG:nav -->
+
+        <div class="blog-post-body">
+          <div class="tldr">
+            <p><strong>En bref :</strong> dans le popup de Takt, ouvrez <strong>Sessions</strong>, cliquez sur <strong>+ Enregistrer</strong>, donnez un nom, et choisissez <em>Cette fenêtre</em> ou <em>Toutes les fenêtres</em>. Plus tard, cliquez sur <strong>Restaurer</strong> pour retrouver les mêmes onglets, dans les mêmes groupes nommés et colorés.</p>
+            <ul>
+              <li>Enregistre chaque onglet, chaque groupe (nom, couleur, état replié), les onglets isolés et votre liste Veille.</li>
+              <li>Restaurez dans une nouvelle fenêtre, ou à la place de la fenêtre actuelle.</li>
+              <li>Jusqu'à 50 sessions, stockées sur votre machine. <span class="badge badge-premium">Premium</span></li>
+            </ul>
+          </div>
+
+          <h2 id="why">Pourquoi « Continue where you left off » de Chrome ne suffit-il pas ?</h2>
+          <p>Pour un seul usage, il suffit. Activez-le et Chrome rouvre au démarrage les onglets de votre dernière session. Si c'est tout ce qu'il vous faut, vous n'avez pas besoin d'extension.</p>
+          <p>Ça ne tient plus quand vous passez d'un travail à l'autre. Les onglets de votre mémoire, ceux de votre réunion du lundi et ceux de l'organisation de votre voyage ne peuvent pas tous être « la dernière session ». Fermez la fenêtre du mémoire pour faire de la place à la réunion, et ses onglets disparaissent de cette liste.</p>
+          <p>Une session nommée, c'est un favori pour tout un espace de travail. Vous fermez la fenêtre sans inquiétude, car vous pouvez la rouvrir par son nom.</p>
+
+          <h2 id="save">Comment enregistrer une session d'onglets ?</h2>
+          <ol class="steps">
+            <li>Installez <a href="https://chromewebstore.google.com/detail/takt/plgfdnbgkjocmgegnkbihoeojcfphdic">Takt depuis le Chrome Web Store</a>.</li>
+            <li>Ouvrez le popup et allez dans le volet <strong>Sessions</strong>.</li>
+            <li>Cliquez sur <strong>+ Enregistrer</strong> et tapez un nom de 60 caractères au maximum. Chaque nom doit être unique.</li>
+            <li>Choisissez <em>Cette fenêtre</em> (par défaut) ou <em>Toutes les fenêtres</em>, puis cliquez sur <strong>Enregistrer</strong>.</li>
+          </ol>
+
+          <figure class="narrow">
+            <img src="../img/popup-sessions.png" alt="Popup de Takt sur le volet Sessions, avec un bouton + Enregistrer, un champ de recherche et deux sessions enregistrées, Thesis research et Monday standup, chacune avec 14 onglets, 5 groupes et 2 en veille, et des boutons Restaurer et supprimer" width="420" loading="lazy" />
+            <figcaption>Le volet Sessions du popup. Chaque entrée indique son nombre d'onglets, de groupes et d'onglets en veille.</figcaption>
+          </figure>
+
+          <h2 id="what">Que contient une session ?</h2>
+          <table>
+            <thead><tr><th>Enregistré</th><th>Détails</th></tr></thead>
+            <tbody>
+              <tr><td>Onglets</td><td>URL et titre de chaque onglet</td></tr>
+              <tr><td>Groupes d'onglets</td><td>Nom, couleur, état replié, et les onglets de chaque groupe</td></tr>
+              <tr><td>Onglets isolés</td><td>Les onglets hors de tout groupe</td></tr>
+              <tr><td>Fenêtres</td><td>Une fenêtre, ou toutes les fenêtres normales avec <em>Toutes les fenêtres</em></td></tr>
+              <tr><td>Onglets en hibernation</td><td>Votre liste Veille, rétablie lors de la restauration</td></tr>
+            </tbody>
+          </table>
+          <p>Chrome ne permet pas aux extensions d'ouvrir les pages <code>chrome://</code>, <code>about:</code> ou d'extension : ces onglets sont donc ignorés.</p>
+
+          <h2 id="restore">Comment restaurer une session ?</h2>
+          <p>Cliquez sur <strong>Restaurer</strong>. Une boîte de dialogue propose deux modes :</p>
+          <ul>
+            <li><strong>Ouvrir dans une nouvelle fenêtre.</strong> Votre fenêtre actuelle reste telle quelle.</li>
+            <li><strong>Remplacer la fenêtre actuelle.</strong> Les onglets enregistrés s'ouvrent dans la fenêtre actuelle, puis les onglets qui s'y trouvaient se ferment.</li>
+          </ul>
+          <p>La boîte de dialogue affiche un compte à rebours de 7 secondes, puis restaure avec le mode sélectionné. Cliquez sur <strong>Restaurer</strong> dans la boîte de dialogue pour ne pas attendre, ou sur <strong>Annuler</strong>. Dans une session à plusieurs fenêtres, la première fenêtre suit votre choix et toutes les autres s'ouvrent dans de nouvelles fenêtres.</p>
+
+          <h2 id="manage">Puis-je renommer les sessions ou les enregistrer automatiquement ?</h2>
+          <p>Oui, dans les deux cas.</p>
+          <ul>
+            <li><strong>Renommer :</strong> double-cliquez sur un nom dans le popup, ou utilisez <strong>Rename</strong> dans l'onglet Sessions de la page d'options. Appuyez sur Entrée pour enregistrer.</li>
+            <li><strong>Sauvegarde automatique :</strong> activez <em>Sauvegarde automatique à la fermeture</em> dans Settings. Fermer une fenêtre enregistre ses onglets dans une session nommée « Sauvegarde auto » suivi de la date et de l'heure.</li>
+          </ul>
+          <p>La page d'options permet aussi de déplier une session pour voir chacun de ses groupes et onglets avant de la restaurer.</p>
+
+          <figure>
+            <img src="../img/options-sessions-list.png" alt="Page d'options de Takt, onglet Sessions : 2 sessions enregistrées, Thesis research et Monday standup, chacune avec 14 onglets, 5 groupes, 2 en veille, une date de création, et des boutons Restore, Rename et Delete" width="700" loading="lazy" />
+            <figcaption>L'onglet Sessions de la page d'options. Cliquez sur une ligne pour voir ses groupes et ses onglets.</figcaption>
+          </figure>
+
+          <h2 id="compare">Sessions Takt ou options intégrées de Chrome</h2>
+          <table>
+            <thead><tr><th></th><th>« Continue where you left off » de Chrome</th><th>Sessions Takt</th></tr></thead>
+            <tbody>
+              <tr><td>Combien</td><td>La dernière session</td><td>Jusqu'à 50, nommées</td></tr>
+              <tr><td>Ce qui est conservé</td><td>Les onglets ouverts la dernière fois</td><td>Tout instantané que vous avez enregistré, ou une sauvegarde automatique à la fermeture d'une fenêtre</td></tr>
+              <tr><td>Quand la restauration a lieu</td><td>Au démarrage de Chrome</td><td>Dès que vous cliquez sur Restaurer</td></tr>
+              <tr><td>Coût</td><td>Gratuit, intégré</td><td>Premium</td></tr>
+            </tbody>
+          </table>
+
+          <h2 id="limits">Ce que les sessions ne font pas</h2>
+          <ul>
+            <li><strong>Elles restent sur cet ordinateur.</strong> Les sessions se trouvent dans le stockage local de Chrome et ne suivent pas votre compte Google. Pour les transférer, utilisez une <a href="../backup-and-sync-tabs/">sauvegarde ou la synchronisation</a>.</li>
+            <li><strong>Ce sont des instantanés.</strong> Une session enregistrée ne change pas quand vous modifiez la fenêtre. Enregistrez de nouveau sous un autre nom pour garder une version plus récente.</li>
+            <li><strong>50, c'est le maximum.</strong> Supprimez les anciennes pour faire de la place. Les sauvegardes automatiques remplacent la plus ancienne sauvegarde automatique, jamais une session que vous avez nommée.</li>
+            <li><strong>Pas d'état de page.</strong> La restauration rouvre les URL. Le contenu des formulaires et les positions de défilement ne sont pas enregistrés.</li>
+          </ul>
+
+          <div class="cta">
+            <p>Fermez la fenêtre. Gardez le travail.</p>
+            <a class="btn" href="https://chromewebstore.google.com/detail/takt/plgfdnbgkjocmgegnkbihoeojcfphdic">Ajouter Takt à Chrome, gratuitement</a>
+          </div>
+
+          <h2 id="faq">Questions fréquentes</h2>
+          <div class="faq">
+            <details>
+              <summary>Chrome enregistre-t-il les sessions d'onglets tout seul ?</summary>
+              <p>« Continue where you left off » rouvre votre dernière session au démarrage de Chrome. Il garde cette seule session, pas une liste d'instantanés nommés.</p>
+            </details>
+            <details>
+              <summary>Combien de sessions puis-je enregistrer dans Takt ?</summary>
+              <p>Jusqu'à 50. Quand la liste est pleine, supprimez d'abord une ancienne session. Les sauvegardes automatiques font de la place en remplaçant la plus ancienne sauvegarde automatique.</p>
+            </details>
+            <details>
+              <summary>Les sessions d'onglets sont-elles gratuites dans Takt ?</summary>
+              <p>Non. Enregistrer, restaurer, renommer et sauvegarder automatiquement font partie de Premium (3 $/mois ou 30 $/an). Avec le plan Free, vous pouvez voir la liste des sessions enregistrées.</p>
+            </details>
+            <details>
+              <summary>Mes sessions sont-elles envoyées quelque part ?</summary>
+              <p>Non. Elles sont stockées dans le stockage local de Chrome, sur votre ordinateur. Elles n'en sortent que si vous exportez une sauvegarde ou activez File Sync ou Drive Sync. Voir <a href="../privacy-local-first/">comment Takt garde vos données en local</a>.</p>
+            </details>
+          </div>
+
+          <h2 id="next">À lire ensuite</h2>
+          <div class="read-next">
+            <a href="../hibernate-tabs-free-memory/">Mettre les onglets inactifs en veille<span>L'hibernation libère de la mémoire sans perdre l'onglet.</span></a>
+            <a href="../backup-and-sync-tabs/">Sauvegarder et synchroniser votre configuration<span>Export JSON, synchronisation par dossier et Google Drive.</span></a>
+          </div>
+        </div>
+
+        <footer class="blog-post-footer">
+          <a href="../../../blog/">Tous les articles</a> · <a href="../../../docs/sessions/">Référence : sessions</a>
+        </footer>
+      </article>
+    </main>
+
+    <footer id="site-footer"></footer>
+    <script src="../../../js/includes.js"></script>
+    <script src="../../../js/nav.js"></script>
+  </body>
+</html>

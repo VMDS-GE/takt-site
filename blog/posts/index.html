@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-i18n="docs.blog.posts.pageTitle">Blog posts — Takt</title>
+  <meta name="description" data-i18n-attr="content:docs.blog.listing.metaDescription" content="Tips, guides, and updates from the Takt team on tab management and browser productivity.">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="../../assets/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../../assets/favicon-16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../../assets/apple-touch-icon.png">
+
+  <meta name="theme-color" content="#FF3B30">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../css/tokens.css">
+  <link rel="stylesheet" href="../../css/base.css">
+  <link rel="stylesheet" href="../../css/layout.css">
+  <link rel="stylesheet" href="../../css/blog.css">
+
+  <script src="../../js/theme.js"></script>
+  <script type="module" src="../../js/i18n.js"></script>
+</head>
+<body>
+  <header id="site-header"></header>
+
+  <main class="blog-main">
+   <div class="blog-index">
+    <nav class="blog-sidebar" aria-label="Blog sections">
+      <ul>
+        <li><a href="../"><span data-i18n="docs.blog.listing.sections.howItWorks">How it works &amp; getting started</span> <span class="blog-sidebar-count">14</span></a></li>
+        <li><a href="../posts/" class="active" aria-current="page"><span data-i18n="docs.blog.listing.sections.posts">Blog posts</span> <span class="blog-sidebar-count">2</span></a></li>
+        <li><a href="../releases/"><span data-i18n="docs.blog.listing.sections.releases">Patch releases</span> <span class="blog-sidebar-count">1</span></a></li>
+      </ul>
+    </nav>
+    <div class="blog-index-content">
+      <p class="blog-eyebrow" data-i18n="blog.heading">Blog</p>
+      <h1 class="blog-page-title" data-i18n="docs.blog.listing.sections.posts">Blog posts</h1>
+      <section class="blog-section" id="posts">
+        <ul class="blog-list">
+        <li class="blog-list-entry">
+          <a href="../compound-and-or-rules.html">
+            <span class="blog-list-entry-title" data-i18n="docs.blog.listing.entries.compound.title">Match tabs by URL and title at the same time</span>
+            <span class="blog-list-entry-meta" data-i18n="docs.blog.listing.entries.compound.meta">June 2026</span>
+            <span class="blog-list-entry-summary" data-i18n="docs.blog.listing.entries.compound.summary">Single-condition rules sort by domain. Compound AND/OR rules sort by context: authored PRs, draft docs, specific Slack channels. Here's how to set them up.</span>
+          </a>
+        </li>
+        <li class="blog-list-entry">
+          <a href="../stop-losing-tabs.html">
+            <span class="blog-list-entry-title" data-i18n="docs.blog.listing.entries.stopLosing.title">How to stop losing tabs when you have 90+ open</span>
+            <span class="blog-list-entry-meta" data-i18n="docs.blog.listing.entries.stopLosing.meta">June 2026</span>
+            <span class="blog-list-entry-summary" data-i18n="docs.blog.listing.entries.stopLosing.summary">A flat tab bar with 90 entries is unusable. Rules-based auto-grouping, keyboard search, and hibernation fix the problem at the source.</span>
+          </a>
+        </li>
+        </ul>
+      </section>
+    </div>
+   </div>
+  </main>
+
+  <footer id="site-footer"></footer>
+
+  <script src="../../js/includes.js"></script>
+  <script src="../../js/nav.js"></script>
+</body>
+</html>

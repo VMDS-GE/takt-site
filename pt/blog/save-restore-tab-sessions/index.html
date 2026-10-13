@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Como salvar e restaurar sessões de abas no Chrome — Takt</title>
+    <meta
+      name="description"
+      content="Salve suas janelas, grupos de abas e abas soltas do Chrome como uma sessão com nome e restaure-as depois numa nova janela ou no lugar da atual. Até 50 sessões, guardadas no seu computador."
+    />
+    <link rel="canonical" href="https://taktabs.com/pt/blog/save-restore-tab-sessions/" />
+<!-- TAKT-LANG:head -->
+<link rel="alternate" hreflang="en" href="https://taktabs.com/blog/save-restore-tab-sessions/" />
+<link rel="alternate" hreflang="fr" href="https://taktabs.com/fr/blog/save-restore-tab-sessions/" />
+<link rel="alternate" hreflang="es" href="https://taktabs.com/es/blog/save-restore-tab-sessions/" />
+<link rel="alternate" hreflang="it" href="https://taktabs.com/it/blog/save-restore-tab-sessions/" />
+<link rel="alternate" hreflang="de" href="https://taktabs.com/de/blog/save-restore-tab-sessions/" />
+<link rel="alternate" hreflang="pt" href="https://taktabs.com/pt/blog/save-restore-tab-sessions/" />
+<link rel="alternate" hreflang="x-default" href="https://taktabs.com/blog/save-restore-tab-sessions/" />
+<!-- /TAKT-LANG:head -->
+    <meta property="og:type" content="article" />
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:title" content="Como salvar e restaurar sessões de abas no Chrome" />
+    <meta property="og:description" content="Dê nome a um retrato das suas janelas e grupos. Traga tudo de volta com um clique, com grupos e cores." />
+    <meta property="og:url" content="https://taktabs.com/pt/blog/save-restore-tab-sessions/" />
+    <meta property="og:image" content="https://taktabs.com/pt/blog/img/options-sessions-list.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <link rel="icon" type="image/png" sizes="32x32" href="../../../assets/favicon-32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="../../../assets/favicon-16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="../../../assets/apple-touch-icon.png" />
+    <meta name="theme-color" content="#FF3B30" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../../../css/tokens.css" />
+    <link rel="stylesheet" href="../../../css/base.css" />
+    <link rel="stylesheet" href="../../../css/layout.css" />
+    <link rel="stylesheet" href="../../../css/blog.css" />
+    <link rel="stylesheet" href="../../../css/articles.css" />
+    <script src="../../../js/theme.js"></script>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Article",
+            "headline": "Como salvar e restaurar sessões de abas no Chrome",
+            "description": "Salve janelas, grupos de abas e abas soltas do Chrome como uma sessão com nome e restaure-as depois numa nova janela ou no lugar da atual.",
+            "inLanguage": "pt",
+            "datePublished": "2026-10-08",
+            "dateModified": "2026-10-08",
+            "author": { "@type": "Person", "name": "Vitor" },
+            "publisher": { "@type": "Organization", "name": "Takt", "url": "https://taktabs.com" },
+            "image": "https://taktabs.com/pt/blog/img/options-sessions-list.png",
+            "mainEntityOfPage": "https://taktabs.com/pt/blog/save-restore-tab-sessions/"
+          },
+          {
+            "@type": "HowTo",
+            "name": "Salvar e restaurar uma sessão de abas no Chrome",
+            "step": [
+              { "@type": "HowToStep", "text": "Instale o Takt pela Chrome Web Store e abra o popup." },
+              { "@type": "HowToStep", "text": "Vá ao painel Sessões e clique em + Salvar." },
+              { "@type": "HowToStep", "text": "Digite um nome de até 60 caracteres, escolha Esta janela ou Todas as janelas e clique em Salvar." },
+              { "@type": "HowToStep", "text": "Depois, clique em Restaurar ao lado da sessão e escolha Abrir em nova janela ou Substituir janela atual." }
+            ]
+          },
+          {
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "O Chrome salva sessões de abas sozinho?",
+                "acceptedAnswer": { "@type": "Answer", "text": "\"Continuar de onde parei\" reabre sua última sessão quando o Chrome inicia. Ele guarda essa única sessão, não uma lista de retratos com nome." }
+              },
+              {
+                "@type": "Question",
+                "name": "Quantas sessões posso salvar no Takt?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Até 50. Quando a lista estiver cheia, exclua antes uma sessão mais antiga. Os salvamentos automáticos abrem espaço substituindo o salvamento automático mais antigo." }
+              },
+              {
+                "@type": "Question",
+                "name": "As sessões de abas são gratuitas no Takt?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Não. Salvar, restaurar, renomear e salvar automaticamente são Premium (US$ 3/mês ou US$ 30/ano). No plano gratuito, você pode ver a lista de sessões salvas." }
+              },
+              {
+                "@type": "Question",
+                "name": "Minhas sessões são enviadas para algum lugar?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Não. Elas ficam no armazenamento local do Chrome, no seu computador. Só saem dele se você exportar um backup ou ativar o File Sync ou o Drive Sync." }
+              }
+            ]
+          },
+          {
+            "@type": "SoftwareApplication",
+            "name": "Takt",
+            "applicationCategory": "BrowserApplication",
+            "operatingSystem": "Chrome",
+            "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <header id="site-header"></header>
+
+    <main class="blog-main">
+      <article class="blog-post article">
+        <p class="eyebrow">Sessões</p>
+        <h1 class="blog-post-title">Como salvar e restaurar sessões de abas no Chrome</h1>
+        <p class="lede">Para salvar uma sessão de abas no Chrome, tire um retrato das suas janelas e grupos com um nome e restaure esse nome quando precisar de novo. O Chrome reabre sua última sessão. Ele não guarda uma estante de sessões com nome.</p>
+        <p class="blog-post-meta">Atualizado em 8 de outubro de 2026 · 5 min de leitura</p>
+<!-- TAKT-LANG:nav -->
+<p class="lang-links"><a href="../../../blog/save-restore-tab-sessions/" hreflang="en" lang="en">English</a> · <a href="../../../fr/blog/save-restore-tab-sessions/" hreflang="fr" lang="fr">Français</a> · <a href="../../../es/blog/save-restore-tab-sessions/" hreflang="es" lang="es">Español</a> · <a href="../../../it/blog/save-restore-tab-sessions/" hreflang="it" lang="it">Italiano</a> · <a href="../../../de/blog/save-restore-tab-sessions/" hreflang="de" lang="de">Deutsch</a> · <span aria-current="true">Português</span></p>
+<!-- /TAKT-LANG:nav -->
+
+        <div class="blog-post-body">
+          <div class="tldr">
+            <p><strong>Resposta curta:</strong> no popup do Takt, abra <strong>Sessões</strong>, clique em <strong>+ Salvar</strong>, dê um nome e escolha <em>Esta janela</em> ou <em>Todas as janelas</em>. Depois, clique em <strong>Restaurar</strong> para ter as mesmas abas de volta, dentro dos mesmos grupos com nome e cor.</p>
+            <ul>
+              <li>Salva todas as abas, todos os grupos (nome, cor, estado recolhido), as abas soltas e a sua lista de abas hibernadas.</li>
+              <li>Restaure numa nova janela, ou substitua a atual.</li>
+              <li>Até 50 sessões, guardadas no seu computador. <span class="badge badge-premium">Premium</span></li>
+            </ul>
+          </div>
+
+          <h2 id="why">Por que o "Continuar de onde parei" do Chrome não basta?</h2>
+          <p>Para uma tarefa, basta. Ative-o e o Chrome reabre as abas da sua última sessão ao iniciar. Se isso é tudo de que você precisa, você não precisa de extensão.</p>
+          <p>Ele deixa de funcionar quando você alterna entre trabalhos diferentes. As abas da sua tese, as da reunião de segunda e as do planejamento da viagem não podem ser todas "a última sessão". Feche a janela da tese para abrir espaço para a reunião, e as abas da tese somem dessa lista.</p>
+          <p>Uma sessão com nome é um favorito para um espaço de trabalho inteiro. Você fecha a janela sem preocupação, porque pode trazê-la de volta pelo nome.</p>
+
+          <h2 id="save">Como salvo uma sessão de abas?</h2>
+          <ol class="steps">
+            <li>Instale o <a href="https://chromewebstore.google.com/detail/takt/plgfdnbgkjocmgegnkbihoeojcfphdic">Takt pela Chrome Web Store</a>.</li>
+            <li>Abra o popup e vá ao painel <strong>Sessões</strong>.</li>
+            <li>Clique em <strong>+ Salvar</strong> e digite um nome de até 60 caracteres. Os nomes não podem se repetir.</li>
+            <li>Escolha <em>Esta janela</em> (o padrão) ou <em>Todas as janelas</em> e clique em <strong>Salvar</strong>.</li>
+          </ol>
+
+          <figure class="narrow">
+            <img src="../img/popup-sessions.png" alt="Popup do Takt no painel Sessões, com um botão + Salvar, um campo de pesquisa e duas sessões salvas, Thesis research e Monday standup, cada uma com 14 abas, 5 grupos e 2 hibernadas, e os botões Restaurar e excluir" width="420" loading="lazy" />
+            <figcaption>O painel Sessões do popup. Cada item mostra quantas abas, grupos e abas hibernadas tem.</figcaption>
+          </figure>
+
+          <h2 id="what">O que uma sessão guarda?</h2>
+          <table>
+            <thead><tr><th>Salvo</th><th>Detalhes</th></tr></thead>
+            <tbody>
+              <tr><td>Abas</td><td>URL e título de cada aba</td></tr>
+              <tr><td>Grupos de abas</td><td>Nome, cor, estado recolhido e quais abas pertencem a cada um</td></tr>
+              <tr><td>Abas soltas</td><td>As abas fora de qualquer grupo</td></tr>
+              <tr><td>Janelas</td><td>Uma janela, ou todas as janelas normais com <em>Todas as janelas</em></td></tr>
+              <tr><td>Abas hibernadas</td><td>Sua lista de abas hibernadas, que volta para lá ao restaurar</td></tr>
+            </tbody>
+          </table>
+          <p>O Chrome não deixa extensões abrirem páginas <code>chrome://</code>, <code>about:</code> nem de extensões, então essas abas ficam de fora.</p>
+
+          <h2 id="restore">Como restauro uma sessão?</h2>
+          <p>Clique em <strong>Restaurar</strong>. Uma caixa de diálogo oferece dois modos:</p>
+          <ul>
+            <li><strong>Abrir em nova janela.</strong> Sua janela atual fica como está.</li>
+            <li><strong>Substituir janela atual.</strong> As abas salvas abrem na janela atual, e depois as abas que estavam ali se fecham.</li>
+          </ul>
+          <p>A caixa de diálogo faz uma contagem regressiva de 7 segundos e então restaura no modo selecionado. Clique em <strong>Restaurar</strong> na caixa para não esperar, ou em <strong>Cancelar</strong>. Numa sessão com várias janelas, a primeira janela segue a sua escolha e todas as outras abrem como janelas novas.</p>
+
+          <h2 id="manage">Posso renomear sessões ou salvá-las automaticamente?</h2>
+          <p>As duas coisas.</p>
+          <ul>
+            <li><strong>Renomear:</strong> clique duas vezes num nome no popup, ou use <strong>Rename</strong> na aba Sessions da página de opções. Pressione Enter para salvar.</li>
+            <li><strong>Salvar automaticamente:</strong> ative <em>Guardar automaticamente ao fechar janela</em> em Settings. Fechar uma janela salva as abas dela como uma sessão chamada "Guardado automático" seguido da data e da hora.</li>
+          </ul>
+          <p>A página de opções também deixa você expandir uma sessão para ver todos os grupos e abas dentro dela antes de restaurar.</p>
+
+          <figure>
+            <img src="../img/options-sessions-list.png" alt="Página de opções do Takt, aba Sessions: 2 sessões salvas, Thesis research e Monday standup, cada uma com 14 abas, 5 grupos, 2 hibernadas, a data de criação e os botões Restore, Rename e Delete" width="700" loading="lazy" />
+            <figcaption>A aba Sessions da página de opções. Clique numa linha para ver os grupos e as abas.</figcaption>
+          </figure>
+
+          <h2 id="compare">Sessões do Takt vs. as opções que já vêm no Chrome</h2>
+          <table>
+            <thead><tr><th></th><th>"Continuar de onde parei" do Chrome</th><th>Sessões do Takt</th></tr></thead>
+            <tbody>
+              <tr><td>Quantas</td><td>A última sessão</td><td>Até 50, com nome</td></tr>
+              <tr><td>O que guarda</td><td>As abas que você tinha abertas da última vez</td><td>Qualquer retrato que você salvou, ou um salvamento automático quando uma janela fecha</td></tr>
+              <tr><td>Quando restaura</td><td>Quando o Chrome inicia</td><td>Sempre que você clica em Restaurar</td></tr>
+              <tr><td>Custo</td><td>Grátis, já vem no Chrome</td><td>Premium</td></tr>
+            </tbody>
+          </table>
+
+          <h2 id="limits">O que as sessões não fazem</h2>
+          <ul>
+            <li><strong>Elas ficam neste computador.</strong> As sessões ficam no armazenamento local do Chrome e não acompanham sua conta do Google. Para levá-las para outro lugar, use um <a href="../backup-and-sync-tabs/">backup ou a sincronização</a>.</li>
+            <li><strong>Elas são retratos.</strong> Uma sessão salva não muda quando você muda a janela. Salve de novo com outro nome para guardar uma versão mais nova.</li>
+            <li><strong>O limite é 50.</strong> Exclua as antigas para abrir espaço. Os salvamentos automáticos substituem o salvamento automático mais antigo, nunca uma sessão que você nomeou.</li>
+            <li><strong>Sem o estado da página.</strong> Restaurar reabre as URLs. O conteúdo de formulários e a posição de rolagem não são salvos.</li>
+          </ul>
+
+          <div class="cta">
+            <p>Feche a janela. Guarde o trabalho.</p>
+            <a class="btn" href="https://chromewebstore.google.com/detail/takt/plgfdnbgkjocmgegnkbihoeojcfphdic">Adicionar o Takt ao Chrome, grátis</a>
+          </div>
+
+          <h2 id="faq">Perguntas frequentes</h2>
+          <div class="faq">
+            <details>
+              <summary>O Chrome salva sessões de abas sozinho?</summary>
+              <p>"Continuar de onde parei" reabre sua última sessão quando o Chrome inicia. Ele guarda essa única sessão, não uma lista de retratos com nome.</p>
+            </details>
+            <details>
+              <summary>Quantas sessões posso salvar no Takt?</summary>
+              <p>Até 50. Quando a lista estiver cheia, exclua antes uma sessão mais antiga. Os salvamentos automáticos abrem espaço substituindo o salvamento automático mais antigo.</p>
+            </details>
+            <details>
+              <summary>As sessões de abas são gratuitas no Takt?</summary>
+              <p>Não. Salvar, restaurar, renomear e salvar automaticamente são Premium (US$ 3/mês ou US$ 30/ano). No plano gratuito, você pode ver a lista de sessões salvas.</p>
+            </details>
+            <details>
+              <summary>Minhas sessões são enviadas para algum lugar?</summary>
+              <p>Não. Elas ficam no armazenamento local do Chrome, no seu computador. Só saem dele se você exportar um backup ou ativar o File Sync ou o Drive Sync. Veja <a href="../privacy-local-first/">como o Takt mantém os dados no seu computador</a>.</p>
+            </details>
+          </div>
+
+          <h2 id="next">Leia também</h2>
+          <div class="read-next">
+            <a href="../hibernate-tabs-free-memory/">Ponha as abas ociosas para dormir<span>A hibernação libera memória sem perder a aba.</span></a>
+            <a href="../backup-and-sync-tabs/">Faça backup e sincronize sua configuração<span>Exportação JSON, sincronização com pasta e Google Drive.</span></a>
+          </div>
+        </div>
+
+        <footer class="blog-post-footer">
+          <a href="../../../blog/">Todos os artigos</a> · <a href="../../../docs/sessions/">Referência: sessões</a>
+        </footer>
+      </article>
+    </main>
+
+    <footer id="site-footer"></footer>
+    <script src="../../../js/includes.js"></script>
+    <script src="../../../js/nav.js"></script>
+  </body>
+</html>

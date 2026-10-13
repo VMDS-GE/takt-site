@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chrome-Tabs mit einem Klick aufräumen — Takt</title>
+    <meta
+      name="description"
+      content="Alle Chrome-Tabs aus einem Popup oder per Tastaturkürzel gruppieren, Gruppen aufheben, einklappen, sortieren und Duplikate entfernen. Was jede Schaltfläche tut, was kostenlos ist und welche Tastaturkürzel sich lohnen."
+    />
+    <link rel="canonical" href="https://taktabs.com/de/blog/one-click-tab-cleanup/" />
+<!-- TAKT-LANG:head -->
+<link rel="alternate" hreflang="en" href="https://taktabs.com/blog/one-click-tab-cleanup/" />
+<link rel="alternate" hreflang="fr" href="https://taktabs.com/fr/blog/one-click-tab-cleanup/" />
+<link rel="alternate" hreflang="es" href="https://taktabs.com/es/blog/one-click-tab-cleanup/" />
+<link rel="alternate" hreflang="it" href="https://taktabs.com/it/blog/one-click-tab-cleanup/" />
+<link rel="alternate" hreflang="de" href="https://taktabs.com/de/blog/one-click-tab-cleanup/" />
+<link rel="alternate" hreflang="pt" href="https://taktabs.com/pt/blog/one-click-tab-cleanup/" />
+<link rel="alternate" hreflang="x-default" href="https://taktabs.com/blog/one-click-tab-cleanup/" />
+<!-- /TAKT-LANG:head -->
+    <meta property="og:type" content="article" />
+    <meta property="og:locale" content="de_DE" />
+    <meta property="og:title" content="Chrome-Tabs mit einem Klick aufräumen" />
+    <meta property="og:description" content="Tabs gruppieren, Alle einklappen, Nach Domain sortieren und Duplikate schließen: ein chaotischer Browser, aufgeräumt mit vier Klicks oder drei Tastaturkürzeln." />
+    <meta property="og:url" content="https://taktabs.com/de/blog/one-click-tab-cleanup/" />
+    <meta property="og:image" content="https://taktabs.com/de/blog/img/options-groups.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <link rel="icon" type="image/png" sizes="32x32" href="../../../assets/favicon-32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="../../../assets/favicon-16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="../../../assets/apple-touch-icon.png" />
+    <meta name="theme-color" content="#FF3B30" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../../../css/tokens.css" />
+    <link rel="stylesheet" href="../../../css/base.css" />
+    <link rel="stylesheet" href="../../../css/layout.css" />
+    <link rel="stylesheet" href="../../../css/blog.css" />
+    <link rel="stylesheet" href="../../../css/articles.css" />
+    <script src="../../../js/theme.js"></script>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Article",
+            "inLanguage": "de",
+            "headline": "Chrome-Tabs mit einem Klick aufräumen",
+            "description": "Alle Chrome-Tabs aus einem Popup oder mit einem Tastaturkürzel gruppieren, Gruppen aufheben, einklappen, sortieren und Duplikate entfernen.",
+            "datePublished": "2026-10-08",
+            "dateModified": "2026-10-08",
+            "author": { "@type": "Person", "name": "Vitor" },
+            "publisher": { "@type": "Organization", "name": "Takt", "url": "https://taktabs.com" },
+            "image": "https://taktabs.com/de/blog/img/options-groups.png",
+            "mainEntityOfPage": "https://taktabs.com/de/blog/one-click-tab-cleanup/"
+          },
+          {
+            "@type": "HowTo",
+            "name": "Ein chaotisches Chrome-Fenster mit vier Klicks aufräumen",
+            "step": [
+              { "@type": "HowToStep", "text": "Öffnen Sie das Takt-Popup und klicken Sie auf Duplikate schließen, um wiederholte Tabs im aktuellen Fenster zu schließen." },
+              { "@type": "HowToStep", "text": "Klicken Sie auf Tabs gruppieren (oder drücken Sie Alt+Shift+G), um jeden Tab in seine Gruppe einzuordnen." },
+              { "@type": "HowToStep", "text": "Klicken Sie auf Nach Domain sortieren, damit Tabs derselben Website nebeneinander stehen." },
+              { "@type": "HowToStep", "text": "Klicken Sie auf Alle einklappen (oder drücken Sie Alt+Shift+C), um jede Gruppe auf ihr Label einzuklappen." }
+            ]
+          },
+          {
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "Welche Tastaturkürzel hat Takt standardmäßig?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Alt+Shift+G gruppiert alle Tabs, Alt+Shift+U hebt alle Gruppen auf, Alt+Shift+C klappt alle Gruppen ein und Alt+Shift+Space öffnet Quick Switch (Premium). Alle ausklappen hat kein Standardkürzel; Sie können eines unter chrome://extensions/shortcuts zuweisen." }
+              },
+              {
+                "@type": "Question",
+                "name": "Welchen Tab behält Duplikate schließen?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Die erste Kopie in der Reihenfolge der Tab-Leiste, von links gezählt. Spätere Kopien im aktuellen Fenster werden geschlossen. Ob zwei URLs als gleich gelten, entscheidet Ihre Einstellung für den URL-Abgleich, die das #Fragment standardmäßig ignoriert." }
+              },
+              {
+                "@type": "Question",
+                "name": "Sind die Aufräum-Schaltflächen kostenlos?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Gruppieren, Gruppen aufheben, Einklappen, Ausklappen, Duplikate schließen, der Bereich Tabs und das automatische Einklappen im selben Fenster sind kostenlos. Nach Domain sortieren ist für das aktuelle Fenster kostenlos. Premium ($3/Monat oder $30/Jahr) ergänzt das Sortieren aller Fenster, Gruppenaktionen, automatisches Einklappen über Fenster hinweg und die Sammelgruppe „Andere“." }
+              },
+              {
+                "@type": "Question",
+                "name": "Kann ich eine ganze Tab-Gruppe auf einmal schließen?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Mit Premium ja. Schließen Sie eine ganze Gruppe, speichern Sie sie als Lesezeichen oder verschieben Sie sie – über die Ansicht Groups in den Takt-Optionen oder über den Eintrag Gruppenaktionen im Rechtsklickmenü der Seite. Beim Schließen bleiben angeheftete Tabs offen, und die Ansicht Groups fragt vorher nach einer Bestätigung." }
+              }
+            ]
+          },
+          {
+            "@type": "SoftwareApplication",
+            "name": "Takt",
+            "applicationCategory": "BrowserApplication",
+            "operatingSystem": "Chrome",
+            "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <header id="site-header"></header>
+
+    <main class="blog-main">
+      <article class="blog-post article">
+        <p class="eyebrow">Aufräumen</p>
+        <h1 class="blog-post-title">Chrome-Tabs mit einem Klick aufräumen</h1>
+        <p class="lede">Um Chrome-Tabs mit einem Klick aufzuräumen, öffnen Sie das Popup von Takt und klicken auf Tabs gruppieren, dann auf Alle einklappen. Zwei Klicks machen aus einer Leiste loser Tabs eine Reihe beschrifteter, eingeklappter Gruppen.</p>
+        <p class="blog-post-meta">Aktualisiert am 8. Oktober 2026 · 5 Min. Lesezeit</p>
+<!-- TAKT-LANG:nav -->
+<p class="lang-links"><a href="../../../blog/one-click-tab-cleanup/" hreflang="en" lang="en">English</a> · <a href="../../../fr/blog/one-click-tab-cleanup/" hreflang="fr" lang="fr">Français</a> · <a href="../../../es/blog/one-click-tab-cleanup/" hreflang="es" lang="es">Español</a> · <a href="../../../it/blog/one-click-tab-cleanup/" hreflang="it" lang="it">Italiano</a> · <span aria-current="true">Deutsch</span> · <a href="../../../pt/blog/one-click-tab-cleanup/" hreflang="pt" lang="pt">Português</a></p>
+<!-- /TAKT-LANG:nav -->
+
+        <div class="blog-post-body">
+          <div class="tldr">
+            <p><strong>Kurz gesagt:</strong> Takt bündelt alle Massenaktionen für Tabs in einem Popup und hinter drei Standard-Tastaturkürzeln. <kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>G</kbd> gruppiert, <kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>U</kbd> hebt Gruppen auf, <kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>C</kbd> klappt ein.</p>
+            <ul>
+              <li>Free: Gruppieren, Gruppen aufheben, Einklappen, Ausklappen, Duplikate schließen, Nach Domain sortieren (aktuelles Fenster), der Bereich Tabs.</li>
+              <li>Premium: eine ganze Gruppe schließen, als Lesezeichen speichern oder verschieben, alle Fenster sortieren, andere Fenster einklappen, eine Sammelgruppe „Andere“ für übrige Tabs.</li>
+              <li>Alles läuft auf Ihrem Computer. Kein Konto.</li>
+            </ul>
+          </div>
+
+          <h2 id="buttons">Was tut jede Aufräum-Schaltfläche?</h2>
+          <p>Der Bereich Startseite im Popup hat einen Block <strong>Schnellaktionen</strong>. Gruppieren, Gruppen aufheben, Einklappen, Ausklappen und Duplikate schließen werden grau, wenn sie nichts bewirken würden. So zeigt der Block auch den Zustand Ihrer Tabs.</p>
+
+          <figure class="narrow">
+            <img src="../img/popup-home.png" alt="Takt-Popup, Bereich Startseite mit Gruppierungsmodus Nach Regeln und dem Block Schnellaktionen: Tabs gruppieren, Alle aufheben, Alle einklappen, ein ausgegrautes Alle ausklappen, Tab in Ruhezustand, Nach Domain sortieren und Duplikate schließen, teilweise verdeckt von der Meldung „Tab in Ruhezustand versetzt“" width="420" loading="lazy" />
+            <figcaption>Schnellaktionen im Popup. Alle ausklappen ist ausgegraut, weil alle Gruppen bereits offen sind.</figcaption>
+          </figure>
+
+          <table>
+            <thead>
+              <tr><th>Schaltfläche</th><th>Was sie tut</th><th>Wirkungsbereich</th><th>Plan</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Tabs gruppieren</td><td>Ordnet Tabs nach Ihren Regeln, nach Kategorie oder per KI in Gruppen ein</td><td>Alle Fenster</td><td>Free</td></tr>
+              <tr><td>Alle aufheben</td><td>Entfernt alle Gruppen, behält alle Tabs</td><td>Alle Fenster</td><td>Free</td></tr>
+              <tr><td>Alle einklappen</td><td>Klappt jede Gruppe auf ihr Label ein</td><td>Alle Fenster</td><td>Free</td></tr>
+              <tr><td>Alle ausklappen</td><td>Öffnet jede Gruppe</td><td>Aktuelles Fenster</td><td>Free</td></tr>
+              <tr><td>Duplikate schließen</td><td>Schließt wiederholte URLs, behält die erste Kopie</td><td>Aktuelles Fenster</td><td>Free</td></tr>
+              <tr><td>Nach Domain sortieren</td><td>Stellt Tabs derselben Website nebeneinander</td><td>Aktuelles Fenster (Free), alle Fenster (Premium)</td><td>Free / Premium</td></tr>
+            </tbody>
+          </table>
+          <p>Tabs gruppieren folgt dem darüber gewählten Gruppierungsmodus. Im Kategorie- und KI-Modus legt der kostenlose Plan pro Durchlauf bis zu 5 Gruppen an. Mehr dazu unter <a href="../auto-group-tabs-chrome/">Gruppieren mit Regeln</a> und <a href="../group-tabs-by-category-or-ai/">Gruppieren nach Kategorie oder per KI</a>.</p>
+
+          <h2 id="four-clicks">Wie räume ich ein chaotisches Fenster mit vier Klicks auf?</h2>
+          <ol class="steps">
+            <li><strong>Duplikate schließen.</strong> Wiederholte Tabs in diesem Fenster werden geschlossen. Die Kopie ganz links bleibt. Wenn Sie damit anfangen, gruppieren Sie nie die Kopien.</li>
+            <li><strong>Tabs gruppieren.</strong> Jeder passende Tab landet in seiner Gruppe.</li>
+            <li><strong>Nach Domain sortieren.</strong> Innerhalb jeder Gruppe und unter den ungruppierten Tabs reihen sich Tabs derselben Website aneinander. Beim Sortieren wird nie ein Tab in eine Gruppe hinein- oder aus ihr herausbewegt.</li>
+            <li><strong>Alle einklappen.</strong> Jede Gruppe klappt auf ihr farbiges Label zusammen.</li>
+          </ol>
+          <p>Duplikate schließen behandelt zwei URLs gemäß Ihrer Einstellung für den URL-Abgleich als gleich. Standardmäßig werden das <code>#fragment</code>, ein führendes <code>www.</code>, ein abschließender Schrägstrich und die Reihenfolge der Query-Parameter ignoriert.</p>
+
+          <h2 id="shortcuts">Welche Tastaturkürzel gibt es?</h2>
+          <table>
+            <thead><tr><th>Tastaturkürzel</th><th>Aktion</th><th>Plan</th></tr></thead>
+            <tbody>
+              <tr><td><kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>G</kbd></td><td>Alle Tabs gruppieren</td><td>Free</td></tr>
+              <tr><td><kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>U</kbd></td><td>Gruppen aller Tabs aufheben</td><td>Free</td></tr>
+              <tr><td><kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>C</kbd></td><td>Alle Gruppen einklappen</td><td>Free</td></tr>
+              <tr><td><kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>Space</kbd></td><td><a href="../quick-switch-search-tabs/">Quick Switch</a>: jeden Tab suchen und direkt hinspringen</td><td>Premium</td></tr>
+              <tr><td>Standardmäßig keins</td><td>Alle Gruppen ausklappen</td><td>Free</td></tr>
+            </tbody>
+          </table>
+          <p>Chrome erlaubt einer Erweiterung höchstens vier vorgeschlagene Tastaturkürzel, deshalb hat Alle ausklappen keins. Weisen Sie unter <code>chrome://extensions/shortcuts</code> eine Taste zu. Dort können Sie auch die anderen vier ändern.</p>
+
+          <h2 id="tabs-pane">Wie sehe ich alle offenen Tabs in einer Liste?</h2>
+          <p>Öffnen Sie im Popup den Bereich <strong>Tabs</strong>. Er listet die Tabs aller Fenster unter ihren Gruppennamen auf, von A bis Z, ungruppierte Tabs zuletzt. Tippen Sie, um nach Titel oder URL zu filtern. Klicken Sie auf einen Tab, um zu ihm zu springen. Dieser Bereich ist kostenlos.</p>
+
+          <h2 id="group-actions">Kann ich eine ganze Gruppe schließen, als Lesezeichen speichern oder verschieben?</h2>
+          <p>Ja, mit Premium. Drei Aktionen wirken auf eine Gruppe als Ganzes:</p>
+          <ul>
+            <li><strong>Schließen.</strong> Schließt die Tabs der Gruppe. Angeheftete Tabs bleiben offen. Die Ansicht Groups fragt vorher nach einer Bestätigung.</li>
+            <li><strong>Lesezeichen.</strong> Speichert die Gruppe in einem Ordner „Takt Bookmarks“. Die Tabs bleiben offen. Erfordert die optionale Berechtigung Lesezeichen-Zugriff.</li>
+            <li><strong>In neues Fenster verschieben.</strong> Behält Name, Farbe und Einklappzustand der Gruppe.</li>
+          </ul>
+          <p>Sie finden sie unter Optionen → Rules → <strong>Groups</strong> oder per Rechtsklick auf eine Seite unter <strong>Gruppenaktionen</strong>. Über das Rechtsklickmenü können Sie die Gruppe außerdem in ein anderes bereits geöffnetes Fenster verschieben.</p>
+
+          <figure>
+            <img src="../img/options-groups.png" alt="Takt-Optionen, Ansicht Groups: farbige Karten für Code, Docs, Entertainment, News und Research, jeweils mit den Schaltflächen N Tab(s) schließen, Lesezeichen und In neues Fenster verschieben, dazu die Gruppen Reviews und Work ohne offene Tabs" width="700" loading="lazy" />
+            <figcaption>Die Ansicht Groups. Jede offene Gruppe hat Schließen, Lesezeichen und In neues Fenster verschieben.</figcaption>
+          </figure>
+
+          <h2 id="auto-collapse">Können sich Gruppen von selbst einklappen?</h2>
+          <p>Auf drei Arten, alle ausgeschaltet, bis Sie sie aktivieren:</p>
+          <ul>
+            <li><strong>Pro Regel.</strong> Haken Sie im Regel-Editor <em>Auto-collapse group</em> an. Eine neue Gruppe aus dieser Regel startet eingeklappt, es sei denn, sie enthält den Tab, den Sie gerade ansehen. Free.</li>
+            <li><strong>Im selben Fenster.</strong> Settings → Tab Groups → <em>Auto-collapse other groups on expand</em>. Öffnen Sie eine Gruppe, und die anderen in diesem Fenster klappen ein. Free.</li>
+            <li><strong>Über Fenster hinweg.</strong> <em>Auto-collapse groups in other windows when switching focus</em>. Wechseln Sie das Fenster, und nach 300 ms klappen die Gruppen in allen anderen Fenstern ein. Premium.</li>
+          </ul>
+
+          <figure>
+            <img src="../img/options-settings-tab-groups.png" alt="Takt Settings, Abschnitt Tab Groups mit drei nicht angehakten Kästchen: Auto-collapse other groups on expand, Auto-collapse groups in other windows when switching focus und Sammelgruppe" width="700" loading="lazy" />
+            <figcaption>Die Einstellungen unter Tab Groups. Alle drei sind standardmäßig aus.</figcaption>
+          </figure>
+
+          <h2 id="others">Was passiert mit Tabs, auf die keine Regel passt?</h2>
+          <p>Sie bleiben ungruppiert. Mit Premium aktivieren Sie die <strong>Sammelgruppe</strong>, und Tabs gruppieren sammelt jeden übrigen Tab in einer grauen Gruppe „Andere“. Angeheftete Tabs und <code>chrome://</code>-Seiten bleiben unberührt. Ein erneutes Tabs gruppieren verwendet dieselbe Gruppe „Andere“ wieder. Das gilt im Regelmodus.</p>
+
+          <h2 id="limits">Was diese Schaltflächen nicht tun</h2>
+          <ul>
+            <li><strong>Nach Domain sortieren ist einmalig.</strong> Neue Tabs werden nicht laufend sortiert. Außerdem vergleicht die Funktion die letzten beiden Teile eines Hostnamens, sodass <code>example.co.uk</code> als <code>co.uk</code> sortiert wird.</li>
+            <li><strong>Duplikate schließen bleibt in einem Fenster.</strong> Eine Kopie in einem anderen Fenster wird nicht angerührt.</li>
+            <li><strong>Gruppenaktionen sitzen im Seitenmenü.</strong> Klicken Sie mit der rechten Maustaste auf die Seite, nicht auf die Tab-Leiste.</li>
+            <li><strong>Tabs gruppieren braucht ein Kriterium.</strong> Im Regelmodus bleiben Tabs, auf die keine Regel passt, lose, außer die Sammelgruppe ist aktiv.</li>
+          </ul>
+
+          <div class="cta">
+            <p>Zwei Klicks von losen Tabs zu einer ordentlichen Reihe Gruppen.</p>
+            <a class="btn" href="https://chromewebstore.google.com/detail/takt/plgfdnbgkjocmgegnkbihoeojcfphdic">Zu Chrome hinzufügen — kostenlos</a>
+          </div>
+
+          <h2 id="faq">Häufige Fragen</h2>
+          <div class="faq">
+            <details>
+              <summary>Welche Tastaturkürzel hat Takt standardmäßig?</summary>
+              <p><kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>G</kbd> gruppiert, <kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>U</kbd> hebt Gruppen auf, <kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>C</kbd> klappt ein, und <kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>Space</kbd> öffnet Quick Switch (Premium). Alle ausklappen hat kein Standardkürzel. Weisen Sie eines unter <code>chrome://extensions/shortcuts</code> zu.</p>
+            </details>
+            <details>
+              <summary>Welchen Tab behält Duplikate schließen?</summary>
+              <p>Die erste Kopie in der Reihenfolge der Tab-Leiste, von links gezählt. Spätere Kopien im aktuellen Fenster werden geschlossen. Ihre Einstellung für den URL-Abgleich entscheidet, was als gleiche URL gilt; standardmäßig wird das <code>#fragment</code> ignoriert.</p>
+            </details>
+            <details>
+              <summary>Sind die Aufräum-Schaltflächen kostenlos?</summary>
+              <p>Gruppieren, Gruppen aufheben, Einklappen, Ausklappen, Duplikate schließen, der Bereich Tabs und das automatische Einklappen im selben Fenster sind kostenlos. Nach Domain sortieren ist für das aktuelle Fenster kostenlos. Premium ($3/Monat oder $30/Jahr) ergänzt das Sortieren aller Fenster, Gruppenaktionen, automatisches Einklappen über Fenster hinweg und die Gruppe „Andere“.</p>
+            </details>
+            <details>
+              <summary>Kann ich eine ganze Tab-Gruppe auf einmal schließen?</summary>
+              <p>Mit Premium ja: über die Ansicht Groups in den Takt-Optionen oder über <strong>Gruppenaktionen</strong> im Rechtsklickmenü der Seite. Beim Schließen bleiben angeheftete Tabs offen, und die Ansicht Groups fragt vorher nach einer Bestätigung.</p>
+            </details>
+          </div>
+
+          <h2 id="next">Weiterlesen</h2>
+          <div class="read-next">
+            <a href="../prevent-duplicate-tabs/">Nie wieder denselben Tab doppelt öffnen<span>Duplikatverhinderung, standardmäßig aktiv.</span></a>
+            <a href="../quick-switch-search-tabs/">Per Tastatur zu jedem Tab springen<span>Quick Switch sucht in allen Fenstern.</span></a>
+          </div>
+        </div>
+
+        <footer class="blog-post-footer">
+          <a href="../../../blog/">Alle Artikel zu den Funktionen</a> · <a href="../../../docs/group-actions/">Referenz: Gruppenaktionen</a> · <a href="../../../docs/shortcuts/">Tastaturkürzel</a>
+        </footer>
+      </article>
+    </main>
+
+    <footer id="site-footer"></footer>
+    <script src="../../../js/includes.js"></script>
+    <script src="../../../js/nav.js"></script>
+  </body>
+</html>

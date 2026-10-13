@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Comment ranger ses onglets Chrome en un clic — Takt</title>
+    <meta
+      name="description"
+      content="Grouper, dégrouper, réduire, trier et dédoublonner tous vos onglets Chrome depuis un seul popup ou un seul raccourci. Le rôle de chaque bouton, ce qui est gratuit, et les raccourcis à retenir."
+    />
+    <link rel="canonical" href="https://taktabs.com/fr/blog/one-click-tab-cleanup/" />
+<!-- TAKT-LANG:head -->
+<link rel="alternate" hreflang="en" href="https://taktabs.com/blog/one-click-tab-cleanup/" />
+<link rel="alternate" hreflang="fr" href="https://taktabs.com/fr/blog/one-click-tab-cleanup/" />
+<link rel="alternate" hreflang="es" href="https://taktabs.com/es/blog/one-click-tab-cleanup/" />
+<link rel="alternate" hreflang="it" href="https://taktabs.com/it/blog/one-click-tab-cleanup/" />
+<link rel="alternate" hreflang="de" href="https://taktabs.com/de/blog/one-click-tab-cleanup/" />
+<link rel="alternate" hreflang="pt" href="https://taktabs.com/pt/blog/one-click-tab-cleanup/" />
+<link rel="alternate" hreflang="x-default" href="https://taktabs.com/blog/one-click-tab-cleanup/" />
+<!-- /TAKT-LANG:head -->
+    <meta property="og:type" content="article" />
+    <meta property="og:locale" content="fr_FR" />
+    <meta property="og:title" content="Comment ranger ses onglets Chrome en un clic" />
+    <meta property="og:description" content="Grouper tout, Réduire tout, Trier par domaine et Fermer les doublons : un navigateur en désordre rangé en quatre clics ou trois raccourcis." />
+    <meta property="og:url" content="https://taktabs.com/fr/blog/one-click-tab-cleanup/" />
+    <meta property="og:image" content="https://taktabs.com/fr/blog/img/options-groups.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <link rel="icon" type="image/png" sizes="32x32" href="../../../assets/favicon-32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="../../../assets/favicon-16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="../../../assets/apple-touch-icon.png" />
+    <meta name="theme-color" content="#FF3B30" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../../../css/tokens.css" />
+    <link rel="stylesheet" href="../../../css/base.css" />
+    <link rel="stylesheet" href="../../../css/layout.css" />
+    <link rel="stylesheet" href="../../../css/blog.css" />
+    <link rel="stylesheet" href="../../../css/articles.css" />
+    <script src="../../../js/theme.js"></script>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Article",
+            "headline": "Comment ranger ses onglets Chrome en un clic",
+            "description": "Grouper, dégrouper, réduire, trier et dédoublonner tous vos onglets Chrome depuis un seul popup ou un seul raccourci clavier.",
+            "inLanguage": "fr",
+            "datePublished": "2026-10-08",
+            "dateModified": "2026-10-08",
+            "author": { "@type": "Person", "name": "Vitor" },
+            "publisher": { "@type": "Organization", "name": "Takt", "url": "https://taktabs.com" },
+            "image": "https://taktabs.com/fr/blog/img/options-groups.png",
+            "mainEntityOfPage": "https://taktabs.com/fr/blog/one-click-tab-cleanup/"
+          },
+          {
+            "@type": "HowTo",
+            "name": "Ranger une fenêtre Chrome en désordre en quatre clics",
+            "step": [
+              { "@type": "HowToStep", "text": "Ouvrez le popup de Takt et cliquez sur Fermer les doublons pour fermer les onglets répétés de la fenêtre actuelle." },
+              { "@type": "HowToStep", "text": "Cliquez sur Regrouper les onglets (ou appuyez sur Alt+Shift+G) pour ranger chaque onglet dans son groupe." },
+              { "@type": "HowToStep", "text": "Cliquez sur Trier par domaine pour que les onglets d'un même site se suivent." },
+              { "@type": "HowToStep", "text": "Cliquez sur Réduire tout (ou appuyez sur Alt+Shift+C) pour replier chaque groupe sur son étiquette." }
+            ]
+          },
+          {
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "Quels sont les raccourcis clavier par défaut de Takt ?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Alt+Shift+G regroupe tous les onglets, Alt+Shift+U les dégroupe tous, Alt+Shift+C réduit tous les groupes et Alt+Shift+Space ouvre Quick Switch (Premium). Développer tout n'a pas de touche par défaut ; vous pouvez en attribuer une sur chrome://extensions/shortcuts." }
+              },
+              {
+                "@type": "Question",
+                "name": "Quel onglet Fermer les doublons conserve-t-il ?",
+                "acceptedAnswer": { "@type": "Answer", "text": "La première copie dans l'ordre de la barre d'onglets, en partant de la gauche. Les copies suivantes de la fenêtre actuelle sont fermées. Deux URL sont considérées comme identiques selon votre réglage de correspondance d'URL, qui ignore le #fragment par défaut." }
+              },
+              {
+                "@type": "Question",
+                "name": "Les boutons de rangement sont-ils gratuits ?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Grouper, Dégrouper, Réduire, Développer, Fermer les doublons, le volet Tabs et la réduction automatique dans la même fenêtre sont gratuits. Trier par domaine est gratuit pour la fenêtre actuelle. Premium (3 $/mois ou 30 $/an) ajoute le tri de toutes les fenêtres, les actions de groupe, la réduction automatique entre fenêtres et le groupe attrape-tout Autres." }
+              },
+              {
+                "@type": "Question",
+                "name": "Puis-je fermer un groupe d'onglets entier d'un coup ?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Avec Premium, oui. Fermez, mettez en signet ou déplacez un groupe entier depuis la vue Groups des options de Takt, ou depuis l'entrée Actions de groupe du menu contextuel de la page. La fermeture ignore les onglets épinglés, et la vue Groups demande d'abord confirmation." }
+              }
+            ]
+          },
+          {
+            "@type": "SoftwareApplication",
+            "name": "Takt",
+            "applicationCategory": "BrowserApplication",
+            "operatingSystem": "Chrome",
+            "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <header id="site-header"></header>
+
+    <main class="blog-main">
+      <article class="blog-post article">
+        <p class="eyebrow">Rangement</p>
+        <h1 class="blog-post-title">Comment ranger ses onglets Chrome en un clic</h1>
+        <p class="lede">Pour ranger vos onglets Chrome en un clic, ouvrez le popup de Takt et appuyez sur Regrouper les onglets, puis sur Réduire tout. Deux clics, et une barre d'onglets en vrac devient une rangée de groupes nommés et repliés.</p>
+        <p class="blog-post-meta">Mis à jour le 8 octobre 2026 · 5 min de lecture</p>
+<!-- TAKT-LANG:nav -->
+<p class="lang-links"><a href="../../../blog/one-click-tab-cleanup/" hreflang="en" lang="en">English</a> · <span aria-current="true">Français</span> · <a href="../../../es/blog/one-click-tab-cleanup/" hreflang="es" lang="es">Español</a> · <a href="../../../it/blog/one-click-tab-cleanup/" hreflang="it" lang="it">Italiano</a> · <a href="../../../de/blog/one-click-tab-cleanup/" hreflang="de" lang="de">Deutsch</a> · <a href="../../../pt/blog/one-click-tab-cleanup/" hreflang="pt" lang="pt">Português</a></p>
+<!-- /TAKT-LANG:nav -->
+
+        <div class="blog-post-body">
+          <div class="tldr">
+            <p><strong>En bref :</strong> Takt réunit toutes les actions groupées sur les onglets dans un seul popup et derrière trois raccourcis par défaut. <kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>G</kbd> regroupe, <kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>U</kbd> dégroupe, <kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>C</kbd> réduit.</p>
+            <ul>
+              <li>Free : Grouper, Dégrouper, Réduire, Développer, Fermer les doublons, Trier par domaine (fenêtre actuelle), le volet Tabs.</li>
+              <li>Premium : fermer, mettre en signet ou déplacer un groupe entier, trier toutes les fenêtres, réduire les autres fenêtres, un groupe « Autres » pour les onglets restants.</li>
+              <li>Tout s'exécute sur votre machine. Aucun compte.</li>
+            </ul>
+          </div>
+
+          <h2 id="buttons">Que fait chaque bouton de rangement ?</h2>
+          <p>Le volet Accueil du popup contient un bloc <strong>Actions rapides</strong>. Grouper, Dégrouper, Réduire, Développer et Fermer les doublons sont grisés quand ils n'auraient aucun effet : le bloc indique donc aussi l'état de vos onglets.</p>
+
+          <figure class="narrow">
+            <img src="../img/popup-home.png" alt="Volet Accueil du popup de Takt avec le mode de regroupement réglé sur Par règles et le bloc Actions rapides : Regrouper les onglets, Dégrouper tout, Réduire tout, un Développer tout grisé, Mettre en veille, Trier par domaine et Fermer les doublons, en partie masqués par une notification « Onglet mis en veille »" width="420" loading="lazy" />
+            <figcaption>Les actions rapides du popup. Développer tout est grisé parce que tous les groupes sont déjà ouverts.</figcaption>
+          </figure>
+
+          <table>
+            <thead>
+              <tr><th>Bouton</th><th>Effet</th><th>Portée</th><th>Plan</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Regrouper les onglets</td><td>Range les onglets en groupes selon vos règles, par catégorie ou avec l'IA</td><td>Toutes les fenêtres</td><td>Free</td></tr>
+              <tr><td>Dégrouper tout</td><td>Supprime tous les groupes, garde tous les onglets</td><td>Toutes les fenêtres</td><td>Free</td></tr>
+              <tr><td>Réduire tout</td><td>Replie chaque groupe sur son étiquette</td><td>Toutes les fenêtres</td><td>Free</td></tr>
+              <tr><td>Développer tout</td><td>Ouvre tous les groupes</td><td>Fenêtre actuelle</td><td>Free</td></tr>
+              <tr><td>Fermer les doublons</td><td>Ferme les URL répétées, garde la première copie</td><td>Fenêtre actuelle</td><td>Free</td></tr>
+              <tr><td>Trier par domaine</td><td>Place côte à côte les onglets d'un même site</td><td>Fenêtre actuelle (Free), toutes les fenêtres (Premium)</td><td>Free / Premium</td></tr>
+            </tbody>
+          </table>
+          <p>Regrouper les onglets suit le mode de regroupement choisi juste au-dessus. En modes Catégorie et IA, le plan Free crée jusqu'à 5 groupes par exécution. Pour en savoir plus : <a href="../auto-group-tabs-chrome/">regrouper avec des règles</a> et <a href="../group-tabs-by-category-or-ai/">regrouper par catégorie ou par IA</a>.</p>
+
+          <h2 id="four-clicks">Comment ranger une fenêtre en désordre en quatre clics ?</h2>
+          <ol class="steps">
+            <li><strong>Fermer les doublons.</strong> Les onglets répétés de cette fenêtre se ferment. La copie la plus à gauche reste. En commençant par là, vous ne regroupez jamais les copies.</li>
+            <li><strong>Regrouper les onglets.</strong> Chaque onglet qui correspond rejoint son groupe.</li>
+            <li><strong>Trier par domaine.</strong> Dans chaque groupe, et parmi les onglets hors groupe, les onglets d'un même site s'alignent. Le tri ne fait jamais entrer ni sortir un onglet d'un groupe.</li>
+            <li><strong>Réduire tout.</strong> Chaque groupe se replie sur son étiquette colorée.</li>
+          </ol>
+          <p>Fermer les doublons considère deux URL comme identiques selon votre réglage de correspondance d'URL. Par défaut, il ignore le <code>#fragment</code>, un <code>www.</code> initial, une barre oblique finale et l'ordre des paramètres de requête.</p>
+
+          <h2 id="shortcuts">Quels sont les raccourcis clavier ?</h2>
+          <table>
+            <thead><tr><th>Raccourci</th><th>Action</th><th>Plan</th></tr></thead>
+            <tbody>
+              <tr><td><kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>G</kbd></td><td>Grouper tous les onglets</td><td>Free</td></tr>
+              <tr><td><kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>U</kbd></td><td>Dégrouper tous les onglets</td><td>Free</td></tr>
+              <tr><td><kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>C</kbd></td><td>Réduire tous les groupes</td><td>Free</td></tr>
+              <tr><td><kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>Space</kbd></td><td><a href="../quick-switch-search-tabs/">Quick Switch</a> : rechercher n'importe quel onglet et y accéder</td><td>Premium</td></tr>
+              <tr><td>Aucun par défaut</td><td>Développer tous les groupes</td><td>Free</td></tr>
+            </tbody>
+          </table>
+          <p>Chrome permet à une extension de proposer au maximum quatre raccourcis : Développer tout est donc livré sans. Attribuez-lui une touche sur <code>chrome://extensions/shortcuts</code>. Vous pouvez y modifier les quatre autres aussi.</p>
+
+          <h2 id="tabs-pane">Comment voir tous les onglets ouverts dans une seule liste ?</h2>
+          <p>Ouvrez le volet <strong>Tabs</strong> du popup. Il liste les onglets de toutes les fenêtres sous le nom de leur groupe, de A à Z, avec les onglets hors groupe à la fin. Tapez pour filtrer par titre ou par URL. Cliquez sur un onglet pour y accéder. Ce volet est gratuit.</p>
+
+          <h2 id="group-actions">Puis-je fermer, mettre en signet ou déplacer un groupe entier ?</h2>
+          <p>Oui, avec Premium. Trois actions traitent un groupe comme un tout :</p>
+          <ul>
+            <li><strong>Fermer.</strong> Ferme les onglets du groupe. Les onglets épinglés restent ouverts. La vue Groups vous demande d'abord de confirmer.</li>
+            <li><strong>Signet.</strong> Enregistre le groupe dans un dossier « Takt Bookmarks ». Les onglets restent ouverts. Nécessite la permission facultative d'accès aux signets.</li>
+            <li><strong>Déplacer vers une nouvelle fenêtre.</strong> Conserve le nom, la couleur et l'état replié du groupe.</li>
+          </ul>
+          <p>Vous les trouverez dans Options → Rules → <strong>Groups</strong>, ou en faisant un clic droit sur une page puis <strong>Actions de groupe</strong>. Le menu contextuel permet aussi de déplacer le groupe vers une autre fenêtre déjà ouverte.</p>
+
+          <figure>
+            <img src="../img/options-groups.png" alt="Options de Takt, vue Groups : des cartes colorées pour Code, Docs, Entertainment, News et Research, chacune avec les boutons Fermer N onglet(s), Signet et Déplacer vers une nouvelle fenêtre, ainsi que les groupes Reviews et Work sans onglets ouverts" width="700" loading="lazy" />
+            <figcaption>La vue Groups. Chaque groupe ouvert dispose de Fermer, Signet et Déplacer vers une nouvelle fenêtre.</figcaption>
+          </figure>
+
+          <h2 id="auto-collapse">Les groupes peuvent-ils se replier tout seuls ?</h2>
+          <p>De trois façons, toutes désactivées tant que vous ne les activez pas :</p>
+          <ul>
+            <li><strong>Par règle.</strong> Cochez <em>Auto-collapse group</em> dans l'éditeur de règles. Un nouveau groupe créé par cette règle démarre replié, sauf s'il contient l'onglet que vous regardez. Gratuit.</li>
+            <li><strong>Dans la même fenêtre.</strong> Settings → Tab Groups → <em>Auto-collapse other groups on expand</em>. Ouvrez un groupe et les autres de cette fenêtre se replient. Gratuit.</li>
+            <li><strong>Entre les fenêtres.</strong> <em>Auto-collapse groups in other windows when switching focus</em>. Changez de fenêtre et, après 300 ms, les groupes de toutes les autres fenêtres se replient. Premium.</li>
+          </ul>
+
+          <figure>
+            <img src="../img/options-settings-tab-groups.png" alt="Settings de Takt, section Tab Groups avec trois cases décochées : Auto-collapse other groups on expand, Auto-collapse groups in other windows when switching focus et Others catch-all group" width="700" loading="lazy" />
+            <figcaption>Les réglages Tab Groups. Tous trois sont désactivés par défaut.</figcaption>
+          </figure>
+
+          <h2 id="others">Que deviennent les onglets qu'aucune règle ne capte ?</h2>
+          <p>Ils restent hors groupe. Avec Premium, activez <strong>Others catch-all group</strong> : Regrouper les onglets rassemble alors tous les onglets restants dans un groupe gris « Autres ». Les onglets épinglés et les pages <code>chrome://</code> ne sont pas touchés. Relancer Regrouper les onglets réutilise le même groupe Autres. Cela s'applique en mode Par règles.</p>
+
+          <h2 id="limits">Ce que ces boutons ne font pas</h2>
+          <ul>
+            <li><strong>Trier par domaine est une action ponctuelle.</strong> Les nouveaux onglets ne restent pas triés. Le tri compare aussi les deux dernières parties du nom d'hôte : <code>example.co.uk</code> est donc trié comme <code>co.uk</code>.</li>
+            <li><strong>Fermer les doublons reste dans une seule fenêtre.</strong> Une copie ouverte dans une autre fenêtre n'est pas touchée.</li>
+            <li><strong>Les actions de groupe se trouvent dans le menu de la page.</strong> Faites un clic droit sur la page, pas sur la barre d'onglets.</li>
+            <li><strong>Regrouper les onglets a besoin d'un critère.</strong> En mode Par règles, les onglets qu'aucune règle ne capte restent en vrac, sauf si Autres est activé.</li>
+          </ul>
+
+          <div class="cta">
+            <p>Deux clics entre des onglets en vrac et une rangée de groupes bien rangée.</p>
+            <a class="btn" href="https://chromewebstore.google.com/detail/takt/plgfdnbgkjocmgegnkbihoeojcfphdic">Ajouter Takt à Chrome, gratuitement</a>
+          </div>
+
+          <h2 id="faq">Questions fréquentes</h2>
+          <div class="faq">
+            <details>
+              <summary>Quels sont les raccourcis clavier par défaut de Takt ?</summary>
+              <p><kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>G</kbd> regroupe, <kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>U</kbd> dégroupe, <kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>C</kbd> réduit, et <kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>Space</kbd> ouvre Quick Switch (Premium). Développer tout n'a pas de touche par défaut. Attribuez-en une sur <code>chrome://extensions/shortcuts</code>.</p>
+            </details>
+            <details>
+              <summary>Quel onglet Fermer les doublons conserve-t-il ?</summary>
+              <p>La première copie dans l'ordre de la barre d'onglets, en partant de la gauche. Les copies suivantes de la fenêtre actuelle se ferment. Votre réglage de correspondance d'URL détermine ce qui compte comme une même URL ; par défaut, le <code>#fragment</code> est ignoré.</p>
+            </details>
+            <details>
+              <summary>Les boutons de rangement sont-ils gratuits ?</summary>
+              <p>Grouper, Dégrouper, Réduire, Développer, Fermer les doublons, le volet Tabs et la réduction automatique dans la même fenêtre sont gratuits. Trier par domaine est gratuit pour la fenêtre actuelle. Premium (3 $/mois ou 30 $/an) ajoute le tri de toutes les fenêtres, les actions de groupe, la réduction automatique entre fenêtres et le groupe Autres.</p>
+            </details>
+            <details>
+              <summary>Puis-je fermer un groupe d'onglets entier d'un coup ?</summary>
+              <p>Avec Premium, oui : depuis la vue Groups des options de Takt, ou depuis <strong>Actions de groupe</strong> dans le menu contextuel de la page. La fermeture ignore les onglets épinglés, et la vue Groups vous demande d'abord de confirmer.</p>
+            </details>
+          </div>
+
+          <h2 id="next">À lire ensuite</h2>
+          <div class="read-next">
+            <a href="../prevent-duplicate-tabs/">Ne plus ouvrir deux fois le même onglet<span>La prévention des doublons, activée par défaut.</span></a>
+            <a href="../quick-switch-search-tabs/">Accéder à n'importe quel onglet au clavier<span>La recherche Quick Switch dans toutes les fenêtres.</span></a>
+          </div>
+        </div>
+
+        <footer class="blog-post-footer">
+          <a href="../../../blog/">Tous les articles</a> · <a href="../../../docs/group-actions/">Référence : actions de groupe</a> · <a href="../../../docs/shortcuts/">Raccourcis clavier</a>
+        </footer>
+      </article>
+    </main>
+
+    <footer id="site-footer"></footer>
+    <script src="../../../js/includes.js"></script>
+    <script src="../../../js/nav.js"></script>
+  </body>
+</html>

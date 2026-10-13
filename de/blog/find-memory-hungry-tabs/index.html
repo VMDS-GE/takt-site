@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Welche Chrome-Tabs verbrauchen am meisten Arbeitsspeicher? So sehen Sie es — Takt</title>
+    <meta
+      name="description"
+      content="Sehen Sie, welche Chrome-Tabs und Tab-Gruppen am meisten Arbeitsspeicher verbrauchen: Schätzungen pro Tab, Gesundheitsbewertungen von A bis F pro Gruppe, Netzwerkaktivität im Hintergrund, eine Systemspeicher-Anzeige und Speicherbudgets pro Gruppe. Und wie jede Zahl berechnet wird."
+    />
+    <link rel="canonical" href="https://taktabs.com/de/blog/find-memory-hungry-tabs/" />
+<!-- TAKT-LANG:head -->
+<link rel="alternate" hreflang="en" href="https://taktabs.com/blog/find-memory-hungry-tabs/" />
+<link rel="alternate" hreflang="fr" href="https://taktabs.com/fr/blog/find-memory-hungry-tabs/" />
+<link rel="alternate" hreflang="es" href="https://taktabs.com/es/blog/find-memory-hungry-tabs/" />
+<link rel="alternate" hreflang="it" href="https://taktabs.com/it/blog/find-memory-hungry-tabs/" />
+<link rel="alternate" hreflang="de" href="https://taktabs.com/de/blog/find-memory-hungry-tabs/" />
+<link rel="alternate" hreflang="pt" href="https://taktabs.com/pt/blog/find-memory-hungry-tabs/" />
+<link rel="alternate" hreflang="x-default" href="https://taktabs.com/blog/find-memory-hungry-tabs/" />
+<!-- /TAKT-LANG:head -->
+    <meta property="og:type" content="article" />
+    <meta property="og:locale" content="de_DE" />
+    <meta property="og:title" content="Welche Chrome-Tabs verbrauchen am meisten Arbeitsspeicher?" />
+    <meta property="og:description" content="Speicherschätzungen pro Tab, Gesundheitsbewertungen von A bis F pro Gruppe und Speicherbudgets, alles gemessen in Ihrem Browser." />
+    <meta property="og:url" content="https://taktabs.com/de/blog/find-memory-hungry-tabs/" />
+    <meta property="og:image" content="https://taktabs.com/de/blog/img/options-dashboard-memory.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <link rel="icon" type="image/png" sizes="32x32" href="../../../assets/favicon-32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="../../../assets/favicon-16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="../../../assets/apple-touch-icon.png" />
+    <meta name="theme-color" content="#FF3B30" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../../../css/tokens.css" />
+    <link rel="stylesheet" href="../../../css/base.css" />
+    <link rel="stylesheet" href="../../../css/layout.css" />
+    <link rel="stylesheet" href="../../../css/blog.css" />
+    <link rel="stylesheet" href="../../../css/articles.css" />
+    <script src="../../../js/theme.js"></script>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Article",
+            "inLanguage": "de",
+            "headline": "Welche Chrome-Tabs verbrauchen am meisten Arbeitsspeicher?",
+            "description": "Speicherschätzungen pro Tab, Gesundheitsbewertungen von A bis F pro Tab-Gruppe, Netzwerkaktivität im Hintergrund und Speicherbudgets pro Gruppe im Ressourcen-Dashboard von Takt, und wie jede Zahl berechnet wird.",
+            "datePublished": "2026-10-08",
+            "dateModified": "2026-10-08",
+            "author": { "@type": "Person", "name": "Vitor" },
+            "publisher": { "@type": "Organization", "name": "Takt", "url": "https://taktabs.com" },
+            "image": "https://taktabs.com/de/blog/img/options-dashboard-memory.png",
+            "mainEntityOfPage": "https://taktabs.com/de/blog/find-memory-hungry-tabs/"
+          },
+          {
+            "@type": "HowTo",
+            "name": "Die Chrome-Tabs finden, die am meisten Arbeitsspeicher verbrauchen",
+            "step": [
+              { "@type": "HowToStep", "text": "Installieren Sie Takt und upgraden Sie auf Premium; das Ressourcen-Dashboard ist eine Premium-Funktion." },
+              { "@type": "HowToStep", "text": "Erteilen Sie unter Optionen → Settings → Berechtigungen den Zugriff auf alle Websites und optional Netzwerküberwachung und Systemspeicherzugriff." },
+              { "@type": "HowToStep", "text": "Öffnen Sie Optionen → Dashboard. Die Gruppen sind nach geschätztem Speicherverbrauch sortiert; jede Karte einer Tab-Gruppe listet ihre Tabs nach Speicher sortiert auf." },
+              { "@type": "HowToStep", "text": "Klicken Sie neben einer Aussetz-Empfehlung auf Aussetzen, oder legen Sie unter Settings → Memory Budgets ein Speicherbudget pro Gruppe fest." }
+            ]
+          },
+          {
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "Wie schätzt Takt den Arbeitsspeicher eines Tabs?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Es führt ein kurzes Skript im Tab aus und addiert vier Anteile: den belegten JavaScript-Heap, die Anzahl der DOM-Knoten mal etwa 1,5 KB, die dekodierte Größe der von der Seite geladenen Ressourcen und Canvas-Puffer mit Breite × Höhe × 4 Byte. Das ist eine Schätzung, am besten geeignet, um Tabs in eine Rangfolge zu bringen." }
+              },
+              {
+                "@type": "Question",
+                "name": "Warum zeigt die Spalte Speicher einen Strich?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Die Berechtigung Zugriff auf alle Websites ist nicht erteilt, der Tab ist angehalten, oder es ist eine Seite, auf der Erweiterungen keine Skripte ausführen dürfen, etwa chrome://-Seiten." }
+              },
+              {
+                "@type": "Question",
+                "name": "Ist das Ressourcen-Dashboard kostenlos?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Nein. Das Ressourcen-Dashboard und die Speicherbudgets sind Premium, für $3/Monat oder $30/Jahr." }
+              },
+              {
+                "@type": "Question",
+                "name": "Sendet Takt meine Tab-Daten irgendwohin, um sie zu messen?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Nein. Jede Messung läuft in Ihrem Browser. Nichts wird von einem externen Dienst gemessen." }
+              }
+            ]
+          },
+          {
+            "@type": "SoftwareApplication",
+            "name": "Takt",
+            "applicationCategory": "BrowserApplication",
+            "operatingSystem": "Chrome",
+            "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <header id="site-header"></header>
+
+    <main class="blog-main">
+      <article class="blog-post article">
+        <p class="eyebrow">Ressourcen-Dashboard <span class="badge badge-premium">Premium</span></p>
+        <h1 class="blog-post-title">Welche Chrome-Tabs verbrauchen am meisten Arbeitsspeicher?</h1>
+        <p class="lede">Um zu sehen, welche Chrome-Tabs am meisten Arbeitsspeicher verbrauchen, brauchen Sie Zahlen für alle Tabs nebeneinander, gruppiert so, wie Sie arbeiten. Das Ressourcen-Dashboard von Takt zeigt eine Speicherschätzung pro Tab, eine Summe pro Tab-Gruppe und eine Gesundheitsbewertung von A bis F, aktualisiert alle 10 Sekunden.</p>
+        <p class="blog-post-meta">Aktualisiert am 8. Oktober 2026 · 6 Min. Lesezeit</p>
+<!-- TAKT-LANG:nav -->
+<p class="lang-links"><a href="../../../blog/find-memory-hungry-tabs/" hreflang="en" lang="en">English</a> · <a href="../../../fr/blog/find-memory-hungry-tabs/" hreflang="fr" lang="fr">Français</a> · <a href="../../../es/blog/find-memory-hungry-tabs/" hreflang="es" lang="es">Español</a> · <a href="../../../it/blog/find-memory-hungry-tabs/" hreflang="it" lang="it">Italiano</a> · <span aria-current="true">Deutsch</span> · <a href="../../../pt/blog/find-memory-hungry-tabs/" hreflang="pt" lang="pt">Português</a></p>
+<!-- /TAKT-LANG:nav -->
+
+        <div class="blog-post-body">
+          <div class="tldr">
+            <p><strong>Kurz gesagt:</strong> Öffnen Sie in Takt <strong>Optionen → Dashboard</strong>. Die Gruppen sind nach geschätztem Speicherverbrauch geordnet, und die Tabs jeder Gruppe sind nach Größe sortiert, der größte zuerst.</p>
+            <ul>
+              <li>Speicherschätzung pro Tab, Leerlaufzeit, Drittanbieter-Domains und Hintergrundaktivität.</li>
+              <li>Gesundheitsbewertung von A bis F pro Tab-Gruppe, eine Systemspeicher-Anzeige und Speicherbudgets, die Tabs für Sie anhalten.</li>
+              <li>Premium ($3/Monat oder $30/Jahr). Gemessen in Ihrem Browser, von nichts außerhalb davon.</li>
+            </ul>
+          </div>
+
+          <h2 id="why">Warum ist so schwer zu erkennen, welcher Tab Speicher verbraucht?</h2>
+          <p>Chrome zeigt einen Speicherwert in der Hover-Karte eines Tabs, immer nur für einen Tab. Bei 30 offenen Tabs sind das 30-mal Mauszeiger drüber, und Summen gibt es keine.</p>
+          <p>Meist interessiert Sie ein einzelner Tab ohnehin nicht. Sie wollen wissen, ob „Research“ oder „Entertainment“ die Gruppe ist, die Sie schließen sollten. Deshalb addiert Takt den Speicher pro Tab-Gruppe.</p>
+
+          <figure>
+            <img src="../img/options-dashboard-memory.png" alt="Oberer Teil des Ressourcen-Dashboards von Takt: eine Anzeige System-RAM mit 26.9 GB von 32.0 GB belegt (84%), davon Tabs 0.2 GB, 5.1 GB frei; ein Feld Lebenszyklus mit 0 ausgesetzt, 2 ruhend, ca. 100 MB gespart, 2 heute; und eine Gruppenübersicht mit Code bei 149 MB, Entertainment 71 MB, Research 15 MB, Docs 14 MB, News 2 MB und nicht gruppierten Tabs 1 MB, jeweils mit Gesundheitsbewertung A und Tab-Anzahl" width="700" loading="lazy" />
+            <figcaption>Systemspeicher, Lebenszyklus-Zähler und Gruppen nach geschätztem Speicherverbrauch geordnet.</figcaption>
+          </figure>
+
+          <h2 id="estimate">Wie schätzt Takt den Arbeitsspeicher eines Tabs?</h2>
+          <p>Takt führt in jedem Tab ein kurzes Skript aus und addiert vier Anteile:</p>
+          <table>
+            <thead><tr><th>Anteil</th><th>Wie er gemessen wird</th></tr></thead>
+            <tbody>
+              <tr><td>JavaScript-Heap</td><td>Belegter Heap, wie Chrome ihn der Seite meldet</td></tr>
+              <tr><td>DOM-Baum</td><td>Anzahl der Elemente × etwa 1,5 KB</td></tr>
+              <tr><td>Geladene Ressourcen</td><td>Dekodierte Größe jeder Datei, die die Seite geladen hat</td></tr>
+              <tr><td>Canvas-Puffer</td><td>Breite × Höhe × 4 Byte pro Canvas</td></tr>
+            </tbody>
+          </table>
+          <p>Betrachten Sie das Ergebnis als Rangfolge, nicht als Rechnung. Der Grundverbrauch des Browsers pro Tab fehlt darin, daher kann Chromes Wert für denselben Tab abweichen.</p>
+          <p>Manche Tabs lassen sich nicht messen. In angehaltenen Tabs läuft nichts. Chrome-Seiten (<code>chrome://</code>), Erweiterungsseiten und der Chrome Web Store erlauben keine Skripte; sie erscheinen unter <strong>Nicht überwachte Tabs</strong>. Antwortet ein Tab nicht innerhalb von 3 Sekunden, zeigt Takt seinen letzten bekannten Wert.</p>
+
+          <figure>
+            <img src="../img/options-dashboard-tab-table.png" alt="Die Karte der Gruppe Code im Ressourcen-Dashboard von Takt: 4 Tabs, 149 MB, mit einer Schaltfläche Alle schließen und einer nach Speicher sortierten Tab-Tabelle (49, 41, 29 und 29 MB), jeweils mit Spalten für Leerlaufzeit, Anzahl der Drittanbieter-Domains und Hintergrundaktivität" width="700" loading="lazy" />
+            <figcaption>Jede Gruppenkarte listet ihre Tabs auf. Klicken Sie auf eine Spaltenüberschrift, um zu sortieren.</figcaption>
+          </figure>
+
+          <h2 id="health">Was bedeuten die Gesundheitsbewertungen von A bis F?</h2>
+          <p>Jede Gruppe startet mit 100 Punkten und verliert Punkte anhand von vier Faktoren:</p>
+          <table>
+            <thead><tr><th>Faktor</th><th>Bedingung</th><th>Abzug</th></tr></thead>
+            <tbody>
+              <tr><td>Speicher (Gruppensumme)</td><td>Über 500 MB / über 200 MB</td><td>−30 / −15</td></tr>
+              <tr><td>Durchschnittliche Leerlaufzeit</td><td>Über 60 Min. / über 30 Min.</td><td>−20 / −10</td></tr>
+              <tr><td>Tabs mit Hintergrundaktivität</td><td>Mehr als 3 / mindestens 1</td><td>−20 / −10</td></tr>
+              <tr><td>Drittanbieter-Domains</td><td>Über 50 / über 20</td><td>−15 / −5</td></tr>
+            </tbody>
+          </table>
+          <p>Noten: A ab 90, B 75 bis 89, C 60 bis 74, D 40 bis 59, F unter 40. Eine Gruppe mit 300 MB, deren Tabs im Schnitt 45 Minuten inaktiv sind, kommt auf 75: ein B.</p>
+          <p>„Hintergrundaktivität“ heißt, dass der Tab in den letzten 60 Sekunden eine Netzwerkanfrage abgeschlossen hat. „Drittanbieter“ ist jede Domain außer der eigenen Website des Tabs und ihren Subdomains. Gängige CDNs werden gesondert gezählt, damit sie die Bewertung nicht aufblähen.</p>
+
+          <h2 id="act">Was tue ich, wenn ich die schweren Tabs gefunden habe?</h2>
+          <ul>
+            <li><strong>Aussetz-Empfehlungen.</strong> Takt listet 5 Tabs zum Anhalten auf, geordnet nach Speicher und Leerlaufzeit, mit zusätzlichem Gewicht für Hintergrundaktivität. Ausgenommen sind der aktive Tab, angeheftete Tabs und ein Tab, der allein in seiner Gruppe ist. Klicken Sie auf <strong>Aussetzen</strong>, um einen anzuhalten.</li>
+            <li><strong>Alle schließen</strong> auf einer Gruppenkarte schließt diese Gruppe.</li>
+            <li><strong>Hibernieren</strong> Sie einen Tab, den Sie später zurückhaben möchten. Siehe <a href="../hibernate-tabs-free-memory/">wie die Hibernierung funktioniert</a>.</li>
+          </ul>
+
+          <h2 id="budget">Kann ich begrenzen, wie viel Arbeitsspeicher eine Tab-Gruppe verbraucht?</h2>
+          <p>Ja. Geben Sie unter <strong>Settings → Memory Budgets</strong> einen Gruppennamen und eine Grenze in MB ein. Takt prüft die Budgets alle 15 Sekunden.</p>
+          <p>Überschreitet eine Gruppe ihr Budget, erhalten Sie eine Benachrichtigung: die Gruppe, ihr Verbrauch, ihr Budget und „Suspending tabs in 10s — click to cancel“. Ignorieren Sie sie, hält Takt die größten Tabs dieser Gruppe an, bis sie wieder unter dem Budget liegt. Der aktive Tab, angeheftete Tabs und Tabs, die Audio abspielen, bleiben immer unberührt. Klicken Sie auf die Benachrichtigung, um abzubrechen.</p>
+          <p>Budgets beruhen auf denselben Schätzungen und brauchen deshalb ebenfalls den Zugriff auf alle Websites.</p>
+
+          <h2 id="permissions">Welche Berechtigungen braucht das Dashboard?</h2>
+          <p>Bei der Installation keine. Sie erteilen jede einzeln unter <strong>Settings → Berechtigungen</strong> und können sie dort jederzeit widerrufen.</p>
+          <table>
+            <thead><tr><th>Berechtigung</th><th>Was sie ergänzt</th><th>Ohne sie</th></tr></thead>
+            <tbody>
+              <tr><td>Zugriff auf alle Websites</td><td>Speicherschätzungen pro Tab</td><td>Speicher zeigt „—“</td></tr>
+              <tr><td>Netzwerküberwachung</td><td>Drittanbieter-Domains und Hintergrundaktivität (braucht zusätzlich Zugriff auf alle Websites)</td><td>Keine Netzwerkspalten</td></tr>
+              <tr><td>Systemspeicherzugriff</td><td>Die Anzeige des System-RAM</td><td>„Systemspeicher nicht verfügbar“</td></tr>
+            </tbody>
+          </table>
+          <p>Die Netzwerküberwachung sieht nur Anfragen, die nach dem Erteilen gestellt werden. Laden Sie offene Tabs neu, damit die Zählung beginnt. Takt liest Adressen und Zeitpunkte der Anfragen, keine Seiteninhalte.</p>
+
+          <figure>
+            <img src="../img/options-settings-permissions-dashboard.png" alt="Die Berechtigungseinstellungen von Takt mit den Schaltflächen Alle Berechtigungen erteilen und Alle Berechtigungen widerrufen und Schaltern für Netzwerküberwachung, Systemspeicherzugriff und Zugriff auf alle Websites, jeweils mit einer Beschreibung, welche Dashboard-Funktionen sie ermöglichen und was ohne sie fehlt" width="700" loading="lazy" />
+            <figcaption>Jede optionale Berechtigung nennt die Dashboard-Funktionen, die sie ergänzt.</figcaption>
+          </figure>
+
+          <h2 id="limits">Was das Dashboard Ihnen nicht sagen kann</h2>
+          <p>Es schätzt den Speicher der Seiten. Chromes Prozessliste liest es nicht, deshalb sieht es weder GPU-Speicher noch Erweiterungen noch den Browser selbst. Zeigt die Systemanzeige den Großteil Ihres RAM unter „Andere“, geht dieser Speicher an andere Apps oder an Chrome selbst, nicht an das, was Ihre Seiten belegen.</p>
+
+          <div class="cta">
+            <p>Die Gruppe finden, die Ihren RAM frisst. Und sie dann schlafen legen.</p>
+            <a class="btn" href="https://chromewebstore.google.com/detail/takt/plgfdnbgkjocmgegnkbihoeojcfphdic">Zu Chrome hinzufügen</a>
+          </div>
+
+          <h2 id="faq">Häufige Fragen</h2>
+          <div class="faq">
+            <details>
+              <summary>Wie schätzt Takt den Arbeitsspeicher eines Tabs?</summary>
+              <p>Es addiert den belegten JavaScript-Heap, die Anzahl der Elemente × etwa 1,5 KB, die dekodierte Größe der geladenen Ressourcen und Canvas-Puffer mit Breite × Höhe × 4 Byte. Nutzen Sie das, um Tabs in eine Rangfolge zu bringen.</p>
+            </details>
+            <details>
+              <summary>Warum zeigt die Spalte Speicher einen Strich?</summary>
+              <p>Der Zugriff auf alle Websites ist nicht erteilt, der Tab ist angehalten, oder es ist eine Seite, auf der Erweiterungen keine Skripte ausführen dürfen, etwa <code>chrome://</code>-Seiten.</p>
+            </details>
+            <details>
+              <summary>Ist das Ressourcen-Dashboard kostenlos?</summary>
+              <p>Nein. Dashboard und Speicherbudgets sind Premium, für $3/Monat oder $30/Jahr.</p>
+            </details>
+            <details>
+              <summary>Sendet Takt meine Tab-Daten irgendwohin, um sie zu messen?</summary>
+              <p>Nein. Jede Messung läuft in Ihrem Browser. Siehe <a href="../privacy-local-first/">wie Takt Daten lokal hält</a>.</p>
+            </details>
+          </div>
+
+          <h2 id="next">Weiterlesen</h2>
+          <div class="read-next">
+            <a href="../hibernate-tabs-free-memory/">Tabs in den Ruhezustand versetzen und Speicher freigeben<span>Inaktive Tabs anhalten, dort aufwecken, wo Sie aufgehört haben.</span></a>
+            <a href="../free-vs-premium/">Takt Free und Premium<span>Alle Grenzen im direkten Vergleich.</span></a>
+          </div>
+        </div>
+
+        <footer class="blog-post-footer">
+          <a href="../../../blog/">Alle Artikel zu den Funktionen</a> · <a href="../../../docs/resources/">Referenz: Ressourcen-Dashboard</a>
+        </footer>
+      </article>
+    </main>
+
+    <footer id="site-footer"></footer>
+    <script src="../../../js/includes.js"></script>
+    <script src="../../../js/nav.js"></script>
+  </body>
+</html>

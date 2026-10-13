@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>How to clean up Chrome tabs in one click — Takt</title>
+    <meta
+      name="description"
+      content="Group, ungroup, collapse, sort and de-duplicate every Chrome tab from one popup or one shortcut. What each button does, what's free, and the shortcuts to learn."
+    />
+    <link rel="canonical" href="https://taktabs.com/blog/one-click-tab-cleanup/" />
+<!-- TAKT-LANG:head -->
+<link rel="alternate" hreflang="en" href="https://taktabs.com/blog/one-click-tab-cleanup/" />
+<link rel="alternate" hreflang="fr" href="https://taktabs.com/fr/blog/one-click-tab-cleanup/" />
+<link rel="alternate" hreflang="es" href="https://taktabs.com/es/blog/one-click-tab-cleanup/" />
+<link rel="alternate" hreflang="it" href="https://taktabs.com/it/blog/one-click-tab-cleanup/" />
+<link rel="alternate" hreflang="de" href="https://taktabs.com/de/blog/one-click-tab-cleanup/" />
+<link rel="alternate" hreflang="pt" href="https://taktabs.com/pt/blog/one-click-tab-cleanup/" />
+<link rel="alternate" hreflang="x-default" href="https://taktabs.com/blog/one-click-tab-cleanup/" />
+<!-- /TAKT-LANG:head -->
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="How to clean up Chrome tabs in one click" />
+    <meta property="og:description" content="Group Tabs, Collapse All, Sort by Domain and Close Duplicates: a messy browser tidied in four clicks or three shortcuts." />
+    <meta property="og:url" content="https://taktabs.com/blog/one-click-tab-cleanup/" />
+    <meta property="og:image" content="https://taktabs.com/blog/img/options-groups.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <link rel="icon" type="image/png" sizes="32x32" href="../../assets/favicon-32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="../../assets/favicon-16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="../../assets/apple-touch-icon.png" />
+    <meta name="theme-color" content="#FF3B30" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../../css/tokens.css" />
+    <link rel="stylesheet" href="../../css/base.css" />
+    <link rel="stylesheet" href="../../css/layout.css" />
+    <link rel="stylesheet" href="../../css/blog.css" />
+    <link rel="stylesheet" href="../../css/articles.css" />
+    <script src="../../js/theme.js"></script>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Article",
+            "headline": "How to clean up Chrome tabs in one click",
+            "description": "Group, ungroup, collapse, sort and de-duplicate every Chrome tab from one popup or one keyboard shortcut.",
+            "datePublished": "2026-10-08",
+            "dateModified": "2026-10-08",
+            "author": { "@type": "Person", "name": "Vitor" },
+            "publisher": { "@type": "Organization", "name": "Takt", "url": "https://taktabs.com" },
+            "image": "https://taktabs.com/blog/img/options-groups.png",
+            "mainEntityOfPage": "https://taktabs.com/blog/one-click-tab-cleanup/"
+          },
+          {
+            "@type": "HowTo",
+            "name": "Clean up a messy Chrome window in four clicks",
+            "step": [
+              { "@type": "HowToStep", "text": "Open the Takt popup and click Close Duplicates to close repeated tabs in the current window." },
+              { "@type": "HowToStep", "text": "Click Group Tabs (or press Alt+Shift+G) to file every tab into its group." },
+              { "@type": "HowToStep", "text": "Click Sort by Domain so tabs from the same site sit next to each other." },
+              { "@type": "HowToStep", "text": "Click Collapse All (or press Alt+Shift+C) to fold every group down to its label." }
+            ]
+          },
+          {
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "What are Takt's default keyboard shortcuts?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Alt+Shift+G groups all tabs, Alt+Shift+U ungroups all tabs, Alt+Shift+C collapses all groups and Alt+Shift+Space opens Quick Switch (Premium). Expand All has no default key; you can assign one at chrome://extensions/shortcuts." }
+              },
+              {
+                "@type": "Question",
+                "name": "Which tab does Close Duplicates keep?",
+                "acceptedAnswer": { "@type": "Answer", "text": "The first copy in tab-strip order, leftmost first. Later copies in the current window are closed. Two URLs count as the same according to your URL matching setting, which ignores the #fragment by default." }
+              },
+              {
+                "@type": "Question",
+                "name": "Are the cleanup buttons free?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Group, Ungroup, Collapse, Expand, Close Duplicates, the Tabs pane and same-window auto-collapse are free. Sort by Domain is free for the current window. Premium ($3/month or $30/year) adds sorting every window, group actions, cross-window auto-collapse and the Others catch-all group." }
+              },
+              {
+                "@type": "Question",
+                "name": "Can I close a whole tab group at once?",
+                "acceptedAnswer": { "@type": "Answer", "text": "With Premium, yes. Close, bookmark or move a whole group from the Groups view in Takt's options, or from the Group actions entry in the page's right-click menu. Close Group skips pinned tabs, and the Groups view asks for confirmation first." }
+              }
+            ]
+          },
+          {
+            "@type": "SoftwareApplication",
+            "name": "Takt",
+            "applicationCategory": "BrowserApplication",
+            "operatingSystem": "Chrome",
+            "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <header id="site-header"></header>
+
+    <main class="blog-main">
+      <article class="blog-post article">
+        <p class="eyebrow">Cleanup</p>
+        <h1 class="blog-post-title">How to clean up Chrome tabs in one click</h1>
+        <p class="lede">To clean up Chrome tabs in one click, open Takt's popup and press Group Tabs, then Collapse All. Two clicks turn a strip of loose tabs into a row of labelled, folded groups.</p>
+        <p class="blog-post-meta">Updated 8 October 2026 · 5 min read</p>
+<!-- TAKT-LANG:nav -->
+<p class="lang-links"><span aria-current="true">English</span> · <a href="../../fr/blog/one-click-tab-cleanup/" hreflang="fr" lang="fr">Français</a> · <a href="../../es/blog/one-click-tab-cleanup/" hreflang="es" lang="es">Español</a> · <a href="../../it/blog/one-click-tab-cleanup/" hreflang="it" lang="it">Italiano</a> · <a href="../../de/blog/one-click-tab-cleanup/" hreflang="de" lang="de">Deutsch</a> · <a href="../../pt/blog/one-click-tab-cleanup/" hreflang="pt" lang="pt">Português</a></p>
+<!-- /TAKT-LANG:nav -->
+
+        <div class="blog-post-body">
+          <div class="tldr">
+            <p><strong>Short answer:</strong> Takt puts every bulk tab action in one popup and behind three default shortcuts. <kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>G</kbd> groups, <kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>U</kbd> ungroups, <kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>C</kbd> collapses.</p>
+            <ul>
+              <li>Free: Group, Ungroup, Collapse, Expand, Close Duplicates, Sort by Domain (current window), the Tabs pane.</li>
+              <li>Premium: close, bookmark or move a whole group, sort every window, collapse other windows, an "Others" group for leftovers.</li>
+              <li>Everything runs on your machine. No account.</li>
+            </ul>
+          </div>
+
+          <h2 id="buttons">What does each cleanup button do?</h2>
+          <p>The Home pane of the popup has a <strong>Quick actions</strong> block. Group, Ungroup, Collapse, Expand and Close Duplicates turn grey when they would do nothing, so the block also shows the state of your tabs.</p>
+
+          <figure class="narrow">
+            <img src="../img/popup-home.png" alt="Takt popup Home pane with the grouping mode set to By Rules and the Quick actions block: Group Tabs, Ungroup All, Collapse All, a greyed-out Expand All, Hibernate Tab, Sort by Domain and Close Duplicates, partly covered by a 'Tab hibernated' toast" width="420" loading="lazy" />
+            <figcaption>Quick actions in the popup. Expand All is greyed out because every group is already open.</figcaption>
+          </figure>
+
+          <table>
+            <thead>
+              <tr><th>Button</th><th>What it does</th><th>Scope</th><th>Plan</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Group Tabs</td><td>Files tabs into groups by your rules, by category or with AI</td><td>All windows</td><td>Free</td></tr>
+              <tr><td>Ungroup All</td><td>Removes every group, keeps every tab</td><td>All windows</td><td>Free</td></tr>
+              <tr><td>Collapse All</td><td>Folds every group to its label</td><td>All windows</td><td>Free</td></tr>
+              <tr><td>Expand All</td><td>Opens every group</td><td>Current window</td><td>Free</td></tr>
+              <tr><td>Close Duplicates</td><td>Closes repeated URLs, keeps the first copy</td><td>Current window</td><td>Free</td></tr>
+              <tr><td>Sort by Domain</td><td>Puts tabs from the same site side by side</td><td>Current window (Free), every window (Premium)</td><td>Free / Premium</td></tr>
+            </tbody>
+          </table>
+          <p>Group Tabs follows the grouping mode picked above it. In Category and AI modes the free plan creates up to 5 groups per run. Learn more in <a href="../auto-group-tabs-chrome/">grouping with rules</a> and <a href="../group-tabs-by-category-or-ai/">grouping by category or AI</a>.</p>
+
+          <h2 id="four-clicks">How do I tidy a messy window in four clicks?</h2>
+          <ol class="steps">
+            <li><strong>Close Duplicates.</strong> Repeated tabs in this window close. The leftmost copy stays. Doing this first means you never group the copies.</li>
+            <li><strong>Group Tabs.</strong> Every tab that matches lands in its group.</li>
+            <li><strong>Sort by Domain.</strong> Inside each group, and among ungrouped tabs, same-site tabs line up. Sorting never moves a tab into or out of a group.</li>
+            <li><strong>Collapse All.</strong> Every group folds down to its colored label.</li>
+          </ol>
+          <p>Close Duplicates treats two URLs as the same according to your URL matching setting. The default ignores the <code>#fragment</code>, a leading <code>www.</code>, a trailing slash and the order of query parameters.</p>
+
+          <h2 id="shortcuts">What are the keyboard shortcuts?</h2>
+          <table>
+            <thead><tr><th>Shortcut</th><th>Action</th><th>Plan</th></tr></thead>
+            <tbody>
+              <tr><td><kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>G</kbd></td><td>Group all tabs</td><td>Free</td></tr>
+              <tr><td><kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>U</kbd></td><td>Ungroup all tabs</td><td>Free</td></tr>
+              <tr><td><kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>C</kbd></td><td>Collapse all groups</td><td>Free</td></tr>
+              <tr><td><kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>Space</kbd></td><td><a href="../quick-switch-search-tabs/">Quick Switch</a>: search and jump to any tab</td><td>Premium</td></tr>
+              <tr><td>None by default</td><td>Expand all groups</td><td>Free</td></tr>
+            </tbody>
+          </table>
+          <p>Chrome lets an extension suggest at most four shortcuts, so Expand All ships without one. Give it a key at <code>chrome://extensions/shortcuts</code>. You can rebind the other four there too.</p>
+
+          <h2 id="tabs-pane">How do I see every open tab in one list?</h2>
+          <p>Open the <strong>Tabs</strong> pane in the popup. It lists the tabs of every window under their group names, A to Z, with ungrouped tabs last. Type to filter by title or URL. Click a tab to jump to it. This pane is free.</p>
+
+          <h2 id="group-actions">Can I close, bookmark or move a whole group?</h2>
+          <p>Yes, with Premium. Three actions work on a group as a unit:</p>
+          <ul>
+            <li><strong>Close.</strong> Closes the group's tabs. Pinned tabs stay open. The Groups view asks you to confirm first.</li>
+            <li><strong>Bookmark.</strong> Saves the group into a "Takt Bookmarks" folder. Tabs stay open. Needs the optional Bookmarks permission.</li>
+            <li><strong>Move to new window.</strong> Keeps the group's name, color and collapsed state.</li>
+          </ul>
+          <p>Find them in Options → Rules → <strong>Groups</strong>, or right-click a page and open <strong>Group actions</strong>. The right-click menu can also move the group to another window you already have open.</p>
+
+          <figure>
+            <img src="../img/options-groups.png" alt="Takt options, Groups view: colored cards for Code, Docs, Entertainment, News and Research, each with Close N tab(s), Bookmark and Move to new window buttons, plus Reviews and Work groups with no open tabs" width="700" loading="lazy" />
+            <figcaption>The Groups view. Each open group gets Close, Bookmark and Move to new window.</figcaption>
+          </figure>
+
+          <h2 id="auto-collapse">Can groups collapse on their own?</h2>
+          <p>Three ways, all off until you turn them on:</p>
+          <ul>
+            <li><strong>Per rule.</strong> Tick <em>Auto-collapse group</em> in the rule editor. A new group from that rule starts folded, unless it holds the tab you're looking at. Free.</li>
+            <li><strong>In the same window.</strong> Settings → Tab Groups → <em>Auto-collapse other groups on expand</em>. Open one group and the others in that window fold. Free.</li>
+            <li><strong>Across windows.</strong> <em>Auto-collapse groups in other windows when switching focus</em>. Switch windows and, after 300 ms, the groups in every other window fold. Premium.</li>
+          </ul>
+
+          <figure>
+            <img src="../img/options-settings-tab-groups.png" alt="Takt Settings, Tab Groups section with three unchecked boxes: Auto-collapse other groups on expand, Auto-collapse groups in other windows when switching focus, and Others catch-all group" width="700" loading="lazy" />
+            <figcaption>The Tab Groups settings. All three are off by default.</figcaption>
+          </figure>
+
+          <h2 id="others">What happens to tabs no rule matches?</h2>
+          <p>They stay ungrouped. With Premium, turn on <strong>Others catch-all group</strong> and Group Tabs collects every leftover tab into a grey "Others" group. Pinned tabs and <code>chrome://</code> pages are left alone. Running Group Tabs again reuses the same Others group. It applies in Rules mode.</p>
+
+          <h2 id="limits">What these buttons don't do</h2>
+          <ul>
+            <li><strong>Sort by Domain is a one-off.</strong> New tabs aren't kept sorted. It also compares the last two parts of a hostname, so <code>example.co.uk</code> sorts as <code>co.uk</code>.</li>
+            <li><strong>Close Duplicates stays in one window.</strong> A copy open in another window isn't touched.</li>
+            <li><strong>Group actions live on the page menu.</strong> Right-click the page, not the tab strip.</li>
+            <li><strong>Group Tabs needs something to group by.</strong> In Rules mode, tabs no rule matches stay loose unless Others is on.</li>
+          </ul>
+
+          <div class="cta">
+            <p>Two clicks from loose tabs to a tidy row of groups.</p>
+            <a class="btn" href="https://chromewebstore.google.com/detail/takt/plgfdnbgkjocmgegnkbihoeojcfphdic">Add Takt to Chrome, free</a>
+          </div>
+
+          <h2 id="faq">FAQ</h2>
+          <div class="faq">
+            <details>
+              <summary>What are Takt's default keyboard shortcuts?</summary>
+              <p><kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>G</kbd> groups, <kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>U</kbd> ungroups, <kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>C</kbd> collapses, and <kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>Space</kbd> opens Quick Switch (Premium). Expand All has no default key. Assign one at <code>chrome://extensions/shortcuts</code>.</p>
+            </details>
+            <details>
+              <summary>Which tab does Close Duplicates keep?</summary>
+              <p>The first copy in tab-strip order, leftmost first. Later copies in the current window close. Your URL matching setting decides what counts as the same URL; by default the <code>#fragment</code> is ignored.</p>
+            </details>
+            <details>
+              <summary>Are the cleanup buttons free?</summary>
+              <p>Group, Ungroup, Collapse, Expand, Close Duplicates, the Tabs pane and same-window auto-collapse are free. Sort by Domain is free for the current window. Premium ($3/month or $30/year) adds sorting every window, group actions, cross-window auto-collapse and the Others group.</p>
+            </details>
+            <details>
+              <summary>Can I close a whole tab group at once?</summary>
+              <p>With Premium, yes: from the Groups view in Takt's options, or from <strong>Group actions</strong> in the page's right-click menu. Close skips pinned tabs, and the Groups view asks you to confirm first.</p>
+            </details>
+          </div>
+
+          <h2 id="next">Read next</h2>
+          <div class="read-next">
+            <a href="../prevent-duplicate-tabs/">Stop opening the same tab twice<span>Duplicate prevention, on by default.</span></a>
+            <a href="../quick-switch-search-tabs/">Jump to any tab from the keyboard<span>Quick Switch search across every window.</span></a>
+          </div>
+        </div>
+
+        <footer class="blog-post-footer">
+          <a href="../">All feature articles</a> · <a href="../../docs/group-actions/">Group Actions reference</a> · <a href="../../docs/shortcuts/">Keyboard shortcuts</a>
+        </footer>
+      </article>
+    </main>
+
+    <footer id="site-footer"></footer>
+    <script src="../../js/includes.js"></script>
+    <script src="../../js/nav.js"></script>
+  </body>
+</html>

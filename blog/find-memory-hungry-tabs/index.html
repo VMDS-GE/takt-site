@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>How to see which Chrome tabs use the most memory — Takt</title>
+    <meta
+      name="description"
+      content="See which Chrome tabs and tab groups use the most memory: per-tab estimates, A–F health scores per group, background network activity, a system memory bar and per-group memory budgets. How each number is calculated."
+    />
+    <link rel="canonical" href="https://taktabs.com/blog/find-memory-hungry-tabs/" />
+<!-- TAKT-LANG:head -->
+<link rel="alternate" hreflang="en" href="https://taktabs.com/blog/find-memory-hungry-tabs/" />
+<link rel="alternate" hreflang="fr" href="https://taktabs.com/fr/blog/find-memory-hungry-tabs/" />
+<link rel="alternate" hreflang="es" href="https://taktabs.com/es/blog/find-memory-hungry-tabs/" />
+<link rel="alternate" hreflang="it" href="https://taktabs.com/it/blog/find-memory-hungry-tabs/" />
+<link rel="alternate" hreflang="de" href="https://taktabs.com/de/blog/find-memory-hungry-tabs/" />
+<link rel="alternate" hreflang="pt" href="https://taktabs.com/pt/blog/find-memory-hungry-tabs/" />
+<link rel="alternate" hreflang="x-default" href="https://taktabs.com/blog/find-memory-hungry-tabs/" />
+<!-- /TAKT-LANG:head -->
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="How to see which Chrome tabs use the most memory" />
+    <meta property="og:description" content="Per-tab memory estimates, A–F group health scores and memory budgets, all measured inside your browser." />
+    <meta property="og:url" content="https://taktabs.com/blog/find-memory-hungry-tabs/" />
+    <meta property="og:image" content="https://taktabs.com/blog/img/options-dashboard-memory.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <link rel="icon" type="image/png" sizes="32x32" href="../../assets/favicon-32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="../../assets/favicon-16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="../../assets/apple-touch-icon.png" />
+    <meta name="theme-color" content="#FF3B30" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../../css/tokens.css" />
+    <link rel="stylesheet" href="../../css/base.css" />
+    <link rel="stylesheet" href="../../css/layout.css" />
+    <link rel="stylesheet" href="../../css/blog.css" />
+    <link rel="stylesheet" href="../../css/articles.css" />
+    <script src="../../js/theme.js"></script>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Article",
+            "headline": "How to see which Chrome tabs use the most memory",
+            "description": "Per-tab memory estimates, A–F health scores per tab group, background network activity and per-group memory budgets in Takt's Resource Dashboard, and how each number is calculated.",
+            "datePublished": "2026-10-08",
+            "dateModified": "2026-10-08",
+            "author": { "@type": "Person", "name": "Vitor" },
+            "publisher": { "@type": "Organization", "name": "Takt", "url": "https://taktabs.com" },
+            "image": "https://taktabs.com/blog/img/options-dashboard-memory.png",
+            "mainEntityOfPage": "https://taktabs.com/blog/find-memory-hungry-tabs/"
+          },
+          {
+            "@type": "HowTo",
+            "name": "Find the Chrome tabs that use the most memory",
+            "step": [
+              { "@type": "HowToStep", "text": "Install Takt and upgrade to Premium; the Resource Dashboard is a Premium feature." },
+              { "@type": "HowToStep", "text": "In Options → Settings → Permissions, grant All website access, and optionally Network monitoring and System memory access." },
+              { "@type": "HowToStep", "text": "Open Options → Dashboard. Groups are sorted by estimated memory; each tab group card lists its tabs sorted by memory." },
+              { "@type": "HowToStep", "text": "Click Suspend next to a discard recommendation, or set a per-group memory budget in Settings → Memory Budgets." }
+            ]
+          },
+          {
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "How does Takt estimate a tab's memory?",
+                "acceptedAnswer": { "@type": "Answer", "text": "It runs a short script in the tab and adds four parts: the JavaScript heap in use, the DOM node count times about 1.5 KB, the decoded size of the resources the page loaded, and canvas buffers at width × height × 4 bytes. It is an estimate, best used to rank tabs." }
+              },
+              {
+                "@type": "Question",
+                "name": "Why does the Memory column show a dash?",
+                "acceptedAnswer": { "@type": "Answer", "text": "The All website access permission is not granted, the tab is suspended, or it is a page extensions can't run scripts on, such as chrome:// pages." }
+              },
+              {
+                "@type": "Question",
+                "name": "Is the Resource Dashboard free?",
+                "acceptedAnswer": { "@type": "Answer", "text": "No. The Resource Dashboard and memory budgets are Premium, at $3/month or $30/year." }
+              },
+              {
+                "@type": "Question",
+                "name": "Does Takt send my tab data anywhere to measure it?",
+                "acceptedAnswer": { "@type": "Answer", "text": "No. Every measurement runs inside your browser. Nothing is measured by an external service." }
+              }
+            ]
+          },
+          {
+            "@type": "SoftwareApplication",
+            "name": "Takt",
+            "applicationCategory": "BrowserApplication",
+            "operatingSystem": "Chrome",
+            "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <header id="site-header"></header>
+
+    <main class="blog-main">
+      <article class="blog-post article">
+        <p class="eyebrow">Resource Dashboard <span class="badge badge-premium">Premium</span></p>
+        <h1 class="blog-post-title">How to see which Chrome tabs use the most memory</h1>
+        <p class="lede">To see which Chrome tabs use the most memory, you need numbers for every tab side by side, grouped the way you work. Takt's Resource Dashboard gives you a memory estimate per tab, a total per tab group and an A–F health score, refreshed every 10 seconds.</p>
+        <p class="blog-post-meta">Updated 8 October 2026 · 6 min read</p>
+<!-- TAKT-LANG:nav -->
+<p class="lang-links"><span aria-current="true">English</span> · <a href="../../fr/blog/find-memory-hungry-tabs/" hreflang="fr" lang="fr">Français</a> · <a href="../../es/blog/find-memory-hungry-tabs/" hreflang="es" lang="es">Español</a> · <a href="../../it/blog/find-memory-hungry-tabs/" hreflang="it" lang="it">Italiano</a> · <a href="../../de/blog/find-memory-hungry-tabs/" hreflang="de" lang="de">Deutsch</a> · <a href="../../pt/blog/find-memory-hungry-tabs/" hreflang="pt" lang="pt">Português</a></p>
+<!-- /TAKT-LANG:nav -->
+
+        <div class="blog-post-body">
+          <div class="tldr">
+            <p><strong>Short answer:</strong> open Takt's <strong>Options → Dashboard</strong>. Groups are ranked by estimated memory, and each group's tabs are sorted largest first.</p>
+            <ul>
+              <li>Per-tab memory estimate, idle time, third-party domains and background activity.</li>
+              <li>A–F health score per tab group, a system memory bar, and memory budgets that unload tabs for you.</li>
+              <li>Premium ($3/month or $30/year). Measured in your browser, by nothing outside it.</li>
+            </ul>
+          </div>
+
+          <h2 id="why">Why is it hard to tell which tab is using memory?</h2>
+          <p>Chrome shows a memory figure in a tab's hover card, one tab at a time. With 30 tabs open, that's 30 hovers, and no totals.</p>
+          <p>You usually don't care about one tab anyway. You care whether "Research" or "Entertainment" is the group to close. So Takt adds memory up by tab group.</p>
+
+          <figure>
+            <img src="../img/options-dashboard-memory.png" alt="Top of Takt's Resource Dashboard: a System RAM bar reading 26.9 GB of 32.0 GB used (84%), with tabs at 0.2 GB and 5.1 GB free; a Lifecycle box with 0 suspended, 2 hibernated, 100 MB estimated saved, 2 today; and a Group breakdown ranking Code at 149 MB, Entertainment 71 MB, Research 15 MB, Docs 14 MB, News 2 MB and non-grouped tabs 1 MB, each with an A health badge and a tab count" width="700" loading="lazy" />
+            <figcaption>System memory, lifecycle counters, and groups ranked by estimated memory.</figcaption>
+          </figure>
+
+          <h2 id="estimate">How does Takt estimate a tab's memory?</h2>
+          <p>Takt runs a short script inside each tab and adds four parts:</p>
+          <table>
+            <thead><tr><th>Part</th><th>How it's measured</th></tr></thead>
+            <tbody>
+              <tr><td>JavaScript heap</td><td>Heap in use, as Chrome reports it to the page</td></tr>
+              <tr><td>DOM tree</td><td>Number of elements × about 1.5 KB</td></tr>
+              <tr><td>Loaded resources</td><td>Decoded size of every file the page loaded</td></tr>
+              <tr><td>Canvas buffers</td><td>Width × height × 4 bytes per canvas</td></tr>
+            </tbody>
+          </table>
+          <p>Treat the result as a ranking, not an invoice. It leaves out the browser's own overhead for each tab, so Chrome's figure for the same tab can differ.</p>
+          <p>Some tabs can't be measured. Suspended tabs have nothing running. Chrome pages (<code>chrome://</code>), extension pages and the Chrome Web Store don't allow scripts, so they appear under <strong>Unmonitored tabs</strong>. If a tab doesn't answer within 3 seconds, Takt shows its last known value.</p>
+
+          <figure>
+            <img src="../img/options-dashboard-tab-table.png" alt="The Code group card in Takt's Resource Dashboard: 4 tabs, 149 MB, with a Close all button and a table of tabs sorted by memory (49, 41, 29 and 29 MB), each with idle time, third-party domain count and background activity columns" width="700" loading="lazy" />
+            <figcaption>Each group card lists its tabs. Click a column header to sort.</figcaption>
+          </figure>
+
+          <h2 id="health">What do the A–F health scores mean?</h2>
+          <p>Each group starts at 100 points and loses points on four factors:</p>
+          <table>
+            <thead><tr><th>Factor</th><th>Condition</th><th>Penalty</th></tr></thead>
+            <tbody>
+              <tr><td>Memory (group total)</td><td>Over 500 MB / over 200 MB</td><td>−30 / −15</td></tr>
+              <tr><td>Average idle time</td><td>Over 60 min / over 30 min</td><td>−20 / −10</td></tr>
+              <tr><td>Tabs with background activity</td><td>More than 3 / at least 1</td><td>−20 / −10</td></tr>
+              <tr><td>Third-party domains</td><td>Over 50 / over 20</td><td>−15 / −5</td></tr>
+            </tbody>
+          </table>
+          <p>Grades: A is 90 or more, B 75 to 89, C 60 to 74, D 40 to 59, F below 40. A group using 300 MB with tabs idle 45 minutes on average scores 75: a B.</p>
+          <p>"Background activity" means the tab completed a network request in the last 60 seconds. "Third-party" means any domain other than the tab's own site and its subdomains. Common CDNs are counted separately, so they don't inflate the score.</p>
+
+          <h2 id="act">What do I do once I've found the heavy tabs?</h2>
+          <ul>
+            <li><strong>Discard recommendations.</strong> Takt lists 5 tabs to unload, ranked by memory and idle time, with extra weight for background activity. It skips the active tab, pinned tabs and a tab that is alone in its group. Click <strong>Suspend</strong> to unload one.</li>
+            <li><strong>Close all</strong> on a group card closes that group.</li>
+            <li><strong>Hibernate</strong> a tab you want back later. See <a href="../hibernate-tabs-free-memory/">how hibernation works</a>.</li>
+          </ul>
+
+          <h2 id="budget">Can I cap how much memory a tab group uses?</h2>
+          <p>Yes. In <strong>Settings → Memory Budgets</strong>, enter a group name and a limit in MB. Takt checks budgets every 15 seconds.</p>
+          <p>When a group goes over, you get a notification: the group, its usage, its budget, and "Suspending tabs in 10s — click to cancel". Ignore it, and Takt unloads that group's largest tabs until it's back under budget. It never touches the active tab, pinned tabs or tabs playing audio. Click the notification to cancel.</p>
+          <p>Budgets work from the same estimates, so they need All website access too.</p>
+
+          <h2 id="permissions">Which permissions does the dashboard need?</h2>
+          <p>None at install. You grant each one in <strong>Settings → Permissions</strong> and can revoke it there at any time.</p>
+          <table>
+            <thead><tr><th>Permission</th><th>What it adds</th><th>Without it</th></tr></thead>
+            <tbody>
+              <tr><td>All website access</td><td>Per-tab memory estimates</td><td>Memory shows "—"</td></tr>
+              <tr><td>Network monitoring</td><td>Third-party domains and background activity (needs All website access too)</td><td>No network columns</td></tr>
+              <tr><td>System memory access</td><td>The system RAM bar</td><td>"System memory unavailable"</td></tr>
+            </tbody>
+          </table>
+          <p>Network monitoring only sees requests made after you grant it. Reload open tabs to start counting. Takt reads request addresses and timing, not page content.</p>
+
+          <figure>
+            <img src="../img/options-settings-permissions-dashboard.png" alt="Takt's Permissions settings with Grant all and Revoke all buttons, and toggles for Network monitoring, System memory access and All website access, each describing the dashboard features it enables and what is missing without it" width="700" loading="lazy" />
+            <figcaption>Each optional permission says which dashboard features it adds.</figcaption>
+          </figure>
+
+          <h2 id="limits">What the dashboard can't tell you</h2>
+          <p>It estimates page memory. It doesn't read Chrome's process list, so it can't see GPU memory, extensions or the browser itself. If the system bar puts most of your RAM under "Other", that memory is going to other apps or to Chrome itself, not to what your pages hold.</p>
+
+          <div class="cta">
+            <p>Find the group that's eating your RAM. Then put it to sleep.</p>
+            <a class="btn" href="https://chromewebstore.google.com/detail/takt/plgfdnbgkjocmgegnkbihoeojcfphdic">Add Takt to Chrome</a>
+          </div>
+
+          <h2 id="faq">FAQ</h2>
+          <div class="faq">
+            <details>
+              <summary>How does Takt estimate a tab's memory?</summary>
+              <p>It adds the JavaScript heap in use, the element count × about 1.5 KB, the decoded size of loaded resources, and canvas buffers at width × height × 4 bytes. Use it to rank tabs.</p>
+            </details>
+            <details>
+              <summary>Why does the Memory column show a dash?</summary>
+              <p>All website access isn't granted, the tab is suspended, or it's a page extensions can't run scripts on, such as <code>chrome://</code> pages.</p>
+            </details>
+            <details>
+              <summary>Is the Resource Dashboard free?</summary>
+              <p>No. The dashboard and memory budgets are Premium, at $3/month or $30/year.</p>
+            </details>
+            <details>
+              <summary>Does Takt send my tab data anywhere to measure it?</summary>
+              <p>No. Every measurement runs inside your browser. See <a href="../privacy-local-first/">how Takt keeps data local</a>.</p>
+            </details>
+          </div>
+
+          <h2 id="next">Read next</h2>
+          <div class="read-next">
+            <a href="../hibernate-tabs-free-memory/">Hibernate tabs to free memory<span>Unload idle tabs, wake them where you left them.</span></a>
+            <a href="../free-vs-premium/">Takt Free vs Premium<span>Every limit, side by side.</span></a>
+          </div>
+        </div>
+
+        <footer class="blog-post-footer">
+          <a href="../">All feature articles</a> · <a href="../../docs/resources/">Resource Dashboard reference</a>
+        </footer>
+      </article>
+    </main>
+
+    <footer id="site-footer"></footer>
+    <script src="../../js/includes.js"></script>
+    <script src="../../js/nav.js"></script>
+  </body>
+</html>

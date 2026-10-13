@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Como hibernar abas no Chrome para liberar memória — Takt</title>
+    <meta
+      name="description"
+      content="Hiberne abas do Chrome para liberar memória: descarregue abas ociosas de graça, feche abas por completo e traga-as de volta com grupo, posição e rolagem intactos. O que faz, do que se lembra e quando a Economia de memória do Chrome basta."
+    />
+    <link rel="canonical" href="https://taktabs.com/pt/blog/hibernate-tabs-free-memory/" />
+<!-- TAKT-LANG:head -->
+<link rel="alternate" hreflang="en" href="https://taktabs.com/blog/hibernate-tabs-free-memory/" />
+<link rel="alternate" hreflang="fr" href="https://taktabs.com/fr/blog/hibernate-tabs-free-memory/" />
+<link rel="alternate" hreflang="es" href="https://taktabs.com/es/blog/hibernate-tabs-free-memory/" />
+<link rel="alternate" hreflang="it" href="https://taktabs.com/it/blog/hibernate-tabs-free-memory/" />
+<link rel="alternate" hreflang="de" href="https://taktabs.com/de/blog/hibernate-tabs-free-memory/" />
+<link rel="alternate" hreflang="pt" href="https://taktabs.com/pt/blog/hibernate-tabs-free-memory/" />
+<link rel="alternate" hreflang="x-default" href="https://taktabs.com/blog/hibernate-tabs-free-memory/" />
+<!-- /TAKT-LANG:head -->
+    <meta property="og:type" content="article" />
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:title" content="Como hibernar abas no Chrome para liberar memória" />
+    <meta property="og:description" content="Descarregue abas ociosas, ou feche-as por completo e desperte-as depois com grupo, posição e rolagem intactos." />
+    <meta property="og:url" content="https://taktabs.com/pt/blog/hibernate-tabs-free-memory/" />
+    <meta property="og:image" content="https://taktabs.com/pt/blog/img/popup-hibernate.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <link rel="icon" type="image/png" sizes="32x32" href="../../../assets/favicon-32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="../../../assets/favicon-16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="../../../assets/apple-touch-icon.png" />
+    <meta name="theme-color" content="#FF3B30" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../../../css/tokens.css" />
+    <link rel="stylesheet" href="../../../css/base.css" />
+    <link rel="stylesheet" href="../../../css/layout.css" />
+    <link rel="stylesheet" href="../../../css/blog.css" />
+    <link rel="stylesheet" href="../../../css/articles.css" />
+    <script src="../../../js/theme.js"></script>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Article",
+            "headline": "Como hibernar abas no Chrome para liberar memória",
+            "description": "Descarregue abas ociosas do Chrome de graça, ou hiberne-as: feche-as por completo e desperte-as depois com grupo, posição e rolagem intactos.",
+            "inLanguage": "pt",
+            "datePublished": "2026-10-08",
+            "dateModified": "2026-10-08",
+            "author": { "@type": "Person", "name": "Vitor" },
+            "publisher": { "@type": "Organization", "name": "Takt", "url": "https://taktabs.com" },
+            "image": "https://taktabs.com/pt/blog/img/popup-hibernate.png",
+            "mainEntityOfPage": "https://taktabs.com/pt/blog/hibernate-tabs-free-memory/"
+          },
+          {
+            "@type": "HowTo",
+            "name": "Hibernar uma aba do Chrome e despertá-la depois",
+            "step": [
+              { "@type": "HowToStep", "text": "Instale o Takt pela Chrome Web Store." },
+              { "@type": "HowToStep", "text": "Na aba que você quer guardar, abra o popup do Takt e clique em Hibernar aba, ou clique com o botão direito na página e escolha Hibernar esta aba." },
+              { "@type": "HowToStep", "text": "A aba se fecha. O Takt salva no seu dispositivo a URL, o título, o grupo, a janela, a posição, o estado de fixação e a posição de rolagem." },
+              { "@type": "HowToStep", "text": "Para trazê-la de volta, abra o painel Hibernar do popup e clique em Despertar. A aba reabre na mesma janela, na mesma posição, no mesmo grupo, rolada até onde você parou." }
+            ]
+          },
+          {
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "Qual a diferença entre suspender e hibernar uma aba?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Uma aba suspensa é descarregada, mas continua na barra de abas e recarrega ao clicar. Uma aba hibernada é fechada; o Takt salva o estado dela e a reabre quando você clica em Despertar." }
+              },
+              {
+                "@type": "Question",
+                "name": "Quantas abas posso hibernar de graça?",
+                "acceptedAnswer": { "@type": "Answer", "text": "5 por vez no plano gratuito, 200 no Premium (US$ 3/mês ou US$ 30/ano). A suspensão automática não tem limite e é gratuita." }
+              },
+              {
+                "@type": "Question",
+                "name": "O Takt é outro The Great Suspender?",
+                "acceptedAnswer": { "@type": "Answer", "text": "O Takt suspende com o descarte do próprio Chrome, então as abas mantêm a URL real. As abas hibernadas ficam no armazenamento local do seu dispositivo. Sem conta, sem analytics, sem telemetria." }
+              },
+              {
+                "@type": "Question",
+                "name": "As abas hibernadas sobrevivem a uma reinicialização do navegador?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Sim. Elas ficam gravadas em disco, não na memória. Ao iniciar, o Takt descarta qualquer registro cuja URL já esteja aberta de novo." }
+              }
+            ]
+          },
+          {
+            "@type": "SoftwareApplication",
+            "name": "Takt",
+            "applicationCategory": "BrowserApplication",
+            "operatingSystem": "Chrome",
+            "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <header id="site-header"></header>
+
+    <main class="blog-main">
+      <article class="blog-post article">
+        <p class="eyebrow">Hibernação</p>
+        <h1 class="blog-post-title">Como hibernar abas no Chrome para liberar memória</h1>
+        <p class="lede">Para hibernar abas no Chrome, feche as que você não está usando e guarde um registro capaz de trazê-las de volta exatamente como estavam. O Takt faz as duas coisas: descarrega sozinho as abas ociosas e hiberna as abas que você guarda, depois as desperta na mesma janela, no mesmo grupo e na mesma posição de rolagem.</p>
+        <p class="blog-post-meta">Atualizado em 8 de outubro de 2026 · 6 min de leitura</p>
+<!-- TAKT-LANG:nav -->
+<p class="lang-links"><a href="../../../blog/hibernate-tabs-free-memory/" hreflang="en" lang="en">English</a> · <a href="../../../fr/blog/hibernate-tabs-free-memory/" hreflang="fr" lang="fr">Français</a> · <a href="../../../es/blog/hibernate-tabs-free-memory/" hreflang="es" lang="es">Español</a> · <a href="../../../it/blog/hibernate-tabs-free-memory/" hreflang="it" lang="it">Italiano</a> · <a href="../../../de/blog/hibernate-tabs-free-memory/" hreflang="de" lang="de">Deutsch</a> · <span aria-current="true">Português</span></p>
+<!-- /TAKT-LANG:nav -->
+
+        <div class="blog-post-body">
+          <div class="tldr">
+            <p><strong>Resposta curta:</strong> o Takt cuida das abas ociosas em duas etapas. <em>Suspender</em> descarrega a aba, mas a deixa na barra de abas. <em>Hibernar</em> fecha a aba e salva o estado dela, para que um clique a traga de volta.</p>
+            <ul>
+              <li>Free: suspensão automática depois de 15 minutos a 4 horas de inatividade, uma lista de abas que nunca são suspensas e hibernação manual de até 5 abas.</li>
+              <li>Premium: hibernação automática por tempo de inatividade, por número de abas na janela ou quando um agendamento termina, e até 200 abas hibernadas.</li>
+              <li>Tudo fica no seu dispositivo. Sem conta, sem analytics.</li>
+            </ul>
+          </div>
+
+          <h2 id="suspend-vs-hibernate">Qual a diferença entre suspender e hibernar uma aba?</h2>
+          <p>As duas liberam memória. A diferença está em para onde a aba vai.</p>
+          <table>
+            <thead>
+              <tr><th></th><th>Suspensa</th><th>Hibernada</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Barra de abas</td><td>Continua lá, em cinza</td><td>Sai dela e aparece no painel Hibernar do Takt</td></tr>
+              <tr><td>Como</td><td>Descarte de abas do próprio Chrome</td><td>Aba fechada, estado salvo pelo Takt</td></tr>
+              <tr><td>Como volta</td><td>Clique na aba; a página recarrega</td><td>Clique em <strong>Despertar</strong>; a aba reabre onde estava</td></tr>
+              <tr><td>Manual</td><td>Recomendações de suspensão (painel Premium)</td><td>Gratuito, até 5 abas</td></tr>
+              <tr><td>Automático</td><td>Gratuito</td><td>Premium</td></tr>
+            </tbody>
+          </table>
+
+          <h2 id="manual">Como hiberno uma aba manualmente?</h2>
+          <ol class="steps">
+            <li>Instale o <a href="https://chromewebstore.google.com/detail/takt/plgfdnbgkjocmgegnkbihoeojcfphdic">Takt pela Chrome Web Store</a>.</li>
+            <li>Na aba que você quer guardar, abra o popup do Takt e clique em <strong>Hibernar aba</strong>. Ou clique com o botão direito na página e escolha <strong>Hibernar esta aba</strong>.</li>
+            <li>A aba se fecha, e o Chrome mostra uma notificação curta de "Aba hibernada".</li>
+            <li>Para trazê-la de volta, abra o painel <strong>Hibernar</strong> do popup e clique em <strong>Despertar</strong>.</li>
+          </ol>
+          <p>O Takt salva a URL, o título, o favicon, o nome e a cor do grupo, a janela, a posição na janela, o estado de fixação, a posição de rolagem e o horário em que você hibernou a aba. Despertar reabre a aba na mesma janela, na posição antiga, de volta ao grupo, rolada até onde você estava.</p>
+          <p>Se a mesma URL já estiver aberta, o Takt pergunta antes de despertar, para você não acabar com uma duplicata.</p>
+
+          <figure class="narrow">
+            <img src="../img/popup-hibernate.png" alt="Popup do Takt no painel Hibernar: '~100MB economizados' no topo, uma caixa de pesquisa, duas abas hibernadas (The Verge em News, um artigo do arXiv em Research), cada uma com um botão Despertar, e os links Acordar tudo e Limpar tudo" width="420" loading="lazy" />
+            <figcaption>O painel Hibernar. Pesquise, desperte uma aba ou acorde todas.</figcaption>
+          </figure>
+          <p>O número "~100MB economizados" é uma estimativa fixa: o Takt conta 50 MB por aba hibernada. Ele não mede as abas que fecha.</p>
+
+          <h2 id="auto-suspend">Como descarrego abas ociosas automaticamente?</h2>
+          <p>A suspensão automática é gratuita e vem ativada. A cada 5 minutos, o Takt descarrega as abas que estão ociosas há mais tempo que o seu limite: 15 minutos, 30 minutos (o padrão), 1, 2 ou 4 horas. Defina em <strong>Opções → Settings → Tab Lifecycle</strong>.</p>
+          <p>Ociosa quer dizer o tempo desde que a aba esteve ativa ou terminou de carregar pela última vez. O Takt nunca suspende:</p>
+          <ul>
+            <li>a aba ativa, ou uma aba que ainda está carregando;</li>
+            <li>abas reproduzindo áudio;</li>
+            <li>abas fixadas;</li>
+            <li>abas que correspondem à sua lista <strong>Never suspend these tabs</strong>.</li>
+          </ul>
+          <p>A lista de abas que nunca são suspensas aceita um padrão por linha, com <code>*</code> como curinga. <code>*://mail.google.com/*</code> mantém o Gmail carregado. A lista também protege as abas de todos os gatilhos de hibernação automática descritos abaixo.</p>
+
+          <figure>
+            <img src="../img/options-settings-tab-lifecycle.png" alt="Configurações Tab Lifecycle do Takt: Enable auto-suspend marcado, Suspend after idle for em 30 minutos, uma caixa de texto Never suspend these tabs com o exemplo *://mail.google.com/* e Auto-hibernate suspended tabs after em 2 dias" width="700" loading="lazy" />
+            <figcaption>As configurações Tab Lifecycle. Suspender é gratuito; o prazo de hibernação automática é Premium.</figcaption>
+          </figure>
+
+          <h2 id="auto-hibernate">O Chrome pode hibernar abas automaticamente? <span class="badge badge-premium">Premium</span></h2>
+          <p>Com o Premium, o Takt tem três gatilhos:</p>
+          <ul>
+            <li><strong>Tempo de inatividade.</strong> Uma aba que já está suspensa e ociosa além do prazo definido é hibernada. Escolha de 5 minutos a 7 dias; o padrão é 2 dias.</li>
+            <li><strong>Limite de abas.</strong> Quando uma janela passa do seu limite (de 15 a 100 abas, padrão 30), o Takt hiberna as abas usadas há mais tempo até voltar ao limite. Feche uma aba e a última hibernada volta para aquela janela. Cada janela é contada separadamente.</li>
+            <li><strong>Fim do agendamento.</strong> Um agendamento de perfil pode hibernar todas as abas elegíveis quando o horário dele termina. Ative <em>Hibernate tabs when schedule ends</em> em <a href="../profiles-and-schedules/">Profiles</a>.</li>
+          </ul>
+          <p>Nos gatilhos de inatividade e de limite de abas, o Chrome mostra uma notificação com um botão <strong>Desfazer</strong> por 10 segundos. Depois disso, a aba continua esperando no painel Hibernar.</p>
+
+          <h2 id="trust">Isso é outro The Great Suspender?</h2>
+          <p>Pergunta justa. Em 2021, o Google removeu o The Great Suspender depois que foi encontrado código malicioso numa versão lançada após a venda da extensão. Muita gente deixou de confiar em suspensores de abas desde então.</p>
+          <p>Veja o que o Takt faz de diferente, e o que você pode conferir:</p>
+          <ul>
+            <li><strong>As abas suspensas mantêm a URL real.</strong> O Takt chama a função de descarte do próprio Chrome. Ele não troca sua página por uma página da extensão, então desinstalar o Takt deixa suas abas como estão.</li>
+            <li><strong>As abas hibernadas ficam no seu dispositivo.</strong> Os registros ficam no armazenamento local do Chrome. Eles só saem do seu computador se você mesmo configurar a <a href="../backup-and-sync-tabs/">sincronização com o Drive ou com uma pasta</a>.</li>
+            <li><strong>Sem conta, sem analytics, sem telemetria.</strong> As permissões extras são opcionais e só são pedidas quando um recurso precisa delas. Veja <a href="../privacy-local-first/">como o Takt mantém os dados no seu computador</a>.</li>
+          </ul>
+          <p>Você continua tendo que confiar em quem publica as atualizações de qualquer extensão que instala. Leia as permissões que ela pede.</p>
+
+          <h2 id="memory-saver">A Economia de memória do Chrome basta?</h2>
+          <p>Muitas vezes, sim. Se você só quer que as abas em segundo plano parem de usar memória, a Economia de memória integrada ao Chrome não custa nada e não precisa de extensão.</p>
+          <p>Duas reclamações aparecem sempre: as abas recarregam quando você volta a elas, e algumas abas inativas nunca dormem. A etapa de suspensão do Takt tem a mesma primeira desvantagem. Uma aba suspensa recarrega quando você clica nela, porque é o mesmo tipo de descarte.</p>
+          <p>O que o Takt acrescenta é controle. Você escolhe o limite de inatividade, lista os sites que ele nunca pode tocar, e a hibernação tira as abas da barra por completo, mantendo um caminho de volta.</p>
+
+          <h2 id="limits">Quais são os limites?</h2>
+          <table>
+            <thead><tr><th></th><th>Free</th><th>Premium</th></tr></thead>
+            <tbody>
+              <tr><td>Suspensão automática e lista de abas que nunca são suspensas</td><td>Sim</td><td>Sim</td></tr>
+              <tr><td>Hibernação manual</td><td>Sim</td><td>Sim</td></tr>
+              <tr><td>Abas hibernadas ao mesmo tempo</td><td>5</td><td>200</td></tr>
+              <tr><td>Hibernação automática por inatividade, limite de abas ou agendamento</td><td>Não</td><td>Sim</td></tr>
+            </tbody>
+          </table>
+          <p>Abas fixadas e abas reproduzindo áudio não podem ser hibernadas. Quando você chega ao seu limite, o Takt se recusa a hibernar mais até você despertar ou limpar algumas.</p>
+
+          <div class="cta">
+            <p>Ponha uma aba para dormir. Desperte-a exatamente onde você parou.</p>
+            <a class="btn" href="https://chromewebstore.google.com/detail/takt/plgfdnbgkjocmgegnkbihoeojcfphdic">Adicionar o Takt ao Chrome, grátis</a>
+          </div>
+
+          <h2 id="faq">Perguntas frequentes</h2>
+          <div class="faq">
+            <details>
+              <summary>Qual a diferença entre suspender e hibernar uma aba?</summary>
+              <p>Uma aba suspensa é descarregada, mas continua na barra de abas e recarrega ao clicar. Uma aba hibernada é fechada; o Takt salva o estado dela e a reabre quando você clica em Despertar.</p>
+            </details>
+            <details>
+              <summary>Quantas abas posso hibernar de graça?</summary>
+              <p>5 por vez no plano gratuito, 200 no Premium (US$ 3/mês ou US$ 30/ano). A suspensão automática não tem limite e é gratuita.</p>
+            </details>
+            <details>
+              <summary>O Takt é outro The Great Suspender?</summary>
+              <p>O Takt suspende com o descarte do próprio Chrome, então as abas mantêm a URL real. As abas hibernadas ficam no armazenamento local do seu dispositivo. Sem conta, sem analytics, sem telemetria.</p>
+            </details>
+            <details>
+              <summary>As abas hibernadas sobrevivem a uma reinicialização do navegador?</summary>
+              <p>Sim. Elas ficam gravadas em disco, não na memória. Ao iniciar, o Takt descarta qualquer registro cuja URL já esteja aberta de novo.</p>
+            </details>
+          </div>
+
+          <h2 id="next">Leia também</h2>
+          <div class="read-next">
+            <a href="../find-memory-hungry-tabs/">Descubra quais abas consomem sua memória<span>Estimativas por aba e notas de A a F por grupo.</span></a>
+            <a href="../quick-switch-search-tabs/">Vá para qualquer aba, mesmo uma hibernada<span>Quick Switch com Alt+Shift+Space.</span></a>
+          </div>
+        </div>
+
+        <footer class="blog-post-footer">
+          <a href="../../../blog/">Todos os artigos</a> · <a href="../../../docs/hibernation/">Referência: hibernação</a>
+        </footer>
+      </article>
+    </main>
+
+    <footer id="site-footer"></footer>
+    <script src="../../../js/includes.js"></script>
+    <script src="../../../js/nav.js"></script>
+  </body>
+</html>

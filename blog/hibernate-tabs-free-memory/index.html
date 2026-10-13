@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>How to hibernate tabs in Chrome to free memory — Takt</title>
+    <meta
+      name="description"
+      content="Hibernate Chrome tabs to free memory: unload idle tabs for free, close tabs completely and bring them back with their group, position and scroll intact. What it does, what it remembers, and where Chrome's Memory Saver is enough."
+    />
+    <link rel="canonical" href="https://taktabs.com/blog/hibernate-tabs-free-memory/" />
+<!-- TAKT-LANG:head -->
+<link rel="alternate" hreflang="en" href="https://taktabs.com/blog/hibernate-tabs-free-memory/" />
+<link rel="alternate" hreflang="fr" href="https://taktabs.com/fr/blog/hibernate-tabs-free-memory/" />
+<link rel="alternate" hreflang="es" href="https://taktabs.com/es/blog/hibernate-tabs-free-memory/" />
+<link rel="alternate" hreflang="it" href="https://taktabs.com/it/blog/hibernate-tabs-free-memory/" />
+<link rel="alternate" hreflang="de" href="https://taktabs.com/de/blog/hibernate-tabs-free-memory/" />
+<link rel="alternate" hreflang="pt" href="https://taktabs.com/pt/blog/hibernate-tabs-free-memory/" />
+<link rel="alternate" hreflang="x-default" href="https://taktabs.com/blog/hibernate-tabs-free-memory/" />
+<!-- /TAKT-LANG:head -->
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="How to hibernate tabs in Chrome to free memory" />
+    <meta property="og:description" content="Unload idle tabs, or close them completely and wake them later with their group, position and scroll intact." />
+    <meta property="og:url" content="https://taktabs.com/blog/hibernate-tabs-free-memory/" />
+    <meta property="og:image" content="https://taktabs.com/blog/img/popup-hibernate.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <link rel="icon" type="image/png" sizes="32x32" href="../../assets/favicon-32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="../../assets/favicon-16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="../../assets/apple-touch-icon.png" />
+    <meta name="theme-color" content="#FF3B30" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../../css/tokens.css" />
+    <link rel="stylesheet" href="../../css/base.css" />
+    <link rel="stylesheet" href="../../css/layout.css" />
+    <link rel="stylesheet" href="../../css/blog.css" />
+    <link rel="stylesheet" href="../../css/articles.css" />
+    <script src="../../js/theme.js"></script>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Article",
+            "headline": "How to hibernate tabs in Chrome to free memory",
+            "description": "Unload idle Chrome tabs for free, or hibernate them: close them completely and wake them later with their group, position and scroll position intact.",
+            "datePublished": "2026-10-08",
+            "dateModified": "2026-10-08",
+            "author": { "@type": "Person", "name": "Vitor" },
+            "publisher": { "@type": "Organization", "name": "Takt", "url": "https://taktabs.com" },
+            "image": "https://taktabs.com/blog/img/popup-hibernate.png",
+            "mainEntityOfPage": "https://taktabs.com/blog/hibernate-tabs-free-memory/"
+          },
+          {
+            "@type": "HowTo",
+            "name": "Hibernate a Chrome tab and wake it later",
+            "step": [
+              { "@type": "HowToStep", "text": "Install Takt from the Chrome Web Store." },
+              { "@type": "HowToStep", "text": "On the tab you want to put away, open the Takt popup and click Hibernate, or right-click the page and choose Hibernate this tab." },
+              { "@type": "HowToStep", "text": "The tab closes. Takt saves its URL, title, group, window, position, pin state and scroll position on your device." },
+              { "@type": "HowToStep", "text": "To bring it back, open the popup's Hibernate pane and click Wake. The tab reopens in its window, at its position, in its group, scrolled to where you left it." }
+            ]
+          },
+          {
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "What is the difference between suspending and hibernating a tab?",
+                "acceptedAnswer": { "@type": "Answer", "text": "A suspended tab is unloaded by Chrome but stays in the tab strip and reloads when you click it. A hibernated tab is closed completely; Takt saves its state and reopens it when you click Wake." }
+              },
+              {
+                "@type": "Question",
+                "name": "How many tabs can I hibernate for free?",
+                "acceptedAnswer": { "@type": "Answer", "text": "5 hibernated tabs at a time on the free plan, 200 on Premium ($3/month or $30/year). Auto-suspend of idle tabs has no limit and is free." }
+              },
+              {
+                "@type": "Question",
+                "name": "Is Takt another Great Suspender?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Takt suspends tabs with Chrome's own discard function, so a suspended tab keeps its real URL. Hibernated tabs are stored in Chrome's local storage on your device. Takt has no account, no analytics and no telemetry." }
+              },
+              {
+                "@type": "Question",
+                "name": "Do hibernated tabs survive a browser restart?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Yes. They are stored in Chrome's local storage, not in memory. On startup Takt drops any record whose URL is already open again." }
+              }
+            ]
+          },
+          {
+            "@type": "SoftwareApplication",
+            "name": "Takt",
+            "applicationCategory": "BrowserApplication",
+            "operatingSystem": "Chrome",
+            "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <header id="site-header"></header>
+
+    <main class="blog-main">
+      <article class="blog-post article">
+        <p class="eyebrow">Hibernation</p>
+        <h1 class="blog-post-title">How to hibernate tabs in Chrome to free memory</h1>
+        <p class="lede">To hibernate tabs in Chrome, close the ones you aren't using and keep a record that can bring them back exactly as they were. Takt does both: it unloads idle tabs on its own, and it hibernates tabs you put away, then wakes them in the same window, group and scroll position.</p>
+        <p class="blog-post-meta">Updated 8 October 2026 · 6 min read</p>
+<!-- TAKT-LANG:nav -->
+<p class="lang-links"><span aria-current="true">English</span> · <a href="../../fr/blog/hibernate-tabs-free-memory/" hreflang="fr" lang="fr">Français</a> · <a href="../../es/blog/hibernate-tabs-free-memory/" hreflang="es" lang="es">Español</a> · <a href="../../it/blog/hibernate-tabs-free-memory/" hreflang="it" lang="it">Italiano</a> · <a href="../../de/blog/hibernate-tabs-free-memory/" hreflang="de" lang="de">Deutsch</a> · <a href="../../pt/blog/hibernate-tabs-free-memory/" hreflang="pt" lang="pt">Português</a></p>
+<!-- /TAKT-LANG:nav -->
+
+        <div class="blog-post-body">
+          <div class="tldr">
+            <p><strong>Short answer:</strong> Takt manages idle tabs in two stages. <em>Suspend</em> unloads a tab but leaves it in the tab strip. <em>Hibernate</em> closes it and saves its state so one click brings it back.</p>
+            <ul>
+              <li>Free: auto-suspend after 15 minutes to 4 hours idle, a never-suspend list, and manual hibernation of up to 5 tabs.</li>
+              <li>Premium: automatic hibernation by idle time, by tab count per window, or when a schedule ends, and up to 200 hibernated tabs.</li>
+              <li>Everything stays on your device. No account, no analytics.</li>
+            </ul>
+          </div>
+
+          <h2 id="suspend-vs-hibernate">What's the difference between suspending and hibernating a tab?</h2>
+          <p>Both free memory. They differ in where the tab goes.</p>
+          <table>
+            <thead>
+              <tr><th></th><th>Suspended</th><th>Hibernated</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Tab strip</td><td>Stays, greyed out</td><td>Gone, listed in Takt's Hibernate pane</td></tr>
+              <tr><td>How</td><td>Chrome's own tab discard</td><td>Tab closed, state saved by Takt</td></tr>
+              <tr><td>Coming back</td><td>Click the tab; the page reloads</td><td>Click <strong>Wake</strong>; the tab reopens where it was</td></tr>
+              <tr><td>Manual</td><td>Discard advisor (Premium dashboard)</td><td>Free, up to 5 tabs</td></tr>
+              <tr><td>Automatic</td><td>Free</td><td>Premium</td></tr>
+            </tbody>
+          </table>
+
+          <h2 id="manual">How do I hibernate a tab by hand?</h2>
+          <ol class="steps">
+            <li>Install <a href="https://chromewebstore.google.com/detail/takt/plgfdnbgkjocmgegnkbihoeojcfphdic">Takt from the Chrome Web Store</a>.</li>
+            <li>On the tab you want to put away, open the Takt popup and click <strong>Hibernate Tab</strong>. Or right-click the page and choose <strong>Hibernate this tab</strong>.</li>
+            <li>The tab closes, and Chrome shows a short "tab hibernated" notification.</li>
+            <li>To bring it back, open the popup's <strong>Hibernate</strong> pane and click <strong>Wake</strong>.</li>
+          </ol>
+          <p>Takt saves the URL, title, favicon, group name and color, window, position in the window, pin state, scroll position and the time you hibernated it. Wake reopens the tab in its window, at its old position, back in its group, scrolled to where you were.</p>
+          <p>If the same URL is already open, Takt asks before waking, so you don't end up with a duplicate.</p>
+
+          <figure class="narrow">
+            <img src="../img/popup-hibernate.png" alt="Takt popup on the Hibernate pane: '~100MB saved' at the top, a search box, two hibernated tabs (The Verge in News, an arXiv paper in Research) each with a Wake button, and Wake all and Clear all links" width="420" loading="lazy" />
+            <figcaption>The Hibernate pane. Search, wake one tab, or wake them all.</figcaption>
+          </figure>
+          <p>The "~100MB saved" figure is a flat estimate: Takt counts 50 MB per hibernated tab. It doesn't measure the tabs it closes.</p>
+
+          <h2 id="auto-suspend">How do I unload idle tabs automatically?</h2>
+          <p>Auto-suspend is free and on by default. Every 5 minutes, Takt unloads tabs that have been idle longer than your threshold: 15 minutes, 30 minutes (the default), 1, 2 or 4 hours. Set it in <strong>Options → Settings → Tab Lifecycle</strong>.</p>
+          <p>Idle means time since the tab was last active or last finished loading. Takt never suspends:</p>
+          <ul>
+            <li>the active tab, or a tab that is still loading;</li>
+            <li>tabs playing audio;</li>
+            <li>pinned tabs;</li>
+            <li>tabs that match your <strong>Never suspend these tabs</strong> list.</li>
+          </ul>
+          <p>The never-suspend list takes one pattern per line, with <code>*</code> as a wildcard. <code>*://mail.google.com/*</code> keeps Gmail loaded. The list also protects tabs from every automatic hibernation trigger below.</p>
+
+          <figure>
+            <img src="../img/options-settings-tab-lifecycle.png" alt="Takt's Tab Lifecycle settings: Enable auto-suspend checked, Suspend after idle for set to 30 minutes, a Never suspend these tabs text box with the example *://mail.google.com/*, and Auto-hibernate suspended tabs after set to 2 days" width="700" loading="lazy" />
+            <figcaption>Tab Lifecycle settings. Suspend is free; the auto-hibernate delay is Premium.</figcaption>
+          </figure>
+
+          <h2 id="auto-hibernate">Can Chrome hibernate tabs automatically? <span class="badge badge-premium">Premium</span></h2>
+          <p>With Premium, Takt has three triggers:</p>
+          <ul>
+            <li><strong>Idle time.</strong> A tab that is already suspended and idle beyond your delay is hibernated. Choose from 5 minutes to 7 days; the default is 2 days.</li>
+            <li><strong>Tab limit.</strong> When a window goes over your limit (15 to 100 tabs, default 30), Takt hibernates its least recently used tabs until it's back at the limit. Close a tab and the most recently hibernated one comes back into that window. Each window is counted on its own.</li>
+            <li><strong>Schedule end.</strong> A profile schedule can hibernate all eligible tabs when its hours end. Turn on <em>Hibernate tabs when schedule ends</em> in <a href="../profiles-and-schedules/">Profiles</a>.</li>
+          </ul>
+          <p>For the idle and tab-limit triggers, Chrome shows a notification with an <strong>Undo</strong> button for 10 seconds. After that, the tab still waits in the Hibernate pane.</p>
+
+          <h2 id="trust">Is this another Great Suspender?</h2>
+          <p>Fair question. In 2021 Google removed The Great Suspender after malicious code was found in a version released after it was sold. Many people stopped trusting tab suspenders after that.</p>
+          <p>Here is what Takt does differently, and what you can check:</p>
+          <ul>
+            <li><strong>Suspended tabs keep their real URL.</strong> Takt calls Chrome's own discard function. It doesn't swap your page for an extension page, so uninstalling Takt leaves your tabs as they are.</li>
+            <li><strong>Hibernated tabs stay on your device.</strong> The records live in Chrome's local storage. They only leave your machine if you set up <a href="../backup-and-sync-tabs/">Drive or folder sync</a> yourself.</li>
+            <li><strong>No account, no analytics, no telemetry.</strong> Extra permissions are optional and requested only when a feature needs them. See <a href="../privacy-local-first/">how Takt keeps data local</a>.</li>
+          </ul>
+          <p>You still have to trust whoever ships updates to any extension you install. Read the permissions it asks for.</p>
+
+          <h2 id="memory-saver">Is Chrome's Memory Saver enough?</h2>
+          <p>Often, yes. If all you want is for background tabs to stop using memory, Chrome's built-in Memory Saver costs nothing and needs no extension.</p>
+          <p>Two complaints come up again and again: tabs reload when you return to them, and some inactive tabs never go to sleep. Takt's suspend step has the first trade-off too. A suspended tab reloads when you click it, because it is the same kind of discard.</p>
+          <p>What Takt adds is control. You pick the idle threshold, you list the sites it must never touch, and hibernation takes tabs out of the tab strip completely while keeping a way back.</p>
+
+          <h2 id="limits">What are the limits?</h2>
+          <table>
+            <thead><tr><th></th><th>Free</th><th>Premium</th></tr></thead>
+            <tbody>
+              <tr><td>Auto-suspend and never-suspend list</td><td>Yes</td><td>Yes</td></tr>
+              <tr><td>Manual hibernation</td><td>Yes</td><td>Yes</td></tr>
+              <tr><td>Hibernated tabs at a time</td><td>5</td><td>200</td></tr>
+              <tr><td>Auto-hibernate by idle time, tab limit or schedule</td><td>No</td><td>Yes</td></tr>
+            </tbody>
+          </table>
+          <p>Pinned tabs and tabs playing audio can't be hibernated. When you reach your limit, Takt refuses to hibernate more until you wake or clear some.</p>
+
+          <div class="cta">
+            <p>Put a tab to sleep. Wake it exactly where you left it.</p>
+            <a class="btn" href="https://chromewebstore.google.com/detail/takt/plgfdnbgkjocmgegnkbihoeojcfphdic">Add Takt to Chrome, free</a>
+          </div>
+
+          <h2 id="faq">FAQ</h2>
+          <div class="faq">
+            <details>
+              <summary>What is the difference between suspending and hibernating a tab?</summary>
+              <p>A suspended tab is unloaded but stays in the tab strip and reloads on click. A hibernated tab is closed; Takt saves its state and reopens it when you click Wake.</p>
+            </details>
+            <details>
+              <summary>How many tabs can I hibernate for free?</summary>
+              <p>5 at a time on the free plan, 200 on Premium ($3/month or $30/year). Auto-suspend has no limit and is free.</p>
+            </details>
+            <details>
+              <summary>Is Takt another Great Suspender?</summary>
+              <p>Takt suspends with Chrome's own discard, so tabs keep their real URL. Hibernated tabs stay in local storage on your device. No account, no analytics, no telemetry.</p>
+            </details>
+            <details>
+              <summary>Do hibernated tabs survive a browser restart?</summary>
+              <p>Yes. They are stored on disk, not in memory. On startup Takt drops any record whose URL is already open again.</p>
+            </details>
+          </div>
+
+          <h2 id="next">Read next</h2>
+          <div class="read-next">
+            <a href="../find-memory-hungry-tabs/">Find the tabs eating your memory<span>Per-tab estimates and A–F group scores.</span></a>
+            <a href="../quick-switch-search-tabs/">Jump to any tab, even a hibernated one<span>Quick Switch with Alt+Shift+Space.</span></a>
+          </div>
+        </div>
+
+        <footer class="blog-post-footer">
+          <a href="../">All feature articles</a> · <a href="../../docs/hibernation/">Hibernation reference</a>
+        </footer>
+      </article>
+    </main>
+
+    <footer id="site-footer"></footer>
+    <script src="../../js/includes.js"></script>
+    <script src="../../js/nav.js"></script>
+  </body>
+</html>

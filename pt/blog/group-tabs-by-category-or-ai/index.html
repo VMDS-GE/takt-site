@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Agrupar abas do Chrome por categoria ou com IA no dispositivo, sem regras — Takt</title>
+    <meta
+      name="description"
+      content="Agrupe todas as abas abertas do Chrome por categoria (20 categorias prontas) ou com o modelo de IA no dispositivo do Chrome, sem escrever nenhuma regra. Como cada modo funciona, o limite gratuito de 5 grupos e a comparação com o \"Organizar guias\" do próprio Chrome."
+    />
+    <link rel="canonical" href="https://taktabs.com/pt/blog/group-tabs-by-category-or-ai/" />
+<!-- TAKT-LANG:head -->
+<link rel="alternate" hreflang="en" href="https://taktabs.com/blog/group-tabs-by-category-or-ai/" />
+<link rel="alternate" hreflang="fr" href="https://taktabs.com/fr/blog/group-tabs-by-category-or-ai/" />
+<link rel="alternate" hreflang="es" href="https://taktabs.com/es/blog/group-tabs-by-category-or-ai/" />
+<link rel="alternate" hreflang="it" href="https://taktabs.com/it/blog/group-tabs-by-category-or-ai/" />
+<link rel="alternate" hreflang="de" href="https://taktabs.com/de/blog/group-tabs-by-category-or-ai/" />
+<link rel="alternate" hreflang="pt" href="https://taktabs.com/pt/blog/group-tabs-by-category-or-ai/" />
+<link rel="alternate" hreflang="x-default" href="https://taktabs.com/blog/group-tabs-by-category-or-ai/" />
+<!-- /TAKT-LANG:head -->
+    <meta property="og:type" content="article" />
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:title" content="Agrupar abas do Chrome por categoria ou com IA no dispositivo" />
+    <meta property="og:description" content="Nenhuma regra para escrever. Escolha categoria ou IA e cada aba aberta cai num grupo com nome." />
+    <meta property="og:url" content="https://taktabs.com/pt/blog/group-tabs-by-category-or-ai/" />
+    <meta property="og:image" content="https://taktabs.com/pt/blog/img/popup-home.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <link rel="icon" type="image/png" sizes="32x32" href="../../../assets/favicon-32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="../../../assets/favicon-16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="../../../assets/apple-touch-icon.png" />
+    <meta name="theme-color" content="#FF3B30" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../../../css/tokens.css" />
+    <link rel="stylesheet" href="../../../css/base.css" />
+    <link rel="stylesheet" href="../../../css/layout.css" />
+    <link rel="stylesheet" href="../../../css/blog.css" />
+    <link rel="stylesheet" href="../../../css/articles.css" />
+    <script src="../../../js/theme.js"></script>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Article",
+            "headline": "Agrupar abas do Chrome por categoria ou com IA no dispositivo",
+            "description": "Agrupe todas as abas abertas do Chrome em uma de 20 categorias prontas, ou por assunto com o modelo de IA no dispositivo do Chrome, sem escrever regras.",
+            "inLanguage": "pt",
+            "datePublished": "2026-10-08",
+            "dateModified": "2026-10-08",
+            "author": { "@type": "Person", "name": "Vitor" },
+            "publisher": { "@type": "Organization", "name": "Takt", "url": "https://taktabs.com" },
+            "image": "https://taktabs.com/pt/blog/img/popup-home.png",
+            "mainEntityOfPage": "https://taktabs.com/pt/blog/group-tabs-by-category-or-ai/"
+          },
+          {
+            "@type": "HowTo",
+            "name": "Agrupar abas do Chrome por categoria ou com IA",
+            "step": [
+              { "@type": "HowToStep", "text": "Instale o Takt pela Chrome Web Store." },
+              { "@type": "HowToStep", "text": "Abra o popup do Takt e, em Modo de agrupamento, escolha Por categoria ou Por IA." },
+              { "@type": "HowToStep", "text": "O Takt desagrupa suas abas e as reagrupa no novo modo. Para rodar de novo mais tarde, clique em Agrupar abas (ou pressione Alt+Shift+G)." }
+            ]
+          },
+          {
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "Agrupar por categoria ou com IA é gratuito?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Sim. Os dois são gratuitos, até 5 grupos de abas no total em todas as janelas, contando os grupos que você criou à mão. O Premium (US$ 3/mês ou US$ 30/ano) remove o limite." }
+              },
+              {
+                "@type": "Question",
+                "name": "O agrupamento por IA do Takt envia minhas abas para um servidor?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Não. Ele usa a Prompt API integrada ao Chrome, que roda no seu dispositivo." }
+              },
+              {
+                "@type": "Question",
+                "name": "E se o modelo de IA do Chrome não estiver disponível no meu computador?",
+                "acceptedAnswer": { "@type": "Answer", "text": "O Takt agrupa as abas que têm palavras em comum no título e no nome do site, e avisa que a IA está indisponível neste dispositivo." }
+              },
+              {
+                "@type": "Question",
+                "name": "Posso adicionar meus próprios sites a uma categoria?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Não. A lista é fixa e sites desconhecidos vão para Other. Use o modo Por regras para mandar um site para um grupo com o nome que você escolher." }
+              }
+            ]
+          },
+          {
+            "@type": "SoftwareApplication",
+            "name": "Takt",
+            "applicationCategory": "BrowserApplication",
+            "operatingSystem": "Chrome",
+            "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <header id="site-header"></header>
+
+    <main class="blog-main">
+      <article class="blog-post article">
+        <p class="eyebrow">Agrupamento por categoria e por IA</p>
+        <h1 class="blog-post-title">Agrupar abas do Chrome por categoria ou com IA, sem regras</h1>
+        <p class="lede">Dá para agrupar todas as abas abertas do Chrome sem escrever uma regra. Escolha <strong>Por categoria</strong> e o Takt coloca cada aba em uma de 20 categorias com nome. Escolha <strong>Por IA</strong> e o modelo no dispositivo do Chrome agrupa as abas por assunto.</p>
+        <p class="blog-post-meta">Atualizado em 8 de outubro de 2026 · 6 min de leitura</p>
+<!-- TAKT-LANG:nav -->
+<p class="lang-links"><a href="../../../blog/group-tabs-by-category-or-ai/" hreflang="en" lang="en">English</a> · <a href="../../../fr/blog/group-tabs-by-category-or-ai/" hreflang="fr" lang="fr">Français</a> · <a href="../../../es/blog/group-tabs-by-category-or-ai/" hreflang="es" lang="es">Español</a> · <a href="../../../it/blog/group-tabs-by-category-or-ai/" hreflang="it" lang="it">Italiano</a> · <a href="../../../de/blog/group-tabs-by-category-or-ai/" hreflang="de" lang="de">Deutsch</a> · <span aria-current="true">Português</span></p>
+<!-- /TAKT-LANG:nav -->
+
+        <div class="blog-post-body">
+          <div class="tldr">
+            <p><strong>Resposta curta:</strong> abra o popup do Takt, escolha <em>Por categoria</em> ou <em>Por IA</em> em Modo de agrupamento, e o Takt reagrupa suas abas na hora.</p>
+            <ul>
+              <li>Categoria: 20 categorias fixas, como Development, Social e News. Sites desconhecidos vão para "Other".</li>
+              <li>IA: o modelo integrado ao Chrome dá nome aos grupos. Ele roda no seu dispositivo.</li>
+              <li>Os dois são gratuitos, até 5 grupos em todas as janelas. O Premium remove o limite.</li>
+            </ul>
+          </div>
+
+          <h2 id="modes">Quais modos de agrupamento o Takt tem?</h2>
+          <p>Quatro, e só um fica ativo por vez. Você escolhe no popup, em <strong>Modo de agrupamento</strong>.</p>
+          <table>
+            <thead><tr><th>Modo</th><th>Como as abas são agrupadas</th><th>Configuração</th></tr></thead>
+            <tbody>
+              <tr><td>Por regras (padrão)</td><td>Pelas regras de URL que você escreve</td><td>Uma regra por grupo</td></tr>
+              <tr><td>Por categoria</td><td>Por site, em 20 categorias prontas</td><td>Nenhuma</td></tr>
+              <tr><td>Por IA</td><td>Por assunto, com nomes dados pelo modelo no dispositivo do Chrome</td><td>Nenhuma</td></tr>
+              <tr><td>Nenhum</td><td>O Takt não agrupa abas</td><td>Nenhuma</td></tr>
+            </tbody>
+          </table>
+          <p>Quando você troca de modo, o Takt desagrupa suas abas e as reagrupa no novo modo. A escolha fica salva. Escolher Nenhum desagrupa tudo e para de agrupar.</p>
+
+          <figure class="narrow">
+            <img src="../img/popup-home.png" alt="Painel Início do popup do Takt com a seção Modo de agrupamento mostrando quatro opções: Por regras, Por categoria, Por IA e Nenhum, acima dos botões de Ações rápidas Agrupar abas, Desagrupar tudo, Recolher tudo e Ordenar por domínio" width="420" loading="lazy" />
+            <figcaption>A escolha do modo de agrupamento no popup. Agrupar abas executa o modo selecionado.</figcaption>
+          </figure>
+
+          <h2 id="category">Como funciona o agrupamento por categoria?</h2>
+          <p>O Takt olha só o nome do host de cada aba. Ele consulta uma lista interna de 77 sites conhecidos, cada um associado a uma de 20 categorias:</p>
+          <p>Development, AI Tools, Docs, Productivity, Communication, Finance, Design, Shopping, Social, Entertainment, News, Gaming, Sports, Travel, Health, Food, Science, Career, Education e Cloud.</p>
+          <ul>
+            <li><strong>Subdomínios herdam a categoria.</strong> docs.github.com não está na lista, então o Takt tenta github.com e coloca a aba em Development.</li>
+            <li><strong>Vence o host mais específico.</strong> aws.amazon.com vai para Cloud. amazon.com vai para Shopping.</li>
+            <li><strong>Todo o resto vai para Other.</strong> Isso inclui a intranet da sua empresa, páginas de nova aba e qualquer site que a lista não conhece. Other é sempre o último grupo.</li>
+          </ul>
+          <p>A maior categoria vira o primeiro grupo, depois a segunda maior, e assim por diante. As novas abas entram no grupo da sua categoria enquanto carregam. Neste modo, o Takt não lê nenhum conteúdo das páginas.</p>
+
+          <h2 id="ai">Como funciona o agrupamento com IA?</h2>
+          <p>O Takt envia o título de cada aba e até 500 caracteres do texto da página para a Prompt API integrada ao Chrome. O modelo roda dentro do Chrome, no seu computador. Ele devolve um nome curto por assunto, e o Takt monta os grupos.</p>
+          <ul>
+            <li>Um grupo precisa de pelo menos 2 abas. Uma aba sem par fica sem grupo.</li>
+            <li>Cada execução cobre até 100 abas.</li>
+            <li>Os nomes vêm do modelo, então podem mudar de uma execução para outra.</li>
+            <li>Ler o texto das páginas exige a permissão opcional "Acesso a todos os sites" do Takt. Sem ela, o Takt agrupa só pelos títulos e avisa no popup.</li>
+          </ul>
+          <p>O modelo não roda a cada nova aba. No modo Por IA, as abas que você abre depois esperam o próximo clique em <strong>Agrupar abas</strong> ou <kbd>Alt+Shift+G</kbd>.</p>
+
+          <h2 id="download">O que acontece na primeira vez que uso o modo Por IA?</h2>
+          <p>Talvez o Chrome precise baixar antes o modelo no dispositivo. O Takt inicia o download quando você clica em Agrupar abas e mostra o progresso no popup: "Preparando modelo de IA…", depois "Baixando modelo de IA (N%)…", depois "Modelo de IA pronto. Agrupando abas…". O agrupamento continua sozinho quando o modelo fica pronto.</p>
+
+          <h2 id="fallback">E se meu computador não rodar o modelo de IA do Chrome?</h2>
+          <p>O Takt agrupa suas abas mesmo assim. Ele recorre a um método por semelhança, que agrupa as abas que têm palavras em comum no título e no nome do site, e o popup mostra "IA indisponível neste dispositivo."</p>
+          <p>O mesmo método alternativo entra em ação se o modelo demorar demais: 2 minutos para carregar ou 8 segundos para responder. Ele também cuida das novas abas no modo Por IA: uma nova aba entra no grupo existente mais próximo e nunca cria um grupo novo.</p>
+
+          <h2 id="cap">O que é o limite gratuito de 5 grupos?</h2>
+          <p>No plano gratuito, os modos Por categoria e Por IA criam no máximo 5 grupos de abas. O limite conta todos os grupos de abas abertos no Chrome, em todas as janelas, inclusive os que você criou à mão.</p>
+          <ul>
+            <li>Se uma execução passar do limite, o Takt mantém os maiores grupos e deixa o resto sem grupo.</li>
+            <li>Se você já tem 5 grupos, o popup diz "You've hit the 5-group limit. Ungroup some tabs to create more."</li>
+            <li>O modo Por regras tem seu próprio limite gratuito, de 5 regras.</li>
+          </ul>
+          <p>O Premium (US$ 3/mês ou US$ 30/ano) remove o limite de grupos.</p>
+
+          <h2 id="chrome">Qual a diferença para o "Organizar guias" do próprio Chrome?</h2>
+          <p>Desde o Chrome 146, clicar com o botão direito numa aba oferece organizar as abas parecidas. O recurso usa o Gemini Nano no seu dispositivo, sugere nomes de grupo, não custa nada e não precisa de extensão. Para uma arrumação pontual, pode ser tudo de que você precisa.</p>
+          <table>
+            <thead><tr><th></th><th>Integrado ao Chrome</th><th>Takt Por categoria</th><th>Takt Por IA</th></tr></thead>
+            <tbody>
+              <tr><td>Quando agrupa</td><td>Quando você pede</td><td>Ao clicar em Agrupar abas, e cada nova aba enquanto carrega</td><td>Ao clicar em Agrupar abas</td></tr>
+              <tr><td>Nomes dos grupos</td><td>Sugeridos pelo modelo</td><td>Fixos: 20 categorias + Other</td><td>Sugeridos pelo modelo</td></tr>
+              <tr><td>Roda no dispositivo</td><td>Sim</td><td>Sim, sem precisar de modelo</td><td>Sim</td></tr>
+              <tr><td>Passar para suas próprias regras</td><td>Não</td><td colspan="2">Sim, um clique para o modo Por regras</td></tr>
+              <tr><td>Preço</td><td>Grátis</td><td colspan="2">Grátis até 5 grupos; Premium ilimitado</td></tr>
+            </tbody>
+          </table>
+
+          <h2 id="limits">Onde categoria e IA deixam a desejar</h2>
+          <ul>
+            <li><strong>A lista de categorias é fixa.</strong> Não dá para adicionar um site nem renomear uma categoria. Se você renomear um grupo no Chrome, o Takt volta a usar o nome interno na próxima execução.</li>
+            <li><strong>As cores se repetem.</strong> 20 categorias dividem as 8 cores de grupo do Chrome. O que identifica um grupo é o nome.</li>
+            <li><strong>Os nomes da IA mudam.</strong> Rode duas vezes e você pode receber nomes diferentes.</li>
+            <li><strong>Perfis e agendamentos não se aplicam.</strong> Eles só funcionam no modo Por regras.</li>
+          </ul>
+          <p>Se você quer o github.com sempre num grupo chamado "Code", <a href="../auto-group-tabs-chrome/">escreva uma regra</a>. Não sabe quais regras escrever? <a href="../rule-suggestions/">Deixe o Takt sugerir</a>.</p>
+
+          <div class="cta">
+            <p>Escolha um modo. Veja 30 abas soltas virarem cinco grupos com nome.</p>
+            <a class="btn" href="https://chromewebstore.google.com/detail/takt/plgfdnbgkjocmgegnkbihoeojcfphdic">Adicionar o Takt ao Chrome, grátis</a>
+          </div>
+
+          <h2 id="faq">Perguntas frequentes</h2>
+          <div class="faq">
+            <details>
+              <summary>Agrupar por categoria ou com IA é gratuito?</summary>
+              <p>Sim. Os dois são gratuitos, até 5 grupos de abas no total em todas as janelas, contando os grupos que você criou à mão. O Premium (US$ 3/mês ou US$ 30/ano) remove o limite.</p>
+            </details>
+            <details>
+              <summary>O agrupamento por IA do Takt envia minhas abas para um servidor?</summary>
+              <p>Não. Ele usa a Prompt API integrada ao Chrome, que roda no seu dispositivo. Veja <a href="../privacy-local-first/">como o Takt mantém os dados no seu computador</a>.</p>
+            </details>
+            <details>
+              <summary>E se o modelo de IA do Chrome não estiver disponível no meu computador?</summary>
+              <p>O Takt agrupa as abas que têm palavras em comum no título e no nome do site, e avisa que a IA está indisponível neste dispositivo.</p>
+            </details>
+            <details>
+              <summary>Posso adicionar meus próprios sites a uma categoria?</summary>
+              <p>Não. A lista é fixa e sites desconhecidos vão para Other. Use o modo Por regras para mandar um site para um grupo com o nome que você escolher.</p>
+            </details>
+          </div>
+
+          <h2 id="next">Leia também</h2>
+          <div class="read-next">
+            <a href="../auto-group-tabs-chrome/">Agrupe abas com suas próprias regras<span>Uma regra por site, aplicada enquanto as abas abrem.</span></a>
+            <a href="../rule-suggestions/">Deixe o Takt sugerir suas regras<span>A partir dos sites que você já mantém abertos.</span></a>
+          </div>
+        </div>
+
+        <footer class="blog-post-footer">
+          <a href="../../../blog/">Todos os artigos</a> · <a href="../../../docs/group-by-category/">Referência: agrupar por categoria</a> · <a href="../../../docs/smart-group-ai/">Referência: agrupar com IA</a>
+        </footer>
+      </article>
+    </main>
+
+    <footer id="site-footer"></footer>
+    <script src="../../../js/includes.js"></script>
+    <script src="../../../js/nav.js"></script>
+  </body>
+</html>

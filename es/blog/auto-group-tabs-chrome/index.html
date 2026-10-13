@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cómo agrupar pestañas automáticamente en Chrome con reglas — Takt</title>
+    <meta
+      name="description"
+      content="Chrome puede agrupar pestañas, pero no lo hace por ti. Así se crean reglas de URL que llevan cada pestaña nueva a un grupo con nombre y color en cuanto se abre."
+    />
+    <link rel="canonical" href="https://taktabs.com/es/blog/auto-group-tabs-chrome/" />
+<!-- TAKT-LANG:head -->
+<link rel="alternate" hreflang="en" href="https://taktabs.com/blog/auto-group-tabs-chrome/" />
+<link rel="alternate" hreflang="fr" href="https://taktabs.com/fr/blog/auto-group-tabs-chrome/" />
+<link rel="alternate" hreflang="es" href="https://taktabs.com/es/blog/auto-group-tabs-chrome/" />
+<link rel="alternate" hreflang="it" href="https://taktabs.com/it/blog/auto-group-tabs-chrome/" />
+<link rel="alternate" hreflang="de" href="https://taktabs.com/de/blog/auto-group-tabs-chrome/" />
+<link rel="alternate" hreflang="pt" href="https://taktabs.com/pt/blog/auto-group-tabs-chrome/" />
+<link rel="alternate" hreflang="x-default" href="https://taktabs.com/blog/auto-group-tabs-chrome/" />
+<!-- /TAKT-LANG:head -->
+    <meta property="og:type" content="article" />
+    <meta property="og:locale" content="es_ES" />
+    <meta property="og:title" content="Cómo agrupar pestañas automáticamente en Chrome con reglas" />
+    <meta property="og:description" content="Escribe una regla una vez. Cada pestaña que coincida cae en el grupo de pestañas de Chrome correcto al abrirse." />
+    <meta property="og:url" content="https://taktabs.com/es/blog/auto-group-tabs-chrome/" />
+    <meta property="og:image" content="https://taktabs.com/es/blog/img/options-rules.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <link rel="icon" type="image/png" sizes="32x32" href="../../../assets/favicon-32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="../../../assets/favicon-16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="../../../assets/apple-touch-icon.png" />
+    <meta name="theme-color" content="#FF3B30" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../../../css/tokens.css" />
+    <link rel="stylesheet" href="../../../css/base.css" />
+    <link rel="stylesheet" href="../../../css/layout.css" />
+    <link rel="stylesheet" href="../../../css/blog.css" />
+    <link rel="stylesheet" href="../../../css/articles.css" />
+    <script src="../../../js/theme.js"></script>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Article",
+            "headline": "Cómo agrupar pestañas automáticamente en Chrome con reglas",
+            "description": "Crea reglas de URL que llevan cada pestaña nueva a un grupo de pestañas de Chrome con nombre y color en cuanto se abre.",
+            "inLanguage": "es",
+            "datePublished": "2026-10-08",
+            "dateModified": "2026-10-08",
+            "author": { "@type": "Person", "name": "Vitor" },
+            "publisher": { "@type": "Organization", "name": "Takt", "url": "https://taktabs.com" },
+            "image": "https://taktabs.com/es/blog/img/options-rules.png",
+            "mainEntityOfPage": "https://taktabs.com/es/blog/auto-group-tabs-chrome/"
+          },
+          {
+            "@type": "HowTo",
+            "name": "Agrupar pestañas automáticamente en Chrome por URL",
+            "step": [
+              { "@type": "HowToStep", "text": "Instala Takt desde Chrome Web Store." },
+              { "@type": "HowToStep", "text": "Abre la página de opciones de Takt, ve a Rules y haz clic en New Rule." },
+              { "@type": "HowToStep", "text": "Añade una condición, por ejemplo URL Domain github.com." },
+              { "@type": "HowToStep", "text": "Ponle nombre al grupo, elige uno de los 8 colores de Chrome y guarda. Las pestañas que coinciden se agrupan al cargarse." }
+            ]
+          },
+          {
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "¿Puede Chrome agrupar pestañas automáticamente sin una extensión?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Chrome puede sugerir grupos con su función de IA integrada «Organizar pestañas», pero no tiene reglas: no puedes decirle que todas las pestañas de github.com vayan siempre a un grupo llamado Code. Una extensión basada en reglas como Takt sí lo hace." }
+              },
+              {
+                "@type": "Question",
+                "name": "¿Cuántas reglas puedo crear gratis?",
+                "acceptedAnswer": { "@type": "Answer", "text": "El plan Free permite 5 reglas con una condición cada una, con coincidencia por contiene, exacta o dominio. Premium (3 $/mes o 30 $/año) elimina el límite y añade glob, regex, coincidencia por título y hasta 10 condiciones AND/OR por regla." }
+              },
+              {
+                "@type": "Question",
+                "name": "¿Puedo pausar una regla sin borrarla?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Sí. Cada regla tiene un interruptor de activación en la lista. Una regla desactivada conserva su configuración y deja de aplicarse." }
+              },
+              {
+                "@type": "Question",
+                "name": "¿Envía Takt mis URL a algún sitio para aplicar las reglas?",
+                "acceptedAnswer": { "@type": "Answer", "text": "No. Las reglas se aplican dentro de tu navegador con datos guardados localmente. Takt no tiene cuentas ni analíticas." }
+              }
+            ]
+          },
+          {
+            "@type": "SoftwareApplication",
+            "name": "Takt",
+            "applicationCategory": "BrowserApplication",
+            "operatingSystem": "Chrome",
+            "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <header id="site-header"></header>
+
+    <main class="blog-main">
+      <article class="blog-post article">
+        <p class="eyebrow">Reglas</p>
+        <h1 class="blog-post-title">Cómo agrupar pestañas automáticamente en Chrome</h1>
+        <p class="lede">Chrome sabe agrupar pestañas. Lo que no hace es agruparlas por ti. Una regla lo resuelve: la escribes una vez y cada pestaña que coincida cae en el grupo correcto en cuanto se abre.</p>
+        <p class="blog-post-meta">Actualizado el 8 de octubre de 2026 · 5 min de lectura</p>
+<!-- TAKT-LANG:nav -->
+<p class="lang-links"><a href="../../../blog/auto-group-tabs-chrome/" hreflang="en" lang="en">English</a> · <a href="../../../fr/blog/auto-group-tabs-chrome/" hreflang="fr" lang="fr">Français</a> · <span aria-current="true">Español</span> · <a href="../../../it/blog/auto-group-tabs-chrome/" hreflang="it" lang="it">Italiano</a> · <a href="../../../de/blog/auto-group-tabs-chrome/" hreflang="de" lang="de">Deutsch</a> · <a href="../../../pt/blog/auto-group-tabs-chrome/" hreflang="pt" lang="pt">Português</a></p>
+<!-- /TAKT-LANG:nav -->
+
+        <div class="blog-post-body">
+          <div class="tldr">
+            <p><strong>Respuesta corta:</strong> instala Takt, crea una regla como <em>URL domain github.com → grupo "Code", azul</em> y guárdala. A partir de ahí, cada pestaña de GitHub va al grupo azul "Code" mientras carga.</p>
+            <ul>
+              <li>Free: 5 reglas, con coincidencia por <em>contiene</em>, <em>exacta</em> o <em>dominio</em>.</li>
+              <li>Premium: reglas ilimitadas, patrones glob y regex, coincidencia por título de página y hasta 10 condiciones AND/OR.</li>
+              <li>La coincidencia se calcula en tu equipo. Sin cuenta, sin analíticas.</li>
+            </ul>
+          </div>
+
+          <h2 id="why">¿Por qué los grupos de pestañas de Chrome no se ordenan solos?</h2>
+          <p>Los grupos de pestañas de Chrome son un archivador sin archivero. Clic derecho, "Añadir pestaña al grupo", y otra vez. Abre veinte enlaces en una mañana de trabajo y archivarás veinte veces o, lo más probable, ninguna.</p>
+          <p>La función de IA integrada "Organizar pestañas" de Chrome ayuda con una limpieza puntual. Pero no sigue instrucciones. No puedes decirle "las pull requests siempre van a Reviews". Una regla sí.</p>
+
+          <h2 id="create">¿Cómo creo una regla para agrupar pestañas?</h2>
+          <ol class="steps">
+            <li>Instala <a href="https://chromewebstore.google.com/detail/takt/plgfdnbgkjocmgegnkbihoeojcfphdic">Takt desde Chrome Web Store</a>.</li>
+            <li>Abre la página de opciones de Takt y haz clic en <strong>New Rule</strong>.</li>
+            <li>Añade una condición. <em>URL · Domain · github.com</em> captura github.com y todos sus subdominios.</li>
+            <li>Ponle nombre al grupo, elige un color y guarda.</li>
+          </ol>
+          <p>Deja marcada la casilla <strong>Aplicar ahora</strong> y Takt reagrupa al momento las pestañas que ya tienes abiertas. Las nuevas se agrupan al cargarse.</p>
+
+          <figure>
+            <img src="../img/options-rule-editor.png" alt="Editor de reglas de Takt para una regla llamada Code: dos condiciones URL Domain (github.com, gitlab.com) unidas con ANY condition (OR), nombre de grupo Code, azul seleccionado entre los 8 colores de Chrome y Aplicar ahora marcado" width="700" loading="lazy" />
+            <figcaption>Una regla con dos condiciones unidas por OR (Premium). En el plan Free es una condición por regla.</figcaption>
+          </figure>
+
+          <h2 id="match-types">¿Qué tipo de coincidencia debo usar?</h2>
+          <p>A la mayoría le basta con <strong>Domain</strong>. Recurre a los demás cuando un dominio se queda demasiado amplio.</p>
+          <table>
+            <thead>
+              <tr><th>Tipo de coincidencia</th><th>Patrón</th><th>Captura</th><th>Plan</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Domain</td><td><code>google.com</code></td><td>docs.google.com, mail.google.com, google.com</td><td>Free</td></tr>
+              <tr><td>Contains</td><td><code>localhost</code></td><td>http://localhost:3000/api</td><td>Free</td></tr>
+              <tr><td>Exact</td><td><code>https://mail.google.com/mail/u/0/#inbox</code></td><td>Solo esa URL</td><td>Free</td></tr>
+              <tr><td>Glob</td><td><code>*github.com/*/pull/*</code></td><td>Todas las pull requests, de cualquier repositorio</td><td>Premium</td></tr>
+              <tr><td>Regex</td><td><code>jira\..*/browse/PROJ-\d+</code></td><td>Las incidencias de un proyecto</td><td>Premium</td></tr>
+            </tbody>
+          </table>
+          <p>Cualquier condición se puede negar (<em>la URL NO contiene google.com</em>) o hacer sensible a mayúsculas. Premium añade la coincidencia por <strong>título</strong> de la página y la combinación de hasta 10 condiciones con AND u OR.</p>
+
+          <h2 id="order">¿Y si dos reglas coinciden con la misma pestaña?</h2>
+          <p>Gana la primera coincidencia. Las reglas se comprueban desde arriba de la lista hacia abajo y la comprobación se detiene en el primer acierto.</p>
+          <p>Así que ordénalas de la más específica a la más general. Una regla "Reviews" para pull requests tiene que estar por encima de una regla "Code" para todo GitHub; si no, todas las pull requests acaban en "Code". Para mover una regla, arrástrala o usa los botones ↑/↓.</p>
+
+          <figure>
+            <img src="../img/options-rules.png" alt="Lista de reglas de Takt con siete reglas, sus condiciones, nombres de grupo, interruptores de activación y flechas para reordenar, con el Probador de reglas encima" width="700" loading="lazy" />
+            <figcaption>La lista de reglas, con el Probador de reglas arriba. Pega cualquier URL para ver qué regla se aplica.</figcaption>
+          </figure>
+
+          <h2 id="test">¿Cómo compruebo una regla antes de fiarme de ella?</h2>
+          <p>De dos formas, las dos en la página Rules:</p>
+          <ul>
+            <li><strong>Probador de reglas.</strong> Pega una URL (y, si quieres, un título de página). Takt te dice qué regla se aplicaría.</li>
+            <li><strong>Vista previa de pestañas coincidentes.</strong> Dentro del editor, muestra las pestañas ya abiertas que la regla capturaría, antes de guardar.</li>
+          </ul>
+
+          <h2 id="starter">Cinco reglas para empezar</h2>
+          <p>Cinco reglas cubren la mayoría de las jornadas de trabajo, y cinco es justo el límite del plan Free.</p>
+          <table>
+            <thead><tr><th>Grupo</th><th>Condición</th></tr></thead>
+            <tbody>
+              <tr><td>Code</td><td>Domain <code>github.com</code></td></tr>
+              <tr><td>Documentación</td><td>Domain <code>developer.mozilla.org</code></td></tr>
+              <tr><td>Correo y calendario</td><td>Domain <code>google.com</code></td></tr>
+              <tr><td>Desarrollo local</td><td>Contains <code>localhost</code></td></tr>
+              <tr><td>Ver más tarde</td><td>Domain <code>youtube.com</code></td></tr>
+            </tbody>
+          </table>
+          <p>¿No sabes qué escribir? El <a href="../rule-suggestions/">panel Estadísticas te sugiere reglas</a> a partir de los sitios que ya tienes abiertos.</p>
+
+          <h2 id="limits">Lo que las reglas no hacen</h2>
+          <p>Las reglas capturan lo que les indicas. Una pestaña de un sitio para el que nunca escribiste una regla se queda sin agrupar. Si prefieres no escribir reglas, cambia el modo de agrupación a <a href="../group-tabs-by-category-or-ai/">Categoría o IA</a>.</p>
+
+          <div class="cta">
+            <p>Escribe una regla. Mira cómo la siguiente pestaña se archiva sola.</p>
+            <a class="btn" href="https://chromewebstore.google.com/detail/takt/plgfdnbgkjocmgegnkbihoeojcfphdic">Añadir Takt a Chrome, gratis</a>
+          </div>
+
+          <h2 id="faq">Preguntas frecuentes</h2>
+          <div class="faq">
+            <details>
+              <summary>¿Puede Chrome agrupar pestañas automáticamente sin una extensión?</summary>
+              <p>La función integrada "Organizar pestañas" de Chrome sugiere grupos con IA cuando se lo pides. No tiene reglas, así que no puede seguir enviando los mismos sitios al mismo grupo.</p>
+            </details>
+            <details>
+              <summary>¿Cuántas reglas puedo crear gratis?</summary>
+              <p>5 reglas, con una condición cada una y coincidencia por contiene, exacta o dominio. Premium (3 $/mes o 30 $/año) elimina el límite.</p>
+            </details>
+            <details>
+              <summary>¿Puedo pausar una regla sin borrarla?</summary>
+              <p>Sí. Cada regla tiene un interruptor de activación en la lista. Una regla desactivada conserva su configuración y deja de aplicarse.</p>
+            </details>
+            <details>
+              <summary>¿Envía Takt mis URL a algún sitio para aplicar las reglas?</summary>
+              <p>No. La coincidencia se calcula en tu navegador con reglas guardadas localmente. Consulta <a href="../privacy-local-first/">cómo mantiene Takt tus datos en local</a>.</p>
+            </details>
+          </div>
+
+          <h2 id="next">Sigue leyendo</h2>
+          <div class="read-next">
+            <a href="../prevent-duplicate-tabs/">Deja de abrir la misma pestaña dos veces<span>Prevención de duplicados, activada por defecto.</span></a>
+            <a href="../profiles-and-schedules/">Reglas distintas para el trabajo y para casa<span>Perfiles que cambian según un horario.</span></a>
+          </div>
+        </div>
+
+        <footer class="blog-post-footer">
+          <a href="../../../blog/">Todos los artículos</a> · <a href="../../../docs/rules/">Referencia de reglas</a>
+        </footer>
+      </article>
+    </main>
+
+    <footer id="site-footer"></footer>
+    <script src="../../../js/includes.js"></script>
+    <script src="../../../js/nav.js"></script>
+  </body>
+</html>

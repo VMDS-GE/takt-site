@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Doppelte Tabs in Chrome verhindern — Takt</title>
+    <meta
+      name="description"
+      content="Chrome öffnet dieselbe Seite in so vielen Tabs, wie Sie wollen. So verhindern Sie doppelte Tabs schon beim Öffnen, legen fest, was als dieselbe URL gilt, und schließen die bereits offenen Duplikate."
+    />
+    <link rel="canonical" href="https://taktabs.com/de/blog/prevent-duplicate-tabs/" />
+<!-- TAKT-LANG:head -->
+<link rel="alternate" hreflang="en" href="https://taktabs.com/blog/prevent-duplicate-tabs/" />
+<link rel="alternate" hreflang="fr" href="https://taktabs.com/fr/blog/prevent-duplicate-tabs/" />
+<link rel="alternate" hreflang="es" href="https://taktabs.com/es/blog/prevent-duplicate-tabs/" />
+<link rel="alternate" hreflang="it" href="https://taktabs.com/it/blog/prevent-duplicate-tabs/" />
+<link rel="alternate" hreflang="de" href="https://taktabs.com/de/blog/prevent-duplicate-tabs/" />
+<link rel="alternate" hreflang="pt" href="https://taktabs.com/pt/blog/prevent-duplicate-tabs/" />
+<link rel="alternate" hreflang="x-default" href="https://taktabs.com/blog/prevent-duplicate-tabs/" />
+<!-- /TAKT-LANG:head -->
+    <meta property="og:type" content="article" />
+    <meta property="og:locale" content="de_DE" />
+    <meta property="og:title" content="Doppelte Tabs in Chrome verhindern" />
+    <meta property="og:description" content="Öffnen Sie eine Seite, die schon offen ist, und Takt bringt Sie stattdessen zum Original. Standardmäßig aktiv, kostenlos." />
+    <meta property="og:url" content="https://taktabs.com/de/blog/prevent-duplicate-tabs/" />
+    <meta property="og:image" content="https://taktabs.com/de/blog/img/popup-home.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <link rel="icon" type="image/png" sizes="32x32" href="../../../assets/favicon-32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="../../../assets/favicon-16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="../../../assets/apple-touch-icon.png" />
+    <meta name="theme-color" content="#FF3B30" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../../../css/tokens.css" />
+    <link rel="stylesheet" href="../../../css/base.css" />
+    <link rel="stylesheet" href="../../../css/layout.css" />
+    <link rel="stylesheet" href="../../../css/blog.css" />
+    <link rel="stylesheet" href="../../../css/articles.css" />
+    <script src="../../../js/theme.js"></script>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Article",
+            "inLanguage": "de",
+            "headline": "Doppelte Tabs in Chrome verhindern",
+            "description": "Doppelte Tabs schon beim Öffnen verhindern, festlegen, was als dieselbe URL gilt, und bereits offene Duplikate schließen.",
+            "datePublished": "2026-10-08",
+            "dateModified": "2026-10-08",
+            "author": { "@type": "Person", "name": "Vitor" },
+            "publisher": { "@type": "Organization", "name": "Takt", "url": "https://taktabs.com" },
+            "image": "https://taktabs.com/de/blog/img/popup-home.png",
+            "mainEntityOfPage": "https://taktabs.com/de/blog/prevent-duplicate-tabs/"
+          },
+          {
+            "@type": "HowTo",
+            "name": "Doppelte Tabs in Chrome verhindern",
+            "step": [
+              { "@type": "HowToStep", "text": "Installieren Sie Takt aus dem Chrome Web Store. Die Duplikatverhinderung ist standardmäßig aktiv." },
+              { "@type": "HowToStep", "text": "Um festzulegen, was als Duplikat gilt, öffnen Sie die Optionsseite von Takt, gehen zu Settings, Duplicate Prevention, und wählen eine Strategie für den URL-Abgleich." },
+              { "@type": "HowToStep", "text": "Um bereits offene Duplikate aufzuräumen, klicken Sie im Takt-Popup auf Duplikate schließen." }
+            ]
+          },
+          {
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "Kann Chrome doppelte Tabs von selbst verhindern?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Nein. Chrome hat keine Einstellung, um doppelte Tabs zu blockieren. Jeder neue Tab wird unabhängig geöffnet, Sie brauchen also eine Erweiterung wie Takt." }
+              },
+              {
+                "@type": "Question",
+                "name": "Ist die Duplikatverhinderung von Takt kostenlos?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Ja. Duplikatverhinderung, alle fünf Strategien für den URL-Abgleich und Duplikate schließen sind kostenlos und unbegrenzt." }
+              },
+              {
+                "@type": "Question",
+                "name": "Wie öffne ich absichtlich einen doppelten Tab?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Klicken Sie mit der rechten Maustaste auf den Link und wählen Sie In neuem Tab öffnen (Duplikat erlauben), oder klicken Sie auf Trotzdem öffnen in dem Hinweis, den Takt nach einer Blockierung anzeigt." }
+              },
+              {
+                "@type": "Question",
+                "name": "Funktioniert das in jedem Gruppierungsmodus?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Ja. Die Duplikatverhinderung läuft in den Modi Regeln, Kategorie, KI und Keine." }
+              }
+            ]
+          },
+          {
+            "@type": "SoftwareApplication",
+            "name": "Takt",
+            "applicationCategory": "BrowserApplication",
+            "operatingSystem": "Chrome",
+            "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <header id="site-header"></header>
+
+    <main class="blog-main">
+      <article class="blog-post article">
+        <p class="eyebrow">Duplikatverhinderung</p>
+        <h1 class="blog-post-title">Doppelte Tabs in Chrome verhindern</h1>
+        <p class="lede">Um doppelte Tabs in Chrome zu verhindern, brauchen Sie eine Erweiterung: Chrome selbst öffnet dieselbe Seite in zehn Tabs, wenn Sie zehnmal klicken. Takt prüft jeden neuen Tab beim Öffnen. Ist die Seite schon offen, schließt es den neuen Tab und bringt Sie zum Original.</p>
+        <p class="blog-post-meta">Aktualisiert am 8. Oktober 2026 · 5 Min. Lesezeit</p>
+<!-- TAKT-LANG:nav -->
+<p class="lang-links"><a href="../../../blog/prevent-duplicate-tabs/" hreflang="en" lang="en">English</a> · <a href="../../../fr/blog/prevent-duplicate-tabs/" hreflang="fr" lang="fr">Français</a> · <a href="../../../es/blog/prevent-duplicate-tabs/" hreflang="es" lang="es">Español</a> · <a href="../../../it/blog/prevent-duplicate-tabs/" hreflang="it" lang="it">Italiano</a> · <span aria-current="true">Deutsch</span> · <a href="../../../pt/blog/prevent-duplicate-tabs/" hreflang="pt" lang="pt">Português</a></p>
+<!-- /TAKT-LANG:nav -->
+
+        <div class="blog-post-body">
+          <div class="tldr">
+            <p><strong>Kurz gesagt:</strong> Installieren Sie Takt. Die Duplikatverhinderung ist standardmäßig aktiv und kostenlos. Öffnen Sie einen Link, der schon in einem anderen Tab offen ist, landen Sie stattdessen im vorhandenen Tab.</p>
+            <ul>
+              <li>5 Strategien für den URL-Abgleich legen fest, was als „dieselbe Seite“ gilt. Die Standardstrategie ignoriert das <code>#fragment</code>.</li>
+              <li>Brauchen Sie das Duplikat doch? Rechtsklick auf den Link oder Klick auf <em>Trotzdem öffnen</em>.</li>
+              <li><strong>Duplikate schließen</strong> räumt das aktuelle Fenster mit einem Klick auf.</li>
+            </ul>
+          </div>
+
+          <h2 id="why">Warum öffnet Chrome doppelte Tabs?</h2>
+          <p>Chrome behandelt jeden neuen Tab als eigene Anfrage. Ob die Seite schon offen ist, prüft es nie. So stapeln sich dasselbe Dashboard, dasselbe Ticket oder dasselbe Dokument über Links aus Mail, Chat und Suchergebnissen.</p>
+          <p>Jede Kopie ist eine vollständige Seite, die weiterläuft. Um sie von Hand zu schließen, müssen Sie sie erst finden.</p>
+
+          <h2 id="how">Was passiert, wenn Takt ein Duplikat blockiert?</h2>
+          <ol class="steps">
+            <li>Sie öffnen einen Link zu einer Seite, die schon in einem anderen Tab offen ist.</li>
+            <li>Takt schließt den neuen Tab.</li>
+            <li>Es bringt Sie zum vorhandenen Tab, egal in welchem Fenster er sich befindet.</li>
+            <li>Das Popup zeigt 10 Sekunden lang „Duplikat verhindert“ mit der Schaltfläche <strong>Trotzdem öffnen</strong>.</li>
+          </ol>
+          <p>Wenn Sie Takt die optionale Berechtigung „Zugriff auf alle Websites“ erteilt haben, erscheint zusätzlich ein Hinweis auf der Seite: „Takt hat eine doppelte URL erkannt und zu diesem Tab gewechselt“, mit <em>Schließen</em> und <em>Trotzdem öffnen</em>.</p>
+          <p>Die Prüfung läuft in jedem Gruppierungsmodus: Regeln, Kategorie, KI und Keine. Sie betrachtet nur Tabs beim Öffnen. Navigieren Sie in einem bestehenden Tab zu einer Seite, die anderswo schon offen ist, greift sie nicht.</p>
+
+          <figure class="narrow">
+            <img src="../img/popup-home.png" alt="Takt-Popup, Bereich Startseite mit einem gelben Banner Duplikat verhindert für en.wikipedia.org/wiki/Takt_time und einer Schaltfläche Trotzdem öffnen, über den Abschnitten Gruppierungsmodus und Schnellaktionen" width="420" loading="lazy" />
+            <figcaption>Nach einer Blockierung nennt das Popup die Seite und bietet Trotzdem öffnen an.</figcaption>
+          </figure>
+
+          <h2 id="same-url">Was gilt als dieselbe URL?</h2>
+          <p>Zuerst bereinigt Takt jede URL auf dieselbe Weise. Es entfernt <code>www.</code> und einen abschließenden Schrägstrich und dekodiert harmlose Prozent-Kodierung wie <code>%41</code> zu <code>A</code>. So sind <code>https://www.example.com/docs/</code> und <code>https://example.com/docs</code> dieselbe Seite.</p>
+          <p>Dann legt Ihre Abgleichsstrategie fest, wie streng verglichen wird. Sie wählen sie unter Optionen → Settings → Duplicate Prevention.</p>
+          <table>
+            <thead><tr><th>Strategie</th><th>Vergleicht</th><th>Gilt als gleich</th></tr></thead>
+            <tbody>
+              <tr><td>Exact URL</td><td>Alles, mit sortierten Query-Parametern</td><td><code>?a=1&amp;b=2</code> und <code>?b=2&amp;a=1</code></td></tr>
+              <tr><td>Ignore fragment (#hash) <span class="badge">Standard</span></td><td>Alles außer dem <code>#fragment</code></td><td><code>/page#top</code> und <code>/page#bottom</code></td></tr>
+              <tr><td>Ignore query string</td><td>Schema, Host und Pfad</td><td><code>/page?ref=mail</code> und <code>/page?ref=chat</code></td></tr>
+              <tr><td>Ignore query + fragment</td><td>Schema, Host und Pfad</td><td>Wie oben</td></tr>
+              <tr><td>Origin + path only</td><td>Schema, Host und Pfad</td><td>Wie oben</td></tr>
+            </tbody>
+          </table>
+          <p>In der aktuellen Version vergleichen die letzten drei URLs auf dieselbe Weise. Wählen Sie eine davon, wenn Tracking-Parameter ignoriert werden sollen.</p>
+          <p>Vorsicht mit den lockeren Strategien bei Such- und App-Seiten. <code>/search?q=chairs</code> und <code>/search?q=tables</code> haben denselben Pfad, wer die Query ignoriert, behandelt sie also als eine Seite.</p>
+
+          <figure>
+            <img src="../img/settings-duplicate-prevention.png" alt="Takt Settings, Abschnitt Duplicate Prevention mit angehaktem Kästchen Enable duplicate tab prevention und dem Auswahlmenü URL matching strategy, eingestellt auf Ignore fragment (#hash)" width="700" loading="lazy" />
+            <figcaption>Der globale Schalter und die Standardstrategie unter Optionen → Settings.</figcaption>
+          </figure>
+
+          <h2 id="allow">Wie öffne ich absichtlich ein Duplikat?</h2>
+          <ul>
+            <li><strong>Rechtsklick auf den Link</strong> und <em>In neuem Tab öffnen (Duplikat erlauben)</em> wählen. Das funktioniert auf jeder Seite.</li>
+            <li><strong>Auf Trotzdem öffnen klicken</strong> im Hinweis auf der Seite oder im Popup, direkt nach einer Blockierung.</li>
+            <li><strong>Shift+Klick auf den Link</strong>, im Regelmodus, auf Seiten, für die Takt Seitenzugriff hat.</li>
+          </ul>
+          <p>Oder entfernen Sie unter Settings den Haken bei <em>Enable duplicate tab prevention</em>, um die gesamte Funktion abzuschalten.</p>
+
+          <h2 id="close">Wie schließe ich bereits offene doppelte Tabs?</h2>
+          <p>Klicken Sie im Bereich Startseite des Popups auf <strong>Duplikate schließen</strong>. Takt durchsucht das aktuelle Fenster mit Ihrer Abgleichsstrategie und behält von jeder Seite den ersten Tab, von links gezählt. Die übrigen schließen sich sofort, ohne Rückfrage, und das Popup meldet, wie viele es geschlossen hat. Die Schaltfläche ist ausgegraut, wenn es nichts zu schließen gibt.</p>
+
+          <h2 id="per-rule">Kann eine einzelne Website eine andere Strategie nutzen?</h2>
+          <p>Ja, im Regelmodus. Öffnen Sie eine Regel, haken Sie <strong>Prevent duplicate tabs in this group</strong> an und wählen Sie eine Strategie für den URL-Abgleich der Tabs dieser Regel.</p>
+          <p>Das ist nützlich für eine Single-Page-App, in der jedes <code>#fragment</code> eine andere Ansicht ist: Stellen Sie diese Regel auf <em>Exact URL</em> und behalten Sie für alles andere den globalen Standard. Der globale Schalter bleibt der Hauptschalter. Ist er aus, wird kein Tab blockiert, auch nicht in einer Regel mit angehaktem Kästchen.</p>
+
+          <h2 id="compare">Wie schneidet das im Vergleich zu anderen Lösungen ab?</h2>
+          <table>
+            <thead><tr><th></th><th>Nur Chrome</th><th>Spezialisierter Blocker</th><th>Takt</th></tr></thead>
+            <tbody>
+              <tr><td>Blockiert Duplikate beim Öffnen</td><td>Nein</td><td>Ja</td><td>Ja, standardmäßig aktiv</td></tr>
+              <tr><td>Festlegen, was als dieselbe Seite gilt</td><td>Nein</td><td>Unterschiedlich</td><td>5 Strategien, auch pro Regel</td></tr>
+              <tr><td>Vorhandene Duplikate schließen</td><td>Nein</td><td>Unterschiedlich</td><td>Ein Klick, aktuelles Fenster</td></tr>
+              <tr><td>Gruppiert und hiberniert Tabs außerdem</td><td>Nein</td><td>Nein</td><td>Ja</td></tr>
+            </tbody>
+          </table>
+          <p>Prüfen Sie, ob eine spezialisierte Erweiterung noch gepflegt wird. Duplicate Tabs Preventor zum Beispiel wird seit April 2026 nicht mehr gepflegt.</p>
+
+          <h2 id="limits">Was die Duplikatverhinderung nicht tut</h2>
+          <ul>
+            <li>Sie führt keine Tabs zusammen, die schon vor der Installation von Takt offen waren. Nutzen Sie dafür Duplikate schließen.</li>
+            <li>Duplikate schließen wirkt nur im aktuellen Fenster.</li>
+            <li>Der Hinweis auf der Seite und Shift+Klick brauchen die optionale Berechtigung für den Seitenzugriff. Banner im Popup und Rechtsklick-Option brauchen sie nicht.</li>
+          </ul>
+
+          <div class="cta">
+            <p>Zweimal auf denselben Link klicken. Im Tab landen, den Sie schon hatten.</p>
+            <a class="btn" href="https://chromewebstore.google.com/detail/takt/plgfdnbgkjocmgegnkbihoeojcfphdic">Zu Chrome hinzufügen — kostenlos</a>
+          </div>
+
+          <h2 id="faq">Häufige Fragen</h2>
+          <div class="faq">
+            <details>
+              <summary>Kann Chrome doppelte Tabs von selbst verhindern?</summary>
+              <p>Nein. Chrome hat keine Einstellung, um doppelte Tabs zu blockieren, Sie brauchen also eine Erweiterung.</p>
+            </details>
+            <details>
+              <summary>Ist die Duplikatverhinderung von Takt kostenlos?</summary>
+              <p>Ja. Verhinderung, alle fünf Strategien und Duplikate schließen sind kostenlos und unbegrenzt.</p>
+            </details>
+            <details>
+              <summary>Wie öffne ich absichtlich einen doppelten Tab?</summary>
+              <p>Klicken Sie mit der rechten Maustaste auf den Link und wählen Sie <em>In neuem Tab öffnen (Duplikat erlauben)</em>, oder klicken Sie nach einer Blockierung auf <em>Trotzdem öffnen</em>.</p>
+            </details>
+            <details>
+              <summary>Funktioniert das in jedem Gruppierungsmodus?</summary>
+              <p>Ja: Regeln, <a href="../group-tabs-by-category-or-ai/">Kategorie, KI</a> und Keine.</p>
+            </details>
+          </div>
+
+          <h2 id="next">Weiterlesen</h2>
+          <div class="read-next">
+            <a href="../one-click-tab-cleanup/">Jedes Fenster mit einem Klick aufräumen<span>Gruppieren, Gruppen aufheben, einklappen und sortieren.</span></a>
+            <a href="../hibernate-tabs-free-memory/">Ungenutzte Tabs hibernieren<span>Schließen, behalten, zurückholen.</span></a>
+          </div>
+        </div>
+
+        <footer class="blog-post-footer">
+          <a href="../../../blog/">Alle Artikel zu den Funktionen</a> · <a href="../../../docs/duplicates/">Referenz: Duplikatverhinderung</a>
+        </footer>
+      </article>
+    </main>
+
+    <footer id="site-footer"></footer>
+    <script src="../../../js/includes.js"></script>
+    <script src="../../../js/nav.js"></script>
+  </body>
+</html>

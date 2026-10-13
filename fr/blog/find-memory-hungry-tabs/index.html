@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Comment voir quels onglets Chrome consomment le plus de mémoire — Takt</title>
+    <meta
+      name="description"
+      content="Voyez quels onglets et groupes d'onglets Chrome consomment le plus de mémoire : estimations par onglet, scores de santé de A à F par groupe, activité réseau en arrière-plan, barre de mémoire système et budgets mémoire par groupe. Comment chaque chiffre est calculé."
+    />
+    <link rel="canonical" href="https://taktabs.com/fr/blog/find-memory-hungry-tabs/" />
+<!-- TAKT-LANG:head -->
+<link rel="alternate" hreflang="en" href="https://taktabs.com/blog/find-memory-hungry-tabs/" />
+<link rel="alternate" hreflang="fr" href="https://taktabs.com/fr/blog/find-memory-hungry-tabs/" />
+<link rel="alternate" hreflang="es" href="https://taktabs.com/es/blog/find-memory-hungry-tabs/" />
+<link rel="alternate" hreflang="it" href="https://taktabs.com/it/blog/find-memory-hungry-tabs/" />
+<link rel="alternate" hreflang="de" href="https://taktabs.com/de/blog/find-memory-hungry-tabs/" />
+<link rel="alternate" hreflang="pt" href="https://taktabs.com/pt/blog/find-memory-hungry-tabs/" />
+<link rel="alternate" hreflang="x-default" href="https://taktabs.com/blog/find-memory-hungry-tabs/" />
+<!-- /TAKT-LANG:head -->
+    <meta property="og:type" content="article" />
+    <meta property="og:locale" content="fr_FR" />
+    <meta property="og:title" content="Comment voir quels onglets Chrome consomment le plus de mémoire" />
+    <meta property="og:description" content="Estimations de mémoire par onglet, scores de santé de A à F par groupe et budgets mémoire, le tout mesuré dans votre navigateur." />
+    <meta property="og:url" content="https://taktabs.com/fr/blog/find-memory-hungry-tabs/" />
+    <meta property="og:image" content="https://taktabs.com/fr/blog/img/options-dashboard-memory.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <link rel="icon" type="image/png" sizes="32x32" href="../../../assets/favicon-32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="../../../assets/favicon-16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="../../../assets/apple-touch-icon.png" />
+    <meta name="theme-color" content="#FF3B30" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../../../css/tokens.css" />
+    <link rel="stylesheet" href="../../../css/base.css" />
+    <link rel="stylesheet" href="../../../css/layout.css" />
+    <link rel="stylesheet" href="../../../css/blog.css" />
+    <link rel="stylesheet" href="../../../css/articles.css" />
+    <script src="../../../js/theme.js"></script>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Article",
+            "headline": "Comment voir quels onglets Chrome consomment le plus de mémoire",
+            "description": "Estimations de mémoire par onglet, scores de santé de A à F par groupe d'onglets, activité réseau en arrière-plan et budgets mémoire par groupe dans le tableau de bord des ressources de Takt, et comment chaque chiffre est calculé.",
+            "inLanguage": "fr",
+            "datePublished": "2026-10-08",
+            "dateModified": "2026-10-08",
+            "author": { "@type": "Person", "name": "Vitor" },
+            "publisher": { "@type": "Organization", "name": "Takt", "url": "https://taktabs.com" },
+            "image": "https://taktabs.com/fr/blog/img/options-dashboard-memory.png",
+            "mainEntityOfPage": "https://taktabs.com/fr/blog/find-memory-hungry-tabs/"
+          },
+          {
+            "@type": "HowTo",
+            "name": "Trouver les onglets Chrome qui consomment le plus de mémoire",
+            "step": [
+              { "@type": "HowToStep", "text": "Installez Takt et passez à Premium ; le tableau de bord des ressources est une fonctionnalité Premium." },
+              { "@type": "HowToStep", "text": "Dans Options → Settings → Permissions, accordez Accès à tous les sites web et, si vous le souhaitez, Surveillance réseau et Accès à la mémoire système." },
+              { "@type": "HowToStep", "text": "Ouvrez Options → Dashboard. Les groupes sont triés selon leur mémoire estimée ; chaque carte de groupe d'onglets liste ses onglets triés par mémoire." },
+              { "@type": "HowToStep", "text": "Cliquez sur Suspendre à côté d'une recommandation de suspension, ou définissez un budget mémoire par groupe dans Settings → Memory Budgets." }
+            ]
+          },
+          {
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "Comment Takt estime-t-il la mémoire d'un onglet ?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Il exécute un court script dans l'onglet et additionne quatre éléments : le tas JavaScript utilisé, le nombre de nœuds DOM multiplié par environ 1,5 Ko, la taille décodée des ressources chargées par la page, et les tampons canvas à raison de largeur × hauteur × 4 octets. C'est une estimation, surtout utile pour classer les onglets." }
+              },
+              {
+                "@type": "Question",
+                "name": "Pourquoi la colonne Mémoire affiche-t-elle un tiret ?",
+                "acceptedAnswer": { "@type": "Answer", "text": "La permission Accès à tous les sites web n'est pas accordée, l'onglet est suspendu, ou c'est une page sur laquelle les extensions ne peuvent pas exécuter de scripts, comme les pages chrome://." }
+              },
+              {
+                "@type": "Question",
+                "name": "Le tableau de bord des ressources est-il gratuit ?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Non. Le tableau de bord des ressources et les budgets mémoire font partie de Premium, à 3 $/mois ou 30 $/an." }
+              },
+              {
+                "@type": "Question",
+                "name": "Takt envoie-t-il les données de mes onglets quelque part pour les mesurer ?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Non. Chaque mesure s'exécute dans votre navigateur. Rien n'est mesuré par un service externe." }
+              }
+            ]
+          },
+          {
+            "@type": "SoftwareApplication",
+            "name": "Takt",
+            "applicationCategory": "BrowserApplication",
+            "operatingSystem": "Chrome",
+            "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <header id="site-header"></header>
+
+    <main class="blog-main">
+      <article class="blog-post article">
+        <p class="eyebrow">Tableau de bord des ressources <span class="badge badge-premium">Premium</span></p>
+        <h1 class="blog-post-title">Comment voir quels onglets Chrome consomment le plus de mémoire</h1>
+        <p class="lede">Pour voir quels onglets Chrome consomment le plus de mémoire, il faut les chiffres de chaque onglet côte à côte, regroupés selon votre façon de travailler. Le tableau de bord des ressources de Takt vous donne une estimation de mémoire par onglet, un total par groupe d'onglets et un score de santé de A à F, actualisés toutes les 10 secondes.</p>
+        <p class="blog-post-meta">Mis à jour le 8 octobre 2026 · 6 min de lecture</p>
+<!-- TAKT-LANG:nav -->
+<p class="lang-links"><a href="../../../blog/find-memory-hungry-tabs/" hreflang="en" lang="en">English</a> · <span aria-current="true">Français</span> · <a href="../../../es/blog/find-memory-hungry-tabs/" hreflang="es" lang="es">Español</a> · <a href="../../../it/blog/find-memory-hungry-tabs/" hreflang="it" lang="it">Italiano</a> · <a href="../../../de/blog/find-memory-hungry-tabs/" hreflang="de" lang="de">Deutsch</a> · <a href="../../../pt/blog/find-memory-hungry-tabs/" hreflang="pt" lang="pt">Português</a></p>
+<!-- /TAKT-LANG:nav -->
+
+        <div class="blog-post-body">
+          <div class="tldr">
+            <p><strong>En bref :</strong> ouvrez <strong>Options → Dashboard</strong> dans Takt. Les groupes sont classés selon leur mémoire estimée, et les onglets de chaque groupe sont triés du plus gros au plus petit.</p>
+            <ul>
+              <li>Estimation de mémoire par onglet, temps d'inactivité, domaines tiers et activité en arrière-plan.</li>
+              <li>Score de santé de A à F par groupe d'onglets, une barre de mémoire système, et des budgets mémoire qui déchargent les onglets à votre place.</li>
+              <li>Premium (3 $/mois ou 30 $/an). Mesuré dans votre navigateur, par rien d'extérieur.</li>
+            </ul>
+          </div>
+
+          <h2 id="why">Pourquoi est-il difficile de savoir quel onglet utilise la mémoire ?</h2>
+          <p>Chrome affiche un chiffre de mémoire dans la carte qui apparaît au survol d'un onglet, un onglet à la fois. Avec 30 onglets ouverts, cela fait 30 survols, et aucun total.</p>
+          <p>De toute façon, un onglet seul vous importe rarement. Ce qui compte, c'est de savoir si c'est « Research » ou « Entertainment » qu'il faut fermer. Takt additionne donc la mémoire par groupe d'onglets.</p>
+
+          <figure>
+            <img src="../img/options-dashboard-memory.png" alt="Haut du tableau de bord des ressources de Takt : une barre RAM système indiquant 26,9 Go utilisés sur 32,0 Go (84 %), dont 0,2 Go pour les onglets et 5,1 Go libres ; un encadré Cycle de vie avec 0 suspendu, 2 hibernés, 100 Mo économisés (estimation), 2 aujourd'hui ; et une Répartition des groupes classant Code à 149 Mo, Entertainment 71 Mo, Research 15 Mo, Docs 14 Mo, News 2 Mo et les onglets non groupés 1 Mo, chacun avec un badge de santé A et un nombre d'onglets" width="700" loading="lazy" />
+            <figcaption>Mémoire système, compteurs du cycle de vie, et groupes classés selon leur mémoire estimée.</figcaption>
+          </figure>
+
+          <h2 id="estimate">Comment Takt estime-t-il la mémoire d'un onglet ?</h2>
+          <p>Takt exécute un court script dans chaque onglet et additionne quatre éléments :</p>
+          <table>
+            <thead><tr><th>Élément</th><th>Mesure</th></tr></thead>
+            <tbody>
+              <tr><td>Tas JavaScript</td><td>Le tas utilisé, tel que Chrome le communique à la page</td></tr>
+              <tr><td>Arbre DOM</td><td>Nombre d'éléments × environ 1,5 Ko</td></tr>
+              <tr><td>Ressources chargées</td><td>Taille décodée de chaque fichier chargé par la page</td></tr>
+              <tr><td>Tampons canvas</td><td>Largeur × hauteur × 4 octets par canvas</td></tr>
+            </tbody>
+          </table>
+          <p>Prenez le résultat comme un classement, pas comme une facture. Il n'inclut pas la charge propre au navigateur pour chaque onglet : le chiffre de Chrome pour le même onglet peut donc différer.</p>
+          <p>Certains onglets ne peuvent pas être mesurés. Rien ne tourne dans les onglets suspendus. Les pages de Chrome (<code>chrome://</code>), les pages d'extension et le Chrome Web Store n'autorisent pas les scripts : ils apparaissent donc sous <strong>Onglets non surveillés</strong>. Si un onglet ne répond pas en 3 secondes, Takt affiche sa dernière valeur connue.</p>
+
+          <figure>
+            <img src="../img/options-dashboard-tab-table.png" alt="La carte du groupe Code dans le tableau de bord des ressources de Takt : 4 onglets, 149 Mo, avec un bouton Tout fermer et un tableau d'onglets triés par mémoire (49, 41, 29 et 29 Mo), chacun avec des colonnes de temps d'inactivité, de nombre de domaines tiers et d'activité en arrière-plan" width="700" loading="lazy" />
+            <figcaption>Chaque carte de groupe liste ses onglets. Cliquez sur un en-tête de colonne pour trier.</figcaption>
+          </figure>
+
+          <h2 id="health">Que signifient les scores de santé de A à F ?</h2>
+          <p>Chaque groupe part de 100 points et en perd selon quatre facteurs :</p>
+          <table>
+            <thead><tr><th>Facteur</th><th>Condition</th><th>Pénalité</th></tr></thead>
+            <tbody>
+              <tr><td>Mémoire (total du groupe)</td><td>Plus de 500 Mo / plus de 200 Mo</td><td>−30 / −15</td></tr>
+              <tr><td>Temps d'inactivité moyen</td><td>Plus de 60 min / plus de 30 min</td><td>−20 / −10</td></tr>
+              <tr><td>Onglets avec activité en arrière-plan</td><td>Plus de 3 / au moins 1</td><td>−20 / −10</td></tr>
+              <tr><td>Domaines tiers</td><td>Plus de 50 / plus de 20</td><td>−15 / −5</td></tr>
+            </tbody>
+          </table>
+          <p>Notes : A pour 90 ou plus, B de 75 à 89, C de 60 à 74, D de 40 à 59, F en dessous de 40. Un groupe qui utilise 300 Mo avec des onglets inactifs depuis 45 minutes en moyenne obtient 75 : un B.</p>
+          <p>« Activité en arrière-plan » signifie que l'onglet a terminé une requête réseau au cours des 60 dernières secondes. « Tiers » désigne tout domaine autre que le site de l'onglet et ses sous-domaines. Les CDN courants sont comptés à part, pour ne pas gonfler le score.</p>
+
+          <h2 id="act">Que faire une fois les onglets gourmands trouvés ?</h2>
+          <ul>
+            <li><strong>Recommandations de suspension.</strong> Takt liste 5 onglets à décharger, classés selon leur mémoire et leur temps d'inactivité, avec un poids supplémentaire pour l'activité en arrière-plan. Il écarte l'onglet actif, les onglets épinglés et un onglet seul dans son groupe. Cliquez sur <strong>Suspendre</strong> pour en décharger un.</li>
+            <li><strong>Tout fermer</strong>, sur une carte de groupe, ferme ce groupe.</li>
+            <li><strong>Mettez en veille</strong> un onglet que vous voulez retrouver plus tard. Voir <a href="../hibernate-tabs-free-memory/">comment fonctionne l'hibernation</a>.</li>
+          </ul>
+
+          <h2 id="budget">Puis-je plafonner la mémoire utilisée par un groupe d'onglets ?</h2>
+          <p>Oui. Dans <strong>Settings → Memory Budgets</strong>, saisissez un nom de groupe et une limite en Mo. Takt vérifie les budgets toutes les 15 secondes.</p>
+          <p>Quand un groupe dépasse, vous recevez une notification : le groupe, sa consommation, son budget, et « Suspending tabs in 10s — click to cancel ». Si vous l'ignorez, Takt décharge les plus gros onglets de ce groupe jusqu'à repasser sous le budget. Il ne touche jamais à l'onglet actif, aux onglets épinglés ni aux onglets qui diffusent du son. Cliquez sur la notification pour annuler.</p>
+          <p>Les budgets s'appuient sur les mêmes estimations : ils nécessitent donc aussi Accès à tous les sites web.</p>
+
+          <h2 id="permissions">De quelles permissions le tableau de bord a-t-il besoin ?</h2>
+          <p>Aucune à l'installation. Vous accordez chacune d'elles dans <strong>Settings → Permissions</strong> et pouvez la révoquer au même endroit à tout moment.</p>
+          <table>
+            <thead><tr><th>Permission</th><th>Ce qu'elle ajoute</th><th>Sans elle</th></tr></thead>
+            <tbody>
+              <tr><td>Accès à tous les sites web</td><td>Estimations de mémoire par onglet</td><td>La mémoire affiche « — »</td></tr>
+              <tr><td>Surveillance réseau</td><td>Domaines tiers et activité en arrière-plan (nécessite aussi Accès à tous les sites web)</td><td>Pas de colonnes réseau</td></tr>
+              <tr><td>Accès à la mémoire système</td><td>La barre de RAM système</td><td>« Mémoire système non disponible »</td></tr>
+            </tbody>
+          </table>
+          <p>La surveillance réseau ne voit que les requêtes effectuées après que vous l'avez accordée. Rechargez les onglets ouverts pour lancer le décompte. Takt lit les adresses et la durée des requêtes, pas le contenu des pages.</p>
+
+          <figure>
+            <img src="../img/options-settings-permissions-dashboard.png" alt="Réglages Permissions de Takt avec les boutons Accorder toutes les permissions et Révoquer toutes les permissions, et des interrupteurs pour Surveillance réseau, Accès à la mémoire système et Accès à tous les sites web, chacun décrivant les fonctionnalités du tableau de bord qu'il active et ce qui manque sans lui" width="700" loading="lazy" />
+            <figcaption>Chaque permission facultative indique les fonctionnalités du tableau de bord qu'elle ajoute.</figcaption>
+          </figure>
+
+          <h2 id="limits">Ce que le tableau de bord ne peut pas vous dire</h2>
+          <p>Il estime la mémoire des pages. Il ne lit pas la liste des processus de Chrome : il ne voit donc ni la mémoire GPU, ni les extensions, ni le navigateur lui-même. Si la barre système range l'essentiel de votre RAM sous « Autre », cette mémoire va à d'autres applications ou à Chrome lui-même, pas à ce que contiennent vos pages.</p>
+
+          <div class="cta">
+            <p>Trouvez le groupe qui dévore votre RAM. Puis mettez-le en veille.</p>
+            <a class="btn" href="https://chromewebstore.google.com/detail/takt/plgfdnbgkjocmgegnkbihoeojcfphdic">Ajouter Takt à Chrome</a>
+          </div>
+
+          <h2 id="faq">Questions fréquentes</h2>
+          <div class="faq">
+            <details>
+              <summary>Comment Takt estime-t-il la mémoire d'un onglet ?</summary>
+              <p>Il additionne le tas JavaScript utilisé, le nombre d'éléments × environ 1,5 Ko, la taille décodée des ressources chargées, et les tampons canvas à raison de largeur × hauteur × 4 octets. Servez-vous-en pour classer les onglets.</p>
+            </details>
+            <details>
+              <summary>Pourquoi la colonne Mémoire affiche-t-elle un tiret ?</summary>
+              <p>Accès à tous les sites web n'est pas accordé, l'onglet est suspendu, ou c'est une page sur laquelle les extensions ne peuvent pas exécuter de scripts, comme les pages <code>chrome://</code>.</p>
+            </details>
+            <details>
+              <summary>Le tableau de bord des ressources est-il gratuit ?</summary>
+              <p>Non. Le tableau de bord et les budgets mémoire font partie de Premium, à 3 $/mois ou 30 $/an.</p>
+            </details>
+            <details>
+              <summary>Takt envoie-t-il les données de mes onglets quelque part pour les mesurer ?</summary>
+              <p>Non. Chaque mesure s'exécute dans votre navigateur. Voir <a href="../privacy-local-first/">comment Takt garde vos données en local</a>.</p>
+            </details>
+          </div>
+
+          <h2 id="next">À lire ensuite</h2>
+          <div class="read-next">
+            <a href="../hibernate-tabs-free-memory/">Mettre les onglets en veille pour libérer de la mémoire<span>Déchargez les onglets inactifs, réactivez-les là où vous les aviez laissés.</span></a>
+            <a href="../free-vs-premium/">Takt Free ou Premium<span>Toutes les limites, côte à côte.</span></a>
+          </div>
+        </div>
+
+        <footer class="blog-post-footer">
+          <a href="../../../blog/">Tous les articles</a> · <a href="../../../docs/resources/">Référence : tableau de bord des ressources</a>
+        </footer>
+      </article>
+    </main>
+
+    <footer id="site-footer"></footer>
+    <script src="../../../js/includes.js"></script>
+    <script src="../../../js/nav.js"></script>
+  </body>
+</html>

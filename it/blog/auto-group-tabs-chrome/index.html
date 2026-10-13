@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Come raggruppare automaticamente le schede in Chrome con le regole — Takt</title>
+    <meta
+      name="description"
+      content="Chrome sa raggruppare le schede, ma non lo fa da solo. Ecco come scrivere regole URL che spostano ogni nuova scheda in un gruppo con nome e colore nel momento in cui si apre."
+    />
+    <link rel="canonical" href="https://taktabs.com/it/blog/auto-group-tabs-chrome/" />
+<!-- TAKT-LANG:head -->
+<link rel="alternate" hreflang="en" href="https://taktabs.com/blog/auto-group-tabs-chrome/" />
+<link rel="alternate" hreflang="fr" href="https://taktabs.com/fr/blog/auto-group-tabs-chrome/" />
+<link rel="alternate" hreflang="es" href="https://taktabs.com/es/blog/auto-group-tabs-chrome/" />
+<link rel="alternate" hreflang="it" href="https://taktabs.com/it/blog/auto-group-tabs-chrome/" />
+<link rel="alternate" hreflang="de" href="https://taktabs.com/de/blog/auto-group-tabs-chrome/" />
+<link rel="alternate" hreflang="pt" href="https://taktabs.com/pt/blog/auto-group-tabs-chrome/" />
+<link rel="alternate" hreflang="x-default" href="https://taktabs.com/blog/auto-group-tabs-chrome/" />
+<!-- /TAKT-LANG:head -->
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Come raggruppare automaticamente le schede in Chrome con le regole" />
+    <meta property="og:description" content="Scrivi una regola una volta. Ogni scheda corrispondente finisce nel gruppo di Chrome giusto appena si apre." />
+    <meta property="og:url" content="https://taktabs.com/it/blog/auto-group-tabs-chrome/" />
+    <meta property="og:image" content="https://taktabs.com/it/blog/img/options-rules.png" />
+    <meta property="og:locale" content="it_IT" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <link rel="icon" type="image/png" sizes="32x32" href="../../../assets/favicon-32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="../../../assets/favicon-16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="../../../assets/apple-touch-icon.png" />
+    <meta name="theme-color" content="#FF3B30" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../../../css/tokens.css" />
+    <link rel="stylesheet" href="../../../css/base.css" />
+    <link rel="stylesheet" href="../../../css/layout.css" />
+    <link rel="stylesheet" href="../../../css/blog.css" />
+    <link rel="stylesheet" href="../../../css/articles.css" />
+    <script src="../../../js/theme.js"></script>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Article",
+            "headline": "Come raggruppare automaticamente le schede in Chrome con le regole",
+            "description": "Scrivi regole URL che spostano ogni nuova scheda in un gruppo di Chrome con nome e colore nel momento in cui si apre.",
+            "inLanguage": "it",
+            "datePublished": "2026-10-08",
+            "dateModified": "2026-10-08",
+            "author": { "@type": "Person", "name": "Vitor" },
+            "publisher": { "@type": "Organization", "name": "Takt", "url": "https://taktabs.com" },
+            "image": "https://taktabs.com/it/blog/img/options-rules.png",
+            "mainEntityOfPage": "https://taktabs.com/it/blog/auto-group-tabs-chrome/"
+          },
+          {
+            "@type": "HowTo",
+            "name": "Raggruppare automaticamente le schede in Chrome per URL",
+            "step": [
+              { "@type": "HowToStep", "text": "Installa Takt dal Chrome Web Store." },
+              { "@type": "HowToStep", "text": "Apri la pagina delle opzioni di Takt, vai su Rules e fai clic su New Rule." },
+              { "@type": "HowToStep", "text": "Aggiungi una condizione, per esempio dominio URL github.com." },
+              { "@type": "HowToStep", "text": "Dai un nome al gruppo, scegli uno degli 8 colori di Chrome e salva. Le schede corrispondenti vengono raggruppate mentre si caricano." }
+            ]
+          },
+          {
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "Chrome può raggruppare le schede automaticamente senza estensioni?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Chrome può suggerire gruppi con la sua funzione IA integrata 'Organizza schede', ma non ha regole: non puoi dirgli che ogni scheda di github.com va sempre in un gruppo chiamato Code. Un'estensione basata su regole come Takt lo fa." }
+              },
+              {
+                "@type": "Question",
+                "name": "Quante regole posso creare gratis?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Il piano gratuito consente 5 regole con una condizione ciascuna, con corrispondenza di tipo contiene, esatto o dominio. Premium ($3/mese o $30/anno) toglie il limite e aggiunge glob, regex, corrispondenza sul titolo e fino a 10 condizioni AND/OR per regola." }
+              },
+              {
+                "@type": "Question",
+                "name": "Posso mettere in pausa una regola senza eliminarla?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Sì. Ogni regola ha un interruttore on/off nell'elenco. Una regola disattivata conserva le sue impostazioni e smette di corrispondere." }
+              },
+              {
+                "@type": "Question",
+                "name": "Takt invia i miei URL da qualche parte per applicare le regole?",
+                "acceptedAnswer": { "@type": "Answer", "text": "No. Le regole vengono confrontate dentro il browser con dati salvati in locale. Takt non ha account né analisi dei dati d'uso." }
+              }
+            ]
+          },
+          {
+            "@type": "SoftwareApplication",
+            "name": "Takt",
+            "applicationCategory": "BrowserApplication",
+            "operatingSystem": "Chrome",
+            "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <header id="site-header"></header>
+
+    <main class="blog-main">
+      <article class="blog-post article">
+        <p class="eyebrow">Regole</p>
+        <h1 class="blog-post-title">Come raggruppare automaticamente le schede in Chrome</h1>
+        <p class="lede">Chrome sa raggruppare le schede. Ma non lo fa al posto tuo. Una regola risolve il problema: la scrivi una volta e ogni scheda corrispondente finisce nel gruppo giusto appena si apre.</p>
+        <p class="blog-post-meta">Aggiornato l'8 ottobre 2026 · 5 min di lettura</p>
+<!-- TAKT-LANG:nav -->
+<p class="lang-links"><a href="../../../blog/auto-group-tabs-chrome/" hreflang="en" lang="en">English</a> · <a href="../../../fr/blog/auto-group-tabs-chrome/" hreflang="fr" lang="fr">Français</a> · <a href="../../../es/blog/auto-group-tabs-chrome/" hreflang="es" lang="es">Español</a> · <span aria-current="true">Italiano</span> · <a href="../../../de/blog/auto-group-tabs-chrome/" hreflang="de" lang="de">Deutsch</a> · <a href="../../../pt/blog/auto-group-tabs-chrome/" hreflang="pt" lang="pt">Português</a></p>
+<!-- /TAKT-LANG:nav -->
+
+        <div class="blog-post-body">
+          <div class="tldr">
+            <p><strong>In breve:</strong> installa Takt, crea una regola come <em>dominio URL github.com → gruppo "Code", blu</em> e salva. Da quel momento ogni scheda di GitHub finisce nel gruppo blu "Code" mentre si carica.</p>
+            <ul>
+              <li>Free: 5 regole, con corrispondenza di tipo <em>contiene</em>, <em>esatto</em> o <em>dominio</em>.</li>
+              <li>Premium: regole illimitate, pattern glob e regex, corrispondenza sul titolo della pagina, fino a 10 condizioni AND/OR.</li>
+              <li>Il confronto avviene sul tuo computer. Nessun account, nessuna analisi dei dati d'uso.</li>
+            </ul>
+          </div>
+
+          <h2 id="why">Perché i gruppi di schede di Chrome non si organizzano da soli?</h2>
+          <p>I gruppi di schede di Chrome sono uno schedario senza archivista. Fai clic destro, scegli "Aggiungi scheda al gruppo", ripeti. Apri venti link in una mattina di lavoro e archivi venti volte, o più probabilmente nessuna.</p>
+          <p>La funzione IA integrata di Chrome "Organizza schede" aiuta per una pulizia occasionale. Però non segue istruzioni. Non puoi dirle "le pull request vanno sempre in Reviews". Una regola sì.</p>
+
+          <h2 id="create">Come creo una regola di raggruppamento?</h2>
+          <ol class="steps">
+            <li>Installa <a href="https://chromewebstore.google.com/detail/takt/plgfdnbgkjocmgegnkbihoeojcfphdic">Takt dal Chrome Web Store</a>.</li>
+            <li>Apri la pagina delle opzioni di Takt e fai clic su <strong>New Rule</strong>.</li>
+            <li>Aggiungi una condizione. <em>URL · Domain · github.com</em> prende github.com e tutti i suoi sottodomini.</li>
+            <li>Dai un nome al gruppo, scegli un colore e salva.</li>
+          </ol>
+          <p>Lascia spuntato <strong>Applica ora</strong> e Takt raggruppa subito di nuovo le schede aperte. Le nuove schede vengono raggruppate mentre si caricano.</p>
+
+          <figure>
+            <img src="../img/options-rule-editor.png" alt="L'editor di regole di Takt per una regola chiamata Code: due condizioni URL Domain (github.com, gitlab.com) unite con ANY condition (OR), nome del gruppo Code, blu selezionato tra gli 8 colori di Chrome e Applica ora spuntato" width="700" loading="lazy" />
+            <figcaption>Una regola con due condizioni unite da OR (Premium). Nel piano gratuito c'è una condizione per regola.</figcaption>
+          </figure>
+
+          <h2 id="match-types">Quale tipo di corrispondenza usare?</h2>
+          <p>Alla maggior parte delle persone basta <strong>Domain</strong>. Usa gli altri quando un dominio è troppo ampio.</p>
+          <table>
+            <thead>
+              <tr><th>Tipo di corrispondenza</th><th>Pattern</th><th>Cosa prende</th><th>Piano</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Domain (dominio)</td><td><code>google.com</code></td><td>docs.google.com, mail.google.com, google.com</td><td>Free</td></tr>
+              <tr><td>Contains (contiene)</td><td><code>localhost</code></td><td>http://localhost:3000/api</td><td>Free</td></tr>
+              <tr><td>Exact (esatto)</td><td><code>https://mail.google.com/mail/u/0/#inbox</code></td><td>Solo quell'URL</td><td>Free</td></tr>
+              <tr><td>Glob</td><td><code>*github.com/*/pull/*</code></td><td>Tutte le pull request, in qualsiasi repository</td><td>Premium</td></tr>
+              <tr><td>Regex</td><td><code>jira\..*/browse/PROJ-\d+</code></td><td>I ticket di un solo progetto</td><td>Premium</td></tr>
+            </tbody>
+          </table>
+          <p>Ogni condizione può anche essere negata (<em>l'URL NON contiene google.com</em>) o resa sensibile a maiuscole e minuscole. Premium aggiunge la corrispondenza sul <strong>titolo</strong> della pagina e la combinazione di fino a 10 condizioni con AND oppure OR.</p>
+
+          <h2 id="order">E se due regole corrispondono alla stessa scheda?</h2>
+          <p>Vince la prima corrispondenza. Le regole vengono controllate dall'alto verso il basso e il controllo si ferma al primo risultato.</p>
+          <p>Quindi ordinale dalla più specifica alla più generica. Una regola "Reviews" per le pull request deve stare sopra una regola "Code" per tutto GitHub, altrimenti ogni pull request finisce in "Code". Trascina una regola, o usa i pulsanti ↑/↓, per spostarla.</p>
+
+          <figure>
+            <img src="../img/options-rules.png" alt="L'elenco delle regole di Takt con sette regole, le loro condizioni, i nomi dei gruppi, gli interruttori on/off e le frecce per riordinarle, con il Tester di regole in alto" width="700" loading="lazy" />
+            <figcaption>L'elenco delle regole, con il Tester di regole in alto. Incolla un URL qualsiasi per vedere quale regola si attiva.</figcaption>
+          </figure>
+
+          <h2 id="test">Come verifico una regola prima di fidarmi?</h2>
+          <p>In due modi, entrambi nella pagina Rules:</p>
+          <ul>
+            <li><strong>Tester di regole.</strong> Incolla un URL (e, se vuoi, il titolo di una pagina). Takt ti dice quale regola si attiverebbe.</li>
+            <li><strong>Anteprima schede corrispondenti.</strong> Dentro l'editor, elenca le schede già aperte che la regola prenderebbe, prima che tu salvi.</li>
+          </ul>
+
+          <h2 id="starter">Un set iniziale di cinque regole</h2>
+          <p>Cinque regole coprono la maggior parte delle giornate di lavoro, e cinque è esattamente il limite gratuito.</p>
+          <table>
+            <thead><tr><th>Gruppo</th><th>Condizione</th></tr></thead>
+            <tbody>
+              <tr><td>Codice</td><td>Domain <code>github.com</code></td></tr>
+              <tr><td>Documentazione</td><td>Domain <code>developer.mozilla.org</code></td></tr>
+              <tr><td>Posta e calendario</td><td>Domain <code>google.com</code></td></tr>
+              <tr><td>Sviluppo locale</td><td>Contains <code>localhost</code></td></tr>
+              <tr><td>Da guardare</td><td>Domain <code>youtube.com</code></td></tr>
+            </tbody>
+          </table>
+          <p>Non sai cosa scrivere? Il <a href="../rule-suggestions/">riquadro Suggerimenti propone regole</a> in base ai siti che tieni già aperti.</p>
+
+          <h2 id="limits">Cosa le regole non possono fare</h2>
+          <p>Le regole prendono solo ciò che descrivi. Una scheda di un sito per cui non hai mai scritto una regola resta fuori dai gruppi. Se preferisci non scrivere regole affatto, imposta la modalità di raggruppamento su <a href="../group-tabs-by-category-or-ai/">Categoria o IA</a>.</p>
+
+          <div class="cta">
+            <p>Scrivi una regola. Guarda la prossima scheda mettersi al suo posto.</p>
+            <a class="btn" href="https://chromewebstore.google.com/detail/takt/plgfdnbgkjocmgegnkbihoeojcfphdic">Aggiungi Takt a Chrome, è gratis</a>
+          </div>
+
+          <h2 id="faq">Domande frequenti</h2>
+          <div class="faq">
+            <details>
+              <summary>Chrome può raggruppare le schede automaticamente senza estensioni?</summary>
+              <p>La funzione integrata di Chrome "Organizza schede" suggerisce gruppi con l'IA, su richiesta. Non ha regole, quindi non può continuare a mandare gli stessi siti nello stesso gruppo.</p>
+            </details>
+            <details>
+              <summary>Quante regole posso creare gratis?</summary>
+              <p>5 regole, una condizione ciascuna, con corrispondenza di tipo contiene, esatto o dominio. Premium ($3/mese o $30/anno) toglie il limite.</p>
+            </details>
+            <details>
+              <summary>Posso mettere in pausa una regola senza eliminarla?</summary>
+              <p>Sì. Ogni regola ha un interruttore on/off nell'elenco. Una regola disattivata conserva le sue impostazioni e smette di corrispondere.</p>
+            </details>
+            <details>
+              <summary>Takt invia i miei URL da qualche parte per applicare le regole?</summary>
+              <p>No. Il confronto avviene nel browser, su regole salvate in locale. Vedi <a href="../privacy-local-first/">come Takt tiene i dati in locale</a>.</p>
+            </details>
+          </div>
+
+          <h2 id="next">Da leggere dopo</h2>
+          <div class="read-next">
+            <a href="../prevent-duplicate-tabs/">Smetti di aprire la stessa scheda due volte<span>Prevenzione dei duplicati, attiva per impostazione predefinita.</span></a>
+            <a href="../profiles-and-schedules/">Regole diverse per lavoro e casa<span>Profili che cambiano secondo una programmazione.</span></a>
+          </div>
+        </div>
+
+        <footer class="blog-post-footer">
+          <a href="../../../blog/">Tutti gli articoli sulle funzionalità</a> · <a href="../../../docs/rules/">Riferimento regole</a>
+        </footer>
+      </article>
+    </main>
+
+    <footer id="site-footer"></footer>
+    <script src="../../../js/includes.js"></script>
+    <script src="../../../js/nav.js"></script>
+  </body>
+</html>

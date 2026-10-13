@@ -24,30 +24,121 @@
   <header id="site-header"></header>
 
   <main class="blog-main">
-    <h1 class="blog-page-title" data-i18n="blog.heading">Blog</h1>
-    <ul class="blog-list">
-      <li class="blog-list-entry">
-        <a href="./takt-4-1-and-4-2.html">
-          <span class="blog-list-entry-title" data-i18n="docs.blog.listing.entries.release42.title">Takt 4.1 and 4.2: duplicate prevention is now free</span>
-          <span class="blog-list-entry-meta" data-i18n="docs.blog.listing.entries.release42.meta">September 2026</span>
-          <span class="blog-list-entry-summary" data-i18n="docs.blog.listing.entries.release42.summary">Duplicate prevention moves to the free tier, plus a rule tester, a tabs pane, Group by Category, on-device AI grouping, six languages and a round of bug fixes.</span>
-        </a>
-      </li>
-      <li class="blog-list-entry">
-        <a href="./compound-and-or-rules.html">
-          <span class="blog-list-entry-title" data-i18n="docs.blog.listing.entries.compound.title">Match tabs by URL and title at the same time</span>
-          <span class="blog-list-entry-meta" data-i18n="docs.blog.listing.entries.compound.meta">June 2026</span>
-          <span class="blog-list-entry-summary" data-i18n="docs.blog.listing.entries.compound.summary">Single-condition rules sort by domain. Compound AND/OR rules sort by context: authored PRs, draft docs, specific Slack channels. Here's how to set them up.</span>
-        </a>
-      </li>
-      <li class="blog-list-entry">
-        <a href="./stop-losing-tabs.html">
-          <span class="blog-list-entry-title" data-i18n="docs.blog.listing.entries.stopLosing.title">How to stop losing tabs when you have 90+ open</span>
-          <span class="blog-list-entry-meta" data-i18n="docs.blog.listing.entries.stopLosing.meta">June 2026</span>
-          <span class="blog-list-entry-summary" data-i18n="docs.blog.listing.entries.stopLosing.summary">A flat tab bar with 90 entries is unusable. Rules-based auto-grouping, keyboard search, and hibernation fix the problem at the source.</span>
-        </a>
-      </li>
-    </ul>
+   <div class="blog-index">
+    <nav class="blog-sidebar" aria-label="Blog sections">
+      <ul>
+        <li><a href="./" class="active" aria-current="page"><span data-i18n="docs.blog.listing.sections.howItWorks">How it works &amp; getting started</span> <span class="blog-sidebar-count">14</span></a></li>
+        <li><a href="posts/"><span data-i18n="docs.blog.listing.sections.posts">Blog posts</span> <span class="blog-sidebar-count">2</span></a></li>
+        <li><a href="releases/"><span data-i18n="docs.blog.listing.sections.releases">Patch releases</span> <span class="blog-sidebar-count">1</span></a></li>
+      </ul>
+    </nav>
+    <div class="blog-index-content">
+      <p class="blog-eyebrow" data-i18n="blog.heading">Blog</p>
+      <h1 class="blog-page-title" data-i18n="docs.blog.listing.sections.howItWorks">How it works &amp; getting started</h1>
+      <section class="blog-section" id="how-it-works">
+        <ul class="blog-list">
+        <li class="blog-list-entry">
+          <a href="./getting-started/" data-l10n-href="blog/getting-started/">
+            <span class="blog-list-entry-title" data-i18n="docs.blog.listing.entries.gettingStarted.title">Get started with Takt in 2 minutes</span>
+            <span class="blog-list-entry-meta" data-i18n="docs.blog.listing.entries.gettingStarted.meta">October 2026</span>
+            <span class="blog-list-entry-summary" data-i18n="docs.blog.listing.entries.gettingStarted.summary">How to set up Takt, the Chrome tab manager: what the welcome page does, how your first rules group your tabs straight away, which grouping mode to pick, where everything lives, and how to change language and theme.</span>
+          </a>
+        </li>
+        <li class="blog-list-entry">
+          <a href="./free-vs-premium/" data-l10n-href="blog/free-vs-premium/">
+            <span class="blog-list-entry-title" data-i18n="docs.blog.listing.entries.freeVsPremium.title">Takt Free vs Premium: what each plan includes</span>
+            <span class="blog-list-entry-meta" data-i18n="docs.blog.listing.entries.freeVsPremium.meta">October 2026</span>
+            <span class="blog-list-entry-summary" data-i18n="docs.blog.listing.entries.freeVsPremium.summary">Is Takt free? Yes. Here is every limit of the free plan next to Premium ($3/month or $30/year), checked against the code, plus who needs Premium and what happens to your data if you stop paying.</span>
+          </a>
+        </li>
+        <li class="blog-list-entry">
+          <a href="./auto-group-tabs-chrome/" data-l10n-href="blog/auto-group-tabs-chrome/">
+            <span class="blog-list-entry-title" data-i18n="docs.blog.listing.entries.autoGroupTabsChrome.title">How to automatically group tabs in Chrome</span>
+            <span class="blog-list-entry-meta" data-i18n="docs.blog.listing.entries.autoGroupTabsChrome.meta">October 2026</span>
+            <span class="blog-list-entry-summary" data-i18n="docs.blog.listing.entries.autoGroupTabsChrome.summary">Chrome can group tabs, but it won&#x27;t do it for you. Here is how to write URL rules that file every new tab into a named, colored group the moment it opens.</span>
+          </a>
+        </li>
+        <li class="blog-list-entry">
+          <a href="./group-tabs-by-category-or-ai/" data-l10n-href="blog/group-tabs-by-category-or-ai/">
+            <span class="blog-list-entry-title" data-i18n="docs.blog.listing.entries.groupTabsByCategoryOrAi.title">Group Chrome tabs by category or with AI, no rules needed</span>
+            <span class="blog-list-entry-meta" data-i18n="docs.blog.listing.entries.groupTabsByCategoryOrAi.meta">October 2026</span>
+            <span class="blog-list-entry-summary" data-i18n="docs.blog.listing.entries.groupTabsByCategoryOrAi.summary">Group every open Chrome tab by category (20 built-in categories) or with Chrome&#x27;s on-device AI model, without writing a single rule. How each mode works, the free 5-group cap, and how it compares with Chrome&#x27;s own Organize tabs.</span>
+          </a>
+        </li>
+        <li class="blog-list-entry">
+          <a href="./rule-suggestions/" data-l10n-href="blog/rule-suggestions/">
+            <span class="blog-list-entry-title" data-i18n="docs.blog.listing.entries.ruleSuggestions.title">Tab grouping rule suggestions: let Takt write your first rules</span>
+            <span class="blog-list-entry-meta" data-i18n="docs.blog.listing.entries.ruleSuggestions.meta">October 2026</span>
+            <span class="blog-list-entry-summary" data-i18n="docs.blog.listing.entries.ruleSuggestions.summary">Not sure which tab grouping rules to write? Takt suggests rules from the sites you keep open, can ask Chrome&#x27;s on-device AI for more, and lets you test a rule before you trust it.</span>
+          </a>
+        </li>
+        <li class="blog-list-entry">
+          <a href="./one-click-tab-cleanup/" data-l10n-href="blog/one-click-tab-cleanup/">
+            <span class="blog-list-entry-title" data-i18n="docs.blog.listing.entries.oneClickTabCleanup.title">How to clean up Chrome tabs in one click</span>
+            <span class="blog-list-entry-meta" data-i18n="docs.blog.listing.entries.oneClickTabCleanup.meta">October 2026</span>
+            <span class="blog-list-entry-summary" data-i18n="docs.blog.listing.entries.oneClickTabCleanup.summary">Group, ungroup, collapse, sort and de-duplicate every Chrome tab from one popup or one shortcut. What each button does, what&#x27;s free, and the shortcuts to learn.</span>
+          </a>
+        </li>
+        <li class="blog-list-entry">
+          <a href="./prevent-duplicate-tabs/" data-l10n-href="blog/prevent-duplicate-tabs/">
+            <span class="blog-list-entry-title" data-i18n="docs.blog.listing.entries.preventDuplicateTabs.title">How to prevent duplicate tabs in Chrome</span>
+            <span class="blog-list-entry-meta" data-i18n="docs.blog.listing.entries.preventDuplicateTabs.meta">October 2026</span>
+            <span class="blog-list-entry-summary" data-i18n="docs.blog.listing.entries.preventDuplicateTabs.summary">Chrome opens the same page in as many tabs as you ask for. Here is how to stop duplicate tabs as they open, choose what counts as the same URL, and close the ones already open.</span>
+          </a>
+        </li>
+        <li class="blog-list-entry">
+          <a href="./hibernate-tabs-free-memory/" data-l10n-href="blog/hibernate-tabs-free-memory/">
+            <span class="blog-list-entry-title" data-i18n="docs.blog.listing.entries.hibernateTabsFreeMemory.title">How to hibernate tabs in Chrome to free memory</span>
+            <span class="blog-list-entry-meta" data-i18n="docs.blog.listing.entries.hibernateTabsFreeMemory.meta">October 2026</span>
+            <span class="blog-list-entry-summary" data-i18n="docs.blog.listing.entries.hibernateTabsFreeMemory.summary">Hibernate Chrome tabs to free memory: unload idle tabs for free, close tabs completely and bring them back with their group, position and scroll intact. What it does, what it remembers, and where Chrome&#x27;s Memory Saver is enough.</span>
+          </a>
+        </li>
+        <li class="blog-list-entry">
+          <a href="./find-memory-hungry-tabs/" data-l10n-href="blog/find-memory-hungry-tabs/">
+            <span class="blog-list-entry-title" data-i18n="docs.blog.listing.entries.findMemoryHungryTabs.title">How to see which Chrome tabs use the most memory</span>
+            <span class="blog-list-entry-meta" data-i18n="docs.blog.listing.entries.findMemoryHungryTabs.meta">October 2026</span>
+            <span class="blog-list-entry-summary" data-i18n="docs.blog.listing.entries.findMemoryHungryTabs.summary">See which Chrome tabs and tab groups use the most memory: per-tab estimates, A–F health scores per group, background network activity, a system memory bar and per-group memory budgets. How each number is calculated.</span>
+          </a>
+        </li>
+        <li class="blog-list-entry">
+          <a href="./quick-switch-search-tabs/" data-l10n-href="blog/quick-switch-search-tabs/">
+            <span class="blog-list-entry-title" data-i18n="docs.blog.listing.entries.quickSwitchSearchTabs.title">How to search open tabs in Chrome with a keyboard shortcut</span>
+            <span class="blog-list-entry-meta" data-i18n="docs.blog.listing.entries.quickSwitchSearchTabs.meta">October 2026</span>
+            <span class="blog-list-entry-summary" data-i18n="docs.blog.listing.entries.quickSwitchSearchTabs.summary">Search your open Chrome tabs from the keyboard: press Alt+Shift+Space, type part of a title or URL, press Enter. Quick Switch also finds hibernated tabs and, with permission, your history. Plus the free search in Takt&#x27;s popup.</span>
+          </a>
+        </li>
+        <li class="blog-list-entry">
+          <a href="./save-restore-tab-sessions/" data-l10n-href="blog/save-restore-tab-sessions/">
+            <span class="blog-list-entry-title" data-i18n="docs.blog.listing.entries.saveRestoreTabSessions.title">How to save and restore tab sessions in Chrome</span>
+            <span class="blog-list-entry-meta" data-i18n="docs.blog.listing.entries.saveRestoreTabSessions.meta">October 2026</span>
+            <span class="blog-list-entry-summary" data-i18n="docs.blog.listing.entries.saveRestoreTabSessions.summary">Save your Chrome windows, tab groups and loose tabs as a named session and restore them later in a new window or over the current one. Up to 50 sessions, stored on your machine.</span>
+          </a>
+        </li>
+        <li class="blog-list-entry">
+          <a href="./profiles-and-schedules/" data-l10n-href="blog/profiles-and-schedules/">
+            <span class="blog-list-entry-title" data-i18n="docs.blog.listing.entries.profilesAndSchedules.title">Different tab rules for work and home</span>
+            <span class="blog-list-entry-meta" data-i18n="docs.blog.listing.entries.profilesAndSchedules.meta">October 2026</span>
+            <span class="blog-list-entry-summary" data-i18n="docs.blog.listing.entries.profilesAndSchedules.summary">Keep separate Chrome tab grouping rules for Work, Personal and Research. Switch profiles in one click from the popup, or let Takt switch them by time of day and day of week.</span>
+          </a>
+        </li>
+        <li class="blog-list-entry">
+          <a href="./backup-and-sync-tabs/" data-l10n-href="blog/backup-and-sync-tabs/">
+            <span class="blog-list-entry-title" data-i18n="docs.blog.listing.entries.backupAndSyncTabs.title">How to back up and sync your Chrome tab setup</span>
+            <span class="blog-list-entry-meta" data-i18n="docs.blog.listing.entries.backupAndSyncTabs.meta">October 2026</span>
+            <span class="blog-list-entry-summary" data-i18n="docs.blog.listing.entries.backupAndSyncTabs.summary">Back up your Chrome tab setup to a JSON file, sync it through a Google Drive, Dropbox or iCloud folder, or sync it to Google Drive&#x27;s private app storage. What each method covers, and where Chrome&#x27;s own tab group sync fits.</span>
+          </a>
+        </li>
+        <li class="blog-list-entry">
+          <a href="./privacy-local-first/" data-l10n-href="blog/privacy-local-first/">
+            <span class="blog-list-entry-title" data-i18n="docs.blog.listing.entries.privacyLocalFirst.title">A private tab manager for Chrome: what Takt sends, and what it doesn&#x27;t</span>
+            <span class="blog-list-entry-meta" data-i18n="docs.blog.listing.entries.privacyLocalFirst.meta">October 2026</span>
+            <span class="blog-list-entry-summary" data-i18n="docs.blog.listing.entries.privacyLocalFirst.summary">Takt is a Chrome tab manager with no account, no analytics and on-device AI. Here is every server it contacts, when, and what each permission is for.</span>
+          </a>
+        </li>
+        </ul>
+      </section>
+    </div>
+   </div>
   </main>
 
   <footer id="site-footer"></footer>

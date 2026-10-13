@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reglas de pestañas distintas para el trabajo y para casa: perfiles y horarios — Takt</title>
+    <meta
+      name="description"
+      content="Mantén reglas separadas para agrupar pestañas de Chrome en Trabajo, Personal e Investigación. Cambia de perfil con un clic desde el popup, o deja que Takt lo cambie según la hora y el día de la semana."
+    />
+    <link rel="canonical" href="https://taktabs.com/es/blog/profiles-and-schedules/" />
+<!-- TAKT-LANG:head -->
+<link rel="alternate" hreflang="en" href="https://taktabs.com/blog/profiles-and-schedules/" />
+<link rel="alternate" hreflang="fr" href="https://taktabs.com/fr/blog/profiles-and-schedules/" />
+<link rel="alternate" hreflang="es" href="https://taktabs.com/es/blog/profiles-and-schedules/" />
+<link rel="alternate" hreflang="it" href="https://taktabs.com/it/blog/profiles-and-schedules/" />
+<link rel="alternate" hreflang="de" href="https://taktabs.com/de/blog/profiles-and-schedules/" />
+<link rel="alternate" hreflang="pt" href="https://taktabs.com/pt/blog/profiles-and-schedules/" />
+<link rel="alternate" hreflang="x-default" href="https://taktabs.com/blog/profiles-and-schedules/" />
+<!-- /TAKT-LANG:head -->
+    <meta property="og:type" content="article" />
+    <meta property="og:locale" content="es_ES" />
+    <meta property="og:title" content="Reglas de pestañas distintas para el trabajo y para casa: perfiles y horarios" />
+    <meta property="og:description" content="Un conjunto de reglas para el horario laboral y otro para la tarde. Takt cambia de uno a otro según un horario." />
+    <meta property="og:url" content="https://taktabs.com/es/blog/profiles-and-schedules/" />
+    <meta property="og:image" content="https://taktabs.com/es/blog/img/options-profiles-schedule.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <link rel="icon" type="image/png" sizes="32x32" href="../../../assets/favicon-32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="../../../assets/favicon-16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="../../../assets/apple-touch-icon.png" />
+    <meta name="theme-color" content="#FF3B30" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../../../css/tokens.css" />
+    <link rel="stylesheet" href="../../../css/base.css" />
+    <link rel="stylesheet" href="../../../css/layout.css" />
+    <link rel="stylesheet" href="../../../css/blog.css" />
+    <link rel="stylesheet" href="../../../css/articles.css" />
+    <script src="../../../js/theme.js"></script>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Article",
+            "headline": "Reglas de pestañas distintas para el trabajo y para casa: perfiles y horarios",
+            "description": "Mantén reglas separadas para agrupar pestañas de Chrome en distintos contextos y cambia entre ellas a mano o según un horario.",
+            "inLanguage": "es",
+            "datePublished": "2026-10-08",
+            "dateModified": "2026-10-08",
+            "author": { "@type": "Person", "name": "Vitor" },
+            "publisher": { "@type": "Organization", "name": "Takt", "url": "https://taktabs.com" },
+            "image": "https://taktabs.com/es/blog/img/options-profiles-schedule.png",
+            "mainEntityOfPage": "https://taktabs.com/es/blog/profiles-and-schedules/"
+          },
+          {
+            "@type": "HowTo",
+            "name": "Cambiar automáticamente las reglas de pestañas de Chrome según un horario",
+            "step": [
+              { "@type": "HowToStep", "text": "Abre la página de opciones de Takt, ve a Profiles y haz clic en Create Profile." },
+              { "@type": "HowToStep", "text": "Ponle nombre al perfil y elige si copias tus reglas actuales o empiezas de cero." },
+              { "@type": "HowToStep", "text": "Haz clic en Edit rules para elegir las reglas que pertenecen al perfil." },
+              { "@type": "HowToStep", "text": "Marca Auto-switch on schedule, fija una hora de inicio y de fin, y elige los días." }
+            ]
+          },
+          {
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "¿Qué pasa con las reglas que no están en el perfil activo?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Se ignoran hasta que vuelvas a cambiar. Cuando hay un perfil activo, solo se usan sus reglas para agrupar. Elige Todas las reglas para volver a usarlas todas." }
+              },
+              {
+                "@type": "Question",
+                "name": "¿Cambiar de perfil reagrupa mis pestañas abiertas?",
+                "acceptedAnswer": { "@type": "Answer", "text": "No. Los grupos existentes se quedan como están. Las reglas del perfil nuevo se aplican a las pestañas a medida que se abren o se cargan. Haz clic en Agrupar pestañas en el popup para reagrupar lo que ya está abierto." }
+              },
+              {
+                "@type": "Question",
+                "name": "¿Cada cuánto comprueba Takt el horario?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Una vez por minuto. Un perfil se activa como mucho un minuto después de su hora de inicio y se desactiva como mucho un minuto después de su hora de fin." }
+              },
+              {
+                "@type": "Question",
+                "name": "¿Los perfiles son gratis?",
+                "acceptedAnswer": { "@type": "Answer", "text": "No. Los perfiles y el cambio programado son funciones Premium, 3 $/mes o 30 $/año." }
+              }
+            ]
+          },
+          {
+            "@type": "SoftwareApplication",
+            "name": "Takt",
+            "applicationCategory": "BrowserApplication",
+            "operatingSystem": "Chrome",
+            "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <header id="site-header"></header>
+
+    <main class="blog-main">
+      <article class="blog-post article">
+        <p class="eyebrow">Perfiles</p>
+        <h1 class="blog-post-title">Reglas de pestañas distintas para el trabajo y para casa</h1>
+        <p class="lede">Un perfil es un conjunto de reglas de agrupación de pestañas con nombre. Ten uno para el trabajo y otro para casa, cambia entre ellos con un clic o deja que Takt lo haga por ti a las 9:00 los días laborables.</p>
+        <p class="blog-post-meta">Actualizado el 8 de octubre de 2026 · 5 min de lectura</p>
+<!-- TAKT-LANG:nav -->
+<p class="lang-links"><a href="../../../blog/profiles-and-schedules/" hreflang="en" lang="en">English</a> · <a href="../../../fr/blog/profiles-and-schedules/" hreflang="fr" lang="fr">Français</a> · <span aria-current="true">Español</span> · <a href="../../../it/blog/profiles-and-schedules/" hreflang="it" lang="it">Italiano</a> · <a href="../../../de/blog/profiles-and-schedules/" hreflang="de" lang="de">Deutsch</a> · <a href="../../../pt/blog/profiles-and-schedules/" hreflang="pt" lang="pt">Português</a></p>
+<!-- /TAKT-LANG:nav -->
+
+        <div class="blog-post-body">
+          <div class="tldr">
+            <p><strong>Respuesta corta:</strong> en la página de opciones de Takt, abre <strong>Profiles</strong>, crea "Trabajo" y "Personal" y asigna reglas a cada uno. Cambia desde el menú de perfiles del popup, o marca <strong>Auto-switch on schedule</strong> y fija las horas y los días.</p>
+            <ul>
+              <li>Cuando hay un perfil activo, solo sus reglas agrupan tus pestañas.</li>
+              <li>Los horarios funcionan por hora del día y día de la semana, y se comprueban una vez por minuto.</li>
+              <li>Opcional: hibernar tus pestañas cuando termina el horario. <span class="badge badge-premium">Premium</span></li>
+            </ul>
+          </div>
+
+          <h2 id="why">¿Para qué quiero más de un conjunto de reglas de pestañas?</h2>
+          <p>Porque una regla que ayuda en el trabajo estorba en casa. Un grupo "Code" para GitHub viene bien a las 10:00. A las 21:00 quizá prefieras tener agrupados YouTube y las recetas, y ningún grupo de trabajo.</p>
+          <p>Sin perfiles tienes dos opciones: una lista larga de reglas que intenta cubrirlo todo, o ir activando y desactivando reglas a mano. Con los perfiles, cada contexto tiene su propia lista corta.</p>
+
+          <h2 id="create">¿Cómo creo un perfil?</h2>
+          <ol class="steps">
+            <li>Abre la página de opciones de Takt y ve a <strong>Profiles</strong>.</li>
+            <li>Haz clic en <strong>Create Profile</strong> y ponle un nombre.</li>
+            <li>Copia en él todas tus reglas actuales, o empieza de cero.</li>
+            <li>Haz clic en <strong>Edit rules</strong> para marcar las reglas que usa este perfil.</li>
+          </ol>
+          <p>Una regla nueva que crees con un perfil activo se añade automáticamente a ese perfil.</p>
+
+          <h2 id="switch">¿Cómo cambio de perfil?</h2>
+          <p>Abre el popup y haz clic en el nombre del perfil, arriba. El menú muestra <strong>Todas las reglas</strong> y cada perfil, con su número de reglas. Elige uno y se aplica al momento.</p>
+
+          <figure class="narrow">
+            <img src="../img/popup-profile-switcher.png" alt="Popup de Takt con el menú de perfiles abierto arriba, con Todas las reglas, Work con 3 reglas (seleccionado) y Research con 2 reglas, además de un enlace Administrar perfiles" width="420" loading="lazy" />
+            <figcaption>El menú de perfiles del popup. El número es la cantidad de reglas.</figcaption>
+          </figure>
+
+          <p><strong>Todas las reglas</strong> desactiva los perfiles, así que se evalúan todas las reglas. Cambiar no toca los grupos que ya tienes. Las pestañas nuevas siguen las reglas nuevas; haz clic en <strong>Agrupar pestañas</strong> en el popup para reagrupar el resto.</p>
+
+          <h2 id="schedule">¿Cómo cambio de perfil automáticamente según la hora?</h2>
+          <p>En la tarjeta de un perfil, marca <strong>Auto-switch on schedule</strong>. Después, configura:</p>
+          <ul>
+            <li><strong>Hora de inicio y de fin.</strong> Por defecto, de 09:00 a 17:00.</li>
+            <li><strong>Días.</strong> Activa o desactiva de Su a Sa. Por defecto, de lunes a viernes.</li>
+            <li><strong>Hibernate tabs when schedule ends</strong> (opcional).</li>
+          </ul>
+
+          <figure>
+            <img src="../img/options-profiles-schedule.png" alt="Página de opciones de Takt, pestaña Profiles: el perfil Work está activo, con Auto-switch on schedule marcado, de 09:00 a 17:00, de lunes a viernes seleccionados y la opción Hibernate tabs when schedule ends sin marcar. Debajo, un perfil Research sin horario." width="700" loading="lazy" />
+            <figcaption>Un perfil Work que se activa a las 09:00 y se desactiva a las 17:00 los días laborables.</figcaption>
+          </figure>
+
+          <p>Takt comprueba el horario una vez por minuto. Cuando empieza la franja, activa el perfil. Cuando termina, vuelve a Todas las reglas.</p>
+          <p>Si dos horarios se solapan, gana el perfil que se creó primero.</p>
+
+          <h2 id="hibernate">¿Qué hace "Hibernate tabs when schedule ends"?</h2>
+          <p>Al final de la franja, Takt <a href="../hibernate-tabs-free-memory/">hiberna</a> tus pestañas abiertas. Deja fuera la pestaña activa, las que reproducen audio, las fijadas y cualquier URL de tu lista de pestañas que nunca se suspenden.</p>
+          <p>Tus pestañas de trabajo dejan de usar memoria cuando termina la jornada, y se quedan en la lista de Hibernar hasta que las despiertes.</p>
+
+          <h2 id="compare">Perfiles frente a otras formas de separar trabajo y casa</h2>
+          <table>
+            <thead><tr><th></th><th>Perfiles de Chrome separados</th><th>Perfiles de Takt</th></tr></thead>
+            <tbody>
+              <tr><td>Qué se separa</td><td>Todo: ventanas, historial, sesiones iniciadas</td><td>Solo las reglas de agrupación</td></tr>
+              <tr><td>Mismas ventanas y pestañas</td><td>No</td><td>Sí</td></tr>
+              <tr><td>Cambia según un horario</td><td>No</td><td>Sí</td></tr>
+            </tbody>
+          </table>
+          <p>Si necesitas sesiones iniciadas e historial separados, usa perfiles de Chrome distintos. Los perfiles de Takt solo cambian cómo se agrupan las pestañas dentro del navegador que ya usas.</p>
+
+          <h2 id="limits">Lo que los perfiles no hacen</h2>
+          <ul>
+            <li><strong>No cierran ni abren pestañas.</strong> Un perfil cambia qué reglas se aplican. Para cambiar todo un conjunto de pestañas, usa las <a href="../save-restore-tab-sessions/">sesiones</a>.</li>
+            <li><strong>Durante su franja, manda el horario.</strong> Si cambias de perfil a mano en horas programadas, Takt vuelve a cambiarlo en la siguiente comprobación, en un minuto como mucho. Desactiva el horario para quedarte en otro perfil.</li>
+            <li><strong>La hora de fin tiene que ser posterior a la de inicio.</strong> Una franja que pasa de la medianoche necesita dos perfiles.</li>
+          </ul>
+
+          <div class="cta">
+            <p>Reglas de trabajo en el trabajo. Reglas de casa en casa.</p>
+            <a class="btn" href="https://chromewebstore.google.com/detail/takt/plgfdnbgkjocmgegnkbihoeojcfphdic">Añadir Takt a Chrome, gratis</a>
+          </div>
+
+          <h2 id="faq">Preguntas frecuentes</h2>
+          <div class="faq">
+            <details>
+              <summary>¿Qué pasa con las reglas que no están en el perfil activo?</summary>
+              <p>Se ignoran hasta que vuelvas a cambiar. Elige <strong>Todas las reglas</strong> para volver a usarlas todas.</p>
+            </details>
+            <details>
+              <summary>¿Cambiar de perfil reagrupa mis pestañas abiertas?</summary>
+              <p>No. Los grupos existentes se quedan. Las pestañas nuevas siguen las reglas nuevas. Haz clic en <strong>Agrupar pestañas</strong> en el popup para reagrupar lo que está abierto.</p>
+            </details>
+            <details>
+              <summary>¿Cada cuánto comprueba Takt el horario?</summary>
+              <p>Una vez por minuto. Un perfil se activa como mucho un minuto después de su hora de inicio y se desactiva como mucho un minuto después de su hora de fin.</p>
+            </details>
+            <details>
+              <summary>¿Los perfiles son gratis?</summary>
+              <p>No. Los perfiles y los horarios son Premium, 3 $/mes o 30 $/año. El plan Free incluye 5 reglas y la <a href="../auto-group-tabs-chrome/">agrupación por reglas</a>.</p>
+            </details>
+          </div>
+
+          <h2 id="next">Sigue leyendo</h2>
+          <div class="read-next">
+            <a href="../auto-group-tabs-chrome/">Escribe tu primera regla de agrupación<span>Cada pestaña nueva se archiva sola.</span></a>
+            <a href="../save-restore-tab-sessions/">Guarda un espacio de trabajo para más tarde<span>Sesiones con nombre, restauradas con un clic.</span></a>
+          </div>
+        </div>
+
+        <footer class="blog-post-footer">
+          <a href="../../../blog/">Todos los artículos</a> · <a href="../../../docs/profiles/">Referencia de perfiles</a>
+        </footer>
+      </article>
+    </main>
+
+    <footer id="site-footer"></footer>
+    <script src="../../../js/includes.js"></script>
+    <script src="../../../js/nav.js"></script>
+  </body>
+</html>

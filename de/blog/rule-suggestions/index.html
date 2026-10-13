@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Regeln für Tab-Gruppen vorschlagen lassen: Takt schreibt Ihre ersten Regeln — Takt</title>
+    <meta
+      name="description"
+      content="Unsicher, welche Regeln für Tab-Gruppen Sie schreiben sollen? Takt schlägt Regeln auf Basis der Websites vor, die Sie geöffnet haben, kann Chromes lokale KI nach weiteren fragen und lässt Sie eine Regel testen, bevor Sie sich auf sie verlassen."
+    />
+    <link rel="canonical" href="https://taktabs.com/de/blog/rule-suggestions/" />
+<!-- TAKT-LANG:head -->
+<link rel="alternate" hreflang="en" href="https://taktabs.com/blog/rule-suggestions/" />
+<link rel="alternate" hreflang="fr" href="https://taktabs.com/fr/blog/rule-suggestions/" />
+<link rel="alternate" hreflang="es" href="https://taktabs.com/es/blog/rule-suggestions/" />
+<link rel="alternate" hreflang="it" href="https://taktabs.com/it/blog/rule-suggestions/" />
+<link rel="alternate" hreflang="de" href="https://taktabs.com/de/blog/rule-suggestions/" />
+<link rel="alternate" hreflang="pt" href="https://taktabs.com/pt/blog/rule-suggestions/" />
+<link rel="alternate" hreflang="x-default" href="https://taktabs.com/blog/rule-suggestions/" />
+<!-- /TAKT-LANG:head -->
+    <meta property="og:type" content="article" />
+    <meta property="og:locale" content="de_DE" />
+    <meta property="og:title" content="Regeln für Tab-Gruppen vorschlagen lassen: Takt schreibt Ihre ersten Regeln" />
+    <meta property="og:description" content="Takt erkennt die Websites, die Sie ständig offen haben, und bietet für jede eine Regel an. Testen, Vorschau ansehen, dann zusehen, wie die Trefferzahl wächst." />
+    <meta property="og:url" content="https://taktabs.com/de/blog/rule-suggestions/" />
+    <meta property="og:image" content="https://taktabs.com/de/blog/img/options-rules.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <link rel="icon" type="image/png" sizes="32x32" href="../../../assets/favicon-32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="../../../assets/favicon-16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="../../../assets/apple-touch-icon.png" />
+    <meta name="theme-color" content="#FF3B30" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../../../css/tokens.css" />
+    <link rel="stylesheet" href="../../../css/base.css" />
+    <link rel="stylesheet" href="../../../css/layout.css" />
+    <link rel="stylesheet" href="../../../css/blog.css" />
+    <link rel="stylesheet" href="../../../css/articles.css" />
+    <script src="../../../js/theme.js"></script>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Article",
+            "inLanguage": "de",
+            "headline": "Regeln für Tab-Gruppen vorschlagen lassen: Takt schreibt Ihre ersten Regeln",
+            "description": "Takt schlägt Regeln für Tab-Gruppen auf Basis der Websites vor, die Sie geöffnet haben, bietet KI-Vorschläge auf dem Gerät und lässt Sie eine Regel vor dem Speichern testen und in der Vorschau prüfen.",
+            "datePublished": "2026-10-08",
+            "dateModified": "2026-10-08",
+            "author": { "@type": "Person", "name": "Vitor" },
+            "publisher": { "@type": "Organization", "name": "Takt", "url": "https://taktabs.com" },
+            "image": "https://taktabs.com/de/blog/img/options-rules.png",
+            "mainEntityOfPage": "https://taktabs.com/de/blog/rule-suggestions/"
+          },
+          {
+            "@type": "HowTo",
+            "name": "Eine Regel für Tab-Gruppen aus einem Vorschlag erstellen",
+            "step": [
+              { "@type": "HowToStep", "text": "Öffnen Sie das Takt-Popup und gehen Sie zum Bereich Einblicke." },
+              { "@type": "HowToStep", "text": "Klicken Sie bei einer vorgeschlagenen Website auf Regel erstellen. Der Regel-Editor öffnet sich mit bereits eingetragener Website." },
+              { "@type": "HowToStep", "text": "Klicken Sie auf Passende Tabs anzeigen, um zu prüfen, welche offenen Tabs die Regel erfasst, benennen Sie dann die Gruppe, wählen Sie eine Farbe und speichern Sie." }
+            ]
+          },
+          {
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "Wie entscheidet Takt, welche Regeln es vorschlägt?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Takt schlägt eine Website vor, wenn Sie 3 oder mehr Tabs von ihr geöffnet haben oder sie in den letzten 7 Tagen oft geöffnet haben (5 Besuche oder Besuche an 2 verschiedenen Tagen) und noch keine Regel sie abdeckt." }
+              },
+              {
+                "@type": "Question",
+                "name": "Sind Regelvorschläge kostenlos?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Ja. Im kostenlosen Plan sehen Sie im Bereich Einblicke 3 Vorschläge gleichzeitig und KI-Vorschläge bis zur kostenlosen Grenze von 5 Regeln. Premium ($3/Monat oder $30/Jahr) zeigt alle Vorschläge und hebt die Regelgrenze auf." }
+              },
+              {
+                "@type": "Question",
+                "name": "Senden KI-Regelvorschläge meine Tabs irgendwohin?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Nein. KI-Vorschläge nutzen Chromes integrierte Prompt API, die auf Ihrem Gerät läuft. Nur die Liste der Website-Namen aus Ihren offenen Tabs geht an das lokale Modell." }
+              },
+              {
+                "@type": "Question",
+                "name": "Kann ich einen verworfenen Vorschlag zurückholen?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Ja. Verworfene Vorschläge sind auf der Seite Rules in den Takt-Optionen aufgelistet, wo Sie sie wiederherstellen können." }
+              }
+            ]
+          },
+          {
+            "@type": "SoftwareApplication",
+            "name": "Takt",
+            "applicationCategory": "BrowserApplication",
+            "operatingSystem": "Chrome",
+            "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <header id="site-header"></header>
+
+    <main class="blog-main">
+      <article class="blog-post article">
+        <p class="eyebrow">Regelvorschläge</p>
+        <h1 class="blog-post-title">Regeln für Tab-Gruppen vorschlagen lassen: Takt schreibt Ihre ersten Regeln</h1>
+        <p class="lede">Die schwierigste Regel ist die erste. Takt schlägt Regeln für Tab-Gruppen auf Basis der Websites vor, die Sie ohnehin geöffnet haben. So starten Sie bei Ihren eigenen Gewohnheiten statt bei einem leeren Formular.</p>
+        <p class="blog-post-meta">Aktualisiert am 8. Oktober 2026 · 5 Min. Lesezeit</p>
+<!-- TAKT-LANG:nav -->
+<p class="lang-links"><a href="../../../blog/rule-suggestions/" hreflang="en" lang="en">English</a> · <a href="../../../fr/blog/rule-suggestions/" hreflang="fr" lang="fr">Français</a> · <a href="../../../es/blog/rule-suggestions/" hreflang="es" lang="es">Español</a> · <a href="../../../it/blog/rule-suggestions/" hreflang="it" lang="it">Italiano</a> · <span aria-current="true">Deutsch</span> · <a href="../../../pt/blog/rule-suggestions/" hreflang="pt" lang="pt">Português</a></p>
+<!-- /TAKT-LANG:nav -->
+
+        <div class="blog-post-body">
+          <div class="tldr">
+            <p><strong>Kurz gesagt:</strong> Öffnen Sie im Takt-Popup den Bereich <strong>Einblicke</strong>. Jede Karte ist eine Website, die Sie oft nutzen und für die es noch keine Regel gibt. Klicken Sie auf <em>Regel erstellen</em>, prüfen Sie sie mit <em>Passende Tabs anzeigen</em> und speichern Sie.</p>
+            <ul>
+              <li>Vorschläge stammen aus Ihren offenen Tabs und Ihren letzten Besuchen, gezählt auf Ihrem Gerät.</li>
+              <li><em>Regeln vorschlagen</em> bittet Chromes lokale KI, Ihre offenen Websites zu Regeln zu gruppieren.</li>
+              <li>Regel-Tester und Trefferzahlen zeigen, ob eine Regel tut, was Sie gemeint haben.</li>
+            </ul>
+          </div>
+
+          <h2 id="where">Woher kommen die Regelvorschläge?</h2>
+          <p>Takt achtet auf Websites, die eindeutig eine eigene Gruppe verdienen. Es gibt drei Quellen:</p>
+          <table>
+            <thead><tr><th>Quelle</th><th>Schlägt eine Website vor, wenn</th><th>Wo Sie sie sehen</th><th>Plan</th></tr></thead>
+            <tbody>
+              <tr><td>Offene Tabs</td><td>3 oder mehr Tabs von ihr offen oder hiberniert sind</td><td>Popup → Einblicke, Optionen → Rules</td><td>Free: 3 Karten gleichzeitig</td></tr>
+              <tr><td>Letzte Besuche</td><td>Sie sie in den letzten 7 Tagen 5-mal oder öfter geöffnet haben oder an 2 oder mehr Tagen besucht haben</td><td>Popup → Einblicke, Optionen → Rules</td><td>Free: 3 Karten gleichzeitig</td></tr>
+              <tr><td>KI-Vorschläge</td><td>Sie auf <em>Regeln vorschlagen</em> klicken</td><td>Optionen → Rules</td><td>Free, bis zur Grenze von 5 Regeln</td></tr>
+            </tbody>
+          </table>
+          <p>Eine Website, die bereits eine Regel vom Typ <em>Domain</em> oder <em>enthält</em> abdeckt, wird nie vorgeschlagen. Ebenso wenig alles, was Sie verworfen haben.</p>
+
+          <h2 id="insights">Wie funktioniert der Bereich Einblicke?</h2>
+          <p>Jede Karte zeigt eine Website und den Grund für den Vorschlag, zum Beispiel „3 open tabs · 3 visits“. Dazu zwei Schaltflächen:</p>
+          <ul>
+            <li><strong>Regel erstellen</strong> öffnet den Regel-Editor mit bereits eingetragener Website. Gespeichert wird erst, wenn Sie auf Speichern klicken.</li>
+            <li><strong>Schließen</strong> blendet die Karte aus. Verworfene Vorschläge bleiben auf der Seite Rules der Optionen aufgelistet, wo Sie sie wiederherstellen können.</li>
+          </ul>
+          <p>Im kostenlosen Plan sehen Sie die ersten 3 Karten und eine Zeile wie „1 weiteres Muster gefunden“. Premium ($3/Monat oder $30/Jahr) zeigt alle.</p>
+
+          <figure class="narrow">
+            <img src="../img/popup-insights-suggestions.png" alt="Takt-Popup, Bereich Einblicke mit drei Vorschlagskarten, github.com, en.wikipedia.org und reddit.com, jeweils mit 3 offenen Tabs und 3 Besuchen sowie den Schaltflächen Regel erstellen und Schließen, darunter 1 weiteres Muster gefunden und ein Link Upgrade um alles zu sehen" width="420" loading="lazy" />
+            <figcaption>Einblicke im kostenlosen Plan: die ersten 3 Vorschläge und die Anzahl der übrigen.</figcaption>
+          </figure>
+
+          <h2 id="visits">Was speichert Takt, um Vorschläge zu machen?</h2>
+          <p>Nur Website-Namen und Zählungen. Wenn im Regelmodus ein neuer Tab auf keine Ihrer Regeln passt, zählt Takt einen Besuch für diese Website. Gespeichert werden:</p>
+          <ul>
+            <li>die Domain, eine Besuchszahl sowie der erste und letzte Zeitpunkt, an dem Takt sie gesehen hat;</li>
+            <li>nur Einträge der letzten 7 Tage und höchstens 1.000 Websites;</li>
+            <li>nichts aus Inkognito-Fenstern.</li>
+          </ul>
+          <p>Die Daten liegen im lokalen Erweiterungsspeicher von Chrome und verlassen Ihren Browser nie. <em>Clear tab pattern history</em> unter Settings löscht sie. Wenn Sie die optionale Berechtigung für den Browserverlauf erteilen, stammen die Besuchszahlen auf jeder Karte stattdessen aus Chromes eigenem Verlauf der letzten 90 Tage.</p>
+
+          <h2 id="ai">Was sind KI-Regelvorschläge?</h2>
+          <p>Auf der Seite Rules der Optionen sendet <strong>Regeln vorschlagen</strong> die Liste der Websites aus Ihren offenen Tabs an Chromes integrierte Prompt API. Das Modell läuft auf Ihrem Gerät, gruppiert die Websites nach Thema und benennt jede Gruppe. Übergeben werden nur Website-Namen: keine Titel, keine Seiteninhalte.</p>
+          <ul>
+            <li>Jeder Vorschlag hat <em>Regel hinzufügen</em> und <em>Verwerfen</em>. Regel hinzufügen speichert die Regel sofort, aktiviert.</li>
+            <li>Der erste Durchlauf kann eine Minute dauern, während Chrome das Modell vorbereitet.</li>
+            <li>Auf einem Gerät, das das Modell nicht ausführen kann, sehen Sie „KI-Vorschläge sind auf diesem Gerät nicht verfügbar.“</li>
+            <li>Im kostenlosen Plan erhalten Sie so viele Vorschläge, wie Sie noch freie Regelplätze von 5 haben.</li>
+          </ul>
+
+          <h2 id="tester">Wie teste ich eine Regel, bevor ich mich auf sie verlasse?</h2>
+          <p>Zwei Werkzeuge auf der Seite Rules der Optionen:</p>
+          <ul>
+            <li><strong>Regel-Tester.</strong> Fügen Sie eine URL und optional einen Seitentitel ein. Takt antwortet mit „Matches: <em>Regel</em> → <em>Gruppe</em>“ oder „Keine passende Regel“. Haken Sie <em>Deaktivierte Regeln einbeziehen</em> an, um ausgeschaltete Regeln zu testen.</li>
+            <li><strong>Passende Tabs anzeigen.</strong> Im Regel-Editor listet diese Funktion die offenen Tabs aller Fenster auf, die Ihre noch nicht gespeicherten Bedingungen erfassen würden. Passt keiner, erscheint „Keine Tabs entsprechen dieser Regel.“</li>
+          </ul>
+
+          <figure>
+            <img src="../img/options-rules.png" alt="Seite Rules der Takt-Optionen mit dem Regel-Tester (URL-Feld, optionaler Seitentitel, Kästchen Deaktivierte Regeln einbeziehen und Schaltfläche Testen), der Überschrift KI-Vorschläge mit der Schaltfläche Regeln vorschlagen und einer Liste mit sieben Regeln, von denen mehrere eine Trefferzahl zeigen, etwa 4 für Code und 3 für Research" width="700" loading="lazy" />
+            <figcaption>Regel-Tester und KI-Vorschläge stehen über Ihren Regeln. Die Zahlen sind Trefferzahlen.</figcaption>
+          </figure>
+
+          <h2 id="counts">Woran erkenne ich, dass eine Regel funktioniert?</h2>
+          <p>Jede Regel in der Liste zeigt, wie viele Tabs sie in ihre Gruppe eingeordnet hat. Ein Tab zählt, wenn die Regel ihn aus „ungruppiert“ herausholt.</p>
+          <p>Die Ansicht <strong>Stats</strong> ergänzt die Summen: organisierte Tabs, Tabs pro Tag, Ihre Top-Regel und Ihre 10 meistgenutzten Regeln. Eine Regel, die eine Woche lang bei null bleibt, verdient einen zweiten Blick mit dem Regel-Tester. <em>Statistiken zurücksetzen</em> beginnt die Zählung von vorn.</p>
+
+          <h2 id="right-click">Kann ich eine Regel aus der aktuellen Seite erstellen? <span class="badge badge-premium">Premium</span></h2>
+          <p>Ja. Klicken Sie mit der rechten Maustaste auf die Seite und wählen Sie <strong>Regel aus diesem Tab erstellen</strong>. Takt öffnet den Regel-Editor mit einem eingetragenen Glob-Muster wie <code>*://github.com/*</code>. Prüfen Sie es und speichern Sie.</p>
+
+          <h2 id="limits">Was Vorschläge nicht können</h2>
+          <ul>
+            <li>Sie arbeiten Website für Website. Takt schlägt nicht „alle Pull Requests“ über mehrere Repos vor. Dafür schreiben Sie eine Glob- oder Regex-Regel (Premium).</li>
+            <li>Vorschläge aus offenen Tabs brauchen 3 Tabs von einer Website. Zwei Tabs erzeugen keine Karte.</li>
+            <li>KI-Vorschläge hängen von Chromes lokalem Modell ab. Ältere oder leistungsschwache Computer erhalten sie unter Umständen nicht.</li>
+            <li>Vorschläge speisen den Regelmodus. Wenn Sie lieber gar keine Regeln schreiben, versuchen Sie die <a href="../group-tabs-by-category-or-ai/">Gruppierung nach Kategorie oder per KI</a>.</li>
+          </ul>
+
+          <div class="cta">
+            <p>Öffnen Sie Tabs wie gewohnt. Takt sagt Ihnen, welche Regel Sie schreiben sollten.</p>
+            <a class="btn" href="https://chromewebstore.google.com/detail/takt/plgfdnbgkjocmgegnkbihoeojcfphdic">Zu Chrome hinzufügen — kostenlos</a>
+          </div>
+
+          <h2 id="faq">Häufige Fragen</h2>
+          <div class="faq">
+            <details>
+              <summary>Wie entscheidet Takt, welche Regeln es vorschlägt?</summary>
+              <p>Eine Website kommt infrage, wenn 3 oder mehr Tabs von ihr offen sind oder Sie sie in den letzten 7 Tagen 5-mal (oder an 2 Tagen) besucht haben – sofern keine Regel sie abdeckt.</p>
+            </details>
+            <details>
+              <summary>Sind Regelvorschläge kostenlos?</summary>
+              <p>Ja. Im kostenlosen Plan sehen Sie 3 Karten in Einblicke gleichzeitig und KI-Vorschläge bis zur Grenze von 5 Regeln. Premium ($3/Monat oder $30/Jahr) zeigt alle.</p>
+            </details>
+            <details>
+              <summary>Senden KI-Regelvorschläge meine Tabs irgendwohin?</summary>
+              <p>Nein. Nur die Website-Namen Ihrer offenen Tabs gehen an Chromes lokales Modell. Siehe <a href="../privacy-local-first/">wie Takt Daten lokal hält</a>.</p>
+            </details>
+            <details>
+              <summary>Kann ich einen verworfenen Vorschlag zurückholen?</summary>
+              <p>Ja. Die Seite Rules der Optionen listet verworfene Vorschläge auf, und Sie können sie dort wiederherstellen.</p>
+            </details>
+          </div>
+
+          <h2 id="next">Weiterlesen</h2>
+          <div class="read-next">
+            <a href="../auto-group-tabs-chrome/">So schreiben Sie eine Gruppierungsregel<span>Übereinstimmungstypen, Reihenfolge, ein Startset aus fünf Regeln.</span></a>
+            <a href="../profiles-and-schedules/">Andere Regeln für Arbeit und Zuhause<span>Profile, die nach Zeitplan wechseln.</span></a>
+          </div>
+        </div>
+
+        <footer class="blog-post-footer">
+          <a href="../../../blog/">Alle Artikel zu den Funktionen</a> · <a href="../../../docs/insights/">Referenz: Einblicke</a> · <a href="../../../docs/rules/">Regelreferenz</a>
+        </footer>
+      </article>
+    </main>
+
+    <footer id="site-footer"></footer>
+    <script src="../../../js/includes.js"></script>
+    <script src="../../../js/nav.js"></script>
+  </body>
+</html>

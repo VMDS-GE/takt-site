@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chrome-Tabs nach Kategorie oder per lokaler KI gruppieren, ohne Regeln — Takt</title>
+    <meta
+      name="description"
+      content="Gruppieren Sie alle offenen Chrome-Tabs nach Kategorie (20 integrierte Kategorien) oder mit Chromes lokalem KI-Modell, ohne eine einzige Regel zu schreiben. Wie jeder Modus funktioniert, die kostenlose Grenze von 5 Gruppen und der Vergleich mit Chromes eigenem „Organize tabs“."
+    />
+    <link rel="canonical" href="https://taktabs.com/de/blog/group-tabs-by-category-or-ai/" />
+<!-- TAKT-LANG:head -->
+<link rel="alternate" hreflang="en" href="https://taktabs.com/blog/group-tabs-by-category-or-ai/" />
+<link rel="alternate" hreflang="fr" href="https://taktabs.com/fr/blog/group-tabs-by-category-or-ai/" />
+<link rel="alternate" hreflang="es" href="https://taktabs.com/es/blog/group-tabs-by-category-or-ai/" />
+<link rel="alternate" hreflang="it" href="https://taktabs.com/it/blog/group-tabs-by-category-or-ai/" />
+<link rel="alternate" hreflang="de" href="https://taktabs.com/de/blog/group-tabs-by-category-or-ai/" />
+<link rel="alternate" hreflang="pt" href="https://taktabs.com/pt/blog/group-tabs-by-category-or-ai/" />
+<link rel="alternate" hreflang="x-default" href="https://taktabs.com/blog/group-tabs-by-category-or-ai/" />
+<!-- /TAKT-LANG:head -->
+    <meta property="og:type" content="article" />
+    <meta property="og:locale" content="de_DE" />
+    <meta property="og:title" content="Chrome-Tabs nach Kategorie oder per lokaler KI gruppieren" />
+    <meta property="og:description" content="Keine Regeln zu schreiben. Kategorie oder KI wählen, und jeder offene Tab landet in einer benannten Gruppe." />
+    <meta property="og:url" content="https://taktabs.com/de/blog/group-tabs-by-category-or-ai/" />
+    <meta property="og:image" content="https://taktabs.com/de/blog/img/popup-home.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <link rel="icon" type="image/png" sizes="32x32" href="../../../assets/favicon-32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="../../../assets/favicon-16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="../../../assets/apple-touch-icon.png" />
+    <meta name="theme-color" content="#FF3B30" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../../../css/tokens.css" />
+    <link rel="stylesheet" href="../../../css/base.css" />
+    <link rel="stylesheet" href="../../../css/layout.css" />
+    <link rel="stylesheet" href="../../../css/blog.css" />
+    <link rel="stylesheet" href="../../../css/articles.css" />
+    <script src="../../../js/theme.js"></script>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Article",
+            "inLanguage": "de",
+            "headline": "Chrome-Tabs nach Kategorie oder per lokaler KI gruppieren",
+            "description": "Alle offenen Chrome-Tabs nach einer von 20 integrierten Kategorien oder mit Chromes lokalem KI-Modell nach Thema gruppieren, ohne Regeln zu schreiben.",
+            "datePublished": "2026-10-08",
+            "dateModified": "2026-10-08",
+            "author": { "@type": "Person", "name": "Vitor" },
+            "publisher": { "@type": "Organization", "name": "Takt", "url": "https://taktabs.com" },
+            "image": "https://taktabs.com/de/blog/img/popup-home.png",
+            "mainEntityOfPage": "https://taktabs.com/de/blog/group-tabs-by-category-or-ai/"
+          },
+          {
+            "@type": "HowTo",
+            "name": "Chrome-Tabs nach Kategorie oder per KI gruppieren",
+            "step": [
+              { "@type": "HowToStep", "text": "Installieren Sie Takt aus dem Chrome Web Store." },
+              { "@type": "HowToStep", "text": "Öffnen Sie das Takt-Popup und wählen Sie unter Gruppierungsmodus Nach Kategorie oder Per KI." },
+              { "@type": "HowToStep", "text": "Takt hebt die Gruppen Ihrer Tabs auf und gruppiert sie im neuen Modus neu. Klicken Sie auf Tabs gruppieren (oder drücken Sie Alt+Shift+G), um es später erneut auszuführen." }
+            ]
+          },
+          {
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "Ist die Gruppierung nach Kategorie oder per KI kostenlos?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Ja. Beide Modi sind kostenlos. Im Kategorie- und KI-Modus erlaubt der kostenlose Plan insgesamt bis zu 5 Tab-Gruppen über alle Chrome-Fenster hinweg, von Hand angelegte Gruppen mitgezählt. Premium ($3/Monat oder $30/Jahr) hebt die Grenze auf." }
+              },
+              {
+                "@type": "Question",
+                "name": "Sendet die KI-Gruppierung von Takt meine Tabs an einen Server?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Nein. Takt nutzt Chromes integrierte Prompt API, die das Modell auf Ihrem Gerät ausführt. Tab-Titel und ein kurzer Auszug des Seitentexts gehen nur an das lokale Modell." }
+              },
+              {
+                "@type": "Question",
+                "name": "Was passiert, wenn Chromes KI-Modell auf meinem Computer nicht verfügbar ist?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Takt gruppiert dann Tabs, deren Titel und Website-Namen gemeinsame Wörter enthalten. Das Popup zeigt an, dass die KI auf diesem Gerät nicht verfügbar ist, und die Tabs werden trotzdem gruppiert." }
+              },
+              {
+                "@type": "Question",
+                "name": "Kann ich einer Kategorie eigene Websites hinzufügen?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Nein. Die Kategorieliste ist fest. Websites, die sie nicht kennt, landen in Other. Wenn eine Website in eine bestimmte Gruppe soll, nutzen Sie stattdessen den Regelmodus." }
+              }
+            ]
+          },
+          {
+            "@type": "SoftwareApplication",
+            "name": "Takt",
+            "applicationCategory": "BrowserApplication",
+            "operatingSystem": "Chrome",
+            "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <header id="site-header"></header>
+
+    <main class="blog-main">
+      <article class="blog-post article">
+        <p class="eyebrow">Gruppierung nach Kategorie &amp; per KI</p>
+        <h1 class="blog-post-title">Chrome-Tabs nach Kategorie oder per KI gruppieren, ganz ohne Regeln</h1>
+        <p class="lede">Sie können alle offenen Chrome-Tabs gruppieren, ohne eine Regel zu schreiben. Wählen Sie <strong>Kategorie</strong>, und Takt ordnet jeden Tab einer von 20 benannten Kategorien zu. Wählen Sie <strong>KI</strong>, und Chromes lokales Modell gruppiert die Tabs nach Thema.</p>
+        <p class="blog-post-meta">Aktualisiert am 8. Oktober 2026 · 6 Min. Lesezeit</p>
+<!-- TAKT-LANG:nav -->
+<p class="lang-links"><a href="../../../blog/group-tabs-by-category-or-ai/" hreflang="en" lang="en">English</a> · <a href="../../../fr/blog/group-tabs-by-category-or-ai/" hreflang="fr" lang="fr">Français</a> · <a href="../../../es/blog/group-tabs-by-category-or-ai/" hreflang="es" lang="es">Español</a> · <a href="../../../it/blog/group-tabs-by-category-or-ai/" hreflang="it" lang="it">Italiano</a> · <span aria-current="true">Deutsch</span> · <a href="../../../pt/blog/group-tabs-by-category-or-ai/" hreflang="pt" lang="pt">Português</a></p>
+<!-- /TAKT-LANG:nav -->
+
+        <div class="blog-post-body">
+          <div class="tldr">
+            <p><strong>Kurz gesagt:</strong> Öffnen Sie das Takt-Popup, wählen Sie unter Gruppierungsmodus <em>Nach Kategorie</em> oder <em>Per KI</em>, und Takt gruppiert Ihre Tabs sofort neu.</p>
+            <ul>
+              <li>Kategorie: 20 feste Kategorien wie Development, Social und News. Unbekannte Websites landen in „Other“.</li>
+              <li>KI: Chromes integriertes Modell benennt die Gruppen. Es läuft auf Ihrem Gerät.</li>
+              <li>Beide sind kostenlos, bis zu 5 Gruppen über alle Fenster. Premium hebt die Grenze auf.</li>
+            </ul>
+          </div>
+
+          <h2 id="modes">Welche Gruppierungsmodi hat Takt?</h2>
+          <p>Vier, und es ist immer einer aktiv. Sie wählen ihn im Popup unter <strong>Gruppierungsmodus</strong>.</p>
+          <table>
+            <thead><tr><th>Modus</th><th>Wie Tabs gruppiert werden</th><th>Einrichtung</th></tr></thead>
+            <tbody>
+              <tr><td>Nach Regeln (Standard)</td><td>Nach den URL-Regeln, die Sie schreiben</td><td>Eine Regel pro Gruppe</td></tr>
+              <tr><td>Nach Kategorie</td><td>Nach Website, in 20 integrierte Kategorien</td><td>Keine</td></tr>
+              <tr><td>Per KI</td><td>Nach Thema, mit Namen von Chromes lokalem Modell</td><td>Keine</td></tr>
+              <tr><td>Keine</td><td>Takt gruppiert keine Tabs</td><td>Keine</td></tr>
+            </tbody>
+          </table>
+          <p>Beim Wechsel hebt Takt die Gruppen Ihrer Tabs auf und gruppiert sie im neuen Modus neu. Ihre Wahl wird gespeichert. Mit Keine werden alle Gruppen aufgehoben, und das Gruppieren endet.</p>
+
+          <figure class="narrow">
+            <img src="../img/popup-home.png" alt="Takt-Popup, Bereich Startseite mit dem Abschnitt Gruppierungsmodus und vier Optionen: Nach Regeln, Nach Kategorie, Per KI und Keine, darunter die Schnellaktionen Tabs gruppieren, Alle aufheben, Alle einklappen und Nach Domain sortieren" width="420" loading="lazy" />
+            <figcaption>Der Schalter für den Gruppierungsmodus im Popup. Tabs gruppieren führt den gewählten Modus aus.</figcaption>
+          </figure>
+
+          <h2 id="category">Wie funktioniert die Gruppierung nach Kategorie?</h2>
+          <p>Takt betrachtet nur den Hostnamen jedes Tabs. Es prüft eine integrierte Liste mit 77 bekannten Websites, die jeweils einer von 20 Kategorien zugeordnet sind:</p>
+          <p>Development, AI Tools, Docs, Productivity, Communication, Finance, Design, Shopping, Social, Entertainment, News, Gaming, Sports, Travel, Health, Food, Science, Career, Education und Cloud.</p>
+          <ul>
+            <li><strong>Subdomains erben.</strong> docs.github.com steht nicht auf der Liste, also versucht Takt github.com und ordnet den Tab Development zu.</li>
+            <li><strong>Der spezifischste Host gewinnt.</strong> aws.amazon.com landet in Cloud, amazon.com in Shopping.</li>
+            <li><strong>Alles andere landet in Other.</strong> Dazu gehören Ihr Firmen-Intranet, Neuer-Tab-Seiten und jede Website, die die Liste nicht kennt. Other ist immer die letzte Gruppe.</li>
+          </ul>
+          <p>Die größte Kategorie wird zur ersten Gruppe, dann folgt die nächstgrößte. Neue Tabs kommen beim Laden in die Gruppe ihrer Kategorie. In diesem Modus liest Takt keine Seiteninhalte.</p>
+
+          <h2 id="ai">Wie funktioniert die Gruppierung per KI?</h2>
+          <p>Takt sendet den Titel jedes Tabs und bis zu 500 Zeichen seines Seitentexts an Chromes integrierte Prompt API. Das Modell läuft in Chrome auf Ihrem Computer. Es liefert pro Thema eine kurze Bezeichnung, und Takt bildet daraus die Gruppen.</p>
+          <ul>
+            <li>Eine Gruppe braucht mindestens 2 Tabs. Ein Tab ohne Zuordnung bleibt ungruppiert.</li>
+            <li>Jeder Durchlauf umfasst bis zu 100 Tabs.</li>
+            <li>Die Bezeichnungen stammen vom Modell und können sich deshalb zwischen Durchläufen ändern.</li>
+            <li>Zum Lesen des Seitentexts braucht Takt die optionale Berechtigung „Zugriff auf alle Websites“. Ohne sie gruppiert Takt nur nach Titeln und weist im Popup darauf hin.</li>
+          </ul>
+          <p>Das Modell läuft nicht bei jedem neuen Tab. Im KI-Modus warten später geöffnete Tabs auf den nächsten Klick auf <strong>Tabs gruppieren</strong> oder auf <kbd>Alt+Shift+G</kbd>.</p>
+
+          <h2 id="download">Was passiert, wenn ich den KI-Modus zum ersten Mal nutze?</h2>
+          <p>Chrome muss sein lokales Modell eventuell erst herunterladen. Takt startet den Download, wenn Sie auf Tabs gruppieren klicken, und zeigt den Fortschritt im Popup: „KI-Modell wird vorbereitet…“, dann „KI-Modell wird heruntergeladen (N%)…“, dann „KI-Modell bereit. Tabs werden gruppiert…“. Sobald das Modell bereit ist, läuft die Gruppierung von selbst weiter.</p>
+
+          <h2 id="fallback">Was, wenn mein Computer Chromes KI-Modell nicht ausführen kann?</h2>
+          <p>Takt gruppiert Ihre Tabs trotzdem. Es weicht auf ein Ähnlichkeitsverfahren aus, das Tabs mit gemeinsamen Wörtern in Titel und Website-Namen gruppiert, und das Popup zeigt „KI auf diesem Gerät nicht verfügbar.“</p>
+          <p>Dasselbe Ausweichverfahren greift, wenn das Modell zu lange braucht: 2 Minuten zum Laden oder 8 Sekunden für eine Antwort. Es übernimmt auch neue Tabs im KI-Modus: Ein neuer Tab kommt in die ähnlichste bestehende Gruppe und eröffnet nie eine neue.</p>
+
+          <h2 id="cap">Was ist die kostenlose Grenze von 5 Gruppen?</h2>
+          <p>Im kostenlosen Plan legen Kategorie- und KI-Modus höchstens 5 Tab-Gruppen an. Gezählt wird jede in Chrome geöffnete Tab-Gruppe, über alle Fenster hinweg, auch von Hand angelegte Gruppen.</p>
+          <ul>
+            <li>Würde ein Durchlauf die Grenze überschreiten, behält Takt die größten Gruppen und lässt den Rest ungruppiert.</li>
+            <li>Haben Sie bereits 5 Gruppen, zeigt das Popup „You've hit the 5-group limit. Ungroup some tabs to create more.“</li>
+            <li>Der Regelmodus hat stattdessen seine eigene kostenlose Grenze von 5 Regeln.</li>
+          </ul>
+          <p>Premium ($3/Monat oder $30/Jahr) hebt die Gruppengrenze auf.</p>
+
+          <h2 id="chrome">Was ist der Unterschied zu Chromes eigenem „Organize tabs“?</h2>
+          <p>Seit Chrome 146 bietet ein Rechtsklick auf einen Tab an, ähnliche Tabs zu ordnen. Die Funktion nutzt Gemini Nano auf Ihrem Gerät, schlägt Gruppennamen vor, kostet nichts und braucht keine Erweiterung. Für einmaliges Aufräumen kann das schon genügen.</p>
+          <table>
+            <thead><tr><th></th><th>In Chrome integriert</th><th>Takt Kategorie</th><th>Takt KI</th></tr></thead>
+            <tbody>
+              <tr><td>Wann gruppiert wird</td><td>Wenn Sie es anfordern</td><td>Bei Tabs gruppieren und bei jedem neuen Tab während des Ladens</td><td>Bei Tabs gruppieren</td></tr>
+              <tr><td>Gruppennamen</td><td>Vom Modell vorgeschlagen</td><td>Fest: 20 Kategorien + Other</td><td>Vom Modell vorgeschlagen</td></tr>
+              <tr><td>Läuft auf dem Gerät</td><td>Ja</td><td>Ja, kein Modell nötig</td><td>Ja</td></tr>
+              <tr><td>Wechsel zu eigenen Regeln</td><td>Nein</td><td colspan="2">Ja, ein Klick zum Regelmodus</td></tr>
+              <tr><td>Preis</td><td>Kostenlos</td><td colspan="2">Kostenlos bis 5 Gruppen; Premium unbegrenzt</td></tr>
+            </tbody>
+          </table>
+
+          <h2 id="limits">Wo Kategorie und KI an Grenzen stoßen</h2>
+          <ul>
+            <li><strong>Die Kategorieliste ist fest.</strong> Sie können keine Website hinzufügen und keine Kategorie umbenennen. Benennen Sie eine Gruppe in Chrome um, verwendet Takt beim nächsten Durchlauf wieder den integrierten Namen.</li>
+            <li><strong>Farben wiederholen sich.</strong> 20 Kategorien teilen sich die 8 Gruppenfarben von Chrome. Erkennbar ist eine Gruppe an ihrem Namen.</li>
+            <li><strong>KI-Bezeichnungen ändern sich.</strong> Zwei Durchläufe können unterschiedliche Namen liefern.</li>
+            <li><strong>Profile und Zeitpläne gelten nicht.</strong> Sie funktionieren nur im Regelmodus.</li>
+          </ul>
+          <p>Wenn github.com jedes Mal in einer Gruppe namens „Code“ landen soll, <a href="../auto-group-tabs-chrome/">schreiben Sie eine Regel</a>. Unsicher, welche Regeln? <a href="../rule-suggestions/">Lassen Sie sie von Takt vorschlagen</a>.</p>
+
+          <div class="cta">
+            <p>Einen Modus wählen. Zusehen, wie aus 30 losen Tabs fünf benannte Gruppen werden.</p>
+            <a class="btn" href="https://chromewebstore.google.com/detail/takt/plgfdnbgkjocmgegnkbihoeojcfphdic">Zu Chrome hinzufügen — kostenlos</a>
+          </div>
+
+          <h2 id="faq">Häufige Fragen</h2>
+          <div class="faq">
+            <details>
+              <summary>Ist die Gruppierung nach Kategorie oder per KI kostenlos?</summary>
+              <p>Ja. Beide sind kostenlos, bis zu insgesamt 5 Tab-Gruppen über alle Fenster, von Hand angelegte Gruppen mitgezählt. Premium ($3/Monat oder $30/Jahr) hebt die Grenze auf.</p>
+            </details>
+            <details>
+              <summary>Sendet die KI-Gruppierung von Takt meine Tabs an einen Server?</summary>
+              <p>Nein. Sie nutzt Chromes integrierte Prompt API, die auf Ihrem Gerät läuft. Siehe <a href="../privacy-local-first/">wie Takt Daten lokal hält</a>.</p>
+            </details>
+            <details>
+              <summary>Was passiert, wenn Chromes KI-Modell auf meinem Computer nicht verfügbar ist?</summary>
+              <p>Takt gruppiert dann Tabs, deren Titel und Website-Namen gemeinsame Wörter enthalten, und weist darauf hin, dass die KI auf diesem Gerät nicht verfügbar ist.</p>
+            </details>
+            <details>
+              <summary>Kann ich einer Kategorie eigene Websites hinzufügen?</summary>
+              <p>Nein. Die Liste ist fest, und unbekannte Websites landen in Other. Nutzen Sie den Regelmodus, um eine Website in eine Gruppe mit selbst gewähltem Namen zu schicken.</p>
+            </details>
+          </div>
+
+          <h2 id="next">Weiterlesen</h2>
+          <div class="read-next">
+            <a href="../auto-group-tabs-chrome/">Tabs mit eigenen Regeln gruppieren<span>Eine Regel pro Website, eingeordnet beim Öffnen.</span></a>
+            <a href="../rule-suggestions/">Regeln von Takt vorschlagen lassen<span>Auf Basis der Websites, die Sie ohnehin geöffnet haben.</span></a>
+          </div>
+        </div>
+
+        <footer class="blog-post-footer">
+          <a href="../../../blog/">Alle Artikel zu den Funktionen</a> · <a href="../../../docs/group-by-category/">Referenz: Nach Kategorie gruppieren</a> · <a href="../../../docs/smart-group-ai/">Referenz: Smart Group per KI</a>
+        </footer>
+      </article>
+    </main>
+
+    <footer id="site-footer"></footer>
+    <script src="../../../js/includes.js"></script>
+    <script src="../../../js/nav.js"></script>
+  </body>
+</html>

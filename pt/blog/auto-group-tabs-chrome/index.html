@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Como agrupar abas automaticamente no Chrome com regras — Takt</title>
+    <meta
+      name="description"
+      content="O Chrome agrupa abas, mas não faz isso sozinho. Veja como criar regras de URL que colocam cada nova aba em um grupo com nome e cor assim que ela abre."
+    />
+    <link rel="canonical" href="https://taktabs.com/pt/blog/auto-group-tabs-chrome/" />
+<!-- TAKT-LANG:head -->
+<link rel="alternate" hreflang="en" href="https://taktabs.com/blog/auto-group-tabs-chrome/" />
+<link rel="alternate" hreflang="fr" href="https://taktabs.com/fr/blog/auto-group-tabs-chrome/" />
+<link rel="alternate" hreflang="es" href="https://taktabs.com/es/blog/auto-group-tabs-chrome/" />
+<link rel="alternate" hreflang="it" href="https://taktabs.com/it/blog/auto-group-tabs-chrome/" />
+<link rel="alternate" hreflang="de" href="https://taktabs.com/de/blog/auto-group-tabs-chrome/" />
+<link rel="alternate" hreflang="pt" href="https://taktabs.com/pt/blog/auto-group-tabs-chrome/" />
+<link rel="alternate" hreflang="x-default" href="https://taktabs.com/blog/auto-group-tabs-chrome/" />
+<!-- /TAKT-LANG:head -->
+    <meta property="og:type" content="article" />
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:title" content="Como agrupar abas automaticamente no Chrome com regras" />
+    <meta property="og:description" content="Crie uma regra uma vez. Cada aba correspondente cai no grupo certo do Chrome assim que abre." />
+    <meta property="og:url" content="https://taktabs.com/pt/blog/auto-group-tabs-chrome/" />
+    <meta property="og:image" content="https://taktabs.com/pt/blog/img/options-rules.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <link rel="icon" type="image/png" sizes="32x32" href="../../../assets/favicon-32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="../../../assets/favicon-16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="../../../assets/apple-touch-icon.png" />
+    <meta name="theme-color" content="#FF3B30" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../../../css/tokens.css" />
+    <link rel="stylesheet" href="../../../css/base.css" />
+    <link rel="stylesheet" href="../../../css/layout.css" />
+    <link rel="stylesheet" href="../../../css/blog.css" />
+    <link rel="stylesheet" href="../../../css/articles.css" />
+    <script src="../../../js/theme.js"></script>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Article",
+            "headline": "Como agrupar abas automaticamente no Chrome com regras",
+            "description": "Crie regras de URL que colocam cada nova aba em um grupo de abas do Chrome com nome e cor assim que ela abre.",
+            "inLanguage": "pt",
+            "datePublished": "2026-10-08",
+            "dateModified": "2026-10-08",
+            "author": { "@type": "Person", "name": "Vitor" },
+            "publisher": { "@type": "Organization", "name": "Takt", "url": "https://taktabs.com" },
+            "image": "https://taktabs.com/pt/blog/img/options-rules.png",
+            "mainEntityOfPage": "https://taktabs.com/pt/blog/auto-group-tabs-chrome/"
+          },
+          {
+            "@type": "HowTo",
+            "name": "Agrupar abas automaticamente no Chrome por URL",
+            "step": [
+              { "@type": "HowToStep", "text": "Instale o Takt pela Chrome Web Store." },
+              { "@type": "HowToStep", "text": "Abra a página de opções do Takt, vá em Rules e clique em New Rule." },
+              { "@type": "HowToStep", "text": "Adicione uma condição, por exemplo URL Domain github.com." },
+              { "@type": "HowToStep", "text": "Dê um nome ao grupo, escolha uma das 8 cores do Chrome e salve. As abas correspondentes são agrupadas enquanto carregam." }
+            ]
+          },
+          {
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "O Chrome agrupa abas automaticamente sem extensão?",
+                "acceptedAnswer": { "@type": "Answer", "text": "O recurso \"Organizar guias\" do Chrome sugere grupos com IA, quando você pede. Ele não tem regras, então não consegue mandar sempre os mesmos sites para o mesmo grupo." }
+              },
+              {
+                "@type": "Question",
+                "name": "Quantas regras posso criar no plano gratuito?",
+                "acceptedAnswer": { "@type": "Answer", "text": "5 regras, com uma condição cada, usando correspondência por contém, exata ou domínio. O Premium (US$ 3/mês ou US$ 30/ano) remove o limite." }
+              },
+              {
+                "@type": "Question",
+                "name": "Posso pausar uma regra sem excluí-la?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Sim. Cada regra tem um botão liga/desliga na lista. Uma regra desativada mantém as configurações e para de corresponder." }
+              },
+              {
+                "@type": "Question",
+                "name": "O Takt envia minhas URLs para algum lugar para aplicar as regras?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Não. A correspondência roda no seu navegador, com regras armazenadas localmente." }
+              }
+            ]
+          },
+          {
+            "@type": "SoftwareApplication",
+            "name": "Takt",
+            "applicationCategory": "BrowserApplication",
+            "operatingSystem": "Chrome",
+            "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <header id="site-header"></header>
+
+    <main class="blog-main">
+      <article class="blog-post article">
+        <p class="eyebrow">Regras</p>
+        <h1 class="blog-post-title">Como agrupar abas automaticamente no Chrome</h1>
+        <p class="lede">O Chrome sabe agrupar abas. Só não faz isso por você. Uma regra resolve: você a cria uma vez, e cada aba correspondente cai no grupo certo assim que abre.</p>
+        <p class="blog-post-meta">Atualizado em 8 de outubro de 2026 · 5 min de leitura</p>
+<!-- TAKT-LANG:nav -->
+<p class="lang-links"><a href="../../../blog/auto-group-tabs-chrome/" hreflang="en" lang="en">English</a> · <a href="../../../fr/blog/auto-group-tabs-chrome/" hreflang="fr" lang="fr">Français</a> · <a href="../../../es/blog/auto-group-tabs-chrome/" hreflang="es" lang="es">Español</a> · <a href="../../../it/blog/auto-group-tabs-chrome/" hreflang="it" lang="it">Italiano</a> · <a href="../../../de/blog/auto-group-tabs-chrome/" hreflang="de" lang="de">Deutsch</a> · <span aria-current="true">Português</span></p>
+<!-- /TAKT-LANG:nav -->
+
+        <div class="blog-post-body">
+          <div class="tldr">
+            <p><strong>Resposta curta:</strong> instale o Takt, crie uma regra como <em>URL domain github.com → grupo "Code", azul</em> e salve. A partir daí, toda aba do GitHub vai para o grupo azul "Code" enquanto carrega.</p>
+            <ul>
+              <li>Free: 5 regras, com correspondência por <em>contains</em> (contém), <em>exact</em> (exata) ou <em>domain</em> (domínio).</li>
+              <li>Premium: regras ilimitadas, padrões glob e regex, correspondência pelo título da página, até 10 condições AND/OR.</li>
+              <li>A correspondência acontece no seu computador. Sem conta, sem analytics.</li>
+            </ul>
+          </div>
+
+          <h2 id="why">Por que os grupos de abas do Chrome não se organizam sozinhos?</h2>
+          <p>Os grupos de abas do Chrome são um arquivo sem arquivista. Você clica com o botão direito, escolhe "Adicionar guia ao grupo" e repete. Abra vinte links numa manhã de trabalho e você arquiva vinte vezes. Ou, mais provável, não arquiva nenhuma.</p>
+          <p>O recurso de IA "Organizar guias" do Chrome ajuda numa arrumação pontual. Mas ele não segue instruções. Você não consegue dizer a ele "pull requests vão sempre para Reviews". Uma regra consegue.</p>
+
+          <h2 id="create">Como criar uma regra para agrupar abas?</h2>
+          <ol class="steps">
+            <li>Instale o <a href="https://chromewebstore.google.com/detail/takt/plgfdnbgkjocmgegnkbihoeojcfphdic">Takt pela Chrome Web Store</a>.</li>
+            <li>Abra a página de opções do Takt e clique em <strong>New Rule</strong>.</li>
+            <li>Adicione uma condição. <em>URL · Domain · github.com</em> pega github.com e todos os subdomínios.</li>
+            <li>Dê um nome ao grupo, escolha uma cor e salve.</li>
+          </ol>
+          <p>Deixe <strong>Aplicar agora</strong> marcado e o Takt reagrupa na hora as abas que já estão abertas. As novas abas são agrupadas enquanto carregam.</p>
+
+          <figure>
+            <img src="../img/options-rule-editor.png" alt="Editor de regras do Takt para uma regra chamada Code: duas condições URL Domain (github.com, gitlab.com) unidas por ANY condition (OR), nome do grupo Code, azul selecionado entre as 8 cores do Chrome e Aplicar agora marcado" width="700" loading="lazy" />
+            <figcaption>Uma regra com duas condições unidas por OR (Premium). No plano gratuito, é uma condição por regra.</figcaption>
+          </figure>
+
+          <h2 id="match-types">Qual tipo de correspondência devo usar?</h2>
+          <p>A maioria das pessoas só precisa de <strong>Domain</strong>. Use os outros quando um domínio for amplo demais.</p>
+          <table>
+            <thead>
+              <tr><th>Tipo de correspondência</th><th>Padrão</th><th>Pega</th><th>Plano</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Domain</td><td><code>google.com</code></td><td>docs.google.com, mail.google.com, google.com</td><td>Free</td></tr>
+              <tr><td>Contains</td><td><code>localhost</code></td><td>http://localhost:3000/api</td><td>Free</td></tr>
+              <tr><td>Exact</td><td><code>https://mail.google.com/mail/u/0/#inbox</code></td><td>Só essa URL</td><td>Free</td></tr>
+              <tr><td>Glob</td><td><code>*github.com/*/pull/*</code></td><td>Todo pull request, de qualquer repositório</td><td>Premium</td></tr>
+              <tr><td>Regex</td><td><code>jira\..*/browse/PROJ-\d+</code></td><td>Tickets de um projeto</td><td>Premium</td></tr>
+            </tbody>
+          </table>
+          <p>Qualquer condição também pode ser negada (<em>a URL NÃO contém google.com</em>) ou diferenciar maiúsculas de minúsculas. O Premium acrescenta a correspondência pelo <strong>título</strong> da página e a combinação de até 10 condições com AND ou OR.</p>
+
+          <h2 id="order">E se duas regras corresponderem à mesma aba?</h2>
+          <p>Vale a primeira que corresponder. As regras são verificadas do topo da lista para baixo, e a verificação para no primeiro acerto.</p>
+          <p>Então ordene da mais específica para a mais ampla. Uma regra "Reviews" para pull requests precisa ficar acima de uma regra "Code" para todo o GitHub, senão todo pull request acaba em "Code". Arraste a regra, ou use os botões ↑/↓, para movê-la.</p>
+
+          <figure>
+            <img src="../img/options-rules.png" alt="Lista de regras do Takt com sete regras, suas condições, nomes de grupo, botões liga/desliga e setas de reordenação, com o Testador de regras acima" width="700" loading="lazy" />
+            <figcaption>A lista de regras, com o Testador de regras no topo. Cole qualquer URL para ver qual regra dispara.</figcaption>
+          </figure>
+
+          <h2 id="test">Como testar uma regra antes de confiar nela?</h2>
+          <p>De duas formas, ambas na página Rules:</p>
+          <ul>
+            <li><strong>Testador de regras.</strong> Cole uma URL (e, se quiser, um título de página). O Takt mostra qual regra dispararia.</li>
+            <li><strong>Pré-visualizar abas correspondentes.</strong> Dentro do editor, lista as abas já abertas que a regra pegaria, antes de você salvar.</li>
+          </ul>
+
+          <h2 id="starter">Um kit inicial de cinco regras</h2>
+          <p>Cinco regras cobrem a maioria dos dias de trabalho, e cinco é exatamente o limite do plano gratuito.</p>
+          <table>
+            <thead><tr><th>Grupo</th><th>Condição</th></tr></thead>
+            <tbody>
+              <tr><td>Código</td><td>Domain <code>github.com</code></td></tr>
+              <tr><td>Documentação</td><td>Domain <code>developer.mozilla.org</code></td></tr>
+              <tr><td>E-mail e agenda</td><td>Domain <code>google.com</code></td></tr>
+              <tr><td>Dev local</td><td>Contains <code>localhost</code></td></tr>
+              <tr><td>Ver depois</td><td>Domain <code>youtube.com</code></td></tr>
+            </tbody>
+          </table>
+          <p>Não sabe o que escrever? O <a href="../rule-suggestions/">painel Insights sugere regras</a> a partir dos sites que você já mantém abertos.</p>
+
+          <h2 id="limits">O que as regras não fazem</h2>
+          <p>Regras pegam o que você mandou pegar. Uma aba de um site para o qual você nunca criou regra fica sem grupo. Se preferir não escrever regras, mude o modo de agrupamento para <a href="../group-tabs-by-category-or-ai/">Por categoria ou Por IA</a>.</p>
+
+          <div class="cta">
+            <p>Crie uma regra. Veja a próxima aba se arquivar sozinha.</p>
+            <a class="btn" href="https://chromewebstore.google.com/detail/takt/plgfdnbgkjocmgegnkbihoeojcfphdic">Adicionar o Takt ao Chrome, grátis</a>
+          </div>
+
+          <h2 id="faq">Perguntas frequentes</h2>
+          <div class="faq">
+            <details>
+              <summary>O Chrome agrupa abas automaticamente sem extensão?</summary>
+              <p>O recurso "Organizar guias" do Chrome sugere grupos com IA, quando você pede. Ele não tem regras, então não consegue mandar sempre os mesmos sites para o mesmo grupo.</p>
+            </details>
+            <details>
+              <summary>Quantas regras posso criar no plano gratuito?</summary>
+              <p>5 regras, com uma condição cada, usando correspondência por contém, exata ou domínio. O Premium (US$ 3/mês ou US$ 30/ano) remove o limite.</p>
+            </details>
+            <details>
+              <summary>Posso pausar uma regra sem excluí-la?</summary>
+              <p>Sim. Cada regra tem um botão liga/desliga na lista. Uma regra desativada mantém as configurações e para de corresponder.</p>
+            </details>
+            <details>
+              <summary>O Takt envia minhas URLs para algum lugar para aplicar as regras?</summary>
+              <p>Não. A correspondência roda no seu navegador, com regras armazenadas localmente. Veja <a href="../privacy-local-first/">como o Takt mantém os dados no seu computador</a>.</p>
+            </details>
+          </div>
+
+          <h2 id="next">Leia também</h2>
+          <div class="read-next">
+            <a href="../prevent-duplicate-tabs/">Pare de abrir a mesma aba duas vezes<span>Prevenção de duplicatas, ativada por padrão.</span></a>
+            <a href="../profiles-and-schedules/">Regras diferentes para o trabalho e para casa<span>Perfis que trocam conforme um agendamento.</span></a>
+          </div>
+        </div>
+
+        <footer class="blog-post-footer">
+          <a href="../../../blog/">Todos os artigos</a> · <a href="../../../docs/rules/">Referência de regras</a>
+        </footer>
+      </article>
+    </main>
+
+    <footer id="site-footer"></footer>
+    <script src="../../../js/includes.js"></script>
+    <script src="../../../js/nav.js"></script>
+  </body>
+</html>

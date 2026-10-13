@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chrome-Tabs in den Ruhezustand versetzen und Arbeitsspeicher freigeben — Takt</title>
+    <meta
+      name="description"
+      content="Chrome-Tabs in den Ruhezustand versetzen und Speicher freigeben: inaktive Tabs kostenlos anhalten, Tabs ganz schließen und mit Gruppe, Position und Scrollposition zurückholen. Was das bewirkt, was gespeichert wird und wann Chromes „Memory Saver“ genügt."
+    />
+    <link rel="canonical" href="https://taktabs.com/de/blog/hibernate-tabs-free-memory/" />
+<!-- TAKT-LANG:head -->
+<link rel="alternate" hreflang="en" href="https://taktabs.com/blog/hibernate-tabs-free-memory/" />
+<link rel="alternate" hreflang="fr" href="https://taktabs.com/fr/blog/hibernate-tabs-free-memory/" />
+<link rel="alternate" hreflang="es" href="https://taktabs.com/es/blog/hibernate-tabs-free-memory/" />
+<link rel="alternate" hreflang="it" href="https://taktabs.com/it/blog/hibernate-tabs-free-memory/" />
+<link rel="alternate" hreflang="de" href="https://taktabs.com/de/blog/hibernate-tabs-free-memory/" />
+<link rel="alternate" hreflang="pt" href="https://taktabs.com/pt/blog/hibernate-tabs-free-memory/" />
+<link rel="alternate" hreflang="x-default" href="https://taktabs.com/blog/hibernate-tabs-free-memory/" />
+<!-- /TAKT-LANG:head -->
+    <meta property="og:type" content="article" />
+    <meta property="og:locale" content="de_DE" />
+    <meta property="og:title" content="Chrome-Tabs in den Ruhezustand versetzen und Arbeitsspeicher freigeben" />
+    <meta property="og:description" content="Inaktive Tabs anhalten oder ganz schließen und später mit Gruppe, Position und Scrollposition wieder aufwecken." />
+    <meta property="og:url" content="https://taktabs.com/de/blog/hibernate-tabs-free-memory/" />
+    <meta property="og:image" content="https://taktabs.com/de/blog/img/popup-hibernate.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <link rel="icon" type="image/png" sizes="32x32" href="../../../assets/favicon-32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="../../../assets/favicon-16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="../../../assets/apple-touch-icon.png" />
+    <meta name="theme-color" content="#FF3B30" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../../../css/tokens.css" />
+    <link rel="stylesheet" href="../../../css/base.css" />
+    <link rel="stylesheet" href="../../../css/layout.css" />
+    <link rel="stylesheet" href="../../../css/blog.css" />
+    <link rel="stylesheet" href="../../../css/articles.css" />
+    <script src="../../../js/theme.js"></script>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Article",
+            "inLanguage": "de",
+            "headline": "Chrome-Tabs in den Ruhezustand versetzen und Arbeitsspeicher freigeben",
+            "description": "Inaktive Chrome-Tabs kostenlos anhalten oder hibernieren: ganz schließen und später mit Gruppe, Position und Scrollposition wieder aufwecken.",
+            "datePublished": "2026-10-08",
+            "dateModified": "2026-10-08",
+            "author": { "@type": "Person", "name": "Vitor" },
+            "publisher": { "@type": "Organization", "name": "Takt", "url": "https://taktabs.com" },
+            "image": "https://taktabs.com/de/blog/img/popup-hibernate.png",
+            "mainEntityOfPage": "https://taktabs.com/de/blog/hibernate-tabs-free-memory/"
+          },
+          {
+            "@type": "HowTo",
+            "name": "Einen Chrome-Tab hibernieren und später aufwecken",
+            "step": [
+              { "@type": "HowToStep", "text": "Installieren Sie Takt aus dem Chrome Web Store." },
+              { "@type": "HowToStep", "text": "Öffnen Sie auf dem Tab, den Sie weglegen möchten, das Takt-Popup und klicken Sie auf Tab in Ruhezustand, oder klicken Sie mit der rechten Maustaste auf die Seite und wählen Sie Diesen Tab hibernieren." },
+              { "@type": "HowToStep", "text": "Der Tab wird geschlossen. Takt speichert URL, Titel, Gruppe, Fenster, Position, Anheftstatus und Scrollposition auf Ihrem Gerät." },
+              { "@type": "HowToStep", "text": "Um ihn zurückzuholen, öffnen Sie im Popup den Bereich Ruhezustand und klicken auf Reaktivieren. Der Tab öffnet sich wieder in seinem Fenster, an seiner Position, in seiner Gruppe und dort gescrollt, wo Sie aufgehört haben." }
+            ]
+          },
+          {
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "Was ist der Unterschied zwischen dem Anhalten und dem Hibernieren eines Tabs?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Ein angehaltener Tab wird von Chrome entladen, bleibt aber in der Tab-Leiste und lädt neu, wenn Sie ihn anklicken. Ein hibernierter Tab wird ganz geschlossen; Takt speichert seinen Zustand und öffnet ihn wieder, wenn Sie auf Reaktivieren klicken." }
+              },
+              {
+                "@type": "Question",
+                "name": "Wie viele Tabs kann ich kostenlos hibernieren?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Im kostenlosen Plan 5 hibernierte Tabs gleichzeitig, mit Premium ($3/Monat oder $30/Jahr) 200. Das automatische Anhalten inaktiver Tabs ist unbegrenzt und kostenlos." }
+              },
+              {
+                "@type": "Question",
+                "name": "Ist Takt ein neuer Great Suspender?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Takt hält Tabs mit Chromes eigener Discard-Funktion an, sodass ein angehaltener Tab seine echte URL behält. Hibernierte Tabs werden im lokalen Speicher von Chrome auf Ihrem Gerät abgelegt. Takt hat kein Konto, keine Analysen und keine Telemetrie." }
+              },
+              {
+                "@type": "Question",
+                "name": "Überstehen hibernierte Tabs einen Neustart des Browsers?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Ja. Sie liegen im lokalen Speicher von Chrome, nicht im Arbeitsspeicher. Beim Start verwirft Takt jeden Eintrag, dessen URL bereits wieder offen ist." }
+              }
+            ]
+          },
+          {
+            "@type": "SoftwareApplication",
+            "name": "Takt",
+            "applicationCategory": "BrowserApplication",
+            "operatingSystem": "Chrome",
+            "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <header id="site-header"></header>
+
+    <main class="blog-main">
+      <article class="blog-post article">
+        <p class="eyebrow">Hibernierung</p>
+        <h1 class="blog-post-title">Chrome-Tabs in den Ruhezustand versetzen und Arbeitsspeicher freigeben</h1>
+        <p class="lede">Um Chrome-Tabs in den Ruhezustand zu versetzen, schließen Sie die Tabs, die Sie gerade nicht brauchen, und behalten einen Eintrag, der sie genau so zurückholt, wie sie waren. Takt erledigt beides: Es hält inaktive Tabs von selbst an, und es hiberniert Tabs, die Sie weglegen, und weckt sie im selben Fenster, in derselben Gruppe und an derselben Scrollposition wieder auf.</p>
+        <p class="blog-post-meta">Aktualisiert am 8. Oktober 2026 · 6 Min. Lesezeit</p>
+<!-- TAKT-LANG:nav -->
+<p class="lang-links"><a href="../../../blog/hibernate-tabs-free-memory/" hreflang="en" lang="en">English</a> · <a href="../../../fr/blog/hibernate-tabs-free-memory/" hreflang="fr" lang="fr">Français</a> · <a href="../../../es/blog/hibernate-tabs-free-memory/" hreflang="es" lang="es">Español</a> · <a href="../../../it/blog/hibernate-tabs-free-memory/" hreflang="it" lang="it">Italiano</a> · <span aria-current="true">Deutsch</span> · <a href="../../../pt/blog/hibernate-tabs-free-memory/" hreflang="pt" lang="pt">Português</a></p>
+<!-- /TAKT-LANG:nav -->
+
+        <div class="blog-post-body">
+          <div class="tldr">
+            <p><strong>Kurz gesagt:</strong> Takt behandelt inaktive Tabs in zwei Stufen. <em>Anhalten</em> entlädt einen Tab, lässt ihn aber in der Tab-Leiste. <em>Hibernieren</em> schließt ihn und speichert seinen Zustand, sodass ein Klick ihn zurückbringt.</p>
+            <ul>
+              <li>Free: automatisches Anhalten nach 15 Minuten bis 4 Stunden Inaktivität, eine Liste nie anzuhaltender Tabs und manuelle Hibernierung von bis zu 5 Tabs.</li>
+              <li>Premium: automatische Hibernierung nach Inaktivität, nach Tab-Anzahl pro Fenster oder am Ende eines Zeitplans, und bis zu 200 hibernierte Tabs.</li>
+              <li>Alles bleibt auf Ihrem Gerät. Kein Konto, keine Analysen.</li>
+            </ul>
+          </div>
+
+          <h2 id="suspend-vs-hibernate">Was ist der Unterschied zwischen dem Anhalten und dem Hibernieren eines Tabs?</h2>
+          <p>Beides gibt Arbeitsspeicher frei. Der Unterschied liegt darin, wo der Tab bleibt.</p>
+          <table>
+            <thead>
+              <tr><th></th><th>Angehalten</th><th>Hiberniert</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Tab-Leiste</td><td>Bleibt, ausgegraut</td><td>Weg, aufgelistet im Bereich Ruhezustand von Takt</td></tr>
+              <tr><td>Wie</td><td>Chromes eigenes Verwerfen von Tabs (Discard)</td><td>Tab geschlossen, Zustand von Takt gespeichert</td></tr>
+              <tr><td>Zurückholen</td><td>Tab anklicken; die Seite lädt neu</td><td>Auf <strong>Reaktivieren</strong> klicken; der Tab öffnet sich wieder dort, wo er war</td></tr>
+              <tr><td>Manuell</td><td>Aussetz-Empfehlungen (Premium-Dashboard)</td><td>Kostenlos, bis zu 5 Tabs</td></tr>
+              <tr><td>Automatisch</td><td>Kostenlos</td><td>Premium</td></tr>
+            </tbody>
+          </table>
+
+          <h2 id="manual">Wie hiberniere ich einen Tab von Hand?</h2>
+          <ol class="steps">
+            <li>Installieren Sie <a href="https://chromewebstore.google.com/detail/takt/plgfdnbgkjocmgegnkbihoeojcfphdic">Takt aus dem Chrome Web Store</a>.</li>
+            <li>Öffnen Sie auf dem Tab, den Sie weglegen möchten, das Takt-Popup und klicken Sie auf <strong>Tab in Ruhezustand</strong>. Oder klicken Sie mit der rechten Maustaste auf die Seite und wählen Sie <strong>Diesen Tab hibernieren</strong>.</li>
+            <li>Der Tab wird geschlossen, und Chrome zeigt kurz die Benachrichtigung „Tab hiberniert“.</li>
+            <li>Um ihn zurückzuholen, öffnen Sie im Popup den Bereich <strong>Ruhezustand</strong> und klicken auf <strong>Reaktivieren</strong>.</li>
+          </ol>
+          <p>Takt speichert URL, Titel, Favicon, Gruppenname und -farbe, Fenster, Position im Fenster, Anheftstatus, Scrollposition und den Zeitpunkt der Hibernierung. Reaktivieren öffnet den Tab in seinem Fenster, an seiner alten Position, zurück in seiner Gruppe, gescrollt dorthin, wo Sie waren.</p>
+          <p>Ist dieselbe URL bereits offen, fragt Takt vor dem Aufwecken nach, damit Sie kein Duplikat erhalten.</p>
+
+          <figure class="narrow">
+            <img src="../img/popup-hibernate.png" alt="Takt-Popup im Bereich Ruhezustand: oben „~100 MB gespart“, ein Suchfeld, zwei hibernierte Tabs (The Verge in News, ein arXiv-Paper in Research), jeweils mit der Schaltfläche Reaktivieren, sowie die Links Alle reaktivieren und Alle löschen" width="420" loading="lazy" />
+            <figcaption>Der Bereich Ruhezustand. Suchen, einen Tab aufwecken oder alle auf einmal.</figcaption>
+          </figure>
+          <p>Die Angabe „~100 MB gespart“ ist eine pauschale Schätzung: Takt rechnet 50 MB pro hiberniertem Tab. Die geschlossenen Tabs misst es nicht.</p>
+
+          <h2 id="auto-suspend">Wie halte ich inaktive Tabs automatisch an?</h2>
+          <p>Das automatische Anhalten ist kostenlos und standardmäßig aktiv. Alle 5 Minuten hält Takt Tabs an, die länger als Ihr Schwellenwert inaktiv waren: 15 Minuten, 30 Minuten (Standard), 1, 2 oder 4 Stunden. Einstellen lässt sich das unter <strong>Optionen → Settings → Tab Lifecycle</strong>.</p>
+          <p>Inaktiv bedeutet: Zeit, seit der Tab zuletzt aktiv war oder zuletzt fertig geladen hat. Nie angehalten werden:</p>
+          <ul>
+            <li>der aktive Tab und Tabs, die noch laden;</li>
+            <li>Tabs, die Audio abspielen;</li>
+            <li>angeheftete Tabs;</li>
+            <li>Tabs, die auf Ihre Liste <strong>Never suspend these tabs</strong> passen.</li>
+          </ul>
+          <p>Die Liste nimmt ein Muster pro Zeile auf, mit <code>*</code> als Platzhalter. <code>*://mail.google.com/*</code> hält Gmail geladen. Die Liste schützt Tabs auch vor allen automatischen Hibernierungs-Auslösern weiter unten.</p>
+
+          <figure>
+            <img src="../img/options-settings-tab-lifecycle.png" alt="Die Einstellungen Tab Lifecycle von Takt: Enable auto-suspend angehakt, Suspend after idle for auf 30 minutes, ein Textfeld Never suspend these tabs mit dem Beispiel *://mail.google.com/* und Auto-hibernate suspended tabs after auf 2 days" width="700" loading="lazy" />
+            <figcaption>Die Einstellungen unter Tab Lifecycle. Anhalten ist kostenlos, die Verzögerung für automatisches Hibernieren ist Premium.</figcaption>
+          </figure>
+
+          <h2 id="auto-hibernate">Kann Chrome Tabs automatisch hibernieren? <span class="badge badge-premium">Premium</span></h2>
+          <p>Mit Premium hat Takt drei Auslöser:</p>
+          <ul>
+            <li><strong>Inaktivität.</strong> Ein Tab, der bereits angehalten und länger als Ihre Verzögerung inaktiv ist, wird hiberniert. Wählbar von 5 Minuten bis 7 Tage; Standard sind 2 Tage.</li>
+            <li><strong>Tab-Grenze.</strong> Überschreitet ein Fenster Ihre Grenze (15 bis 100 Tabs, Standard 30), hiberniert Takt dessen am längsten ungenutzte Tabs, bis die Grenze wieder eingehalten ist. Schließen Sie einen Tab, kehrt der zuletzt hibernierte in dieses Fenster zurück. Jedes Fenster wird einzeln gezählt.</li>
+            <li><strong>Zeitplan-Ende.</strong> Ein Profil-Zeitplan kann alle infrage kommenden Tabs hibernieren, wenn seine Zeit abläuft. Aktivieren Sie <em>Hibernate tabs when schedule ends</em> unter <a href="../profiles-and-schedules/">Profiles</a>.</li>
+          </ul>
+          <p>Bei den Auslösern Inaktivität und Tab-Grenze zeigt Chrome 10 Sekunden lang eine Benachrichtigung mit der Schaltfläche <strong>Undo</strong>. Danach wartet der Tab weiterhin im Bereich Ruhezustand.</p>
+
+          <h2 id="trust">Ist das ein neuer Great Suspender?</h2>
+          <p>Berechtigte Frage. 2021 hat Google The Great Suspender entfernt, nachdem in einer Version, die nach dem Verkauf der Erweiterung erschien, Schadcode gefunden wurde. Danach haben viele Menschen Tab-Suspendern nicht mehr vertraut.</p>
+          <p>Das macht Takt anders, und das können Sie selbst prüfen:</p>
+          <ul>
+            <li><strong>Angehaltene Tabs behalten ihre echte URL.</strong> Takt ruft Chromes eigene Discard-Funktion auf. Es ersetzt Ihre Seite nicht durch eine Erweiterungsseite, und wenn Sie Takt deinstallieren, bleiben Ihre Tabs, wie sie sind.</li>
+            <li><strong>Hibernierte Tabs bleiben auf Ihrem Gerät.</strong> Die Einträge liegen im lokalen Speicher von Chrome. Ihren Computer verlassen sie nur, wenn Sie selbst eine <a href="../backup-and-sync-tabs/">Drive- oder Ordner-Synchronisierung</a> einrichten.</li>
+            <li><strong>Kein Konto, keine Analysen, keine Telemetrie.</strong> Zusätzliche Berechtigungen sind optional und werden erst angefragt, wenn eine Funktion sie braucht. Siehe <a href="../privacy-local-first/">wie Takt Daten lokal hält</a>.</li>
+          </ul>
+          <p>Jeder Erweiterung, die Sie installieren, müssen Sie trotzdem in Sachen Updates vertrauen. Lesen Sie, welche Berechtigungen sie anfordert.</p>
+
+          <h2 id="memory-saver">Reicht Chromes „Memory Saver“?</h2>
+          <p>Oft ja. Wenn Sie nur möchten, dass Hintergrund-Tabs keinen Arbeitsspeicher mehr belegen, kostet Chromes integrierter „Memory Saver“ nichts und braucht keine Erweiterung.</p>
+          <p>Zwei Beschwerden tauchen immer wieder auf: Tabs laden neu, wenn Sie zu ihnen zurückkehren, und manche inaktiven Tabs schlafen nie ein. Das Anhalten in Takt hat den ersten Nachteil ebenfalls. Ein angehaltener Tab lädt beim Anklicken neu, weil es dieselbe Art von Discard ist.</p>
+          <p>Was Takt hinzufügt, ist Kontrolle. Sie wählen den Inaktivitäts-Schwellenwert, Sie legen fest, welche Websites nie angerührt werden, und die Hibernierung nimmt Tabs ganz aus der Tab-Leiste, ohne den Weg zurück zu verbauen.</p>
+
+          <h2 id="limits">Wo liegen die Grenzen?</h2>
+          <table>
+            <thead><tr><th></th><th>Free</th><th>Premium</th></tr></thead>
+            <tbody>
+              <tr><td>Automatisches Anhalten und Liste nie anzuhaltender Tabs</td><td>Ja</td><td>Ja</td></tr>
+              <tr><td>Manuelle Hibernierung</td><td>Ja</td><td>Ja</td></tr>
+              <tr><td>Gleichzeitig hibernierte Tabs</td><td>5</td><td>200</td></tr>
+              <tr><td>Automatische Hibernierung nach Inaktivität, Tab-Grenze oder Zeitplan</td><td>Nein</td><td>Ja</td></tr>
+            </tbody>
+          </table>
+          <p>Angeheftete Tabs und Tabs, die Audio abspielen, lassen sich nicht hibernieren. Wenn Sie Ihre Grenze erreichen, hiberniert Takt keine weiteren, bis Sie einige aufwecken oder löschen.</p>
+
+          <div class="cta">
+            <p>Einen Tab schlafen legen. Ihn genau dort wieder aufwecken, wo Sie aufgehört haben.</p>
+            <a class="btn" href="https://chromewebstore.google.com/detail/takt/plgfdnbgkjocmgegnkbihoeojcfphdic">Zu Chrome hinzufügen — kostenlos</a>
+          </div>
+
+          <h2 id="faq">Häufige Fragen</h2>
+          <div class="faq">
+            <details>
+              <summary>Was ist der Unterschied zwischen dem Anhalten und dem Hibernieren eines Tabs?</summary>
+              <p>Ein angehaltener Tab wird entladen, bleibt aber in der Tab-Leiste und lädt beim Anklicken neu. Ein hibernierter Tab wird geschlossen; Takt speichert seinen Zustand und öffnet ihn wieder, wenn Sie auf Reaktivieren klicken.</p>
+            </details>
+            <details>
+              <summary>Wie viele Tabs kann ich kostenlos hibernieren?</summary>
+              <p>Im kostenlosen Plan 5 gleichzeitig, mit Premium ($3/Monat oder $30/Jahr) 200. Das automatische Anhalten ist unbegrenzt und kostenlos.</p>
+            </details>
+            <details>
+              <summary>Ist Takt ein neuer Great Suspender?</summary>
+              <p>Takt hält Tabs mit Chromes eigenem Discard an, sodass sie ihre echte URL behalten. Hibernierte Tabs bleiben im lokalen Speicher auf Ihrem Gerät. Kein Konto, keine Analysen, keine Telemetrie.</p>
+            </details>
+            <details>
+              <summary>Überstehen hibernierte Tabs einen Neustart des Browsers?</summary>
+              <p>Ja. Sie liegen auf der Festplatte, nicht im Arbeitsspeicher. Beim Start verwirft Takt jeden Eintrag, dessen URL bereits wieder offen ist.</p>
+            </details>
+          </div>
+
+          <h2 id="next">Weiterlesen</h2>
+          <div class="read-next">
+            <a href="../find-memory-hungry-tabs/">Die Tabs finden, die Ihren Arbeitsspeicher fressen<span>Schätzungen pro Tab und Gruppenbewertungen von A bis F.</span></a>
+            <a href="../quick-switch-search-tabs/">Zu jedem Tab springen, auch zu hibernierten<span>Quick Switch mit Alt+Shift+Space.</span></a>
+          </div>
+        </div>
+
+        <footer class="blog-post-footer">
+          <a href="../../../blog/">Alle Artikel zu den Funktionen</a> · <a href="../../../docs/hibernation/">Referenz: Hibernierung</a>
+        </footer>
+      </article>
+    </main>
+
+    <footer id="site-footer"></footer>
+    <script src="../../../js/includes.js"></script>
+    <script src="../../../js/nav.js"></script>
+  </body>
+</html>

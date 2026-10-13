@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Raggruppare le schede di Chrome per categoria o con l'IA, senza regole — Takt</title>
+    <meta
+      name="description"
+      content="Raggruppa tutte le schede aperte di Chrome per categoria (20 categorie integrate) o con il modello IA locale di Chrome, senza scrivere una sola regola. Come funziona ogni modalità, il limite gratuito di 5 gruppi e il confronto con &quot;Organizza schede&quot; di Chrome."
+    />
+    <link rel="canonical" href="https://taktabs.com/it/blog/group-tabs-by-category-or-ai/" />
+<!-- TAKT-LANG:head -->
+<link rel="alternate" hreflang="en" href="https://taktabs.com/blog/group-tabs-by-category-or-ai/" />
+<link rel="alternate" hreflang="fr" href="https://taktabs.com/fr/blog/group-tabs-by-category-or-ai/" />
+<link rel="alternate" hreflang="es" href="https://taktabs.com/es/blog/group-tabs-by-category-or-ai/" />
+<link rel="alternate" hreflang="it" href="https://taktabs.com/it/blog/group-tabs-by-category-or-ai/" />
+<link rel="alternate" hreflang="de" href="https://taktabs.com/de/blog/group-tabs-by-category-or-ai/" />
+<link rel="alternate" hreflang="pt" href="https://taktabs.com/pt/blog/group-tabs-by-category-or-ai/" />
+<link rel="alternate" hreflang="x-default" href="https://taktabs.com/blog/group-tabs-by-category-or-ai/" />
+<!-- /TAKT-LANG:head -->
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Raggruppare le schede di Chrome per categoria o con l'IA locale" />
+    <meta property="og:description" content="Nessuna regola da scrivere. Scegli Categoria o IA e ogni scheda aperta finisce in un gruppo con nome." />
+    <meta property="og:url" content="https://taktabs.com/it/blog/group-tabs-by-category-or-ai/" />
+    <meta property="og:image" content="https://taktabs.com/it/blog/img/popup-home.png" />
+    <meta property="og:locale" content="it_IT" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <link rel="icon" type="image/png" sizes="32x32" href="../../../assets/favicon-32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="../../../assets/favicon-16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="../../../assets/apple-touch-icon.png" />
+    <meta name="theme-color" content="#FF3B30" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../../../css/tokens.css" />
+    <link rel="stylesheet" href="../../../css/base.css" />
+    <link rel="stylesheet" href="../../../css/layout.css" />
+    <link rel="stylesheet" href="../../../css/blog.css" />
+    <link rel="stylesheet" href="../../../css/articles.css" />
+    <script src="../../../js/theme.js"></script>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Article",
+            "headline": "Raggruppare le schede di Chrome per categoria o con l'IA locale",
+            "description": "Raggruppa tutte le schede aperte di Chrome in una delle 20 categorie integrate, o per argomento con il modello IA locale di Chrome, senza scrivere regole.",
+            "inLanguage": "it",
+            "datePublished": "2026-10-08",
+            "dateModified": "2026-10-08",
+            "author": { "@type": "Person", "name": "Vitor" },
+            "publisher": { "@type": "Organization", "name": "Takt", "url": "https://taktabs.com" },
+            "image": "https://taktabs.com/it/blog/img/popup-home.png",
+            "mainEntityOfPage": "https://taktabs.com/it/blog/group-tabs-by-category-or-ai/"
+          },
+          {
+            "@type": "HowTo",
+            "name": "Raggruppare le schede di Chrome per categoria o con l'IA",
+            "step": [
+              { "@type": "HowToStep", "text": "Installa Takt dal Chrome Web Store." },
+              { "@type": "HowToStep", "text": "Apri il popup di Takt e, in Modalità di raggruppamento, scegli Per categoria o Per IA." },
+              { "@type": "HowToStep", "text": "Takt separa le schede e le raggruppa di nuovo con la nuova modalità. Fai clic su Raggruppa schede (o premi Alt+Shift+G) per ripetere l'operazione più tardi." }
+            ]
+          },
+          {
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "Il raggruppamento per categoria o con IA è gratuito?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Sì. Entrambe le modalità sono gratuite. Nelle modalità Categoria e IA il piano gratuito consente fino a 5 gruppi di schede in totale su tutte le finestre di Chrome, contando i gruppi creati a mano. Premium ($3/mese o $30/anno) toglie il limite." }
+              },
+              {
+                "@type": "Question",
+                "name": "Il raggruppamento con IA di Takt invia le mie schede a un server?",
+                "acceptedAnswer": { "@type": "Answer", "text": "No. Takt usa la Prompt API integrata in Chrome, che esegue il modello sul tuo dispositivo. I titoli delle schede e un breve estratto del testo della pagina vanno solo al modello locale." }
+              },
+              {
+                "@type": "Question",
+                "name": "Cosa succede se il modello IA di Chrome non è disponibile sul mio computer?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Takt ripiega su un raggruppamento delle schede che hanno parole in comune nel titolo e nel nome del sito. Il popup ti avvisa che l'IA non è disponibile su questo dispositivo, e le schede vengono comunque raggruppate." }
+              },
+              {
+                "@type": "Question",
+                "name": "Posso aggiungere i miei siti a una categoria?",
+                "acceptedAnswer": { "@type": "Answer", "text": "No. L'elenco delle categorie è fisso. I siti che non conosce finiscono in Other. Se vuoi un sito in un gruppo preciso, usa invece la modalità Per regole." }
+              }
+            ]
+          },
+          {
+            "@type": "SoftwareApplication",
+            "name": "Takt",
+            "applicationCategory": "BrowserApplication",
+            "operatingSystem": "Chrome",
+            "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <header id="site-header"></header>
+
+    <main class="blog-main">
+      <article class="blog-post article">
+        <p class="eyebrow">Raggruppamento per categoria e con IA</p>
+        <h1 class="blog-post-title">Raggruppare le schede di Chrome per categoria o con l'IA, senza regole</h1>
+        <p class="lede">Puoi raggruppare tutte le schede aperte di Chrome senza scrivere una regola. Scegli <strong>Per categoria</strong> e Takt mette ogni scheda in una di 20 categorie con nome. Scegli <strong>Per IA</strong> e il modello locale di Chrome raggruppa le schede per argomento.</p>
+        <p class="blog-post-meta">Aggiornato l'8 ottobre 2026 · 6 min di lettura</p>
+<!-- TAKT-LANG:nav -->
+<p class="lang-links"><a href="../../../blog/group-tabs-by-category-or-ai/" hreflang="en" lang="en">English</a> · <a href="../../../fr/blog/group-tabs-by-category-or-ai/" hreflang="fr" lang="fr">Français</a> · <a href="../../../es/blog/group-tabs-by-category-or-ai/" hreflang="es" lang="es">Español</a> · <span aria-current="true">Italiano</span> · <a href="../../../de/blog/group-tabs-by-category-or-ai/" hreflang="de" lang="de">Deutsch</a> · <a href="../../../pt/blog/group-tabs-by-category-or-ai/" hreflang="pt" lang="pt">Português</a></p>
+<!-- /TAKT-LANG:nav -->
+
+        <div class="blog-post-body">
+          <div class="tldr">
+            <p><strong>In breve:</strong> apri il popup di Takt, scegli <em>Per categoria</em> o <em>Per IA</em> in Modalità di raggruppamento e Takt raggruppa subito di nuovo le schede.</p>
+            <ul>
+              <li>Categoria: 20 categorie fisse come Development, Social e News. I siti sconosciuti finiscono in "Other".</li>
+              <li>IA: il modello integrato di Chrome dà il nome ai gruppi. Funziona sul tuo dispositivo.</li>
+              <li>Entrambe sono gratuite, fino a 5 gruppi su tutte le finestre. Premium toglie il limite.</li>
+            </ul>
+          </div>
+
+          <h2 id="modes">Quali modalità di raggruppamento ha Takt?</h2>
+          <p>Quattro, e ne è attiva una alla volta. La scegli nel popup in <strong>Modalità di raggruppamento</strong>.</p>
+          <table>
+            <thead><tr><th>Modalità</th><th>Come vengono raggruppate le schede</th><th>Configurazione</th></tr></thead>
+            <tbody>
+              <tr><td>Per regole (predefinita)</td><td>In base alle regole URL che scrivi</td><td>Una regola per gruppo</td></tr>
+              <tr><td>Per categoria</td><td>Per sito, in 20 categorie integrate</td><td>Nessuna</td></tr>
+              <tr><td>Per IA</td><td>Per argomento, con nomi dati dal modello locale di Chrome</td><td>Nessuna</td></tr>
+              <tr><td>Nessuno</td><td>Takt non raggruppa le schede</td><td>Nessuna</td></tr>
+            </tbody>
+          </table>
+          <p>Quando cambi modalità, Takt separa le schede e le raggruppa di nuovo con la nuova modalità. La scelta viene salvata. Scegliere Nessuno separa tutto e interrompe il raggruppamento.</p>
+
+          <figure class="narrow">
+            <img src="../img/popup-home.png" alt="Riquadro Home del popup di Takt con la sezione Modalità di raggruppamento e quattro opzioni: Per regole, Per categoria, Per IA e Nessuno, sopra i pulsanti di Azioni rapide Raggruppa schede, Separa tutto, Comprimi tutto e Ordina per dominio" width="420" loading="lazy" />
+            <figcaption>Il selettore della modalità di raggruppamento nel popup. Raggruppa schede esegue la modalità selezionata.</figcaption>
+          </figure>
+
+          <h2 id="category">Come funziona il raggruppamento per categoria?</h2>
+          <p>Takt guarda solo il nome host di ogni scheda. Lo confronta con un elenco integrato di 77 siti noti, ognuno associato a una delle 20 categorie (i nomi dei gruppi sono in inglese):</p>
+          <p>Development, AI Tools, Docs, Productivity, Communication, Finance, Design, Shopping, Social, Entertainment, News, Gaming, Sports, Travel, Health, Food, Science, Career, Education e Cloud.</p>
+          <ul>
+            <li><strong>I sottodomini ereditano la categoria.</strong> docs.github.com non è nell'elenco, quindi Takt prova github.com e lo mette in Development.</li>
+            <li><strong>Vince l'host più specifico.</strong> aws.amazon.com va in Cloud. amazon.com va in Shopping.</li>
+            <li><strong>Tutto il resto va in Other.</strong> Compresi la intranet aziendale, le pagine Nuova scheda e qualsiasi sito che l'elenco non conosce. Other è sempre l'ultimo gruppo.</li>
+          </ul>
+          <p>La categoria più numerosa diventa il primo gruppo, poi la successiva. Le nuove schede entrano nel gruppo della loro categoria mentre si caricano. In questa modalità Takt non legge il contenuto delle pagine.</p>
+
+          <h2 id="ai">Come funziona il raggruppamento con IA?</h2>
+          <p>Takt invia il titolo di ogni scheda e fino a 500 caratteri del testo della pagina alla Prompt API integrata in Chrome. Il modello gira dentro Chrome, sul tuo computer. Restituisce un'etichetta breve per argomento e Takt crea i gruppi.</p>
+          <ul>
+            <li>Un gruppo ha bisogno di almeno 2 schede. Una scheda senza corrispondenze resta fuori dai gruppi.</li>
+            <li>Ogni esecuzione copre fino a 100 schede.</li>
+            <li>Le etichette vengono dal modello, quindi possono cambiare da un'esecuzione all'altra.</li>
+            <li>Per leggere il testo delle pagine serve l'autorizzazione facoltativa di Takt "Accesso a tutti i siti web". Senza, Takt raggruppa solo in base ai titoli e lo segnala nel popup.</li>
+          </ul>
+          <p>Il modello non si attiva a ogni nuova scheda. In modalità IA, le schede che apri dopo aspettano il prossimo clic su <strong>Raggruppa schede</strong> o <kbd>Alt+Shift+G</kbd>.</p>
+
+          <h2 id="download">Cosa succede la prima volta che uso la modalità IA?</h2>
+          <p>Chrome potrebbe dover prima scaricare il suo modello locale. Takt avvia il download quando fai clic su Raggruppa schede e mostra l'avanzamento nel popup: "Preparazione del modello IA…", poi "Download del modello IA (N%)…", poi "Modello IA pronto. Raggruppamento schede…". Il raggruppamento prosegue da solo quando il modello è pronto.</p>
+
+          <h2 id="fallback">E se il mio computer non può eseguire il modello IA di Chrome?</h2>
+          <p>Takt raggruppa comunque le schede. Ripiega su un metodo di somiglianza che raggruppa le schede con parole in comune nel titolo e nel nome del sito, e il popup mostra "IA non disponibile su questo dispositivo."</p>
+          <p>Lo stesso metodo di riserva entra in gioco se il modello ci mette troppo: 2 minuti per caricarsi o 8 secondi per rispondere. Gestisce anche le nuove schede in modalità IA: una nuova scheda entra nel gruppo esistente più vicino e non ne crea mai uno nuovo.</p>
+
+          <h2 id="cap">Cos'è il limite gratuito di 5 gruppi?</h2>
+          <p>Nel piano gratuito, le modalità Categoria e IA creano al massimo 5 gruppi di schede. Il limite conta tutti i gruppi di schede aperti in Chrome, su tutte le finestre, compresi quelli creati a mano.</p>
+          <ul>
+            <li>Se un'esecuzione supererebbe il limite, Takt tiene i gruppi più grandi e lascia il resto fuori dai gruppi.</li>
+            <li>Se hai già 5 gruppi, il popup mostra "You've hit the 5-group limit. Ungroup some tabs to create more." (hai raggiunto il limite di 5 gruppi; separa qualche scheda per crearne altri).</li>
+            <li>La modalità Per regole ha invece un suo limite gratuito di 5 regole.</li>
+          </ul>
+          <p>Premium ($3/mese o $30/anno) toglie il limite di gruppi.</p>
+
+          <h2 id="chrome">In cosa è diverso da "Organizza schede" di Chrome?</h2>
+          <p>Da Chrome 146, il clic destro su una scheda propone di organizzare le schede simili. Usa Gemini Nano sul tuo dispositivo, suggerisce i nomi dei gruppi, non costa niente e non richiede estensioni. Per una pulizia occasionale, potrebbe bastarti.</p>
+          <table>
+            <thead><tr><th></th><th>Integrato in Chrome</th><th>Takt Categoria</th><th>Takt IA</th></tr></thead>
+            <tbody>
+              <tr><td>Quando raggruppa</td><td>Quando lo chiedi</td><td>Con Raggruppa schede, e ogni nuova scheda mentre si carica</td><td>Con Raggruppa schede</td></tr>
+              <tr><td>Nomi dei gruppi</td><td>Suggeriti dal modello</td><td>Fissi: 20 categorie + Other</td><td>Suggeriti dal modello</td></tr>
+              <tr><td>Funziona sul dispositivo</td><td>Sì</td><td>Sì, senza bisogno di un modello</td><td>Sì</td></tr>
+              <tr><td>Passare alle tue regole</td><td>No</td><td colspan="2">Sì, un clic per la modalità Per regole</td></tr>
+              <tr><td>Prezzo</td><td>Gratis</td><td colspan="2">Gratis fino a 5 gruppi; illimitato con Premium</td></tr>
+            </tbody>
+          </table>
+
+          <h2 id="limits">Dove Categoria e IA non arrivano</h2>
+          <ul>
+            <li><strong>L'elenco delle categorie è fisso.</strong> Non puoi aggiungere un sito né rinominare una categoria. Se rinomini un gruppo in Chrome, alla prossima esecuzione Takt usa di nuovo il nome integrato.</li>
+            <li><strong>I colori si ripetono.</strong> 20 categorie condividono gli 8 colori dei gruppi di Chrome. A identificare un gruppo è il nome.</li>
+            <li><strong>Le etichette dell'IA cambiano.</strong> Eseguila due volte e potresti ottenere nomi diversi.</li>
+            <li><strong>Profili e programmazioni non si applicano.</strong> Funzionano solo in modalità Per regole.</li>
+          </ul>
+          <p>Se vuoi github.com sempre in un gruppo chiamato "Code", <a href="../auto-group-tabs-chrome/">scrivi una regola</a>. Non sai quali regole scrivere? <a href="../rule-suggestions/">Lascia che Takt te le suggerisca</a>.</p>
+
+          <div class="cta">
+            <p>Scegli una modalità. Guarda 30 schede sparse diventare cinque gruppi con nome.</p>
+            <a class="btn" href="https://chromewebstore.google.com/detail/takt/plgfdnbgkjocmgegnkbihoeojcfphdic">Aggiungi Takt a Chrome, è gratis</a>
+          </div>
+
+          <h2 id="faq">Domande frequenti</h2>
+          <div class="faq">
+            <details>
+              <summary>Il raggruppamento per categoria o con IA è gratuito?</summary>
+              <p>Sì. Entrambi sono gratuiti, fino a 5 gruppi di schede in totale su tutte le finestre, contando i gruppi creati a mano. Premium ($3/mese o $30/anno) toglie il limite.</p>
+            </details>
+            <details>
+              <summary>Il raggruppamento con IA di Takt invia le mie schede a un server?</summary>
+              <p>No. Usa la Prompt API integrata in Chrome, che funziona sul tuo dispositivo. Vedi <a href="../privacy-local-first/">come Takt tiene i dati in locale</a>.</p>
+            </details>
+            <details>
+              <summary>Cosa succede se il modello IA di Chrome non è disponibile sul mio computer?</summary>
+              <p>Takt raggruppa invece le schede che hanno parole in comune nel titolo e nel nome del sito, e ti avvisa che l'IA non è disponibile su questo dispositivo.</p>
+            </details>
+            <details>
+              <summary>Posso aggiungere i miei siti a una categoria?</summary>
+              <p>No. L'elenco è fisso e i siti sconosciuti finiscono in Other. Usa la modalità Per regole per mandare un sito in un gruppo a cui dai tu il nome.</p>
+            </details>
+          </div>
+
+          <h2 id="next">Da leggere dopo</h2>
+          <div class="read-next">
+            <a href="../auto-group-tabs-chrome/">Raggruppa le schede con le tue regole<span>Una regola per sito, applicata mentre le schede si aprono.</span></a>
+            <a href="../rule-suggestions/">Lascia che Takt ti suggerisca le regole<span>In base ai siti che tieni già aperti.</span></a>
+          </div>
+        </div>
+
+        <footer class="blog-post-footer">
+          <a href="../../../blog/">Tutti gli articoli sulle funzionalità</a> · <a href="../../../docs/group-by-category/">Riferimento: raggruppa per categoria</a> · <a href="../../../docs/smart-group-ai/">Riferimento: raggruppamento intelligente con IA</a>
+        </footer>
+      </article>
+    </main>
+
+    <footer id="site-footer"></footer>
+    <script src="../../../js/includes.js"></script>
+    <script src="../../../js/nav.js"></script>
+  </body>
+</html>

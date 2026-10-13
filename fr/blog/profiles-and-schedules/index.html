@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Des règles d'onglets différentes au travail et à la maison : profils et planifications — Takt</title>
+    <meta
+      name="description"
+      content="Gardez des règles de regroupement d'onglets Chrome séparées pour le travail, la vie perso et la recherche. Changez de profil en un clic depuis le popup, ou laissez Takt en changer selon l'heure et le jour de la semaine."
+    />
+    <link rel="canonical" href="https://taktabs.com/fr/blog/profiles-and-schedules/" />
+<!-- TAKT-LANG:head -->
+<link rel="alternate" hreflang="en" href="https://taktabs.com/blog/profiles-and-schedules/" />
+<link rel="alternate" hreflang="fr" href="https://taktabs.com/fr/blog/profiles-and-schedules/" />
+<link rel="alternate" hreflang="es" href="https://taktabs.com/es/blog/profiles-and-schedules/" />
+<link rel="alternate" hreflang="it" href="https://taktabs.com/it/blog/profiles-and-schedules/" />
+<link rel="alternate" hreflang="de" href="https://taktabs.com/de/blog/profiles-and-schedules/" />
+<link rel="alternate" hreflang="pt" href="https://taktabs.com/pt/blog/profiles-and-schedules/" />
+<link rel="alternate" hreflang="x-default" href="https://taktabs.com/blog/profiles-and-schedules/" />
+<!-- /TAKT-LANG:head -->
+    <meta property="og:type" content="article" />
+    <meta property="og:locale" content="fr_FR" />
+    <meta property="og:title" content="Des règles d'onglets différentes au travail et à la maison : profils et planifications" />
+    <meta property="og:description" content="Un jeu de règles pour les heures de bureau, un autre pour le soir. Takt passe de l'un à l'autre selon un horaire." />
+    <meta property="og:url" content="https://taktabs.com/fr/blog/profiles-and-schedules/" />
+    <meta property="og:image" content="https://taktabs.com/fr/blog/img/options-profiles-schedule.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <link rel="icon" type="image/png" sizes="32x32" href="../../../assets/favicon-32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="../../../assets/favicon-16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="../../../assets/apple-touch-icon.png" />
+    <meta name="theme-color" content="#FF3B30" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../../../css/tokens.css" />
+    <link rel="stylesheet" href="../../../css/base.css" />
+    <link rel="stylesheet" href="../../../css/layout.css" />
+    <link rel="stylesheet" href="../../../css/blog.css" />
+    <link rel="stylesheet" href="../../../css/articles.css" />
+    <script src="../../../js/theme.js"></script>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Article",
+            "headline": "Des règles d'onglets différentes au travail et à la maison : profils et planifications",
+            "description": "Gardez des règles de regroupement d'onglets Chrome séparées selon le contexte et passez de l'une à l'autre à la main ou selon un horaire.",
+            "inLanguage": "fr",
+            "datePublished": "2026-10-08",
+            "dateModified": "2026-10-08",
+            "author": { "@type": "Person", "name": "Vitor" },
+            "publisher": { "@type": "Organization", "name": "Takt", "url": "https://taktabs.com" },
+            "image": "https://taktabs.com/fr/blog/img/options-profiles-schedule.png",
+            "mainEntityOfPage": "https://taktabs.com/fr/blog/profiles-and-schedules/"
+          },
+          {
+            "@type": "HowTo",
+            "name": "Changer automatiquement de règles d'onglets Chrome selon un horaire",
+            "step": [
+              { "@type": "HowToStep", "text": "Ouvrez la page d'options de Takt, allez dans Profiles et cliquez sur Create Profile." },
+              { "@type": "HowToStep", "text": "Nommez le profil et choisissez de copier vos règles actuelles ou de partir de zéro." },
+              { "@type": "HowToStep", "text": "Cliquez sur Edit rules pour choisir les règles qui appartiennent au profil." },
+              { "@type": "HowToStep", "text": "Cochez Auto-switch on schedule, définissez une heure de début et de fin, et sélectionnez les jours." }
+            ]
+          },
+          {
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "Que deviennent les règles qui ne font pas partie du profil actif ?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Elles sont ignorées jusqu'à ce que vous changiez de nouveau de profil. Quand un profil est actif, seules ses règles servent au regroupement. Sélectionnez Toutes les règles pour utiliser de nouveau toutes les règles." }
+              },
+              {
+                "@type": "Question",
+                "name": "Changer de profil regroupe-t-il mes onglets ouverts ?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Non. Les groupes existants restent tels quels. Les règles du nouveau profil s'appliquent aux onglets à leur ouverture ou à leur chargement. Cliquez sur Regrouper les onglets dans le popup pour regrouper ce qui est déjà ouvert." }
+              },
+              {
+                "@type": "Question",
+                "name": "À quelle fréquence Takt vérifie-t-il la planification ?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Une fois par minute. Un profil s'active dans la minute qui suit son heure de début et se désactive dans la minute qui suit son heure de fin." }
+              },
+              {
+                "@type": "Question",
+                "name": "Les profils sont-ils gratuits ?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Non. Les profils et le changement planifié sont des fonctionnalités Premium, à 3 $/mois ou 30 $/an." }
+              }
+            ]
+          },
+          {
+            "@type": "SoftwareApplication",
+            "name": "Takt",
+            "applicationCategory": "BrowserApplication",
+            "operatingSystem": "Chrome",
+            "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <header id="site-header"></header>
+
+    <main class="blog-main">
+      <article class="blog-post article">
+        <p class="eyebrow">Profils</p>
+        <h1 class="blog-post-title">Des règles d'onglets différentes au travail et à la maison</h1>
+        <p class="lede">Un profil est un ensemble nommé de règles de regroupement d'onglets. Gardez-en un pour le travail et un pour la maison, passez de l'un à l'autre en un clic, ou laissez Takt le faire pour vous à 9 h en semaine.</p>
+        <p class="blog-post-meta">Mis à jour le 8 octobre 2026 · 5 min de lecture</p>
+<!-- TAKT-LANG:nav -->
+<p class="lang-links"><a href="../../../blog/profiles-and-schedules/" hreflang="en" lang="en">English</a> · <span aria-current="true">Français</span> · <a href="../../../es/blog/profiles-and-schedules/" hreflang="es" lang="es">Español</a> · <a href="../../../it/blog/profiles-and-schedules/" hreflang="it" lang="it">Italiano</a> · <a href="../../../de/blog/profiles-and-schedules/" hreflang="de" lang="de">Deutsch</a> · <a href="../../../pt/blog/profiles-and-schedules/" hreflang="pt" lang="pt">Português</a></p>
+<!-- /TAKT-LANG:nav -->
+
+        <div class="blog-post-body">
+          <div class="tldr">
+            <p><strong>En bref :</strong> dans la page d'options de Takt, ouvrez <strong>Profiles</strong>, créez « Work » et « Personal », et attribuez des règles à chacun. Changez de profil depuis le menu des profils du popup, ou cochez <strong>Auto-switch on schedule</strong> et réglez les heures et les jours.</p>
+            <ul>
+              <li>Quand un profil est actif, seules ses règles regroupent vos onglets.</li>
+              <li>Les planifications fonctionnent selon l'heure et le jour de la semaine, vérifiées une fois par minute.</li>
+              <li>En option : mettre vos onglets en hibernation à la fin de la planification. <span class="badge badge-premium">Premium</span></li>
+            </ul>
+          </div>
+
+          <h2 id="why">Pourquoi vouloir plusieurs jeux de règles d'onglets ?</h2>
+          <p>Parce qu'une règle utile au travail devient gênante à la maison. Un groupe « Code » pour GitHub tombe à pic à 10 h. À 21 h, vous préférerez peut-être regrouper YouTube et vos recettes, sans aucun groupe de travail.</p>
+          <p>Sans profils, vous avez deux options : une longue liste de règles qui essaie de tout couvrir, ou activer et désactiver des règles à la main. Les profils permettent à chaque contexte de garder sa propre liste, courte.</p>
+
+          <h2 id="create">Comment créer un profil ?</h2>
+          <ol class="steps">
+            <li>Ouvrez la page d'options de Takt et allez dans <strong>Profiles</strong>.</li>
+            <li>Cliquez sur <strong>Create Profile</strong> et donnez-lui un nom.</li>
+            <li>Copiez-y toutes vos règles actuelles, ou partez de zéro.</li>
+            <li>Cliquez sur <strong>Edit rules</strong> pour cocher les règles qu'utilise ce profil.</li>
+          </ol>
+          <p>Une nouvelle règle créée pendant qu'un profil est actif est automatiquement ajoutée à ce profil.</p>
+
+          <h2 id="switch">Comment passer d'un profil à l'autre ?</h2>
+          <p>Ouvrez le popup et cliquez sur le nom du profil en haut. Le menu liste <strong>Toutes les règles</strong> et chaque profil, avec son nombre de règles. Choisissez-en un : il s'applique aussitôt.</p>
+
+          <figure class="narrow">
+            <img src="../img/popup-profile-switcher.png" alt="Popup de Takt avec le menu des profils ouvert en haut, listant Toutes les règles, Work avec 3 règles (sélectionné) et Research avec 2 règles, ainsi qu'un lien Gérer les profils" width="420" loading="lazy" />
+            <figcaption>Le menu des profils dans le popup. Le nombre correspond au nombre de règles.</figcaption>
+          </figure>
+
+          <p><strong>Toutes les règles</strong> désactive les profils : toutes les règles sont alors évaluées. Changer de profil ne touche pas aux groupes existants. Les nouveaux onglets suivent les nouvelles règles ; cliquez sur <strong>Regrouper les onglets</strong> dans le popup pour regrouper le reste.</p>
+
+          <h2 id="schedule">Comment changer de profil automatiquement selon l'heure ?</h2>
+          <p>Sur la carte d'un profil, cochez <strong>Auto-switch on schedule</strong>. Puis réglez :</p>
+          <ul>
+            <li><strong>L'heure de début et de fin.</strong> Par défaut, de 09:00 à 17:00.</li>
+            <li><strong>Les jours.</strong> Activez de Su à Sa (dimanche à samedi). Par défaut, du lundi au vendredi.</li>
+            <li><strong>Hibernate tabs when schedule ends</strong> (facultatif).</li>
+          </ul>
+
+          <figure>
+            <img src="../img/options-profiles-schedule.png" alt="Page d'options de Takt, onglet Profiles : le profil Work est actif, avec Auto-switch on schedule coché, de 09:00 à 17:00, du lundi au vendredi sélectionnés, et l'option Hibernate tabs when schedule ends décochée. Un profil Research, en dessous, n'a pas de planification." width="700" loading="lazy" />
+            <figcaption>Un profil Work qui s'active à 9 h et se désactive à 17 h en semaine.</figcaption>
+          </figure>
+
+          <p>Takt vérifie la planification une fois par minute. Quand la plage horaire commence, il active le profil. Quand elle se termine, il revient à Toutes les règles.</p>
+          <p>Si deux planifications se chevauchent, le profil créé en premier l'emporte.</p>
+
+          <h2 id="hibernate">Que fait « Hibernate tabs when schedule ends » ?</h2>
+          <p>À la fin de la plage horaire, Takt <a href="../hibernate-tabs-free-memory/">met en hibernation</a> vos onglets ouverts. Il écarte l'onglet actif, les onglets qui diffusent du son, les onglets épinglés et toute URL de votre liste d'exclusion de la suspension.</p>
+          <p>Vos onglets de travail cessent d'utiliser de la mémoire à la fin de la journée, et restent dans la liste Veille jusqu'à ce que vous les réactiviez.</p>
+
+          <h2 id="compare">Les profils face aux autres façons de séparer travail et maison</h2>
+          <table>
+            <thead><tr><th></th><th>Profils Chrome séparés</th><th>Profils Takt</th></tr></thead>
+            <tbody>
+              <tr><td>Ce qui est séparé</td><td>Tout : fenêtres, historique, identifiants</td><td>Uniquement les règles de regroupement</td></tr>
+              <tr><td>Mêmes fenêtres et onglets</td><td>Non</td><td>Oui</td></tr>
+              <tr><td>Changement selon un horaire</td><td>Non</td><td>Oui</td></tr>
+            </tbody>
+          </table>
+          <p>Si vous avez besoin d'identifiants et d'un historique séparés, utilisez des profils Chrome distincts. Les profils Takt changent seulement la façon dont les onglets sont regroupés dans le navigateur que vous utilisez déjà.</p>
+
+          <h2 id="limits">Ce que les profils ne font pas</h2>
+          <ul>
+            <li><strong>Ils ne ferment ni n'ouvrent d'onglets.</strong> Un profil change les règles qui s'appliquent. Pour remplacer tout un ensemble d'onglets, utilisez les <a href="../save-restore-tab-sessions/">sessions</a>.</li>
+            <li><strong>Une planification l'emporte pendant sa plage horaire.</strong> Changez de profil à la main pendant les heures planifiées, et Takt revient en arrière à la vérification suivante, en une minute environ. Désactivez la planification pour rester sur un autre profil.</li>
+            <li><strong>L'heure de fin doit être après l'heure de début.</strong> Une plage qui passe minuit nécessite deux profils.</li>
+          </ul>
+
+          <div class="cta">
+            <p>Les règles du travail au travail. Celles de la maison à la maison.</p>
+            <a class="btn" href="https://chromewebstore.google.com/detail/takt/plgfdnbgkjocmgegnkbihoeojcfphdic">Ajouter Takt à Chrome, gratuitement</a>
+          </div>
+
+          <h2 id="faq">Questions fréquentes</h2>
+          <div class="faq">
+            <details>
+              <summary>Que deviennent les règles qui ne font pas partie du profil actif ?</summary>
+              <p>Elles sont ignorées jusqu'à ce que vous changiez de nouveau de profil. Sélectionnez <strong>Toutes les règles</strong> pour utiliser de nouveau toutes les règles.</p>
+            </details>
+            <details>
+              <summary>Changer de profil regroupe-t-il mes onglets ouverts ?</summary>
+              <p>Non. Les groupes existants restent. Les nouveaux onglets suivent les nouvelles règles. Cliquez sur <strong>Regrouper les onglets</strong> dans le popup pour regrouper ce qui est ouvert.</p>
+            </details>
+            <details>
+              <summary>À quelle fréquence Takt vérifie-t-il la planification ?</summary>
+              <p>Une fois par minute. Un profil s'active dans la minute qui suit son heure de début et se désactive dans la minute qui suit son heure de fin.</p>
+            </details>
+            <details>
+              <summary>Les profils sont-ils gratuits ?</summary>
+              <p>Non. Les profils et les planifications font partie de Premium, à 3 $/mois ou 30 $/an. Le plan Free comprend 5 règles et le <a href="../auto-group-tabs-chrome/">regroupement par règles</a>.</p>
+            </details>
+          </div>
+
+          <h2 id="next">À lire ensuite</h2>
+          <div class="read-next">
+            <a href="../auto-group-tabs-chrome/">Écrire votre première règle de regroupement<span>Chaque nouvel onglet se range tout seul.</span></a>
+            <a href="../save-restore-tab-sessions/">Enregistrer un espace de travail pour plus tard<span>Des sessions nommées, restaurées en un clic.</span></a>
+          </div>
+        </div>
+
+        <footer class="blog-post-footer">
+          <a href="../../../blog/">Tous les articles</a> · <a href="../../../docs/profiles/">Référence : profils</a>
+        </footer>
+      </article>
+    </main>
+
+    <footer id="site-footer"></footer>
+    <script src="../../../js/includes.js"></script>
+    <script src="../../../js/nav.js"></script>
+  </body>
+</html>

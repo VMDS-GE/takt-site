@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Como ver quais abas do Chrome usam mais memória — Takt</title>
+    <meta
+      name="description"
+      content="Veja quais abas e grupos de abas do Chrome usam mais memória: estimativas por aba, notas de saúde de A a F por grupo, atividade de rede em segundo plano, uma barra de memória do sistema e orçamentos de memória por grupo. Como cada número é calculado."
+    />
+    <link rel="canonical" href="https://taktabs.com/pt/blog/find-memory-hungry-tabs/" />
+<!-- TAKT-LANG:head -->
+<link rel="alternate" hreflang="en" href="https://taktabs.com/blog/find-memory-hungry-tabs/" />
+<link rel="alternate" hreflang="fr" href="https://taktabs.com/fr/blog/find-memory-hungry-tabs/" />
+<link rel="alternate" hreflang="es" href="https://taktabs.com/es/blog/find-memory-hungry-tabs/" />
+<link rel="alternate" hreflang="it" href="https://taktabs.com/it/blog/find-memory-hungry-tabs/" />
+<link rel="alternate" hreflang="de" href="https://taktabs.com/de/blog/find-memory-hungry-tabs/" />
+<link rel="alternate" hreflang="pt" href="https://taktabs.com/pt/blog/find-memory-hungry-tabs/" />
+<link rel="alternate" hreflang="x-default" href="https://taktabs.com/blog/find-memory-hungry-tabs/" />
+<!-- /TAKT-LANG:head -->
+    <meta property="og:type" content="article" />
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:title" content="Como ver quais abas do Chrome usam mais memória" />
+    <meta property="og:description" content="Estimativas de memória por aba, notas de saúde de A a F por grupo e orçamentos de memória, tudo medido dentro do seu navegador." />
+    <meta property="og:url" content="https://taktabs.com/pt/blog/find-memory-hungry-tabs/" />
+    <meta property="og:image" content="https://taktabs.com/pt/blog/img/options-dashboard-memory.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <link rel="icon" type="image/png" sizes="32x32" href="../../../assets/favicon-32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="../../../assets/favicon-16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="../../../assets/apple-touch-icon.png" />
+    <meta name="theme-color" content="#FF3B30" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../../../css/tokens.css" />
+    <link rel="stylesheet" href="../../../css/base.css" />
+    <link rel="stylesheet" href="../../../css/layout.css" />
+    <link rel="stylesheet" href="../../../css/blog.css" />
+    <link rel="stylesheet" href="../../../css/articles.css" />
+    <script src="../../../js/theme.js"></script>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Article",
+            "headline": "Como ver quais abas do Chrome usam mais memória",
+            "description": "Estimativas de memória por aba, notas de saúde de A a F por grupo de abas, atividade de rede em segundo plano e orçamentos de memória por grupo no Painel de recursos do Takt, e como cada número é calculado.",
+            "inLanguage": "pt",
+            "datePublished": "2026-10-08",
+            "dateModified": "2026-10-08",
+            "author": { "@type": "Person", "name": "Vitor" },
+            "publisher": { "@type": "Organization", "name": "Takt", "url": "https://taktabs.com" },
+            "image": "https://taktabs.com/pt/blog/img/options-dashboard-memory.png",
+            "mainEntityOfPage": "https://taktabs.com/pt/blog/find-memory-hungry-tabs/"
+          },
+          {
+            "@type": "HowTo",
+            "name": "Encontrar as abas do Chrome que usam mais memória",
+            "step": [
+              { "@type": "HowToStep", "text": "Instale o Takt e faça upgrade para o Premium; o Painel de recursos é um recurso Premium." },
+              { "@type": "HowToStep", "text": "Em Opções → Settings → Permissões, conceda Acesso a todos os sites e, se quiser, Monitoramento de rede e Acesso à memória do sistema." },
+              { "@type": "HowToStep", "text": "Abra Opções → Dashboard. Os grupos são ordenados pela memória estimada; cada cartão de grupo lista suas abas ordenadas por memória." },
+              { "@type": "HowToStep", "text": "Clique em Suspender ao lado de uma recomendação de suspensão, ou defina um orçamento de memória por grupo em Settings → Memory Budgets." }
+            ]
+          },
+          {
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "Como o Takt estima a memória de uma aba?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Ele soma o heap JavaScript em uso, o número de elementos × cerca de 1,5 KB, o tamanho decodificado dos recursos carregados e os buffers de canvas a largura × altura × 4 bytes. Use para comparar abas." }
+              },
+              {
+                "@type": "Question",
+                "name": "Por que a coluna Memória mostra um traço?",
+                "acceptedAnswer": { "@type": "Answer", "text": "O Acesso a todos os sites não foi concedido, a aba está suspensa, ou é uma página em que extensões não podem rodar scripts, como as páginas chrome://." }
+              },
+              {
+                "@type": "Question",
+                "name": "O Painel de recursos é gratuito?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Não. O painel e os orçamentos de memória são Premium, por US$ 3/mês ou US$ 30/ano." }
+              },
+              {
+                "@type": "Question",
+                "name": "O Takt envia os dados das minhas abas para algum lugar para medi-los?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Não. Todas as medições rodam dentro do seu navegador." }
+              }
+            ]
+          },
+          {
+            "@type": "SoftwareApplication",
+            "name": "Takt",
+            "applicationCategory": "BrowserApplication",
+            "operatingSystem": "Chrome",
+            "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <header id="site-header"></header>
+
+    <main class="blog-main">
+      <article class="blog-post article">
+        <p class="eyebrow">Painel de recursos <span class="badge badge-premium">Premium</span></p>
+        <h1 class="blog-post-title">Como ver quais abas do Chrome usam mais memória</h1>
+        <p class="lede">Para ver quais abas do Chrome usam mais memória, você precisa dos números de todas as abas lado a lado, agrupados do jeito que você trabalha. O Painel de recursos do Takt mostra uma estimativa de memória por aba, um total por grupo de abas e uma nota de saúde de A a F, atualizados a cada 10 segundos.</p>
+        <p class="blog-post-meta">Atualizado em 8 de outubro de 2026 · 6 min de leitura</p>
+<!-- TAKT-LANG:nav -->
+<p class="lang-links"><a href="../../../blog/find-memory-hungry-tabs/" hreflang="en" lang="en">English</a> · <a href="../../../fr/blog/find-memory-hungry-tabs/" hreflang="fr" lang="fr">Français</a> · <a href="../../../es/blog/find-memory-hungry-tabs/" hreflang="es" lang="es">Español</a> · <a href="../../../it/blog/find-memory-hungry-tabs/" hreflang="it" lang="it">Italiano</a> · <a href="../../../de/blog/find-memory-hungry-tabs/" hreflang="de" lang="de">Deutsch</a> · <span aria-current="true">Português</span></p>
+<!-- /TAKT-LANG:nav -->
+
+        <div class="blog-post-body">
+          <div class="tldr">
+            <p><strong>Resposta curta:</strong> abra <strong>Opções → Dashboard</strong> no Takt. Os grupos são ordenados pela memória estimada, e as abas de cada grupo aparecem da maior para a menor.</p>
+            <ul>
+              <li>Estimativa de memória por aba, tempo ocioso, domínios de terceiros e atividade em segundo plano.</li>
+              <li>Nota de saúde de A a F por grupo de abas, uma barra de memória do sistema e orçamentos de memória que descarregam abas por você.</li>
+              <li>Premium (US$ 3/mês ou US$ 30/ano). Medido no seu navegador, e por nada fora dele.</li>
+            </ul>
+          </div>
+
+          <h2 id="why">Por que é difícil saber qual aba está usando memória?</h2>
+          <p>O Chrome mostra um número de memória no cartão que aparece ao passar o mouse sobre uma aba, uma aba por vez. Com 30 abas abertas, são 30 passadas de mouse, e nenhum total.</p>
+          <p>No geral, uma aba sozinha nem importa. O que importa é se o grupo a fechar é "Research" ou "Entertainment". Por isso o Takt soma a memória por grupo de abas.</p>
+
+          <figure>
+            <img src="../img/options-dashboard-memory.png" alt="Topo do Painel de recursos do Takt: uma barra RAM do sistema com 26,9 GB de 32,0 GB em uso (84%), sendo 0,2 GB de abas e 5,1 GB livres; uma caixa Ciclo de vida com 0 suspensas, 2 hibernadas, 100 MB economizados estimados, 2 hoje; e um Detalhamento de grupos com Code em 149 MB, Entertainment 71 MB, Research 15 MB, Docs 14 MB, News 2 MB e abas sem grupo 1 MB, cada um com uma nota de saúde A e o número de abas" width="700" loading="lazy" />
+            <figcaption>Memória do sistema, contadores de ciclo de vida e grupos ordenados pela memória estimada.</figcaption>
+          </figure>
+
+          <h2 id="estimate">Como o Takt estima a memória de uma aba?</h2>
+          <p>O Takt roda um script curto dentro de cada aba e soma quatro partes:</p>
+          <table>
+            <thead><tr><th>Parte</th><th>Como é medida</th></tr></thead>
+            <tbody>
+              <tr><td>Heap JavaScript</td><td>Heap em uso, como o Chrome o informa à página</td></tr>
+              <tr><td>Árvore DOM</td><td>Número de elementos × cerca de 1,5 KB</td></tr>
+              <tr><td>Recursos carregados</td><td>Tamanho decodificado de cada arquivo que a página carregou</td></tr>
+              <tr><td>Buffers de canvas</td><td>Largura × altura × 4 bytes por canvas</td></tr>
+            </tbody>
+          </table>
+          <p>Trate o resultado como uma classificação, não como uma fatura. Ele deixa de fora a sobrecarga do próprio navegador para cada aba, então o número do Chrome para a mesma aba pode ser diferente.</p>
+          <p>Algumas abas não podem ser medidas. As abas suspensas não têm nada rodando. As páginas do Chrome (<code>chrome://</code>), as páginas de extensões e a Chrome Web Store não permitem scripts, então aparecem em <strong>Abas não monitoradas</strong>. Se uma aba não responder em 3 segundos, o Takt mostra o último valor conhecido.</p>
+
+          <figure>
+            <img src="../img/options-dashboard-tab-table.png" alt="O cartão do grupo Code no Painel de recursos do Takt: 4 abas, 149 MB, com um botão Fechar tudo e uma tabela de abas ordenadas por memória (49, 41, 29 e 29 MB), cada uma com as colunas de tempo ocioso, número de domínios de terceiros e atividade em segundo plano" width="700" loading="lazy" />
+            <figcaption>Cada cartão de grupo lista suas abas. Clique no cabeçalho de uma coluna para ordenar.</figcaption>
+          </figure>
+
+          <h2 id="health">O que significam as notas de saúde de A a F?</h2>
+          <p>Cada grupo começa com 100 pontos e perde pontos em quatro fatores:</p>
+          <table>
+            <thead><tr><th>Fator</th><th>Condição</th><th>Penalidade</th></tr></thead>
+            <tbody>
+              <tr><td>Memória (total do grupo)</td><td>Mais de 500 MB / mais de 200 MB</td><td>−30 / −15</td></tr>
+              <tr><td>Tempo ocioso médio</td><td>Mais de 60 min / mais de 30 min</td><td>−20 / −10</td></tr>
+              <tr><td>Abas com atividade em segundo plano</td><td>Mais de 3 / pelo menos 1</td><td>−20 / −10</td></tr>
+              <tr><td>Domínios de terceiros</td><td>Mais de 50 / mais de 20</td><td>−15 / −5</td></tr>
+            </tbody>
+          </table>
+          <p>Notas: A é 90 ou mais, B de 75 a 89, C de 60 a 74, D de 40 a 59, F abaixo de 40. Um grupo que usa 300 MB, com abas ociosas há 45 minutos em média, fica com 75: um B.</p>
+          <p>"Atividade em segundo plano" quer dizer que a aba concluiu uma requisição de rede nos últimos 60 segundos. "Terceiros" quer dizer qualquer domínio que não seja o site da própria aba e seus subdomínios. As CDNs mais comuns são contadas à parte, para não inflar a nota.</p>
+
+          <h2 id="act">O que faço depois de encontrar as abas pesadas?</h2>
+          <ul>
+            <li><strong>Recomendações de suspensão.</strong> O Takt lista 5 abas para descarregar, classificadas por memória e tempo ocioso, com peso extra para a atividade em segundo plano. Ele pula a aba ativa, as abas fixadas e uma aba que esteja sozinha no grupo. Clique em <strong>Suspender</strong> para descarregar uma.</li>
+            <li><strong>Fechar tudo</strong>, num cartão de grupo, fecha aquele grupo.</li>
+            <li><strong>Hiberne</strong> uma aba que você quer de volta depois. Veja <a href="../hibernate-tabs-free-memory/">como a hibernação funciona</a>.</li>
+          </ul>
+
+          <h2 id="budget">Posso limitar quanta memória um grupo de abas usa?</h2>
+          <p>Sim. Em <strong>Settings → Memory Budgets</strong>, digite o nome de um grupo e um limite em MB. O Takt verifica os orçamentos a cada 15 segundos.</p>
+          <p>Quando um grupo passa do limite, você recebe uma notificação com o grupo, o uso, o orçamento e "Suspending tabs in 10s — click to cancel". Se você ignorar, o Takt descarrega as maiores abas daquele grupo até ele voltar a ficar dentro do orçamento. Ele nunca toca na aba ativa, nas abas fixadas nem nas abas reproduzindo áudio. Clique na notificação para cancelar.</p>
+          <p>Os orçamentos usam as mesmas estimativas, então também precisam do Acesso a todos os sites.</p>
+
+          <h2 id="permissions">Quais permissões o painel precisa?</h2>
+          <p>Nenhuma na instalação. Você concede cada uma em <strong>Settings → Permissões</strong> e pode revogá-la ali a qualquer momento.</p>
+          <table>
+            <thead><tr><th>Permissão</th><th>O que acrescenta</th><th>Sem ela</th></tr></thead>
+            <tbody>
+              <tr><td>Acesso a todos os sites</td><td>Estimativas de memória por aba</td><td>A memória mostra "—"</td></tr>
+              <tr><td>Monitoramento de rede</td><td>Domínios de terceiros e atividade em segundo plano (também precisa do Acesso a todos os sites)</td><td>Sem as colunas de rede</td></tr>
+              <tr><td>Acesso à memória do sistema</td><td>A barra de RAM do sistema</td><td>"Memória do sistema indisponível"</td></tr>
+            </tbody>
+          </table>
+          <p>O Monitoramento de rede só vê as requisições feitas depois que você o concede. Recarregue as abas abertas para começar a contar. O Takt lê os endereços e os tempos das requisições, não o conteúdo das páginas.</p>
+
+          <figure>
+            <img src="../img/options-settings-permissions-dashboard.png" alt="Configurações de Permissões do Takt com os botões Conceder todas as permissões e Revogar todas as permissões, e as chaves de Monitoramento de rede, Acesso à memória do sistema e Acesso a todos os sites, cada uma descrevendo os recursos do painel que ativa e o que falta sem ela" width="700" loading="lazy" />
+            <figcaption>Cada permissão opcional diz quais recursos do painel ela acrescenta.</figcaption>
+          </figure>
+
+          <h2 id="limits">O que o painel não consegue dizer</h2>
+          <p>Ele estima a memória das páginas. Ele não lê a lista de processos do Chrome, então não vê a memória da GPU, as extensões nem o próprio navegador. Se a barra do sistema coloca a maior parte da sua RAM em "Outro", essa memória está indo para outros aplicativos ou para o próprio Chrome, não para o que as suas páginas guardam.</p>
+
+          <div class="cta">
+            <p>Encontre o grupo que está devorando sua RAM. Depois, ponha-o para dormir.</p>
+            <a class="btn" href="https://chromewebstore.google.com/detail/takt/plgfdnbgkjocmgegnkbihoeojcfphdic">Adicionar o Takt ao Chrome</a>
+          </div>
+
+          <h2 id="faq">Perguntas frequentes</h2>
+          <div class="faq">
+            <details>
+              <summary>Como o Takt estima a memória de uma aba?</summary>
+              <p>Ele soma o heap JavaScript em uso, o número de elementos × cerca de 1,5 KB, o tamanho decodificado dos recursos carregados e os buffers de canvas a largura × altura × 4 bytes. Use para comparar abas.</p>
+            </details>
+            <details>
+              <summary>Por que a coluna Memória mostra um traço?</summary>
+              <p>O Acesso a todos os sites não foi concedido, a aba está suspensa, ou é uma página em que extensões não podem rodar scripts, como as páginas <code>chrome://</code>.</p>
+            </details>
+            <details>
+              <summary>O Painel de recursos é gratuito?</summary>
+              <p>Não. O painel e os orçamentos de memória são Premium, por US$ 3/mês ou US$ 30/ano.</p>
+            </details>
+            <details>
+              <summary>O Takt envia os dados das minhas abas para algum lugar para medi-los?</summary>
+              <p>Não. Todas as medições rodam dentro do seu navegador. Veja <a href="../privacy-local-first/">como o Takt mantém os dados no seu computador</a>.</p>
+            </details>
+          </div>
+
+          <h2 id="next">Leia também</h2>
+          <div class="read-next">
+            <a href="../hibernate-tabs-free-memory/">Hiberne abas para liberar memória<span>Descarregue abas ociosas e desperte-as onde parou.</span></a>
+            <a href="../free-vs-premium/">Takt Free vs Premium<span>Todos os limites, lado a lado.</span></a>
+          </div>
+        </div>
+
+        <footer class="blog-post-footer">
+          <a href="../../../blog/">Todos os artigos</a> · <a href="../../../docs/resources/">Referência: Painel de recursos</a>
+        </footer>
+      </article>
+    </main>
+
+    <footer id="site-footer"></footer>
+    <script src="../../../js/includes.js"></script>
+    <script src="../../../js/nav.js"></script>
+  </body>
+</html>

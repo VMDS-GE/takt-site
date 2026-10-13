@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Offene Tabs in Chrome per Tastenkombination durchsuchen — Takt</title>
+    <meta
+      name="description"
+      content="Durchsuchen Sie Ihre offenen Chrome-Tabs per Tastatur: Alt+Shift+Space drücken, einen Teil des Titels oder der URL tippen, Enter. Quick Switch findet auch hibernierte Tabs und, mit Berechtigung, Ihren Verlauf. Dazu die kostenlose Suche im Takt-Popup."
+    />
+    <link rel="canonical" href="https://taktabs.com/de/blog/quick-switch-search-tabs/" />
+<!-- TAKT-LANG:head -->
+<link rel="alternate" hreflang="en" href="https://taktabs.com/blog/quick-switch-search-tabs/" />
+<link rel="alternate" hreflang="fr" href="https://taktabs.com/fr/blog/quick-switch-search-tabs/" />
+<link rel="alternate" hreflang="es" href="https://taktabs.com/es/blog/quick-switch-search-tabs/" />
+<link rel="alternate" hreflang="it" href="https://taktabs.com/it/blog/quick-switch-search-tabs/" />
+<link rel="alternate" hreflang="de" href="https://taktabs.com/de/blog/quick-switch-search-tabs/" />
+<link rel="alternate" hreflang="pt" href="https://taktabs.com/pt/blog/quick-switch-search-tabs/" />
+<link rel="alternate" hreflang="x-default" href="https://taktabs.com/blog/quick-switch-search-tabs/" />
+<!-- /TAKT-LANG:head -->
+    <meta property="og:type" content="article" />
+    <meta property="og:locale" content="de_DE" />
+    <meta property="og:title" content="Offene Tabs in Chrome per Tastenkombination durchsuchen" />
+    <meta property="og:description" content="Alt+Shift+Space, tippen, Enter. Offene Tabs, hibernierte Tabs und Verlauf durchsuchen, ohne die Maus anzufassen." />
+    <meta property="og:url" content="https://taktabs.com/de/blog/quick-switch-search-tabs/" />
+    <meta property="og:image" content="https://taktabs.com/de/blog/img/quick-switch.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <link rel="icon" type="image/png" sizes="32x32" href="../../../assets/favicon-32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="../../../assets/favicon-16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="../../../assets/apple-touch-icon.png" />
+    <meta name="theme-color" content="#FF3B30" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../../../css/tokens.css" />
+    <link rel="stylesheet" href="../../../css/base.css" />
+    <link rel="stylesheet" href="../../../css/layout.css" />
+    <link rel="stylesheet" href="../../../css/blog.css" />
+    <link rel="stylesheet" href="../../../css/articles.css" />
+    <script src="../../../js/theme.js"></script>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Article",
+            "inLanguage": "de",
+            "headline": "Offene Tabs in Chrome per Tastenkombination durchsuchen",
+            "description": "Alt+Shift+Space drücken, einen Teil des Titels oder der URL eines Tabs tippen und Enter drücken. Quick Switch durchsucht offene Tabs, hibernierte Tabs und, mit Berechtigung, den Browserverlauf.",
+            "datePublished": "2026-10-08",
+            "dateModified": "2026-10-08",
+            "author": { "@type": "Person", "name": "Vitor" },
+            "publisher": { "@type": "Organization", "name": "Takt", "url": "https://taktabs.com" },
+            "image": "https://taktabs.com/de/blog/img/quick-switch.png",
+            "mainEntityOfPage": "https://taktabs.com/de/blog/quick-switch-search-tabs/"
+          },
+          {
+            "@type": "HowTo",
+            "name": "Chrome-Tabs per Tastatur suchen und wechseln",
+            "step": [
+              { "@type": "HowToStep", "text": "Installieren Sie Takt und upgraden Sie auf Premium; Quick Switch ist eine Premium-Funktion." },
+              { "@type": "HowToStep", "text": "Drücken Sie auf einer beliebigen Seite Alt+Shift+Space." },
+              { "@type": "HowToStep", "text": "Tippen Sie einen Teil des Titels oder der URL des Tabs. Die Liste filtert bei jedem Tastendruck." },
+              { "@type": "HowToStep", "text": "Wählen Sie mit den Pfeiltasten nach oben und unten ein Ergebnis und drücken Sie Enter, um dorthin zu springen. Esc schließt die Suche." }
+            ]
+          },
+          {
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "Mit welcher Tastenkombination durchsuche ich offene Tabs in Takt?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Alt+Shift+Space öffnet Quick Switch. Sie können sie unter chrome://extensions/shortcuts ändern." }
+              },
+              {
+                "@type": "Question",
+                "name": "Funktioniert Quick Switch auf chrome://-Seiten?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Ja. Auf Seiten, auf denen Erweiterungen nicht laufen dürfen, etwa chrome://-Seiten, Erweiterungsseiten und dem Chrome Web Store, öffnet sich Quick Switch in einem kleinen Fenster mit 560 × 480 Pixeln statt auf der Seite." }
+              },
+              {
+                "@type": "Question",
+                "name": "Gibt es eine kostenlose Möglichkeit, Tabs in Takt zu durchsuchen?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Ja. Der Bereich Tabs im Takt-Popup listet alle offenen Tabs nach Gruppe auf und hat ein Suchfeld. Er ist kostenlos. Quick Switch, die Tastenkombination, ist Premium für $3/Monat oder $30/Jahr." }
+              },
+              {
+                "@type": "Question",
+                "name": "Durchsucht Quick Switch meinen Browserverlauf?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Nur, wenn Sie unter Settings die optionale Berechtigung für den Verlauf erteilen. Verlaufsergebnisse erscheinen, sobald Sie tippen, bis zu 20, und die Suche läuft innerhalb von Chrome." }
+              }
+            ]
+          },
+          {
+            "@type": "SoftwareApplication",
+            "name": "Takt",
+            "applicationCategory": "BrowserApplication",
+            "operatingSystem": "Chrome",
+            "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <header id="site-header"></header>
+
+    <main class="blog-main">
+      <article class="blog-post article">
+        <p class="eyebrow">Quick Switch</p>
+        <h1 class="blog-post-title">Offene Tabs in Chrome per Tastenkombination durchsuchen</h1>
+        <p class="lede">Um Ihre offenen Tabs in Chrome per Tastatur zu durchsuchen, drücken Sie <kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>Space</kbd>, tippen ein paar Buchstaben aus Titel oder Adresse des Tabs und drücken Enter. Das ist Quick Switch von Takt. Es findet auch die Tabs, die Sie hiberniert haben, und, wenn Sie es erlauben, Seiten aus Ihrem Verlauf.</p>
+        <p class="blog-post-meta">Aktualisiert am 8. Oktober 2026 · 5 Min. Lesezeit</p>
+<!-- TAKT-LANG:nav -->
+<p class="lang-links"><a href="../../../blog/quick-switch-search-tabs/" hreflang="en" lang="en">English</a> · <a href="../../../fr/blog/quick-switch-search-tabs/" hreflang="fr" lang="fr">Français</a> · <a href="../../../es/blog/quick-switch-search-tabs/" hreflang="es" lang="es">Español</a> · <a href="../../../it/blog/quick-switch-search-tabs/" hreflang="it" lang="it">Italiano</a> · <span aria-current="true">Deutsch</span> · <a href="../../../pt/blog/quick-switch-search-tabs/" hreflang="pt" lang="pt">Português</a></p>
+<!-- /TAKT-LANG:nav -->
+
+        <div class="blog-post-body">
+          <div class="tldr">
+            <p><strong>Kurz gesagt:</strong> <kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>Space</kbd> öffnet ein Suchfeld über der Seite. Tippen, mit den Pfeiltasten wählen, Enter drücken.</p>
+            <ul>
+              <li>Durchsucht offene Tabs, hibernierte Tabs und, wenn Sie die Berechtigung erteilen, den Browserverlauf.</li>
+              <li>Funktioniert auch auf <code>chrome://</code>-Seiten, in einem kleinen Fenster.</li>
+              <li>Quick Switch ist Premium ($3/Monat oder $30/Jahr). Das Suchfeld im Popup-Bereich Tabs ist kostenlos.</li>
+            </ul>
+          </div>
+
+          <h2 id="why">Warum dauert es so lange, einen Tab zu finden?</h2>
+          <p>Ab etwa 20 Tabs zeigt Chromes Tab-Leiste kaum mehr als Favicons. Sie suchen nach Symbolen, klicken auf den falschen GitHub-Tab, versuchen es noch einmal.</p>
+          <p>Tippen geht schneller als Suchen mit den Augen. Sie erinnern sich an „den Pull Request zum Caching“, nicht daran, wo er in der Leiste sitzt.</p>
+
+          <h2 id="how">Wie durchsuche ich meine offenen Tabs per Tastatur?</h2>
+          <ol class="steps">
+            <li>Drücken Sie <kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>Space</kbd>. Über der aktuellen Seite öffnet sich ein Suchfeld.</li>
+            <li>Tippen Sie einen beliebigen Teil des Titels oder der URL. Groß- und Kleinschreibung spielen keine Rolle, und die Liste aktualisiert sich bei jedem Tastendruck.</li>
+            <li>Bewegen Sie sich mit <kbd>↑</kbd> und <kbd>↓</kbd>. Am Listenende springt die Auswahl wieder an den Anfang.</li>
+            <li>Drücken Sie <kbd>Enter</kbd>, um hinzuspringen. Takt fokussiert den Tab und holt sein Fenster nach vorn.</li>
+          </ol>
+          <p>Zwei weitere Tasten: <kbd>Tab</kbd> übernimmt den Titel des gewählten Ergebnisses ins Suchfeld, und <kbd>Esc</kbd> schließt es. Das Feld schließt sich auch, wenn Sie daneben klicken oder das Fenster wechseln.</p>
+
+          <figure>
+            <img src="../img/quick-switch.png" alt="Quick Switch von Takt mit leerem Suchfeld und einer Liste Geöffnete Tabs: Tabs von Wikipedia, Reddit, YouTube, Hacker News, Chrome for Developers und MDN, jeweils mit URL und einem farbigen Punkt für ihre Tab-Gruppe, dazu Tastenhinweise zum Navigieren, Wechseln und Schließen" width="800" loading="lazy" />
+            <figcaption>Mit leerer Suche listet Quick Switch Ihre Tabs auf, die zuletzt genutzten zuerst.</figcaption>
+          </figure>
+
+          <h2 id="results">Was durchsucht Quick Switch?</h2>
+          <table>
+            <thead><tr><th>Quelle</th><th>Wann sie erscheint</th><th>Enter bewirkt</th></tr></thead>
+            <tbody>
+              <tr><td>Offene Tabs</td><td>Immer; zuletzt genutzte zuerst, aktueller Tab zuletzt</td><td>Wechselt zum Tab</td></tr>
+              <tr><td>Hibernierte Tabs</td><td>Immer, bis zu 50</td><td>Weckt den Tab dort auf, wo er war</td></tr>
+              <tr><td>Verlauf</td><td>Sobald Sie tippen, mit Berechtigung für den Verlauf; bis zu 20</td><td>Öffnet die Seite in einem neuen Tab</td></tr>
+            </tbody>
+          </table>
+          <p>Die Reihenfolge ist fest: offene Tabs, dann hibernierte Tabs, dann der Verlauf. Der Verlauf lässt Seiten aus, die bereits offen oder hiberniert sind, und listet nie <code>chrome://</code>- oder Erweiterungsseiten auf.</p>
+
+          <figure>
+            <img src="../img/quick-switch-hibernated.png" alt="Quick Switch mit der Suche „the“: zwei offene GitHub-Tabs, deren Titel „The“ enthalten, danach The Verge als hibernierter Tab in der Gruppe News mit dem Hinweis reaktivieren" width="800" loading="lazy" />
+            <figcaption>Ein hibernierter Tab erscheint in derselben Suche. Enter weckt ihn auf.</figcaption>
+          </figure>
+          <p>Diese letzte Zeile ist der Grund, warum Suche und <a href="../hibernate-tabs-free-memory/">Hibernierung</a> in derselben Erweiterung stecken. Sie können Tabs schließen, ohne Angst, sie zu verlieren, denn ihr Name genügt, um sie zurückzuholen.</p>
+
+          <h2 id="chrome-pages">Funktioniert es auf chrome://-Seiten?</h2>
+          <p>Ja. Erweiterungen dürfen nicht auf Chromes eigenen Seiten zeichnen, deshalb öffnet sich Quick Switch dort als Fenster mit 560 × 480 Pixeln. Das gilt für <code>chrome://</code>-, <code>chrome-extension://</code>-, <code>about:</code>- und <code>chrome-untrusted://</code>-Seiten sowie den Chrome Web Store. Die Tasten sind dieselben.</p>
+
+          <h2 id="free">Gibt es eine kostenlose Möglichkeit, Tabs zu durchsuchen?</h2>
+          <p>Ja: den Bereich <strong>Tabs</strong> im Takt-Popup. Er listet jeden offenen Tab unter seiner Tab-Gruppe auf, ungruppierte Tabs in einem eigenen Abschnitt. Tippen Sie ins Suchfeld, um nach Titel oder URL zu filtern; <kbd>Esc</kbd> leert es. Klicken Sie auf eine Zeile, um den Tab zu fokussieren und sein Fenster nach vorn zu holen.</p>
+          <figure class="narrow">
+            <img src="../img/popup-tabs.png" alt="Takt-Popup im Bereich Tabs: ein Suchfeld Search tabs über offenen Tabs, aufgelistet unter ihren Gruppen Code, Docs, Entertainment, News und Research, jede Zeile mit Favicon, Titel und gekürzter URL" width="420" loading="lazy" />
+            <figcaption>Der Bereich Tabs im Popup. Kostenlos, nur offene Tabs.</figcaption>
+          </figure>
+
+          <table>
+            <thead><tr><th></th><th>Popup-Bereich Tabs</th><th>Quick Switch</th></tr></thead>
+            <tbody>
+              <tr><td>Plan</td><td>Free</td><td>Premium</td></tr>
+              <tr><td>So öffnen Sie es</td><td>Takt-Symbol anklicken, dann Tabs</td><td><kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>Space</kbd></td></tr>
+              <tr><td>Offene Tabs</td><td>Ja, nach Gruppe</td><td>Ja, zuletzt genutzte zuerst</td></tr>
+              <tr><td>Hibernierte Tabs</td><td>Nein (sie haben einen eigenen Bereich)</td><td>Ja</td></tr>
+              <tr><td>Verlauf</td><td>Nein</td><td>Mit Berechtigung</td></tr>
+              <tr><td>Maus nötig</td><td>Zum Öffnen und Auswählen</td><td>Nein</td></tr>
+            </tbody>
+          </table>
+
+          <h2 id="shortcut">Kann ich die Tastenkombination ändern?</h2>
+          <p>Ja. Öffnen Sie <code>chrome://extensions/shortcuts</code>, suchen Sie Takt, klicken Sie auf den Stift neben Quick-switch und drücken Sie die gewünschten Tasten.</p>
+
+          <h2 id="privacy">Wird mein Verlauf irgendwohin gesendet?</h2>
+          <p>Nein. Die Verlaufssuche ist aus, bis Sie unter <strong>Settings → Berechtigungen</strong> die optionale Berechtigung Browserverlauf-Zugriff erteilen. Die Suche läuft innerhalb von Chrome, und Sie können die Berechtigung auf derselben Seite widerrufen. Ohne sie durchsucht Quick Switch weiterhin offene und hibernierte Tabs.</p>
+
+          <h2 id="limits">Was Quick Switch nicht kann</h2>
+          <p>Es findet genau die Buchstabenfolge, die Sie tippen, irgendwo in Titel oder URL. Eine unscharfe Suche gibt es nicht, „gthub“ findet also nichts. Wer im kostenlosen Plan die Tastenkombination drückt, bekommt keine Reaktion; nutzen Sie stattdessen den Bereich Tabs.</p>
+
+          <div class="cta">
+            <p>Schluss mit der Suche zwischen Favicons. Tippen Sie den Namen des Tabs.</p>
+            <a class="btn" href="https://chromewebstore.google.com/detail/takt/plgfdnbgkjocmgegnkbihoeojcfphdic">Zu Chrome hinzufügen</a>
+          </div>
+
+          <h2 id="faq">Häufige Fragen</h2>
+          <div class="faq">
+            <details>
+              <summary>Mit welcher Tastenkombination durchsuche ich offene Tabs in Takt?</summary>
+              <p><kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>Space</kbd> öffnet Quick Switch. Ändern können Sie sie unter <code>chrome://extensions/shortcuts</code>.</p>
+            </details>
+            <details>
+              <summary>Funktioniert Quick Switch auf chrome://-Seiten?</summary>
+              <p>Ja. Auf Seiten, auf denen Erweiterungen nicht laufen dürfen, öffnet es sich in einem Fenster mit 560 × 480 Pixeln statt über der Seite.</p>
+            </details>
+            <details>
+              <summary>Gibt es eine kostenlose Möglichkeit, Tabs in Takt zu durchsuchen?</summary>
+              <p>Ja. Der Bereich Tabs im Popup listet offene Tabs nach Gruppe auf und hat ein Suchfeld. Quick Switch ist Premium, für $3/Monat oder $30/Jahr.</p>
+            </details>
+            <details>
+              <summary>Durchsucht Quick Switch meinen Browserverlauf?</summary>
+              <p>Nur mit der optionalen Berechtigung für den Verlauf. Verlaufsergebnisse erscheinen, sobald Sie tippen, bis zu 20, und die Suche läuft innerhalb von Chrome.</p>
+            </details>
+          </div>
+
+          <h2 id="next">Weiterlesen</h2>
+          <div class="read-next">
+            <a href="../hibernate-tabs-free-memory/">Tabs in den Ruhezustand versetzen und Speicher freigeben<span>Tabs jetzt schließen, später aufwecken.</span></a>
+            <a href="../auto-group-tabs-chrome/">Chrome-Tabs automatisch gruppieren<span>Regeln, die jeden neuen Tab einordnen.</span></a>
+          </div>
+        </div>
+
+        <footer class="blog-post-footer">
+          <a href="../../../blog/">Alle Artikel zu den Funktionen</a> · <a href="../../../docs/quick-switch/">Referenz: Quick Switch</a>
+        </footer>
+      </article>
+    </main>
+
+    <footer id="site-footer"></footer>
+    <script src="../../../js/includes.js"></script>
+    <script src="../../../js/nav.js"></script>
+  </body>
+</html>

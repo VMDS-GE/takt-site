@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>How to save and restore tab sessions in Chrome — Takt</title>
+    <meta
+      name="description"
+      content="Save your Chrome windows, tab groups and loose tabs as a named session and restore them later in a new window or over the current one. Up to 50 sessions, stored on your machine."
+    />
+    <link rel="canonical" href="https://taktabs.com/blog/save-restore-tab-sessions/" />
+<!-- TAKT-LANG:head -->
+<link rel="alternate" hreflang="en" href="https://taktabs.com/blog/save-restore-tab-sessions/" />
+<link rel="alternate" hreflang="fr" href="https://taktabs.com/fr/blog/save-restore-tab-sessions/" />
+<link rel="alternate" hreflang="es" href="https://taktabs.com/es/blog/save-restore-tab-sessions/" />
+<link rel="alternate" hreflang="it" href="https://taktabs.com/it/blog/save-restore-tab-sessions/" />
+<link rel="alternate" hreflang="de" href="https://taktabs.com/de/blog/save-restore-tab-sessions/" />
+<link rel="alternate" hreflang="pt" href="https://taktabs.com/pt/blog/save-restore-tab-sessions/" />
+<link rel="alternate" hreflang="x-default" href="https://taktabs.com/blog/save-restore-tab-sessions/" />
+<!-- /TAKT-LANG:head -->
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="How to save and restore tab sessions in Chrome" />
+    <meta property="og:description" content="Name a snapshot of your windows and groups. Bring it back in one click, groups and colors included." />
+    <meta property="og:url" content="https://taktabs.com/blog/save-restore-tab-sessions/" />
+    <meta property="og:image" content="https://taktabs.com/blog/img/options-sessions-list.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <link rel="icon" type="image/png" sizes="32x32" href="../../assets/favicon-32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="../../assets/favicon-16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="../../assets/apple-touch-icon.png" />
+    <meta name="theme-color" content="#FF3B30" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../../css/tokens.css" />
+    <link rel="stylesheet" href="../../css/base.css" />
+    <link rel="stylesheet" href="../../css/layout.css" />
+    <link rel="stylesheet" href="../../css/blog.css" />
+    <link rel="stylesheet" href="../../css/articles.css" />
+    <script src="../../js/theme.js"></script>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Article",
+            "headline": "How to save and restore tab sessions in Chrome",
+            "description": "Save Chrome windows, tab groups and loose tabs as a named session and restore them later in a new window or over the current one.",
+            "datePublished": "2026-10-08",
+            "dateModified": "2026-10-08",
+            "author": { "@type": "Person", "name": "Vitor" },
+            "publisher": { "@type": "Organization", "name": "Takt", "url": "https://taktabs.com" },
+            "image": "https://taktabs.com/blog/img/options-sessions-list.png",
+            "mainEntityOfPage": "https://taktabs.com/blog/save-restore-tab-sessions/"
+          },
+          {
+            "@type": "HowTo",
+            "name": "Save and restore a tab session in Chrome",
+            "step": [
+              { "@type": "HowToStep", "text": "Install Takt from the Chrome Web Store and open its popup." },
+              { "@type": "HowToStep", "text": "Go to the Sessions pane and click + Save." },
+              { "@type": "HowToStep", "text": "Type a name of up to 60 characters, choose This window or All windows, and click Save." },
+              { "@type": "HowToStep", "text": "Later, click Restore next to the session and choose Open in new window or Replace current window." }
+            ]
+          },
+          {
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "Does Chrome save tab sessions on its own?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Chrome's 'Continue where you left off' setting reopens your last browsing session when Chrome starts. It keeps one session, the last one. It does not keep a list of named snapshots you can return to later." }
+              },
+              {
+                "@type": "Question",
+                "name": "How many sessions can I save in Takt?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Up to 50. When the list is full, delete an older session before saving a new one. Auto-saved sessions make room by replacing the oldest auto-save." }
+              },
+              {
+                "@type": "Question",
+                "name": "Are tab sessions free in Takt?",
+                "acceptedAnswer": { "@type": "Answer", "text": "No. Saving, restoring, renaming and auto-saving sessions are Premium features ($3/month or $30/year). On the free plan you can see the saved list." }
+              },
+              {
+                "@type": "Question",
+                "name": "Are my sessions uploaded anywhere?",
+                "acceptedAnswer": { "@type": "Answer", "text": "No. Sessions are stored in Chrome's local storage on your computer. They only leave it if you export a backup or turn on File Sync or Drive Sync yourself." }
+              }
+            ]
+          },
+          {
+            "@type": "SoftwareApplication",
+            "name": "Takt",
+            "applicationCategory": "BrowserApplication",
+            "operatingSystem": "Chrome",
+            "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <header id="site-header"></header>
+
+    <main class="blog-main">
+      <article class="blog-post article">
+        <p class="eyebrow">Sessions</p>
+        <h1 class="blog-post-title">How to save and restore tab sessions in Chrome</h1>
+        <p class="lede">To save a tab session in Chrome, snapshot your windows and groups under a name, then restore that name when you need it again. Chrome reopens your last session. It doesn't keep a shelf of named ones.</p>
+        <p class="blog-post-meta">Updated 8 October 2026 · 5 min read</p>
+<!-- TAKT-LANG:nav -->
+<p class="lang-links"><span aria-current="true">English</span> · <a href="../../fr/blog/save-restore-tab-sessions/" hreflang="fr" lang="fr">Français</a> · <a href="../../es/blog/save-restore-tab-sessions/" hreflang="es" lang="es">Español</a> · <a href="../../it/blog/save-restore-tab-sessions/" hreflang="it" lang="it">Italiano</a> · <a href="../../de/blog/save-restore-tab-sessions/" hreflang="de" lang="de">Deutsch</a> · <a href="../../pt/blog/save-restore-tab-sessions/" hreflang="pt" lang="pt">Português</a></p>
+<!-- /TAKT-LANG:nav -->
+
+        <div class="blog-post-body">
+          <div class="tldr">
+            <p><strong>Short answer:</strong> in Takt's popup, open <strong>Sessions</strong>, click <strong>+ Save</strong>, name it, and pick <em>This window</em> or <em>All windows</em>. Click <strong>Restore</strong> later to get the same tabs back, inside the same named, colored groups.</p>
+            <ul>
+              <li>Saves every tab, every group (name, color, collapsed state), loose tabs and your Hibernate list.</li>
+              <li>Restore into a new window, or replace the current one.</li>
+              <li>Up to 50 sessions, stored on your machine. <span class="badge badge-premium">Premium</span></li>
+            </ul>
+          </div>
+
+          <h2 id="why">Why isn't Chrome's "Continue where you left off" enough?</h2>
+          <p>For one job, it is. Turn it on and Chrome reopens the tabs from your last session when it starts. If that's all you need, you don't need an extension.</p>
+          <p>It breaks down when you switch between pieces of work. Your thesis tabs, your Monday standup tabs and your trip planning can't all be "the last session". Close the thesis window to make room for the standup, and the thesis tabs are gone from that list.</p>
+          <p>A named session is a bookmark for a whole workspace. You close the window without worrying, because you can bring it back by name.</p>
+
+          <h2 id="save">How do I save a tab session?</h2>
+          <ol class="steps">
+            <li>Install <a href="https://chromewebstore.google.com/detail/takt/plgfdnbgkjocmgegnkbihoeojcfphdic">Takt from the Chrome Web Store</a>.</li>
+            <li>Open the popup and go to the <strong>Sessions</strong> pane.</li>
+            <li>Click <strong>+ Save</strong> and type a name, up to 60 characters. Names must be unique.</li>
+            <li>Choose <em>This window</em> (the default) or <em>All windows</em>, then click <strong>Save</strong>.</li>
+          </ol>
+
+          <figure class="narrow">
+            <img src="../img/popup-sessions.png" alt="Takt popup on the Sessions pane, with a + Save button, a search field and two saved sessions, Thesis research and Monday standup, each showing 14 tabs, 5 groups and 2 hibernated, with Restore and delete buttons" width="420" loading="lazy" />
+            <figcaption>The Sessions pane in the popup. Each entry shows its tab, group and hibernated counts.</figcaption>
+          </figure>
+
+          <h2 id="what">What does a session capture?</h2>
+          <table>
+            <thead><tr><th>Saved</th><th>Details</th></tr></thead>
+            <tbody>
+              <tr><td>Tabs</td><td>URL and title of every tab</td></tr>
+              <tr><td>Tab groups</td><td>Name, color, collapsed state, and which tabs belong to each</td></tr>
+              <tr><td>Loose tabs</td><td>Tabs outside any group</td></tr>
+              <tr><td>Windows</td><td>One window, or every normal window with <em>All windows</em></td></tr>
+              <tr><td>Hibernated tabs</td><td>Your Hibernate list, restored to it on restore</td></tr>
+            </tbody>
+          </table>
+          <p>Chrome doesn't let extensions open <code>chrome://</code>, <code>about:</code> or extension pages, so those tabs are skipped.</p>
+
+          <h2 id="restore">How do I restore a session?</h2>
+          <p>Click <strong>Restore</strong>. A dialog offers two modes:</p>
+          <ul>
+            <li><strong>Open in new window.</strong> Your current window stays as it is.</li>
+            <li><strong>Replace current window.</strong> The saved tabs open in the current window, then the tabs that were there close.</li>
+          </ul>
+          <p>The dialog counts down 7 seconds, then restores with the selected mode. Click <strong>Restore</strong> in the dialog to skip the wait, or <strong>Cancel</strong>. In a multi-window session, the first window follows your choice and every other window opens as a new one.</p>
+
+          <h2 id="manage">Can I rename sessions or save them automatically?</h2>
+          <p>Yes to both.</p>
+          <ul>
+            <li><strong>Rename:</strong> double-click a name in the popup, or use <strong>Rename</strong> on the options page Sessions tab. Press Enter to save.</li>
+            <li><strong>Auto-save:</strong> turn on <em>Auto-save on window close</em> in Settings. Closing a window saves its tabs as a session named "Auto-save" plus the date and time.</li>
+          </ul>
+          <p>The options page also lets you expand a session to see every group and tab inside it before you restore.</p>
+
+          <figure>
+            <img src="../img/options-sessions-list.png" alt="Takt options page, Sessions tab: 2 saved sessions, Thesis research and Monday standup, each with 14 tabs, 5 groups, 2 hibernated, a created date, and Restore, Rename and Delete buttons" width="700" loading="lazy" />
+            <figcaption>The Sessions tab on the options page. Click a row to see its groups and tabs.</figcaption>
+          </figure>
+
+          <h2 id="compare">Takt sessions vs Chrome's built-in options</h2>
+          <table>
+            <thead><tr><th></th><th>Chrome "Continue where you left off"</th><th>Takt sessions</th></tr></thead>
+            <tbody>
+              <tr><td>How many</td><td>The last session</td><td>Up to 50, named</td></tr>
+              <tr><td>What it keeps</td><td>The tabs you had open last time</td><td>Any snapshot you saved, or an auto-save when a window closes</td></tr>
+              <tr><td>When it restores</td><td>When Chrome starts</td><td>Whenever you click Restore</td></tr>
+              <tr><td>Cost</td><td>Free, built in</td><td>Premium</td></tr>
+            </tbody>
+          </table>
+
+          <h2 id="limits">What sessions don't do</h2>
+          <ul>
+            <li><strong>They stay on this computer.</strong> Sessions live in Chrome's local storage and don't follow your Google account. To move them, use a <a href="../backup-and-sync-tabs/">backup or sync</a>.</li>
+            <li><strong>They are snapshots.</strong> A saved session doesn't change when you change the window. Save again under a new name to keep a newer version.</li>
+            <li><strong>50 is the cap.</strong> Delete old ones to make room. Auto-saves replace the oldest auto-save, never a session you named.</li>
+            <li><strong>No page state.</strong> Restoring reopens the URLs. Form contents and scroll positions are not saved.</li>
+          </ul>
+
+          <div class="cta">
+            <p>Close the window. Keep the work.</p>
+            <a class="btn" href="https://chromewebstore.google.com/detail/takt/plgfdnbgkjocmgegnkbihoeojcfphdic">Add Takt to Chrome, free</a>
+          </div>
+
+          <h2 id="faq">FAQ</h2>
+          <div class="faq">
+            <details>
+              <summary>Does Chrome save tab sessions on its own?</summary>
+              <p>"Continue where you left off" reopens your last session when Chrome starts. It keeps that one session, not a list of named snapshots.</p>
+            </details>
+            <details>
+              <summary>How many sessions can I save in Takt?</summary>
+              <p>Up to 50. When the list is full, delete an older session first. Auto-saves make room by replacing the oldest auto-save.</p>
+            </details>
+            <details>
+              <summary>Are tab sessions free in Takt?</summary>
+              <p>No. Saving, restoring, renaming and auto-saving are Premium ($3/month or $30/year). On the free plan you can see the saved list.</p>
+            </details>
+            <details>
+              <summary>Are my sessions uploaded anywhere?</summary>
+              <p>No. They're stored in Chrome's local storage on your computer. They leave it only if you export a backup or turn on File Sync or Drive Sync. See <a href="../privacy-local-first/">how Takt keeps data local</a>.</p>
+            </details>
+          </div>
+
+          <h2 id="next">Read next</h2>
+          <div class="read-next">
+            <a href="../hibernate-tabs-free-memory/">Put idle tabs to sleep<span>Hibernation frees memory without losing the tab.</span></a>
+            <a href="../backup-and-sync-tabs/">Back up and sync your setup<span>JSON export, folder sync and Google Drive.</span></a>
+          </div>
+        </div>
+
+        <footer class="blog-post-footer">
+          <a href="../">All feature articles</a> · <a href="../../docs/sessions/">Sessions reference</a>
+        </footer>
+      </article>
+    </main>
+
+    <footer id="site-footer"></footer>
+    <script src="../../js/includes.js"></script>
+    <script src="../../js/nav.js"></script>
+  </body>
+</html>

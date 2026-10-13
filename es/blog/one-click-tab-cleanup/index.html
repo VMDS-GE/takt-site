@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cómo ordenar las pestañas de Chrome con un clic — Takt</title>
+    <meta
+      name="description"
+      content="Agrupa, desagrupa, contrae, ordena y elimina duplicados de todas tus pestañas de Chrome desde un popup o con un atajo. Qué hace cada botón, qué es gratis y qué atajos conviene aprender."
+    />
+    <link rel="canonical" href="https://taktabs.com/es/blog/one-click-tab-cleanup/" />
+<!-- TAKT-LANG:head -->
+<link rel="alternate" hreflang="en" href="https://taktabs.com/blog/one-click-tab-cleanup/" />
+<link rel="alternate" hreflang="fr" href="https://taktabs.com/fr/blog/one-click-tab-cleanup/" />
+<link rel="alternate" hreflang="es" href="https://taktabs.com/es/blog/one-click-tab-cleanup/" />
+<link rel="alternate" hreflang="it" href="https://taktabs.com/it/blog/one-click-tab-cleanup/" />
+<link rel="alternate" hreflang="de" href="https://taktabs.com/de/blog/one-click-tab-cleanup/" />
+<link rel="alternate" hreflang="pt" href="https://taktabs.com/pt/blog/one-click-tab-cleanup/" />
+<link rel="alternate" hreflang="x-default" href="https://taktabs.com/blog/one-click-tab-cleanup/" />
+<!-- /TAKT-LANG:head -->
+    <meta property="og:type" content="article" />
+    <meta property="og:locale" content="es_ES" />
+    <meta property="og:title" content="Cómo ordenar las pestañas de Chrome con un clic" />
+    <meta property="og:description" content="Agrupar pestañas, Contraer todo, Ordenar por dominio y Cerrar duplicados: un navegador desordenado, en orden con cuatro clics o tres atajos." />
+    <meta property="og:url" content="https://taktabs.com/es/blog/one-click-tab-cleanup/" />
+    <meta property="og:image" content="https://taktabs.com/es/blog/img/options-groups.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <link rel="icon" type="image/png" sizes="32x32" href="../../../assets/favicon-32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="../../../assets/favicon-16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="../../../assets/apple-touch-icon.png" />
+    <meta name="theme-color" content="#FF3B30" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../../../css/tokens.css" />
+    <link rel="stylesheet" href="../../../css/base.css" />
+    <link rel="stylesheet" href="../../../css/layout.css" />
+    <link rel="stylesheet" href="../../../css/blog.css" />
+    <link rel="stylesheet" href="../../../css/articles.css" />
+    <script src="../../../js/theme.js"></script>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Article",
+            "headline": "Cómo ordenar las pestañas de Chrome con un clic",
+            "description": "Agrupa, desagrupa, contrae, ordena y elimina duplicados de todas tus pestañas de Chrome desde un popup o con un atajo de teclado.",
+            "inLanguage": "es",
+            "datePublished": "2026-10-08",
+            "dateModified": "2026-10-08",
+            "author": { "@type": "Person", "name": "Vitor" },
+            "publisher": { "@type": "Organization", "name": "Takt", "url": "https://taktabs.com" },
+            "image": "https://taktabs.com/es/blog/img/options-groups.png",
+            "mainEntityOfPage": "https://taktabs.com/es/blog/one-click-tab-cleanup/"
+          },
+          {
+            "@type": "HowTo",
+            "name": "Ordenar una ventana de Chrome caótica en cuatro clics",
+            "step": [
+              { "@type": "HowToStep", "text": "Abre el popup de Takt y haz clic en Cerrar duplicados para cerrar las pestañas repetidas de la ventana actual." },
+              { "@type": "HowToStep", "text": "Haz clic en Agrupar pestañas (o pulsa Alt+Shift+G) para llevar cada pestaña a su grupo." },
+              { "@type": "HowToStep", "text": "Haz clic en Ordenar por dominio para que las pestañas del mismo sitio queden juntas." },
+              { "@type": "HowToStep", "text": "Haz clic en Contraer todo (o pulsa Alt+Shift+C) para plegar cada grupo hasta dejar solo su etiqueta." }
+            ]
+          },
+          {
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "¿Cuáles son los atajos de teclado predeterminados de Takt?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Alt+Shift+G agrupa todas las pestañas, Alt+Shift+U las desagrupa, Alt+Shift+C contrae todos los grupos y Alt+Shift+Space abre Quick Switch (Premium). Expandir todo no tiene tecla predeterminada; puedes asignarle una en chrome://extensions/shortcuts." }
+              },
+              {
+                "@type": "Question",
+                "name": "¿Qué pestaña conserva Cerrar duplicados?",
+                "acceptedAnswer": { "@type": "Answer", "text": "La primera copia según el orden de la barra de pestañas, empezando por la izquierda. Las copias posteriores de la ventana actual se cierran. Dos URL cuentan como la misma según tu ajuste de coincidencia de URL, que por defecto ignora el #fragmento." }
+              },
+              {
+                "@type": "Question",
+                "name": "¿Los botones de limpieza son gratis?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Agrupar, Desagrupar, Contraer, Expandir, Cerrar duplicados, el panel Tabs y la contracción automática en la misma ventana son gratis. Ordenar por dominio es gratis para la ventana actual. Premium (3 $/mes o 30 $/año) añade ordenar todas las ventanas, las acciones de grupo, la contracción automática entre ventanas y el grupo colector Otros." }
+              },
+              {
+                "@type": "Question",
+                "name": "¿Puedo cerrar un grupo de pestañas entero de una vez?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Con Premium, sí. Cierra, guarda como marcador o mueve un grupo entero desde la vista Groups de las opciones de Takt, o desde la entrada Acciones de grupo del menú contextual de la página. Cerrar un grupo deja fuera las pestañas fijadas, y la vista Groups pide confirmación antes." }
+              }
+            ]
+          },
+          {
+            "@type": "SoftwareApplication",
+            "name": "Takt",
+            "applicationCategory": "BrowserApplication",
+            "operatingSystem": "Chrome",
+            "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <header id="site-header"></header>
+
+    <main class="blog-main">
+      <article class="blog-post article">
+        <p class="eyebrow">Limpieza</p>
+        <h1 class="blog-post-title">Cómo ordenar las pestañas de Chrome con un clic</h1>
+        <p class="lede">Para ordenar las pestañas de Chrome con un clic, abre el popup de Takt y pulsa Agrupar pestañas y después Contraer todo. Con dos clics, una tira de pestañas sueltas se convierte en una fila de grupos plegados y con etiqueta.</p>
+        <p class="blog-post-meta">Actualizado el 8 de octubre de 2026 · 5 min de lectura</p>
+<!-- TAKT-LANG:nav -->
+<p class="lang-links"><a href="../../../blog/one-click-tab-cleanup/" hreflang="en" lang="en">English</a> · <a href="../../../fr/blog/one-click-tab-cleanup/" hreflang="fr" lang="fr">Français</a> · <span aria-current="true">Español</span> · <a href="../../../it/blog/one-click-tab-cleanup/" hreflang="it" lang="it">Italiano</a> · <a href="../../../de/blog/one-click-tab-cleanup/" hreflang="de" lang="de">Deutsch</a> · <a href="../../../pt/blog/one-click-tab-cleanup/" hreflang="pt" lang="pt">Português</a></p>
+<!-- /TAKT-LANG:nav -->
+
+        <div class="blog-post-body">
+          <div class="tldr">
+            <p><strong>Respuesta corta:</strong> Takt reúne todas las acciones masivas sobre pestañas en un popup y en tres atajos predeterminados. <kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>G</kbd> agrupa, <kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>U</kbd> desagrupa, <kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>C</kbd> contrae.</p>
+            <ul>
+              <li>Free: Agrupar, Desagrupar, Contraer, Expandir, Cerrar duplicados, Ordenar por dominio (ventana actual) y el panel Tabs.</li>
+              <li>Premium: cerrar, guardar como marcador o mover un grupo entero, ordenar todas las ventanas, contraer las demás ventanas y un grupo "Otros" para lo que sobra.</li>
+              <li>Todo se ejecuta en tu equipo. Sin cuenta.</li>
+            </ul>
+          </div>
+
+          <h2 id="buttons">¿Qué hace cada botón de limpieza?</h2>
+          <p>El panel Inicio del popup tiene un bloque de <strong>Acciones rápidas</strong>. Agrupar, Desagrupar, Contraer, Expandir y Cerrar duplicados se ponen en gris cuando no tendrían efecto, así que el bloque también te dice en qué estado están tus pestañas.</p>
+
+          <figure class="narrow">
+            <img src="../img/popup-home.png" alt="Panel Inicio del popup de Takt con el modo de agrupación en Por reglas y el bloque Acciones rápidas: Agrupar pestañas, Desagrupar todo, Contraer todo, Expandir todo en gris, Hibernar pestaña, Ordenar por dominio y Cerrar duplicados, tapados en parte por un aviso 'Pestaña hibernada'" width="420" loading="lazy" />
+            <figcaption>Las acciones rápidas del popup. Expandir todo está en gris porque todos los grupos ya están abiertos.</figcaption>
+          </figure>
+
+          <table>
+            <thead>
+              <tr><th>Botón</th><th>Qué hace</th><th>Alcance</th><th>Plan</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Agrupar pestañas</td><td>Lleva las pestañas a grupos según tus reglas, por categoría o con IA</td><td>Todas las ventanas</td><td>Free</td></tr>
+              <tr><td>Desagrupar todo</td><td>Quita todos los grupos y mantiene todas las pestañas</td><td>Todas las ventanas</td><td>Free</td></tr>
+              <tr><td>Contraer todo</td><td>Pliega cada grupo hasta su etiqueta</td><td>Todas las ventanas</td><td>Free</td></tr>
+              <tr><td>Expandir todo</td><td>Abre todos los grupos</td><td>Ventana actual</td><td>Free</td></tr>
+              <tr><td>Cerrar duplicados</td><td>Cierra las URL repetidas y conserva la primera copia</td><td>Ventana actual</td><td>Free</td></tr>
+              <tr><td>Ordenar por dominio</td><td>Pone juntas las pestañas del mismo sitio</td><td>Ventana actual (Free), todas las ventanas (Premium)</td><td>Free / Premium</td></tr>
+            </tbody>
+          </table>
+          <p>Agrupar pestañas sigue el modo de agrupación elegido justo encima. En los modos Categoría e IA, el plan Free crea hasta 5 grupos por pasada. Más información en <a href="../auto-group-tabs-chrome/">agrupar con reglas</a> y <a href="../group-tabs-by-category-or-ai/">agrupar por categoría o con IA</a>.</p>
+
+          <h2 id="four-clicks">¿Cómo ordeno una ventana caótica en cuatro clics?</h2>
+          <ol class="steps">
+            <li><strong>Cerrar duplicados.</strong> Se cierran las pestañas repetidas de esta ventana. Se queda la copia de más a la izquierda. Si lo haces primero, nunca agrupas las copias.</li>
+            <li><strong>Agrupar pestañas.</strong> Cada pestaña que coincide cae en su grupo.</li>
+            <li><strong>Ordenar por dominio.</strong> Dentro de cada grupo, y entre las pestañas sin grupo, las del mismo sitio se colocan juntas. Ordenar nunca mete ni saca una pestaña de un grupo.</li>
+            <li><strong>Contraer todo.</strong> Cada grupo se pliega hasta su etiqueta de color.</li>
+          </ol>
+          <p>Cerrar duplicados considera que dos URL son la misma según tu ajuste de coincidencia de URL. Por defecto ignora el <code>#fragmento</code>, un <code>www.</code> inicial, la barra final y el orden de los parámetros de consulta.</p>
+
+          <h2 id="shortcuts">¿Cuáles son los atajos de teclado?</h2>
+          <table>
+            <thead><tr><th>Atajo</th><th>Acción</th><th>Plan</th></tr></thead>
+            <tbody>
+              <tr><td><kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>G</kbd></td><td>Agrupar todas las pestañas</td><td>Free</td></tr>
+              <tr><td><kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>U</kbd></td><td>Desagrupar todas las pestañas</td><td>Free</td></tr>
+              <tr><td><kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>C</kbd></td><td>Contraer todos los grupos</td><td>Free</td></tr>
+              <tr><td><kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>Space</kbd></td><td><a href="../quick-switch-search-tabs/">Quick Switch</a>: busca cualquier pestaña y salta a ella</td><td>Premium</td></tr>
+              <tr><td>Ninguno por defecto</td><td>Expandir todos los grupos</td><td>Free</td></tr>
+            </tbody>
+          </table>
+          <p>Chrome deja que una extensión sugiera como máximo cuatro atajos, así que Expandir todo viene sin ninguno. Asígnale una tecla en <code>chrome://extensions/shortcuts</code>. Ahí también puedes cambiar los otros cuatro.</p>
+
+          <h2 id="tabs-pane">¿Cómo veo todas las pestañas abiertas en una lista?</h2>
+          <p>Abre el panel <strong>Tabs</strong> del popup. Muestra las pestañas de todas las ventanas bajo el nombre de su grupo, de la A a la Z, con las pestañas sin grupo al final. Escribe para filtrar por título o URL. Haz clic en una pestaña para saltar a ella. Este panel es gratis.</p>
+
+          <h2 id="group-actions">¿Puedo cerrar, guardar como marcador o mover un grupo entero?</h2>
+          <p>Sí, con Premium. Hay tres acciones que trabajan sobre el grupo como un todo:</p>
+          <ul>
+            <li><strong>Cerrar.</strong> Cierra las pestañas del grupo. Las fijadas siguen abiertas. La vista Groups te pide confirmación antes.</li>
+            <li><strong>Marcador.</strong> Guarda el grupo en una carpeta "Takt Bookmarks". Las pestañas siguen abiertas. Necesita el permiso opcional de Marcadores.</li>
+            <li><strong>Mover a nueva ventana.</strong> Conserva el nombre, el color y el estado plegado del grupo.</li>
+          </ul>
+          <p>Las encontrarás en Opciones → Rules → <strong>Groups</strong>, o haciendo clic derecho en una página y abriendo <strong>Acciones de grupo</strong>. El menú contextual también puede mover el grupo a otra ventana que ya tengas abierta.</p>
+
+          <figure>
+            <img src="../img/options-groups.png" alt="Opciones de Takt, vista Groups: tarjetas de colores para Code, Docs, Entertainment, News y Research, cada una con los botones Cerrar N pestaña(s), Marcador y Mover a nueva ventana, además de los grupos Reviews y Work sin pestañas abiertas" width="700" loading="lazy" />
+            <figcaption>La vista Groups. Cada grupo abierto tiene Cerrar, Marcador y Mover a nueva ventana.</figcaption>
+          </figure>
+
+          <h2 id="auto-collapse">¿Pueden los grupos contraerse solos?</h2>
+          <p>De tres maneras, todas desactivadas hasta que las actives:</p>
+          <ul>
+            <li><strong>Por regla.</strong> Marca <em>Auto-collapse group</em> en el editor de reglas. Un grupo nuevo creado por esa regla empieza plegado, salvo que contenga la pestaña que estás viendo. Free.</li>
+            <li><strong>En la misma ventana.</strong> Settings → Tab Groups → <em>Auto-collapse other groups on expand</em>. Abre un grupo y los demás de esa ventana se pliegan. Free.</li>
+            <li><strong>Entre ventanas.</strong> <em>Auto-collapse groups in other windows when switching focus</em>. Cambia de ventana y, tras 300 ms, los grupos de todas las demás ventanas se pliegan. Premium.</li>
+          </ul>
+
+          <figure>
+            <img src="../img/options-settings-tab-groups.png" alt="Settings de Takt, sección Tab Groups con tres casillas sin marcar: Auto-collapse other groups on expand, Auto-collapse groups in other windows when switching focus y Others catch-all group" width="700" loading="lazy" />
+            <figcaption>Los ajustes de Tab Groups. Los tres están desactivados por defecto.</figcaption>
+          </figure>
+
+          <h2 id="others">¿Qué pasa con las pestañas que no coinciden con ninguna regla?</h2>
+          <p>Se quedan sin agrupar. Con Premium, activa <strong>Others catch-all group</strong> y Agrupar pestañas reunirá todas las pestañas sobrantes en un grupo gris "Otros". Las pestañas fijadas y las páginas <code>chrome://</code> no se tocan. Si vuelves a usar Agrupar pestañas, se reutiliza el mismo grupo Otros. Funciona en el modo Reglas.</p>
+
+          <h2 id="limits">Lo que estos botones no hacen</h2>
+          <ul>
+            <li><strong>Ordenar por dominio es puntual.</strong> Las pestañas nuevas no se mantienen ordenadas. Además, compara las dos últimas partes del nombre de host, así que <code>example.co.uk</code> se ordena como <code>co.uk</code>.</li>
+            <li><strong>Cerrar duplicados se queda en una ventana.</strong> Una copia abierta en otra ventana no se toca.</li>
+            <li><strong>Las acciones de grupo están en el menú de la página.</strong> Haz clic derecho en la página, no en la barra de pestañas.</li>
+            <li><strong>Agrupar pestañas necesita un criterio para agrupar.</strong> En el modo Reglas, las pestañas que no coinciden con ninguna regla se quedan sueltas, salvo que Otros esté activado.</li>
+          </ul>
+
+          <div class="cta">
+            <p>Dos clics de pestañas sueltas a una fila de grupos en orden.</p>
+            <a class="btn" href="https://chromewebstore.google.com/detail/takt/plgfdnbgkjocmgegnkbihoeojcfphdic">Añadir Takt a Chrome, gratis</a>
+          </div>
+
+          <h2 id="faq">Preguntas frecuentes</h2>
+          <div class="faq">
+            <details>
+              <summary>¿Cuáles son los atajos de teclado predeterminados de Takt?</summary>
+              <p><kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>G</kbd> agrupa, <kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>U</kbd> desagrupa, <kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>C</kbd> contrae y <kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>Space</kbd> abre Quick Switch (Premium). Expandir todo no tiene tecla predeterminada. Asígnale una en <code>chrome://extensions/shortcuts</code>.</p>
+            </details>
+            <details>
+              <summary>¿Qué pestaña conserva Cerrar duplicados?</summary>
+              <p>La primera copia según el orden de la barra de pestañas, empezando por la izquierda. Las copias posteriores de la ventana actual se cierran. Tu ajuste de coincidencia de URL decide qué cuenta como la misma URL; por defecto se ignora el <code>#fragmento</code>.</p>
+            </details>
+            <details>
+              <summary>¿Los botones de limpieza son gratis?</summary>
+              <p>Agrupar, Desagrupar, Contraer, Expandir, Cerrar duplicados, el panel Tabs y la contracción automática en la misma ventana son gratis. Ordenar por dominio es gratis para la ventana actual. Premium (3 $/mes o 30 $/año) añade ordenar todas las ventanas, las acciones de grupo, la contracción automática entre ventanas y el grupo Otros.</p>
+            </details>
+            <details>
+              <summary>¿Puedo cerrar un grupo de pestañas entero de una vez?</summary>
+              <p>Con Premium, sí: desde la vista Groups de las opciones de Takt, o desde <strong>Acciones de grupo</strong> en el menú contextual de la página. Cerrar deja fuera las pestañas fijadas, y la vista Groups te pide confirmación antes.</p>
+            </details>
+          </div>
+
+          <h2 id="next">Sigue leyendo</h2>
+          <div class="read-next">
+            <a href="../prevent-duplicate-tabs/">Deja de abrir la misma pestaña dos veces<span>Prevención de duplicados, activada por defecto.</span></a>
+            <a href="../quick-switch-search-tabs/">Salta a cualquier pestaña con el teclado<span>Búsqueda con Quick Switch en todas las ventanas.</span></a>
+          </div>
+        </div>
+
+        <footer class="blog-post-footer">
+          <a href="../../../blog/">Todos los artículos</a> · <a href="../../../docs/group-actions/">Referencia de las acciones de grupo</a> · <a href="../../../docs/shortcuts/">Atajos de teclado</a>
+        </footer>
+      </article>
+    </main>
+
+    <footer id="site-footer"></footer>
+    <script src="../../../js/includes.js"></script>
+    <script src="../../../js/nav.js"></script>
+  </body>
+</html>

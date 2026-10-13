@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Come salvare e ripristinare le sessioni di schede in Chrome — Takt</title>
+    <meta
+      name="description"
+      content="Salva finestre, gruppi di schede e schede sparse di Chrome come sessione con nome e ripristinala più tardi in una nuova finestra o al posto di quella corrente. Fino a 50 sessioni, salvate sul tuo computer."
+    />
+    <link rel="canonical" href="https://taktabs.com/it/blog/save-restore-tab-sessions/" />
+<!-- TAKT-LANG:head -->
+<link rel="alternate" hreflang="en" href="https://taktabs.com/blog/save-restore-tab-sessions/" />
+<link rel="alternate" hreflang="fr" href="https://taktabs.com/fr/blog/save-restore-tab-sessions/" />
+<link rel="alternate" hreflang="es" href="https://taktabs.com/es/blog/save-restore-tab-sessions/" />
+<link rel="alternate" hreflang="it" href="https://taktabs.com/it/blog/save-restore-tab-sessions/" />
+<link rel="alternate" hreflang="de" href="https://taktabs.com/de/blog/save-restore-tab-sessions/" />
+<link rel="alternate" hreflang="pt" href="https://taktabs.com/pt/blog/save-restore-tab-sessions/" />
+<link rel="alternate" hreflang="x-default" href="https://taktabs.com/blog/save-restore-tab-sessions/" />
+<!-- /TAKT-LANG:head -->
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Come salvare e ripristinare le sessioni di schede in Chrome" />
+    <meta property="og:description" content="Dai un nome a un'istantanea delle tue finestre e dei tuoi gruppi. Riaprila con un clic, gruppi e colori compresi." />
+    <meta property="og:url" content="https://taktabs.com/it/blog/save-restore-tab-sessions/" />
+    <meta property="og:image" content="https://taktabs.com/it/blog/img/options-sessions-list.png" />
+    <meta property="og:locale" content="it_IT" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <link rel="icon" type="image/png" sizes="32x32" href="../../../assets/favicon-32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="../../../assets/favicon-16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="../../../assets/apple-touch-icon.png" />
+    <meta name="theme-color" content="#FF3B30" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../../../css/tokens.css" />
+    <link rel="stylesheet" href="../../../css/base.css" />
+    <link rel="stylesheet" href="../../../css/layout.css" />
+    <link rel="stylesheet" href="../../../css/blog.css" />
+    <link rel="stylesheet" href="../../../css/articles.css" />
+    <script src="../../../js/theme.js"></script>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Article",
+            "headline": "Come salvare e ripristinare le sessioni di schede in Chrome",
+            "description": "Salva finestre, gruppi di schede e schede sparse di Chrome come sessione con nome e ripristinala più tardi in una nuova finestra o al posto di quella corrente.",
+            "inLanguage": "it",
+            "datePublished": "2026-10-08",
+            "dateModified": "2026-10-08",
+            "author": { "@type": "Person", "name": "Vitor" },
+            "publisher": { "@type": "Organization", "name": "Takt", "url": "https://taktabs.com" },
+            "image": "https://taktabs.com/it/blog/img/options-sessions-list.png",
+            "mainEntityOfPage": "https://taktabs.com/it/blog/save-restore-tab-sessions/"
+          },
+          {
+            "@type": "HowTo",
+            "name": "Salvare e ripristinare una sessione di schede in Chrome",
+            "step": [
+              { "@type": "HowToStep", "text": "Installa Takt dal Chrome Web Store e apri il suo popup." },
+              { "@type": "HowToStep", "text": "Vai al riquadro Sessioni e fai clic su + Salva." },
+              { "@type": "HowToStep", "text": "Scrivi un nome di massimo 60 caratteri, scegli Questa finestra o Tutte le finestre e fai clic su Salva." },
+              { "@type": "HowToStep", "text": "Più tardi, fai clic su Ripristina accanto alla sessione e scegli Apri in una nuova finestra o Sostituisci la finestra corrente." }
+            ]
+          },
+          {
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "Chrome salva da solo le sessioni di schede?",
+                "acceptedAnswer": { "@type": "Answer", "text": "L'impostazione di Chrome 'Continua da dove eri rimasto' riapre l'ultima sessione di navigazione all'avvio di Chrome. Tiene una sola sessione, l'ultima. Non conserva un elenco di istantanee con nome a cui tornare più tardi." }
+              },
+              {
+                "@type": "Question",
+                "name": "Quante sessioni posso salvare in Takt?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Fino a 50. Quando l'elenco è pieno, elimina una sessione più vecchia prima di salvarne una nuova. Le sessioni salvate automaticamente fanno spazio sostituendo il salvataggio automatico più vecchio." }
+              },
+              {
+                "@type": "Question",
+                "name": "Le sessioni di schede sono gratuite in Takt?",
+                "acceptedAnswer": { "@type": "Answer", "text": "No. Salvare, ripristinare, rinominare e salvare automaticamente le sessioni sono funzioni Premium ($3/mese o $30/anno). Con il piano gratuito puoi vedere l'elenco delle sessioni salvate." }
+              },
+              {
+                "@type": "Question",
+                "name": "Le mie sessioni vengono caricate da qualche parte?",
+                "acceptedAnswer": { "@type": "Answer", "text": "No. Le sessioni sono salvate nello spazio di archiviazione locale di Chrome sul tuo computer. Lo lasciano solo se esporti un backup o attivi tu la Sincronizzazione file o la Sincronizzazione Drive." }
+              }
+            ]
+          },
+          {
+            "@type": "SoftwareApplication",
+            "name": "Takt",
+            "applicationCategory": "BrowserApplication",
+            "operatingSystem": "Chrome",
+            "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <header id="site-header"></header>
+
+    <main class="blog-main">
+      <article class="blog-post article">
+        <p class="eyebrow">Sessioni</p>
+        <h1 class="blog-post-title">Come salvare e ripristinare le sessioni di schede in Chrome</h1>
+        <p class="lede">Per salvare una sessione di schede in Chrome, fai un'istantanea delle finestre e dei gruppi con un nome, poi ripristina quel nome quando ti serve di nuovo. Chrome riapre la tua ultima sessione. Non conserva uno scaffale di sessioni con nome.</p>
+        <p class="blog-post-meta">Aggiornato l'8 ottobre 2026 · 5 min di lettura</p>
+<!-- TAKT-LANG:nav -->
+<p class="lang-links"><a href="../../../blog/save-restore-tab-sessions/" hreflang="en" lang="en">English</a> · <a href="../../../fr/blog/save-restore-tab-sessions/" hreflang="fr" lang="fr">Français</a> · <a href="../../../es/blog/save-restore-tab-sessions/" hreflang="es" lang="es">Español</a> · <span aria-current="true">Italiano</span> · <a href="../../../de/blog/save-restore-tab-sessions/" hreflang="de" lang="de">Deutsch</a> · <a href="../../../pt/blog/save-restore-tab-sessions/" hreflang="pt" lang="pt">Português</a></p>
+<!-- /TAKT-LANG:nav -->
+
+        <div class="blog-post-body">
+          <div class="tldr">
+            <p><strong>In breve:</strong> nel popup di Takt, apri <strong>Sessioni</strong>, fai clic su <strong>+ Salva</strong>, dai un nome e scegli <em>Questa finestra</em> o <em>Tutte le finestre</em>. Più tardi fai clic su <strong>Ripristina</strong> per riavere le stesse schede, negli stessi gruppi con nome e colore.</p>
+            <ul>
+              <li>Salva ogni scheda, ogni gruppo (nome, colore, stato compresso), le schede sparse e l'elenco delle schede ibernate.</li>
+              <li>Ripristina in una nuova finestra, oppure sostituisci quella corrente.</li>
+              <li>Fino a 50 sessioni, salvate sul tuo computer. <span class="badge badge-premium">Premium</span></li>
+            </ul>
+          </div>
+
+          <h2 id="why">Perché "Continua da dove eri rimasto" di Chrome non basta?</h2>
+          <p>Per un compito solo, basta. Attivalo e Chrome riapre all'avvio le schede dell'ultima sessione. Se ti serve solo questo, non ti serve un'estensione.</p>
+          <p>Non regge quando passi da un lavoro all'altro. Le schede della tesi, quelle della riunione del lunedì e quelle per organizzare il viaggio non possono essere tutte "l'ultima sessione". Chiudi la finestra della tesi per fare spazio alla riunione e le schede della tesi spariscono da quell'elenco.</p>
+          <p>Una sessione con nome è un segnalibro per un intero spazio di lavoro. Chiudi la finestra senza preoccuparti, perché puoi riaprirla per nome.</p>
+
+          <h2 id="save">Come salvo una sessione di schede?</h2>
+          <ol class="steps">
+            <li>Installa <a href="https://chromewebstore.google.com/detail/takt/plgfdnbgkjocmgegnkbihoeojcfphdic">Takt dal Chrome Web Store</a>.</li>
+            <li>Apri il popup e vai al riquadro <strong>Sessioni</strong>.</li>
+            <li>Fai clic su <strong>+ Salva</strong> e scrivi un nome, fino a 60 caratteri. I nomi devono essere unici.</li>
+            <li>Scegli <em>Questa finestra</em> (predefinita) o <em>Tutte le finestre</em>, poi fai clic su <strong>Salva</strong>.</li>
+          </ol>
+
+          <figure class="narrow">
+            <img src="../img/popup-sessions.png" alt="Popup di Takt sul riquadro Sessioni, con un pulsante + Salva, un campo di ricerca e due sessioni salvate, Thesis research e Monday standup, ciascuna con 14 schede, 5 gruppi e 2 ibernate, e i pulsanti Ripristina ed elimina" width="420" loading="lazy" />
+            <figcaption>Il riquadro Sessioni nel popup. Ogni voce mostra il numero di schede, gruppi e schede ibernate.</figcaption>
+          </figure>
+
+          <h2 id="what">Cosa salva una sessione?</h2>
+          <table>
+            <thead><tr><th>Salvato</th><th>Dettagli</th></tr></thead>
+            <tbody>
+              <tr><td>Schede</td><td>URL e titolo di ogni scheda</td></tr>
+              <tr><td>Gruppi di schede</td><td>Nome, colore, stato compresso e quali schede appartengono a ciascuno</td></tr>
+              <tr><td>Schede sparse</td><td>Schede fuori da qualsiasi gruppo</td></tr>
+              <tr><td>Finestre</td><td>Una finestra, o tutte le finestre normali con <em>Tutte le finestre</em></td></tr>
+              <tr><td>Schede ibernate</td><td>L'elenco delle schede ibernate, che viene ricostituito al ripristino</td></tr>
+            </tbody>
+          </table>
+          <p>Chrome non permette alle estensioni di aprire pagine <code>chrome://</code>, <code>about:</code> o delle estensioni, quindi quelle schede vengono saltate.</p>
+
+          <h2 id="restore">Come ripristino una sessione?</h2>
+          <p>Fai clic su <strong>Ripristina</strong>. Una finestra di dialogo offre due modalità:</p>
+          <ul>
+            <li><strong>Apri in una nuova finestra.</strong> La finestra corrente resta com'è.</li>
+            <li><strong>Sostituisci la finestra corrente.</strong> Le schede salvate si aprono nella finestra corrente, poi le schede che c'erano si chiudono.</li>
+          </ul>
+          <p>La finestra di dialogo fa un conto alla rovescia di 7 secondi, poi ripristina con la modalità selezionata. Fai clic su <strong>Ripristina</strong> nella finestra di dialogo per non aspettare, oppure su <strong>Annulla</strong>. In una sessione con più finestre, la prima segue la tua scelta e tutte le altre si aprono come nuove finestre.</p>
+
+          <h2 id="manage">Posso rinominare le sessioni o salvarle automaticamente?</h2>
+          <p>Sì, entrambe le cose.</p>
+          <ul>
+            <li><strong>Rinominare:</strong> fai doppio clic su un nome nel popup, oppure usa <strong>Rename</strong> nella scheda Sessions della pagina delle opzioni. Premi Invio per salvare.</li>
+            <li><strong>Salvataggio automatico:</strong> attiva <em>Salvataggio automatico alla chiusura</em> in Settings. Chiudere una finestra salva le sue schede come sessione chiamata "Salvataggio auto" seguito da data e ora.</li>
+          </ul>
+          <p>La pagina delle opzioni ti permette anche di espandere una sessione per vedere tutti i gruppi e le schede che contiene prima di ripristinarla.</p>
+
+          <figure>
+            <img src="../img/options-sessions-list.png" alt="Pagina delle opzioni di Takt, scheda Sessions: 2 sessioni salvate, Thesis research e Monday standup, ciascuna con 14 schede, 5 gruppi, 2 ibernate, una data di creazione e i pulsanti Restore, Rename e Delete" width="700" loading="lazy" />
+            <figcaption>La scheda Sessions della pagina delle opzioni. Fai clic su una riga per vederne gruppi e schede.</figcaption>
+          </figure>
+
+          <h2 id="compare">Sessioni di Takt e opzioni integrate di Chrome a confronto</h2>
+          <table>
+            <thead><tr><th></th><th>Chrome "Continua da dove eri rimasto"</th><th>Sessioni di Takt</th></tr></thead>
+            <tbody>
+              <tr><td>Quante</td><td>L'ultima sessione</td><td>Fino a 50, con nome</td></tr>
+              <tr><td>Cosa conserva</td><td>Le schede aperte l'ultima volta</td><td>Qualsiasi istantanea che hai salvato, o un salvataggio automatico quando si chiude una finestra</td></tr>
+              <tr><td>Quando ripristina</td><td>All'avvio di Chrome</td><td>Ogni volta che fai clic su Ripristina</td></tr>
+              <tr><td>Costo</td><td>Gratis, integrato</td><td>Premium</td></tr>
+            </tbody>
+          </table>
+
+          <h2 id="limits">Cosa le sessioni non fanno</h2>
+          <ul>
+            <li><strong>Restano su questo computer.</strong> Le sessioni vivono nello spazio di archiviazione locale di Chrome e non seguono il tuo account Google. Per spostarle, usa un <a href="../backup-and-sync-tabs/">backup o la sincronizzazione</a>.</li>
+            <li><strong>Sono istantanee.</strong> Una sessione salvata non cambia quando cambi la finestra. Salvala di nuovo con un nuovo nome per tenere una versione più recente.</li>
+            <li><strong>Il limite è 50.</strong> Elimina le vecchie per fare spazio. I salvataggi automatici sostituiscono il salvataggio automatico più vecchio, mai una sessione a cui hai dato un nome.</li>
+            <li><strong>Nessuno stato delle pagine.</strong> Il ripristino riapre gli URL. Il contenuto dei moduli e la posizione di scorrimento non vengono salvati.</li>
+          </ul>
+
+          <div class="cta">
+            <p>Chiudi la finestra. Tieni il lavoro.</p>
+            <a class="btn" href="https://chromewebstore.google.com/detail/takt/plgfdnbgkjocmgegnkbihoeojcfphdic">Aggiungi Takt a Chrome, è gratis</a>
+          </div>
+
+          <h2 id="faq">Domande frequenti</h2>
+          <div class="faq">
+            <details>
+              <summary>Chrome salva da solo le sessioni di schede?</summary>
+              <p>"Continua da dove eri rimasto" riapre l'ultima sessione all'avvio di Chrome. Tiene quella sola sessione, non un elenco di istantanee con nome.</p>
+            </details>
+            <details>
+              <summary>Quante sessioni posso salvare in Takt?</summary>
+              <p>Fino a 50. Quando l'elenco è pieno, elimina prima una sessione più vecchia. I salvataggi automatici fanno spazio sostituendo il salvataggio automatico più vecchio.</p>
+            </details>
+            <details>
+              <summary>Le sessioni di schede sono gratuite in Takt?</summary>
+              <p>No. Salvare, ripristinare, rinominare e salvare automaticamente sono funzioni Premium ($3/mese o $30/anno). Con il piano gratuito puoi vedere l'elenco delle sessioni salvate.</p>
+            </details>
+            <details>
+              <summary>Le mie sessioni vengono caricate da qualche parte?</summary>
+              <p>No. Sono salvate nello spazio di archiviazione locale di Chrome sul tuo computer. Lo lasciano solo se esporti un backup o attivi la Sincronizzazione file o la Sincronizzazione Drive. Vedi <a href="../privacy-local-first/">come Takt tiene i dati in locale</a>.</p>
+            </details>
+          </div>
+
+          <h2 id="next">Da leggere dopo</h2>
+          <div class="read-next">
+            <a href="../hibernate-tabs-free-memory/">Metti a dormire le schede inattive<span>L'ibernazione libera memoria senza perdere la scheda.</span></a>
+            <a href="../backup-and-sync-tabs/">Backup e sincronizzazione della configurazione<span>Esportazione JSON, sincronizzazione su cartella e Google Drive.</span></a>
+          </div>
+        </div>
+
+        <footer class="blog-post-footer">
+          <a href="../../../blog/">Tutti gli articoli sulle funzionalità</a> · <a href="../../../docs/sessions/">Riferimento: sessioni</a>
+        </footer>
+      </article>
+    </main>
+
+    <footer id="site-footer"></footer>
+    <script src="../../../js/includes.js"></script>
+    <script src="../../../js/nav.js"></script>
+  </body>
+</html>

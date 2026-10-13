@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Andere Tab-Regeln für Arbeit und Zuhause: Profile und Zeitpläne — Takt</title>
+    <meta
+      name="description"
+      content="Getrennte Regeln zum Gruppieren von Chrome-Tabs für Arbeit, Privates und Recherche. Profile mit einem Klick im Popup wechseln oder Takt nach Tageszeit und Wochentag wechseln lassen."
+    />
+    <link rel="canonical" href="https://taktabs.com/de/blog/profiles-and-schedules/" />
+<!-- TAKT-LANG:head -->
+<link rel="alternate" hreflang="en" href="https://taktabs.com/blog/profiles-and-schedules/" />
+<link rel="alternate" hreflang="fr" href="https://taktabs.com/fr/blog/profiles-and-schedules/" />
+<link rel="alternate" hreflang="es" href="https://taktabs.com/es/blog/profiles-and-schedules/" />
+<link rel="alternate" hreflang="it" href="https://taktabs.com/it/blog/profiles-and-schedules/" />
+<link rel="alternate" hreflang="de" href="https://taktabs.com/de/blog/profiles-and-schedules/" />
+<link rel="alternate" hreflang="pt" href="https://taktabs.com/pt/blog/profiles-and-schedules/" />
+<link rel="alternate" hreflang="x-default" href="https://taktabs.com/blog/profiles-and-schedules/" />
+<!-- /TAKT-LANG:head -->
+    <meta property="og:type" content="article" />
+    <meta property="og:locale" content="de_DE" />
+    <meta property="og:title" content="Andere Tab-Regeln für Arbeit und Zuhause: Profile und Zeitpläne" />
+    <meta property="og:description" content="Ein Regelsatz für die Arbeitszeit, ein anderer für den Abend. Takt wechselt nach Zeitplan zwischen ihnen." />
+    <meta property="og:url" content="https://taktabs.com/de/blog/profiles-and-schedules/" />
+    <meta property="og:image" content="https://taktabs.com/de/blog/img/options-profiles-schedule.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <link rel="icon" type="image/png" sizes="32x32" href="../../../assets/favicon-32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="../../../assets/favicon-16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="../../../assets/apple-touch-icon.png" />
+    <meta name="theme-color" content="#FF3B30" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../../../css/tokens.css" />
+    <link rel="stylesheet" href="../../../css/base.css" />
+    <link rel="stylesheet" href="../../../css/layout.css" />
+    <link rel="stylesheet" href="../../../css/blog.css" />
+    <link rel="stylesheet" href="../../../css/articles.css" />
+    <script src="../../../js/theme.js"></script>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Article",
+            "inLanguage": "de",
+            "headline": "Andere Tab-Regeln für Arbeit und Zuhause: Profile und Zeitpläne",
+            "description": "Getrennte Regeln zum Gruppieren von Chrome-Tabs für verschiedene Kontexte anlegen und von Hand oder nach einem Tageszeit-Zeitplan zwischen ihnen wechseln.",
+            "datePublished": "2026-10-08",
+            "dateModified": "2026-10-08",
+            "author": { "@type": "Person", "name": "Vitor" },
+            "publisher": { "@type": "Organization", "name": "Takt", "url": "https://taktabs.com" },
+            "image": "https://taktabs.com/de/blog/img/options-profiles-schedule.png",
+            "mainEntityOfPage": "https://taktabs.com/de/blog/profiles-and-schedules/"
+          },
+          {
+            "@type": "HowTo",
+            "name": "Chrome-Tab-Regeln automatisch nach Zeitplan wechseln",
+            "step": [
+              { "@type": "HowToStep", "text": "Öffnen Sie die Optionsseite von Takt, gehen Sie zu Profiles und klicken Sie auf Create Profile." },
+              { "@type": "HowToStep", "text": "Benennen Sie das Profil und wählen Sie, ob Ihre aktuellen Regeln kopiert werden oder ob es leer beginnt." },
+              { "@type": "HowToStep", "text": "Klicken Sie auf Edit rules, um die Regeln auszuwählen, die zum Profil gehören." },
+              { "@type": "HowToStep", "text": "Haken Sie Auto-switch on schedule an, legen Sie Start- und Endzeit fest und wählen Sie die Tage." }
+            ]
+          },
+          {
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "Was passiert mit Regeln, die nicht im aktiven Profil sind?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Sie werden ignoriert, bis Sie zurückwechseln. Ist ein Profil aktiv, werden nur seine Regeln zum Gruppieren verwendet. Wählen Sie Alle Regeln, um wieder jede Regel zu nutzen." }
+              },
+              {
+                "@type": "Question",
+                "name": "Gruppiert ein Profilwechsel meine offenen Tabs neu?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Nein. Bestehende Gruppen bleiben, wie sie sind. Die Regeln des neuen Profils gelten für Tabs, wenn sie geöffnet oder geladen werden. Klicken Sie im Popup auf Tabs gruppieren, um bereits Offenes neu zu gruppieren." }
+              },
+              {
+                "@type": "Question",
+                "name": "Wie oft prüft Takt den Zeitplan?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Einmal pro Minute. Ein Profil wird innerhalb von etwa einer Minute nach seiner Startzeit aktiv und innerhalb von etwa einer Minute nach seiner Endzeit abgeschaltet." }
+              },
+              {
+                "@type": "Question",
+                "name": "Sind Profile kostenlos?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Nein. Profile und zeitgesteuerter Wechsel sind Premium-Funktionen, $3/Monat oder $30/Jahr." }
+              }
+            ]
+          },
+          {
+            "@type": "SoftwareApplication",
+            "name": "Takt",
+            "applicationCategory": "BrowserApplication",
+            "operatingSystem": "Chrome",
+            "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <header id="site-header"></header>
+
+    <main class="blog-main">
+      <article class="blog-post article">
+        <p class="eyebrow">Profile</p>
+        <h1 class="blog-post-title">Andere Tab-Regeln für Arbeit und Zuhause</h1>
+        <p class="lede">Ein Profil ist ein benannter Satz von Regeln zum Gruppieren von Tabs. Legen Sie eines für die Arbeit und eines für zu Hause an, wechseln Sie mit einem Klick, oder lassen Sie Takt werktags um 9:00 Uhr für Sie wechseln.</p>
+        <p class="blog-post-meta">Aktualisiert am 8. Oktober 2026 · 5 Min. Lesezeit</p>
+<!-- TAKT-LANG:nav -->
+<p class="lang-links"><a href="../../../blog/profiles-and-schedules/" hreflang="en" lang="en">English</a> · <a href="../../../fr/blog/profiles-and-schedules/" hreflang="fr" lang="fr">Français</a> · <a href="../../../es/blog/profiles-and-schedules/" hreflang="es" lang="es">Español</a> · <a href="../../../it/blog/profiles-and-schedules/" hreflang="it" lang="it">Italiano</a> · <span aria-current="true">Deutsch</span> · <a href="../../../pt/blog/profiles-and-schedules/" hreflang="pt" lang="pt">Português</a></p>
+<!-- /TAKT-LANG:nav -->
+
+        <div class="blog-post-body">
+          <div class="tldr">
+            <p><strong>Kurz gesagt:</strong> Öffnen Sie auf der Optionsseite von Takt <strong>Profiles</strong>, legen Sie „Arbeit“ und „Privat“ an und weisen Sie jedem Regeln zu. Wechseln Sie über das Profilmenü im Popup, oder haken Sie <strong>Auto-switch on schedule</strong> an und legen Sie Uhrzeiten und Tage fest.</p>
+            <ul>
+              <li>Ist ein Profil aktiv, gruppieren nur seine Regeln Ihre Tabs.</li>
+              <li>Zeitpläne richten sich nach Tageszeit und Wochentag und werden einmal pro Minute geprüft.</li>
+              <li>Optional: Ihre Tabs hibernieren, wenn der Zeitplan endet. <span class="badge badge-premium">Premium</span></li>
+            </ul>
+          </div>
+
+          <h2 id="why">Warum sollte ich mehr als einen Satz Tab-Regeln wollen?</h2>
+          <p>Weil eine Regel, die bei der Arbeit hilft, zu Hause im Weg ist. Eine Gruppe „Code“ für GitHub passt um 10:00 Uhr. Um 21:00 Uhr möchten Sie vielleicht lieber YouTube und Rezepte gruppiert haben und gar keine Arbeitsgruppen.</p>
+          <p>Ohne Profile haben Sie zwei Möglichkeiten: eine lange Regelliste, die alles abdecken soll, oder Regeln von Hand ein- und ausschalten. Mit Profilen behält jeder Kontext seine eigene kurze Liste.</p>
+
+          <h2 id="create">Wie lege ich ein Profil an?</h2>
+          <ol class="steps">
+            <li>Öffnen Sie die Optionsseite von Takt und gehen Sie zu <strong>Profiles</strong>.</li>
+            <li>Klicken Sie auf <strong>Create Profile</strong> und geben Sie einen Namen ein.</li>
+            <li>Kopieren Sie alle Ihre aktuellen Regeln hinein, oder beginnen Sie leer.</li>
+            <li>Klicken Sie auf <strong>Edit rules</strong>, um die Regeln anzuhaken, die dieses Profil verwendet.</li>
+          </ol>
+          <p>Eine neue Regel, die Sie anlegen, während ein Profil aktiv ist, wird diesem Profil automatisch hinzugefügt.</p>
+
+          <h2 id="switch">Wie wechsle ich zwischen Profilen?</h2>
+          <p>Öffnen Sie das Popup und klicken Sie oben auf den Profilnamen. Das Menü listet <strong>Alle Regeln</strong> und jedes Profil mit seiner Regelanzahl auf. Wählen Sie eines, und es gilt sofort.</p>
+
+          <figure class="narrow">
+            <img src="../img/popup-profile-switcher.png" alt="Takt-Popup mit geöffnetem Profilmenü oben, das Alle Regeln, Work mit 3 Regeln (ausgewählt) und Research mit 2 Regeln auflistet, dazu ein Link Profile verwalten" width="420" loading="lazy" />
+            <figcaption>Das Profilmenü im Popup. Die Zahl ist die Anzahl der Regeln.</figcaption>
+          </figure>
+
+          <p><strong>Alle Regeln</strong> schaltet Profile ab, sodass jede Regel ausgewertet wird. Ein Wechsel lässt bestehende Gruppen unberührt. Neue Tabs folgen den neuen Regeln; klicken Sie im Popup auf <strong>Tabs gruppieren</strong>, um den Rest neu zu gruppieren.</p>
+
+          <h2 id="schedule">Wie wechsle ich Profile automatisch nach Tageszeit?</h2>
+          <p>Haken Sie auf einer Profilkarte <strong>Auto-switch on schedule</strong> an. Legen Sie dann fest:</p>
+          <ul>
+            <li><strong>Start- und Endzeit.</strong> Standard ist 09:00 bis 17:00.</li>
+            <li><strong>Tage.</strong> Schalten Sie die Tage Su bis Sa (Sonntag bis Samstag) ein oder aus. Standard ist Montag bis Freitag.</li>
+            <li><strong>Hibernate tabs when schedule ends</strong> (optional).</li>
+          </ul>
+
+          <figure>
+            <img src="../img/options-profiles-schedule.png" alt="Takt-Optionsseite, Tab Profiles: Das Profil Work ist aktiv, mit angehaktem Auto-switch on schedule, 09:00 bis 17:00, Montag bis Freitag ausgewählt und der nicht angehakten Option Hibernate tabs when schedule ends. Darunter ein Profil Research ohne Zeitplan." width="700" loading="lazy" />
+            <figcaption>Ein Profil Work, das sich werktags um 09:00 Uhr ein- und um 17:00 Uhr ausschaltet.</figcaption>
+          </figure>
+
+          <p>Takt prüft den Zeitplan einmal pro Minute. Beginnt das Zeitfenster, aktiviert es das Profil. Endet es, kehrt es zu Alle Regeln zurück.</p>
+          <p>Überschneiden sich zwei Zeitpläne, gewinnt das zuerst angelegte Profil.</p>
+
+          <h2 id="hibernate">Was bewirkt „Hibernate tabs when schedule ends“?</h2>
+          <p>Am Ende des Zeitfensters <a href="../hibernate-tabs-free-memory/">hiberniert</a> Takt Ihre offenen Tabs. Ausgenommen sind der aktive Tab, Tabs, die Audio abspielen, angeheftete Tabs und jede URL auf Ihrer Liste nie anzuhaltender Tabs.</p>
+          <p>Ihre Arbeits-Tabs belegen nach Feierabend keinen Arbeitsspeicher mehr und bleiben in der Liste hibernierter Tabs, bis Sie sie aufwecken.</p>
+
+          <h2 id="compare">Profile im Vergleich zu anderen Wegen, Arbeit und Zuhause zu trennen</h2>
+          <table>
+            <thead><tr><th></th><th>Getrennte Chrome-Profile</th><th>Takt-Profile</th></tr></thead>
+            <tbody>
+              <tr><td>Was getrennt ist</td><td>Alles: Fenster, Verlauf, Anmeldungen</td><td>Nur die Gruppierungsregeln</td></tr>
+              <tr><td>Dasselbe Fenster, dieselben Tabs</td><td>Nein</td><td>Ja</td></tr>
+              <tr><td>Wechselt nach Zeitplan</td><td>Nein</td><td>Ja</td></tr>
+            </tbody>
+          </table>
+          <p>Brauchen Sie getrennte Anmeldungen und Verläufe, nutzen Sie getrennte Chrome-Profile. Takt-Profile ändern nur, wie Tabs in dem Browser gruppiert werden, den Sie bereits nutzen.</p>
+
+          <h2 id="limits">Was Profile nicht tun</h2>
+          <ul>
+            <li><strong>Sie schließen oder öffnen keine Tabs.</strong> Ein Profil ändert, welche Regeln gelten. Um einen ganzen Satz Tabs auszutauschen, nutzen Sie <a href="../save-restore-tab-sessions/">Sitzungen</a>.</li>
+            <li><strong>Während seines Zeitfensters hat ein Zeitplan Vorrang.</strong> Wechseln Sie in den geplanten Stunden von Hand weg, wechselt Takt bei der nächsten Prüfung zurück, innerhalb von etwa einer Minute. Schalten Sie den Zeitplan ab, um bei einem anderen Profil zu bleiben.</li>
+            <li><strong>Die Endzeit muss nach der Startzeit liegen.</strong> Ein Zeitfenster über Mitternacht hinaus braucht zwei Profile.</li>
+          </ul>
+
+          <div class="cta">
+            <p>Arbeitsregeln bei der Arbeit. Heimregeln zu Hause.</p>
+            <a class="btn" href="https://chromewebstore.google.com/detail/takt/plgfdnbgkjocmgegnkbihoeojcfphdic">Zu Chrome hinzufügen — kostenlos</a>
+          </div>
+
+          <h2 id="faq">Häufige Fragen</h2>
+          <div class="faq">
+            <details>
+              <summary>Was passiert mit Regeln, die nicht im aktiven Profil sind?</summary>
+              <p>Sie werden ignoriert, bis Sie zurückwechseln. Wählen Sie <strong>Alle Regeln</strong>, um wieder jede Regel zu nutzen.</p>
+            </details>
+            <details>
+              <summary>Gruppiert ein Profilwechsel meine offenen Tabs neu?</summary>
+              <p>Nein. Bestehende Gruppen bleiben. Neue Tabs folgen den neuen Regeln. Klicken Sie im Popup auf <strong>Tabs gruppieren</strong>, um Offenes neu zu gruppieren.</p>
+            </details>
+            <details>
+              <summary>Wie oft prüft Takt den Zeitplan?</summary>
+              <p>Einmal pro Minute. Ein Profil schaltet sich innerhalb von etwa einer Minute nach seiner Startzeit ein und innerhalb von etwa einer Minute nach seiner Endzeit aus.</p>
+            </details>
+            <details>
+              <summary>Sind Profile kostenlos?</summary>
+              <p>Nein. Profile und Zeitpläne sind Premium, $3/Monat oder $30/Jahr. Der kostenlose Plan umfasst 5 Regeln und <a href="../auto-group-tabs-chrome/">regelbasiertes Gruppieren</a>.</p>
+            </details>
+          </div>
+
+          <h2 id="next">Weiterlesen</h2>
+          <div class="read-next">
+            <a href="../auto-group-tabs-chrome/">Ihre erste Gruppierungsregel schreiben<span>Jeder neue Tab ordnet sich selbst ein.</span></a>
+            <a href="../save-restore-tab-sessions/">Einen Arbeitsbereich für später speichern<span>Benannte Sitzungen, mit einem Klick wiederhergestellt.</span></a>
+          </div>
+        </div>
+
+        <footer class="blog-post-footer">
+          <a href="../../../blog/">Alle Artikel zu den Funktionen</a> · <a href="../../../docs/profiles/">Referenz: Profile</a>
+        </footer>
+      </article>
+    </main>
+
+    <footer id="site-footer"></footer>
+    <script src="../../../js/includes.js"></script>
+    <script src="../../../js/nav.js"></script>
+  </body>
+</html>

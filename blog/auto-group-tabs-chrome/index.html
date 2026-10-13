@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>How to automatically group tabs in Chrome with rules — Takt</title>
+    <meta
+      name="description"
+      content="Chrome can group tabs, but it won't do it for you. Here is how to write URL rules that file every new tab into a named, colored group the moment it opens."
+    />
+    <link rel="canonical" href="https://taktabs.com/blog/auto-group-tabs-chrome/" />
+<!-- TAKT-LANG:head -->
+<link rel="alternate" hreflang="en" href="https://taktabs.com/blog/auto-group-tabs-chrome/" />
+<link rel="alternate" hreflang="fr" href="https://taktabs.com/fr/blog/auto-group-tabs-chrome/" />
+<link rel="alternate" hreflang="es" href="https://taktabs.com/es/blog/auto-group-tabs-chrome/" />
+<link rel="alternate" hreflang="it" href="https://taktabs.com/it/blog/auto-group-tabs-chrome/" />
+<link rel="alternate" hreflang="de" href="https://taktabs.com/de/blog/auto-group-tabs-chrome/" />
+<link rel="alternate" hreflang="pt" href="https://taktabs.com/pt/blog/auto-group-tabs-chrome/" />
+<link rel="alternate" hreflang="x-default" href="https://taktabs.com/blog/auto-group-tabs-chrome/" />
+<!-- /TAKT-LANG:head -->
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="How to automatically group tabs in Chrome with rules" />
+    <meta property="og:description" content="Write a rule once. Every matching tab lands in the right Chrome tab group as it opens." />
+    <meta property="og:url" content="https://taktabs.com/blog/auto-group-tabs-chrome/" />
+    <meta property="og:image" content="https://taktabs.com/blog/img/options-rules.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <link rel="icon" type="image/png" sizes="32x32" href="../../assets/favicon-32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="../../assets/favicon-16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="../../assets/apple-touch-icon.png" />
+    <meta name="theme-color" content="#FF3B30" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../../css/tokens.css" />
+    <link rel="stylesheet" href="../../css/base.css" />
+    <link rel="stylesheet" href="../../css/layout.css" />
+    <link rel="stylesheet" href="../../css/blog.css" />
+    <link rel="stylesheet" href="../../css/articles.css" />
+    <script src="../../js/theme.js"></script>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Article",
+            "headline": "How to automatically group tabs in Chrome with rules",
+            "description": "Write URL rules that file every new tab into a named, colored Chrome tab group the moment it opens.",
+            "datePublished": "2026-10-08",
+            "dateModified": "2026-10-08",
+            "author": { "@type": "Person", "name": "Vitor" },
+            "publisher": { "@type": "Organization", "name": "Takt", "url": "https://taktabs.com" },
+            "image": "https://taktabs.com/blog/img/options-rules.png",
+            "mainEntityOfPage": "https://taktabs.com/blog/auto-group-tabs-chrome/"
+          },
+          {
+            "@type": "HowTo",
+            "name": "Automatically group tabs in Chrome by URL",
+            "step": [
+              { "@type": "HowToStep", "text": "Install Takt from the Chrome Web Store." },
+              { "@type": "HowToStep", "text": "Open Takt's options page, go to Rules and click New Rule." },
+              { "@type": "HowToStep", "text": "Add a condition such as URL domain github.com." },
+              { "@type": "HowToStep", "text": "Name the group, pick one of Chrome's 8 colors and save. Matching tabs are grouped as they load." }
+            ]
+          },
+          {
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "Can Chrome group tabs automatically without an extension?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Chrome can suggest groups with its built-in AI 'Organize tabs' feature, but it has no rules: you cannot tell it that every github.com tab always goes to a group called Code. A rule-based extension such as Takt does that." }
+              },
+              {
+                "@type": "Question",
+                "name": "How many rules can I create for free?",
+                "acceptedAnswer": { "@type": "Answer", "text": "The free plan allows 5 rules with one condition each, using contains, exact or domain matching. Premium ($3/month or $30/year) removes the limit and adds glob, regex, title matching and up to 10 AND/OR conditions per rule." }
+              },
+              {
+                "@type": "Question",
+                "name": "Can I pause a rule without deleting it?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Yes. Every rule has an on/off toggle in the list. A disabled rule keeps its settings and stops matching." }
+              },
+              {
+                "@type": "Question",
+                "name": "Does Takt send my URLs anywhere to match rules?",
+                "acceptedAnswer": { "@type": "Answer", "text": "No. Rules are matched inside your browser using locally stored data. Takt has no account and no analytics." }
+              }
+            ]
+          },
+          {
+            "@type": "SoftwareApplication",
+            "name": "Takt",
+            "applicationCategory": "BrowserApplication",
+            "operatingSystem": "Chrome",
+            "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <header id="site-header"></header>
+
+    <main class="blog-main">
+      <article class="blog-post article">
+        <p class="eyebrow">Rules</p>
+        <h1 class="blog-post-title">How to automatically group tabs in Chrome</h1>
+        <p class="lede">Chrome can group tabs. It won't do it for you. A rule fixes that: write it once, and every matching tab lands in the right group the moment it opens.</p>
+        <p class="blog-post-meta">Updated 8 October 2026 · 5 min read</p>
+<!-- TAKT-LANG:nav -->
+<p class="lang-links"><span aria-current="true">English</span> · <a href="../../fr/blog/auto-group-tabs-chrome/" hreflang="fr" lang="fr">Français</a> · <a href="../../es/blog/auto-group-tabs-chrome/" hreflang="es" lang="es">Español</a> · <a href="../../it/blog/auto-group-tabs-chrome/" hreflang="it" lang="it">Italiano</a> · <a href="../../de/blog/auto-group-tabs-chrome/" hreflang="de" lang="de">Deutsch</a> · <a href="../../pt/blog/auto-group-tabs-chrome/" hreflang="pt" lang="pt">Português</a></p>
+<!-- /TAKT-LANG:nav -->
+
+        <div class="blog-post-body">
+          <div class="tldr">
+            <p><strong>Short answer:</strong> install Takt, create a rule such as <em>URL domain github.com → group "Code", blue</em>, and save. From then on every GitHub tab is filed into the blue "Code" group as it loads.</p>
+            <ul>
+              <li>Free: 5 rules, matching by <em>contains</em>, <em>exact</em> or <em>domain</em>.</li>
+              <li>Premium: unlimited rules, glob and regex patterns, page-title matching, up to 10 AND/OR conditions.</li>
+              <li>Matching happens on your machine. No account, no analytics.</li>
+            </ul>
+          </div>
+
+          <h2 id="why">Why don't Chrome tab groups organize themselves?</h2>
+          <p>Chrome's tab groups are a filing cabinet with no clerk. You right-click, pick "Add tab to group", repeat. Open twenty links during a morning of work and you are filing twenty times, or, more likely, not at all.</p>
+          <p>Chrome's built-in AI "Organize tabs" helps with a one-off cleanup. It can't follow instructions, though. You can't tell it "pull requests always go in Reviews". A rule can.</p>
+
+          <h2 id="create">How do I create a tab grouping rule?</h2>
+          <ol class="steps">
+            <li>Install <a href="https://chromewebstore.google.com/detail/takt/plgfdnbgkjocmgegnkbihoeojcfphdic">Takt from the Chrome Web Store</a>.</li>
+            <li>Open Takt's options page and click <strong>New Rule</strong>.</li>
+            <li>Add a condition. <em>URL · Domain · github.com</em> catches github.com and every subdomain.</li>
+            <li>Name the group, pick a color, and save.</li>
+          </ol>
+          <p>Leave <strong>Apply now</strong> ticked and Takt regroups your open tabs straight away. New tabs are grouped as they load.</p>
+
+          <figure>
+            <img src="../img/options-rule-editor.png" alt="Takt's rule editor for a rule named Code: two URL Domain conditions (github.com, gitlab.com) joined with ANY condition (OR), group name Code, blue selected among the 8 Chrome colors, and Apply now ticked" width="700" loading="lazy" />
+            <figcaption>A rule with two conditions joined by OR (Premium). On the free plan it's one condition per rule.</figcaption>
+          </figure>
+
+          <h2 id="match-types">Which match type should I use?</h2>
+          <p>Most people need only <strong>Domain</strong>. Reach for the others when a domain is too broad.</p>
+          <table>
+            <thead>
+              <tr><th>Match type</th><th>Pattern</th><th>Catches</th><th>Plan</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Domain</td><td><code>google.com</code></td><td>docs.google.com, mail.google.com, google.com</td><td>Free</td></tr>
+              <tr><td>Contains</td><td><code>localhost</code></td><td>http://localhost:3000/api</td><td>Free</td></tr>
+              <tr><td>Exact</td><td><code>https://mail.google.com/mail/u/0/#inbox</code></td><td>Only that URL</td><td>Free</td></tr>
+              <tr><td>Glob</td><td><code>*github.com/*/pull/*</code></td><td>Every pull request, any repo</td><td>Premium</td></tr>
+              <tr><td>Regex</td><td><code>jira\..*/browse/PROJ-\d+</code></td><td>Tickets of one project</td><td>Premium</td></tr>
+            </tbody>
+          </table>
+          <p>Every condition can also be negated (<em>URL does NOT contain google.com</em>) or made case-sensitive. Premium adds matching on the page <strong>title</strong>, and combining up to 10 conditions with AND or OR.</p>
+
+          <h2 id="order">What if two rules match the same tab?</h2>
+          <p>The first match wins. Rules are checked from the top of your list down, and checking stops at the first hit.</p>
+          <p>So order them from specific to broad. A "Reviews" rule for pull requests must sit above a "Code" rule for all of GitHub, or every pull request ends up in "Code". Drag a rule, or use the ↑/↓ buttons, to move it.</p>
+
+          <figure>
+            <img src="../img/options-rules.png" alt="Takt's rule list showing seven rules with their conditions, group names, on/off toggles and reorder arrows, plus the Rule Tester above" width="700" loading="lazy" />
+            <figcaption>The rule list, with the Rule Tester on top. Paste any URL to see which rule fires.</figcaption>
+          </figure>
+
+          <h2 id="test">How do I check a rule before trusting it?</h2>
+          <p>Two ways, both on the Rules page:</p>
+          <ul>
+            <li><strong>Rule Tester.</strong> Paste a URL (and an optional page title). Takt tells you which rule would fire.</li>
+            <li><strong>Preview matching tabs.</strong> Inside the editor, this lists the tabs already open that the rule would catch, before you save.</li>
+          </ul>
+
+          <h2 id="starter">A starter set of five rules</h2>
+          <p>Five rules cover most working days, and five is exactly the free limit.</p>
+          <table>
+            <thead><tr><th>Group</th><th>Condition</th></tr></thead>
+            <tbody>
+              <tr><td>Code</td><td>Domain <code>github.com</code></td></tr>
+              <tr><td>Docs</td><td>Domain <code>developer.mozilla.org</code></td></tr>
+              <tr><td>Mail &amp; calendar</td><td>Domain <code>google.com</code></td></tr>
+              <tr><td>Local dev</td><td>Contains <code>localhost</code></td></tr>
+              <tr><td>Watch later</td><td>Domain <code>youtube.com</code></td></tr>
+            </tbody>
+          </table>
+          <p>Not sure what to write? The <a href="../rule-suggestions/">Insights pane suggests rules</a> from the sites you already keep open.</p>
+
+          <h2 id="limits">What rules can't do</h2>
+          <p>Rules match what they're told. A tab from a site you never wrote a rule for stays ungrouped. If you'd rather not write rules at all, switch the grouping mode to <a href="../group-tabs-by-category-or-ai/">Category or AI</a>.</p>
+
+          <div class="cta">
+            <p>Write one rule. Watch the next tab file itself.</p>
+            <a class="btn" href="https://chromewebstore.google.com/detail/takt/plgfdnbgkjocmgegnkbihoeojcfphdic">Add Takt to Chrome, free</a>
+          </div>
+
+          <h2 id="faq">FAQ</h2>
+          <div class="faq">
+            <details>
+              <summary>Can Chrome group tabs automatically without an extension?</summary>
+              <p>Chrome's built-in "Organize tabs" suggests groups with AI, on demand. It has no rules, so it can't keep sending the same sites to the same group.</p>
+            </details>
+            <details>
+              <summary>How many rules can I create for free?</summary>
+              <p>5 rules, one condition each, with contains, exact or domain matching. Premium ($3/month or $30/year) removes the limit.</p>
+            </details>
+            <details>
+              <summary>Can I pause a rule without deleting it?</summary>
+              <p>Yes. Every rule has an on/off toggle in the list. A disabled rule keeps its settings and stops matching.</p>
+            </details>
+            <details>
+              <summary>Does Takt send my URLs anywhere to match rules?</summary>
+              <p>No. Matching runs in your browser on locally stored rules. See <a href="../privacy-local-first/">how Takt keeps data local</a>.</p>
+            </details>
+          </div>
+
+          <h2 id="next">Read next</h2>
+          <div class="read-next">
+            <a href="../prevent-duplicate-tabs/">Stop opening the same tab twice<span>Duplicate prevention, on by default.</span></a>
+            <a href="../profiles-and-schedules/">Different rules for work and home<span>Profiles that switch on a schedule.</span></a>
+          </div>
+        </div>
+
+        <footer class="blog-post-footer">
+          <a href="../">All feature articles</a> · <a href="../../docs/rules/">Rule reference</a>
+        </footer>
+      </article>
+    </main>
+
+    <footer id="site-footer"></footer>
+    <script src="../../js/includes.js"></script>
+    <script src="../../js/nav.js"></script>
+  </body>
+</html>

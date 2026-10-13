@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>How to back up and sync Chrome tab groups, sessions and rules — Takt</title>
+    <meta
+      name="description"
+      content="Back up your Chrome tab setup to a JSON file, sync it through a Google Drive, Dropbox or iCloud folder, or sync it to Google Drive's private app storage. What each method covers, and where Chrome's own tab group sync fits."
+    />
+    <link rel="canonical" href="https://taktabs.com/blog/backup-and-sync-tabs/" />
+<!-- TAKT-LANG:head -->
+<link rel="alternate" hreflang="en" href="https://taktabs.com/blog/backup-and-sync-tabs/" />
+<link rel="alternate" hreflang="fr" href="https://taktabs.com/fr/blog/backup-and-sync-tabs/" />
+<link rel="alternate" hreflang="es" href="https://taktabs.com/es/blog/backup-and-sync-tabs/" />
+<link rel="alternate" hreflang="it" href="https://taktabs.com/it/blog/backup-and-sync-tabs/" />
+<link rel="alternate" hreflang="de" href="https://taktabs.com/de/blog/backup-and-sync-tabs/" />
+<link rel="alternate" hreflang="pt" href="https://taktabs.com/pt/blog/backup-and-sync-tabs/" />
+<link rel="alternate" hreflang="x-default" href="https://taktabs.com/blog/backup-and-sync-tabs/" />
+<!-- /TAKT-LANG:head -->
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="How to back up and sync Chrome tab groups, sessions and rules" />
+    <meta property="og:description" content="Three ways to move your tab setup between computers: a JSON file, a synced folder, or Google Drive's private app storage." />
+    <meta property="og:url" content="https://taktabs.com/blog/backup-and-sync-tabs/" />
+    <meta property="og:image" content="https://taktabs.com/blog/img/settings-backup-sync.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <link rel="icon" type="image/png" sizes="32x32" href="../../assets/favicon-32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="../../assets/favicon-16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="../../assets/apple-touch-icon.png" />
+    <meta name="theme-color" content="#FF3B30" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../../css/tokens.css" />
+    <link rel="stylesheet" href="../../css/base.css" />
+    <link rel="stylesheet" href="../../css/layout.css" />
+    <link rel="stylesheet" href="../../css/blog.css" />
+    <link rel="stylesheet" href="../../css/articles.css" />
+    <script src="../../js/theme.js"></script>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Article",
+            "headline": "How to back up and sync Chrome tab groups, sessions and rules",
+            "description": "Back up a Chrome tab setup to a JSON file, sync it through a cloud-synced folder, or sync it to Google Drive's private app storage.",
+            "datePublished": "2026-10-08",
+            "dateModified": "2026-10-08",
+            "author": { "@type": "Person", "name": "Vitor" },
+            "publisher": { "@type": "Organization", "name": "Takt", "url": "https://taktabs.com" },
+            "image": "https://taktabs.com/blog/img/settings-backup-sync.png",
+            "mainEntityOfPage": "https://taktabs.com/blog/backup-and-sync-tabs/"
+          },
+          {
+            "@type": "HowTo",
+            "name": "Sync Takt between two computers with Google Drive",
+            "step": [
+              { "@type": "HowToStep", "text": "On the first computer, open Takt's options page, go to Settings and click Connect Google Drive." },
+              { "@type": "HowToStep", "text": "Sign in and allow access to Takt's private app folder, then click Sync Now." },
+              { "@type": "HowToStep", "text": "On the second computer, connect the same Google account in the same place." },
+              { "@type": "HowToStep", "text": "Click Force Pull on the second computer to replace its rules, profiles and sessions with the copy on Drive." }
+            ]
+          },
+          {
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "Why aren't my Chrome tab groups syncing?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Chrome's own tab group sync needs 'Saved tab groups' turned on in the sync settings of every device, and a synced group appears in the bookmarks bar rather than opening by itself. Check that setting on each device first." }
+              },
+              {
+                "@type": "Question",
+                "name": "Does Takt sync my open tabs live between computers?",
+                "acceptedAnswer": { "@type": "Answer", "text": "No. Takt syncs your rules, profiles, saved sessions and hibernated tabs. Your rules rebuild the same groups on each computer, and a saved session reopens a whole workspace there." }
+              },
+              {
+                "@type": "Question",
+                "name": "Can Takt read my Google Drive files?",
+                "acceptedAnswer": { "@type": "Answer", "text": "No. Drive Sync asks only for Google Drive's app data scope, a hidden folder that only Takt can see, plus your email address to show which account is connected." }
+              },
+              {
+                "@type": "Question",
+                "name": "Are backup and sync free?",
+                "acceptedAnswer": { "@type": "Answer", "text": "No. JSON export and import, File Sync and Drive Sync are Premium features, $3/month or $30/year." }
+              }
+            ]
+          },
+          {
+            "@type": "SoftwareApplication",
+            "name": "Takt",
+            "applicationCategory": "BrowserApplication",
+            "operatingSystem": "Chrome",
+            "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <header id="site-header"></header>
+
+    <main class="blog-main">
+      <article class="blog-post article">
+        <p class="eyebrow">Backup &amp; sync</p>
+        <h1 class="blog-post-title">How to back up and sync your Chrome tab setup</h1>
+        <p class="lede">To back up and sync your Chrome tab setup, save it somewhere outside the browser: a JSON file, a folder your cloud client already syncs, or Google Drive. Takt does all three, and you pick how hands-off it is.</p>
+        <p class="blog-post-meta">Updated 8 October 2026 · 6 min read</p>
+<!-- TAKT-LANG:nav -->
+<p class="lang-links"><span aria-current="true">English</span> · <a href="../../fr/blog/backup-and-sync-tabs/" hreflang="fr" lang="fr">Français</a> · <a href="../../es/blog/backup-and-sync-tabs/" hreflang="es" lang="es">Español</a> · <a href="../../it/blog/backup-and-sync-tabs/" hreflang="it" lang="it">Italiano</a> · <a href="../../de/blog/backup-and-sync-tabs/" hreflang="de" lang="de">Deutsch</a> · <a href="../../pt/blog/backup-and-sync-tabs/" hreflang="pt" lang="pt">Português</a></p>
+<!-- /TAKT-LANG:nav -->
+
+        <div class="blog-post-body">
+          <div class="tldr">
+            <p><strong>Short answer:</strong> open Takt's options page, go to <strong>Settings</strong>, and choose one:</p>
+            <ul>
+              <li><strong>Export</strong> a JSON file: rules only, or a full backup.</li>
+              <li><strong>File Sync:</strong> Takt writes to a folder that Google Drive, Dropbox or iCloud Drive syncs for you.</li>
+              <li><strong>Drive Sync:</strong> Takt syncs to a hidden app folder in your Google Drive, every 15 minutes.</li>
+            </ul>
+            <p>All three are <span class="badge badge-premium">Premium</span>. None of them sends your data to a Takt server.</p>
+          </div>
+
+          <h2 id="chrome">Why aren't my Chrome tab groups syncing?</h2>
+          <p>Chrome's own tab group sync confuses a lot of people. Two things trip them up:</p>
+          <ul>
+            <li>It needs <strong>Saved tab groups</strong> turned on in the sync settings of <em>every</em> device.</li>
+            <li>A synced group lands in the bookmarks bar. It doesn't open by itself.</li>
+          </ul>
+          <p>If you only want a few groups on a second computer, check that setting first. It's free and built in.</p>
+          <p>Takt solves a different problem. It doesn't sync your open tabs live. It syncs the setup behind them: your rules, profiles, saved sessions and hibernated tabs. Your rules rebuild the same groups on each computer as you browse. A saved session reopens a whole workspace when you ask for it.</p>
+
+          <h2 id="export">How do I back up my tabs and rules to a file?</h2>
+          <p>In <strong>Settings → Import &amp; Export</strong> you get two rows:</p>
+          <table>
+            <thead><tr><th>Option</th><th>File</th><th>Contains</th></tr></thead>
+            <tbody>
+              <tr><td>Rules only</td><td><code>takt-rules.json</code></td><td>Your grouping rules</td></tr>
+              <tr><td>Full backup</td><td><code>takt-backup.json</code></td><td>Rules, settings, profiles, saved sessions and hibernated tabs</td></tr>
+            </tbody>
+          </table>
+          <p>Use <strong>Rules only</strong> to share a rule set with a colleague. Use <strong>Full backup</strong> before reinstalling Chrome or moving to a new computer.</p>
+          <p>On import, files are limited to 5 MB. Rules and sessions are added next to what you have, and any with a name you already use are skipped. A full backup also replaces your settings and profiles with the ones in the file.</p>
+
+          <figure>
+            <img src="../img/settings-backup-sync.png" alt="Takt Settings page showing three sections: Import and Export with Export and Import buttons for Rules only and Full backup, File Sync with a Choose Folder button and No folder selected, and Google Drive Sync with a Connect Google Drive button and Not connected" width="700" loading="lazy" />
+            <figcaption>Import &amp; Export, File Sync and Google Drive Sync, all in Settings.</figcaption>
+          </figure>
+
+          <h2 id="folder">How do I sync through Dropbox, iCloud or a Google Drive folder?</h2>
+          <p>Use <strong>File Sync</strong>. Takt writes plain JSON files to a folder you pick. Your cloud client uploads them like any other file.</p>
+          <ol class="steps">
+            <li>Click <strong>Choose Folder…</strong> and pick a folder inside your Drive, Dropbox or iCloud Drive folder, for example <code>Dropbox/Takt/</code>.</li>
+            <li>Click <strong>Sync Now</strong>. Takt writes <code>rules.json</code>, <code>profiles.json</code>, <code>sessions.json</code>, <code>hibernated.json</code> and <code>meta.json</code>.</li>
+            <li>Tick <strong>Auto-sync on every change</strong> to rewrite the files about 2 seconds after your last edit.</li>
+            <li>On the other computer, click <strong>Import from Folder</strong> and pick the same synced folder.</li>
+          </ol>
+          <p>No sign-in, and you can open the files and read them. Any cloud service with a desktop folder works.</p>
+          <p>The trade-off: it's one-way per computer. Each computer writes its own copy, and you pull another computer's data in with Import from Folder. If Chrome loses access to the folder, Takt shows a <strong>Re-authorize</strong> button.</p>
+
+          <h2 id="drive">How does Google Drive sync work?</h2>
+          <p>Click <strong>Connect Google Drive</strong> and sign in once. Takt stores its files in Drive's hidden app folder. It's separate from your Drive files and doesn't appear in the Drive interface.</p>
+          <p>Takt asks Google for two permissions only:</p>
+          <ul>
+            <li><strong>Drive app data:</strong> read and write a folder only Takt can see. It can't list or open your other files.</li>
+            <li><strong>Email address:</strong> to show which account is connected.</li>
+          </ul>
+          <p>Tick <strong>Auto-sync every 15 minutes</strong> and Takt syncs in the background. For a new computer, connect the same account and click <strong>Force Pull</strong> to replace its rules, profiles and sessions with the copy on Drive. <strong>Force Push</strong> does the opposite and overwrites Drive. Both are immediate and can't be undone from inside Takt.</p>
+
+          <h2 id="compare">Which method should I use?</h2>
+          <table>
+            <thead><tr><th></th><th>Chrome tab group sync</th><th>JSON export</th><th>File Sync</th><th>Drive Sync</th></tr></thead>
+            <tbody>
+              <tr><td>What moves</td><td>Saved tab groups</td><td>Rules, or a full backup</td><td>Rules, profiles, sessions, hibernated tabs</td><td>Rules, profiles, sessions, hibernated tabs, hibernation settings</td></tr>
+              <tr><td>Automatic</td><td>Yes</td><td>No</td><td>Writes yes, import by hand</td><td>Every 15 minutes</td></tr>
+              <tr><td>Cloud</td><td>Your Google account</td><td>None</td><td>Any desktop sync folder</td><td>Google Drive only</td></tr>
+              <tr><td>Cost</td><td>Free</td><td>Premium</td><td>Premium</td><td>Premium</td></tr>
+            </tbody>
+          </table>
+          <p>One more detail: Takt keeps rules, settings and profiles in Chrome's sync storage, which follows your Chrome account when Chrome sync is on. Sessions and hibernated tabs stay local, so those need one of the methods above.</p>
+
+          <h2 id="limits">What backup and sync don't do</h2>
+          <ul>
+            <li><strong>No live tab mirroring.</strong> Open tabs on one computer don't appear on another. Save a <a href="../save-restore-tab-sessions/">session</a> and restore it there.</li>
+            <li><strong>Last write wins.</strong> There's no merge of edits made on two computers at once. Pick one computer to edit on, or push and pull on purpose.</li>
+            <li><strong>Drive Sync is Google only.</strong> Use File Sync for Dropbox, iCloud or anything else.</li>
+          </ul>
+
+          <div class="cta">
+            <p>Set it up once. Take it to every computer.</p>
+            <a class="btn" href="https://chromewebstore.google.com/detail/takt/plgfdnbgkjocmgegnkbihoeojcfphdic">Add Takt to Chrome, free</a>
+          </div>
+
+          <h2 id="faq">FAQ</h2>
+          <div class="faq">
+            <details>
+              <summary>Why aren't my Chrome tab groups syncing?</summary>
+              <p>Chrome needs <strong>Saved tab groups</strong> turned on in the sync settings of every device, and synced groups appear in the bookmarks bar rather than opening by themselves.</p>
+            </details>
+            <details>
+              <summary>Does Takt sync my open tabs live between computers?</summary>
+              <p>No. It syncs your rules, profiles, saved sessions and hibernated tabs. Rules rebuild the same groups on each computer, and a saved session reopens a whole workspace.</p>
+            </details>
+            <details>
+              <summary>Can Takt read my Google Drive files?</summary>
+              <p>No. Drive Sync uses only the app data scope, a hidden folder only Takt can see, plus your email to show the connected account. See <a href="../privacy-local-first/">how Takt keeps data local</a>.</p>
+            </details>
+            <details>
+              <summary>Are backup and sync free?</summary>
+              <p>No. JSON export and import, File Sync and Drive Sync are Premium, $3/month or $30/year.</p>
+            </details>
+          </div>
+
+          <h2 id="next">Read next</h2>
+          <div class="read-next">
+            <a href="../save-restore-tab-sessions/">Save a workspace for later<span>Named sessions, restored in one click.</span></a>
+            <a href="../free-vs-premium/">Takt Free vs Premium<span>Every limit, side by side.</span></a>
+          </div>
+        </div>
+
+        <footer class="blog-post-footer">
+          <a href="../">All feature articles</a> · <a href="../../docs/sync/">File Sync reference</a> · <a href="../../docs/drive-sync/">Drive Sync reference</a>
+        </footer>
+      </article>
+    </main>
+
+    <footer id="site-footer"></footer>
+    <script src="../../js/includes.js"></script>
+    <script src="../../js/nav.js"></script>
+  </body>
+</html>

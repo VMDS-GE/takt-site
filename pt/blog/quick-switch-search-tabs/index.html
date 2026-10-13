@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Como pesquisar abas abertas no Chrome com um atalho de teclado — Takt</title>
+    <meta
+      name="description"
+      content="Pesquise suas abas abertas do Chrome pelo teclado: pressione Alt+Shift+Space, digite parte de um título ou URL e pressione Enter. O Quick Switch também encontra abas hibernadas e, com permissão, seu histórico. E ainda a pesquisa gratuita no popup do Takt."
+    />
+    <link rel="canonical" href="https://taktabs.com/pt/blog/quick-switch-search-tabs/" />
+<!-- TAKT-LANG:head -->
+<link rel="alternate" hreflang="en" href="https://taktabs.com/blog/quick-switch-search-tabs/" />
+<link rel="alternate" hreflang="fr" href="https://taktabs.com/fr/blog/quick-switch-search-tabs/" />
+<link rel="alternate" hreflang="es" href="https://taktabs.com/es/blog/quick-switch-search-tabs/" />
+<link rel="alternate" hreflang="it" href="https://taktabs.com/it/blog/quick-switch-search-tabs/" />
+<link rel="alternate" hreflang="de" href="https://taktabs.com/de/blog/quick-switch-search-tabs/" />
+<link rel="alternate" hreflang="pt" href="https://taktabs.com/pt/blog/quick-switch-search-tabs/" />
+<link rel="alternate" hreflang="x-default" href="https://taktabs.com/blog/quick-switch-search-tabs/" />
+<!-- /TAKT-LANG:head -->
+    <meta property="og:type" content="article" />
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:title" content="Como pesquisar abas abertas no Chrome com um atalho de teclado" />
+    <meta property="og:description" content="Alt+Shift+Space, digite, Enter. Pesquise abas abertas, abas hibernadas e o histórico sem tocar no mouse." />
+    <meta property="og:url" content="https://taktabs.com/pt/blog/quick-switch-search-tabs/" />
+    <meta property="og:image" content="https://taktabs.com/pt/blog/img/quick-switch.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <link rel="icon" type="image/png" sizes="32x32" href="../../../assets/favicon-32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="../../../assets/favicon-16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="../../../assets/apple-touch-icon.png" />
+    <meta name="theme-color" content="#FF3B30" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../../../css/tokens.css" />
+    <link rel="stylesheet" href="../../../css/base.css" />
+    <link rel="stylesheet" href="../../../css/layout.css" />
+    <link rel="stylesheet" href="../../../css/blog.css" />
+    <link rel="stylesheet" href="../../../css/articles.css" />
+    <script src="../../../js/theme.js"></script>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Article",
+            "headline": "Como pesquisar abas abertas no Chrome com um atalho de teclado",
+            "description": "Pressione Alt+Shift+Space, digite parte do título ou da URL de uma aba e pressione Enter. O Quick Switch pesquisa abas abertas, abas hibernadas e, com permissão, o histórico de navegação.",
+            "inLanguage": "pt",
+            "datePublished": "2026-10-08",
+            "dateModified": "2026-10-08",
+            "author": { "@type": "Person", "name": "Vitor" },
+            "publisher": { "@type": "Organization", "name": "Takt", "url": "https://taktabs.com" },
+            "image": "https://taktabs.com/pt/blog/img/quick-switch.png",
+            "mainEntityOfPage": "https://taktabs.com/pt/blog/quick-switch-search-tabs/"
+          },
+          {
+            "@type": "HowTo",
+            "name": "Pesquisar e trocar de aba no Chrome pelo teclado",
+            "step": [
+              { "@type": "HowToStep", "text": "Instale o Takt e faça upgrade para o Premium; o Quick Switch é um recurso Premium." },
+              { "@type": "HowToStep", "text": "Pressione Alt+Shift+Space em qualquer página." },
+              { "@type": "HowToStep", "text": "Digite parte do título ou da URL da aba. A lista é filtrada a cada tecla." },
+              { "@type": "HowToStep", "text": "Use as setas para cima e para baixo para escolher um resultado e pressione Enter para ir até ele. Esc fecha a pesquisa." }
+            ]
+          },
+          {
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "Qual é o atalho para pesquisar abas abertas com o Takt?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Alt+Shift+Space abre o Quick Switch. Mude em chrome://extensions/shortcuts." }
+              },
+              {
+                "@type": "Question",
+                "name": "O Quick Switch funciona nas páginas chrome://?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Sim. Nas páginas em que extensões não podem rodar, ele abre numa janela de 560 × 480 em vez de aparecer sobre a página." }
+              },
+              {
+                "@type": "Question",
+                "name": "Existe um jeito gratuito de pesquisar abas no Takt?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Sim. O painel Tabs do popup lista as abas abertas por grupo e tem uma caixa de pesquisa. O Quick Switch é Premium, por US$ 3/mês ou US$ 30/ano." }
+              },
+              {
+                "@type": "Question",
+                "name": "O Quick Switch pesquisa meu histórico de navegação?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Só com a permissão opcional de histórico. Os resultados do histórico aparecem quando você começa a digitar, até 20, e a pesquisa roda dentro do Chrome." }
+              }
+            ]
+          },
+          {
+            "@type": "SoftwareApplication",
+            "name": "Takt",
+            "applicationCategory": "BrowserApplication",
+            "operatingSystem": "Chrome",
+            "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <header id="site-header"></header>
+
+    <main class="blog-main">
+      <article class="blog-post article">
+        <p class="eyebrow">Quick Switch</p>
+        <h1 class="blog-post-title">Como pesquisar abas abertas no Chrome com um atalho de teclado</h1>
+        <p class="lede">Para pesquisar suas abas abertas no Chrome pelo teclado, pressione <kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>Space</kbd>, digite algumas letras do título ou do endereço da aba e pressione Enter. Esse é o Quick Switch do Takt. Ele também encontra as abas que você hibernou e, se você permitir, páginas do seu histórico.</p>
+        <p class="blog-post-meta">Atualizado em 8 de outubro de 2026 · 5 min de leitura</p>
+<!-- TAKT-LANG:nav -->
+<p class="lang-links"><a href="../../../blog/quick-switch-search-tabs/" hreflang="en" lang="en">English</a> · <a href="../../../fr/blog/quick-switch-search-tabs/" hreflang="fr" lang="fr">Français</a> · <a href="../../../es/blog/quick-switch-search-tabs/" hreflang="es" lang="es">Español</a> · <a href="../../../it/blog/quick-switch-search-tabs/" hreflang="it" lang="it">Italiano</a> · <a href="../../../de/blog/quick-switch-search-tabs/" hreflang="de" lang="de">Deutsch</a> · <span aria-current="true">Português</span></p>
+<!-- /TAKT-LANG:nav -->
+
+        <div class="blog-post-body">
+          <div class="tldr">
+            <p><strong>Resposta curta:</strong> <kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>Space</kbd> abre uma caixa de pesquisa sobre a página. Digite, use as setas e pressione Enter.</p>
+            <ul>
+              <li>Pesquisa abas abertas, abas hibernadas e o histórico de navegação, se você der permissão.</li>
+              <li>Funciona também nas páginas <code>chrome://</code>, numa janela pequena.</li>
+              <li>O Quick Switch é Premium (US$ 3/mês ou US$ 30/ano). A caixa de pesquisa do painel Tabs do popup é gratuita.</li>
+            </ul>
+          </div>
+
+          <h2 id="why">Por que achar uma aba é tão lento?</h2>
+          <p>Passando de umas 20 abas, a barra de abas do Chrome mostra os favicons e pouco mais. Você caça pelo ícone, clica na aba errada do GitHub, tenta de novo.</p>
+          <p>Digitar é mais rápido que procurar com os olhos. Você lembra "o pull request sobre cache", não em que ponto da barra ele está.</p>
+
+          <h2 id="how">Como pesquiso minhas abas abertas pelo teclado?</h2>
+          <ol class="steps">
+            <li>Pressione <kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>Space</kbd>. Uma caixa de pesquisa abre sobre a página atual.</li>
+            <li>Digite qualquer parte do título ou da URL. A busca não diferencia maiúsculas de minúsculas, e a lista se atualiza a cada tecla.</li>
+            <li>Navegue com <kbd>↑</kbd> e <kbd>↓</kbd>. A seleção dá a volta ao chegar nas pontas.</li>
+            <li>Pressione <kbd>Enter</kbd> para ir. O Takt foca a aba e traz a janela dela para a frente.</li>
+          </ol>
+          <p>Mais duas teclas: <kbd>Tab</kbd> copia o título do resultado selecionado para a caixa de pesquisa, e <kbd>Esc</kbd> fecha a caixa. Ela também se fecha se você clicar fora dela ou trocar de janela.</p>
+
+          <figure>
+            <img src="../img/quick-switch.png" alt="Quick Switch do Takt com a caixa de pesquisa vazia e uma lista Abas abertas: abas da Wikipedia, Reddit, YouTube, Hacker News, Chrome for Developers e MDN, cada uma com a URL e um ponto colorido do seu grupo de abas, além das dicas de teclas para navegar, alternar e fechar" width="800" loading="lazy" />
+            <figcaption>Aberto sem consulta, o Quick Switch lista suas abas, das usadas mais recentemente para as mais antigas.</figcaption>
+          </figure>
+
+          <h2 id="results">O que o Quick Switch pesquisa?</h2>
+          <table>
+            <thead><tr><th>Fonte</th><th>Quando aparece</th><th>O que o Enter faz</th></tr></thead>
+            <tbody>
+              <tr><td>Abas abertas</td><td>Sempre; as usadas mais recentemente primeiro, a aba atual por último</td><td>Vai para a aba</td></tr>
+              <tr><td>Abas hibernadas</td><td>Sempre, até 50</td><td>Desperta a aba onde ela estava</td></tr>
+              <tr><td>Histórico</td><td>Quando você digita, com a permissão de histórico; até 20</td><td>Abre numa nova aba</td></tr>
+            </tbody>
+          </table>
+          <p>A ordem é fixa: abas abertas, depois abas hibernadas, depois o histórico. O histórico pula páginas que já estão abertas ou hibernadas e nunca lista páginas <code>chrome://</code> nem de extensões.</p>
+
+          <figure>
+            <img src="../img/quick-switch-hibernated.png" alt="Quick Switch com a consulta 'the': duas abas abertas do GitHub cujos títulos contêm 'The' e, em seguida, The Verge como aba hibernada no grupo News, com o rótulo acordar" width="800" loading="lazy" />
+            <figcaption>Uma aba hibernada aparece na mesma pesquisa. O Enter a desperta.</figcaption>
+          </figure>
+          <p>Essa última linha é o motivo de ter a pesquisa e a <a href="../hibernate-tabs-free-memory/">hibernação</a> na mesma extensão. Você pode fechar abas sem medo de perdê-las, porque digitar o nome delas as traz de volta.</p>
+
+          <h2 id="chrome-pages">Funciona nas páginas chrome://?</h2>
+          <p>Sim. As extensões não podem desenhar sobre as páginas do próprio Chrome, então nelas o Quick Switch abre como uma janela de 560 × 480. Isso vale para as páginas <code>chrome://</code>, <code>chrome-extension://</code>, <code>about:</code> e <code>chrome-untrusted://</code> e para a Chrome Web Store. As teclas são as mesmas.</p>
+
+          <h2 id="free">Existe um jeito gratuito de pesquisar abas?</h2>
+          <p>Sim: o painel <strong>Tabs</strong> do popup do Takt. Ele lista todas as abas abertas sob o grupo de cada uma, com as abas sem grupo numa seção própria. Digite na caixa de pesquisa para filtrar por título ou URL; <kbd>Esc</kbd> limpa a caixa. Clique numa linha para focar a aba e trazer a janela dela para a frente.</p>
+          <figure class="narrow">
+            <img src="../img/popup-tabs.png" alt="Popup do Takt no painel Tabs: uma caixa Search tabs acima das abas abertas listadas sob os grupos Code, Docs, Entertainment, News e Research, cada linha com favicon, título e URL encurtada" width="420" loading="lazy" />
+            <figcaption>O painel Tabs do popup. Gratuito, só abas abertas.</figcaption>
+          </figure>
+
+          <table>
+            <thead><tr><th></th><th>Painel Tabs do popup</th><th>Quick Switch</th></tr></thead>
+            <tbody>
+              <tr><td>Plano</td><td>Free</td><td>Premium</td></tr>
+              <tr><td>Como abrir</td><td>Clique no ícone do Takt, depois em Tabs</td><td><kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>Space</kbd></td></tr>
+              <tr><td>Abas abertas</td><td>Sim, por grupo</td><td>Sim, as mais recentes primeiro</td></tr>
+              <tr><td>Abas hibernadas</td><td>Não (elas têm um painel próprio)</td><td>Sim</td></tr>
+              <tr><td>Histórico</td><td>Não</td><td>Com permissão</td></tr>
+              <tr><td>Precisa do mouse</td><td>Para abrir e escolher</td><td>Não</td></tr>
+            </tbody>
+          </table>
+
+          <h2 id="shortcut">Posso mudar o atalho?</h2>
+          <p>Sim. Vá em <code>chrome://extensions/shortcuts</code>, encontre o Takt, clique no lápis ao lado de Quick-switch e pressione as teclas que quiser.</p>
+
+          <h2 id="privacy">Meu histórico é enviado para algum lugar?</h2>
+          <p>Não. A pesquisa no histórico fica desligada até você conceder a permissão opcional de histórico em <strong>Settings → Permissões</strong>. A pesquisa roda dentro do Chrome, e você pode revogar a permissão na mesma página. Sem ela, o Quick Switch continua pesquisando as abas abertas e hibernadas.</p>
+
+          <h2 id="limits">O que o Quick Switch não faz</h2>
+          <p>Ele procura exatamente as letras que você digita, em qualquer ponto do título ou da URL. Não há correspondência aproximada, então "gthub" não encontra nada. No plano gratuito, o atalho não tem efeito; use o painel Tabs.</p>
+
+          <div class="cta">
+            <p>Pare de caçar favicons. Digite o nome da aba.</p>
+            <a class="btn" href="https://chromewebstore.google.com/detail/takt/plgfdnbgkjocmgegnkbihoeojcfphdic">Adicionar o Takt ao Chrome</a>
+          </div>
+
+          <h2 id="faq">Perguntas frequentes</h2>
+          <div class="faq">
+            <details>
+              <summary>Qual é o atalho para pesquisar abas abertas com o Takt?</summary>
+              <p><kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>Space</kbd> abre o Quick Switch. Mude em <code>chrome://extensions/shortcuts</code>.</p>
+            </details>
+            <details>
+              <summary>O Quick Switch funciona nas páginas chrome://?</summary>
+              <p>Sim. Nas páginas em que extensões não podem rodar, ele abre numa janela de 560 × 480 em vez de aparecer sobre a página.</p>
+            </details>
+            <details>
+              <summary>Existe um jeito gratuito de pesquisar abas no Takt?</summary>
+              <p>Sim. O painel Tabs do popup lista as abas abertas por grupo e tem uma caixa de pesquisa. O Quick Switch é Premium, por US$ 3/mês ou US$ 30/ano.</p>
+            </details>
+            <details>
+              <summary>O Quick Switch pesquisa meu histórico de navegação?</summary>
+              <p>Só com a permissão opcional de histórico. Os resultados do histórico aparecem quando você começa a digitar, até 20, e a pesquisa roda dentro do Chrome.</p>
+            </details>
+          </div>
+
+          <h2 id="next">Leia também</h2>
+          <div class="read-next">
+            <a href="../hibernate-tabs-free-memory/">Hiberne abas para liberar memória<span>Feche abas agora, desperte-as depois.</span></a>
+            <a href="../auto-group-tabs-chrome/">Agrupe abas automaticamente no Chrome<span>Regras que organizam cada nova aba.</span></a>
+          </div>
+        </div>
+
+        <footer class="blog-post-footer">
+          <a href="../../../blog/">Todos os artigos</a> · <a href="../../../docs/quick-switch/">Referência: Quick Switch</a>
+        </footer>
+      </article>
+    </main>
+
+    <footer id="site-footer"></footer>
+    <script src="../../../js/includes.js"></script>
+    <script src="../../../js/nav.js"></script>
+  </body>
+</html>

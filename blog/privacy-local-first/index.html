@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>A private tab manager for Chrome: what Takt sends, and what it doesn't — Takt</title>
+    <meta
+      name="description"
+      content="Takt is a Chrome tab manager with no account, no analytics and on-device AI. Here is every server it contacts, when, and what each permission is for."
+    />
+    <link rel="canonical" href="https://taktabs.com/blog/privacy-local-first/" />
+<!-- TAKT-LANG:head -->
+<link rel="alternate" hreflang="en" href="https://taktabs.com/blog/privacy-local-first/" />
+<link rel="alternate" hreflang="fr" href="https://taktabs.com/fr/blog/privacy-local-first/" />
+<link rel="alternate" hreflang="es" href="https://taktabs.com/es/blog/privacy-local-first/" />
+<link rel="alternate" hreflang="it" href="https://taktabs.com/it/blog/privacy-local-first/" />
+<link rel="alternate" hreflang="de" href="https://taktabs.com/de/blog/privacy-local-first/" />
+<link rel="alternate" hreflang="pt" href="https://taktabs.com/pt/blog/privacy-local-first/" />
+<link rel="alternate" hreflang="x-default" href="https://taktabs.com/blog/privacy-local-first/" />
+<!-- /TAKT-LANG:head -->
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="A private tab manager for Chrome: what Takt sends, and what it doesn't" />
+    <meta property="og:description" content="Every server Takt contacts, when, and why each permission exists. Written for anyone who still remembers The Great Suspender." />
+    <meta property="og:url" content="https://taktabs.com/blog/privacy-local-first/" />
+    <meta property="og:image" content="https://taktabs.com/blog/img/options-settings-permissions.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <link rel="icon" type="image/png" sizes="32x32" href="../../assets/favicon-32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="../../assets/favicon-16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="../../assets/apple-touch-icon.png" />
+    <meta name="theme-color" content="#FF3B30" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../../css/tokens.css" />
+    <link rel="stylesheet" href="../../css/base.css" />
+    <link rel="stylesheet" href="../../css/layout.css" />
+    <link rel="stylesheet" href="../../css/blog.css" />
+    <link rel="stylesheet" href="../../css/articles.css" />
+    <script src="../../js/theme.js"></script>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Article",
+            "headline": "A private tab manager for Chrome: what Takt sends, and what it doesn't",
+            "description": "Every server the Takt Chrome extension contacts, when it does, and why each permission exists.",
+            "datePublished": "2026-10-08",
+            "dateModified": "2026-10-08",
+            "author": { "@type": "Person", "name": "Vitor" },
+            "publisher": { "@type": "Organization", "name": "Takt", "url": "https://taktabs.com" },
+            "image": "https://taktabs.com/blog/img/options-settings-permissions.png",
+            "mainEntityOfPage": "https://taktabs.com/blog/privacy-local-first/"
+          },
+          {
+            "@type": "HowTo",
+            "name": "Check which network requests a Chrome extension makes",
+            "step": [
+              { "@type": "HowToStep", "text": "Open chrome://extensions and turn on Developer mode." },
+              { "@type": "HowToStep", "text": "On the Takt card, click the service worker link next to Inspect views." },
+              { "@type": "HowToStep", "text": "Open the Network tab in the DevTools window that appears and leave it open while you browse." }
+            ]
+          },
+          {
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "Does Takt send my browsing history or tab URLs anywhere?",
+                "acceptedAnswer": { "@type": "Answer", "text": "No. Rules, matching, sessions, hibernated tabs and suggestions stay in Chrome's storage on your machine. The only data that leaves is a licence check to ExtensionPay and, if you connect it, a sync file in your own Google Drive." }
+              },
+              {
+                "@type": "Question",
+                "name": "Does Takt need an account?",
+                "acceptedAnswer": { "@type": "Answer", "text": "No. There is no Takt account. Payment for Premium goes through ExtensionPay, which uses Stripe." }
+              },
+              {
+                "@type": "Question",
+                "name": "Is Takt's AI grouping done in the cloud?",
+                "acceptedAnswer": { "@type": "Answer", "text": "No. AI grouping uses Chrome's built-in on-device language model. If the model isn't available, Takt falls back to grouping by similarity, also on your machine." }
+              },
+              {
+                "@type": "Question",
+                "name": "Why does Takt need the tabs permission?",
+                "acceptedAnswer": { "@type": "Answer", "text": "To read each tab's URL and title so it can match them against your rules. Matching happens in the browser; nothing is transmitted." }
+              },
+              {
+                "@type": "Question",
+                "name": "How is this different from The Great Suspender?",
+                "acceptedAnswer": { "@type": "Answer", "text": "The Great Suspender was removed by Google in 2021 after malicious code was found in a version released after it was sold. Takt cannot load remote code: its content security policy only allows scripts bundled in the extension, so any change has to ship as a new Chrome Web Store version." }
+              }
+            ]
+          },
+          {
+            "@type": "SoftwareApplication",
+            "name": "Takt",
+            "applicationCategory": "BrowserApplication",
+            "operatingSystem": "Chrome",
+            "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <header id="site-header"></header>
+
+    <main class="blog-main">
+      <article class="blog-post article">
+        <p class="eyebrow">Privacy</p>
+        <h1 class="blog-post-title">A private tab manager for Chrome: what Takt sends, and what it doesn't</h1>
+        <p class="lede">Takt is a Chrome tab manager that keeps your tabs, rules and sessions on your machine. It has no account and no analytics, and it talks to at most two services. This page lists both, with what they receive.</p>
+        <p class="blog-post-meta">Updated 8 October 2026 · 6 min read</p>
+<!-- TAKT-LANG:nav -->
+<p class="lang-links"><span aria-current="true">English</span> · <a href="../../fr/blog/privacy-local-first/" hreflang="fr" lang="fr">Français</a> · <a href="../../es/blog/privacy-local-first/" hreflang="es" lang="es">Español</a> · <a href="../../it/blog/privacy-local-first/" hreflang="it" lang="it">Italiano</a> · <a href="../../de/blog/privacy-local-first/" hreflang="de" lang="de">Deutsch</a> · <a href="../../pt/blog/privacy-local-first/" hreflang="pt" lang="pt">Português</a></p>
+<!-- /TAKT-LANG:nav -->
+
+        <div class="blog-post-body">
+          <div class="tldr">
+            <p><strong>Short answer:</strong> Takt sends no browsing data anywhere. It makes two kinds of network request, and both are listed below.</p>
+            <ul>
+              <li><strong>Licence check</strong> to ExtensionPay: at startup, every 15 minutes, and when you open the popup.</li>
+              <li><strong>Google Drive sync</strong>: only if you connect it (Premium).</li>
+              <li>No account, no analytics, no telemetry. AI grouping runs on Chrome's on-device model.</li>
+            </ul>
+          </div>
+
+          <h2 id="why">Why should I trust a tab extension at all?</h2>
+          <p>You may not, and that's reasonable. In 2021 Google removed The Great Suspender, a tab suspender extension, after malicious code turned up in a version released after it was sold. Its users had installed something useful, and an update turned it against them.</p>
+          <p>A tab manager needs to read your tab URLs to work. So the useful questions are: what does it do with them, who else gets them, and can that change without you noticing? The rest of this page answers those for Takt, with things you can check yourself.</p>
+
+          <h2 id="local">What stays on my machine?</h2>
+          <p>Everything Takt knows about your browsing lives in Chrome's own extension storage:</p>
+          <ul>
+            <li><strong>Rules, settings and profiles</strong> in <code>chrome.storage.sync</code>.</li>
+            <li><strong>Sessions, hibernated tabs, rule match counts</strong> and the domain history behind rule suggestions in <code>chrome.storage.local</code>.</li>
+          </ul>
+          <p>One caveat: if Chrome Sync is on, Chrome itself copies <code>chrome.storage.sync</code> between your devices through your Google account. That is a Chrome feature, not a Takt server.</p>
+
+          <h2 id="servers">Which servers does Takt contact?</h2>
+          <table>
+            <thead>
+              <tr><th>Service</th><th>When</th><th>What it receives</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>ExtensionPay (licence)</td><td>At startup, every 15 minutes, when you open the popup</td><td>A random licence key. No URLs, no tab data.</td></tr>
+              <tr><td>Google Drive API</td><td>Only after you connect Drive. Every 15 minutes if auto-sync is on.</td><td>Takt's own sync files, in Drive's hidden app folder</td></tr>
+              <tr><td>Google sign-in</td><td>When you connect or disconnect Drive</td><td>On connect, a lookup of your email to show which account is linked. On disconnect, a request to revoke Takt's access token.</td></tr>
+            </tbody>
+          </table>
+          <p>A detail worth knowing: ExtensionPay only creates that licence key when you first open the upgrade or log-in page. Until then the check finds no key and ends without a network request.</p>
+          <p>Drive sync uses the <code>drive.appdata</code> scope. Takt can read and write its own files in a hidden folder and cannot see the rest of your Drive. Folder sync, the other backup option, writes to a folder you pick; your own cloud client does any uploading.</p>
+          <p>Two more things open a web page, and neither is a background request. The review link opens the Chrome Web Store when you click it. And when you uninstall, Chrome opens a feedback page that receives coarse values such as version, plan and a rule-count range. The <a href="../../privacy/">privacy policy</a> lists every value.</p>
+
+          <h2 id="ai">Is the AI grouping on-device?</h2>
+          <p>Yes. Group with AI uses Chrome's built-in language model, which runs on your computer. Chrome downloads the model on first use, and Takt shows the progress. If the model isn't available, Takt groups by similarity instead, also locally.</p>
+          <p>To be exact about what the model sees: each tab's title and, for pages Chrome lets Takt read (all-sites access grants that), the first 500 characters of visible text. That text goes to the model on your machine and nowhere else. There is no Takt server to send it to.</p>
+          <p>If occasional AI grouping is all you want, Chrome's own "Organize Similar Tabs" also runs on-device and needs no extension. Takt is for rules that persist, duplicate blocking, hibernation and sessions on top.</p>
+
+          <h2 id="permissions">Why does Takt ask for each permission?</h2>
+          <p>Eight permissions are granted at install. Each one maps to a feature:</p>
+          <table>
+            <thead><tr><th>Permission</th><th>Why</th></tr></thead>
+            <tbody>
+              <tr><td><code>tabs</code></td><td>Read tab URLs and titles to match your rules</td></tr>
+              <tr><td><code>tabGroups</code></td><td>Create, name, color and collapse groups</td></tr>
+              <tr><td><code>activeTab</code></td><td>Act on the current tab when you click in the popup</td></tr>
+              <tr><td><code>storage</code></td><td>Save rules, settings, sessions</td></tr>
+              <tr><td><code>scripting</code></td><td>Show the duplicate toast and the Quick Switch overlay; read page text for AI grouping</td></tr>
+              <tr><td><code>contextMenus</code></td><td>Right-click items such as Hibernate this tab</td></tr>
+              <tr><td><code>notifications</code></td><td>Alerts such as memory budget warnings</td></tr>
+              <tr><td><code>alarms</code></td><td>Timed jobs: auto-hibernate, profile schedules, the licence check</td></tr>
+            </tbody>
+          </table>
+          <p>Everything else is <strong>optional</strong> and off until a feature needs it: <code>webRequest</code>, <code>system.memory</code> and all-sites access for the Resource Dashboard (all-sites access also lets AI grouping read page text), <code>bookmarks</code> for Bookmark Group, <code>history</code> for Quick Switch search and rule suggestions, <code>downloads</code> for Quick Switch search, <code>identity</code> for Drive sync. You can revoke any of them in Settings, or set Takt to never ask.</p>
+
+          <figure>
+            <img src="../img/options-settings-permissions.png" alt="Takt Settings, Permissions section with Grant all and Revoke all buttons and switched-off toggles for Network monitoring, System memory access, All website access, Bookmarks access and Browsing history access, each with what it enables and what stops working without it" width="700" loading="lazy" />
+            <figcaption>Optional permissions in Settings. Each toggle says what it enables and what breaks without it.</figcaption>
+          </figure>
+
+          <h2 id="verify">How can I check this myself?</h2>
+          <ol class="steps">
+            <li>Open <code>chrome://extensions</code> and turn on <strong>Developer mode</strong>.</li>
+            <li>On the Takt card, click <strong>service worker</strong> next to "Inspect views".</li>
+            <li>Open the <strong>Network</strong> tab and keep browsing. You should see only the requests in the table above, plus Takt reading its own <code>chrome-extension://</code> files.</li>
+          </ol>
+          <p>Takt's content security policy is <code>script-src 'self'</code>. It can only run code bundled in the extension, so it can't fetch new code from a server. Any change in behavior has to ship as a new Chrome Web Store version.</p>
+
+          <h2 id="limits">What this doesn't protect you from</h2>
+          <ul>
+            <li><strong>You still trust the updates.</strong> Chrome installs new versions automatically. No policy can stop a future version from changing; the network tab is how you'd notice.</li>
+            <li><strong>ExtensionPay is a third party.</strong> Once a licence key exists, it sees the key and, like any server, your IP address.</li>
+            <li><strong>The <code>tabs</code> permission is broad.</strong> Takt can read every tab's URL and title. That's how rules work. What matters is that it stays on the machine.</li>
+          </ul>
+
+          <div class="cta">
+            <p>A tab manager with nothing to phone home to.</p>
+            <a class="btn" href="https://chromewebstore.google.com/detail/takt/plgfdnbgkjocmgegnkbihoeojcfphdic">Add Takt to Chrome, free</a>
+          </div>
+
+          <h2 id="faq">FAQ</h2>
+          <div class="faq">
+            <details>
+              <summary>Does Takt send my browsing history or tab URLs anywhere?</summary>
+              <p>No. Rules, matching, sessions, hibernated tabs and suggestions stay in Chrome's storage on your machine. The only data that leaves is the licence check and, if you connect it, Takt's sync files in your own Google Drive.</p>
+            </details>
+            <details>
+              <summary>Does Takt need an account?</summary>
+              <p>No. There is no Takt account. Premium ($3/month or $30/year) is paid through ExtensionPay, which uses Stripe.</p>
+            </details>
+            <details>
+              <summary>Is Takt's AI grouping done in the cloud?</summary>
+              <p>No. It uses Chrome's built-in on-device model. Without the model, Takt groups by similarity, also locally.</p>
+            </details>
+            <details>
+              <summary>Why does Takt need the tabs permission?</summary>
+              <p>To read each tab's URL and title and match them against your rules. Matching happens in the browser; nothing is transmitted.</p>
+            </details>
+            <details>
+              <summary>How is this different from The Great Suspender?</summary>
+              <p>The Great Suspender was removed in 2021 after malicious code appeared in a version released after it was sold. Takt's content security policy only allows bundled scripts, so any change has to ship as a new Chrome Web Store version you can inspect.</p>
+            </details>
+          </div>
+
+          <h2 id="next">Read next</h2>
+          <div class="read-next">
+            <a href="../getting-started/">Get started with Takt in 2 minutes<span>The welcome page, your first rules, where things live.</span></a>
+            <a href="../backup-and-sync-tabs/">Back up and sync your tabs<span>A folder you pick, or Drive's private app folder.</span></a>
+          </div>
+        </div>
+
+        <footer class="blog-post-footer">
+          <a href="../">All feature articles</a> · <a href="../../docs/permissions/">Permissions reference</a> · <a href="../../privacy/">Privacy policy</a>
+        </footer>
+      </article>
+    </main>
+
+    <footer id="site-footer"></footer>
+    <script src="../../js/includes.js"></script>
+    <script src="../../js/nav.js"></script>
+  </body>
+</html>

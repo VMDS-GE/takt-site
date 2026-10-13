@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Come fare il backup e sincronizzare gruppi di schede, sessioni e regole di Chrome — Takt</title>
+    <meta
+      name="description"
+      content="Fai il backup della configurazione delle schede di Chrome in un file JSON, sincronizzala tramite una cartella di Google Drive, Dropbox o iCloud, oppure nello spazio privato dell'app su Google Drive. Cosa copre ogni metodo e che ruolo ha la sincronizzazione dei gruppi di schede di Chrome."
+    />
+    <link rel="canonical" href="https://taktabs.com/it/blog/backup-and-sync-tabs/" />
+<!-- TAKT-LANG:head -->
+<link rel="alternate" hreflang="en" href="https://taktabs.com/blog/backup-and-sync-tabs/" />
+<link rel="alternate" hreflang="fr" href="https://taktabs.com/fr/blog/backup-and-sync-tabs/" />
+<link rel="alternate" hreflang="es" href="https://taktabs.com/es/blog/backup-and-sync-tabs/" />
+<link rel="alternate" hreflang="it" href="https://taktabs.com/it/blog/backup-and-sync-tabs/" />
+<link rel="alternate" hreflang="de" href="https://taktabs.com/de/blog/backup-and-sync-tabs/" />
+<link rel="alternate" hreflang="pt" href="https://taktabs.com/pt/blog/backup-and-sync-tabs/" />
+<link rel="alternate" hreflang="x-default" href="https://taktabs.com/blog/backup-and-sync-tabs/" />
+<!-- /TAKT-LANG:head -->
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Come fare il backup e sincronizzare gruppi di schede, sessioni e regole di Chrome" />
+    <meta property="og:description" content="Tre modi per portare la configurazione delle schede da un computer all'altro: un file JSON, una cartella sincronizzata o lo spazio privato dell'app su Google Drive." />
+    <meta property="og:url" content="https://taktabs.com/it/blog/backup-and-sync-tabs/" />
+    <meta property="og:image" content="https://taktabs.com/it/blog/img/settings-backup-sync.png" />
+    <meta property="og:locale" content="it_IT" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <link rel="icon" type="image/png" sizes="32x32" href="../../../assets/favicon-32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="../../../assets/favicon-16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="../../../assets/apple-touch-icon.png" />
+    <meta name="theme-color" content="#FF3B30" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../../../css/tokens.css" />
+    <link rel="stylesheet" href="../../../css/base.css" />
+    <link rel="stylesheet" href="../../../css/layout.css" />
+    <link rel="stylesheet" href="../../../css/blog.css" />
+    <link rel="stylesheet" href="../../../css/articles.css" />
+    <script src="../../../js/theme.js"></script>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Article",
+            "headline": "Come fare il backup e sincronizzare gruppi di schede, sessioni e regole di Chrome",
+            "description": "Fai il backup della configurazione delle schede di Chrome in un file JSON, sincronizzala tramite una cartella sincronizzata nel cloud o nello spazio privato dell'app su Google Drive.",
+            "inLanguage": "it",
+            "datePublished": "2026-10-08",
+            "dateModified": "2026-10-08",
+            "author": { "@type": "Person", "name": "Vitor" },
+            "publisher": { "@type": "Organization", "name": "Takt", "url": "https://taktabs.com" },
+            "image": "https://taktabs.com/it/blog/img/settings-backup-sync.png",
+            "mainEntityOfPage": "https://taktabs.com/it/blog/backup-and-sync-tabs/"
+          },
+          {
+            "@type": "HowTo",
+            "name": "Sincronizzare Takt tra due computer con Google Drive",
+            "step": [
+              { "@type": "HowToStep", "text": "Sul primo computer, apri la pagina delle opzioni di Takt, vai su Settings e fai clic su Connect Google Drive." },
+              { "@type": "HowToStep", "text": "Accedi e consenti l'accesso alla cartella privata dell'app di Takt, poi fai clic su Sync Now." },
+              { "@type": "HowToStep", "text": "Sul secondo computer, collega lo stesso account Google dallo stesso punto." },
+              { "@type": "HowToStep", "text": "Fai clic su Force Pull sul secondo computer per sostituire le sue regole, i suoi profili e le sue sessioni con la copia su Drive." }
+            ]
+          },
+          {
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "Perché i miei gruppi di schede di Chrome non si sincronizzano?",
+                "acceptedAnswer": { "@type": "Answer", "text": "La sincronizzazione dei gruppi di schede di Chrome richiede che 'Gruppi di schede salvati' sia attivo nelle impostazioni di sincronizzazione di ogni dispositivo, e un gruppo sincronizzato compare nella barra dei preferiti invece di aprirsi da solo. Controlla prima quell'impostazione su ogni dispositivo." }
+              },
+              {
+                "@type": "Question",
+                "name": "Takt sincronizza in tempo reale le schede aperte tra computer?",
+                "acceptedAnswer": { "@type": "Answer", "text": "No. Takt sincronizza le regole, i profili, le sessioni salvate e le schede ibernate. Le regole ricreano gli stessi gruppi su ogni computer, e una sessione salvata riapre lì un intero spazio di lavoro." }
+              },
+              {
+                "@type": "Question",
+                "name": "Takt può leggere i miei file di Google Drive?",
+                "acceptedAnswer": { "@type": "Answer", "text": "No. La Sincronizzazione Drive chiede solo l'ambito dei dati delle app di Google Drive, una cartella nascosta che solo Takt può vedere, più il tuo indirizzo email per mostrare quale account è collegato." }
+              },
+              {
+                "@type": "Question",
+                "name": "Backup e sincronizzazione sono gratuiti?",
+                "acceptedAnswer": { "@type": "Answer", "text": "No. Esportazione e importazione JSON, Sincronizzazione file e Sincronizzazione Drive sono funzioni Premium, $3/mese o $30/anno." }
+              }
+            ]
+          },
+          {
+            "@type": "SoftwareApplication",
+            "name": "Takt",
+            "applicationCategory": "BrowserApplication",
+            "operatingSystem": "Chrome",
+            "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <header id="site-header"></header>
+
+    <main class="blog-main">
+      <article class="blog-post article">
+        <p class="eyebrow">Backup e sincronizzazione</p>
+        <h1 class="blog-post-title">Come fare il backup e sincronizzare la configurazione delle schede di Chrome</h1>
+        <p class="lede">Per fare il backup e sincronizzare la configurazione delle schede di Chrome, salvala fuori dal browser: in un file JSON, in una cartella che il tuo client cloud sincronizza già, o su Google Drive. Takt fa tutte e tre le cose, e scegli tu quanto deve essere automatico.</p>
+        <p class="blog-post-meta">Aggiornato l'8 ottobre 2026 · 6 min di lettura</p>
+<!-- TAKT-LANG:nav -->
+<p class="lang-links"><a href="../../../blog/backup-and-sync-tabs/" hreflang="en" lang="en">English</a> · <a href="../../../fr/blog/backup-and-sync-tabs/" hreflang="fr" lang="fr">Français</a> · <a href="../../../es/blog/backup-and-sync-tabs/" hreflang="es" lang="es">Español</a> · <span aria-current="true">Italiano</span> · <a href="../../../de/blog/backup-and-sync-tabs/" hreflang="de" lang="de">Deutsch</a> · <a href="../../../pt/blog/backup-and-sync-tabs/" hreflang="pt" lang="pt">Português</a></p>
+<!-- /TAKT-LANG:nav -->
+
+        <div class="blog-post-body">
+          <div class="tldr">
+            <p><strong>In breve:</strong> apri la pagina delle opzioni di Takt, vai su <strong>Settings</strong> e scegli una di queste:</p>
+            <ul>
+              <li><strong>Export</strong> in un file JSON: solo le regole, oppure un backup completo.</li>
+              <li><strong>Sincronizzazione file (File Sync):</strong> Takt scrive in una cartella che Google Drive, Dropbox o iCloud Drive sincronizzano al posto tuo.</li>
+              <li><strong>Sincronizzazione Drive (Drive Sync):</strong> Takt si sincronizza con una cartella nascosta dell'app nel tuo Google Drive, ogni 15 minuti.</li>
+            </ul>
+            <p>Tutte e tre sono <span class="badge badge-premium">Premium</span>. Nessuna invia i tuoi dati a un server di Takt.</p>
+          </div>
+
+          <h2 id="chrome">Perché i miei gruppi di schede di Chrome non si sincronizzano?</h2>
+          <p>La sincronizzazione dei gruppi di schede integrata in Chrome confonde molte persone. Due cose le mettono in difficoltà:</p>
+          <ul>
+            <li>Richiede che <strong>Gruppi di schede salvati</strong> ("Saved tab groups") sia attivo nelle impostazioni di sincronizzazione di <em>ogni</em> dispositivo.</li>
+            <li>Un gruppo sincronizzato finisce nella barra dei preferiti. Non si apre da solo.</li>
+          </ul>
+          <p>Se vuoi solo qualche gruppo su un secondo computer, controlla prima quell'impostazione. È gratuita e integrata.</p>
+          <p>Takt risolve un problema diverso. Non sincronizza in tempo reale le schede aperte. Sincronizza la configurazione che sta dietro: regole, profili, sessioni salvate e schede ibernate. Le regole ricreano gli stessi gruppi su ogni computer mentre navighi. Una sessione salvata riapre un intero spazio di lavoro quando lo chiedi.</p>
+
+          <h2 id="export">Come faccio il backup di schede e regole in un file?</h2>
+          <p>In <strong>Settings → Import &amp; Export</strong> trovi due righe:</p>
+          <table>
+            <thead><tr><th>Opzione</th><th>File</th><th>Contenuto</th></tr></thead>
+            <tbody>
+              <tr><td>Rules only</td><td><code>takt-rules.json</code></td><td>Le regole di raggruppamento</td></tr>
+              <tr><td>Full backup</td><td><code>takt-backup.json</code></td><td>Regole, impostazioni, profili, sessioni salvate e schede ibernate</td></tr>
+            </tbody>
+          </table>
+          <p>Usa <strong>Rules only</strong> per condividere un set di regole con un collega. Usa <strong>Full backup</strong> prima di reinstallare Chrome o di passare a un nuovo computer.</p>
+          <p>In importazione, i file sono limitati a 5 MB. Regole e sessioni vengono aggiunte a quelle che hai già, e quelle con un nome che usi già vengono saltate. Un backup completo sostituisce anche le impostazioni e i profili con quelli del file.</p>
+
+          <figure>
+            <img src="../img/settings-backup-sync.png" alt="Pagina Settings di Takt con tre sezioni: Import and Export con i pulsanti Export e Import per Rules only e Full backup, File Sync con un pulsante Choose Folder e No folder selected, e Google Drive Sync con un pulsante Connect Google Drive e Not connected" width="700" loading="lazy" />
+            <figcaption>Import &amp; Export, File Sync e Google Drive Sync, tutti in Settings.</figcaption>
+          </figure>
+
+          <h2 id="folder">Come sincronizzo tramite Dropbox, iCloud o una cartella di Google Drive?</h2>
+          <p>Usa <strong>File Sync</strong>. Takt scrive semplici file JSON in una cartella che scegli tu. Il tuo client cloud li carica come qualsiasi altro file.</p>
+          <ol class="steps">
+            <li>Fai clic su <strong>Choose Folder…</strong> e scegli una cartella dentro la cartella di Drive, Dropbox o iCloud Drive, per esempio <code>Dropbox/Takt/</code>.</li>
+            <li>Fai clic su <strong>Sync Now</strong>. Takt scrive <code>rules.json</code>, <code>profiles.json</code>, <code>sessions.json</code>, <code>hibernated.json</code> e <code>meta.json</code>.</li>
+            <li>Spunta <strong>Auto-sync on every change</strong> per riscrivere i file circa 2 secondi dopo l'ultima modifica.</li>
+            <li>Sull'altro computer, fai clic su <strong>Import from Folder</strong> e scegli la stessa cartella sincronizzata.</li>
+          </ol>
+          <p>Nessun accesso da fare, e puoi aprire i file e leggerli. Funziona con qualsiasi servizio cloud che abbia una cartella sul computer.</p>
+          <p>Il compromesso: è a senso unico per ogni computer. Ogni computer scrive la sua copia, e importi i dati di un altro computer con Import from Folder. Se Chrome perde l'accesso alla cartella, Takt mostra un pulsante <strong>Re-authorize</strong>.</p>
+
+          <h2 id="drive">Come funziona la sincronizzazione con Google Drive?</h2>
+          <p>Fai clic su <strong>Connect Google Drive</strong> e accedi una volta. Takt salva i suoi file nella cartella nascosta delle app di Drive. È separata dai tuoi file di Drive e non compare nell'interfaccia di Drive.</p>
+          <p>Takt chiede a Google solo due autorizzazioni:</p>
+          <ul>
+            <li><strong>Dati delle app di Drive:</strong> leggere e scrivere una cartella che solo Takt può vedere. Non può elencare né aprire gli altri tuoi file.</li>
+            <li><strong>Indirizzo email:</strong> per mostrare quale account è collegato.</li>
+          </ul>
+          <p>Spunta <strong>Auto-sync every 15 minutes</strong> e Takt si sincronizza in background. Per un nuovo computer, collega lo stesso account e fai clic su <strong>Force Pull</strong> per sostituire le sue regole, i suoi profili e le sue sessioni con la copia su Drive. <strong>Force Push</strong> fa il contrario e sovrascrive Drive. Entrambi hanno effetto immediato e non si possono annullare da dentro Takt.</p>
+
+          <h2 id="compare">Quale metodo usare?</h2>
+          <table>
+            <thead><tr><th></th><th>Sincronizzazione dei gruppi di Chrome</th><th>Esportazione JSON</th><th>Sincronizzazione file</th><th>Sincronizzazione Drive</th></tr></thead>
+            <tbody>
+              <tr><td>Cosa si sposta</td><td>Gruppi di schede salvati</td><td>Regole, o un backup completo</td><td>Regole, profili, sessioni, schede ibernate</td><td>Regole, profili, sessioni, schede ibernate, impostazioni di ibernazione</td></tr>
+              <tr><td>Automatica</td><td>Sì</td><td>No</td><td>Scrittura sì, importazione a mano</td><td>Ogni 15 minuti</td></tr>
+              <tr><td>Cloud</td><td>Il tuo account Google</td><td>Nessuno</td><td>Qualsiasi cartella sincronizzata sul computer</td><td>Solo Google Drive</td></tr>
+              <tr><td>Costo</td><td>Gratis</td><td>Premium</td><td>Premium</td><td>Premium</td></tr>
+            </tbody>
+          </table>
+          <p>Un dettaglio in più: Takt tiene regole, impostazioni e profili nello spazio di sincronizzazione di Chrome, che segue il tuo account Chrome quando la sincronizzazione di Chrome è attiva. Sessioni e schede ibernate restano in locale, quindi per quelle serve uno dei metodi qui sopra.</p>
+
+          <h2 id="limits">Cosa backup e sincronizzazione non fanno</h2>
+          <ul>
+            <li><strong>Nessun mirroring delle schede in tempo reale.</strong> Le schede aperte su un computer non compaiono su un altro. Salva una <a href="../save-restore-tab-sessions/">sessione</a> e ripristinala lì.</li>
+            <li><strong>Vince l'ultima scrittura.</strong> Le modifiche fatte su due computer contemporaneamente non vengono unite. Scegli un computer su cui fare le modifiche, oppure invia e scarica di proposito.</li>
+            <li><strong>La Sincronizzazione Drive funziona solo con Google.</strong> Per Dropbox, iCloud o altro usa la Sincronizzazione file.</li>
+          </ul>
+
+          <div class="cta">
+            <p>Configura una volta. Portalo su ogni computer.</p>
+            <a class="btn" href="https://chromewebstore.google.com/detail/takt/plgfdnbgkjocmgegnkbihoeojcfphdic">Aggiungi Takt a Chrome, è gratis</a>
+          </div>
+
+          <h2 id="faq">Domande frequenti</h2>
+          <div class="faq">
+            <details>
+              <summary>Perché i miei gruppi di schede di Chrome non si sincronizzano?</summary>
+              <p>Chrome richiede che <strong>Gruppi di schede salvati</strong> sia attivo nelle impostazioni di sincronizzazione di ogni dispositivo, e i gruppi sincronizzati compaiono nella barra dei preferiti invece di aprirsi da soli.</p>
+            </details>
+            <details>
+              <summary>Takt sincronizza in tempo reale le schede aperte tra computer?</summary>
+              <p>No. Sincronizza le regole, i profili, le sessioni salvate e le schede ibernate. Le regole ricreano gli stessi gruppi su ogni computer, e una sessione salvata riapre un intero spazio di lavoro.</p>
+            </details>
+            <details>
+              <summary>Takt può leggere i miei file di Google Drive?</summary>
+              <p>No. La Sincronizzazione Drive usa solo l'ambito dei dati delle app, una cartella nascosta che solo Takt può vedere, più la tua email per mostrare l'account collegato. Vedi <a href="../privacy-local-first/">come Takt tiene i dati in locale</a>.</p>
+            </details>
+            <details>
+              <summary>Backup e sincronizzazione sono gratuiti?</summary>
+              <p>No. Esportazione e importazione JSON, Sincronizzazione file e Sincronizzazione Drive sono Premium, $3/mese o $30/anno.</p>
+            </details>
+          </div>
+
+          <h2 id="next">Da leggere dopo</h2>
+          <div class="read-next">
+            <a href="../save-restore-tab-sessions/">Salva uno spazio di lavoro per dopo<span>Sessioni con nome, ripristinate con un clic.</span></a>
+            <a href="../free-vs-premium/">Takt Free o Premium<span>Tutti i limiti, a confronto.</span></a>
+          </div>
+        </div>
+
+        <footer class="blog-post-footer">
+          <a href="../../../blog/">Tutti gli articoli sulle funzionalità</a> · <a href="../../../docs/sync/">Riferimento: sincronizzazione file</a> · <a href="../../../docs/drive-sync/">Riferimento: sincronizzazione Drive</a>
+        </footer>
+      </article>
+    </main>
+
+    <footer id="site-footer"></footer>
+    <script src="../../../js/includes.js"></script>
+    <script src="../../../js/nav.js"></script>
+  </body>
+</html>

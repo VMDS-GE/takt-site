@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Come vedere quali schede di Chrome consumano più memoria — Takt</title>
+    <meta
+      name="description"
+      content="Scopri quali schede e gruppi di schede di Chrome consumano più memoria: stime per scheda, punteggi di salute da A a F per gruppo, attività di rete in background, una barra della memoria di sistema e budget di memoria per gruppo. Come viene calcolato ogni numero."
+    />
+    <link rel="canonical" href="https://taktabs.com/it/blog/find-memory-hungry-tabs/" />
+<!-- TAKT-LANG:head -->
+<link rel="alternate" hreflang="en" href="https://taktabs.com/blog/find-memory-hungry-tabs/" />
+<link rel="alternate" hreflang="fr" href="https://taktabs.com/fr/blog/find-memory-hungry-tabs/" />
+<link rel="alternate" hreflang="es" href="https://taktabs.com/es/blog/find-memory-hungry-tabs/" />
+<link rel="alternate" hreflang="it" href="https://taktabs.com/it/blog/find-memory-hungry-tabs/" />
+<link rel="alternate" hreflang="de" href="https://taktabs.com/de/blog/find-memory-hungry-tabs/" />
+<link rel="alternate" hreflang="pt" href="https://taktabs.com/pt/blog/find-memory-hungry-tabs/" />
+<link rel="alternate" hreflang="x-default" href="https://taktabs.com/blog/find-memory-hungry-tabs/" />
+<!-- /TAKT-LANG:head -->
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Come vedere quali schede di Chrome consumano più memoria" />
+    <meta property="og:description" content="Stime di memoria per scheda, punteggi di salute dei gruppi da A a F e budget di memoria, tutto misurato dentro il browser." />
+    <meta property="og:url" content="https://taktabs.com/it/blog/find-memory-hungry-tabs/" />
+    <meta property="og:image" content="https://taktabs.com/it/blog/img/options-dashboard-memory.png" />
+    <meta property="og:locale" content="it_IT" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <link rel="icon" type="image/png" sizes="32x32" href="../../../assets/favicon-32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="../../../assets/favicon-16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="../../../assets/apple-touch-icon.png" />
+    <meta name="theme-color" content="#FF3B30" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../../../css/tokens.css" />
+    <link rel="stylesheet" href="../../../css/base.css" />
+    <link rel="stylesheet" href="../../../css/layout.css" />
+    <link rel="stylesheet" href="../../../css/blog.css" />
+    <link rel="stylesheet" href="../../../css/articles.css" />
+    <script src="../../../js/theme.js"></script>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Article",
+            "headline": "Come vedere quali schede di Chrome consumano più memoria",
+            "description": "Stime di memoria per scheda, punteggi di salute da A a F per gruppo di schede, attività di rete in background e budget di memoria per gruppo nella Dashboard risorse di Takt, e come viene calcolato ogni numero.",
+            "inLanguage": "it",
+            "datePublished": "2026-10-08",
+            "dateModified": "2026-10-08",
+            "author": { "@type": "Person", "name": "Vitor" },
+            "publisher": { "@type": "Organization", "name": "Takt", "url": "https://taktabs.com" },
+            "image": "https://taktabs.com/it/blog/img/options-dashboard-memory.png",
+            "mainEntityOfPage": "https://taktabs.com/it/blog/find-memory-hungry-tabs/"
+          },
+          {
+            "@type": "HowTo",
+            "name": "Trovare le schede di Chrome che consumano più memoria",
+            "step": [
+              { "@type": "HowToStep", "text": "Installa Takt e passa a Premium; la Dashboard risorse è una funzione Premium." },
+              { "@type": "HowToStep", "text": "In Opzioni → Settings → Autorizzazioni, concedi Accesso a tutti i siti web e, se vuoi, Monitoraggio di rete e Accesso alla memoria di sistema." },
+              { "@type": "HowToStep", "text": "Apri Opzioni → Dashboard. I gruppi sono ordinati per memoria stimata; la scheda di ogni gruppo elenca le sue schede ordinate per memoria." },
+              { "@type": "HowToStep", "text": "Fai clic su Sospendi accanto a un consiglio di sospensione, oppure imposta un budget di memoria per gruppo in Settings → Memory Budgets." }
+            ]
+          },
+          {
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "Come stima Takt la memoria di una scheda?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Esegue un breve script nella scheda e somma quattro parti: l'heap JavaScript in uso, il numero di nodi DOM per circa 1,5 KB, la dimensione decodificata delle risorse caricate dalla pagina e i buffer canvas a larghezza × altezza × 4 byte. È una stima, utile soprattutto per mettere in ordine le schede." }
+              },
+              {
+                "@type": "Question",
+                "name": "Perché la colonna Memoria mostra un trattino?",
+                "acceptedAnswer": { "@type": "Answer", "text": "L'autorizzazione Accesso a tutti i siti web non è concessa, la scheda è sospesa, oppure è una pagina su cui le estensioni non possono eseguire script, come le pagine chrome://." }
+              },
+              {
+                "@type": "Question",
+                "name": "La Dashboard risorse è gratuita?",
+                "acceptedAnswer": { "@type": "Answer", "text": "No. La Dashboard risorse e i budget di memoria sono Premium, a $3/mese o $30/anno." }
+              },
+              {
+                "@type": "Question",
+                "name": "Takt invia i dati delle mie schede da qualche parte per misurarli?",
+                "acceptedAnswer": { "@type": "Answer", "text": "No. Ogni misurazione avviene dentro il browser. Nessun servizio esterno misura niente." }
+              }
+            ]
+          },
+          {
+            "@type": "SoftwareApplication",
+            "name": "Takt",
+            "applicationCategory": "BrowserApplication",
+            "operatingSystem": "Chrome",
+            "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <header id="site-header"></header>
+
+    <main class="blog-main">
+      <article class="blog-post article">
+        <p class="eyebrow">Dashboard risorse <span class="badge badge-premium">Premium</span></p>
+        <h1 class="blog-post-title">Come vedere quali schede di Chrome consumano più memoria</h1>
+        <p class="lede">Per vedere quali schede di Chrome consumano più memoria, ti servono i numeri di tutte le schede affiancati e raggruppati come lavori tu. La Dashboard risorse di Takt ti dà una stima della memoria per scheda, un totale per gruppo di schede e un punteggio di salute da A a F, aggiornati ogni 10 secondi.</p>
+        <p class="blog-post-meta">Aggiornato l'8 ottobre 2026 · 6 min di lettura</p>
+<!-- TAKT-LANG:nav -->
+<p class="lang-links"><a href="../../../blog/find-memory-hungry-tabs/" hreflang="en" lang="en">English</a> · <a href="../../../fr/blog/find-memory-hungry-tabs/" hreflang="fr" lang="fr">Français</a> · <a href="../../../es/blog/find-memory-hungry-tabs/" hreflang="es" lang="es">Español</a> · <span aria-current="true">Italiano</span> · <a href="../../../de/blog/find-memory-hungry-tabs/" hreflang="de" lang="de">Deutsch</a> · <a href="../../../pt/blog/find-memory-hungry-tabs/" hreflang="pt" lang="pt">Português</a></p>
+<!-- /TAKT-LANG:nav -->
+
+        <div class="blog-post-body">
+          <div class="tldr">
+            <p><strong>In breve:</strong> apri <strong>Opzioni → Dashboard</strong> di Takt. I gruppi sono in ordine di memoria stimata e le schede di ogni gruppo sono ordinate dalla più pesante.</p>
+            <ul>
+              <li>Stima della memoria per scheda, tempo di inattività, domini di terze parti e attività in background.</li>
+              <li>Punteggio di salute da A a F per gruppo di schede, una barra della memoria di sistema e budget di memoria che scaricano le schede al posto tuo.</li>
+              <li>Premium ($3/mese o $30/anno). Misurato nel tuo browser, da niente al di fuori.</li>
+            </ul>
+          </div>
+
+          <h2 id="why">Perché è difficile capire quale scheda usa memoria?</h2>
+          <p>Chrome mostra la memoria nella scheda di anteprima che compare passando il mouse su una scheda, una alla volta. Con 30 schede aperte sono 30 passaggi del mouse, e nessun totale.</p>
+          <p>Di solito, comunque, non ti interessa una singola scheda. Ti interessa sapere se il gruppo da chiudere è "Research" o "Entertainment". Per questo Takt somma la memoria per gruppo di schede.</p>
+
+          <figure>
+            <img src="../img/options-dashboard-memory.png" alt="Parte superiore della Dashboard risorse di Takt: una barra RAM di sistema che indica 26,9 GB usati su 32,0 GB (84%), con le schede a 0,2 GB e 5,1 GB liberi; un riquadro Ciclo di vita con 0 sospese, 2 in ibernazione, 100 MB risparmiati stimati, 2 oggi; e una Ripartizione dei gruppi che mette in ordine Code con 149 MB, Entertainment 71 MB, Research 15 MB, Docs 14 MB, News 2 MB e le schede non raggruppate 1 MB, ciascuno con un indicatore di salute A e il numero di schede" width="700" loading="lazy" />
+            <figcaption>Memoria di sistema, contatori del ciclo di vita e gruppi in ordine di memoria stimata.</figcaption>
+          </figure>
+
+          <h2 id="estimate">Come stima Takt la memoria di una scheda?</h2>
+          <p>Takt esegue un breve script dentro ogni scheda e somma quattro parti:</p>
+          <table>
+            <thead><tr><th>Parte</th><th>Come viene misurata</th></tr></thead>
+            <tbody>
+              <tr><td>Heap JavaScript</td><td>Heap in uso, come Chrome lo comunica alla pagina</td></tr>
+              <tr><td>Albero DOM</td><td>Numero di elementi × circa 1,5 KB</td></tr>
+              <tr><td>Risorse caricate</td><td>Dimensione decodificata di ogni file caricato dalla pagina</td></tr>
+              <tr><td>Buffer canvas</td><td>Larghezza × altezza × 4 byte per ogni canvas</td></tr>
+            </tbody>
+          </table>
+          <p>Considera il risultato una classifica, non una fattura. Non include il carico del browser per ogni scheda, quindi il dato di Chrome per la stessa scheda può essere diverso.</p>
+          <p>Alcune schede non si possono misurare. Le schede sospese non hanno niente in esecuzione. Le pagine di Chrome (<code>chrome://</code>), le pagine delle estensioni e il Chrome Web Store non consentono script, quindi compaiono in <strong>Schede non monitorate</strong>. Se una scheda non risponde entro 3 secondi, Takt mostra l'ultimo valore noto.</p>
+
+          <figure>
+            <img src="../img/options-dashboard-tab-table.png" alt="La scheda del gruppo Code nella Dashboard risorse di Takt: 4 schede, 149 MB, con un pulsante Chiudi tutto e una tabella di schede ordinate per memoria (49, 41, 29 e 29 MB), ognuna con le colonne di inattività, numero di domini di terze parti e attività in background" width="700" loading="lazy" />
+            <figcaption>Ogni gruppo elenca le sue schede. Fai clic sull'intestazione di una colonna per ordinare.</figcaption>
+          </figure>
+
+          <h2 id="health">Cosa significano i punteggi di salute da A a F?</h2>
+          <p>Ogni gruppo parte da 100 punti e ne perde in base a quattro fattori:</p>
+          <table>
+            <thead><tr><th>Fattore</th><th>Condizione</th><th>Penalità</th></tr></thead>
+            <tbody>
+              <tr><td>Memoria (totale del gruppo)</td><td>Oltre 500 MB / oltre 200 MB</td><td>−30 / −15</td></tr>
+              <tr><td>Tempo medio di inattività</td><td>Oltre 60 min / oltre 30 min</td><td>−20 / −10</td></tr>
+              <tr><td>Schede con attività in background</td><td>Più di 3 / almeno 1</td><td>−20 / −10</td></tr>
+              <tr><td>Domini di terze parti</td><td>Oltre 50 / oltre 20</td><td>−15 / −5</td></tr>
+            </tbody>
+          </table>
+          <p>Voti: A da 90 in su, B da 75 a 89, C da 60 a 74, D da 40 a 59, F sotto 40. Un gruppo che usa 300 MB con schede inattive in media da 45 minuti ottiene 75: una B.</p>
+          <p>"Attività in background" significa che la scheda ha completato una richiesta di rete negli ultimi 60 secondi. "Terze parti" indica qualsiasi dominio diverso dal sito della scheda e dai suoi sottodomini. Le CDN più comuni sono contate a parte, così non gonfiano il punteggio.</p>
+
+          <h2 id="act">Cosa faccio una volta trovate le schede pesanti?</h2>
+          <ul>
+            <li><strong>Consigli di sospensione.</strong> Takt elenca 5 schede da scaricare, ordinate per memoria e tempo di inattività, con un peso maggiore per l'attività in background. Esclude la scheda attiva, le schede fissate e una scheda che è da sola nel suo gruppo. Fai clic su <strong>Sospendi</strong> per scaricarne una.</li>
+            <li><strong>Chiudi tutto</strong> nel riquadro di un gruppo chiude quel gruppo.</li>
+            <li><strong>Iberna</strong> una scheda che vuoi riavere più tardi. Vedi <a href="../hibernate-tabs-free-memory/">come funziona l'ibernazione</a>.</li>
+          </ul>
+
+          <h2 id="budget">Posso limitare la memoria usata da un gruppo di schede?</h2>
+          <p>Sì. In <strong>Settings → Memory Budgets</strong>, inserisci il nome di un gruppo e un limite in MB. Takt controlla i budget ogni 15 secondi.</p>
+          <p>Quando un gruppo lo supera, ricevi una notifica con il gruppo, il suo consumo, il suo budget e "Suspending tabs in 10s — click to cancel" (sospensione delle schede tra 10 s, fai clic per annullare). Se la ignori, Takt scarica le schede più pesanti di quel gruppo finché non torna sotto il budget. Non tocca mai la scheda attiva, le schede fissate o quelle che riproducono audio. Fai clic sulla notifica per annullare.</p>
+          <p>I budget si basano sulle stesse stime, quindi anche loro richiedono Accesso a tutti i siti web.</p>
+
+          <h2 id="permissions">Di quali autorizzazioni ha bisogno la dashboard?</h2>
+          <p>Nessuna all'installazione. Concedi ciascuna in <strong>Settings → Autorizzazioni</strong> e puoi revocarla lì in qualsiasi momento.</p>
+          <table>
+            <thead><tr><th>Autorizzazione</th><th>Cosa aggiunge</th><th>Senza</th></tr></thead>
+            <tbody>
+              <tr><td>Accesso a tutti i siti web</td><td>Stime di memoria per scheda</td><td>La memoria mostra "—"</td></tr>
+              <tr><td>Monitoraggio di rete</td><td>Domini di terze parti e attività in background (serve anche Accesso a tutti i siti web)</td><td>Nessuna colonna di rete</td></tr>
+              <tr><td>Accesso alla memoria di sistema</td><td>La barra della RAM di sistema</td><td>"Memoria di sistema non disponibile"</td></tr>
+            </tbody>
+          </table>
+          <p>Il monitoraggio di rete vede solo le richieste fatte dopo che l'hai concesso. Ricarica le schede aperte per iniziare il conteggio. Takt legge indirizzi e tempi delle richieste, non il contenuto delle pagine.</p>
+
+          <figure>
+            <img src="../img/options-settings-permissions-dashboard.png" alt="Impostazioni Autorizzazioni di Takt con i pulsanti Concedi tutte le autorizzazioni e Revoca tutte le autorizzazioni, e gli interruttori Monitoraggio di rete, Accesso alla memoria di sistema e Accesso a tutti i siti web, ciascuno con le funzioni della dashboard che attiva e cosa manca senza" width="700" loading="lazy" />
+            <figcaption>Ogni autorizzazione facoltativa indica quali funzioni della dashboard aggiunge.</figcaption>
+          </figure>
+
+          <h2 id="limits">Cosa la dashboard non può dirti</h2>
+          <p>Stima la memoria delle pagine. Non legge l'elenco dei processi di Chrome, quindi non vede la memoria della GPU, le estensioni o il browser stesso. Se la barra di sistema mette gran parte della RAM sotto "Altro", quella memoria va ad altre app o a Chrome stesso, non a ciò che contengono le tue pagine.</p>
+
+          <div class="cta">
+            <p>Trova il gruppo che si mangia la RAM. Poi mettilo a dormire.</p>
+            <a class="btn" href="https://chromewebstore.google.com/detail/takt/plgfdnbgkjocmgegnkbihoeojcfphdic">Aggiungi Takt a Chrome</a>
+          </div>
+
+          <h2 id="faq">Domande frequenti</h2>
+          <div class="faq">
+            <details>
+              <summary>Come stima Takt la memoria di una scheda?</summary>
+              <p>Somma l'heap JavaScript in uso, il numero di elementi × circa 1,5 KB, la dimensione decodificata delle risorse caricate e i buffer canvas a larghezza × altezza × 4 byte. Usala per mettere in ordine le schede.</p>
+            </details>
+            <details>
+              <summary>Perché la colonna Memoria mostra un trattino?</summary>
+              <p>Accesso a tutti i siti web non è concesso, la scheda è sospesa, oppure è una pagina su cui le estensioni non possono eseguire script, come le pagine <code>chrome://</code>.</p>
+            </details>
+            <details>
+              <summary>La Dashboard risorse è gratuita?</summary>
+              <p>No. La dashboard e i budget di memoria sono Premium, a $3/mese o $30/anno.</p>
+            </details>
+            <details>
+              <summary>Takt invia i dati delle mie schede da qualche parte per misurarli?</summary>
+              <p>No. Ogni misurazione avviene dentro il browser. Vedi <a href="../privacy-local-first/">come Takt tiene i dati in locale</a>.</p>
+            </details>
+          </div>
+
+          <h2 id="next">Da leggere dopo</h2>
+          <div class="read-next">
+            <a href="../hibernate-tabs-free-memory/">Iberna le schede per liberare memoria<span>Scarica le schede inattive, riattivale dove le avevi lasciate.</span></a>
+            <a href="../free-vs-premium/">Takt Free o Premium<span>Tutti i limiti, a confronto.</span></a>
+          </div>
+        </div>
+
+        <footer class="blog-post-footer">
+          <a href="../../../blog/">Tutti gli articoli sulle funzionalità</a> · <a href="../../../docs/resources/">Riferimento: Dashboard risorse</a>
+        </footer>
+      </article>
+    </main>
+
+    <footer id="site-footer"></footer>
+    <script src="../../../js/includes.js"></script>
+    <script src="../../../js/nav.js"></script>
+  </body>
+</html>

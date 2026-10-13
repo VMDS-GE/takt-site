@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Como organizar as abas do Chrome com um clique — Takt</title>
+    <meta
+      name="description"
+      content="Agrupe, desagrupe, recolha, ordene e elimine duplicatas de todas as abas do Chrome a partir de um popup ou de um atalho. O que cada botão faz, o que é gratuito e quais atalhos aprender."
+    />
+    <link rel="canonical" href="https://taktabs.com/pt/blog/one-click-tab-cleanup/" />
+<!-- TAKT-LANG:head -->
+<link rel="alternate" hreflang="en" href="https://taktabs.com/blog/one-click-tab-cleanup/" />
+<link rel="alternate" hreflang="fr" href="https://taktabs.com/fr/blog/one-click-tab-cleanup/" />
+<link rel="alternate" hreflang="es" href="https://taktabs.com/es/blog/one-click-tab-cleanup/" />
+<link rel="alternate" hreflang="it" href="https://taktabs.com/it/blog/one-click-tab-cleanup/" />
+<link rel="alternate" hreflang="de" href="https://taktabs.com/de/blog/one-click-tab-cleanup/" />
+<link rel="alternate" hreflang="pt" href="https://taktabs.com/pt/blog/one-click-tab-cleanup/" />
+<link rel="alternate" hreflang="x-default" href="https://taktabs.com/blog/one-click-tab-cleanup/" />
+<!-- /TAKT-LANG:head -->
+    <meta property="og:type" content="article" />
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:title" content="Como organizar as abas do Chrome com um clique" />
+    <meta property="og:description" content="Agrupar abas, Recolher tudo, Ordenar por domínio e Fechar duplicadas: um navegador bagunçado arrumado em quatro cliques ou três atalhos." />
+    <meta property="og:url" content="https://taktabs.com/pt/blog/one-click-tab-cleanup/" />
+    <meta property="og:image" content="https://taktabs.com/pt/blog/img/options-groups.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <link rel="icon" type="image/png" sizes="32x32" href="../../../assets/favicon-32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="../../../assets/favicon-16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="../../../assets/apple-touch-icon.png" />
+    <meta name="theme-color" content="#FF3B30" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../../../css/tokens.css" />
+    <link rel="stylesheet" href="../../../css/base.css" />
+    <link rel="stylesheet" href="../../../css/layout.css" />
+    <link rel="stylesheet" href="../../../css/blog.css" />
+    <link rel="stylesheet" href="../../../css/articles.css" />
+    <script src="../../../js/theme.js"></script>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Article",
+            "headline": "Como organizar as abas do Chrome com um clique",
+            "description": "Agrupe, desagrupe, recolha, ordene e elimine duplicatas de todas as abas do Chrome a partir de um popup ou de um atalho de teclado.",
+            "inLanguage": "pt",
+            "datePublished": "2026-10-08",
+            "dateModified": "2026-10-08",
+            "author": { "@type": "Person", "name": "Vitor" },
+            "publisher": { "@type": "Organization", "name": "Takt", "url": "https://taktabs.com" },
+            "image": "https://taktabs.com/pt/blog/img/options-groups.png",
+            "mainEntityOfPage": "https://taktabs.com/pt/blog/one-click-tab-cleanup/"
+          },
+          {
+            "@type": "HowTo",
+            "name": "Arrumar uma janela bagunçada do Chrome em quatro cliques",
+            "step": [
+              { "@type": "HowToStep", "text": "Abra o popup do Takt e clique em Fechar duplicadas para fechar as abas repetidas da janela atual." },
+              { "@type": "HowToStep", "text": "Clique em Agrupar abas (ou pressione Alt+Shift+G) para colocar cada aba no seu grupo." },
+              { "@type": "HowToStep", "text": "Clique em Ordenar por domínio para que as abas do mesmo site fiquem lado a lado." },
+              { "@type": "HowToStep", "text": "Clique em Recolher tudo (ou pressione Alt+Shift+C) para recolher cada grupo até o rótulo." }
+            ]
+          },
+          {
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "Quais são os atalhos de teclado padrão do Takt?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Alt+Shift+G agrupa, Alt+Shift+U desagrupa, Alt+Shift+C recolhe e Alt+Shift+Space abre o Quick Switch (Premium). Expandir tudo não tem tecla padrão. Defina uma em chrome://extensions/shortcuts." }
+              },
+              {
+                "@type": "Question",
+                "name": "Qual aba o Fechar duplicadas mantém?",
+                "acceptedAnswer": { "@type": "Answer", "text": "A primeira cópia na ordem da barra de abas, da esquerda para a direita. As cópias seguintes na janela atual são fechadas. A sua configuração de correspondência de URL decide o que conta como a mesma URL; por padrão, o #fragmento é ignorado." }
+              },
+              {
+                "@type": "Question",
+                "name": "Os botões de arrumação são gratuitos?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Agrupar, Desagrupar, Recolher, Expandir, Fechar duplicadas, o painel Tabs e o recolhimento automático na mesma janela são gratuitos. Ordenar por domínio é gratuito para a janela atual. O Premium (US$ 3/mês ou US$ 30/ano) acrescenta a ordenação de todas as janelas, as ações de grupo, o recolhimento automático entre janelas e o grupo Outros." }
+              },
+              {
+                "@type": "Question",
+                "name": "Posso fechar um grupo de abas inteiro de uma vez?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Com o Premium, sim: pela visão Groups nas opções do Takt, ou por Ações de grupo no menu de clique com o botão direito da página. Fechar ignora as abas fixadas, e a visão Groups pede confirmação antes." }
+              }
+            ]
+          },
+          {
+            "@type": "SoftwareApplication",
+            "name": "Takt",
+            "applicationCategory": "BrowserApplication",
+            "operatingSystem": "Chrome",
+            "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <header id="site-header"></header>
+
+    <main class="blog-main">
+      <article class="blog-post article">
+        <p class="eyebrow">Arrumação</p>
+        <h1 class="blog-post-title">Como organizar as abas do Chrome com um clique</h1>
+        <p class="lede">Para organizar as abas do Chrome com um clique, abra o popup do Takt e pressione Agrupar abas, depois Recolher tudo. Dois cliques transformam uma fileira de abas soltas numa fileira de grupos com rótulo, recolhidos.</p>
+        <p class="blog-post-meta">Atualizado em 8 de outubro de 2026 · 5 min de leitura</p>
+<!-- TAKT-LANG:nav -->
+<p class="lang-links"><a href="../../../blog/one-click-tab-cleanup/" hreflang="en" lang="en">English</a> · <a href="../../../fr/blog/one-click-tab-cleanup/" hreflang="fr" lang="fr">Français</a> · <a href="../../../es/blog/one-click-tab-cleanup/" hreflang="es" lang="es">Español</a> · <a href="../../../it/blog/one-click-tab-cleanup/" hreflang="it" lang="it">Italiano</a> · <a href="../../../de/blog/one-click-tab-cleanup/" hreflang="de" lang="de">Deutsch</a> · <span aria-current="true">Português</span></p>
+<!-- /TAKT-LANG:nav -->
+
+        <div class="blog-post-body">
+          <div class="tldr">
+            <p><strong>Resposta curta:</strong> o Takt reúne todas as ações em massa sobre abas num só popup e em três atalhos padrão. <kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>G</kbd> agrupa, <kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>U</kbd> desagrupa, <kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>C</kbd> recolhe.</p>
+            <ul>
+              <li>Free: Agrupar, Desagrupar, Recolher, Expandir, Fechar duplicadas, Ordenar por domínio (janela atual), o painel Tabs.</li>
+              <li>Premium: fechar, favoritar ou mover um grupo inteiro, ordenar todas as janelas, recolher as outras janelas, um grupo "Outros" para as sobras.</li>
+              <li>Tudo roda no seu computador. Sem conta.</li>
+            </ul>
+          </div>
+
+          <h2 id="buttons">O que faz cada botão de arrumação?</h2>
+          <p>O painel Início do popup tem um bloco de <strong>Ações rápidas</strong>. Agrupar, Desagrupar, Recolher, Expandir e Fechar duplicadas ficam cinza quando não teriam efeito, então o bloco também mostra o estado das suas abas.</p>
+
+          <figure class="narrow">
+            <img src="../img/popup-home.png" alt="Painel Início do popup do Takt com o modo de agrupamento em Por regras e o bloco Ações rápidas: Agrupar abas, Desagrupar tudo, Recolher tudo, Expandir tudo em cinza, Hibernar aba, Ordenar por domínio e Fechar duplicadas, parcialmente coberto por um aviso 'Aba hibernada'" width="420" loading="lazy" />
+            <figcaption>As ações rápidas no popup. Expandir tudo está em cinza porque todos os grupos já estão abertos.</figcaption>
+          </figure>
+
+          <table>
+            <thead>
+              <tr><th>Botão</th><th>O que faz</th><th>Alcance</th><th>Plano</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Agrupar abas</td><td>Coloca as abas em grupos pelas suas regras, por categoria ou com IA</td><td>Todas as janelas</td><td>Free</td></tr>
+              <tr><td>Desagrupar tudo</td><td>Remove todos os grupos e mantém todas as abas</td><td>Todas as janelas</td><td>Free</td></tr>
+              <tr><td>Recolher tudo</td><td>Recolhe cada grupo até o rótulo</td><td>Todas as janelas</td><td>Free</td></tr>
+              <tr><td>Expandir tudo</td><td>Abre todos os grupos</td><td>Janela atual</td><td>Free</td></tr>
+              <tr><td>Fechar duplicadas</td><td>Fecha URLs repetidas e mantém a primeira cópia</td><td>Janela atual</td><td>Free</td></tr>
+              <tr><td>Ordenar por domínio</td><td>Coloca lado a lado as abas do mesmo site</td><td>Janela atual (Free), todas as janelas (Premium)</td><td>Free / Premium</td></tr>
+            </tbody>
+          </table>
+          <p>Agrupar abas segue o modo de agrupamento escolhido logo acima. Nos modos Por categoria e Por IA, o plano gratuito cria até 5 grupos por execução. Saiba mais em <a href="../auto-group-tabs-chrome/">agrupar com regras</a> e <a href="../group-tabs-by-category-or-ai/">agrupar por categoria ou com IA</a>.</p>
+
+          <h2 id="four-clicks">Como arrumar uma janela bagunçada em quatro cliques?</h2>
+          <ol class="steps">
+            <li><strong>Fechar duplicadas.</strong> As abas repetidas desta janela se fecham. A cópia mais à esquerda fica. Fazendo isso primeiro, você nunca agrupa as cópias.</li>
+            <li><strong>Agrupar abas.</strong> Cada aba que corresponde cai no seu grupo.</li>
+            <li><strong>Ordenar por domínio.</strong> Dentro de cada grupo, e entre as abas sem grupo, as abas do mesmo site ficam enfileiradas. Ordenar nunca move uma aba para dentro ou para fora de um grupo.</li>
+            <li><strong>Recolher tudo.</strong> Cada grupo se recolhe até o rótulo colorido.</li>
+          </ol>
+          <p>Fechar duplicadas considera duas URLs iguais conforme a sua configuração de correspondência de URL. O padrão ignora o <code>#fragmento</code>, um <code>www.</code> no início, a barra final e a ordem dos parâmetros de consulta.</p>
+
+          <h2 id="shortcuts">Quais são os atalhos de teclado?</h2>
+          <table>
+            <thead><tr><th>Atalho</th><th>Ação</th><th>Plano</th></tr></thead>
+            <tbody>
+              <tr><td><kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>G</kbd></td><td>Agrupar todas as abas</td><td>Free</td></tr>
+              <tr><td><kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>U</kbd></td><td>Desagrupar todas as abas</td><td>Free</td></tr>
+              <tr><td><kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>C</kbd></td><td>Recolher todos os grupos</td><td>Free</td></tr>
+              <tr><td><kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>Space</kbd></td><td><a href="../quick-switch-search-tabs/">Quick Switch</a>: pesquisar e ir para qualquer aba</td><td>Premium</td></tr>
+              <tr><td>Nenhum por padrão</td><td>Expandir todos os grupos</td><td>Free</td></tr>
+            </tbody>
+          </table>
+          <p>O Chrome deixa uma extensão sugerir no máximo quatro atalhos, por isso Expandir tudo vem sem nenhum. Defina uma tecla em <code>chrome://extensions/shortcuts</code>. Lá você também pode mudar os outros quatro.</p>
+
+          <h2 id="tabs-pane">Como vejo todas as abas abertas numa só lista?</h2>
+          <p>Abra o painel <strong>Tabs</strong> do popup. Ele lista as abas de todas as janelas sob o nome dos seus grupos, de A a Z, com as abas sem grupo por último. Digite para filtrar por título ou URL. Clique numa aba para ir até ela. Este painel é gratuito.</p>
+
+          <h2 id="group-actions">Posso fechar, favoritar ou mover um grupo inteiro?</h2>
+          <p>Sim, com o Premium. Três ações tratam o grupo como uma unidade:</p>
+          <ul>
+            <li><strong>Fechar.</strong> Fecha as abas do grupo. As abas fixadas continuam abertas. A visão Groups pede confirmação antes.</li>
+            <li><strong>Favorito.</strong> Salva o grupo numa pasta "Takt Bookmarks". As abas continuam abertas. Precisa da permissão opcional de Favoritos.</li>
+            <li><strong>Mover para nova janela.</strong> Mantém o nome, a cor e o estado recolhido do grupo.</li>
+          </ul>
+          <p>Você as encontra em Opções → Rules → <strong>Groups</strong>, ou clicando com o botão direito na página e abrindo <strong>Ações de grupo</strong>. O menu do botão direito também pode mover o grupo para outra janela que você já tenha aberta.</p>
+
+          <figure>
+            <img src="../img/options-groups.png" alt="Opções do Takt, visão Groups: cartões coloridos para Code, Docs, Entertainment, News e Research, cada um com os botões Fechar N aba(s), Favorito e Mover para nova janela, além dos grupos Reviews e Work sem abas abertas" width="700" loading="lazy" />
+            <figcaption>A visão Groups. Cada grupo aberto ganha Fechar, Favorito e Mover para nova janela.</figcaption>
+          </figure>
+
+          <h2 id="auto-collapse">Os grupos podem se recolher sozinhos?</h2>
+          <p>De três formas, todas desligadas até você ligá-las:</p>
+          <ul>
+            <li><strong>Por regra.</strong> Marque <em>Auto-collapse group</em> no editor de regras. Um novo grupo criado por essa regra já começa recolhido, a não ser que contenha a aba que você está vendo. Gratuito.</li>
+            <li><strong>Na mesma janela.</strong> Settings → Tab Groups → <em>Auto-collapse other groups on expand</em>. Abra um grupo e os outros daquela janela se recolhem. Gratuito.</li>
+            <li><strong>Entre janelas.</strong> <em>Auto-collapse groups in other windows when switching focus</em>. Troque de janela e, depois de 300 ms, os grupos de todas as outras janelas se recolhem. Premium.</li>
+          </ul>
+
+          <figure>
+            <img src="../img/options-settings-tab-groups.png" alt="Settings do Takt, seção Tab Groups com três caixas desmarcadas: Auto-collapse other groups on expand, Auto-collapse groups in other windows when switching focus e Others catch-all group" width="700" loading="lazy" />
+            <figcaption>As configurações de Tab Groups. As três vêm desligadas.</figcaption>
+          </figure>
+
+          <h2 id="others">O que acontece com as abas que nenhuma regra pega?</h2>
+          <p>Elas ficam sem grupo. Com o Premium, ligue <strong>Others catch-all group</strong> e Agrupar abas junta todas as abas que sobraram num grupo cinza "Outros". Abas fixadas e páginas <code>chrome://</code> ficam de fora. Rodar Agrupar abas de novo reaproveita o mesmo grupo Outros. Vale no modo Por regras.</p>
+
+          <h2 id="limits">O que esses botões não fazem</h2>
+          <ul>
+            <li><strong>Ordenar por domínio é pontual.</strong> As novas abas não ficam ordenadas. Ele também compara só as duas últimas partes do nome do host, então <code>example.co.uk</code> é ordenado como <code>co.uk</code>.</li>
+            <li><strong>Fechar duplicadas fica numa janela só.</strong> Uma cópia aberta em outra janela não é tocada.</li>
+            <li><strong>As ações de grupo ficam no menu da página.</strong> Clique com o botão direito na página, não na barra de abas.</li>
+            <li><strong>Agrupar abas precisa de um critério.</strong> No modo Por regras, as abas que nenhuma regra pega ficam soltas, a menos que o grupo Outros esteja ligado.</li>
+          </ul>
+
+          <div class="cta">
+            <p>Dois cliques entre abas soltas e uma fileira arrumada de grupos.</p>
+            <a class="btn" href="https://chromewebstore.google.com/detail/takt/plgfdnbgkjocmgegnkbihoeojcfphdic">Adicionar o Takt ao Chrome, grátis</a>
+          </div>
+
+          <h2 id="faq">Perguntas frequentes</h2>
+          <div class="faq">
+            <details>
+              <summary>Quais são os atalhos de teclado padrão do Takt?</summary>
+              <p><kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>G</kbd> agrupa, <kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>U</kbd> desagrupa, <kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>C</kbd> recolhe e <kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>Space</kbd> abre o Quick Switch (Premium). Expandir tudo não tem tecla padrão. Defina uma em <code>chrome://extensions/shortcuts</code>.</p>
+            </details>
+            <details>
+              <summary>Qual aba o Fechar duplicadas mantém?</summary>
+              <p>A primeira cópia na ordem da barra de abas, da esquerda para a direita. As cópias seguintes na janela atual são fechadas. A sua configuração de correspondência de URL decide o que conta como a mesma URL; por padrão, o <code>#fragmento</code> é ignorado.</p>
+            </details>
+            <details>
+              <summary>Os botões de arrumação são gratuitos?</summary>
+              <p>Agrupar, Desagrupar, Recolher, Expandir, Fechar duplicadas, o painel Tabs e o recolhimento automático na mesma janela são gratuitos. Ordenar por domínio é gratuito para a janela atual. O Premium (US$ 3/mês ou US$ 30/ano) acrescenta a ordenação de todas as janelas, as ações de grupo, o recolhimento automático entre janelas e o grupo Outros.</p>
+            </details>
+            <details>
+              <summary>Posso fechar um grupo de abas inteiro de uma vez?</summary>
+              <p>Com o Premium, sim: pela visão Groups nas opções do Takt, ou por <strong>Ações de grupo</strong> no menu de clique com o botão direito da página. Fechar ignora as abas fixadas, e a visão Groups pede confirmação antes.</p>
+            </details>
+          </div>
+
+          <h2 id="next">Leia também</h2>
+          <div class="read-next">
+            <a href="../prevent-duplicate-tabs/">Pare de abrir a mesma aba duas vezes<span>Prevenção de duplicatas, ativada por padrão.</span></a>
+            <a href="../quick-switch-search-tabs/">Vá para qualquer aba pelo teclado<span>Pesquisa do Quick Switch em todas as janelas.</span></a>
+          </div>
+        </div>
+
+        <footer class="blog-post-footer">
+          <a href="../../../blog/">Todos os artigos</a> · <a href="../../../docs/group-actions/">Referência: ações de grupo</a> · <a href="../../../docs/shortcuts/">Atalhos de teclado</a>
+        </footer>
+      </article>
+    </main>
+
+    <footer id="site-footer"></footer>
+    <script src="../../../js/includes.js"></script>
+    <script src="../../../js/nav.js"></script>
+  </body>
+</html>

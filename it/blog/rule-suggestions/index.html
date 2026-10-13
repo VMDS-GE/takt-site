@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Regole per raggruppare le schede suggerite: lascia che Takt scriva le prime — Takt</title>
+    <meta
+      name="description"
+      content="Non sai quali regole scrivere per raggruppare le schede? Takt suggerisce regole in base ai siti che tieni aperti, può chiederne altre all'IA locale di Chrome e ti permette di testare una regola prima di fidarti."
+    />
+    <link rel="canonical" href="https://taktabs.com/it/blog/rule-suggestions/" />
+<!-- TAKT-LANG:head -->
+<link rel="alternate" hreflang="en" href="https://taktabs.com/blog/rule-suggestions/" />
+<link rel="alternate" hreflang="fr" href="https://taktabs.com/fr/blog/rule-suggestions/" />
+<link rel="alternate" hreflang="es" href="https://taktabs.com/es/blog/rule-suggestions/" />
+<link rel="alternate" hreflang="it" href="https://taktabs.com/it/blog/rule-suggestions/" />
+<link rel="alternate" hreflang="de" href="https://taktabs.com/de/blog/rule-suggestions/" />
+<link rel="alternate" hreflang="pt" href="https://taktabs.com/pt/blog/rule-suggestions/" />
+<link rel="alternate" hreflang="x-default" href="https://taktabs.com/blog/rule-suggestions/" />
+<!-- /TAKT-LANG:head -->
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Regole per raggruppare le schede suggerite: lascia che Takt scriva le prime" />
+    <meta property="og:description" content="Takt individua i siti che tieni aperti e propone una regola per ciascuno. Testala, guardane l'anteprima, poi osserva crescere il conteggio delle corrispondenze." />
+    <meta property="og:url" content="https://taktabs.com/it/blog/rule-suggestions/" />
+    <meta property="og:image" content="https://taktabs.com/it/blog/img/options-rules.png" />
+    <meta property="og:locale" content="it_IT" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <link rel="icon" type="image/png" sizes="32x32" href="../../../assets/favicon-32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="../../../assets/favicon-16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="../../../assets/apple-touch-icon.png" />
+    <meta name="theme-color" content="#FF3B30" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../../../css/tokens.css" />
+    <link rel="stylesheet" href="../../../css/base.css" />
+    <link rel="stylesheet" href="../../../css/layout.css" />
+    <link rel="stylesheet" href="../../../css/blog.css" />
+    <link rel="stylesheet" href="../../../css/articles.css" />
+    <script src="../../../js/theme.js"></script>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Article",
+            "headline": "Regole per raggruppare le schede suggerite: lascia che Takt scriva le prime",
+            "description": "Takt suggerisce regole per raggruppare le schede in base ai siti che tieni aperti, propone suggerimenti con l'IA locale e ti permette di testare una regola e vederne l'anteprima prima di salvarla.",
+            "inLanguage": "it",
+            "datePublished": "2026-10-08",
+            "dateModified": "2026-10-08",
+            "author": { "@type": "Person", "name": "Vitor" },
+            "publisher": { "@type": "Organization", "name": "Takt", "url": "https://taktabs.com" },
+            "image": "https://taktabs.com/it/blog/img/options-rules.png",
+            "mainEntityOfPage": "https://taktabs.com/it/blog/rule-suggestions/"
+          },
+          {
+            "@type": "HowTo",
+            "name": "Creare una regola di raggruppamento da un suggerimento",
+            "step": [
+              { "@type": "HowToStep", "text": "Apri il popup di Takt e vai al riquadro Suggerimenti." },
+              { "@type": "HowToStep", "text": "Su un sito suggerito, fai clic su Crea regola. Si apre l'editor di regole con il sito già compilato." },
+              { "@type": "HowToStep", "text": "Fai clic su Anteprima schede corrispondenti per vedere quali schede aperte prende, poi dai un nome al gruppo, scegli un colore e salva." }
+            ]
+          },
+          {
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "Come decide Takt quali regole suggerire?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Suggerisce un sito quando ne hai aperte 3 o più schede, o quando l'hai aperto spesso negli ultimi 7 giorni (5 visite, o visite distribuite su 2 giorni), e nessuna regola lo copre ancora." }
+              },
+              {
+                "@type": "Question",
+                "name": "I suggerimenti di regole sono gratuiti?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Sì. Chi usa il piano gratuito vede 3 suggerimenti alla volta nel riquadro Suggerimenti, e suggerimenti IA fino al limite gratuito di 5 regole. Premium ($3/mese o $30/anno) mostra tutti i suggerimenti e toglie il limite di regole." }
+              },
+              {
+                "@type": "Question",
+                "name": "I suggerimenti di regole con IA inviano le mie schede da qualche parte?",
+                "acceptedAnswer": { "@type": "Answer", "text": "No. I suggerimenti IA usano la Prompt API integrata in Chrome, che funziona sul tuo dispositivo. Al modello locale va solo l'elenco dei nomi dei siti delle schede aperte." }
+              },
+              {
+                "@type": "Question",
+                "name": "Posso recuperare un suggerimento ignorato?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Sì. I suggerimenti ignorati sono elencati nella pagina Rules delle opzioni di Takt, dove puoi ripristinarli." }
+              }
+            ]
+          },
+          {
+            "@type": "SoftwareApplication",
+            "name": "Takt",
+            "applicationCategory": "BrowserApplication",
+            "operatingSystem": "Chrome",
+            "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <header id="site-header"></header>
+
+    <main class="blog-main">
+      <article class="blog-post article">
+        <p class="eyebrow">Suggerimenti di regole</p>
+        <h1 class="blog-post-title">Regole per raggruppare le schede suggerite: lascia che Takt scriva le prime</h1>
+        <p class="lede">La regola più difficile da scrivere è la prima. Takt suggerisce regole per raggruppare le schede in base ai siti che tieni già aperti, così parti dalle tue abitudini invece che da un modulo vuoto.</p>
+        <p class="blog-post-meta">Aggiornato l'8 ottobre 2026 · 5 min di lettura</p>
+<!-- TAKT-LANG:nav -->
+<p class="lang-links"><a href="../../../blog/rule-suggestions/" hreflang="en" lang="en">English</a> · <a href="../../../fr/blog/rule-suggestions/" hreflang="fr" lang="fr">Français</a> · <a href="../../../es/blog/rule-suggestions/" hreflang="es" lang="es">Español</a> · <span aria-current="true">Italiano</span> · <a href="../../../de/blog/rule-suggestions/" hreflang="de" lang="de">Deutsch</a> · <a href="../../../pt/blog/rule-suggestions/" hreflang="pt" lang="pt">Português</a></p>
+<!-- /TAKT-LANG:nav -->
+
+        <div class="blog-post-body">
+          <div class="tldr">
+            <p><strong>In breve:</strong> apri il riquadro <strong>Suggerimenti</strong> del popup di Takt. Ogni scheda è un sito che usi spesso e che non ha ancora una regola. Fai clic su <em>Crea regola</em>, controlla con <em>Anteprima schede corrispondenti</em> e salva.</p>
+            <ul>
+              <li>I suggerimenti vengono dalle schede aperte e dalle visite recenti, contate sul tuo dispositivo.</li>
+              <li><em>Suggerisci regole</em> chiede all'IA locale di Chrome di raggruppare in regole i siti che hai aperti.</li>
+              <li>Il Tester di regole e il conteggio delle corrispondenze mostrano se una regola fa quello che intendevi.</li>
+            </ul>
+          </div>
+
+          <h2 id="where">Da dove vengono i suggerimenti di regole?</h2>
+          <p>Takt tiene d'occhio i siti che meritano chiaramente un gruppo. Le fonti sono tre:</p>
+          <table>
+            <thead><tr><th>Fonte</th><th>Suggerisce un sito quando</th><th>Dove lo vedi</th><th>Piano</th></tr></thead>
+            <tbody>
+              <tr><td>Schede aperte</td><td>3 o più sue schede sono aperte o ibernate</td><td>Popup → Suggerimenti, Opzioni → Rules</td><td>Free: 3 schede di suggerimento alla volta</td></tr>
+              <tr><td>Visite recenti</td><td>L'hai aperto 5+ volte, o con visite distribuite su 2+ giorni, negli ultimi 7 giorni</td><td>Popup → Suggerimenti, Opzioni → Rules</td><td>Free: 3 schede di suggerimento alla volta</td></tr>
+              <tr><td>Suggerimenti IA</td><td>Fai clic su <em>Suggerisci regole</em></td><td>Opzioni → Rules</td><td>Free, fino al limite di 5 regole</td></tr>
+            </tbody>
+          </table>
+          <p>Un sito già coperto da una regola esistente di tipo <em>dominio</em> o <em>contiene</em> non viene mai suggerito. Né qualcosa che hai ignorato.</p>
+
+          <h2 id="insights">Come funziona il riquadro Suggerimenti?</h2>
+          <p>Ogni scheda di suggerimento mostra un sito e il motivo per cui è lì, per esempio "3 open tabs · 3 visits" (3 schede aperte, 3 visite). Due pulsanti:</p>
+          <ul>
+            <li><strong>Crea regola</strong> apre l'editor di regole con il sito già compilato. Non viene salvato niente finché non fai clic su Save.</li>
+            <li><strong>Ignora</strong> nasconde la scheda di suggerimento. I suggerimenti ignorati restano elencati nella pagina Rules delle opzioni, dove puoi ripristinarli.</li>
+          </ul>
+          <p>Con il piano gratuito vedi le prime 3 schede di suggerimento e una riga come "1 altro pattern trovato". Premium ($3/mese o $30/anno) le mostra tutte.</p>
+
+          <figure class="narrow">
+            <img src="../img/popup-insights-suggestions.png" alt="Riquadro Suggerimenti del popup di Takt con tre suggerimenti, github.com, en.wikipedia.org e reddit.com, ciascuno con 3 open tabs e 3 visits e i pulsanti Crea regola e Ignora, seguiti da 1 altro pattern trovato e dal link Aggiorna per vedere tutto" width="420" loading="lazy" />
+            <figcaption>Suggerimenti nel piano gratuito: i primi 3, con il conteggio degli altri.</figcaption>
+          </figure>
+
+          <h2 id="visits">Cosa registra Takt per fare i suggerimenti?</h2>
+          <p>Solo nomi di siti e conteggi. In modalità Per regole, quando una nuova scheda non corrisponde a nessuna regola, Takt aggiunge uno al conteggio delle visite di quel sito. Conserva:</p>
+          <ul>
+            <li>il dominio, un conteggio delle visite e la prima e l'ultima volta che l'ha visto;</li>
+            <li>solo le voci degli ultimi 7 giorni, e al massimo 1.000 siti;</li>
+            <li>niente dalle finestre in incognito.</li>
+          </ul>
+          <p>Tutto è salvato nello spazio di archiviazione locale delle estensioni di Chrome e non lascia mai il browser. <em>Clear tab pattern history</em> in Settings lo cancella. Se concedi l'autorizzazione facoltativa alla cronologia di navigazione, i numeri di visite su ogni scheda di suggerimento vengono invece dalla cronologia di Chrome degli ultimi 90 giorni.</p>
+
+          <h2 id="ai">Cosa sono i suggerimenti di regole con IA?</h2>
+          <p>Nella pagina Rules delle opzioni, <strong>Suggerisci regole</strong> invia l'elenco dei siti delle schede aperte alla Prompt API integrata in Chrome. Il modello gira sul tuo dispositivo, raggruppa i siti per tema e dà un nome a ogni gruppo. Riceve solo i nomi dei siti: nessun titolo, nessun contenuto delle pagine.</p>
+          <ul>
+            <li>Ogni suggerimento ha <em>Aggiungi regola</em> e <em>Ignora</em>. Aggiungi regola la salva subito, attiva.</li>
+            <li>La prima esecuzione può richiedere un minuto mentre Chrome prepara il modello.</li>
+            <li>Su un dispositivo che non può eseguire il modello, vedi "I suggerimenti IA non sono disponibili su questo dispositivo."</li>
+            <li>Nel piano gratuito ricevi tanti suggerimenti quanti sono gli slot di regole gratuiti che ti restano, su 5.</li>
+          </ul>
+
+          <h2 id="tester">Come testo una regola prima di fidarmi?</h2>
+          <p>Due strumenti nella pagina Rules delle opzioni:</p>
+          <ul>
+            <li><strong>Tester di regole.</strong> Incolla un URL e, se vuoi, il titolo di una pagina. Takt risponde "Matches: <em>regola</em> → <em>gruppo</em>" oppure "Nessuna regola corrispondente". Spunta <em>Includi regole disabilitate</em> per testare anche le regole che hai disattivato.</li>
+            <li><strong>Anteprima schede corrispondenti.</strong> Dentro l'editor di regole, elenca le schede aperte, in tutte le finestre, che le condizioni non ancora salvate prenderebbero. Se nessuna corrisponde, mostra "Nessuna scheda corrisponde a questa regola."</li>
+          </ul>
+
+          <figure>
+            <img src="../img/options-rules.png" alt="Pagina Rules delle opzioni di Takt con il Tester di regole (campo URL, titolo della pagina facoltativo, casella Includi regole disabilitate e pulsante Testa), l'intestazione Suggerimenti IA con il pulsante Suggerisci regole e un elenco di sette regole, alcune con un conteggio delle corrispondenze come 4 per Code e 3 per Research" width="700" loading="lazy" />
+            <figcaption>Tester di regole e Suggerimenti IA stanno sopra le tue regole. I numeri sono i conteggi delle corrispondenze.</figcaption>
+          </figure>
+
+          <h2 id="counts">Come capisco se una regola funziona?</h2>
+          <p>Ogni regola nell'elenco mostra quante schede ha messo nel suo gruppo. Una scheda conta quando la regola la sposta fuori dalle schede non raggruppate.</p>
+          <p>La vista <strong>Stats</strong> aggiunge i totali: schede organizzate, schede al giorno, la regola principale e le 10 regole più usate. Una regola ferma a zero per una settimana merita un controllo con il Tester di regole. <em>Reimposta statistiche</em> fa ripartire i conteggi da zero.</p>
+
+          <h2 id="right-click">Posso creare una regola dalla pagina in cui mi trovo? <span class="badge badge-premium">Premium</span></h2>
+          <p>Sì. Fai clic destro sulla pagina e scegli <strong>Crea regola da questa scheda</strong>. Takt apre l'editor di regole con un pattern glob come <code>*://github.com/*</code> già compilato. Controllalo e salva.</p>
+
+          <h2 id="limits">Cosa i suggerimenti non possono fare</h2>
+          <ul>
+            <li>Lavorano sito per sito. Takt non suggerirà "tutte le pull request" su più repository. Per quello scrivi una regola glob o regex (Premium).</li>
+            <li>I suggerimenti dalle schede aperte richiedono 3 schede dello stesso sito. Due schede non bastano.</li>
+            <li>I suggerimenti IA dipendono dal modello locale di Chrome. I computer più vecchi o poco potenti potrebbero non riceverli.</li>
+            <li>I suggerimenti servono la modalità Per regole. Se preferisci non scrivere regole affatto, prova il <a href="../group-tabs-by-category-or-ai/">raggruppamento per categoria o con IA</a>.</li>
+          </ul>
+
+          <div class="cta">
+            <p>Apri le tue schede come sempre. Lascia che Takt ti dica quale regola scrivere.</p>
+            <a class="btn" href="https://chromewebstore.google.com/detail/takt/plgfdnbgkjocmgegnkbihoeojcfphdic">Aggiungi Takt a Chrome, è gratis</a>
+          </div>
+
+          <h2 id="faq">Domande frequenti</h2>
+          <div class="faq">
+            <details>
+              <summary>Come decide Takt quali regole suggerire?</summary>
+              <p>Un sito entra in lista con 3 o più schede aperte, o con 5 visite (o visite su 2 giorni) negli ultimi 7 giorni, purché nessuna regola lo copra.</p>
+            </details>
+            <details>
+              <summary>I suggerimenti di regole sono gratuiti?</summary>
+              <p>Sì. Con il piano gratuito vedi 3 suggerimenti alla volta nel riquadro Suggerimenti e suggerimenti IA fino al limite di 5 regole. Premium ($3/mese o $30/anno) li mostra tutti.</p>
+            </details>
+            <details>
+              <summary>I suggerimenti di regole con IA inviano le mie schede da qualche parte?</summary>
+              <p>No. Al modello locale di Chrome vanno solo i nomi dei siti delle schede aperte. Vedi <a href="../privacy-local-first/">come Takt tiene i dati in locale</a>.</p>
+            </details>
+            <details>
+              <summary>Posso recuperare un suggerimento ignorato?</summary>
+              <p>Sì. La pagina Rules delle opzioni elenca i suggerimenti ignorati e da lì puoi ripristinarli.</p>
+            </details>
+          </div>
+
+          <h2 id="next">Da leggere dopo</h2>
+          <div class="read-next">
+            <a href="../auto-group-tabs-chrome/">Come scrivere una regola di raggruppamento<span>Tipi di corrispondenza, ordine, un set iniziale di cinque regole.</span></a>
+            <a href="../profiles-and-schedules/">Regole diverse per lavoro e casa<span>Profili che cambiano secondo una programmazione.</span></a>
+          </div>
+        </div>
+
+        <footer class="blog-post-footer">
+          <a href="../../../blog/">Tutti gli articoli sulle funzionalità</a> · <a href="../../../docs/insights/">Riferimento: suggerimenti e insights</a> · <a href="../../../docs/rules/">Riferimento regole</a>
+        </footer>
+      </article>
+    </main>
+
+    <footer id="site-footer"></footer>
+    <script src="../../../js/includes.js"></script>
+    <script src="../../../js/nav.js"></script>
+  </body>
+</html>

@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Agrupar pestañas de Chrome por categoría o con IA local, sin reglas — Takt</title>
+    <meta
+      name="description"
+      content="Agrupa todas las pestañas abiertas de Chrome por categoría (20 categorías integradas) o con el modelo de IA local de Chrome, sin escribir ni una regla. Cómo funciona cada modo, el límite gratuito de 5 grupos y en qué se diferencia de «Organizar pestañas» de Chrome."
+    />
+    <link rel="canonical" href="https://taktabs.com/es/blog/group-tabs-by-category-or-ai/" />
+<!-- TAKT-LANG:head -->
+<link rel="alternate" hreflang="en" href="https://taktabs.com/blog/group-tabs-by-category-or-ai/" />
+<link rel="alternate" hreflang="fr" href="https://taktabs.com/fr/blog/group-tabs-by-category-or-ai/" />
+<link rel="alternate" hreflang="es" href="https://taktabs.com/es/blog/group-tabs-by-category-or-ai/" />
+<link rel="alternate" hreflang="it" href="https://taktabs.com/it/blog/group-tabs-by-category-or-ai/" />
+<link rel="alternate" hreflang="de" href="https://taktabs.com/de/blog/group-tabs-by-category-or-ai/" />
+<link rel="alternate" hreflang="pt" href="https://taktabs.com/pt/blog/group-tabs-by-category-or-ai/" />
+<link rel="alternate" hreflang="x-default" href="https://taktabs.com/blog/group-tabs-by-category-or-ai/" />
+<!-- /TAKT-LANG:head -->
+    <meta property="og:type" content="article" />
+    <meta property="og:locale" content="es_ES" />
+    <meta property="og:title" content="Agrupar pestañas de Chrome por categoría o con IA local" />
+    <meta property="og:description" content="Sin reglas que escribir. Elige Categoría o IA y cada pestaña abierta cae en un grupo con nombre." />
+    <meta property="og:url" content="https://taktabs.com/es/blog/group-tabs-by-category-or-ai/" />
+    <meta property="og:image" content="https://taktabs.com/es/blog/img/popup-home.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <link rel="icon" type="image/png" sizes="32x32" href="../../../assets/favicon-32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="../../../assets/favicon-16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="../../../assets/apple-touch-icon.png" />
+    <meta name="theme-color" content="#FF3B30" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../../../css/tokens.css" />
+    <link rel="stylesheet" href="../../../css/base.css" />
+    <link rel="stylesheet" href="../../../css/layout.css" />
+    <link rel="stylesheet" href="../../../css/blog.css" />
+    <link rel="stylesheet" href="../../../css/articles.css" />
+    <script src="../../../js/theme.js"></script>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Article",
+            "headline": "Agrupar pestañas de Chrome por categoría o con IA local",
+            "description": "Agrupa todas las pestañas abiertas de Chrome en una de 20 categorías integradas, o por tema con el modelo de IA local de Chrome, sin escribir reglas.",
+            "inLanguage": "es",
+            "datePublished": "2026-10-08",
+            "dateModified": "2026-10-08",
+            "author": { "@type": "Person", "name": "Vitor" },
+            "publisher": { "@type": "Organization", "name": "Takt", "url": "https://taktabs.com" },
+            "image": "https://taktabs.com/es/blog/img/popup-home.png",
+            "mainEntityOfPage": "https://taktabs.com/es/blog/group-tabs-by-category-or-ai/"
+          },
+          {
+            "@type": "HowTo",
+            "name": "Agrupar pestañas de Chrome por categoría o con IA",
+            "step": [
+              { "@type": "HowToStep", "text": "Instala Takt desde Chrome Web Store." },
+              { "@type": "HowToStep", "text": "Abre el popup de Takt y, en Modo de agrupación, elige Por categoría o Por IA." },
+              { "@type": "HowToStep", "text": "Takt desagrupa tus pestañas y las vuelve a agrupar en el modo nuevo. Haz clic en Agrupar pestañas (o pulsa Alt+Shift+G) para repetirlo más tarde." }
+            ]
+          },
+          {
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "¿Agrupar por categoría o con IA es gratis?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Sí. Los dos modos son gratis. En los modos Categoría e IA, el plan Free permite hasta 5 grupos de pestañas en total entre todas las ventanas de Chrome, contando los que creaste a mano. Premium (3 $/mes o 30 $/año) elimina el límite." }
+              },
+              {
+                "@type": "Question",
+                "name": "¿La agrupación con IA de Takt envía mis pestañas a un servidor?",
+                "acceptedAnswer": { "@type": "Answer", "text": "No. Takt usa la Prompt API integrada en Chrome, que ejecuta el modelo en tu dispositivo. Los títulos de las pestañas y un breve fragmento del texto de la página solo llegan al modelo local." }
+              },
+              {
+                "@type": "Question",
+                "name": "¿Qué pasa si el modelo de IA de Chrome no está disponible en mi ordenador?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Takt pasa a agrupar las pestañas que comparten palabras en el título y en el nombre del sitio. El popup te avisa de que la IA no está disponible en este dispositivo, y las pestañas se agrupan igualmente." }
+              },
+              {
+                "@type": "Question",
+                "name": "¿Puedo añadir mis propios sitios a una categoría?",
+                "acceptedAnswer": { "@type": "Answer", "text": "No. La lista de categorías es fija. Los sitios que no conoce van a Other. Si quieres un sitio en un grupo concreto, usa el modo Reglas." }
+              }
+            ]
+          },
+          {
+            "@type": "SoftwareApplication",
+            "name": "Takt",
+            "applicationCategory": "BrowserApplication",
+            "operatingSystem": "Chrome",
+            "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <header id="site-header"></header>
+
+    <main class="blog-main">
+      <article class="blog-post article">
+        <p class="eyebrow">Agrupación por categoría e IA</p>
+        <h1 class="blog-post-title">Agrupar pestañas de Chrome por categoría o con IA, sin reglas</h1>
+        <p class="lede">Puedes agrupar todas las pestañas abiertas de Chrome sin escribir una regla. Elige <strong>Categoría</strong> y Takt archiva cada pestaña en una de 20 categorías con nombre. Elige <strong>IA</strong> y el modelo local de Chrome agrupa las pestañas por tema.</p>
+        <p class="blog-post-meta">Actualizado el 8 de octubre de 2026 · 6 min de lectura</p>
+<!-- TAKT-LANG:nav -->
+<p class="lang-links"><a href="../../../blog/group-tabs-by-category-or-ai/" hreflang="en" lang="en">English</a> · <a href="../../../fr/blog/group-tabs-by-category-or-ai/" hreflang="fr" lang="fr">Français</a> · <span aria-current="true">Español</span> · <a href="../../../it/blog/group-tabs-by-category-or-ai/" hreflang="it" lang="it">Italiano</a> · <a href="../../../de/blog/group-tabs-by-category-or-ai/" hreflang="de" lang="de">Deutsch</a> · <a href="../../../pt/blog/group-tabs-by-category-or-ai/" hreflang="pt" lang="pt">Português</a></p>
+<!-- /TAKT-LANG:nav -->
+
+        <div class="blog-post-body">
+          <div class="tldr">
+            <p><strong>Respuesta corta:</strong> abre el popup de Takt, elige <em>Por categoría</em> o <em>Por IA</em> en Modo de agrupación, y Takt reagrupa tus pestañas al momento.</p>
+            <ul>
+              <li>Categoría: 20 categorías fijas, como Development, Social y News. Los sitios desconocidos van a "Other".</li>
+              <li>IA: el modelo integrado de Chrome pone nombre a los grupos. Se ejecuta en tu dispositivo.</li>
+              <li>Los dos son gratis, hasta 5 grupos entre todas las ventanas. Premium elimina el límite.</li>
+            </ul>
+          </div>
+
+          <h2 id="modes">¿Qué modos de agrupación tiene Takt?</h2>
+          <p>Cuatro, y solo uno está activo a la vez. Lo eliges en el popup, en <strong>Modo de agrupación</strong>.</p>
+          <table>
+            <thead><tr><th>Modo</th><th>Cómo se agrupan las pestañas</th><th>Configuración</th></tr></thead>
+            <tbody>
+              <tr><td>Por reglas (predeterminado)</td><td>Según las reglas de URL que escribes</td><td>Una regla por grupo</td></tr>
+              <tr><td>Por categoría</td><td>Por sitio, en 20 categorías integradas</td><td>Ninguna</td></tr>
+              <tr><td>Por IA</td><td>Por tema, con etiquetas del modelo local de Chrome</td><td>Ninguna</td></tr>
+              <tr><td>Ninguno</td><td>Takt no agrupa pestañas</td><td>Ninguna</td></tr>
+            </tbody>
+          </table>
+          <p>Al cambiar de modo, Takt desagrupa tus pestañas y las reagrupa en el modo nuevo. Tu elección se guarda. Elegir Ninguno desagrupa todo y deja de agrupar.</p>
+
+          <figure class="narrow">
+            <img src="../img/popup-home.png" alt="Panel Inicio del popup de Takt con la sección Modo de agrupación y sus cuatro opciones: Por reglas, Por categoría, Por IA y Ninguno, encima de los botones de Acciones rápidas Agrupar pestañas, Desagrupar todo, Contraer todo y Ordenar por dominio" width="420" loading="lazy" />
+            <figcaption>El selector de modo de agrupación del popup. Agrupar pestañas aplica el modo elegido.</figcaption>
+          </figure>
+
+          <h2 id="category">¿Cómo funciona la agrupación por categoría?</h2>
+          <p>Takt solo mira el nombre de host de cada pestaña. Lo busca en una lista integrada de 77 sitios conocidos, cada uno asignado a una de 20 categorías:</p>
+          <p>Development, AI Tools, Docs, Productivity, Communication, Finance, Design, Shopping, Social, Entertainment, News, Gaming, Sports, Travel, Health, Food, Science, Career, Education y Cloud.</p>
+          <ul>
+            <li><strong>Los subdominios heredan.</strong> docs.github.com no está en la lista, así que Takt prueba con github.com y lo archiva en Development.</li>
+            <li><strong>Gana el host más específico.</strong> aws.amazon.com va a Cloud. amazon.com va a Shopping.</li>
+            <li><strong>Todo lo demás va a Other.</strong> Eso incluye la intranet de tu empresa, las páginas de nueva pestaña y cualquier sitio que la lista no conozca. Other siempre es el último grupo.</li>
+          </ul>
+          <p>La categoría más grande se convierte en el primer grupo, y luego la siguiente. Las pestañas nuevas se unen al grupo de su categoría al cargarse. En este modo, Takt no lee el contenido de las páginas.</p>
+
+          <h2 id="ai">¿Cómo funciona la agrupación con IA?</h2>
+          <p>Takt envía el título de cada pestaña y hasta 500 caracteres del texto de su página a la Prompt API integrada en Chrome. El modelo se ejecuta dentro de Chrome, en tu equipo. Devuelve una etiqueta corta por tema, y Takt crea los grupos.</p>
+          <ul>
+            <li>Un grupo necesita al menos 2 pestañas. Una pestaña sin pareja se queda sin agrupar.</li>
+            <li>Cada pasada abarca hasta 100 pestañas.</li>
+            <li>Las etiquetas las pone el modelo, así que pueden cambiar de una pasada a otra.</li>
+            <li>Para leer el texto de las páginas, Takt necesita el permiso opcional "Acceso a todos los sitios web". Sin él, agrupa solo por títulos y lo indica en el popup.</li>
+          </ul>
+          <p>El modelo no se ejecuta con cada pestaña nueva. En el modo IA, las pestañas que abras después esperan al siguiente clic en <strong>Agrupar pestañas</strong> o a <kbd>Alt+Shift+G</kbd>.</p>
+
+          <h2 id="download">¿Qué pasa la primera vez que uso el modo IA?</h2>
+          <p>Puede que Chrome tenga que descargar antes su modelo local. Takt inicia la descarga cuando haces clic en Agrupar pestañas y muestra el progreso en el popup: "Preparando modelo de IA…", luego "Descargando modelo de IA (N%)…" y luego "Modelo de IA listo. Agrupando pestañas…". La agrupación continúa sola cuando el modelo está listo.</p>
+
+          <h2 id="fallback">¿Y si mi ordenador no puede ejecutar el modelo de IA de Chrome?</h2>
+          <p>Takt agrupa tus pestañas igualmente. Recurre a un método de similitud que agrupa las pestañas que comparten palabras en el título y en el nombre del sitio, y el popup muestra "IA no disponible en este dispositivo."</p>
+          <p>El mismo método alternativo entra en juego si el modelo tarda demasiado: 2 minutos en cargar u 8 segundos en responder. También se encarga de las pestañas nuevas en el modo IA: una pestaña nueva se une al grupo existente más parecido, y nunca crea uno nuevo.</p>
+
+          <h2 id="cap">¿Qué es el límite gratuito de 5 grupos?</h2>
+          <p>En el plan Free, los modos Categoría e IA crean como máximo 5 grupos de pestañas. El límite cuenta todos los grupos de pestañas abiertos en Chrome, en todas las ventanas, incluidos los que creaste a mano.</p>
+          <ul>
+            <li>Si una pasada fuera a superarlo, Takt se queda con los grupos más grandes y deja el resto sin agrupar.</li>
+            <li>Si ya tienes 5 grupos, el popup dice "You've hit the 5-group limit. Ungroup some tabs to create more."</li>
+            <li>El modo Reglas tiene su propio límite gratuito: 5 reglas.</li>
+          </ul>
+          <p>Premium (3 $/mes o 30 $/año) elimina el límite de grupos.</p>
+
+          <h2 id="chrome">¿En qué se diferencia de «Organizar pestañas» de Chrome?</h2>
+          <p>Desde Chrome 146, al hacer clic derecho en una pestaña puedes organizar las pestañas similares. Usa Gemini Nano en tu dispositivo, sugiere nombres de grupo, no cuesta nada y no necesita ninguna extensión. Para una limpieza puntual, puede que no necesites más.</p>
+          <table>
+            <thead><tr><th></th><th>Integrado en Chrome</th><th>Takt Categoría</th><th>Takt IA</th></tr></thead>
+            <tbody>
+              <tr><td>Cuándo agrupa</td><td>Cuando se lo pides</td><td>Con Agrupar pestañas, y cada pestaña nueva al cargarse</td><td>Con Agrupar pestañas</td></tr>
+              <tr><td>Nombres de grupo</td><td>Los sugiere el modelo</td><td>Fijos: 20 categorías + Other</td><td>Los sugiere el modelo</td></tr>
+              <tr><td>Se ejecuta en el dispositivo</td><td>Sí</td><td>Sí, sin necesidad de modelo</td><td>Sí</td></tr>
+              <tr><td>Pasar a tus propias reglas</td><td>No</td><td colspan="2">Sí, con un clic al modo Reglas</td></tr>
+              <tr><td>Precio</td><td>Gratis</td><td colspan="2">Gratis hasta 5 grupos; Premium, sin límite</td></tr>
+            </tbody>
+          </table>
+
+          <h2 id="limits">Dónde se quedan cortos Categoría e IA</h2>
+          <ul>
+            <li><strong>La lista de categorías es fija.</strong> No puedes añadir un sitio ni renombrar una categoría. Si renombras un grupo en Chrome, Takt vuelve a usar el nombre integrado en la siguiente pasada.</li>
+            <li><strong>Los colores se repiten.</strong> 20 categorías comparten los 8 colores de grupo de Chrome. Lo que identifica a un grupo es su nombre.</li>
+            <li><strong>Las etiquetas de la IA cambian.</strong> Si lo ejecutas dos veces, puedes obtener nombres distintos.</li>
+            <li><strong>Los perfiles y horarios no se aplican.</strong> Solo funcionan en el modo Reglas.</li>
+          </ul>
+          <p>Si quieres que github.com vaya siempre a un grupo llamado "Code", <a href="../auto-group-tabs-chrome/">escribe una regla</a>. ¿No sabes qué reglas escribir? <a href="../rule-suggestions/">Deja que Takt te las sugiera</a>.</p>
+
+          <div class="cta">
+            <p>Elige un modo. Mira cómo 30 pestañas sueltas se convierten en cinco grupos con nombre.</p>
+            <a class="btn" href="https://chromewebstore.google.com/detail/takt/plgfdnbgkjocmgegnkbihoeojcfphdic">Añadir Takt a Chrome, gratis</a>
+          </div>
+
+          <h2 id="faq">Preguntas frecuentes</h2>
+          <div class="faq">
+            <details>
+              <summary>¿Agrupar por categoría o con IA es gratis?</summary>
+              <p>Sí. Los dos son gratis, hasta 5 grupos de pestañas en total entre todas las ventanas, contando los que creaste a mano. Premium (3 $/mes o 30 $/año) elimina el límite.</p>
+            </details>
+            <details>
+              <summary>¿La agrupación con IA de Takt envía mis pestañas a un servidor?</summary>
+              <p>No. Usa la Prompt API integrada en Chrome, que se ejecuta en tu dispositivo. Consulta <a href="../privacy-local-first/">cómo mantiene Takt tus datos en local</a>.</p>
+            </details>
+            <details>
+              <summary>¿Qué pasa si el modelo de IA de Chrome no está disponible en mi ordenador?</summary>
+              <p>Takt agrupa en su lugar las pestañas que comparten palabras en el título y en el nombre del sitio, y te avisa de que la IA no está disponible en este dispositivo.</p>
+            </details>
+            <details>
+              <summary>¿Puedo añadir mis propios sitios a una categoría?</summary>
+              <p>No. La lista es fija y los sitios desconocidos van a Other. Usa el modo Reglas para enviar un sitio a un grupo con el nombre que elijas.</p>
+            </details>
+          </div>
+
+          <h2 id="next">Sigue leyendo</h2>
+          <div class="read-next">
+            <a href="../auto-group-tabs-chrome/">Agrupa pestañas con tus propias reglas<span>Una regla por sitio, aplicada al abrirse cada pestaña.</span></a>
+            <a href="../rule-suggestions/">Deja que Takt te sugiera reglas<span>A partir de los sitios que ya tienes abiertos.</span></a>
+          </div>
+        </div>
+
+        <footer class="blog-post-footer">
+          <a href="../../../blog/">Todos los artículos</a> · <a href="../../../docs/group-by-category/">Referencia de la agrupación por categoría</a> · <a href="../../../docs/smart-group-ai/">Referencia de la agrupación con IA</a>
+        </footer>
+      </article>
+    </main>
+
+    <footer id="site-footer"></footer>
+    <script src="../../../js/includes.js"></script>
+    <script src="../../../js/nav.js"></script>
+  </body>
+</html>

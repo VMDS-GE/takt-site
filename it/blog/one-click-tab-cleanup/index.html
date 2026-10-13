@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Come riordinare le schede di Chrome con un clic — Takt</title>
+    <meta
+      name="description"
+      content="Raggruppa, separa, comprimi, ordina e togli i duplicati da tutte le schede di Chrome da un unico popup o con una scorciatoia. Cosa fa ogni pulsante, cosa è gratuito e quali scorciatoie imparare."
+    />
+    <link rel="canonical" href="https://taktabs.com/it/blog/one-click-tab-cleanup/" />
+<!-- TAKT-LANG:head -->
+<link rel="alternate" hreflang="en" href="https://taktabs.com/blog/one-click-tab-cleanup/" />
+<link rel="alternate" hreflang="fr" href="https://taktabs.com/fr/blog/one-click-tab-cleanup/" />
+<link rel="alternate" hreflang="es" href="https://taktabs.com/es/blog/one-click-tab-cleanup/" />
+<link rel="alternate" hreflang="it" href="https://taktabs.com/it/blog/one-click-tab-cleanup/" />
+<link rel="alternate" hreflang="de" href="https://taktabs.com/de/blog/one-click-tab-cleanup/" />
+<link rel="alternate" hreflang="pt" href="https://taktabs.com/pt/blog/one-click-tab-cleanup/" />
+<link rel="alternate" hreflang="x-default" href="https://taktabs.com/blog/one-click-tab-cleanup/" />
+<!-- /TAKT-LANG:head -->
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Come riordinare le schede di Chrome con un clic" />
+    <meta property="og:description" content="Raggruppa schede, Comprimi tutto, Ordina per dominio e Chiudi duplicati: un browser in disordine sistemato con quattro clic o tre scorciatoie." />
+    <meta property="og:url" content="https://taktabs.com/it/blog/one-click-tab-cleanup/" />
+    <meta property="og:image" content="https://taktabs.com/it/blog/img/options-groups.png" />
+    <meta property="og:locale" content="it_IT" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <link rel="icon" type="image/png" sizes="32x32" href="../../../assets/favicon-32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="../../../assets/favicon-16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="../../../assets/apple-touch-icon.png" />
+    <meta name="theme-color" content="#FF3B30" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../../../css/tokens.css" />
+    <link rel="stylesheet" href="../../../css/base.css" />
+    <link rel="stylesheet" href="../../../css/layout.css" />
+    <link rel="stylesheet" href="../../../css/blog.css" />
+    <link rel="stylesheet" href="../../../css/articles.css" />
+    <script src="../../../js/theme.js"></script>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Article",
+            "headline": "Come riordinare le schede di Chrome con un clic",
+            "description": "Raggruppa, separa, comprimi, ordina e togli i duplicati da tutte le schede di Chrome da un unico popup o con una scorciatoia da tastiera.",
+            "inLanguage": "it",
+            "datePublished": "2026-10-08",
+            "dateModified": "2026-10-08",
+            "author": { "@type": "Person", "name": "Vitor" },
+            "publisher": { "@type": "Organization", "name": "Takt", "url": "https://taktabs.com" },
+            "image": "https://taktabs.com/it/blog/img/options-groups.png",
+            "mainEntityOfPage": "https://taktabs.com/it/blog/one-click-tab-cleanup/"
+          },
+          {
+            "@type": "HowTo",
+            "name": "Riordinare una finestra di Chrome in disordine con quattro clic",
+            "step": [
+              { "@type": "HowToStep", "text": "Apri il popup di Takt e fai clic su Chiudi duplicati per chiudere le schede ripetute nella finestra corrente." },
+              { "@type": "HowToStep", "text": "Fai clic su Raggruppa schede (o premi Alt+Shift+G) per mettere ogni scheda nel suo gruppo." },
+              { "@type": "HowToStep", "text": "Fai clic su Ordina per dominio così le schede dello stesso sito stanno una accanto all'altra." },
+              { "@type": "HowToStep", "text": "Fai clic su Comprimi tutto (o premi Alt+Shift+C) per chiudere ogni gruppo fino alla sua etichetta." }
+            ]
+          },
+          {
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "Quali sono le scorciatoie da tastiera predefinite di Takt?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Alt+Shift+G raggruppa tutte le schede, Alt+Shift+U le separa tutte, Alt+Shift+C comprime tutti i gruppi e Alt+Shift+Space apre il Cambio rapido (Premium). Espandi tutto non ha un tasto predefinito; puoi assegnarne uno in chrome://extensions/shortcuts." }
+              },
+              {
+                "@type": "Question",
+                "name": "Quale scheda tiene Chiudi duplicati?",
+                "acceptedAnswer": { "@type": "Answer", "text": "La prima copia nell'ordine della barra delle schede, partendo da sinistra. Le copie successive nella finestra corrente vengono chiuse. Due URL contano come uguali secondo la tua impostazione di confronto degli URL, che per impostazione predefinita ignora il #frammento." }
+              },
+              {
+                "@type": "Question",
+                "name": "I pulsanti per riordinare sono gratuiti?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Raggruppa, Separa, Comprimi, Espandi, Chiudi duplicati, il riquadro Tabs e la compressione automatica nella stessa finestra sono gratuiti. Ordina per dominio è gratuito per la finestra corrente. Premium ($3/mese o $30/anno) aggiunge l'ordinamento in tutte le finestre, le azioni di gruppo, la compressione automatica tra finestre e il gruppo generico Altri." }
+              },
+              {
+                "@type": "Question",
+                "name": "Posso chiudere un intero gruppo di schede in una volta?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Con Premium, sì. Chiudi, aggiungi ai segnalibri o sposta un intero gruppo dalla vista Groups nelle opzioni di Takt, o dalla voce Azioni di gruppo nel menu del clic destro sulla pagina. La chiusura salta le schede fissate e la vista Groups chiede prima una conferma." }
+              }
+            ]
+          },
+          {
+            "@type": "SoftwareApplication",
+            "name": "Takt",
+            "applicationCategory": "BrowserApplication",
+            "operatingSystem": "Chrome",
+            "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <header id="site-header"></header>
+
+    <main class="blog-main">
+      <article class="blog-post article">
+        <p class="eyebrow">Riordino</p>
+        <h1 class="blog-post-title">Come riordinare le schede di Chrome con un clic</h1>
+        <p class="lede">Per riordinare le schede di Chrome con un clic, apri il popup di Takt e premi Raggruppa schede, poi Comprimi tutto. Due clic trasformano una fila di schede sparse in una fila di gruppi chiusi, ognuno con la sua etichetta.</p>
+        <p class="blog-post-meta">Aggiornato l'8 ottobre 2026 · 5 min di lettura</p>
+<!-- TAKT-LANG:nav -->
+<p class="lang-links"><a href="../../../blog/one-click-tab-cleanup/" hreflang="en" lang="en">English</a> · <a href="../../../fr/blog/one-click-tab-cleanup/" hreflang="fr" lang="fr">Français</a> · <a href="../../../es/blog/one-click-tab-cleanup/" hreflang="es" lang="es">Español</a> · <span aria-current="true">Italiano</span> · <a href="../../../de/blog/one-click-tab-cleanup/" hreflang="de" lang="de">Deutsch</a> · <a href="../../../pt/blog/one-click-tab-cleanup/" hreflang="pt" lang="pt">Português</a></p>
+<!-- /TAKT-LANG:nav -->
+
+        <div class="blog-post-body">
+          <div class="tldr">
+            <p><strong>In breve:</strong> Takt raccoglie tutte le azioni sulle schede in blocco in un unico popup e dietro tre scorciatoie predefinite. <kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>G</kbd> raggruppa, <kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>U</kbd> separa, <kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>C</kbd> comprime.</p>
+            <ul>
+              <li>Free: Raggruppa, Separa, Comprimi, Espandi, Chiudi duplicati, Ordina per dominio (finestra corrente), il riquadro Tabs.</li>
+              <li>Premium: chiudere, aggiungere ai segnalibri o spostare un intero gruppo, ordinare tutte le finestre, comprimere le altre finestre, un gruppo "Altri" per le schede rimaste.</li>
+              <li>Tutto avviene sul tuo computer. Nessun account.</li>
+            </ul>
+          </div>
+
+          <h2 id="buttons">Cosa fa ogni pulsante?</h2>
+          <p>Il riquadro Home del popup ha un blocco <strong>Azioni rapide</strong>. Raggruppa, Separa, Comprimi, Espandi e Chiudi duplicati diventano grigi quando non avrebbero effetto, quindi il blocco mostra anche lo stato delle tue schede.</p>
+
+          <figure class="narrow">
+            <img src="../img/popup-home.png" alt="Riquadro Home del popup di Takt con la modalità di raggruppamento impostata su Per regole e il blocco Azioni rapide: Raggruppa schede, Separa tutto, Comprimi tutto, Espandi tutto in grigio, Iberna scheda, Ordina per dominio e Chiudi duplicati, in parte coperti dalla notifica 'Scheda in sospensione'" width="420" loading="lazy" />
+            <figcaption>Le azioni rapide nel popup. Espandi tutto è in grigio perché tutti i gruppi sono già aperti.</figcaption>
+          </figure>
+
+          <table>
+            <thead>
+              <tr><th>Pulsante</th><th>Cosa fa</th><th>Ambito</th><th>Piano</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Raggruppa schede</td><td>Mette le schede nei gruppi secondo le tue regole, per categoria o con l'IA</td><td>Tutte le finestre</td><td>Free</td></tr>
+              <tr><td>Separa tutto</td><td>Elimina tutti i gruppi, tiene tutte le schede</td><td>Tutte le finestre</td><td>Free</td></tr>
+              <tr><td>Comprimi tutto</td><td>Chiude ogni gruppo fino alla sua etichetta</td><td>Tutte le finestre</td><td>Free</td></tr>
+              <tr><td>Espandi tutto</td><td>Apre tutti i gruppi</td><td>Finestra corrente</td><td>Free</td></tr>
+              <tr><td>Chiudi duplicati</td><td>Chiude gli URL ripetuti, tiene la prima copia</td><td>Finestra corrente</td><td>Free</td></tr>
+              <tr><td>Ordina per dominio</td><td>Mette una accanto all'altra le schede dello stesso sito</td><td>Finestra corrente (Free), tutte le finestre (Premium)</td><td>Free / Premium</td></tr>
+            </tbody>
+          </table>
+          <p>Raggruppa schede segue la modalità di raggruppamento scelta sopra. Nelle modalità Categoria e IA il piano gratuito crea fino a 5 gruppi per esecuzione. Scopri di più su <a href="../auto-group-tabs-chrome/">il raggruppamento con le regole</a> e <a href="../group-tabs-by-category-or-ai/">il raggruppamento per categoria o con IA</a>.</p>
+
+          <h2 id="four-clicks">Come riordino una finestra in disordine con quattro clic?</h2>
+          <ol class="steps">
+            <li><strong>Chiudi duplicati.</strong> Le schede ripetute in questa finestra si chiudono. Resta la copia più a sinistra. Farlo per primo significa non raggruppare mai le copie.</li>
+            <li><strong>Raggruppa schede.</strong> Ogni scheda che corrisponde finisce nel suo gruppo.</li>
+            <li><strong>Ordina per dominio.</strong> Dentro ogni gruppo, e tra le schede non raggruppate, le schede dello stesso sito si mettono in fila. L'ordinamento non sposta mai una scheda dentro o fuori da un gruppo.</li>
+            <li><strong>Comprimi tutto.</strong> Ogni gruppo si chiude fino alla sua etichetta colorata.</li>
+          </ol>
+          <p>Chiudi duplicati considera uguali due URL secondo la tua impostazione di confronto degli URL. Quella predefinita ignora il <code>#frammento</code>, un <code>www.</code> iniziale, la barra finale e l'ordine dei parametri di query.</p>
+
+          <h2 id="shortcuts">Quali sono le scorciatoie da tastiera?</h2>
+          <table>
+            <thead><tr><th>Scorciatoia</th><th>Azione</th><th>Piano</th></tr></thead>
+            <tbody>
+              <tr><td><kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>G</kbd></td><td>Raggruppa tutte le schede</td><td>Free</td></tr>
+              <tr><td><kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>U</kbd></td><td>Separa tutte le schede</td><td>Free</td></tr>
+              <tr><td><kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>C</kbd></td><td>Comprimi tutti i gruppi</td><td>Free</td></tr>
+              <tr><td><kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>Space</kbd></td><td><a href="../quick-switch-search-tabs/">Cambio rapido</a>: cerca qualsiasi scheda e passaci</td><td>Premium</td></tr>
+              <tr><td>Nessuna per impostazione predefinita</td><td>Espandi tutti i gruppi</td><td>Free</td></tr>
+            </tbody>
+          </table>
+          <p>Chrome permette a un'estensione di proporre al massimo quattro scorciatoie, quindi Espandi tutto non ne ha una. Assegnale un tasto in <code>chrome://extensions/shortcuts</code>. Lì puoi cambiare anche le altre quattro.</p>
+
+          <h2 id="tabs-pane">Come vedo tutte le schede aperte in un unico elenco?</h2>
+          <p>Apri il riquadro <strong>Tabs</strong> nel popup. Elenca le schede di tutte le finestre sotto il nome del loro gruppo, dalla A alla Z, con le schede non raggruppate in fondo. Scrivi per filtrare per titolo o URL. Fai clic su una scheda per andarci. Questo riquadro è gratuito.</p>
+
+          <h2 id="group-actions">Posso chiudere, aggiungere ai segnalibri o spostare un intero gruppo?</h2>
+          <p>Sì, con Premium. Tre azioni lavorano sul gruppo come un'unità:</p>
+          <ul>
+            <li><strong>Chiudi.</strong> Chiude le schede del gruppo. Le schede fissate restano aperte. La vista Groups ti chiede prima di confermare.</li>
+            <li><strong>Segnalibro.</strong> Salva il gruppo in una cartella "Takt Bookmarks". Le schede restano aperte. Richiede l'autorizzazione facoltativa ai segnalibri.</li>
+            <li><strong>Sposta in una nuova finestra.</strong> Mantiene nome, colore e stato compresso del gruppo.</li>
+          </ul>
+          <p>Le trovi in Opzioni → Rules → <strong>Groups</strong>, oppure fai clic destro su una pagina e apri <strong>Azioni di gruppo</strong>. Il menu del clic destro può anche spostare il gruppo in un'altra finestra già aperta.</p>
+
+          <figure>
+            <img src="../img/options-groups.png" alt="Opzioni di Takt, vista Groups: schede colorate per Code, Docs, Entertainment, News e Research, ognuna con i pulsanti Chiudi N scheda/e, Segnalibro e Sposta in una nuova finestra, più i gruppi Reviews e Work senza schede aperte" width="700" loading="lazy" />
+            <figcaption>La vista Groups. Ogni gruppo aperto ha Chiudi, Segnalibro e Sposta in una nuova finestra.</figcaption>
+          </figure>
+
+          <h2 id="auto-collapse">I gruppi possono comprimersi da soli?</h2>
+          <p>In tre modi, tutti disattivati finché non li attivi tu:</p>
+          <ul>
+            <li><strong>Per regola.</strong> Spunta <em>Auto-collapse group</em> nell'editor di regole. Un nuovo gruppo creato da quella regola parte compresso, a meno che non contenga la scheda che stai guardando. Free.</li>
+            <li><strong>Nella stessa finestra.</strong> Settings → Tab Groups → <em>Auto-collapse other groups on expand</em>. Apri un gruppo e gli altri di quella finestra si comprimono. Free.</li>
+            <li><strong>Tra finestre.</strong> <em>Auto-collapse groups in other windows when switching focus</em>. Cambia finestra e, dopo 300 ms, i gruppi di tutte le altre finestre si comprimono. Premium.</li>
+          </ul>
+
+          <figure>
+            <img src="../img/options-settings-tab-groups.png" alt="Settings di Takt, sezione Tab Groups con tre caselle non spuntate: Auto-collapse other groups on expand, Auto-collapse groups in other windows when switching focus e Others catch-all group" width="700" loading="lazy" />
+            <figcaption>Le impostazioni dei gruppi di schede. Tutte e tre sono disattivate per impostazione predefinita.</figcaption>
+          </figure>
+
+          <h2 id="others">Cosa succede alle schede che nessuna regola prende?</h2>
+          <p>Restano fuori dai gruppi. Con Premium, attiva <strong>Others catch-all group</strong> e Raggruppa schede raccoglie tutte le schede rimaste in un gruppo grigio "Altri". Le schede fissate e le pagine <code>chrome://</code> non vengono toccate. Eseguire di nuovo Raggruppa schede riusa lo stesso gruppo Altri. Vale in modalità Per regole.</p>
+
+          <h2 id="limits">Cosa questi pulsanti non fanno</h2>
+          <ul>
+            <li><strong>Ordina per dominio agisce una volta sola.</strong> Le nuove schede non vengono tenute in ordine. Inoltre confronta le ultime due parti del nome host, quindi <code>example.co.uk</code> viene ordinato come <code>co.uk</code>.</li>
+            <li><strong>Chiudi duplicati resta in una finestra.</strong> Una copia aperta in un'altra finestra non viene toccata.</li>
+            <li><strong>Le azioni di gruppo stanno nel menu della pagina.</strong> Fai clic destro sulla pagina, non sulla barra delle schede.</li>
+            <li><strong>Raggruppa schede ha bisogno di un criterio.</strong> In modalità Per regole, le schede che nessuna regola prende restano sparse, a meno che Altri non sia attivo.</li>
+          </ul>
+
+          <div class="cta">
+            <p>Due clic da schede sparse a una fila ordinata di gruppi.</p>
+            <a class="btn" href="https://chromewebstore.google.com/detail/takt/plgfdnbgkjocmgegnkbihoeojcfphdic">Aggiungi Takt a Chrome, è gratis</a>
+          </div>
+
+          <h2 id="faq">Domande frequenti</h2>
+          <div class="faq">
+            <details>
+              <summary>Quali sono le scorciatoie da tastiera predefinite di Takt?</summary>
+              <p><kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>G</kbd> raggruppa, <kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>U</kbd> separa, <kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>C</kbd> comprime e <kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>Space</kbd> apre il Cambio rapido (Premium). Espandi tutto non ha un tasto predefinito. Assegnane uno in <code>chrome://extensions/shortcuts</code>.</p>
+            </details>
+            <details>
+              <summary>Quale scheda tiene Chiudi duplicati?</summary>
+              <p>La prima copia nell'ordine della barra delle schede, partendo da sinistra. Le copie successive nella finestra corrente si chiudono. La tua impostazione di confronto degli URL decide cosa conta come stesso URL; per impostazione predefinita il <code>#frammento</code> viene ignorato.</p>
+            </details>
+            <details>
+              <summary>I pulsanti per riordinare sono gratuiti?</summary>
+              <p>Raggruppa, Separa, Comprimi, Espandi, Chiudi duplicati, il riquadro Tabs e la compressione automatica nella stessa finestra sono gratuiti. Ordina per dominio è gratuito per la finestra corrente. Premium ($3/mese o $30/anno) aggiunge l'ordinamento in tutte le finestre, le azioni di gruppo, la compressione automatica tra finestre e il gruppo Altri.</p>
+            </details>
+            <details>
+              <summary>Posso chiudere un intero gruppo di schede in una volta?</summary>
+              <p>Con Premium, sì: dalla vista Groups nelle opzioni di Takt, o da <strong>Azioni di gruppo</strong> nel menu del clic destro sulla pagina. Chiudi salta le schede fissate e la vista Groups ti chiede prima di confermare.</p>
+            </details>
+          </div>
+
+          <h2 id="next">Da leggere dopo</h2>
+          <div class="read-next">
+            <a href="../prevent-duplicate-tabs/">Smetti di aprire la stessa scheda due volte<span>Prevenzione dei duplicati, attiva per impostazione predefinita.</span></a>
+            <a href="../quick-switch-search-tabs/">Passa a qualsiasi scheda dalla tastiera<span>Il Cambio rapido cerca in tutte le finestre.</span></a>
+          </div>
+        </div>
+
+        <footer class="blog-post-footer">
+          <a href="../../../blog/">Tutti gli articoli sulle funzionalità</a> · <a href="../../../docs/group-actions/">Riferimento: azioni di gruppo</a> · <a href="../../../docs/shortcuts/">Scorciatoie da tastiera</a>
+        </footer>
+      </article>
+    </main>
+
+    <footer id="site-footer"></footer>
+    <script src="../../../js/includes.js"></script>
+    <script src="../../../js/nav.js"></script>
+  </body>
+</html>

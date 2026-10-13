@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Suggestions de règles pour regrouper vos onglets : Takt écrit vos premières règles — Takt</title>
+    <meta
+      name="description"
+      content="Vous ne savez pas quelles règles écrire pour regrouper vos onglets ? Takt suggère des règles d'après les sites que vous gardez ouverts, peut en demander d'autres à l'IA locale de Chrome, et vous laisse tester une règle avant de vous y fier."
+    />
+    <link rel="canonical" href="https://taktabs.com/fr/blog/rule-suggestions/" />
+<!-- TAKT-LANG:head -->
+<link rel="alternate" hreflang="en" href="https://taktabs.com/blog/rule-suggestions/" />
+<link rel="alternate" hreflang="fr" href="https://taktabs.com/fr/blog/rule-suggestions/" />
+<link rel="alternate" hreflang="es" href="https://taktabs.com/es/blog/rule-suggestions/" />
+<link rel="alternate" hreflang="it" href="https://taktabs.com/it/blog/rule-suggestions/" />
+<link rel="alternate" hreflang="de" href="https://taktabs.com/de/blog/rule-suggestions/" />
+<link rel="alternate" hreflang="pt" href="https://taktabs.com/pt/blog/rule-suggestions/" />
+<link rel="alternate" hreflang="x-default" href="https://taktabs.com/blog/rule-suggestions/" />
+<!-- /TAKT-LANG:head -->
+    <meta property="og:type" content="article" />
+    <meta property="og:locale" content="fr_FR" />
+    <meta property="og:title" content="Suggestions de règles pour regrouper vos onglets : Takt écrit vos premières règles" />
+    <meta property="og:description" content="Takt repère les sites que vous gardez ouverts et propose une règle pour chacun. Testez-la, prévisualisez-la, puis regardez le compteur de correspondances grimper." />
+    <meta property="og:url" content="https://taktabs.com/fr/blog/rule-suggestions/" />
+    <meta property="og:image" content="https://taktabs.com/fr/blog/img/options-rules.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <link rel="icon" type="image/png" sizes="32x32" href="../../../assets/favicon-32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="../../../assets/favicon-16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="../../../assets/apple-touch-icon.png" />
+    <meta name="theme-color" content="#FF3B30" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../../../css/tokens.css" />
+    <link rel="stylesheet" href="../../../css/base.css" />
+    <link rel="stylesheet" href="../../../css/layout.css" />
+    <link rel="stylesheet" href="../../../css/blog.css" />
+    <link rel="stylesheet" href="../../../css/articles.css" />
+    <script src="../../../js/theme.js"></script>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Article",
+            "headline": "Suggestions de règles pour regrouper vos onglets : Takt écrit vos premières règles",
+            "description": "Takt suggère des règles de regroupement d'onglets d'après les sites que vous gardez ouverts, propose des suggestions par IA locale, et vous laisse tester et prévisualiser une règle avant de l'enregistrer.",
+            "inLanguage": "fr",
+            "datePublished": "2026-10-08",
+            "dateModified": "2026-10-08",
+            "author": { "@type": "Person", "name": "Vitor" },
+            "publisher": { "@type": "Organization", "name": "Takt", "url": "https://taktabs.com" },
+            "image": "https://taktabs.com/fr/blog/img/options-rules.png",
+            "mainEntityOfPage": "https://taktabs.com/fr/blog/rule-suggestions/"
+          },
+          {
+            "@type": "HowTo",
+            "name": "Créer une règle de regroupement d'onglets à partir d'une suggestion",
+            "step": [
+              { "@type": "HowToStep", "text": "Ouvrez le popup de Takt et allez dans le volet Suggestions." },
+              { "@type": "HowToStep", "text": "Sur un site suggéré, cliquez sur Créer une règle. L'éditeur de règles s'ouvre avec le site déjà renseigné." },
+              { "@type": "HowToStep", "text": "Cliquez sur Aperçu des onglets correspondants pour voir quels onglets ouverts la règle capte, puis nommez le groupe, choisissez une couleur et enregistrez." }
+            ]
+          },
+          {
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "Comment Takt choisit-il les règles à suggérer ?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Il suggère un site quand vous en avez 3 onglets ou plus ouverts, ou quand vous l'avez souvent ouvert ces 7 derniers jours (5 visites, ou des visites réparties sur 2 jours), et qu'aucune règle ne le couvre encore." }
+              },
+              {
+                "@type": "Question",
+                "name": "Les suggestions de règles sont-elles gratuites ?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Oui. Avec le plan Free, vous voyez 3 suggestions à la fois dans le volet Suggestions, et des suggestions IA dans la limite gratuite de 5 règles. Premium (3 $/mois ou 30 $/an) affiche toutes les suggestions et supprime la limite de règles." }
+              },
+              {
+                "@type": "Question",
+                "name": "Les suggestions de règles par IA envoient-elles mes onglets quelque part ?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Non. Les suggestions IA utilisent la Prompt API intégrée à Chrome, qui s'exécute sur votre appareil. Seule la liste des noms de sites de vos onglets ouverts est transmise au modèle local." }
+              },
+              {
+                "@type": "Question",
+                "name": "Puis-je récupérer une suggestion ignorée ?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Oui. Les suggestions ignorées sont listées sur la page Rules des options de Takt, où vous pouvez les restaurer." }
+              }
+            ]
+          },
+          {
+            "@type": "SoftwareApplication",
+            "name": "Takt",
+            "applicationCategory": "BrowserApplication",
+            "operatingSystem": "Chrome",
+            "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <header id="site-header"></header>
+
+    <main class="blog-main">
+      <article class="blog-post article">
+        <p class="eyebrow">Suggestions de règles</p>
+        <h1 class="blog-post-title">Suggestions de règles pour regrouper vos onglets : Takt écrit vos premières règles</h1>
+        <p class="lede">La règle la plus difficile à écrire, c'est la première. Takt suggère des règles pour regrouper vos onglets d'après les sites que vous gardez déjà ouverts : vous partez de vos propres habitudes, pas d'un formulaire vide.</p>
+        <p class="blog-post-meta">Mis à jour le 8 octobre 2026 · 5 min de lecture</p>
+<!-- TAKT-LANG:nav -->
+<p class="lang-links"><a href="../../../blog/rule-suggestions/" hreflang="en" lang="en">English</a> · <span aria-current="true">Français</span> · <a href="../../../es/blog/rule-suggestions/" hreflang="es" lang="es">Español</a> · <a href="../../../it/blog/rule-suggestions/" hreflang="it" lang="it">Italiano</a> · <a href="../../../de/blog/rule-suggestions/" hreflang="de" lang="de">Deutsch</a> · <a href="../../../pt/blog/rule-suggestions/" hreflang="pt" lang="pt">Português</a></p>
+<!-- /TAKT-LANG:nav -->
+
+        <div class="blog-post-body">
+          <div class="tldr">
+            <p><strong>En bref :</strong> ouvrez le volet <strong>Suggestions</strong> du popup de Takt. Chaque carte correspond à un site que vous utilisez beaucoup et qui n'a pas encore de règle. Cliquez sur <em>Créer une règle</em>, vérifiez avec <em>Aperçu des onglets correspondants</em>, et enregistrez.</p>
+            <ul>
+              <li>Les suggestions viennent de vos onglets ouverts et de vos visites récentes, comptées sur votre appareil.</li>
+              <li><em>Suggérer des règles</em> demande à l'IA locale de Chrome de répartir vos sites ouverts en règles.</li>
+              <li>Le Testeur de règles et les compteurs de correspondances montrent si une règle fait bien ce que vous vouliez.</li>
+            </ul>
+          </div>
+
+          <h2 id="where">D'où viennent les suggestions de règles ?</h2>
+          <p>Takt repère les sites qui méritent clairement un groupe. Il y a trois sources :</p>
+          <table>
+            <thead><tr><th>Source</th><th>Suggère un site quand</th><th>Où la voir</th><th>Plan</th></tr></thead>
+            <tbody>
+              <tr><td>Onglets ouverts</td><td>3 onglets ou plus de ce site sont ouverts ou en hibernation</td><td>Popup → Suggestions, Options → Rules</td><td>Free : 3 cartes à la fois</td></tr>
+              <tr><td>Visites récentes</td><td>Vous l'avez ouvert 5 fois ou plus, ou lors de visites réparties sur 2 jours ou plus, ces 7 derniers jours</td><td>Popup → Suggestions, Options → Rules</td><td>Free : 3 cartes à la fois</td></tr>
+              <tr><td>Suggestions IA</td><td>Vous cliquez sur <em>Suggérer des règles</em></td><td>Options → Rules</td><td>Free, dans la limite de 5 règles</td></tr>
+            </tbody>
+          </table>
+          <p>Un site déjà couvert par une règle <em>domaine</em> ou <em>contient</em> n'est jamais suggéré. Ce que vous avez ignoré non plus.</p>
+
+          <h2 id="insights">Comment fonctionne le volet Suggestions ?</h2>
+          <p>Chaque carte affiche un site et la raison de sa présence, par exemple « 3 onglets ouverts · 3 visites ». Deux boutons :</p>
+          <ul>
+            <li><strong>Créer une règle</strong> ouvre l'éditeur de règles avec le site déjà renseigné. Rien n'est enregistré tant que vous n'avez pas validé la règle.</li>
+            <li><strong>Ignorer</strong> masque la carte. Les suggestions ignorées restent listées sur la page Rules des options, où vous pouvez les restaurer.</li>
+          </ul>
+          <p>Avec le plan Free, vous voyez les 3 premières cartes et une ligne comme « 1 modèle supplémentaire trouvé ». Premium (3 $/mois ou 30 $/an) les affiche toutes.</p>
+
+          <figure class="narrow">
+            <img src="../img/popup-insights-suggestions.png" alt="Volet Suggestions du popup de Takt avec trois cartes de suggestion, github.com, en.wikipedia.org et reddit.com, chacune avec 3 onglets ouverts, 3 visites et les boutons Créer une règle et Ignorer, suivies de 1 modèle supplémentaire trouvé et d'un lien Passer à la version supérieure pour tout voir" width="420" loading="lazy" />
+            <figcaption>Le volet Suggestions avec le plan Free : les 3 premières suggestions, et le nombre des autres.</figcaption>
+          </figure>
+
+          <h2 id="visits">Qu'enregistre Takt pour faire ses suggestions ?</h2>
+          <p>Uniquement des noms de sites et des compteurs. En mode Par règles, quand un nouvel onglet ne correspond à aucune de vos règles, Takt ajoute une visite au compteur de ce site. Il conserve :</p>
+          <ul>
+            <li>le domaine, un nombre de visites, et la première et la dernière fois qu'il l'a vu ;</li>
+            <li>les entrées des 7 derniers jours seulement, et 1 000 sites au maximum ;</li>
+            <li>rien des fenêtres de navigation privée.</li>
+          </ul>
+          <p>Ces données sont stockées dans le stockage local de l'extension dans Chrome et ne quittent jamais votre navigateur. <em>Clear tab pattern history</em>, dans Settings, les efface. Si vous accordez la permission facultative d'accès à l'historique de navigation, le nombre de visites de chaque carte vient plutôt de l'historique de Chrome sur les 90 derniers jours.</p>
+
+          <h2 id="ai">Que sont les suggestions de règles par IA ?</h2>
+          <p>Sur la page Rules des options, <strong>Suggérer des règles</strong> envoie la liste des sites de vos onglets ouverts à la Prompt API intégrée à Chrome. Le modèle s'exécute sur votre appareil, regroupe les sites par thème et nomme chaque groupe. Seuls les noms de sites sont transmis : ni titres, ni contenu de page.</p>
+          <ul>
+            <li>Chaque suggestion propose <em>Ajouter une règle</em> et <em>Ignorer</em>. Ajouter une règle l'enregistre immédiatement, activée.</li>
+            <li>La première exécution peut prendre une minute, le temps que Chrome prépare le modèle.</li>
+            <li>Sur un appareil qui ne peut pas exécuter le modèle, vous voyez « Les suggestions IA ne sont pas disponibles sur cet appareil. »</li>
+            <li>Avec le plan Free, vous obtenez autant de suggestions qu'il vous reste d'emplacements de règles gratuits, sur 5.</li>
+          </ul>
+
+          <h2 id="tester">Comment tester une règle avant de m'y fier ?</h2>
+          <p>Deux outils sur la page Rules des options :</p>
+          <ul>
+            <li><strong>Testeur de règles.</strong> Collez une URL, et éventuellement un titre de page. Takt répond « Matches: <em>règle</em> → <em>groupe</em> » ou « Aucune règle correspondante ». Cochez <em>Inclure les règles désactivées</em> pour tester les règles que vous avez désactivées.</li>
+            <li><strong>Aperçu des onglets correspondants.</strong> Dans l'éditeur de règles, ce bouton liste les onglets ouverts que vos conditions non enregistrées capteraient, dans toutes les fenêtres. S'il n'y en a aucun, il affiche « Aucun onglet ne correspond à cette règle. »</li>
+          </ul>
+
+          <figure>
+            <img src="../img/options-rules.png" alt="Page Rules des options de Takt avec le Testeur de règles (champ URL, titre de page optionnel, case Inclure les règles désactivées et bouton Tester), l'intitulé Suggestions IA avec un bouton Suggérer des règles, et une liste de sept règles dont plusieurs affichent un nombre de correspondances, par exemple 4 pour Code et 3 pour Research" width="700" loading="lazy" />
+            <figcaption>Le Testeur de règles et les Suggestions IA se trouvent au-dessus de vos règles. Les nombres sont des compteurs de correspondances.</figcaption>
+          </figure>
+
+          <h2 id="counts">Comment savoir si une règle fonctionne ?</h2>
+          <p>Chaque règle de la liste indique combien d'onglets elle a rangés dans son groupe. Un onglet compte quand la règle le fait sortir des onglets non groupés.</p>
+          <p>La vue <strong>Stats</strong> ajoute les totaux : onglets organisés, onglets par jour, votre règle principale et vos 10 règles les plus utilisées. Une règle qui reste à zéro pendant une semaine mérite un second regard avec le Testeur de règles. <em>Réinitialiser les statistiques</em> remet les compteurs à zéro.</p>
+
+          <h2 id="right-click">Puis-je créer une règle à partir de la page où je suis ? <span class="badge badge-premium">Premium</span></h2>
+          <p>Oui. Faites un clic droit sur la page et choisissez <strong>Créer une règle à partir de cet onglet</strong>. Takt ouvre l'éditeur de règles avec un motif glob comme <code>*://github.com/*</code> déjà renseigné. Vérifiez-le et enregistrez.</p>
+
+          <h2 id="limits">Ce que les suggestions ne font pas</h2>
+          <ul>
+            <li>Elles fonctionnent site par site. Takt ne suggérera pas « toutes les pull requests » de tous les dépôts. Pour cela, écrivez une règle glob ou regex (Premium).</li>
+            <li>Les suggestions basées sur les onglets ouverts demandent 3 onglets d'un même site. Deux onglets ne font pas apparaître de carte.</li>
+            <li>Les suggestions IA dépendent du modèle local de Chrome. Les machines anciennes ou peu puissantes n'y auront peut-être pas droit.</li>
+            <li>Les suggestions alimentent le mode Par règles. Si vous préférez ne pas écrire de règles du tout, essayez le <a href="../group-tabs-by-category-or-ai/">regroupement par catégorie ou par IA</a>.</li>
+          </ul>
+
+          <div class="cta">
+            <p>Ouvrez vos onglets comme d'habitude. Takt vous dira quelle règle écrire.</p>
+            <a class="btn" href="https://chromewebstore.google.com/detail/takt/plgfdnbgkjocmgegnkbihoeojcfphdic">Ajouter Takt à Chrome, gratuitement</a>
+          </div>
+
+          <h2 id="faq">Questions fréquentes</h2>
+          <div class="faq">
+            <details>
+              <summary>Comment Takt choisit-il les règles à suggérer ?</summary>
+              <p>Un site est retenu avec 3 onglets ouverts ou plus, ou avec 5 visites (ou des visites réparties sur 2 jours) ces 7 derniers jours, tant qu'aucune règle ne le couvre.</p>
+            </details>
+            <details>
+              <summary>Les suggestions de règles sont-elles gratuites ?</summary>
+              <p>Oui. Avec le plan Free, vous voyez 3 cartes à la fois dans le volet Suggestions, et des suggestions IA dans la limite de 5 règles. Premium (3 $/mois ou 30 $/an) les affiche toutes.</p>
+            </details>
+            <details>
+              <summary>Les suggestions de règles par IA envoient-elles mes onglets quelque part ?</summary>
+              <p>Non. Seuls les noms de sites de vos onglets ouverts sont transmis au modèle local de Chrome. Voir <a href="../privacy-local-first/">comment Takt garde vos données en local</a>.</p>
+            </details>
+            <details>
+              <summary>Puis-je récupérer une suggestion ignorée ?</summary>
+              <p>Oui. La page Rules des options liste les suggestions ignorées, et vous pouvez les y restaurer.</p>
+            </details>
+          </div>
+
+          <h2 id="next">À lire ensuite</h2>
+          <div class="read-next">
+            <a href="../auto-group-tabs-chrome/">Comment écrire une règle de regroupement<span>Types de correspondance, ordre, cinq règles pour démarrer.</span></a>
+            <a href="../profiles-and-schedules/">Des règles différentes au travail et à la maison<span>Des profils qui changent selon un horaire.</span></a>
+          </div>
+        </div>
+
+        <footer class="blog-post-footer">
+          <a href="../../../blog/">Tous les articles</a> · <a href="../../../docs/insights/">Référence : Suggestions</a> · <a href="../../../docs/rules/">Référence des règles</a>
+        </footer>
+      </article>
+    </main>
+
+    <footer id="site-footer"></footer>
+    <script src="../../../js/includes.js"></script>
+    <script src="../../../js/nav.js"></script>
+  </body>
+</html>

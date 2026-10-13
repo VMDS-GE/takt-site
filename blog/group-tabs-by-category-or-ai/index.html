@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Group Chrome tabs by category or with on-device AI, no rules needed — Takt</title>
+    <meta
+      name="description"
+      content="Group every open Chrome tab by category (20 built-in categories) or with Chrome's on-device AI model, without writing a single rule. How each mode works, the free 5-group cap, and how it compares with Chrome's own Organize tabs."
+    />
+    <link rel="canonical" href="https://taktabs.com/blog/group-tabs-by-category-or-ai/" />
+<!-- TAKT-LANG:head -->
+<link rel="alternate" hreflang="en" href="https://taktabs.com/blog/group-tabs-by-category-or-ai/" />
+<link rel="alternate" hreflang="fr" href="https://taktabs.com/fr/blog/group-tabs-by-category-or-ai/" />
+<link rel="alternate" hreflang="es" href="https://taktabs.com/es/blog/group-tabs-by-category-or-ai/" />
+<link rel="alternate" hreflang="it" href="https://taktabs.com/it/blog/group-tabs-by-category-or-ai/" />
+<link rel="alternate" hreflang="de" href="https://taktabs.com/de/blog/group-tabs-by-category-or-ai/" />
+<link rel="alternate" hreflang="pt" href="https://taktabs.com/pt/blog/group-tabs-by-category-or-ai/" />
+<link rel="alternate" hreflang="x-default" href="https://taktabs.com/blog/group-tabs-by-category-or-ai/" />
+<!-- /TAKT-LANG:head -->
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Group Chrome tabs by category or with on-device AI" />
+    <meta property="og:description" content="No rules to write. Pick Category or AI and every open tab lands in a named group." />
+    <meta property="og:url" content="https://taktabs.com/blog/group-tabs-by-category-or-ai/" />
+    <meta property="og:image" content="https://taktabs.com/blog/img/popup-home.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <link rel="icon" type="image/png" sizes="32x32" href="../../assets/favicon-32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="../../assets/favicon-16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="../../assets/apple-touch-icon.png" />
+    <meta name="theme-color" content="#FF3B30" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../../css/tokens.css" />
+    <link rel="stylesheet" href="../../css/base.css" />
+    <link rel="stylesheet" href="../../css/layout.css" />
+    <link rel="stylesheet" href="../../css/blog.css" />
+    <link rel="stylesheet" href="../../css/articles.css" />
+    <script src="../../js/theme.js"></script>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Article",
+            "headline": "Group Chrome tabs by category or with on-device AI",
+            "description": "Group every open Chrome tab by one of 20 built-in categories, or by topic with Chrome's on-device AI model, without writing rules.",
+            "datePublished": "2026-10-08",
+            "dateModified": "2026-10-08",
+            "author": { "@type": "Person", "name": "Vitor" },
+            "publisher": { "@type": "Organization", "name": "Takt", "url": "https://taktabs.com" },
+            "image": "https://taktabs.com/blog/img/popup-home.png",
+            "mainEntityOfPage": "https://taktabs.com/blog/group-tabs-by-category-or-ai/"
+          },
+          {
+            "@type": "HowTo",
+            "name": "Group Chrome tabs by category or with AI",
+            "step": [
+              { "@type": "HowToStep", "text": "Install Takt from the Chrome Web Store." },
+              { "@type": "HowToStep", "text": "Open the Takt popup and, under Grouping mode, choose By Category or By AI." },
+              { "@type": "HowToStep", "text": "Takt ungroups your tabs and regroups them in the new mode. Click Group Tabs (or press Alt+Shift+G) to run it again later." }
+            ]
+          },
+          {
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "Is Group by Category or Group with AI free?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Yes. Both modes are free. The free plan allows up to 5 tab groups in total across all Chrome windows in Category and AI modes, counting groups you made by hand. Premium ($3/month or $30/year) removes the cap." }
+              },
+              {
+                "@type": "Question",
+                "name": "Does Takt's AI grouping send my tabs to a server?",
+                "acceptedAnswer": { "@type": "Answer", "text": "No. Takt uses Chrome's built-in Prompt API, which runs the model on your device. Tab titles and a short excerpt of page text go to the local model only." }
+              },
+              {
+                "@type": "Question",
+                "name": "What happens if Chrome's AI model is not available on my computer?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Takt falls back to grouping tabs that share words in their titles and site names. The popup tells you the AI is unavailable on this device, and the tabs are still grouped." }
+              },
+              {
+                "@type": "Question",
+                "name": "Can I add my own sites to a category?",
+                "acceptedAnswer": { "@type": "Answer", "text": "No. The category list is fixed. Sites it doesn't know go to Other. If you want a site in a specific group, use Rules mode instead." }
+              }
+            ]
+          },
+          {
+            "@type": "SoftwareApplication",
+            "name": "Takt",
+            "applicationCategory": "BrowserApplication",
+            "operatingSystem": "Chrome",
+            "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <header id="site-header"></header>
+
+    <main class="blog-main">
+      <article class="blog-post article">
+        <p class="eyebrow">Category &amp; AI grouping</p>
+        <h1 class="blog-post-title">Group Chrome tabs by category or with AI, no rules needed</h1>
+        <p class="lede">You can group every open Chrome tab without writing a rule. Pick <strong>Category</strong> and Takt files each tab under one of 20 named categories. Pick <strong>AI</strong> and Chrome's on-device model groups tabs by topic.</p>
+        <p class="blog-post-meta">Updated 8 October 2026 · 6 min read</p>
+<!-- TAKT-LANG:nav -->
+<p class="lang-links"><span aria-current="true">English</span> · <a href="../../fr/blog/group-tabs-by-category-or-ai/" hreflang="fr" lang="fr">Français</a> · <a href="../../es/blog/group-tabs-by-category-or-ai/" hreflang="es" lang="es">Español</a> · <a href="../../it/blog/group-tabs-by-category-or-ai/" hreflang="it" lang="it">Italiano</a> · <a href="../../de/blog/group-tabs-by-category-or-ai/" hreflang="de" lang="de">Deutsch</a> · <a href="../../pt/blog/group-tabs-by-category-or-ai/" hreflang="pt" lang="pt">Português</a></p>
+<!-- /TAKT-LANG:nav -->
+
+        <div class="blog-post-body">
+          <div class="tldr">
+            <p><strong>Short answer:</strong> open the Takt popup, choose <em>By Category</em> or <em>By AI</em> under Grouping mode, and Takt regroups your tabs straight away.</p>
+            <ul>
+              <li>Category: 20 fixed categories such as Development, Social and News. Unknown sites go to "Other".</li>
+              <li>AI: Chrome's built-in model names the groups. It runs on your device.</li>
+              <li>Both are free, up to 5 groups across all windows. Premium removes the cap.</li>
+            </ul>
+          </div>
+
+          <h2 id="modes">Which grouping modes does Takt have?</h2>
+          <p>Four, and one is active at a time. You pick it in the popup under <strong>Grouping mode</strong>.</p>
+          <table>
+            <thead><tr><th>Mode</th><th>How tabs are grouped</th><th>Setup</th></tr></thead>
+            <tbody>
+              <tr><td>By Rules (default)</td><td>By the URL rules you write</td><td>One rule per group</td></tr>
+              <tr><td>By Category</td><td>By site, into 20 built-in categories</td><td>None</td></tr>
+              <tr><td>By AI</td><td>By topic, with labels from Chrome's on-device model</td><td>None</td></tr>
+              <tr><td>None</td><td>Takt doesn't group tabs</td><td>None</td></tr>
+            </tbody>
+          </table>
+          <p>When you switch, Takt ungroups your tabs and regroups them in the new mode. Your choice is saved. Choosing None ungroups everything and stops grouping.</p>
+
+          <figure class="narrow">
+            <img src="../img/popup-home.png" alt="Takt popup Home pane with the Grouping mode section showing four options: By Rules, By Category, By AI and None, above the Quick actions buttons Group Tabs, Ungroup All, Collapse All and Sort by Domain" width="420" loading="lazy" />
+            <figcaption>The grouping mode switch in the popup. Group Tabs runs the selected mode.</figcaption>
+          </figure>
+
+          <h2 id="category">How does Group by Category work?</h2>
+          <p>Takt looks only at each tab's hostname. It checks a built-in list of 77 well-known sites, each mapped to one of 20 categories:</p>
+          <p>Development, AI Tools, Docs, Productivity, Communication, Finance, Design, Shopping, Social, Entertainment, News, Gaming, Sports, Travel, Health, Food, Science, Career, Education and Cloud.</p>
+          <ul>
+            <li><strong>Subdomains inherit.</strong> docs.github.com isn't on the list, so Takt tries github.com and files it under Development.</li>
+            <li><strong>The most specific host wins.</strong> aws.amazon.com goes to Cloud. amazon.com goes to Shopping.</li>
+            <li><strong>Everything else goes to Other.</strong> That includes your company intranet, new-tab pages and any site the list doesn't know. Other is always the last group.</li>
+          </ul>
+          <p>The biggest category becomes the first group, then the next biggest. New tabs join their category group as they load. Takt reads no page content in this mode.</p>
+
+          <h2 id="ai">How does Group with AI work?</h2>
+          <p>Takt sends each tab's title and up to 500 characters of its page text to Chrome's built-in Prompt API. The model runs inside Chrome on your machine. It returns a short label per topic, and Takt builds the groups.</p>
+          <ul>
+            <li>A group needs at least 2 tabs. A tab with no match stays ungrouped.</li>
+            <li>Each run covers up to 100 tabs.</li>
+            <li>Labels come from the model, so they can change between runs.</li>
+            <li>Reading page text needs Takt's optional "All website access" permission. Without it, Takt groups on titles only and says so in the popup.</li>
+          </ul>
+          <p>The model doesn't run on every new tab. In AI mode, tabs you open later wait for the next <strong>Group Tabs</strong> click or <kbd>Alt+Shift+G</kbd>.</p>
+
+          <h2 id="download">What happens the first time I use AI mode?</h2>
+          <p>Chrome may need to download its on-device model first. Takt starts the download when you click Group Tabs and shows the progress in the popup: "Preparing AI model…", then "Downloading AI model (N%)…", then "AI model ready. Grouping tabs…". Grouping continues on its own when the model is ready.</p>
+
+          <h2 id="fallback">What if my computer can't run Chrome's AI model?</h2>
+          <p>Takt still groups your tabs. It falls back to a similarity method that groups tabs sharing words in their titles and site names, and the popup shows "AI unavailable on this device."</p>
+          <p>The same fallback runs if the model takes too long: 2 minutes to load, or 8 seconds to answer. The fallback also handles new tabs in AI mode: a new tab joins the closest existing group, and never starts a new one.</p>
+
+          <h2 id="cap">What is the free 5-group limit?</h2>
+          <p>On the free plan, Category and AI modes create at most 5 tab groups. The limit counts every tab group open in Chrome, across all windows, including groups you made by hand.</p>
+          <ul>
+            <li>If a run would go over, Takt keeps the largest groups and leaves the rest ungrouped.</li>
+            <li>If you already have 5 groups, the popup says "You've hit the 5-group limit. Ungroup some tabs to create more."</li>
+            <li>Rules mode has its own free limit of 5 rules instead.</li>
+          </ul>
+          <p>Premium ($3/month or $30/year) removes the group cap.</p>
+
+          <h2 id="chrome">How is this different from Chrome's own "Organize tabs"?</h2>
+          <p>Since Chrome 146, right-clicking a tab offers to organize similar tabs. It uses Gemini Nano on your device, suggests group names, costs nothing and needs no extension. For a one-off cleanup, that may be all you need.</p>
+          <table>
+            <thead><tr><th></th><th>Chrome built-in</th><th>Takt Category</th><th>Takt AI</th></tr></thead>
+            <tbody>
+              <tr><td>When it groups</td><td>When you ask</td><td>On Group Tabs, and each new tab as it loads</td><td>On Group Tabs</td></tr>
+              <tr><td>Group names</td><td>Suggested by the model</td><td>Fixed: 20 categories + Other</td><td>Suggested by the model</td></tr>
+              <tr><td>Runs on device</td><td>Yes</td><td>Yes, no model needed</td><td>Yes</td></tr>
+              <tr><td>Switch to your own rules</td><td>No</td><td colspan="2">Yes, one click to Rules mode</td></tr>
+              <tr><td>Price</td><td>Free</td><td colspan="2">Free up to 5 groups; Premium unlimited</td></tr>
+            </tbody>
+          </table>
+
+          <h2 id="limits">Where Category and AI fall short</h2>
+          <ul>
+            <li><strong>The category list is fixed.</strong> You can't add a site or rename a category. Rename a group in Chrome and Takt uses the built-in name again on the next run.</li>
+            <li><strong>Colors repeat.</strong> 20 categories share Chrome's 8 group colors. The name is what identifies a group.</li>
+            <li><strong>AI labels move.</strong> Run it twice and you may get different names.</li>
+            <li><strong>Profiles and schedules don't apply.</strong> They only work in Rules mode.</li>
+          </ul>
+          <p>If you want github.com in a group called "Code" every time, <a href="../auto-group-tabs-chrome/">write a rule</a>. Not sure which rules to write? <a href="../rule-suggestions/">Let Takt suggest them</a>.</p>
+
+          <div class="cta">
+            <p>Pick a mode. Watch 30 loose tabs become five named groups.</p>
+            <a class="btn" href="https://chromewebstore.google.com/detail/takt/plgfdnbgkjocmgegnkbihoeojcfphdic">Add Takt to Chrome, free</a>
+          </div>
+
+          <h2 id="faq">FAQ</h2>
+          <div class="faq">
+            <details>
+              <summary>Is Group by Category or Group with AI free?</summary>
+              <p>Yes. Both are free, up to 5 tab groups in total across all windows, counting groups you made by hand. Premium ($3/month or $30/year) removes the cap.</p>
+            </details>
+            <details>
+              <summary>Does Takt's AI grouping send my tabs to a server?</summary>
+              <p>No. It uses Chrome's built-in Prompt API, which runs on your device. See <a href="../privacy-local-first/">how Takt keeps data local</a>.</p>
+            </details>
+            <details>
+              <summary>What happens if Chrome's AI model is not available on my computer?</summary>
+              <p>Takt groups tabs that share words in their titles and site names instead, and tells you the AI is unavailable on this device.</p>
+            </details>
+            <details>
+              <summary>Can I add my own sites to a category?</summary>
+              <p>No. The list is fixed and unknown sites go to Other. Use Rules mode to send a site to a group you name.</p>
+            </details>
+          </div>
+
+          <h2 id="next">Read next</h2>
+          <div class="read-next">
+            <a href="../auto-group-tabs-chrome/">Group tabs with your own rules<span>One rule per site, filed as tabs open.</span></a>
+            <a href="../rule-suggestions/">Let Takt suggest your rules<span>From the sites you already keep open.</span></a>
+          </div>
+        </div>
+
+        <footer class="blog-post-footer">
+          <a href="../">All feature articles</a> · <a href="../../docs/group-by-category/">Group by Category reference</a> · <a href="../../docs/smart-group-ai/">Smart Group with AI reference</a>
+        </footer>
+      </article>
+    </main>
+
+    <footer id="site-footer"></footer>
+    <script src="../../js/includes.js"></script>
+    <script src="../../js/nav.js"></script>
+  </body>
+</html>

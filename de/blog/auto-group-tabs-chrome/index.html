@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chrome-Tabs automatisch gruppieren – mit Regeln — Takt</title>
+    <meta
+      name="description"
+      content="Chrome kann Tabs gruppieren, tut es aber nicht von selbst. So schreiben Sie URL-Regeln, die jeden neuen Tab beim Öffnen in eine benannte, farbige Gruppe einordnen."
+    />
+    <link rel="canonical" href="https://taktabs.com/de/blog/auto-group-tabs-chrome/" />
+<!-- TAKT-LANG:head -->
+<link rel="alternate" hreflang="en" href="https://taktabs.com/blog/auto-group-tabs-chrome/" />
+<link rel="alternate" hreflang="fr" href="https://taktabs.com/fr/blog/auto-group-tabs-chrome/" />
+<link rel="alternate" hreflang="es" href="https://taktabs.com/es/blog/auto-group-tabs-chrome/" />
+<link rel="alternate" hreflang="it" href="https://taktabs.com/it/blog/auto-group-tabs-chrome/" />
+<link rel="alternate" hreflang="de" href="https://taktabs.com/de/blog/auto-group-tabs-chrome/" />
+<link rel="alternate" hreflang="pt" href="https://taktabs.com/pt/blog/auto-group-tabs-chrome/" />
+<link rel="alternate" hreflang="x-default" href="https://taktabs.com/blog/auto-group-tabs-chrome/" />
+<!-- /TAKT-LANG:head -->
+    <meta property="og:type" content="article" />
+    <meta property="og:locale" content="de_DE" />
+    <meta property="og:title" content="Chrome-Tabs automatisch gruppieren – mit Regeln" />
+    <meta property="og:description" content="Einmal eine Regel schreiben. Jeder passende Tab landet beim Öffnen in der richtigen Chrome-Tab-Gruppe." />
+    <meta property="og:url" content="https://taktabs.com/de/blog/auto-group-tabs-chrome/" />
+    <meta property="og:image" content="https://taktabs.com/de/blog/img/options-rules.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <link rel="icon" type="image/png" sizes="32x32" href="../../../assets/favicon-32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="../../../assets/favicon-16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="../../../assets/apple-touch-icon.png" />
+    <meta name="theme-color" content="#FF3B30" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../../../css/tokens.css" />
+    <link rel="stylesheet" href="../../../css/base.css" />
+    <link rel="stylesheet" href="../../../css/layout.css" />
+    <link rel="stylesheet" href="../../../css/blog.css" />
+    <link rel="stylesheet" href="../../../css/articles.css" />
+    <script src="../../../js/theme.js"></script>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Article",
+            "inLanguage": "de",
+            "headline": "Chrome-Tabs automatisch gruppieren – mit Regeln",
+            "description": "URL-Regeln schreiben, die jeden neuen Tab beim Öffnen in eine benannte, farbige Chrome-Tab-Gruppe einordnen.",
+            "datePublished": "2026-10-08",
+            "dateModified": "2026-10-08",
+            "author": { "@type": "Person", "name": "Vitor" },
+            "publisher": { "@type": "Organization", "name": "Takt", "url": "https://taktabs.com" },
+            "image": "https://taktabs.com/de/blog/img/options-rules.png",
+            "mainEntityOfPage": "https://taktabs.com/de/blog/auto-group-tabs-chrome/"
+          },
+          {
+            "@type": "HowTo",
+            "name": "Chrome-Tabs automatisch nach URL gruppieren",
+            "step": [
+              { "@type": "HowToStep", "text": "Installieren Sie Takt aus dem Chrome Web Store." },
+              { "@type": "HowToStep", "text": "Öffnen Sie die Optionsseite von Takt, gehen Sie zu Rules und klicken Sie auf New Rule." },
+              { "@type": "HowToStep", "text": "Fügen Sie eine Bedingung hinzu, etwa URL-Domain github.com." },
+              { "@type": "HowToStep", "text": "Benennen Sie die Gruppe, wählen Sie eine der 8 Chrome-Farben und speichern Sie. Passende Tabs werden beim Laden gruppiert." }
+            ]
+          },
+          {
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "Kann Chrome Tabs ohne Erweiterung automatisch gruppieren?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Chrome kann mit seiner integrierten KI-Funktion „Organize tabs“ Gruppen vorschlagen, kennt aber keine Regeln: Sie können ihm nicht sagen, dass jeder github.com-Tab immer in eine Gruppe namens Code gehört. Eine regelbasierte Erweiterung wie Takt erledigt genau das." }
+              },
+              {
+                "@type": "Question",
+                "name": "Wie viele Regeln kann ich kostenlos erstellen?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Der kostenlose Plan erlaubt 5 Regeln mit je einer Bedingung, mit Abgleich per enthält, exakt oder Domain. Premium ($3/Monat oder $30/Jahr) hebt die Grenze auf und ergänzt Glob, Regex, Titelabgleich und bis zu 10 UND/ODER-Bedingungen pro Regel." }
+              },
+              {
+                "@type": "Question",
+                "name": "Kann ich eine Regel pausieren, ohne sie zu löschen?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Ja. Jede Regel hat in der Liste einen Ein/Aus-Schalter. Eine deaktivierte Regel behält ihre Einstellungen und greift nicht mehr." }
+              },
+              {
+                "@type": "Question",
+                "name": "Sendet Takt meine URLs irgendwohin, um Regeln abzugleichen?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Nein. Regeln werden in Ihrem Browser mit lokal gespeicherten Daten abgeglichen. Takt hat kein Konto und keine Analysen." }
+              }
+            ]
+          },
+          {
+            "@type": "SoftwareApplication",
+            "name": "Takt",
+            "applicationCategory": "BrowserApplication",
+            "operatingSystem": "Chrome",
+            "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <header id="site-header"></header>
+
+    <main class="blog-main">
+      <article class="blog-post article">
+        <p class="eyebrow">Regeln</p>
+        <h1 class="blog-post-title">Chrome-Tabs automatisch gruppieren</h1>
+        <p class="lede">Chrome kann Tabs gruppieren. Von selbst tut es das nicht. Eine Regel ändert das: Sie schreiben sie einmal, und jeder passende Tab landet beim Öffnen in der richtigen Gruppe.</p>
+        <p class="blog-post-meta">Aktualisiert am 8. Oktober 2026 · 5 Min. Lesezeit</p>
+<!-- TAKT-LANG:nav -->
+<p class="lang-links"><a href="../../../blog/auto-group-tabs-chrome/" hreflang="en" lang="en">English</a> · <a href="../../../fr/blog/auto-group-tabs-chrome/" hreflang="fr" lang="fr">Français</a> · <a href="../../../es/blog/auto-group-tabs-chrome/" hreflang="es" lang="es">Español</a> · <a href="../../../it/blog/auto-group-tabs-chrome/" hreflang="it" lang="it">Italiano</a> · <span aria-current="true">Deutsch</span> · <a href="../../../pt/blog/auto-group-tabs-chrome/" hreflang="pt" lang="pt">Português</a></p>
+<!-- /TAKT-LANG:nav -->
+
+        <div class="blog-post-body">
+          <div class="tldr">
+            <p><strong>Kurz gesagt:</strong> Installieren Sie Takt, erstellen Sie eine Regel wie <em>URL-Domain github.com → Gruppe „Code“, blau</em> und speichern Sie. Ab dann landet jeder GitHub-Tab beim Laden in der blauen Gruppe „Code“.</p>
+            <ul>
+              <li>Free: 5 Regeln, Abgleich per <em>enthält</em>, <em>exakt</em> oder <em>Domain</em>.</li>
+              <li>Premium: unbegrenzte Regeln, Glob- und Regex-Muster, Abgleich mit dem Seitentitel, bis zu 10 UND/ODER-Bedingungen.</li>
+              <li>Der Abgleich läuft auf Ihrem Computer. Kein Konto, keine Analysen.</li>
+            </ul>
+          </div>
+
+          <h2 id="why">Warum ordnen sich Chrome-Tab-Gruppen nicht von selbst?</h2>
+          <p>Chromes Tab-Gruppen sind ein Aktenschrank ohne Sachbearbeiter. Rechtsklick, „Tab zu Gruppe hinzufügen“, wiederholen. Wer an einem Vormittag zwanzig Links öffnet, sortiert zwanzigmal ein – oder, wahrscheinlicher, gar nicht.</p>
+          <p>Chromes integrierte KI-Funktion „Organize tabs“ hilft beim einmaligen Aufräumen. Anweisungen befolgt sie aber nicht. Sie können ihr nicht sagen: „Pull Requests kommen immer in Reviews.“ Eine Regel kann das.</p>
+
+          <h2 id="create">Wie erstelle ich eine Regel zum Gruppieren von Tabs?</h2>
+          <ol class="steps">
+            <li>Installieren Sie <a href="https://chromewebstore.google.com/detail/takt/plgfdnbgkjocmgegnkbihoeojcfphdic">Takt aus dem Chrome Web Store</a>.</li>
+            <li>Öffnen Sie die Optionsseite von Takt und klicken Sie auf <strong>New Rule</strong>.</li>
+            <li>Fügen Sie eine Bedingung hinzu. <em>URL · Domain · github.com</em> erfasst github.com und alle Subdomains.</li>
+            <li>Benennen Sie die Gruppe, wählen Sie eine Farbe und speichern Sie.</li>
+          </ol>
+          <p>Lassen Sie <strong>Jetzt anwenden</strong> angehakt, dann gruppiert Takt Ihre offenen Tabs sofort neu. Neue Tabs werden beim Laden gruppiert.</p>
+
+          <figure>
+            <img src="../img/options-rule-editor.png" alt="Der Regel-Editor von Takt für eine Regel namens Code: zwei Bedingungen vom Typ URL Domain (github.com, gitlab.com), verknüpft mit ANY condition (OR), Gruppenname Code, Blau unter den 8 Chrome-Farben ausgewählt und Jetzt anwenden angehakt" width="700" loading="lazy" />
+            <figcaption>Eine Regel mit zwei Bedingungen, verknüpft mit ODER (Premium). Im kostenlosen Plan gilt eine Bedingung pro Regel.</figcaption>
+          </figure>
+
+          <h2 id="match-types">Welchen Übereinstimmungstyp sollte ich verwenden?</h2>
+          <p>Die meisten brauchen nur <strong>Domain</strong>. Greifen Sie zu den anderen, wenn eine Domain zu breit ist.</p>
+          <table>
+            <thead>
+              <tr><th>Übereinstimmungstyp</th><th>Muster</th><th>Erfasst</th><th>Plan</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Domain</td><td><code>google.com</code></td><td>docs.google.com, mail.google.com, google.com</td><td>Free</td></tr>
+              <tr><td>Contains (enthält)</td><td><code>localhost</code></td><td>http://localhost:3000/api</td><td>Free</td></tr>
+              <tr><td>Exact (exakt)</td><td><code>https://mail.google.com/mail/u/0/#inbox</code></td><td>Nur genau diese URL</td><td>Free</td></tr>
+              <tr><td>Glob</td><td><code>*github.com/*/pull/*</code></td><td>Jeden Pull Request in jedem Repo</td><td>Premium</td></tr>
+              <tr><td>Regex</td><td><code>jira\..*/browse/PROJ-\d+</code></td><td>Tickets eines Projekts</td><td>Premium</td></tr>
+            </tbody>
+          </table>
+          <p>Jede Bedingung lässt sich auch umkehren (<em>URL enthält NICHT google.com</em>) oder auf Groß-/Kleinschreibung beschränken. Premium ergänzt den Abgleich mit dem <strong>Seitentitel</strong> und die Kombination von bis zu 10 Bedingungen mit UND oder ODER.</p>
+
+          <h2 id="order">Was, wenn zwei Regeln auf denselben Tab passen?</h2>
+          <p>Der erste Treffer gewinnt. Regeln werden von oben nach unten geprüft, und die Prüfung endet beim ersten Treffer.</p>
+          <p>Ordnen Sie sie also von spezifisch nach allgemein. Eine Regel „Reviews“ für Pull Requests muss über einer Regel „Code“ für ganz GitHub stehen, sonst landet jeder Pull Request in „Code“. Verschieben Sie eine Regel per Drag-and-drop oder mit den Schaltflächen ↑/↓.</p>
+
+          <figure>
+            <img src="../img/options-rules.png" alt="Die Regelliste von Takt mit sieben Regeln samt Bedingungen, Gruppennamen, Ein/Aus-Schaltern und Pfeilen zum Umsortieren, darüber der Regel-Tester" width="700" loading="lazy" />
+            <figcaption>Die Regelliste, darüber der Regel-Tester. Fügen Sie eine beliebige URL ein, um zu sehen, welche Regel greift.</figcaption>
+          </figure>
+
+          <h2 id="test">Wie prüfe ich eine Regel, bevor ich mich auf sie verlasse?</h2>
+          <p>Auf zwei Arten, beide auf der Seite Rules:</p>
+          <ul>
+            <li><strong>Regel-Tester.</strong> Fügen Sie eine URL ein (und optional einen Seitentitel). Takt zeigt Ihnen, welche Regel greifen würde.</li>
+            <li><strong>Passende Tabs anzeigen.</strong> Im Editor listet diese Funktion die bereits offenen Tabs auf, die die Regel erfassen würde – noch bevor Sie speichern.</li>
+          </ul>
+
+          <h2 id="starter">Ein Startset aus fünf Regeln</h2>
+          <p>Fünf Regeln decken die meisten Arbeitstage ab, und fünf ist genau die Grenze im kostenlosen Plan.</p>
+          <table>
+            <thead><tr><th>Gruppe</th><th>Bedingung</th></tr></thead>
+            <tbody>
+              <tr><td>Code</td><td>Domain <code>github.com</code></td></tr>
+              <tr><td>Doku</td><td>Domain <code>developer.mozilla.org</code></td></tr>
+              <tr><td>Mail &amp; Kalender</td><td>Domain <code>google.com</code></td></tr>
+              <tr><td>Lokale Entwicklung</td><td>Enthält <code>localhost</code></td></tr>
+              <tr><td>Später ansehen</td><td>Domain <code>youtube.com</code></td></tr>
+            </tbody>
+          </table>
+          <p>Unsicher, was Sie schreiben sollen? Der <a href="../rule-suggestions/">Bereich Einblicke schlägt Regeln vor</a> – auf Basis der Websites, die Sie ohnehin geöffnet haben.</p>
+
+          <h2 id="limits">Was Regeln nicht können</h2>
+          <p>Regeln erfassen nur, was Sie ihnen vorgeben. Ein Tab von einer Website, für die Sie keine Regel geschrieben haben, bleibt ungruppiert. Wenn Sie lieber gar keine Regeln schreiben möchten, stellen Sie den Gruppierungsmodus auf <a href="../group-tabs-by-category-or-ai/">Kategorie oder KI</a> um.</p>
+
+          <div class="cta">
+            <p>Eine Regel schreiben. Zusehen, wie sich der nächste Tab selbst einordnet.</p>
+            <a class="btn" href="https://chromewebstore.google.com/detail/takt/plgfdnbgkjocmgegnkbihoeojcfphdic">Zu Chrome hinzufügen — kostenlos</a>
+          </div>
+
+          <h2 id="faq">Häufige Fragen</h2>
+          <div class="faq">
+            <details>
+              <summary>Kann Chrome Tabs ohne Erweiterung automatisch gruppieren?</summary>
+              <p>Chromes integrierte Funktion „Organize tabs“ schlägt auf Anfrage Gruppen per KI vor. Regeln kennt sie nicht, deshalb kann sie dieselben Websites nicht dauerhaft in dieselbe Gruppe schicken.</p>
+            </details>
+            <details>
+              <summary>Wie viele Regeln kann ich kostenlos erstellen?</summary>
+              <p>5 Regeln mit je einer Bedingung, mit Abgleich per enthält, exakt oder Domain. Premium ($3/Monat oder $30/Jahr) hebt die Grenze auf.</p>
+            </details>
+            <details>
+              <summary>Kann ich eine Regel pausieren, ohne sie zu löschen?</summary>
+              <p>Ja. Jede Regel hat in der Liste einen Ein/Aus-Schalter. Eine deaktivierte Regel behält ihre Einstellungen und greift nicht mehr.</p>
+            </details>
+            <details>
+              <summary>Sendet Takt meine URLs irgendwohin, um Regeln abzugleichen?</summary>
+              <p>Nein. Der Abgleich läuft in Ihrem Browser mit lokal gespeicherten Regeln. Siehe <a href="../privacy-local-first/">wie Takt Daten lokal hält</a>.</p>
+            </details>
+          </div>
+
+          <h2 id="next">Weiterlesen</h2>
+          <div class="read-next">
+            <a href="../prevent-duplicate-tabs/">Nie wieder denselben Tab doppelt öffnen<span>Duplikatverhinderung, standardmäßig aktiv.</span></a>
+            <a href="../profiles-and-schedules/">Andere Regeln für Arbeit und Zuhause<span>Profile, die nach Zeitplan wechseln.</span></a>
+          </div>
+        </div>
+
+        <footer class="blog-post-footer">
+          <a href="../../../blog/">Alle Artikel zu den Funktionen</a> · <a href="../../../docs/rules/">Regelreferenz</a>
+        </footer>
+      </article>
+    </main>
+
+    <footer id="site-footer"></footer>
+    <script src="../../../js/includes.js"></script>
+    <script src="../../../js/nav.js"></script>
+  </body>
+</html>

@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Comment mettre en veille les onglets Chrome pour libérer de la mémoire — Takt</title>
+    <meta
+      name="description"
+      content="Mettez en veille vos onglets Chrome pour libérer de la mémoire : déchargez gratuitement les onglets inactifs, fermez-les complètement et rouvrez-les avec leur groupe, leur position et leur défilement intacts. Ce que fait l'hibernation, ce qu'elle retient, et quand l'Économiseur de mémoire de Chrome suffit."
+    />
+    <link rel="canonical" href="https://taktabs.com/fr/blog/hibernate-tabs-free-memory/" />
+<!-- TAKT-LANG:head -->
+<link rel="alternate" hreflang="en" href="https://taktabs.com/blog/hibernate-tabs-free-memory/" />
+<link rel="alternate" hreflang="fr" href="https://taktabs.com/fr/blog/hibernate-tabs-free-memory/" />
+<link rel="alternate" hreflang="es" href="https://taktabs.com/es/blog/hibernate-tabs-free-memory/" />
+<link rel="alternate" hreflang="it" href="https://taktabs.com/it/blog/hibernate-tabs-free-memory/" />
+<link rel="alternate" hreflang="de" href="https://taktabs.com/de/blog/hibernate-tabs-free-memory/" />
+<link rel="alternate" hreflang="pt" href="https://taktabs.com/pt/blog/hibernate-tabs-free-memory/" />
+<link rel="alternate" hreflang="x-default" href="https://taktabs.com/blog/hibernate-tabs-free-memory/" />
+<!-- /TAKT-LANG:head -->
+    <meta property="og:type" content="article" />
+    <meta property="og:locale" content="fr_FR" />
+    <meta property="og:title" content="Comment mettre en veille les onglets Chrome pour libérer de la mémoire" />
+    <meta property="og:description" content="Déchargez les onglets inactifs, ou fermez-les complètement et réactivez-les plus tard avec leur groupe, leur position et leur défilement intacts." />
+    <meta property="og:url" content="https://taktabs.com/fr/blog/hibernate-tabs-free-memory/" />
+    <meta property="og:image" content="https://taktabs.com/fr/blog/img/popup-hibernate.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <link rel="icon" type="image/png" sizes="32x32" href="../../../assets/favicon-32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="../../../assets/favicon-16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="../../../assets/apple-touch-icon.png" />
+    <meta name="theme-color" content="#FF3B30" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../../../css/tokens.css" />
+    <link rel="stylesheet" href="../../../css/base.css" />
+    <link rel="stylesheet" href="../../../css/layout.css" />
+    <link rel="stylesheet" href="../../../css/blog.css" />
+    <link rel="stylesheet" href="../../../css/articles.css" />
+    <script src="../../../js/theme.js"></script>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Article",
+            "headline": "Comment mettre en veille les onglets Chrome pour libérer de la mémoire",
+            "description": "Déchargez gratuitement les onglets Chrome inactifs, ou mettez-les en hibernation : fermez-les complètement et réactivez-les plus tard avec leur groupe, leur position et leur position de défilement intacts.",
+            "inLanguage": "fr",
+            "datePublished": "2026-10-08",
+            "dateModified": "2026-10-08",
+            "author": { "@type": "Person", "name": "Vitor" },
+            "publisher": { "@type": "Organization", "name": "Takt", "url": "https://taktabs.com" },
+            "image": "https://taktabs.com/fr/blog/img/popup-hibernate.png",
+            "mainEntityOfPage": "https://taktabs.com/fr/blog/hibernate-tabs-free-memory/"
+          },
+          {
+            "@type": "HowTo",
+            "name": "Mettre en veille un onglet Chrome et le réactiver plus tard",
+            "step": [
+              { "@type": "HowToStep", "text": "Installez Takt depuis le Chrome Web Store." },
+              { "@type": "HowToStep", "text": "Sur l'onglet à mettre de côté, ouvrez le popup de Takt et cliquez sur Mettre en veille, ou faites un clic droit sur la page et choisissez Mettre cet onglet en veille." },
+              { "@type": "HowToStep", "text": "L'onglet se ferme. Takt enregistre sur votre appareil son URL, son titre, son groupe, sa fenêtre, sa position, son état épinglé et sa position de défilement." },
+              { "@type": "HowToStep", "text": "Pour le récupérer, ouvrez le volet Veille du popup et cliquez sur Réactiver. L'onglet se rouvre dans sa fenêtre, à sa position, dans son groupe, à l'endroit où vous en étiez." }
+            ]
+          },
+          {
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "Quelle différence entre suspendre et mettre en hibernation un onglet ?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Un onglet suspendu est déchargé par Chrome mais reste dans la barre d'onglets, et se recharge quand vous cliquez dessus. Un onglet en hibernation est complètement fermé ; Takt enregistre son état et le rouvre quand vous cliquez sur Réactiver." }
+              },
+              {
+                "@type": "Question",
+                "name": "Combien d'onglets puis-je mettre en hibernation gratuitement ?",
+                "acceptedAnswer": { "@type": "Answer", "text": "5 onglets en hibernation à la fois avec le plan Free, 200 avec Premium (3 $/mois ou 30 $/an). La suspension automatique des onglets inactifs n'a pas de limite et est gratuite." }
+              },
+              {
+                "@type": "Question",
+                "name": "Takt est-il un nouveau Great Suspender ?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Takt suspend les onglets avec la fonction de déchargement propre à Chrome : un onglet suspendu garde donc sa véritable URL. Les onglets en hibernation sont stockés dans le stockage local de Chrome, sur votre appareil. Takt n'a ni compte, ni statistiques d'usage, ni télémétrie." }
+              },
+              {
+                "@type": "Question",
+                "name": "Les onglets en hibernation survivent-ils à un redémarrage du navigateur ?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Oui. Ils sont stockés dans le stockage local de Chrome, pas en mémoire. Au démarrage, Takt supprime tout enregistrement dont l'URL est déjà rouverte." }
+              }
+            ]
+          },
+          {
+            "@type": "SoftwareApplication",
+            "name": "Takt",
+            "applicationCategory": "BrowserApplication",
+            "operatingSystem": "Chrome",
+            "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <header id="site-header"></header>
+
+    <main class="blog-main">
+      <article class="blog-post article">
+        <p class="eyebrow">Hibernation</p>
+        <h1 class="blog-post-title">Comment mettre en veille les onglets Chrome pour libérer de la mémoire</h1>
+        <p class="lede">Pour mettre en veille vos onglets Chrome, fermez ceux que vous n'utilisez pas et gardez une trace qui permet de les rouvrir exactement comme ils étaient. Takt fait les deux : il décharge de lui-même les onglets inactifs, et il met en hibernation les onglets que vous mettez de côté, puis les réactive dans la même fenêtre, le même groupe et à la même position de défilement.</p>
+        <p class="blog-post-meta">Mis à jour le 8 octobre 2026 · 6 min de lecture</p>
+<!-- TAKT-LANG:nav -->
+<p class="lang-links"><a href="../../../blog/hibernate-tabs-free-memory/" hreflang="en" lang="en">English</a> · <span aria-current="true">Français</span> · <a href="../../../es/blog/hibernate-tabs-free-memory/" hreflang="es" lang="es">Español</a> · <a href="../../../it/blog/hibernate-tabs-free-memory/" hreflang="it" lang="it">Italiano</a> · <a href="../../../de/blog/hibernate-tabs-free-memory/" hreflang="de" lang="de">Deutsch</a> · <a href="../../../pt/blog/hibernate-tabs-free-memory/" hreflang="pt" lang="pt">Português</a></p>
+<!-- /TAKT-LANG:nav -->
+
+        <div class="blog-post-body">
+          <div class="tldr">
+            <p><strong>En bref :</strong> Takt gère les onglets inactifs en deux temps. <em>Suspendre</em> décharge un onglet mais le laisse dans la barre d'onglets. <em>Hiberner</em> le ferme et enregistre son état, pour le rouvrir en un clic.</p>
+            <ul>
+              <li>Free : suspension automatique après 15 minutes à 4 heures d'inactivité, une liste d'onglets à ne jamais suspendre, et l'hibernation manuelle de 5 onglets au maximum.</li>
+              <li>Premium : hibernation automatique selon le temps d'inactivité, le nombre d'onglets par fenêtre ou la fin d'une planification, et jusqu'à 200 onglets en hibernation.</li>
+              <li>Tout reste sur votre appareil. Aucun compte, aucune statistique d'usage.</li>
+            </ul>
+          </div>
+
+          <h2 id="suspend-vs-hibernate">Quelle différence entre suspendre et mettre en hibernation un onglet ?</h2>
+          <p>Les deux libèrent de la mémoire. Ils diffèrent par ce que devient l'onglet.</p>
+          <table>
+            <thead>
+              <tr><th></th><th>Suspendu</th><th>En hibernation</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Barre d'onglets</td><td>Reste, grisé</td><td>Disparaît, listé dans le volet Veille de Takt</td></tr>
+              <tr><td>Comment</td><td>Déchargement d'onglet propre à Chrome</td><td>Onglet fermé, état enregistré par Takt</td></tr>
+              <tr><td>Retour</td><td>Cliquez sur l'onglet ; la page se recharge</td><td>Cliquez sur <strong>Réactiver</strong> ; l'onglet se rouvre là où il était</td></tr>
+              <tr><td>Manuel</td><td>Recommandations de suspension (tableau de bord Premium)</td><td>Gratuit, jusqu'à 5 onglets</td></tr>
+              <tr><td>Automatique</td><td>Gratuit</td><td>Premium</td></tr>
+            </tbody>
+          </table>
+
+          <h2 id="manual">Comment mettre un onglet en veille à la main ?</h2>
+          <ol class="steps">
+            <li>Installez <a href="https://chromewebstore.google.com/detail/takt/plgfdnbgkjocmgegnkbihoeojcfphdic">Takt depuis le Chrome Web Store</a>.</li>
+            <li>Sur l'onglet à mettre de côté, ouvrez le popup de Takt et cliquez sur <strong>Mettre en veille</strong>. Ou faites un clic droit sur la page et choisissez <strong>Mettre cet onglet en veille</strong>.</li>
+            <li>L'onglet se ferme, et Chrome affiche brièvement une notification « Onglet mis en veille ».</li>
+            <li>Pour le récupérer, ouvrez le volet <strong>Veille</strong> du popup et cliquez sur <strong>Réactiver</strong>.</li>
+          </ol>
+          <p>Takt enregistre l'URL, le titre, le favicon, le nom et la couleur du groupe, la fenêtre, la position dans la fenêtre, l'état épinglé, la position de défilement et l'heure de mise en hibernation. Réactiver rouvre l'onglet dans sa fenêtre, à son ancienne position, dans son groupe, à l'endroit où vous en étiez.</p>
+          <p>Si la même URL est déjà ouverte, Takt vous demande confirmation avant de réactiver l'onglet, pour éviter un doublon.</p>
+
+          <figure class="narrow">
+            <img src="../img/popup-hibernate.png" alt="Popup de Takt sur le volet Veille : « ~100 Mo économisés » en haut, un champ de recherche, deux onglets en veille (The Verge dans News, un article arXiv dans Research) chacun avec un bouton Réactiver, et les liens Réactiver tout et Tout effacer" width="420" loading="lazy" />
+            <figcaption>Le volet Veille. Recherchez, réactivez un onglet, ou réactivez-les tous.</figcaption>
+          </figure>
+          <p>Le chiffre « ~100 Mo économisés » est une estimation forfaitaire : Takt compte 50 Mo par onglet en hibernation. Il ne mesure pas les onglets qu'il ferme.</p>
+
+          <h2 id="auto-suspend">Comment décharger automatiquement les onglets inactifs ?</h2>
+          <p>La suspension automatique est gratuite et activée par défaut. Toutes les 5 minutes, Takt décharge les onglets inactifs depuis plus longtemps que votre seuil : 15 minutes, 30 minutes (par défaut), 1, 2 ou 4 heures. Réglez-le dans <strong>Options → Settings → Tab Lifecycle</strong>.</p>
+          <p>L'inactivité se mesure depuis la dernière fois que l'onglet a été actif ou a fini de se charger. Takt ne suspend jamais :</p>
+          <ul>
+            <li>l'onglet actif, ni un onglet encore en cours de chargement ;</li>
+            <li>les onglets qui diffusent du son ;</li>
+            <li>les onglets épinglés ;</li>
+            <li>les onglets qui correspondent à votre liste <strong>Never suspend these tabs</strong>.</li>
+          </ul>
+          <p>Cette liste accepte un motif par ligne, avec <code>*</code> comme joker. <code>*://mail.google.com/*</code> garde Gmail chargé. La liste protège aussi les onglets de tous les déclencheurs d'hibernation automatique décrits plus bas.</p>
+
+          <figure>
+            <img src="../img/options-settings-tab-lifecycle.png" alt="Réglages Tab Lifecycle de Takt : Enable auto-suspend coché, Suspend after idle for réglé sur 30 minutes, un champ Never suspend these tabs avec l'exemple *://mail.google.com/*, et Auto-hibernate suspended tabs after réglé sur 2 days" width="700" loading="lazy" />
+            <figcaption>Les réglages Tab Lifecycle. La suspension est gratuite ; le délai d'hibernation automatique est Premium.</figcaption>
+          </figure>
+
+          <h2 id="auto-hibernate">Chrome peut-il mettre les onglets en veille automatiquement ? <span class="badge badge-premium">Premium</span></h2>
+          <p>Avec Premium, Takt dispose de trois déclencheurs :</p>
+          <ul>
+            <li><strong>Temps d'inactivité.</strong> Un onglet déjà suspendu et inactif au-delà de votre délai est mis en hibernation. Choisissez entre 5 minutes et 7 jours ; la valeur par défaut est de 2 jours.</li>
+            <li><strong>Limite d'onglets.</strong> Quand une fenêtre dépasse votre limite (15 à 100 onglets, 30 par défaut), Takt met en hibernation ses onglets les moins récemment utilisés jusqu'à revenir à la limite. Fermez un onglet, et le dernier onglet mis en hibernation revient dans cette fenêtre. Chaque fenêtre est comptée séparément.</li>
+            <li><strong>Fin de planification.</strong> Une planification de profil peut mettre en hibernation tous les onglets éligibles à la fin de sa plage horaire. Activez <em>Hibernate tabs when schedule ends</em> dans <a href="../profiles-and-schedules/">Profiles</a>.</li>
+          </ul>
+          <p>Pour les déclencheurs d'inactivité et de limite d'onglets, Chrome affiche une notification avec un bouton <strong>Annuler</strong> pendant 10 secondes. Passé ce délai, l'onglet vous attend toujours dans le volet Veille.</p>
+
+          <h2 id="trust">Est-ce un nouveau Great Suspender ?</h2>
+          <p>Question légitime. En 2021, Google a retiré The Great Suspender après la découverte de code malveillant dans une version publiée après sa revente. Beaucoup de gens ont cessé de faire confiance aux extensions de suspension d'onglets après cela.</p>
+          <p>Voici ce que Takt fait différemment, et ce que vous pouvez vérifier :</p>
+          <ul>
+            <li><strong>Les onglets suspendus gardent leur véritable URL.</strong> Takt appelle la fonction de déchargement propre à Chrome. Il ne remplace pas votre page par une page d'extension : désinstaller Takt laisse donc vos onglets tels quels.</li>
+            <li><strong>Les onglets en hibernation restent sur votre appareil.</strong> Les enregistrements se trouvent dans le stockage local de Chrome. Ils ne quittent votre machine que si vous configurez vous-même la <a href="../backup-and-sync-tabs/">synchronisation Drive ou par dossier</a>.</li>
+            <li><strong>Aucun compte, aucune statistique d'usage, aucune télémétrie.</strong> Les permissions supplémentaires sont facultatives et demandées seulement quand une fonctionnalité en a besoin. Voir <a href="../privacy-local-first/">comment Takt garde vos données en local</a>.</li>
+          </ul>
+          <p>Vous devez tout de même faire confiance à qui publie les mises à jour de chaque extension que vous installez. Lisez les permissions qu'elle demande.</p>
+
+          <h2 id="memory-saver">L'Économiseur de mémoire de Chrome suffit-il ?</h2>
+          <p>Souvent, oui. Si vous voulez seulement que les onglets en arrière-plan cessent d'utiliser de la mémoire, l'Économiseur de mémoire intégré à Chrome ne coûte rien et ne demande aucune extension.</p>
+          <p>Deux reproches reviennent sans cesse : les onglets se rechargent quand on y revient, et certains onglets inactifs ne s'endorment jamais. L'étape de suspension de Takt a le même inconvénient sur le premier point. Un onglet suspendu se recharge quand vous cliquez dessus, car il s'agit du même type de déchargement.</p>
+          <p>Ce que Takt ajoute, c'est le contrôle. Vous choisissez le seuil d'inactivité, vous listez les sites auxquels il ne doit jamais toucher, et l'hibernation retire complètement les onglets de la barre d'onglets tout en gardant un moyen de les retrouver.</p>
+
+          <h2 id="limits">Quelles sont les limites ?</h2>
+          <table>
+            <thead><tr><th></th><th>Free</th><th>Premium</th></tr></thead>
+            <tbody>
+              <tr><td>Suspension automatique et liste d'exclusion</td><td>Oui</td><td>Oui</td></tr>
+              <tr><td>Hibernation manuelle</td><td>Oui</td><td>Oui</td></tr>
+              <tr><td>Onglets en hibernation simultanés</td><td>5</td><td>200</td></tr>
+              <tr><td>Hibernation automatique selon l'inactivité, la limite d'onglets ou la planification</td><td>Non</td><td>Oui</td></tr>
+            </tbody>
+          </table>
+          <p>Les onglets épinglés et les onglets qui diffusent du son ne peuvent pas être mis en hibernation. Une fois votre limite atteinte, Takt refuse d'en mettre d'autres en hibernation tant que vous n'en avez pas réactivé ou effacé.</p>
+
+          <div class="cta">
+            <p>Mettez un onglet en veille. Réactivez-le exactement là où vous l'aviez laissé.</p>
+            <a class="btn" href="https://chromewebstore.google.com/detail/takt/plgfdnbgkjocmgegnkbihoeojcfphdic">Ajouter Takt à Chrome, gratuitement</a>
+          </div>
+
+          <h2 id="faq">Questions fréquentes</h2>
+          <div class="faq">
+            <details>
+              <summary>Quelle différence entre suspendre et mettre en hibernation un onglet ?</summary>
+              <p>Un onglet suspendu est déchargé mais reste dans la barre d'onglets, et se recharge au clic. Un onglet en hibernation est fermé ; Takt enregistre son état et le rouvre quand vous cliquez sur Réactiver.</p>
+            </details>
+            <details>
+              <summary>Combien d'onglets puis-je mettre en hibernation gratuitement ?</summary>
+              <p>5 à la fois avec le plan Free, 200 avec Premium (3 $/mois ou 30 $/an). La suspension automatique n'a pas de limite et est gratuite.</p>
+            </details>
+            <details>
+              <summary>Takt est-il un nouveau Great Suspender ?</summary>
+              <p>Takt suspend avec le déchargement propre à Chrome : les onglets gardent donc leur véritable URL. Les onglets en hibernation restent dans le stockage local de votre appareil. Aucun compte, aucune statistique d'usage, aucune télémétrie.</p>
+            </details>
+            <details>
+              <summary>Les onglets en hibernation survivent-ils à un redémarrage du navigateur ?</summary>
+              <p>Oui. Ils sont stockés sur le disque, pas en mémoire. Au démarrage, Takt supprime tout enregistrement dont l'URL est déjà rouverte.</p>
+            </details>
+          </div>
+
+          <h2 id="next">À lire ensuite</h2>
+          <div class="read-next">
+            <a href="../find-memory-hungry-tabs/">Trouver les onglets qui dévorent votre mémoire<span>Estimations par onglet et notes de groupe de A à F.</span></a>
+            <a href="../quick-switch-search-tabs/">Accéder à n'importe quel onglet, même en hibernation<span>Quick Switch avec Alt+Shift+Space.</span></a>
+          </div>
+        </div>
+
+        <footer class="blog-post-footer">
+          <a href="../../../blog/">Tous les articles</a> · <a href="../../../docs/hibernation/">Référence : hibernation</a>
+        </footer>
+      </article>
+    </main>
+
+    <footer id="site-footer"></footer>
+    <script src="../../../js/includes.js"></script>
+    <script src="../../../js/nav.js"></script>
+  </body>
+</html>

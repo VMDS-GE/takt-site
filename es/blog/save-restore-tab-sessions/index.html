@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cómo guardar y restaurar sesiones de pestañas en Chrome — Takt</title>
+    <meta
+      name="description"
+      content="Guarda tus ventanas, grupos de pestañas y pestañas sueltas de Chrome como una sesión con nombre y restáurala después en una ventana nueva o sobre la actual. Hasta 50 sesiones, guardadas en tu equipo."
+    />
+    <link rel="canonical" href="https://taktabs.com/es/blog/save-restore-tab-sessions/" />
+<!-- TAKT-LANG:head -->
+<link rel="alternate" hreflang="en" href="https://taktabs.com/blog/save-restore-tab-sessions/" />
+<link rel="alternate" hreflang="fr" href="https://taktabs.com/fr/blog/save-restore-tab-sessions/" />
+<link rel="alternate" hreflang="es" href="https://taktabs.com/es/blog/save-restore-tab-sessions/" />
+<link rel="alternate" hreflang="it" href="https://taktabs.com/it/blog/save-restore-tab-sessions/" />
+<link rel="alternate" hreflang="de" href="https://taktabs.com/de/blog/save-restore-tab-sessions/" />
+<link rel="alternate" hreflang="pt" href="https://taktabs.com/pt/blog/save-restore-tab-sessions/" />
+<link rel="alternate" hreflang="x-default" href="https://taktabs.com/blog/save-restore-tab-sessions/" />
+<!-- /TAKT-LANG:head -->
+    <meta property="og:type" content="article" />
+    <meta property="og:locale" content="es_ES" />
+    <meta property="og:title" content="Cómo guardar y restaurar sesiones de pestañas en Chrome" />
+    <meta property="og:description" content="Ponle nombre a una instantánea de tus ventanas y grupos. Recupérala con un clic, con grupos y colores incluidos." />
+    <meta property="og:url" content="https://taktabs.com/es/blog/save-restore-tab-sessions/" />
+    <meta property="og:image" content="https://taktabs.com/es/blog/img/options-sessions-list.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <link rel="icon" type="image/png" sizes="32x32" href="../../../assets/favicon-32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="../../../assets/favicon-16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="../../../assets/apple-touch-icon.png" />
+    <meta name="theme-color" content="#FF3B30" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../../../css/tokens.css" />
+    <link rel="stylesheet" href="../../../css/base.css" />
+    <link rel="stylesheet" href="../../../css/layout.css" />
+    <link rel="stylesheet" href="../../../css/blog.css" />
+    <link rel="stylesheet" href="../../../css/articles.css" />
+    <script src="../../../js/theme.js"></script>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Article",
+            "headline": "Cómo guardar y restaurar sesiones de pestañas en Chrome",
+            "description": "Guarda ventanas, grupos de pestañas y pestañas sueltas de Chrome como una sesión con nombre y restáurala después en una ventana nueva o sobre la actual.",
+            "inLanguage": "es",
+            "datePublished": "2026-10-08",
+            "dateModified": "2026-10-08",
+            "author": { "@type": "Person", "name": "Vitor" },
+            "publisher": { "@type": "Organization", "name": "Takt", "url": "https://taktabs.com" },
+            "image": "https://taktabs.com/es/blog/img/options-sessions-list.png",
+            "mainEntityOfPage": "https://taktabs.com/es/blog/save-restore-tab-sessions/"
+          },
+          {
+            "@type": "HowTo",
+            "name": "Guardar y restaurar una sesión de pestañas en Chrome",
+            "step": [
+              { "@type": "HowToStep", "text": "Instala Takt desde Chrome Web Store y abre su popup." },
+              { "@type": "HowToStep", "text": "Ve al panel Sesiones y haz clic en + Guardar." },
+              { "@type": "HowToStep", "text": "Escribe un nombre de hasta 60 caracteres, elige Esta ventana o Todas las ventanas y haz clic en Guardar." },
+              { "@type": "HowToStep", "text": "Más tarde, haz clic en Restaurar junto a la sesión y elige Abrir en nueva ventana o Reemplazar ventana actual." }
+            ]
+          },
+          {
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "¿Guarda Chrome sesiones de pestañas por sí solo?",
+                "acceptedAnswer": { "@type": "Answer", "text": "El ajuste «Continuar donde lo dejaste» de Chrome vuelve a abrir tu última sesión de navegación al iniciar Chrome. Guarda una sola sesión, la última. No guarda una lista de instantáneas con nombre a las que puedas volver más tarde." }
+              },
+              {
+                "@type": "Question",
+                "name": "¿Cuántas sesiones puedo guardar en Takt?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Hasta 50. Cuando la lista está llena, borra una sesión antigua antes de guardar otra nueva. Las sesiones guardadas automáticamente hacen sitio sustituyendo al guardado automático más antiguo." }
+              },
+              {
+                "@type": "Question",
+                "name": "¿Las sesiones de pestañas son gratis en Takt?",
+                "acceptedAnswer": { "@type": "Answer", "text": "No. Guardar, restaurar, renombrar y guardar automáticamente sesiones son funciones Premium (3 $/mes o 30 $/año). En el plan Free puedes ver la lista de sesiones guardadas." }
+              },
+              {
+                "@type": "Question",
+                "name": "¿Se suben mis sesiones a algún sitio?",
+                "acceptedAnswer": { "@type": "Answer", "text": "No. Las sesiones se guardan en el almacenamiento local de Chrome, en tu ordenador. Solo salen de él si exportas una copia de seguridad o activas tú mismo File Sync o Drive Sync." }
+              }
+            ]
+          },
+          {
+            "@type": "SoftwareApplication",
+            "name": "Takt",
+            "applicationCategory": "BrowserApplication",
+            "operatingSystem": "Chrome",
+            "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <header id="site-header"></header>
+
+    <main class="blog-main">
+      <article class="blog-post article">
+        <p class="eyebrow">Sesiones</p>
+        <h1 class="blog-post-title">Cómo guardar y restaurar sesiones de pestañas en Chrome</h1>
+        <p class="lede">Para guardar una sesión de pestañas en Chrome, haz una instantánea de tus ventanas y grupos con un nombre, y restaura ese nombre cuando vuelvas a necesitarla. Chrome vuelve a abrir tu última sesión. No guarda una estantería de sesiones con nombre.</p>
+        <p class="blog-post-meta">Actualizado el 8 de octubre de 2026 · 5 min de lectura</p>
+<!-- TAKT-LANG:nav -->
+<p class="lang-links"><a href="../../../blog/save-restore-tab-sessions/" hreflang="en" lang="en">English</a> · <a href="../../../fr/blog/save-restore-tab-sessions/" hreflang="fr" lang="fr">Français</a> · <span aria-current="true">Español</span> · <a href="../../../it/blog/save-restore-tab-sessions/" hreflang="it" lang="it">Italiano</a> · <a href="../../../de/blog/save-restore-tab-sessions/" hreflang="de" lang="de">Deutsch</a> · <a href="../../../pt/blog/save-restore-tab-sessions/" hreflang="pt" lang="pt">Português</a></p>
+<!-- /TAKT-LANG:nav -->
+
+        <div class="blog-post-body">
+          <div class="tldr">
+            <p><strong>Respuesta corta:</strong> en el popup de Takt, abre <strong>Sesiones</strong>, haz clic en <strong>+ Guardar</strong>, ponle un nombre y elige <em>Esta ventana</em> o <em>Todas las ventanas</em>. Más tarde, haz clic en <strong>Restaurar</strong> para recuperar las mismas pestañas, dentro de los mismos grupos con nombre y color.</p>
+            <ul>
+              <li>Guarda todas las pestañas, todos los grupos (nombre, color, estado plegado), las pestañas sueltas y tu lista de Hibernar.</li>
+              <li>Restaura en una ventana nueva o sustituye la actual.</li>
+              <li>Hasta 50 sesiones, guardadas en tu equipo. <span class="badge badge-premium">Premium</span></li>
+            </ul>
+          </div>
+
+          <h2 id="why">¿Por qué no basta con «Continuar donde lo dejaste» de Chrome?</h2>
+          <p>Para una sola tarea, sí basta. Actívalo y Chrome vuelve a abrir las pestañas de tu última sesión al iniciarse. Si es todo lo que necesitas, no te hace falta ninguna extensión.</p>
+          <p>El problema llega cuando cambias de un trabajo a otro. Las pestañas de tu tesis, las de la reunión del lunes y las del viaje que estás planeando no pueden ser todas "la última sesión". Cierra la ventana de la tesis para hacer sitio a la reunión, y las pestañas de la tesis desaparecen de esa lista.</p>
+          <p>Una sesión con nombre es un marcador para todo un espacio de trabajo. Cierras la ventana sin preocuparte, porque puedes recuperarla por su nombre.</p>
+
+          <h2 id="save">¿Cómo guardo una sesión de pestañas?</h2>
+          <ol class="steps">
+            <li>Instala <a href="https://chromewebstore.google.com/detail/takt/plgfdnbgkjocmgegnkbihoeojcfphdic">Takt desde Chrome Web Store</a>.</li>
+            <li>Abre el popup y ve al panel <strong>Sesiones</strong>.</li>
+            <li>Haz clic en <strong>+ Guardar</strong> y escribe un nombre de hasta 60 caracteres. Los nombres no se pueden repetir.</li>
+            <li>Elige <em>Esta ventana</em> (la opción predeterminada) o <em>Todas las ventanas</em> y haz clic en <strong>Guardar</strong>.</li>
+          </ol>
+
+          <figure class="narrow">
+            <img src="../img/popup-sessions.png" alt="Popup de Takt en el panel Sesiones, con un botón + Guardar, un campo de búsqueda y dos sesiones guardadas, Thesis research y Monday standup, cada una con 14 pestañas, 5 grupos y 2 hibernadas, y botones Restaurar y eliminar" width="420" loading="lazy" />
+            <figcaption>El panel Sesiones del popup. Cada entrada muestra su número de pestañas, grupos y pestañas hibernadas.</figcaption>
+          </figure>
+
+          <h2 id="what">¿Qué guarda una sesión?</h2>
+          <table>
+            <thead><tr><th>Se guarda</th><th>Detalles</th></tr></thead>
+            <tbody>
+              <tr><td>Pestañas</td><td>La URL y el título de cada pestaña</td></tr>
+              <tr><td>Grupos de pestañas</td><td>Nombre, color, estado plegado y qué pestañas pertenecen a cada uno</td></tr>
+              <tr><td>Pestañas sueltas</td><td>Las pestañas que no están en ningún grupo</td></tr>
+              <tr><td>Ventanas</td><td>Una ventana, o todas las ventanas normales con <em>Todas las ventanas</em></td></tr>
+              <tr><td>Pestañas hibernadas</td><td>Tu lista de Hibernar, que vuelve a esa lista al restaurar</td></tr>
+            </tbody>
+          </table>
+          <p>Chrome no deja que las extensiones abran páginas <code>chrome://</code>, <code>about:</code> ni de extensiones, así que esas pestañas se omiten.</p>
+
+          <h2 id="restore">¿Cómo restauro una sesión?</h2>
+          <p>Haz clic en <strong>Restaurar</strong>. Un cuadro de diálogo te ofrece dos modos:</p>
+          <ul>
+            <li><strong>Abrir en nueva ventana.</strong> Tu ventana actual se queda como está.</li>
+            <li><strong>Reemplazar ventana actual.</strong> Las pestañas guardadas se abren en la ventana actual y después se cierran las que había.</li>
+          </ul>
+          <p>El cuadro de diálogo hace una cuenta atrás de 7 segundos y luego restaura con el modo seleccionado. Haz clic en <strong>Restaurar</strong> en el cuadro para no esperar, o en <strong>Cancelar</strong>. En una sesión de varias ventanas, la primera ventana sigue tu elección y todas las demás se abren como ventanas nuevas.</p>
+
+          <h2 id="manage">¿Puedo renombrar sesiones o guardarlas automáticamente?</h2>
+          <p>Las dos cosas.</p>
+          <ul>
+            <li><strong>Renombrar:</strong> haz doble clic en un nombre en el popup, o usa <strong>Rename</strong> en la pestaña Sessions de la página de opciones. Pulsa Intro para guardar.</li>
+            <li><strong>Guardado automático:</strong> activa <em>Guardado automático al cerrar ventana</em> en Settings. Al cerrar una ventana, sus pestañas se guardan como una sesión llamada "Guardado automático" seguida de la fecha y la hora.</li>
+          </ul>
+          <p>En la página de opciones también puedes desplegar una sesión para ver todos sus grupos y pestañas antes de restaurarla.</p>
+
+          <figure>
+            <img src="../img/options-sessions-list.png" alt="Página de opciones de Takt, pestaña Sessions: 2 sesiones guardadas, Thesis research y Monday standup, cada una con 14 pestañas, 5 grupos y 2 hibernadas, una fecha de creación y los botones Restore, Rename y Delete" width="700" loading="lazy" />
+            <figcaption>La pestaña Sessions de la página de opciones. Haz clic en una fila para ver sus grupos y pestañas.</figcaption>
+          </figure>
+
+          <h2 id="compare">Sesiones de Takt frente a las opciones integradas de Chrome</h2>
+          <table>
+            <thead><tr><th></th><th>«Continuar donde lo dejaste» de Chrome</th><th>Sesiones de Takt</th></tr></thead>
+            <tbody>
+              <tr><td>Cuántas</td><td>La última sesión</td><td>Hasta 50, con nombre</td></tr>
+              <tr><td>Qué guarda</td><td>Las pestañas que tenías abiertas la última vez</td><td>Cualquier instantánea que hayas guardado, o un guardado automático al cerrar una ventana</td></tr>
+              <tr><td>Cuándo restaura</td><td>Al iniciar Chrome</td><td>Cada vez que haces clic en Restaurar</td></tr>
+              <tr><td>Precio</td><td>Gratis, integrado</td><td>Premium</td></tr>
+            </tbody>
+          </table>
+
+          <h2 id="limits">Lo que las sesiones no hacen</h2>
+          <ul>
+            <li><strong>Se quedan en este ordenador.</strong> Las sesiones viven en el almacenamiento local de Chrome y no siguen a tu cuenta de Google. Para llevarlas a otro sitio, usa una <a href="../backup-and-sync-tabs/">copia de seguridad o la sincronización</a>.</li>
+            <li><strong>Son instantáneas.</strong> Una sesión guardada no cambia cuando cambias la ventana. Vuelve a guardarla con otro nombre para conservar una versión más reciente.</li>
+            <li><strong>El límite es 50.</strong> Borra las antiguas para hacer sitio. Los guardados automáticos sustituyen al guardado automático más antiguo, nunca a una sesión a la que tú pusiste nombre.</li>
+            <li><strong>No guardan el estado de la página.</strong> Restaurar vuelve a abrir las URL. No se guardan ni el contenido de los formularios ni las posiciones de scroll.</li>
+          </ul>
+
+          <div class="cta">
+            <p>Cierra la ventana. Conserva el trabajo.</p>
+            <a class="btn" href="https://chromewebstore.google.com/detail/takt/plgfdnbgkjocmgegnkbihoeojcfphdic">Añadir Takt a Chrome, gratis</a>
+          </div>
+
+          <h2 id="faq">Preguntas frecuentes</h2>
+          <div class="faq">
+            <details>
+              <summary>¿Guarda Chrome sesiones de pestañas por sí solo?</summary>
+              <p>«Continuar donde lo dejaste» vuelve a abrir tu última sesión al iniciar Chrome. Guarda esa única sesión, no una lista de instantáneas con nombre.</p>
+            </details>
+            <details>
+              <summary>¿Cuántas sesiones puedo guardar en Takt?</summary>
+              <p>Hasta 50. Cuando la lista está llena, borra antes una sesión antigua. Los guardados automáticos hacen sitio sustituyendo al guardado automático más antiguo.</p>
+            </details>
+            <details>
+              <summary>¿Las sesiones de pestañas son gratis en Takt?</summary>
+              <p>No. Guardar, restaurar, renombrar y el guardado automático son Premium (3 $/mes o 30 $/año). En el plan Free puedes ver la lista de sesiones guardadas.</p>
+            </details>
+            <details>
+              <summary>¿Se suben mis sesiones a algún sitio?</summary>
+              <p>No. Se guardan en el almacenamiento local de Chrome, en tu ordenador. Solo salen de él si exportas una copia de seguridad o activas File Sync o Drive Sync. Consulta <a href="../privacy-local-first/">cómo mantiene Takt tus datos en local</a>.</p>
+            </details>
+          </div>
+
+          <h2 id="next">Sigue leyendo</h2>
+          <div class="read-next">
+            <a href="../hibernate-tabs-free-memory/">Pon a dormir las pestañas inactivas<span>La hibernación libera memoria sin perder la pestaña.</span></a>
+            <a href="../backup-and-sync-tabs/">Haz una copia de seguridad y sincroniza tu configuración<span>Exportación JSON, sincronización con carpeta y Google Drive.</span></a>
+          </div>
+        </div>
+
+        <footer class="blog-post-footer">
+          <a href="../../../blog/">Todos los artículos</a> · <a href="../../../docs/sessions/">Referencia de sesiones</a>
+        </footer>
+      </article>
+    </main>
+
+    <footer id="site-footer"></footer>
+    <script src="../../../js/includes.js"></script>
+    <script src="../../../js/nav.js"></script>
+  </body>
+</html>

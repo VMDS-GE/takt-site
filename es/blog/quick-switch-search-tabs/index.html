@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cómo buscar pestañas abiertas en Chrome con un atajo de teclado — Takt</title>
+    <meta
+      name="description"
+      content="Busca tus pestañas abiertas de Chrome con el teclado: pulsa Alt+Shift+Space, escribe parte de un título o una URL y pulsa Intro. Quick Switch también encuentra las pestañas hibernadas y, con permiso, tu historial. Además, la búsqueda gratuita del popup de Takt."
+    />
+    <link rel="canonical" href="https://taktabs.com/es/blog/quick-switch-search-tabs/" />
+<!-- TAKT-LANG:head -->
+<link rel="alternate" hreflang="en" href="https://taktabs.com/blog/quick-switch-search-tabs/" />
+<link rel="alternate" hreflang="fr" href="https://taktabs.com/fr/blog/quick-switch-search-tabs/" />
+<link rel="alternate" hreflang="es" href="https://taktabs.com/es/blog/quick-switch-search-tabs/" />
+<link rel="alternate" hreflang="it" href="https://taktabs.com/it/blog/quick-switch-search-tabs/" />
+<link rel="alternate" hreflang="de" href="https://taktabs.com/de/blog/quick-switch-search-tabs/" />
+<link rel="alternate" hreflang="pt" href="https://taktabs.com/pt/blog/quick-switch-search-tabs/" />
+<link rel="alternate" hreflang="x-default" href="https://taktabs.com/blog/quick-switch-search-tabs/" />
+<!-- /TAKT-LANG:head -->
+    <meta property="og:type" content="article" />
+    <meta property="og:locale" content="es_ES" />
+    <meta property="og:title" content="Cómo buscar pestañas abiertas en Chrome con un atajo de teclado" />
+    <meta property="og:description" content="Alt+Shift+Space, escribe, Intro. Busca pestañas abiertas, pestañas hibernadas e historial sin tocar el ratón." />
+    <meta property="og:url" content="https://taktabs.com/es/blog/quick-switch-search-tabs/" />
+    <meta property="og:image" content="https://taktabs.com/es/blog/img/quick-switch.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <link rel="icon" type="image/png" sizes="32x32" href="../../../assets/favicon-32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="../../../assets/favicon-16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="../../../assets/apple-touch-icon.png" />
+    <meta name="theme-color" content="#FF3B30" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../../../css/tokens.css" />
+    <link rel="stylesheet" href="../../../css/base.css" />
+    <link rel="stylesheet" href="../../../css/layout.css" />
+    <link rel="stylesheet" href="../../../css/blog.css" />
+    <link rel="stylesheet" href="../../../css/articles.css" />
+    <script src="../../../js/theme.js"></script>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Article",
+            "headline": "Cómo buscar pestañas abiertas en Chrome con un atajo de teclado",
+            "description": "Pulsa Alt+Shift+Space, escribe parte del título o la URL de una pestaña y pulsa Intro. Quick Switch busca en las pestañas abiertas, en las hibernadas y, con permiso, en el historial de navegación.",
+            "inLanguage": "es",
+            "datePublished": "2026-10-08",
+            "dateModified": "2026-10-08",
+            "author": { "@type": "Person", "name": "Vitor" },
+            "publisher": { "@type": "Organization", "name": "Takt", "url": "https://taktabs.com" },
+            "image": "https://taktabs.com/es/blog/img/quick-switch.png",
+            "mainEntityOfPage": "https://taktabs.com/es/blog/quick-switch-search-tabs/"
+          },
+          {
+            "@type": "HowTo",
+            "name": "Buscar y cambiar de pestaña en Chrome con el teclado",
+            "step": [
+              { "@type": "HowToStep", "text": "Instala Takt y pasa a Premium; Quick Switch es una función Premium." },
+              { "@type": "HowToStep", "text": "Pulsa Alt+Shift+Space en cualquier página." },
+              { "@type": "HowToStep", "text": "Escribe parte del título o la URL de la pestaña. La lista se filtra con cada tecla." },
+              { "@type": "HowToStep", "text": "Usa las flechas arriba y abajo para elegir un resultado y pulsa Intro para saltar a él. Esc cierra la búsqueda." }
+            ]
+          },
+          {
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "¿Cuál es el atajo para buscar pestañas abiertas con Takt?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Alt+Shift+Space abre Quick Switch. Puedes cambiarlo en chrome://extensions/shortcuts." }
+              },
+              {
+                "@type": "Question",
+                "name": "¿Quick Switch funciona en las páginas chrome://?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Sí. En las páginas en las que no pueden ejecutarse extensiones, como las páginas chrome://, las páginas de extensiones y Chrome Web Store, Quick Switch se abre en una pequeña ventana de 560 × 480 en lugar de sobre la página." }
+              },
+              {
+                "@type": "Question",
+                "name": "¿Hay alguna forma gratuita de buscar pestañas en Takt?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Sí. El panel Tabs del popup de Takt muestra todas las pestañas abiertas por grupo y tiene un cuadro de búsqueda. Es gratis. Quick Switch, el atajo de teclado, es Premium, por 3 $/mes o 30 $/año." }
+              },
+              {
+                "@type": "Question",
+                "name": "¿Quick Switch busca en mi historial de navegación?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Solo si concedes el permiso opcional de historial en Settings. Los resultados del historial aparecen en cuanto escribes, hasta 20, y la búsqueda se hace dentro de Chrome." }
+              }
+            ]
+          },
+          {
+            "@type": "SoftwareApplication",
+            "name": "Takt",
+            "applicationCategory": "BrowserApplication",
+            "operatingSystem": "Chrome",
+            "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <header id="site-header"></header>
+
+    <main class="blog-main">
+      <article class="blog-post article">
+        <p class="eyebrow">Quick Switch</p>
+        <h1 class="blog-post-title">Cómo buscar pestañas abiertas en Chrome con un atajo de teclado</h1>
+        <p class="lede">Para buscar pestañas abiertas en Chrome con el teclado, pulsa <kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>Space</kbd>, escribe unas letras del título o la dirección de la pestaña y pulsa Intro. Eso es Quick Switch, de Takt. También encuentra las pestañas que hibernaste y, si lo permites, páginas de tu historial.</p>
+        <p class="blog-post-meta">Actualizado el 8 de octubre de 2026 · 5 min de lectura</p>
+<!-- TAKT-LANG:nav -->
+<p class="lang-links"><a href="../../../blog/quick-switch-search-tabs/" hreflang="en" lang="en">English</a> · <a href="../../../fr/blog/quick-switch-search-tabs/" hreflang="fr" lang="fr">Français</a> · <span aria-current="true">Español</span> · <a href="../../../it/blog/quick-switch-search-tabs/" hreflang="it" lang="it">Italiano</a> · <a href="../../../de/blog/quick-switch-search-tabs/" hreflang="de" lang="de">Deutsch</a> · <a href="../../../pt/blog/quick-switch-search-tabs/" hreflang="pt" lang="pt">Português</a></p>
+<!-- /TAKT-LANG:nav -->
+
+        <div class="blog-post-body">
+          <div class="tldr">
+            <p><strong>Respuesta corta:</strong> <kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>Space</kbd> abre un cuadro de búsqueda sobre la página. Escribe, usa las flechas y pulsa Intro.</p>
+            <ul>
+              <li>Busca en las pestañas abiertas, en las hibernadas y en el historial de navegación si das permiso.</li>
+              <li>También funciona en las páginas <code>chrome://</code>, en una ventana pequeña.</li>
+              <li>Quick Switch es Premium (3 $/mes o 30 $/año). El cuadro de búsqueda del panel Tabs del popup es gratis.</li>
+            </ul>
+          </div>
+
+          <h2 id="why">¿Por qué cuesta tanto encontrar una pestaña?</h2>
+          <p>A partir de unas 20 pestañas, la barra de pestañas de Chrome apenas muestra los favicons. Buscas por el icono, haces clic en la pestaña de GitHub equivocada y vuelves a probar.</p>
+          <p>Escribir es más rápido que mirar. Te acuerdas de "la pull request sobre la caché", no de en qué lugar de la barra está.</p>
+
+          <h2 id="how">¿Cómo busco mis pestañas abiertas con el teclado?</h2>
+          <ol class="steps">
+            <li>Pulsa <kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>Space</kbd>. Se abre un cuadro de búsqueda sobre la página actual.</li>
+            <li>Escribe cualquier parte del título o la URL. No distingue mayúsculas y minúsculas, y la lista se actualiza con cada tecla.</li>
+            <li>Muévete con <kbd>↑</kbd> y <kbd>↓</kbd>. Al llegar a un extremo, la selección vuelve al otro.</li>
+            <li>Pulsa <kbd>Enter</kbd> para saltar. Takt enfoca la pestaña y pone su ventana delante.</li>
+          </ol>
+          <p>Dos teclas más: <kbd>Tab</kbd> copia el título del resultado seleccionado en el cuadro de búsqueda, y <kbd>Esc</kbd> lo cierra. El cuadro también se cierra si haces clic fuera o cambias de ventana.</p>
+
+          <figure>
+            <img src="../img/quick-switch.png" alt="Quick Switch de Takt con el cuadro de búsqueda vacío y una lista Pestañas abiertas: pestañas de Wikipedia, Reddit, YouTube, Hacker News, Chrome for Developers y MDN, cada una con su URL y un punto de color de su grupo de pestañas, además de las indicaciones de teclas para navegar, cambiar y cerrar" width="800" loading="lazy" />
+            <figcaption>Con la búsqueda vacía, Quick Switch muestra tus pestañas, de la usada más recientemente a la que menos.</figcaption>
+          </figure>
+
+          <h2 id="results">¿En qué busca Quick Switch?</h2>
+          <table>
+            <thead><tr><th>Origen</th><th>Cuándo aparece</th><th>Qué hace Intro</th></tr></thead>
+            <tbody>
+              <tr><td>Pestañas abiertas</td><td>Siempre; primero las usadas más recientemente y la pestaña actual al final</td><td>Cambia a la pestaña</td></tr>
+              <tr><td>Pestañas hibernadas</td><td>Siempre, hasta 50</td><td>Despierta la pestaña donde estaba</td></tr>
+              <tr><td>Historial</td><td>En cuanto escribes, con el permiso de historial; hasta 20</td><td>La abre en una pestaña nueva</td></tr>
+            </tbody>
+          </table>
+          <p>El orden es fijo: pestañas abiertas, luego hibernadas y luego historial. El historial omite las páginas que ya están abiertas o hibernadas, y nunca muestra páginas <code>chrome://</code> ni de extensiones.</p>
+
+          <figure>
+            <img src="../img/quick-switch-hibernated.png" alt="Quick Switch con la búsqueda 'the': dos pestañas de GitHub abiertas cuyo título contiene 'The' y, después, The Verge como pestaña hibernada en el grupo News con una etiqueta activar" width="800" loading="lazy" />
+            <figcaption>Una pestaña hibernada aparece en la misma búsqueda. Intro la despierta.</figcaption>
+          </figure>
+
+          <p>Esa última fila es la razón de tener búsqueda e <a href="../hibernate-tabs-free-memory/">hibernación</a> en la misma extensión. Puedes cerrar pestañas sin miedo a perderlas, porque escribir su nombre las trae de vuelta.</p>
+
+          <h2 id="chrome-pages">¿Funciona en las páginas chrome://?</h2>
+          <p>Sí. Las extensiones no pueden dibujar sobre las páginas propias de Chrome, así que ahí Quick Switch se abre como una ventana de 560 × 480. Esto se aplica a las páginas <code>chrome://</code>, <code>chrome-extension://</code>, <code>about:</code> y <code>chrome-untrusted://</code> y a Chrome Web Store. Las teclas son las mismas.</p>
+
+          <h2 id="free">¿Hay alguna forma gratuita de buscar pestañas?</h2>
+          <p>Sí: el panel <strong>Tabs</strong> del popup de Takt. Muestra todas las pestañas abiertas bajo su grupo de pestañas, con las que no tienen grupo en su propia sección. Escribe en el cuadro de búsqueda para filtrar por título o URL; <kbd>Esc</kbd> lo borra. Haz clic en una fila para enfocar esa pestaña y traer su ventana al frente.</p>
+
+          <figure class="narrow">
+            <img src="../img/popup-tabs.png" alt="Popup de Takt en el panel Tabs: un cuadro Search tabs… encima de las pestañas abiertas, ordenadas bajo sus grupos Code, Docs, Entertainment, News y Research, cada fila con favicon, título y URL abreviada" width="420" loading="lazy" />
+            <figcaption>El panel Tabs del popup. Gratis, solo pestañas abiertas.</figcaption>
+          </figure>
+
+          <table>
+            <thead><tr><th></th><th>Panel Tabs del popup</th><th>Quick Switch</th></tr></thead>
+            <tbody>
+              <tr><td>Plan</td><td>Free</td><td>Premium</td></tr>
+              <tr><td>Cómo se abre</td><td>Haz clic en el icono de Takt y luego en Tabs</td><td><kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>Space</kbd></td></tr>
+              <tr><td>Pestañas abiertas</td><td>Sí, por grupo</td><td>Sí, las más recientes primero</td></tr>
+              <tr><td>Pestañas hibernadas</td><td>No (tienen su propio panel)</td><td>Sí</td></tr>
+              <tr><td>Historial</td><td>No</td><td>Con permiso</td></tr>
+              <tr><td>Hace falta el ratón</td><td>Para abrir y elegir</td><td>No</td></tr>
+            </tbody>
+          </table>
+
+          <h2 id="shortcut">¿Puedo cambiar el atajo?</h2>
+          <p>Sí. Ve a <code>chrome://extensions/shortcuts</code>, busca Takt, haz clic en el lápiz junto a Quick-switch y pulsa las teclas que quieras.</p>
+
+          <h2 id="privacy">¿Se envía mi historial a algún sitio?</h2>
+          <p>No. La búsqueda en el historial está desactivada hasta que concedes el permiso opcional de historial en <strong>Settings → Permisos</strong>. La búsqueda se hace dentro de Chrome, y puedes revocar el permiso en la misma página. Sin él, Quick Switch sigue buscando en las pestañas abiertas e hibernadas.</p>
+
+          <h2 id="limits">Lo que Quick Switch no hace</h2>
+          <p>Busca exactamente las letras que escribes, en cualquier parte del título o la URL. No hay búsqueda aproximada, así que "gthub" no encuentra nada. Si un usuario del plan Free pulsa el atajo, no pasa nada; usa el panel Tabs en su lugar.</p>
+
+          <div class="cta">
+            <p>Deja de rebuscar entre favicons. Escribe el nombre de la pestaña.</p>
+            <a class="btn" href="https://chromewebstore.google.com/detail/takt/plgfdnbgkjocmgegnkbihoeojcfphdic">Añadir Takt a Chrome</a>
+          </div>
+
+          <h2 id="faq">Preguntas frecuentes</h2>
+          <div class="faq">
+            <details>
+              <summary>¿Cuál es el atajo para buscar pestañas abiertas con Takt?</summary>
+              <p><kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>Space</kbd> abre Quick Switch. Cámbialo en <code>chrome://extensions/shortcuts</code>.</p>
+            </details>
+            <details>
+              <summary>¿Quick Switch funciona en las páginas chrome://?</summary>
+              <p>Sí. En las páginas en las que no pueden ejecutarse extensiones, se abre en una ventana de 560 × 480 en lugar de sobre la página.</p>
+            </details>
+            <details>
+              <summary>¿Hay alguna forma gratuita de buscar pestañas en Takt?</summary>
+              <p>Sí. El panel Tabs del popup muestra las pestañas abiertas por grupo y tiene un cuadro de búsqueda. Quick Switch es Premium, por 3 $/mes o 30 $/año.</p>
+            </details>
+            <details>
+              <summary>¿Quick Switch busca en mi historial de navegación?</summary>
+              <p>Solo con el permiso opcional de historial. Los resultados del historial aparecen en cuanto escribes, hasta 20, y la búsqueda se hace dentro de Chrome.</p>
+            </details>
+          </div>
+
+          <h2 id="next">Sigue leyendo</h2>
+          <div class="read-next">
+            <a href="../hibernate-tabs-free-memory/">Hiberna pestañas para liberar memoria<span>Cierra pestañas ahora, despiértalas después.</span></a>
+            <a href="../auto-group-tabs-chrome/">Agrupa pestañas automáticamente en Chrome<span>Reglas que archivan cada pestaña nueva.</span></a>
+          </div>
+        </div>
+
+        <footer class="blog-post-footer">
+          <a href="../../../blog/">Todos los artículos</a> · <a href="../../../docs/quick-switch/">Referencia de Quick Switch</a>
+        </footer>
+      </article>
+    </main>
+
+    <footer id="site-footer"></footer>
+    <script src="../../../js/includes.js"></script>
+    <script src="../../../js/nav.js"></script>
+  </body>
+</html>

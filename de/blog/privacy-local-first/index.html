@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ein datenschutzfreundlicher Tab-Manager für Chrome: was Takt sendet und was nicht — Takt</title>
+    <meta
+      name="description"
+      content="Takt ist ein Tab-Manager für Chrome ohne Konto, ohne Analysen und mit KI auf dem Gerät. Hier steht jeder Server, den er kontaktiert, wann er das tut und wofür jede Berechtigung da ist."
+    />
+    <link rel="canonical" href="https://taktabs.com/de/blog/privacy-local-first/" />
+<!-- TAKT-LANG:head -->
+<link rel="alternate" hreflang="en" href="https://taktabs.com/blog/privacy-local-first/" />
+<link rel="alternate" hreflang="fr" href="https://taktabs.com/fr/blog/privacy-local-first/" />
+<link rel="alternate" hreflang="es" href="https://taktabs.com/es/blog/privacy-local-first/" />
+<link rel="alternate" hreflang="it" href="https://taktabs.com/it/blog/privacy-local-first/" />
+<link rel="alternate" hreflang="de" href="https://taktabs.com/de/blog/privacy-local-first/" />
+<link rel="alternate" hreflang="pt" href="https://taktabs.com/pt/blog/privacy-local-first/" />
+<link rel="alternate" hreflang="x-default" href="https://taktabs.com/blog/privacy-local-first/" />
+<!-- /TAKT-LANG:head -->
+    <meta property="og:type" content="article" />
+    <meta property="og:locale" content="de_DE" />
+    <meta property="og:title" content="Ein datenschutzfreundlicher Tab-Manager für Chrome: was Takt sendet und was nicht" />
+    <meta property="og:description" content="Jeder Server, den Takt kontaktiert, wann, und warum es jede Berechtigung gibt. Geschrieben für alle, die sich noch an The Great Suspender erinnern." />
+    <meta property="og:url" content="https://taktabs.com/de/blog/privacy-local-first/" />
+    <meta property="og:image" content="https://taktabs.com/de/blog/img/options-settings-permissions.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <link rel="icon" type="image/png" sizes="32x32" href="../../../assets/favicon-32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="../../../assets/favicon-16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="../../../assets/apple-touch-icon.png" />
+    <meta name="theme-color" content="#FF3B30" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../../../css/tokens.css" />
+    <link rel="stylesheet" href="../../../css/base.css" />
+    <link rel="stylesheet" href="../../../css/layout.css" />
+    <link rel="stylesheet" href="../../../css/blog.css" />
+    <link rel="stylesheet" href="../../../css/articles.css" />
+    <script src="../../../js/theme.js"></script>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Article",
+            "inLanguage": "de",
+            "headline": "Ein datenschutzfreundlicher Tab-Manager für Chrome: was Takt sendet und was nicht",
+            "description": "Jeder Server, den die Chrome-Erweiterung Takt kontaktiert, wann sie das tut und warum es jede Berechtigung gibt.",
+            "datePublished": "2026-10-08",
+            "dateModified": "2026-10-08",
+            "author": { "@type": "Person", "name": "Vitor" },
+            "publisher": { "@type": "Organization", "name": "Takt", "url": "https://taktabs.com" },
+            "image": "https://taktabs.com/de/blog/img/options-settings-permissions.png",
+            "mainEntityOfPage": "https://taktabs.com/de/blog/privacy-local-first/"
+          },
+          {
+            "@type": "HowTo",
+            "name": "Prüfen, welche Netzwerkanfragen eine Chrome-Erweiterung stellt",
+            "step": [
+              { "@type": "HowToStep", "text": "Öffnen Sie chrome://extensions und schalten Sie den Entwicklermodus ein." },
+              { "@type": "HowToStep", "text": "Klicken Sie auf der Karte von Takt neben „Ansichten überprüfen“ auf den Link Service Worker." },
+              { "@type": "HowToStep", "text": "Öffnen Sie im erscheinenden DevTools-Fenster den Tab Netzwerk und lassen Sie ihn beim Surfen offen." }
+            ]
+          },
+          {
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "Sendet Takt meinen Browserverlauf oder meine Tab-URLs irgendwohin?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Nein. Regeln, Abgleich, Sitzungen, hibernierte Tabs und Vorschläge bleiben im Speicher von Chrome auf Ihrem Computer. Die einzigen Daten, die ihn verlassen, sind eine Lizenzprüfung bei ExtensionPay und, wenn Sie sie verbinden, eine Synchronisierungsdatei in Ihrem eigenen Google Drive." }
+              },
+              {
+                "@type": "Question",
+                "name": "Braucht Takt ein Konto?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Nein. Es gibt kein Takt-Konto. Die Zahlung für Premium läuft über ExtensionPay, das Stripe nutzt." }
+              },
+              {
+                "@type": "Question",
+                "name": "Findet die KI-Gruppierung von Takt in der Cloud statt?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Nein. Die KI-Gruppierung nutzt Chromes integriertes Sprachmodell auf dem Gerät. Ist das Modell nicht verfügbar, gruppiert Takt nach Ähnlichkeit, ebenfalls auf Ihrem Computer." }
+              },
+              {
+                "@type": "Question",
+                "name": "Warum braucht Takt die Berechtigung tabs?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Um URL und Titel jedes Tabs zu lesen und sie mit Ihren Regeln abzugleichen. Der Abgleich findet im Browser statt; nichts wird übertragen." }
+              },
+              {
+                "@type": "Question",
+                "name": "Was ist anders als bei The Great Suspender?",
+                "acceptedAnswer": { "@type": "Answer", "text": "The Great Suspender wurde 2021 von Google entfernt, nachdem in einer Version, die nach dem Verkauf der Erweiterung erschien, Schadcode gefunden wurde. Takt kann keinen Code nachladen: Seine Content Security Policy erlaubt nur Skripte, die in der Erweiterung enthalten sind, deshalb muss jede Änderung als neue Version im Chrome Web Store erscheinen." }
+              }
+            ]
+          },
+          {
+            "@type": "SoftwareApplication",
+            "name": "Takt",
+            "applicationCategory": "BrowserApplication",
+            "operatingSystem": "Chrome",
+            "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <header id="site-header"></header>
+
+    <main class="blog-main">
+      <article class="blog-post article">
+        <p class="eyebrow">Datenschutz</p>
+        <h1 class="blog-post-title">Ein datenschutzfreundlicher Tab-Manager für Chrome: was Takt sendet und was nicht</h1>
+        <p class="lede">Takt ist ein Tab-Manager für Chrome, der Ihre Tabs, Regeln und Sitzungen auf Ihrem Computer behält. Er hat kein Konto und keine Analysen und spricht mit höchstens zwei Diensten. Diese Seite nennt beide und was sie erhalten.</p>
+        <p class="blog-post-meta">Aktualisiert am 8. Oktober 2026 · 6 Min. Lesezeit</p>
+<!-- TAKT-LANG:nav -->
+<p class="lang-links"><a href="../../../blog/privacy-local-first/" hreflang="en" lang="en">English</a> · <a href="../../../fr/blog/privacy-local-first/" hreflang="fr" lang="fr">Français</a> · <a href="../../../es/blog/privacy-local-first/" hreflang="es" lang="es">Español</a> · <a href="../../../it/blog/privacy-local-first/" hreflang="it" lang="it">Italiano</a> · <span aria-current="true">Deutsch</span> · <a href="../../../pt/blog/privacy-local-first/" hreflang="pt" lang="pt">Português</a></p>
+<!-- /TAKT-LANG:nav -->
+
+        <div class="blog-post-body">
+          <div class="tldr">
+            <p><strong>Kurz gesagt:</strong> Takt sendet keine Browserdaten irgendwohin. Es stellt zwei Arten von Netzwerkanfragen, und beide sind unten aufgeführt.</p>
+            <ul>
+              <li><strong>Lizenzprüfung</strong> bei ExtensionPay: beim Start, alle 15 Minuten und wenn Sie das Popup öffnen.</li>
+              <li><strong>Google-Drive-Synchronisierung</strong>: nur, wenn Sie sie verbinden (Premium).</li>
+              <li>Kein Konto, keine Analysen, keine Telemetrie. Die KI-Gruppierung läuft mit Chromes Modell auf dem Gerät.</li>
+            </ul>
+          </div>
+
+          <h2 id="why">Warum sollte ich einer Tab-Erweiterung überhaupt vertrauen?</h2>
+          <p>Vielleicht tun Sie das nicht, und das ist vernünftig. 2021 hat Google The Great Suspender entfernt, eine Erweiterung zum Anhalten von Tabs, nachdem in einer Version, die nach dem Verkauf erschien, Schadcode aufgetaucht war. Die Nutzer hatten etwas Nützliches installiert, und ein Update hat es gegen sie gewendet.</p>
+          <p>Ein Tab-Manager muss Ihre Tab-URLs lesen, um zu funktionieren. Die sinnvollen Fragen lauten also: Was macht er damit, wer bekommt sie sonst noch, und kann sich das ändern, ohne dass Sie es merken? Der Rest dieser Seite beantwortet diese Fragen für Takt, mit Dingen, die Sie selbst prüfen können.</p>
+
+          <h2 id="local">Was bleibt auf meinem Computer?</h2>
+          <p>Alles, was Takt über Ihr Surfen weiß, liegt im eigenen Erweiterungsspeicher von Chrome:</p>
+          <ul>
+            <li><strong>Regeln, Einstellungen und Profile</strong> in <code>chrome.storage.sync</code>.</li>
+            <li><strong>Sitzungen, hibernierte Tabs, Trefferzahlen der Regeln</strong> und die Domain-Historie hinter den Regelvorschlägen in <code>chrome.storage.local</code>.</li>
+          </ul>
+          <p>Eine Einschränkung: Ist die Chrome-Synchronisierung aktiv, kopiert Chrome selbst <code>chrome.storage.sync</code> über Ihr Google-Konto zwischen Ihren Geräten. Das ist eine Funktion von Chrome, kein Takt-Server.</p>
+
+          <h2 id="servers">Welche Server kontaktiert Takt?</h2>
+          <table>
+            <thead>
+              <tr><th>Dienst</th><th>Wann</th><th>Was er erhält</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>ExtensionPay (Lizenz)</td><td>Beim Start, alle 15 Minuten, wenn Sie das Popup öffnen</td><td>Einen zufälligen Lizenzschlüssel. Keine URLs, keine Tab-Daten.</td></tr>
+              <tr><td>Google Drive API</td><td>Nur nachdem Sie Drive verbunden haben. Alle 15 Minuten, wenn die automatische Synchronisierung aktiv ist.</td><td>Die eigenen Synchronisierungsdateien von Takt, im versteckten App-Ordner von Drive</td></tr>
+              <tr><td>Google-Anmeldung</td><td>Wenn Sie Drive verbinden oder trennen</td><td>Beim Verbinden eine Abfrage Ihrer E-Mail-Adresse, um anzuzeigen, welches Konto verknüpft ist. Beim Trennen eine Anfrage, das Zugriffstoken von Takt zu widerrufen.</td></tr>
+            </tbody>
+          </table>
+          <p>Ein Detail, das man kennen sollte: ExtensionPay erzeugt diesen Lizenzschlüssel erst, wenn Sie zum ersten Mal die Upgrade- oder Anmeldeseite öffnen. Bis dahin findet die Prüfung keinen Schlüssel und endet ohne Netzwerkanfrage.</p>
+          <p>Die Drive-Synchronisierung nutzt den Bereich <code>drive.appdata</code>. Takt kann seine eigenen Dateien in einem versteckten Ordner lesen und schreiben und sieht den Rest Ihres Drive nicht. Die Ordner-Synchronisierung, die andere Backup-Option, schreibt in einen Ordner Ihrer Wahl; das Hochladen übernimmt Ihr eigener Cloud-Client.</p>
+          <p>Zwei weitere Dinge öffnen eine Webseite, und keines davon ist eine Anfrage im Hintergrund. Der Bewertungslink öffnet den Chrome Web Store, wenn Sie darauf klicken. Und wenn Sie deinstallieren, öffnet Chrome eine Feedback-Seite, die grobe Werte wie Version, Plan und einen Bereich für die Anzahl der Regeln erhält. Die <a href="../../../privacy/">Datenschutzrichtlinie</a> nennt jeden Wert.</p>
+
+          <h2 id="ai">Läuft die KI-Gruppierung auf dem Gerät?</h2>
+          <p>Ja. Die Gruppierung per KI nutzt Chromes integriertes Sprachmodell, das auf Ihrem Computer läuft. Chrome lädt das Modell bei der ersten Nutzung herunter, und Takt zeigt den Fortschritt. Ist das Modell nicht verfügbar, gruppiert Takt stattdessen nach Ähnlichkeit, ebenfalls lokal.</p>
+          <p>Ganz genau, was das Modell sieht: den Titel jedes Tabs und, bei Seiten, die Chrome Takt lesen lässt (das ermöglicht der Zugriff auf alle Websites), die ersten 500 Zeichen des sichtbaren Texts. Dieser Text geht an das Modell auf Ihrem Computer und nirgendwo sonst hin. Es gibt keinen Takt-Server, an den er gehen könnte.</p>
+          <p>Wenn Sie nur gelegentlich per KI gruppieren möchten, läuft auch Chromes eigene Funktion „Organize Similar Tabs“ auf dem Gerät und braucht keine Erweiterung. Takt ist für dauerhafte Regeln, das Blockieren von Duplikaten, Hibernierung und Sitzungen obendrauf.</p>
+
+          <h2 id="permissions">Wozu fragt Takt nach jeder Berechtigung?</h2>
+          <p>Acht Berechtigungen werden bei der Installation erteilt. Jede gehört zu einer Funktion:</p>
+          <table>
+            <thead><tr><th>Berechtigung</th><th>Wozu</th></tr></thead>
+            <tbody>
+              <tr><td><code>tabs</code></td><td>Tab-URLs und -Titel lesen, um Ihre Regeln abzugleichen</td></tr>
+              <tr><td><code>tabGroups</code></td><td>Gruppen anlegen, benennen, einfärben und einklappen</td></tr>
+              <tr><td><code>activeTab</code></td><td>Auf den aktuellen Tab einwirken, wenn Sie im Popup klicken</td></tr>
+              <tr><td><code>storage</code></td><td>Regeln, Einstellungen, Sitzungen speichern</td></tr>
+              <tr><td><code>scripting</code></td><td>Den Duplikat-Hinweis und das Quick-Switch-Overlay anzeigen; Seitentext für die KI-Gruppierung lesen</td></tr>
+              <tr><td><code>contextMenus</code></td><td>Rechtsklick-Einträge wie Diesen Tab hibernieren</td></tr>
+              <tr><td><code>notifications</code></td><td>Hinweise wie Warnungen zum Speicherbudget</td></tr>
+              <tr><td><code>alarms</code></td><td>Zeitgesteuerte Aufgaben: automatische Hibernierung, Profil-Zeitpläne, die Lizenzprüfung</td></tr>
+            </tbody>
+          </table>
+          <p>Alles andere ist <strong>optional</strong> und aus, bis eine Funktion es braucht: <code>webRequest</code>, <code>system.memory</code> und der Zugriff auf alle Websites für das Ressourcen-Dashboard (der Zugriff auf alle Websites lässt außerdem die KI-Gruppierung Seitentext lesen), <code>bookmarks</code> für die Aktion Lesezeichen-Gruppe, <code>history</code> für die Suche in Quick Switch und für Regelvorschläge, <code>downloads</code> für die Suche in Quick Switch, <code>identity</code> für die Drive-Synchronisierung. Jede davon können Sie unter Settings widerrufen, oder Sie stellen ein, dass Takt nie danach fragt.</p>
+
+          <figure>
+            <img src="../img/options-settings-permissions.png" alt="Takt Settings, Abschnitt Berechtigungen mit den Schaltflächen Alle Berechtigungen erteilen und Alle Berechtigungen widerrufen und ausgeschalteten Schaltern für Netzwerküberwachung, Systemspeicherzugriff, Zugriff auf alle Websites, Lesezeichen-Zugriff und Browserverlauf-Zugriff, jeweils mit einer Beschreibung, was sie ermöglichen und was ohne sie nicht mehr funktioniert" width="700" loading="lazy" />
+            <figcaption>Optionale Berechtigungen unter Settings. Jeder Schalter nennt, was er ermöglicht und was ohne ihn nicht funktioniert.</figcaption>
+          </figure>
+
+          <h2 id="verify">Wie kann ich das selbst prüfen?</h2>
+          <ol class="steps">
+            <li>Öffnen Sie <code>chrome://extensions</code> und schalten Sie den <strong>Entwicklermodus</strong> ein.</li>
+            <li>Klicken Sie auf der Karte von Takt neben „Ansichten überprüfen“ auf <strong>Service Worker</strong>.</li>
+            <li>Öffnen Sie den Tab <strong>Netzwerk</strong> und surfen Sie weiter. Sie sollten nur die Anfragen aus der Tabelle oben sehen, dazu Takt, das seine eigenen <code>chrome-extension://</code>-Dateien liest.</li>
+          </ol>
+          <p>Die Content Security Policy von Takt lautet <code>script-src 'self'</code>. Es kann nur Code ausführen, der in der Erweiterung enthalten ist, und deshalb keinen neuen Code von einem Server holen. Jede Verhaltensänderung muss als neue Version im Chrome Web Store erscheinen.</p>
+
+          <h2 id="limits">Wovor Sie das nicht schützt</h2>
+          <ul>
+            <li><strong>Den Updates müssen Sie weiterhin vertrauen.</strong> Chrome installiert neue Versionen automatisch. Keine Richtlinie kann verhindern, dass sich eine künftige Version ändert; am Netzwerk-Tab würden Sie es merken.</li>
+            <li><strong>ExtensionPay ist ein Drittanbieter.</strong> Sobald ein Lizenzschlüssel existiert, sieht ExtensionPay den Schlüssel und, wie jeder Server, Ihre IP-Adresse.</li>
+            <li><strong>Die Berechtigung <code>tabs</code> ist weitreichend.</strong> Takt kann URL und Titel jedes Tabs lesen. So funktionieren Regeln. Entscheidend ist, dass die Daten auf dem Computer bleiben.</li>
+          </ul>
+
+          <div class="cta">
+            <p>Ein Tab-Manager, der nirgendwohin nach Hause telefoniert.</p>
+            <a class="btn" href="https://chromewebstore.google.com/detail/takt/plgfdnbgkjocmgegnkbihoeojcfphdic">Zu Chrome hinzufügen — kostenlos</a>
+          </div>
+
+          <h2 id="faq">Häufige Fragen</h2>
+          <div class="faq">
+            <details>
+              <summary>Sendet Takt meinen Browserverlauf oder meine Tab-URLs irgendwohin?</summary>
+              <p>Nein. Regeln, Abgleich, Sitzungen, hibernierte Tabs und Vorschläge bleiben im Speicher von Chrome auf Ihrem Computer. Die einzigen Daten, die ihn verlassen, sind die Lizenzprüfung und, wenn Sie sie verbinden, die Synchronisierungsdateien von Takt in Ihrem eigenen Google Drive.</p>
+            </details>
+            <details>
+              <summary>Braucht Takt ein Konto?</summary>
+              <p>Nein. Es gibt kein Takt-Konto. Premium ($3/Monat oder $30/Jahr) wird über ExtensionPay bezahlt, das Stripe nutzt.</p>
+            </details>
+            <details>
+              <summary>Findet die KI-Gruppierung von Takt in der Cloud statt?</summary>
+              <p>Nein. Sie nutzt Chromes integriertes Modell auf dem Gerät. Ohne das Modell gruppiert Takt nach Ähnlichkeit, ebenfalls lokal.</p>
+            </details>
+            <details>
+              <summary>Warum braucht Takt die Berechtigung tabs?</summary>
+              <p>Um URL und Titel jedes Tabs zu lesen und mit Ihren Regeln abzugleichen. Der Abgleich findet im Browser statt; nichts wird übertragen.</p>
+            </details>
+            <details>
+              <summary>Was ist anders als bei The Great Suspender?</summary>
+              <p>The Great Suspender wurde 2021 entfernt, nachdem in einer Version, die nach dem Verkauf erschien, Schadcode aufgetaucht war. Die Content Security Policy von Takt erlaubt nur mitgelieferte Skripte, deshalb muss jede Änderung als neue Version im Chrome Web Store erscheinen, die Sie prüfen können.</p>
+            </details>
+          </div>
+
+          <h2 id="next">Weiterlesen</h2>
+          <div class="read-next">
+            <a href="../getting-started/">Takt in 2 Minuten einrichten<span>Die Willkommensseite, Ihre ersten Regeln, wo was zu finden ist.</span></a>
+            <a href="../backup-and-sync-tabs/">Ihre Tabs sichern und synchronisieren<span>Ein Ordner Ihrer Wahl oder der private App-Ordner von Drive.</span></a>
+          </div>
+        </div>
+
+        <footer class="blog-post-footer">
+          <a href="../../../blog/">Alle Artikel zu den Funktionen</a> · <a href="../../../docs/permissions/">Referenz: Berechtigungen</a> · <a href="../../../privacy/">Datenschutzrichtlinie</a>
+        </footer>
+      </article>
+    </main>
+
+    <footer id="site-footer"></footer>
+    <script src="../../../js/includes.js"></script>
+    <script src="../../../js/nav.js"></script>
+  </body>
+</html>

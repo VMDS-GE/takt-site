@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cómo evitar pestañas duplicadas en Chrome — Takt</title>
+    <meta
+      name="description"
+      content="Chrome abre la misma página en tantas pestañas como le pidas. Así puedes evitar las pestañas duplicadas al abrirse, decidir qué cuenta como la misma URL y cerrar las que ya están abiertas."
+    />
+    <link rel="canonical" href="https://taktabs.com/es/blog/prevent-duplicate-tabs/" />
+<!-- TAKT-LANG:head -->
+<link rel="alternate" hreflang="en" href="https://taktabs.com/blog/prevent-duplicate-tabs/" />
+<link rel="alternate" hreflang="fr" href="https://taktabs.com/fr/blog/prevent-duplicate-tabs/" />
+<link rel="alternate" hreflang="es" href="https://taktabs.com/es/blog/prevent-duplicate-tabs/" />
+<link rel="alternate" hreflang="it" href="https://taktabs.com/it/blog/prevent-duplicate-tabs/" />
+<link rel="alternate" hreflang="de" href="https://taktabs.com/de/blog/prevent-duplicate-tabs/" />
+<link rel="alternate" hreflang="pt" href="https://taktabs.com/pt/blog/prevent-duplicate-tabs/" />
+<link rel="alternate" hreflang="x-default" href="https://taktabs.com/blog/prevent-duplicate-tabs/" />
+<!-- /TAKT-LANG:head -->
+    <meta property="og:type" content="article" />
+    <meta property="og:locale" content="es_ES" />
+    <meta property="og:title" content="Cómo evitar pestañas duplicadas en Chrome" />
+    <meta property="og:description" content="Abre una página que ya está abierta y Takt te lleva a la original. Activado por defecto y gratis." />
+    <meta property="og:url" content="https://taktabs.com/es/blog/prevent-duplicate-tabs/" />
+    <meta property="og:image" content="https://taktabs.com/es/blog/img/popup-home.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <link rel="icon" type="image/png" sizes="32x32" href="../../../assets/favicon-32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="../../../assets/favicon-16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="../../../assets/apple-touch-icon.png" />
+    <meta name="theme-color" content="#FF3B30" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../../../css/tokens.css" />
+    <link rel="stylesheet" href="../../../css/base.css" />
+    <link rel="stylesheet" href="../../../css/layout.css" />
+    <link rel="stylesheet" href="../../../css/blog.css" />
+    <link rel="stylesheet" href="../../../css/articles.css" />
+    <script src="../../../js/theme.js"></script>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Article",
+            "headline": "Cómo evitar pestañas duplicadas en Chrome",
+            "description": "Evita las pestañas duplicadas al abrirse, decide qué cuenta como la misma URL y cierra los duplicados que ya están abiertos.",
+            "inLanguage": "es",
+            "datePublished": "2026-10-08",
+            "dateModified": "2026-10-08",
+            "author": { "@type": "Person", "name": "Vitor" },
+            "publisher": { "@type": "Organization", "name": "Takt", "url": "https://taktabs.com" },
+            "image": "https://taktabs.com/es/blog/img/popup-home.png",
+            "mainEntityOfPage": "https://taktabs.com/es/blog/prevent-duplicate-tabs/"
+          },
+          {
+            "@type": "HowTo",
+            "name": "Evitar pestañas duplicadas en Chrome",
+            "step": [
+              { "@type": "HowToStep", "text": "Instala Takt desde Chrome Web Store. La prevención de duplicados viene activada por defecto." },
+              { "@type": "HowToStep", "text": "Para cambiar qué cuenta como duplicado, abre la página de opciones de Takt, ve a Settings, Duplicate Prevention, y elige una estrategia de coincidencia de URL." },
+              { "@type": "HowToStep", "text": "Para limpiar los duplicados que ya están abiertos, haz clic en Cerrar duplicados en el popup de Takt." }
+            ]
+          },
+          {
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "¿Puede Chrome evitar pestañas duplicadas por sí solo?",
+                "acceptedAnswer": { "@type": "Answer", "text": "No. Chrome no tiene ningún ajuste para bloquear pestañas duplicadas. Cada pestaña nueva se abre de forma independiente, así que necesitas una extensión como Takt." }
+              },
+              {
+                "@type": "Question",
+                "name": "¿La prevención de duplicados de Takt es gratis?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Sí. La prevención de duplicados, las cinco estrategias de coincidencia de URL y Cerrar duplicados son gratis y sin límite." }
+              },
+              {
+                "@type": "Question",
+                "name": "¿Cómo abro una pestaña duplicada a propósito?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Haz clic derecho en el enlace y elige Abrir en nueva pestaña (permitir duplicado), o haz clic en Abrir de todas formas en el aviso que muestra Takt después de bloquear uno." }
+              },
+              {
+                "@type": "Question",
+                "name": "¿Funciona en todos los modos de agrupación?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Sí. La prevención de duplicados funciona en los modos Reglas, Categoría, IA y Ninguno." }
+              }
+            ]
+          },
+          {
+            "@type": "SoftwareApplication",
+            "name": "Takt",
+            "applicationCategory": "BrowserApplication",
+            "operatingSystem": "Chrome",
+            "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <header id="site-header"></header>
+
+    <main class="blog-main">
+      <article class="blog-post article">
+        <p class="eyebrow">Prevención de duplicados</p>
+        <h1 class="blog-post-title">Cómo evitar pestañas duplicadas en Chrome</h1>
+        <p class="lede">Para evitar pestañas duplicadas en Chrome necesitas una extensión: Chrome abre la misma página en diez pestañas si haces clic diez veces. Takt revisa cada pestaña nueva al abrirse. Si la página ya está abierta, cierra la pestaña nueva y te lleva a la original.</p>
+        <p class="blog-post-meta">Actualizado el 8 de octubre de 2026 · 5 min de lectura</p>
+<!-- TAKT-LANG:nav -->
+<p class="lang-links"><a href="../../../blog/prevent-duplicate-tabs/" hreflang="en" lang="en">English</a> · <a href="../../../fr/blog/prevent-duplicate-tabs/" hreflang="fr" lang="fr">Français</a> · <span aria-current="true">Español</span> · <a href="../../../it/blog/prevent-duplicate-tabs/" hreflang="it" lang="it">Italiano</a> · <a href="../../../de/blog/prevent-duplicate-tabs/" hreflang="de" lang="de">Deutsch</a> · <a href="../../../pt/blog/prevent-duplicate-tabs/" hreflang="pt" lang="pt">Português</a></p>
+<!-- /TAKT-LANG:nav -->
+
+        <div class="blog-post-body">
+          <div class="tldr">
+            <p><strong>Respuesta corta:</strong> instala Takt. La prevención de duplicados viene activada por defecto y es gratis. Abre un enlace que ya tienes abierto en otra pestaña y acabarás en la pestaña existente.</p>
+            <ul>
+              <li>5 estrategias de coincidencia de URL deciden qué cuenta como "la misma página". La predeterminada ignora el <code>#fragmento</code>.</li>
+              <li>¿Necesitas el duplicado de todos modos? Haz clic derecho en el enlace, o haz clic en <em>Abrir de todas formas</em>.</li>
+              <li><strong>Cerrar duplicados</strong> limpia la ventana actual con un clic.</li>
+            </ul>
+          </div>
+
+          <h2 id="why">¿Por qué Chrome abre pestañas duplicadas?</h2>
+          <p>Chrome trata cada pestaña nueva como una petición aparte. Nunca comprueba si esa página ya está abierta. Así, el mismo panel, la misma incidencia o el mismo documento se van acumulando a partir de enlaces del correo, del chat y de los resultados de búsqueda.</p>
+          <p>Cada copia es una página completa que sigue en ejecución. Para cerrarla a mano, primero hay que encontrarla.</p>
+
+          <h2 id="how">¿Qué pasa cuando Takt bloquea un duplicado?</h2>
+          <ol class="steps">
+            <li>Abres un enlace a una página que ya está abierta en otra pestaña.</li>
+            <li>Takt cierra la pestaña nueva.</li>
+            <li>Te lleva a la pestaña existente, esté en la ventana que esté.</li>
+            <li>El popup muestra "Duplicado prevenido" con un botón <strong>Abrir de todas formas</strong> durante 10 segundos.</li>
+          </ol>
+          <p>Si has concedido a Takt el permiso opcional "Acceso a todos los sitios web", también aparece un aviso en la página: "Takt detectó una URL duplicada y cambió a esta pestaña", con <em>Ignorar</em> y <em>Abrir de todos modos</em>.</p>
+          <p>La comprobación funciona en todos los modos de agrupación: Reglas, Categoría, IA y Ninguno. Solo mira las pestañas al abrirse. Si navegas en una pestaña existente hasta una página que está abierta en otra, no se activa.</p>
+
+          <figure class="narrow">
+            <img src="../img/popup-home.png" alt="Panel Inicio del popup de Takt con un aviso amarillo Duplicado prevenido para en.wikipedia.org/wiki/Takt_time y un botón Abrir de todas formas, encima de las secciones Modo de agrupación y Acciones rápidas" width="420" loading="lazy" />
+            <figcaption>Tras un bloqueo, el popup indica la página y ofrece Abrir de todas formas.</figcaption>
+          </figure>
+
+          <h2 id="same-url">¿Qué cuenta como la misma URL?</h2>
+          <p>Primero, Takt normaliza todas las URL de la misma manera. Quita <code>www.</code>, elimina la barra final y descodifica la codificación porcentual inofensiva, como <code>%41</code> a <code>A</code>. Así, <code>https://www.example.com/docs/</code> y <code>https://example.com/docs</code> son la misma página.</p>
+          <p>Después, tu estrategia de coincidencia decide cuánto afinar. Elígela en Opciones → Settings → Duplicate Prevention.</p>
+          <table>
+            <thead><tr><th>Estrategia</th><th>Compara</th><th>Se consideran iguales</th></tr></thead>
+            <tbody>
+              <tr><td>Exact URL</td><td>Todo, con los parámetros de consulta ordenados</td><td><code>?a=1&amp;b=2</code> y <code>?b=2&amp;a=1</code></td></tr>
+              <tr><td>Ignore fragment (#hash) <span class="badge">Predeterminada</span></td><td>Todo salvo el <code>#fragmento</code></td><td><code>/page#top</code> y <code>/page#bottom</code></td></tr>
+              <tr><td>Ignore query string</td><td>Esquema, host y ruta</td><td><code>/page?ref=mail</code> y <code>/page?ref=chat</code></td></tr>
+              <tr><td>Ignore query + fragment</td><td>Esquema, host y ruta</td><td>Igual que la anterior</td></tr>
+              <tr><td>Origin + path only</td><td>Esquema, host y ruta</td><td>Igual que la anterior</td></tr>
+            </tbody>
+          </table>
+          <p>En la versión actual, las tres últimas comparan las URL de la misma forma. Elige cualquiera de ellas si quieres que se ignoren los parámetros de seguimiento.</p>
+          <p>Cuidado con las estrategias más permisivas en páginas de búsqueda y de aplicaciones. <code>/search?q=chairs</code> y <code>/search?q=tables</code> comparten ruta, así que si ignoras la consulta se tratan como una sola página.</p>
+
+          <figure>
+            <img src="../img/settings-duplicate-prevention.png" alt="Settings de Takt, sección Duplicate Prevention con la casilla Enable duplicate tab prevention marcada y el desplegable URL matching strategy en Ignore fragment (#hash)" width="700" loading="lazy" />
+            <figcaption>El interruptor general y la estrategia predeterminada, en Opciones → Settings.</figcaption>
+          </figure>
+
+          <h2 id="allow">¿Cómo abro un duplicado a propósito?</h2>
+          <ul>
+            <li><strong>Haz clic derecho en el enlace</strong> y elige <em>Abrir en nueva pestaña (permitir duplicado)</em>. Funciona en cualquier página.</li>
+            <li><strong>Haz clic en Abrir de todas formas</strong> en el aviso de la página o en el popup, justo después de un bloqueo.</li>
+            <li><strong>Haz Shift+clic en el enlace</strong>, en el modo Reglas, en páginas en las que Takt tenga acceso.</li>
+          </ul>
+          <p>O desmarca <em>Enable duplicate tab prevention</em> en Settings para desactivar la función por completo.</p>
+
+          <h2 id="close">¿Cómo cierro las pestañas duplicadas que ya están abiertas?</h2>
+          <p>Haz clic en <strong>Cerrar duplicados</strong> en el panel Inicio del popup. Takt revisa la ventana actual con tu estrategia de coincidencia y conserva la primera pestaña de cada página, contando desde la izquierda. El resto se cierra al momento, sin confirmación, y el popup indica cuántas ha cerrado. El botón aparece en gris cuando no hay nada que cerrar.</p>
+
+          <h2 id="per-rule">¿Puede un sitio usar otra estrategia?</h2>
+          <p>Sí, en el modo Reglas. Abre una regla, marca <strong>Prevent duplicate tabs in this group</strong> y elige una estrategia de coincidencia de URL para las pestañas de esa regla.</p>
+          <p>Úsalo en una aplicación de una sola página en la que cada <code>#fragmento</code> es una vista distinta: pon esa regla en <em>Exact URL</em> y deja el valor general para todo lo demás. El interruptor general sigue mandando. Si está desactivado, no se bloquea ninguna pestaña, aunque la regla tenga la casilla marcada.</p>
+
+          <h2 id="compare">¿Cómo se compara con otras opciones?</h2>
+          <table>
+            <thead><tr><th></th><th>Solo Chrome</th><th>Bloqueador de un solo uso</th><th>Takt</th></tr></thead>
+            <tbody>
+              <tr><td>Bloquea duplicados al abrirse</td><td>No</td><td>Sí</td><td>Sí, activado por defecto</td></tr>
+              <tr><td>Elegir qué cuenta como la misma página</td><td>No</td><td>Depende</td><td>5 estrategias, también por regla</td></tr>
+              <tr><td>Cerrar duplicados existentes</td><td>No</td><td>Depende</td><td>Un clic, ventana actual</td></tr>
+              <tr><td>También agrupa e hiberna pestañas</td><td>No</td><td>No</td><td>Sí</td></tr>
+            </tbody>
+          </table>
+          <p>Comprueba que la extensión de un solo uso que elijas siga teniendo mantenimiento. Duplicate Tabs Preventor, por ejemplo, no se mantiene desde abril de 2026.</p>
+
+          <h2 id="limits">Lo que la prevención de duplicados no hace</h2>
+          <ul>
+            <li>No fusiona las pestañas que ya estaban abiertas antes de instalar Takt. Para esas, usa Cerrar duplicados.</li>
+            <li>Cerrar duplicados solo actúa sobre la ventana actual.</li>
+            <li>El aviso en la página y el Shift+clic necesitan el permiso opcional de acceso a las páginas. El aviso del popup y la opción del menú contextual no.</li>
+          </ul>
+
+          <div class="cta">
+            <p>Haz clic dos veces en el mismo enlace. Acabarás en la pestaña que ya tenías.</p>
+            <a class="btn" href="https://chromewebstore.google.com/detail/takt/plgfdnbgkjocmgegnkbihoeojcfphdic">Añadir Takt a Chrome, gratis</a>
+          </div>
+
+          <h2 id="faq">Preguntas frecuentes</h2>
+          <div class="faq">
+            <details>
+              <summary>¿Puede Chrome evitar pestañas duplicadas por sí solo?</summary>
+              <p>No. Chrome no tiene ningún ajuste para bloquear pestañas duplicadas, así que necesitas una extensión.</p>
+            </details>
+            <details>
+              <summary>¿La prevención de duplicados de Takt es gratis?</summary>
+              <p>Sí. La prevención, las cinco estrategias y Cerrar duplicados son gratis y sin límite.</p>
+            </details>
+            <details>
+              <summary>¿Cómo abro una pestaña duplicada a propósito?</summary>
+              <p>Haz clic derecho en el enlace y elige <em>Abrir en nueva pestaña (permitir duplicado)</em>, o haz clic en <em>Abrir de todas formas</em> después de un bloqueo.</p>
+            </details>
+            <details>
+              <summary>¿Funciona en todos los modos de agrupación?</summary>
+              <p>Sí: Reglas, <a href="../group-tabs-by-category-or-ai/">Categoría, IA</a> y Ninguno.</p>
+            </details>
+          </div>
+
+          <h2 id="next">Sigue leyendo</h2>
+          <div class="read-next">
+            <a href="../one-click-tab-cleanup/">Ordena cada ventana con un clic<span>Agrupar, desagrupar, contraer y ordenar.</span></a>
+            <a href="../hibernate-tabs-free-memory/">Hiberna las pestañas que no usas<span>Ciérralas, guárdalas y recupéralas.</span></a>
+          </div>
+        </div>
+
+        <footer class="blog-post-footer">
+          <a href="../../../blog/">Todos los artículos</a> · <a href="../../../docs/duplicates/">Referencia de la prevención de duplicados</a>
+        </footer>
+      </article>
+    </main>
+
+    <footer id="site-footer"></footer>
+    <script src="../../../js/includes.js"></script>
+    <script src="../../../js/nav.js"></script>
+  </body>
+</html>

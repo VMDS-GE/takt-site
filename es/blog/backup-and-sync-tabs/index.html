@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cómo hacer una copia de seguridad y sincronizar grupos de pestañas, sesiones y reglas de Chrome — Takt</title>
+    <meta
+      name="description"
+      content="Haz una copia de seguridad de tus pestañas de Chrome en un archivo JSON, sincronízala a través de una carpeta de Google Drive, Dropbox o iCloud, o en el almacenamiento privado de apps de Google Drive. Qué cubre cada método y dónde encaja la sincronización de grupos de pestañas de Chrome."
+    />
+    <link rel="canonical" href="https://taktabs.com/es/blog/backup-and-sync-tabs/" />
+<!-- TAKT-LANG:head -->
+<link rel="alternate" hreflang="en" href="https://taktabs.com/blog/backup-and-sync-tabs/" />
+<link rel="alternate" hreflang="fr" href="https://taktabs.com/fr/blog/backup-and-sync-tabs/" />
+<link rel="alternate" hreflang="es" href="https://taktabs.com/es/blog/backup-and-sync-tabs/" />
+<link rel="alternate" hreflang="it" href="https://taktabs.com/it/blog/backup-and-sync-tabs/" />
+<link rel="alternate" hreflang="de" href="https://taktabs.com/de/blog/backup-and-sync-tabs/" />
+<link rel="alternate" hreflang="pt" href="https://taktabs.com/pt/blog/backup-and-sync-tabs/" />
+<link rel="alternate" hreflang="x-default" href="https://taktabs.com/blog/backup-and-sync-tabs/" />
+<!-- /TAKT-LANG:head -->
+    <meta property="og:type" content="article" />
+    <meta property="og:locale" content="es_ES" />
+    <meta property="og:title" content="Cómo hacer una copia de seguridad y sincronizar grupos de pestañas, sesiones y reglas de Chrome" />
+    <meta property="og:description" content="Tres formas de llevar tu configuración de pestañas de un ordenador a otro: un archivo JSON, una carpeta sincronizada o el almacenamiento privado de apps de Google Drive." />
+    <meta property="og:url" content="https://taktabs.com/es/blog/backup-and-sync-tabs/" />
+    <meta property="og:image" content="https://taktabs.com/es/blog/img/settings-backup-sync.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <link rel="icon" type="image/png" sizes="32x32" href="../../../assets/favicon-32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="../../../assets/favicon-16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="../../../assets/apple-touch-icon.png" />
+    <meta name="theme-color" content="#FF3B30" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../../../css/tokens.css" />
+    <link rel="stylesheet" href="../../../css/base.css" />
+    <link rel="stylesheet" href="../../../css/layout.css" />
+    <link rel="stylesheet" href="../../../css/blog.css" />
+    <link rel="stylesheet" href="../../../css/articles.css" />
+    <script src="../../../js/theme.js"></script>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Article",
+            "headline": "Cómo hacer una copia de seguridad y sincronizar grupos de pestañas, sesiones y reglas de Chrome",
+            "description": "Haz una copia de seguridad de tu configuración de pestañas de Chrome en un archivo JSON, sincronízala con una carpeta en la nube o con el almacenamiento privado de apps de Google Drive.",
+            "inLanguage": "es",
+            "datePublished": "2026-10-08",
+            "dateModified": "2026-10-08",
+            "author": { "@type": "Person", "name": "Vitor" },
+            "publisher": { "@type": "Organization", "name": "Takt", "url": "https://taktabs.com" },
+            "image": "https://taktabs.com/es/blog/img/settings-backup-sync.png",
+            "mainEntityOfPage": "https://taktabs.com/es/blog/backup-and-sync-tabs/"
+          },
+          {
+            "@type": "HowTo",
+            "name": "Sincronizar Takt entre dos ordenadores con Google Drive",
+            "step": [
+              { "@type": "HowToStep", "text": "En el primer ordenador, abre la página de opciones de Takt, ve a Settings y haz clic en Connect Google Drive." },
+              { "@type": "HowToStep", "text": "Inicia sesión y permite el acceso a la carpeta privada de la app de Takt; después haz clic en Sync Now." },
+              { "@type": "HowToStep", "text": "En el segundo ordenador, conecta la misma cuenta de Google en el mismo sitio." },
+              { "@type": "HowToStep", "text": "Haz clic en Force Pull en el segundo ordenador para sustituir sus reglas, perfiles y sesiones por la copia de Drive." }
+            ]
+          },
+          {
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "¿Por qué no se sincronizan mis grupos de pestañas de Chrome?",
+                "acceptedAnswer": { "@type": "Answer", "text": "La sincronización de grupos de pestañas de Chrome necesita tener activado «Saved tab groups» en los ajustes de sincronización de cada dispositivo, y un grupo sincronizado aparece en la barra de marcadores en lugar de abrirse solo. Revisa primero ese ajuste en cada dispositivo." }
+              },
+              {
+                "@type": "Question",
+                "name": "¿Sincroniza Takt mis pestañas abiertas en tiempo real entre ordenadores?",
+                "acceptedAnswer": { "@type": "Answer", "text": "No. Takt sincroniza tus reglas, perfiles, sesiones guardadas y pestañas hibernadas. Tus reglas reconstruyen los mismos grupos en cada ordenador, y una sesión guardada vuelve a abrir allí todo un espacio de trabajo." }
+              },
+              {
+                "@type": "Question",
+                "name": "¿Puede Takt leer mis archivos de Google Drive?",
+                "acceptedAnswer": { "@type": "Answer", "text": "No. Drive Sync solo pide el ámbito de datos de aplicación de Google Drive, una carpeta oculta que solo Takt puede ver, y tu dirección de correo para mostrar qué cuenta está conectada." }
+              },
+              {
+                "@type": "Question",
+                "name": "¿La copia de seguridad y la sincronización son gratis?",
+                "acceptedAnswer": { "@type": "Answer", "text": "No. La exportación e importación JSON, File Sync y Drive Sync son funciones Premium, 3 $/mes o 30 $/año." }
+              }
+            ]
+          },
+          {
+            "@type": "SoftwareApplication",
+            "name": "Takt",
+            "applicationCategory": "BrowserApplication",
+            "operatingSystem": "Chrome",
+            "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <header id="site-header"></header>
+
+    <main class="blog-main">
+      <article class="blog-post article">
+        <p class="eyebrow">Copia de seguridad y sincronización</p>
+        <h1 class="blog-post-title">Cómo hacer una copia de seguridad y sincronizar tus pestañas de Chrome</h1>
+        <p class="lede">Para hacer una copia de seguridad y sincronizar tus pestañas de Chrome, guarda la configuración fuera del navegador: en un archivo JSON, en una carpeta que tu cliente de nube ya sincroniza o en Google Drive. Takt hace las tres cosas, y tú decides cuánto quieres automatizar.</p>
+        <p class="blog-post-meta">Actualizado el 8 de octubre de 2026 · 6 min de lectura</p>
+<!-- TAKT-LANG:nav -->
+<p class="lang-links"><a href="../../../blog/backup-and-sync-tabs/" hreflang="en" lang="en">English</a> · <a href="../../../fr/blog/backup-and-sync-tabs/" hreflang="fr" lang="fr">Français</a> · <span aria-current="true">Español</span> · <a href="../../../it/blog/backup-and-sync-tabs/" hreflang="it" lang="it">Italiano</a> · <a href="../../../de/blog/backup-and-sync-tabs/" hreflang="de" lang="de">Deutsch</a> · <a href="../../../pt/blog/backup-and-sync-tabs/" hreflang="pt" lang="pt">Português</a></p>
+<!-- /TAKT-LANG:nav -->
+
+        <div class="blog-post-body">
+          <div class="tldr">
+            <p><strong>Respuesta corta:</strong> abre la página de opciones de Takt, ve a <strong>Settings</strong> y elige una opción:</p>
+            <ul>
+              <li><strong>Export</strong> a un archivo JSON: solo reglas o una copia de seguridad completa.</li>
+              <li><strong>File Sync:</strong> Takt escribe en una carpeta que Google Drive, Dropbox o iCloud Drive sincronizan por ti.</li>
+              <li><strong>Drive Sync:</strong> Takt sincroniza con una carpeta oculta de la app en tu Google Drive, cada 15 minutos.</li>
+            </ul>
+            <p>Las tres son <span class="badge badge-premium">Premium</span>. Ninguna envía tus datos a un servidor de Takt.</p>
+          </div>
+
+          <h2 id="chrome">¿Por qué no se sincronizan mis grupos de pestañas de Chrome?</h2>
+          <p>La sincronización de grupos de pestañas de Chrome confunde a mucha gente. Hay dos detalles que suelen fallar:</p>
+          <ul>
+            <li>Hay que activar <strong>"Saved tab groups"</strong> en los ajustes de sincronización de <em>cada</em> dispositivo.</li>
+            <li>Un grupo sincronizado aparece en la barra de marcadores. No se abre solo.</li>
+          </ul>
+          <p>Si solo quieres unos cuantos grupos en un segundo ordenador, revisa primero ese ajuste. Es gratis y viene integrado.</p>
+          <p>Takt resuelve otro problema. No sincroniza tus pestañas abiertas en tiempo real. Sincroniza la configuración que hay detrás: tus reglas, perfiles, sesiones guardadas y pestañas hibernadas. Tus reglas reconstruyen los mismos grupos en cada ordenador mientras navegas. Una sesión guardada vuelve a abrir todo un espacio de trabajo cuando se lo pides.</p>
+
+          <h2 id="export">¿Cómo hago una copia de seguridad de mis pestañas y reglas en un archivo?</h2>
+          <p>En <strong>Settings → Import &amp; Export</strong> tienes dos filas:</p>
+          <table>
+            <thead><tr><th>Opción</th><th>Archivo</th><th>Contiene</th></tr></thead>
+            <tbody>
+              <tr><td>Rules only</td><td><code>takt-rules.json</code></td><td>Tus reglas de agrupación</td></tr>
+              <tr><td>Full backup</td><td><code>takt-backup.json</code></td><td>Reglas, configuración, perfiles, sesiones guardadas y pestañas hibernadas</td></tr>
+            </tbody>
+          </table>
+          <p>Usa <strong>Rules only</strong> para compartir un conjunto de reglas con un compañero. Usa <strong>Full backup</strong> antes de reinstalar Chrome o de cambiar de ordenador.</p>
+          <p>Al importar, los archivos tienen un límite de 5 MB. Las reglas y sesiones se añaden junto a las que ya tienes, y se omiten las que tengan un nombre que ya usas. Una copia de seguridad completa también sustituye tu configuración y tus perfiles por los del archivo.</p>
+
+          <figure>
+            <img src="../img/settings-backup-sync.png" alt="Página Settings de Takt con tres secciones: Import &amp; Export, con botones de exportar e importar para Rules only y Full backup; File Sync, con un botón Choose Folder… y No folder selected; y Google Drive Sync, con un botón Connect Google Drive y Not connected" width="700" loading="lazy" />
+            <figcaption>Import &amp; Export, File Sync y Google Drive Sync, todo en Settings.</figcaption>
+          </figure>
+
+          <h2 id="folder">¿Cómo sincronizo con Dropbox, iCloud o una carpeta de Google Drive?</h2>
+          <p>Usa <strong>File Sync</strong>. Takt escribe archivos JSON normales en la carpeta que elijas. Tu cliente de nube los sube como cualquier otro archivo.</p>
+          <ol class="steps">
+            <li>Haz clic en <strong>Choose Folder…</strong> y elige una carpeta dentro de tu carpeta de Drive, Dropbox o iCloud Drive, por ejemplo <code>Dropbox/Takt/</code>.</li>
+            <li>Haz clic en <strong>Sync Now</strong>. Takt escribe <code>rules.json</code>, <code>profiles.json</code>, <code>sessions.json</code>, <code>hibernated.json</code> y <code>meta.json</code>.</li>
+            <li>Marca <strong>Auto-sync on every change</strong> para que los archivos se reescriban unos 2 segundos después de tu último cambio.</li>
+            <li>En el otro ordenador, haz clic en <strong>Import from Folder</strong> y elige la misma carpeta sincronizada.</li>
+          </ol>
+          <p>No hay que iniciar sesión, y puedes abrir los archivos y leerlos. Sirve cualquier servicio en la nube con carpeta de escritorio.</p>
+          <p>La contrapartida: va en un solo sentido por ordenador. Cada ordenador escribe su propia copia, y los datos de otro ordenador los traes con Import from Folder. Si Chrome pierde el acceso a la carpeta, Takt muestra un botón <strong>Re-authorize</strong>.</p>
+
+          <h2 id="drive">¿Cómo funciona la sincronización con Google Drive?</h2>
+          <p>Haz clic en <strong>Connect Google Drive</strong> e inicia sesión una vez. Takt guarda sus archivos en la carpeta oculta de apps de Drive. Está separada de tus archivos de Drive y no aparece en la interfaz de Drive.</p>
+          <p>Takt solo pide dos permisos a Google:</p>
+          <ul>
+            <li><strong>Datos de aplicación de Drive:</strong> leer y escribir en una carpeta que solo Takt puede ver. No puede listar ni abrir tus otros archivos.</li>
+            <li><strong>Dirección de correo:</strong> para mostrar qué cuenta está conectada.</li>
+          </ul>
+          <p>Marca <strong>Auto-sync every 15 minutes</strong> y Takt sincroniza en segundo plano. En un ordenador nuevo, conecta la misma cuenta y haz clic en <strong>Force Pull</strong> para sustituir sus reglas, perfiles y sesiones por la copia de Drive. <strong>Force Push</strong> hace lo contrario y sobrescribe Drive. Las dos acciones son inmediatas y no se pueden deshacer desde Takt.</p>
+
+          <h2 id="compare">¿Qué método me conviene?</h2>
+          <table>
+            <thead><tr><th></th><th>Sincronización de grupos de Chrome</th><th>Exportación JSON</th><th>File Sync</th><th>Drive Sync</th></tr></thead>
+            <tbody>
+              <tr><td>Qué se transfiere</td><td>Grupos de pestañas guardados</td><td>Reglas o una copia de seguridad completa</td><td>Reglas, perfiles, sesiones, pestañas hibernadas</td><td>Reglas, perfiles, sesiones, pestañas hibernadas, configuración de hibernación</td></tr>
+              <tr><td>Automático</td><td>Sí</td><td>No</td><td>Escritura sí, importación a mano</td><td>Cada 15 minutos</td></tr>
+              <tr><td>Nube</td><td>Tu cuenta de Google</td><td>Ninguna</td><td>Cualquier carpeta sincronizada de escritorio</td><td>Solo Google Drive</td></tr>
+              <tr><td>Precio</td><td>Gratis</td><td>Premium</td><td>Premium</td><td>Premium</td></tr>
+            </tbody>
+          </table>
+          <p>Un detalle más: Takt guarda las reglas, la configuración y los perfiles en el almacenamiento sincronizado de Chrome, que sigue a tu cuenta de Chrome cuando la sincronización de Chrome está activada. Las sesiones y las pestañas hibernadas se quedan en local, así que para ellas necesitas uno de los métodos anteriores.</p>
+
+          <h2 id="limits">Lo que la copia de seguridad y la sincronización no hacen</h2>
+          <ul>
+            <li><strong>No hay réplica de pestañas en tiempo real.</strong> Las pestañas abiertas en un ordenador no aparecen en otro. Guarda una <a href="../save-restore-tab-sessions/">sesión</a> y restáurala allí.</li>
+            <li><strong>Gana la última escritura.</strong> No se fusionan los cambios hechos en dos ordenadores a la vez. Elige un ordenador para editar, o envía y trae los datos de forma deliberada.</li>
+            <li><strong>Drive Sync es solo para Google.</strong> Usa File Sync para Dropbox, iCloud o cualquier otro servicio.</li>
+          </ul>
+
+          <div class="cta">
+            <p>Configúralo una vez. Llévalo a todos tus ordenadores.</p>
+            <a class="btn" href="https://chromewebstore.google.com/detail/takt/plgfdnbgkjocmgegnkbihoeojcfphdic">Añadir Takt a Chrome, gratis</a>
+          </div>
+
+          <h2 id="faq">Preguntas frecuentes</h2>
+          <div class="faq">
+            <details>
+              <summary>¿Por qué no se sincronizan mis grupos de pestañas de Chrome?</summary>
+              <p>Chrome necesita tener activado <strong>"Saved tab groups"</strong> en los ajustes de sincronización de cada dispositivo, y los grupos sincronizados aparecen en la barra de marcadores en lugar de abrirse solos.</p>
+            </details>
+            <details>
+              <summary>¿Sincroniza Takt mis pestañas abiertas en tiempo real entre ordenadores?</summary>
+              <p>No. Sincroniza tus reglas, perfiles, sesiones guardadas y pestañas hibernadas. Las reglas reconstruyen los mismos grupos en cada ordenador, y una sesión guardada vuelve a abrir todo un espacio de trabajo.</p>
+            </details>
+            <details>
+              <summary>¿Puede Takt leer mis archivos de Google Drive?</summary>
+              <p>No. Drive Sync solo usa el ámbito de datos de aplicación, una carpeta oculta que solo Takt puede ver, y tu correo para mostrar la cuenta conectada. Consulta <a href="../privacy-local-first/">cómo mantiene Takt tus datos en local</a>.</p>
+            </details>
+            <details>
+              <summary>¿La copia de seguridad y la sincronización son gratis?</summary>
+              <p>No. La exportación e importación JSON, File Sync y Drive Sync son Premium, 3 $/mes o 30 $/año.</p>
+            </details>
+          </div>
+
+          <h2 id="next">Sigue leyendo</h2>
+          <div class="read-next">
+            <a href="../save-restore-tab-sessions/">Guarda un espacio de trabajo para más tarde<span>Sesiones con nombre, restauradas con un clic.</span></a>
+            <a href="../free-vs-premium/">Takt Free frente a Premium<span>Todos los límites, uno al lado del otro.</span></a>
+          </div>
+        </div>
+
+        <footer class="blog-post-footer">
+          <a href="../../../blog/">Todos los artículos</a> · <a href="../../../docs/sync/">Referencia de File Sync</a> · <a href="../../../docs/drive-sync/">Referencia de Drive Sync</a>
+        </footer>
+      </article>
+    </main>
+
+    <footer id="site-footer"></footer>
+    <script src="../../../js/includes.js"></script>
+    <script src="../../../js/nav.js"></script>
+  </body>
+</html>

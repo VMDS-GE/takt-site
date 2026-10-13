@@ -1,0 +1,242 @@
+/* Feature articles — extends blog.css. Scoped to .article */
+
+.article .eyebrow {
+  color: var(--red);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin: 0 0 0.75rem;
+}
+
+.article .lede {
+  color: var(--ink-2);
+  font-size: 1.3125rem;
+  line-height: 1.5;
+  margin: 0 0 1rem;
+}
+
+/* Answer-first summary box: the block AI engines and skimmers read first */
+.article .tldr {
+  background: var(--mist);
+  border-left: 4px solid var(--blue);
+  border-radius: var(--radius-sm);
+  margin: 0 0 2rem;
+  padding: 1rem 1.25rem;
+}
+
+.article .tldr p:last-child,
+.article .tldr ul:last-child {
+  margin-bottom: 0;
+}
+
+.article .tldr ul {
+  padding-left: 1.25rem;
+}
+
+.article .badge {
+  border: 1px solid var(--hairline);
+  border-radius: var(--radius-btn);
+  color: var(--ink-3);
+  font-size: 0.75rem;
+  font-weight: 600;
+  margin-left: 0.25rem;
+  padding: 0.05rem 0.5rem;
+  vertical-align: middle;
+}
+
+.article .badge-premium {
+  border-color: var(--purple);
+  color: var(--purple);
+}
+
+.article figure img {
+  border: 1px solid var(--hairline);
+}
+
+/* Popup screenshots are narrow: keep them at their natural size */
+.article figure.narrow img {
+  max-width: 360px;
+}
+
+.article .steps {
+  counter-reset: step;
+  list-style: none;
+  padding-left: 0;
+}
+
+.article .steps > li {
+  counter-increment: step;
+  margin-bottom: 0.75rem;
+  padding-left: 2.25rem;
+  position: relative;
+}
+
+.article .steps > li::before {
+  background: var(--ink);
+  border-radius: 50%;
+  color: var(--paper);
+  content: counter(step);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  height: 1.5rem;
+  left: 0;
+  line-height: 1.5rem;
+  position: absolute;
+  text-align: center;
+  top: 0.2rem;
+  width: 1.5rem;
+}
+
+.article table {
+  border-collapse: collapse;
+  display: block;
+  font-size: 0.9375rem;
+  margin: 1.5rem 0;
+  overflow-x: auto;
+  width: 100%;
+}
+
+.article th,
+.article td {
+  border-bottom: 1px solid var(--hairline);
+  padding: 0.6rem 0.75rem;
+  text-align: left;
+  vertical-align: top;
+}
+
+.article th {
+  color: var(--ink);
+  font-weight: 600;
+}
+
+.article .callout {
+  background: #fff8e0;
+  border-left: 4px solid var(--orange);
+  border-radius: var(--radius-sm);
+  color: var(--ink-2);
+  margin: 1.5rem 0;
+  padding: 1rem 1.25rem;
+}
+
+.article .faq details {
+  border-bottom: 1px solid var(--hairline);
+  padding: 0.75rem 0;
+}
+
+.article .faq summary {
+  color: var(--ink);
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.article .faq details p {
+  margin: 0.5rem 0 0;
+}
+
+.article .cta {
+  background: var(--mist);
+  border-radius: var(--radius-card);
+  margin: 2.5rem 0;
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.article .cta p {
+  margin: 0 0 1rem;
+}
+
+.article .cta a.btn {
+  background: var(--ink);
+  border-radius: var(--radius-btn);
+  color: var(--paper);
+  display: inline-block;
+  font-weight: 600;
+  padding: 0.65rem 1.25rem;
+  text-decoration: none;
+}
+
+.article .read-next {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  margin-top: 1rem;
+}
+
+.article .read-next a {
+  background: var(--mist);
+  border-radius: var(--radius-card);
+  color: var(--ink);
+  display: block;
+  padding: 1.25rem;
+  text-decoration: none;
+}
+
+.article .read-next a span {
+  color: var(--ink-3);
+  display: block;
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+}
+
+/* Index page cards */
+.article-list {
+  display: grid;
+  gap: 1rem;
+  list-style: none;
+  padding: 0;
+}
+
+.article-list a {
+  border: 1px solid var(--hairline);
+  border-radius: var(--radius-md);
+  color: var(--ink);
+  display: block;
+  padding: 1rem 1.25rem;
+  text-decoration: none;
+}
+
+.article-list a:hover {
+  border-color: var(--ink-3);
+}
+
+.article-list span {
+  color: var(--ink-3);
+  display: block;
+  font-size: 0.9375rem;
+  margin-top: 0.25rem;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='light']) .article .callout {
+    background: #2a2414;
+  }
+}
+
+:root[data-theme='dark'] .article .callout {
+  background: #2a2414;
+}
+
+.article td code {
+  word-break: break-all;
+}
+
+.article kbd {
+  background: var(--mist);
+  border: 1px solid var(--hairline);
+  border-radius: 4px;
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+  padding: 0.05rem 0.35rem;
+}
+
+.article .lang-links {
+  color: var(--ink-3);
+  font-size: 0.875rem;
+  margin: -1.25rem 0 2rem;
+}
+
+.article .lang-links span[aria-current] {
+  color: var(--ink);
+  font-weight: 600;
+}

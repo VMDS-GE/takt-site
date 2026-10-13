@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Regrouper les onglets Chrome par catégorie ou avec l'IA locale, sans règles — Takt</title>
+    <meta
+      name="description"
+      content="Regroupez tous vos onglets Chrome ouverts par catégorie (20 catégories intégrées) ou avec le modèle d'IA local de Chrome, sans écrire une seule règle. Le fonctionnement de chaque mode, la limite gratuite de 5 groupes, et la comparaison avec « Organize tabs » de Chrome."
+    />
+    <link rel="canonical" href="https://taktabs.com/fr/blog/group-tabs-by-category-or-ai/" />
+<!-- TAKT-LANG:head -->
+<link rel="alternate" hreflang="en" href="https://taktabs.com/blog/group-tabs-by-category-or-ai/" />
+<link rel="alternate" hreflang="fr" href="https://taktabs.com/fr/blog/group-tabs-by-category-or-ai/" />
+<link rel="alternate" hreflang="es" href="https://taktabs.com/es/blog/group-tabs-by-category-or-ai/" />
+<link rel="alternate" hreflang="it" href="https://taktabs.com/it/blog/group-tabs-by-category-or-ai/" />
+<link rel="alternate" hreflang="de" href="https://taktabs.com/de/blog/group-tabs-by-category-or-ai/" />
+<link rel="alternate" hreflang="pt" href="https://taktabs.com/pt/blog/group-tabs-by-category-or-ai/" />
+<link rel="alternate" hreflang="x-default" href="https://taktabs.com/blog/group-tabs-by-category-or-ai/" />
+<!-- /TAKT-LANG:head -->
+    <meta property="og:type" content="article" />
+    <meta property="og:locale" content="fr_FR" />
+    <meta property="og:title" content="Regrouper les onglets Chrome par catégorie ou avec l'IA locale" />
+    <meta property="og:description" content="Aucune règle à écrire. Choisissez Catégorie ou IA, et chaque onglet ouvert rejoint un groupe nommé." />
+    <meta property="og:url" content="https://taktabs.com/fr/blog/group-tabs-by-category-or-ai/" />
+    <meta property="og:image" content="https://taktabs.com/fr/blog/img/popup-home.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <link rel="icon" type="image/png" sizes="32x32" href="../../../assets/favicon-32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="../../../assets/favicon-16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="../../../assets/apple-touch-icon.png" />
+    <meta name="theme-color" content="#FF3B30" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../../../css/tokens.css" />
+    <link rel="stylesheet" href="../../../css/base.css" />
+    <link rel="stylesheet" href="../../../css/layout.css" />
+    <link rel="stylesheet" href="../../../css/blog.css" />
+    <link rel="stylesheet" href="../../../css/articles.css" />
+    <script src="../../../js/theme.js"></script>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Article",
+            "headline": "Regrouper les onglets Chrome par catégorie ou avec l'IA locale",
+            "description": "Regroupez tous vos onglets Chrome ouverts selon l'une des 20 catégories intégrées, ou par sujet avec le modèle d'IA local de Chrome, sans écrire de règles.",
+            "inLanguage": "fr",
+            "datePublished": "2026-10-08",
+            "dateModified": "2026-10-08",
+            "author": { "@type": "Person", "name": "Vitor" },
+            "publisher": { "@type": "Organization", "name": "Takt", "url": "https://taktabs.com" },
+            "image": "https://taktabs.com/fr/blog/img/popup-home.png",
+            "mainEntityOfPage": "https://taktabs.com/fr/blog/group-tabs-by-category-or-ai/"
+          },
+          {
+            "@type": "HowTo",
+            "name": "Regrouper les onglets Chrome par catégorie ou avec l'IA",
+            "step": [
+              { "@type": "HowToStep", "text": "Installez Takt depuis le Chrome Web Store." },
+              { "@type": "HowToStep", "text": "Ouvrez le popup de Takt et, sous Mode de regroupement, choisissez Par catégorie ou Par IA." },
+              { "@type": "HowToStep", "text": "Takt dégroupe vos onglets puis les regroupe selon le nouveau mode. Cliquez sur Regrouper les onglets (ou appuyez sur Alt+Shift+G) pour le relancer plus tard." }
+            ]
+          },
+          {
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "Le regroupement par catégorie ou par IA est-il gratuit ?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Oui. Les deux modes sont gratuits. En modes Catégorie et IA, le plan Free autorise jusqu'à 5 groupes d'onglets au total, toutes fenêtres Chrome confondues, en comptant les groupes créés à la main. Premium (3 $/mois ou 30 $/an) supprime la limite." }
+              },
+              {
+                "@type": "Question",
+                "name": "Le regroupement par IA de Takt envoie-t-il mes onglets à un serveur ?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Non. Takt utilise la Prompt API intégrée à Chrome, qui exécute le modèle sur votre appareil. Les titres des onglets et un court extrait du texte des pages ne vont qu'au modèle local." }
+              },
+              {
+                "@type": "Question",
+                "name": "Que se passe-t-il si le modèle d'IA de Chrome n'est pas disponible sur mon ordinateur ?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Takt se rabat sur un regroupement des onglets qui partagent des mots dans leur titre et leur nom de site. Le popup vous indique que l'IA est indisponible sur cet appareil, et les onglets sont tout de même regroupés." }
+              },
+              {
+                "@type": "Question",
+                "name": "Puis-je ajouter mes propres sites à une catégorie ?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Non. La liste des catégories est fixe. Les sites qu'elle ne connaît pas vont dans Other. Pour placer un site dans un groupe précis, utilisez plutôt le mode Par règles." }
+              }
+            ]
+          },
+          {
+            "@type": "SoftwareApplication",
+            "name": "Takt",
+            "applicationCategory": "BrowserApplication",
+            "operatingSystem": "Chrome",
+            "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <header id="site-header"></header>
+
+    <main class="blog-main">
+      <article class="blog-post article">
+        <p class="eyebrow">Regroupement par catégorie et par IA</p>
+        <h1 class="blog-post-title">Regrouper les onglets Chrome par catégorie ou avec l'IA, sans règles</h1>
+        <p class="lede">Vous pouvez regrouper tous vos onglets Chrome ouverts sans écrire de règle. Choisissez <strong>Catégorie</strong> et Takt range chaque onglet dans l'une des 20 catégories nommées. Choisissez <strong>IA</strong> et le modèle local de Chrome regroupe les onglets par sujet.</p>
+        <p class="blog-post-meta">Mis à jour le 8 octobre 2026 · 6 min de lecture</p>
+<!-- TAKT-LANG:nav -->
+<p class="lang-links"><a href="../../../blog/group-tabs-by-category-or-ai/" hreflang="en" lang="en">English</a> · <span aria-current="true">Français</span> · <a href="../../../es/blog/group-tabs-by-category-or-ai/" hreflang="es" lang="es">Español</a> · <a href="../../../it/blog/group-tabs-by-category-or-ai/" hreflang="it" lang="it">Italiano</a> · <a href="../../../de/blog/group-tabs-by-category-or-ai/" hreflang="de" lang="de">Deutsch</a> · <a href="../../../pt/blog/group-tabs-by-category-or-ai/" hreflang="pt" lang="pt">Português</a></p>
+<!-- /TAKT-LANG:nav -->
+
+        <div class="blog-post-body">
+          <div class="tldr">
+            <p><strong>En bref :</strong> ouvrez le popup de Takt, choisissez <em>Par catégorie</em> ou <em>Par IA</em> sous Mode de regroupement, et Takt regroupe aussitôt vos onglets.</p>
+            <ul>
+              <li>Catégorie : 20 catégories fixes comme Development, Social et News. Les sites inconnus vont dans « Other ».</li>
+              <li>IA : le modèle intégré à Chrome nomme les groupes. Il s'exécute sur votre appareil.</li>
+              <li>Les deux sont gratuits, jusqu'à 5 groupes toutes fenêtres confondues. Premium supprime la limite.</li>
+            </ul>
+          </div>
+
+          <h2 id="modes">Quels modes de regroupement propose Takt ?</h2>
+          <p>Quatre, et un seul est actif à la fois. Vous le choisissez dans le popup, sous <strong>Mode de regroupement</strong>.</p>
+          <table>
+            <thead><tr><th>Mode</th><th>Comment les onglets sont regroupés</th><th>Configuration</th></tr></thead>
+            <tbody>
+              <tr><td>Par règles (par défaut)</td><td>Selon les règles d'URL que vous écrivez</td><td>Une règle par groupe</td></tr>
+              <tr><td>Par catégorie</td><td>Par site, dans 20 catégories intégrées</td><td>Aucune</td></tr>
+              <tr><td>Par IA</td><td>Par sujet, avec des noms fournis par le modèle local de Chrome</td><td>Aucune</td></tr>
+              <tr><td>Aucun</td><td>Takt ne regroupe pas les onglets</td><td>Aucune</td></tr>
+            </tbody>
+          </table>
+          <p>Quand vous changez de mode, Takt dégroupe vos onglets puis les regroupe selon le nouveau mode. Votre choix est enregistré. Choisir Aucun dégroupe tout et arrête le regroupement.</p>
+
+          <figure class="narrow">
+            <img src="../img/popup-home.png" alt="Volet Accueil du popup de Takt avec la section Mode de regroupement et ses quatre options : Par règles, Par catégorie, Par IA et Aucun, au-dessus des boutons d'Actions rapides Regrouper les onglets, Dégrouper tout, Réduire tout et Trier par domaine" width="420" loading="lazy" />
+            <figcaption>Le sélecteur de mode de regroupement dans le popup. Regrouper les onglets lance le mode choisi.</figcaption>
+          </figure>
+
+          <h2 id="category">Comment fonctionne le regroupement par catégorie ?</h2>
+          <p>Takt ne regarde que le nom d'hôte de chaque onglet. Il consulte une liste intégrée de 77 sites connus, chacun associé à l'une des 20 catégories :</p>
+          <p>Development, AI Tools, Docs, Productivity, Communication, Finance, Design, Shopping, Social, Entertainment, News, Gaming, Sports, Travel, Health, Food, Science, Career, Education et Cloud.</p>
+          <ul>
+            <li><strong>Les sous-domaines héritent.</strong> docs.github.com ne figure pas dans la liste : Takt essaie donc github.com et le range dans Development.</li>
+            <li><strong>L'hôte le plus précis l'emporte.</strong> aws.amazon.com va dans Cloud. amazon.com va dans Shopping.</li>
+            <li><strong>Tout le reste va dans Other.</strong> Cela inclut l'intranet de votre entreprise, les pages Nouvel onglet et tout site que la liste ne connaît pas. Other est toujours le dernier groupe.</li>
+          </ul>
+          <p>La catégorie la plus fournie devient le premier groupe, puis la suivante, et ainsi de suite. Les nouveaux onglets rejoignent le groupe de leur catégorie pendant leur chargement. Dans ce mode, Takt ne lit aucun contenu de page.</p>
+
+          <h2 id="ai">Comment fonctionne le regroupement par IA ?</h2>
+          <p>Takt envoie le titre de chaque onglet et jusqu'à 500 caractères du texte de sa page à la Prompt API intégrée à Chrome. Le modèle s'exécute dans Chrome, sur votre machine. Il renvoie un nom court par sujet, et Takt construit les groupes.</p>
+          <ul>
+            <li>Un groupe compte au moins 2 onglets. Un onglet sans correspondance reste hors groupe.</li>
+            <li>Chaque exécution porte sur 100 onglets au maximum.</li>
+            <li>Les noms viennent du modèle : ils peuvent changer d'une exécution à l'autre.</li>
+            <li>Lire le texte des pages nécessite la permission facultative « Accès à tous les sites web » de Takt. Sans elle, Takt regroupe d'après les titres seulement et l'indique dans le popup.</li>
+          </ul>
+          <p>Le modèle ne s'exécute pas à chaque nouvel onglet. En mode IA, les onglets ouverts ensuite attendent le prochain clic sur <strong>Regrouper les onglets</strong> ou <kbd>Alt+Shift+G</kbd>.</p>
+
+          <h2 id="download">Que se passe-t-il la première fois que j'utilise le mode IA ?</h2>
+          <p>Chrome devra peut-être d'abord télécharger son modèle local. Takt lance le téléchargement quand vous cliquez sur Regrouper les onglets et affiche la progression dans le popup : « Préparation du modèle IA… », puis « Téléchargement du modèle IA (N%)… », puis « Modèle IA prêt. Regroupement des onglets… ». Le regroupement se poursuit tout seul quand le modèle est prêt.</p>
+
+          <h2 id="fallback">Et si mon ordinateur ne peut pas exécuter le modèle d'IA de Chrome ?</h2>
+          <p>Takt regroupe quand même vos onglets. Il se rabat sur une méthode par similarité qui regroupe les onglets partageant des mots dans leur titre et leur nom de site, et le popup affiche « IA indisponible sur cet appareil. »</p>
+          <p>La même solution de repli s'applique si le modèle met trop de temps : 2 minutes pour se charger, ou 8 secondes pour répondre. Elle gère aussi les nouveaux onglets en mode IA : un nouvel onglet rejoint le groupe existant le plus proche, et n'en crée jamais de nouveau.</p>
+
+          <h2 id="cap">Qu'est-ce que la limite gratuite de 5 groupes ?</h2>
+          <p>Avec le plan Free, les modes Catégorie et IA créent au plus 5 groupes d'onglets. La limite compte tous les groupes d'onglets ouverts dans Chrome, toutes fenêtres confondues, y compris ceux que vous avez créés à la main.</p>
+          <ul>
+            <li>Si une exécution dépasse la limite, Takt garde les groupes les plus gros et laisse le reste hors groupe.</li>
+            <li>Si vous avez déjà 5 groupes, le popup affiche « You've hit the 5-group limit. Ungroup some tabs to create more. »</li>
+            <li>Le mode Par règles a sa propre limite gratuite, de 5 règles.</li>
+          </ul>
+          <p>Premium (3 $/mois ou 30 $/an) supprime la limite de groupes.</p>
+
+          <h2 id="chrome">Quelle différence avec « Organize tabs » de Chrome ?</h2>
+          <p>Depuis Chrome 146, un clic droit sur un onglet propose d'organiser les onglets similaires. La fonction utilise Gemini Nano sur votre appareil, suggère des noms de groupes, ne coûte rien et ne demande aucune extension. Pour un rangement ponctuel, cela peut suffire.</p>
+          <table>
+            <thead><tr><th></th><th>Fonction intégrée de Chrome</th><th>Takt Catégorie</th><th>Takt IA</th></tr></thead>
+            <tbody>
+              <tr><td>Quand le regroupement a lieu</td><td>Quand vous le demandez</td><td>Avec Regrouper les onglets, et pour chaque nouvel onglet pendant son chargement</td><td>Avec Regrouper les onglets</td></tr>
+              <tr><td>Noms des groupes</td><td>Suggérés par le modèle</td><td>Fixes : 20 catégories + Other</td><td>Suggérés par le modèle</td></tr>
+              <tr><td>Exécution sur l'appareil</td><td>Oui</td><td>Oui, sans modèle</td><td>Oui</td></tr>
+              <tr><td>Passer à vos propres règles</td><td>Non</td><td colspan="2">Oui, en un clic vers le mode Par règles</td></tr>
+              <tr><td>Prix</td><td>Gratuit</td><td colspan="2">Gratuit jusqu'à 5 groupes ; illimité avec Premium</td></tr>
+            </tbody>
+          </table>
+
+          <h2 id="limits">Les limites des modes Catégorie et IA</h2>
+          <ul>
+            <li><strong>La liste des catégories est fixe.</strong> Impossible d'ajouter un site ou de renommer une catégorie. Si vous renommez un groupe dans Chrome, Takt reprend le nom intégré à l'exécution suivante.</li>
+            <li><strong>Les couleurs se répètent.</strong> 20 catégories se partagent les 8 couleurs de groupe de Chrome. C'est le nom qui identifie un groupe.</li>
+            <li><strong>Les noms donnés par l'IA varient.</strong> Lancez-la deux fois et vous obtiendrez peut-être des noms différents.</li>
+            <li><strong>Les profils et les planifications ne s'appliquent pas.</strong> Ils ne fonctionnent qu'en mode Par règles.</li>
+          </ul>
+          <p>Si vous voulez github.com dans un groupe appelé « Code » à chaque fois, <a href="../auto-group-tabs-chrome/">écrivez une règle</a>. Vous ne savez pas quelles règles écrire ? <a href="../rule-suggestions/">Laissez Takt vous les suggérer</a>.</p>
+
+          <div class="cta">
+            <p>Choisissez un mode. 30 onglets en vrac deviennent cinq groupes nommés.</p>
+            <a class="btn" href="https://chromewebstore.google.com/detail/takt/plgfdnbgkjocmgegnkbihoeojcfphdic">Ajouter Takt à Chrome, gratuitement</a>
+          </div>
+
+          <h2 id="faq">Questions fréquentes</h2>
+          <div class="faq">
+            <details>
+              <summary>Le regroupement par catégorie ou par IA est-il gratuit ?</summary>
+              <p>Oui. Les deux sont gratuits, jusqu'à 5 groupes d'onglets au total toutes fenêtres confondues, en comptant les groupes créés à la main. Premium (3 $/mois ou 30 $/an) supprime la limite.</p>
+            </details>
+            <details>
+              <summary>Le regroupement par IA de Takt envoie-t-il mes onglets à un serveur ?</summary>
+              <p>Non. Il utilise la Prompt API intégrée à Chrome, qui s'exécute sur votre appareil. Voir <a href="../privacy-local-first/">comment Takt garde vos données en local</a>.</p>
+            </details>
+            <details>
+              <summary>Que se passe-t-il si le modèle d'IA de Chrome n'est pas disponible sur mon ordinateur ?</summary>
+              <p>Takt regroupe alors les onglets qui partagent des mots dans leur titre et leur nom de site, et vous indique que l'IA est indisponible sur cet appareil.</p>
+            </details>
+            <details>
+              <summary>Puis-je ajouter mes propres sites à une catégorie ?</summary>
+              <p>Non. La liste est fixe et les sites inconnus vont dans Other. Utilisez le mode Par règles pour envoyer un site dans un groupe que vous nommez.</p>
+            </details>
+          </div>
+
+          <h2 id="next">À lire ensuite</h2>
+          <div class="read-next">
+            <a href="../auto-group-tabs-chrome/">Regrouper les onglets avec vos propres règles<span>Une règle par site, appliquée à l'ouverture des onglets.</span></a>
+            <a href="../rule-suggestions/">Laissez Takt suggérer vos règles<span>D'après les sites que vous gardez déjà ouverts.</span></a>
+          </div>
+        </div>
+
+        <footer class="blog-post-footer">
+          <a href="../../../blog/">Tous les articles</a> · <a href="../../../docs/group-by-category/">Référence : Grouper par catégorie</a> · <a href="../../../docs/smart-group-ai/">Référence : Groupe intelligent avec IA</a>
+        </footer>
+      </article>
+    </main>
+
+    <footer id="site-footer"></footer>
+    <script src="../../../js/includes.js"></script>
+    <script src="../../../js/nav.js"></script>
+  </body>
+</html>

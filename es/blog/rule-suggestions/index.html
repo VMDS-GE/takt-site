@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sugerencias de reglas para agrupar pestañas: deja que Takt escriba tus primeras reglas — Takt</title>
+    <meta
+      name="description"
+      content="¿No sabes qué reglas escribir para agrupar pestañas? Takt te sugiere reglas a partir de los sitios que tienes abiertos, puede pedir más a la IA local de Chrome y te deja probar una regla antes de fiarte de ella."
+    />
+    <link rel="canonical" href="https://taktabs.com/es/blog/rule-suggestions/" />
+<!-- TAKT-LANG:head -->
+<link rel="alternate" hreflang="en" href="https://taktabs.com/blog/rule-suggestions/" />
+<link rel="alternate" hreflang="fr" href="https://taktabs.com/fr/blog/rule-suggestions/" />
+<link rel="alternate" hreflang="es" href="https://taktabs.com/es/blog/rule-suggestions/" />
+<link rel="alternate" hreflang="it" href="https://taktabs.com/it/blog/rule-suggestions/" />
+<link rel="alternate" hreflang="de" href="https://taktabs.com/de/blog/rule-suggestions/" />
+<link rel="alternate" hreflang="pt" href="https://taktabs.com/pt/blog/rule-suggestions/" />
+<link rel="alternate" hreflang="x-default" href="https://taktabs.com/blog/rule-suggestions/" />
+<!-- /TAKT-LANG:head -->
+    <meta property="og:type" content="article" />
+    <meta property="og:locale" content="es_ES" />
+    <meta property="og:title" content="Sugerencias de reglas para agrupar pestañas: deja que Takt escriba tus primeras reglas" />
+    <meta property="og:description" content="Takt detecta los sitios que mantienes abiertos y te ofrece una regla para cada uno. Pruébala, revisa la vista previa y mira cómo crece el número de coincidencias." />
+    <meta property="og:url" content="https://taktabs.com/es/blog/rule-suggestions/" />
+    <meta property="og:image" content="https://taktabs.com/es/blog/img/options-rules.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <link rel="icon" type="image/png" sizes="32x32" href="../../../assets/favicon-32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="../../../assets/favicon-16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="../../../assets/apple-touch-icon.png" />
+    <meta name="theme-color" content="#FF3B30" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../../../css/tokens.css" />
+    <link rel="stylesheet" href="../../../css/base.css" />
+    <link rel="stylesheet" href="../../../css/layout.css" />
+    <link rel="stylesheet" href="../../../css/blog.css" />
+    <link rel="stylesheet" href="../../../css/articles.css" />
+    <script src="../../../js/theme.js"></script>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Article",
+            "headline": "Sugerencias de reglas para agrupar pestañas: deja que Takt escriba tus primeras reglas",
+            "description": "Takt sugiere reglas para agrupar pestañas a partir de los sitios que tienes abiertos, ofrece sugerencias con IA local y te deja probar una regla y ver su vista previa antes de guardarla.",
+            "inLanguage": "es",
+            "datePublished": "2026-10-08",
+            "dateModified": "2026-10-08",
+            "author": { "@type": "Person", "name": "Vitor" },
+            "publisher": { "@type": "Organization", "name": "Takt", "url": "https://taktabs.com" },
+            "image": "https://taktabs.com/es/blog/img/options-rules.png",
+            "mainEntityOfPage": "https://taktabs.com/es/blog/rule-suggestions/"
+          },
+          {
+            "@type": "HowTo",
+            "name": "Crear una regla para agrupar pestañas a partir de una sugerencia",
+            "step": [
+              { "@type": "HowToStep", "text": "Abre el popup de Takt y ve al panel Estadísticas." },
+              { "@type": "HowToStep", "text": "En un sitio sugerido, haz clic en Crear regla. Se abre el editor de reglas con el sitio ya rellenado." },
+              { "@type": "HowToStep", "text": "Haz clic en Vista previa de pestañas coincidentes para ver qué pestañas abiertas captura; después ponle nombre al grupo, elige un color y guarda." }
+            ]
+          },
+          {
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "¿Cómo decide Takt qué reglas sugerir?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Sugiere un sitio cuando tienes 3 o más pestañas abiertas de él, o cuando lo has abierto a menudo en los últimos 7 días (5 visitas, o visitas repartidas en 2 días), y todavía no lo cubre ninguna regla." }
+              },
+              {
+                "@type": "Question",
+                "name": "¿Las sugerencias de reglas son gratis?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Sí. Los usuarios del plan Free ven 3 sugerencias a la vez en el panel Estadísticas, y sugerencias de IA hasta el límite gratuito de 5 reglas. Premium (3 $/mes o 30 $/año) muestra todas las sugerencias y elimina el límite de reglas." }
+              },
+              {
+                "@type": "Question",
+                "name": "¿Las sugerencias de reglas con IA envían mis pestañas a algún sitio?",
+                "acceptedAnswer": { "@type": "Answer", "text": "No. Las sugerencias de IA usan la Prompt API integrada en Chrome, que se ejecuta en tu dispositivo. Al modelo local solo llega la lista de nombres de sitio de tus pestañas abiertas." }
+              },
+              {
+                "@type": "Question",
+                "name": "¿Puedo recuperar una sugerencia descartada?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Sí. Las sugerencias descartadas aparecen en la página Rules de las opciones de Takt, donde puedes restaurarlas." }
+              }
+            ]
+          },
+          {
+            "@type": "SoftwareApplication",
+            "name": "Takt",
+            "applicationCategory": "BrowserApplication",
+            "operatingSystem": "Chrome",
+            "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <header id="site-header"></header>
+
+    <main class="blog-main">
+      <article class="blog-post article">
+        <p class="eyebrow">Sugerencias de reglas</p>
+        <h1 class="blog-post-title">Sugerencias de reglas para agrupar pestañas: deja que Takt escriba tus primeras reglas</h1>
+        <p class="lede">La regla más difícil de escribir es la primera. Takt te sugiere reglas para agrupar pestañas a partir de los sitios que ya mantienes abiertos, así que empiezas desde tus propios hábitos y no desde un formulario en blanco.</p>
+        <p class="blog-post-meta">Actualizado el 8 de octubre de 2026 · 5 min de lectura</p>
+<!-- TAKT-LANG:nav -->
+<p class="lang-links"><a href="../../../blog/rule-suggestions/" hreflang="en" lang="en">English</a> · <a href="../../../fr/blog/rule-suggestions/" hreflang="fr" lang="fr">Français</a> · <span aria-current="true">Español</span> · <a href="../../../it/blog/rule-suggestions/" hreflang="it" lang="it">Italiano</a> · <a href="../../../de/blog/rule-suggestions/" hreflang="de" lang="de">Deutsch</a> · <a href="../../../pt/blog/rule-suggestions/" hreflang="pt" lang="pt">Português</a></p>
+<!-- /TAKT-LANG:nav -->
+
+        <div class="blog-post-body">
+          <div class="tldr">
+            <p><strong>Respuesta corta:</strong> abre el panel <strong>Estadísticas</strong> del popup de Takt. Cada tarjeta es un sitio que usas mucho y que aún no tiene regla. Haz clic en <em>Crear regla</em>, compruébala con <em>Vista previa de pestañas coincidentes</em> y guarda.</p>
+            <ul>
+              <li>Las sugerencias salen de tus pestañas abiertas y de tus visitas recientes, contadas en tu dispositivo.</li>
+              <li><em>Sugerir reglas</em> le pide a la IA local de Chrome que agrupe tus sitios abiertos en reglas.</li>
+              <li>El Probador de reglas y el número de coincidencias te muestran si una regla hace lo que querías.</li>
+            </ul>
+          </div>
+
+          <h2 id="where">¿De dónde salen las sugerencias de reglas?</h2>
+          <p>Takt está atento a los sitios que claramente merecen un grupo. Hay tres fuentes:</p>
+          <table>
+            <thead><tr><th>Fuente</th><th>Sugiere un sitio cuando</th><th>Dónde lo ves</th><th>Plan</th></tr></thead>
+            <tbody>
+              <tr><td>Pestañas abiertas</td><td>Hay 3 o más pestañas suyas abiertas o hibernadas</td><td>Popup → Estadísticas, Opciones → Rules</td><td>Free: 3 tarjetas a la vez</td></tr>
+              <tr><td>Visitas recientes</td><td>Lo has abierto 5 veces o más, o en visitas repartidas en 2 días o más, en los últimos 7 días</td><td>Popup → Estadísticas, Opciones → Rules</td><td>Free: 3 tarjetas a la vez</td></tr>
+              <tr><td>Sugerencias de IA</td><td>Haces clic en <em>Sugerir reglas</em></td><td>Opciones → Rules</td><td>Free, hasta el límite de 5 reglas</td></tr>
+            </tbody>
+          </table>
+          <p>Nunca se sugiere un sitio que ya cubre una regla de tipo <em>domain</em> o <em>contains</em>. Tampoco nada que hayas descartado.</p>
+
+          <h2 id="insights">¿Cómo funciona el panel Estadísticas?</h2>
+          <p>Cada tarjeta muestra un sitio y por qué aparece, por ejemplo "3 open tabs · 3 visits". Tiene dos botones:</p>
+          <ul>
+            <li><strong>Crear regla</strong> abre el editor de reglas con el sitio ya rellenado. No se guarda nada hasta que haces clic en Guardar.</li>
+            <li><strong>Ignorar</strong> oculta la tarjeta. Las sugerencias descartadas siguen apareciendo en la página Rules de las opciones, donde puedes restaurarlas.</li>
+          </ul>
+          <p>Los usuarios del plan Free ven las 3 primeras tarjetas y una línea como "1 patrón más encontrado". Premium (3 $/mes o 30 $/año) las muestra todas.</p>
+
+          <figure class="narrow">
+            <img src="../img/popup-insights-suggestions.png" alt="Panel Estadísticas del popup de Takt con tres tarjetas de sugerencia, github.com, en.wikipedia.org y reddit.com, cada una con 3 pestañas abiertas y 3 visitas y los botones Crear regla e Ignorar, seguidas de 1 patrón más encontrado y un enlace Actualiza para ver todo" width="420" loading="lazy" />
+            <figcaption>Estadísticas en el plan Free: las 3 primeras sugerencias, con el número de las restantes.</figcaption>
+          </figure>
+
+          <h2 id="visits">¿Qué registra Takt para hacer sugerencias?</h2>
+          <p>Solo nombres de sitio y recuentos. En el modo Reglas, cuando una pestaña nueva no coincide con ninguna de tus reglas, Takt suma uno al recuento de visitas de ese sitio. Guarda:</p>
+          <ul>
+            <li>el dominio, un recuento de visitas y la primera y la última vez que lo vio;</li>
+            <li>solo las entradas de los últimos 7 días, y como mucho 1.000 sitios;</li>
+            <li>nada de las ventanas de incógnito.</li>
+          </ul>
+          <p>Se guarda en el almacenamiento local de extensiones de Chrome y nunca sale de tu navegador. <em>Clear tab pattern history</em>, en Settings, lo borra. Si concedes el permiso opcional de historial de navegación, las cifras de visitas de cada tarjeta salen del propio historial de Chrome de los últimos 90 días.</p>
+
+          <h2 id="ai">¿Qué son las sugerencias de reglas con IA?</h2>
+          <p>En la página Rules de las opciones, <strong>Sugerir reglas</strong> envía la lista de sitios de tus pestañas abiertas a la Prompt API integrada en Chrome. El modelo se ejecuta en tu dispositivo, agrupa los sitios por tema y pone nombre a cada grupo. Solo entran nombres de sitio: ni títulos ni contenido de las páginas.</p>
+          <ul>
+            <li>Cada sugerencia tiene <em>Añadir regla</em> y <em>Descartar</em>. Añadir regla la guarda al momento, activada.</li>
+            <li>La primera vez puede tardar un minuto mientras Chrome prepara el modelo.</li>
+            <li>En un dispositivo que no puede ejecutar el modelo, verás "Las sugerencias de IA no están disponibles en este dispositivo."</li>
+            <li>En el plan Free, recibes tantas sugerencias como huecos de regla gratuitos te queden, de 5.</li>
+          </ul>
+
+          <h2 id="tester">¿Cómo pruebo una regla antes de fiarme de ella?</h2>
+          <p>Hay dos herramientas en la página Rules de las opciones:</p>
+          <ul>
+            <li><strong>Probador de reglas.</strong> Pega una URL y, si quieres, un título de página. Takt responde "Matches: <em>regla</em> → <em>grupo</em>" o "Sin regla coincidente". Marca <em>Incluir reglas desactivadas</em> para probar las reglas que has desactivado.</li>
+            <li><strong>Vista previa de pestañas coincidentes.</strong> Dentro del editor de reglas, muestra las pestañas abiertas que capturarían tus condiciones aún sin guardar, en todas las ventanas. Si no coincide ninguna, dice "Ninguna pestaña coincide con esta regla."</li>
+          </ul>
+
+          <figure>
+            <img src="../img/options-rules.png" alt="Página Rules de las opciones de Takt con el Probador de reglas (campo de URL, título de página opcional, casilla Incluir reglas desactivadas y botón Probar), el encabezado Sugerencias de IA con un botón Sugerir reglas y una lista de siete reglas en la que varias muestran un número de coincidencias, como 4 para Code y 3 para Research" width="700" loading="lazy" />
+            <figcaption>El Probador de reglas y las Sugerencias de IA están encima de tus reglas. Los números son recuentos de coincidencias.</figcaption>
+          </figure>
+
+          <h2 id="counts">¿Cómo sé que una regla funciona?</h2>
+          <p>Cada regla de la lista muestra cuántas pestañas ha llevado a su grupo. Una pestaña cuenta cuando la regla la saca de "sin agrupar".</p>
+          <p>La vista <strong>Stats</strong> añade los totales: pestañas organizadas, pestañas por día, tu regla principal y tus 10 reglas más usadas. Una regla que se queda en cero durante una semana merece un segundo vistazo con el Probador de reglas. <em>Restablecer estadísticas</em> pone los recuentos a cero.</p>
+
+          <h2 id="right-click">¿Puedo crear una regla desde la página en la que estoy? <span class="badge badge-premium">Premium</span></h2>
+          <p>Sí. Haz clic derecho en la página y elige <strong>Crear regla desde esta pestaña</strong>. Takt abre el editor de reglas con un patrón glob como <code>*://github.com/*</code> ya rellenado. Revísalo y guarda.</p>
+
+          <h2 id="limits">Lo que las sugerencias no hacen</h2>
+          <ul>
+            <li>Van sitio por sitio. Takt no te sugerirá "todas las pull requests" de todos los repositorios. Para eso, escribe una regla glob o regex (Premium).</li>
+            <li>Las sugerencias por pestañas abiertas necesitan 3 pestañas de un mismo sitio. Con dos no aparece ninguna tarjeta.</li>
+            <li>Las sugerencias de IA dependen del modelo local de Chrome. Puede que los equipos antiguos o poco potentes no las reciban.</li>
+            <li>Las sugerencias alimentan el modo Reglas. Si prefieres no escribir reglas, prueba la <a href="../group-tabs-by-category-or-ai/">agrupación por categoría o con IA</a>.</li>
+          </ul>
+
+          <div class="cta">
+            <p>Abre unas cuantas pestañas, como siempre. Deja que Takt te diga qué regla escribir.</p>
+            <a class="btn" href="https://chromewebstore.google.com/detail/takt/plgfdnbgkjocmgegnkbihoeojcfphdic">Añadir Takt a Chrome, gratis</a>
+          </div>
+
+          <h2 id="faq">Preguntas frecuentes</h2>
+          <div class="faq">
+            <details>
+              <summary>¿Cómo decide Takt qué reglas sugerir?</summary>
+              <p>Un sitio entra con 3 o más pestañas abiertas, o con 5 visitas (o visitas en 2 días) en los últimos 7 días, siempre que no lo cubra ninguna regla.</p>
+            </details>
+            <details>
+              <summary>¿Las sugerencias de reglas son gratis?</summary>
+              <p>Sí. Los usuarios del plan Free ven 3 tarjetas de Estadísticas a la vez y sugerencias de IA hasta el límite de 5 reglas. Premium (3 $/mes o 30 $/año) las muestra todas.</p>
+            </details>
+            <details>
+              <summary>¿Las sugerencias de reglas con IA envían mis pestañas a algún sitio?</summary>
+              <p>No. Al modelo local de Chrome solo llegan los nombres de sitio de tus pestañas abiertas. Consulta <a href="../privacy-local-first/">cómo mantiene Takt tus datos en local</a>.</p>
+            </details>
+            <details>
+              <summary>¿Puedo recuperar una sugerencia descartada?</summary>
+              <p>Sí. La página Rules de las opciones muestra las sugerencias descartadas, y ahí puedes restaurarlas.</p>
+            </details>
+          </div>
+
+          <h2 id="next">Sigue leyendo</h2>
+          <div class="read-next">
+            <a href="../auto-group-tabs-chrome/">Cómo escribir una regla de agrupación<span>Tipos de coincidencia, orden y cinco reglas para empezar.</span></a>
+            <a href="../profiles-and-schedules/">Reglas distintas para el trabajo y para casa<span>Perfiles que cambian según un horario.</span></a>
+          </div>
+        </div>
+
+        <footer class="blog-post-footer">
+          <a href="../../../blog/">Todos los artículos</a> · <a href="../../../docs/insights/">Referencia de Estadísticas</a> · <a href="../../../docs/rules/">Referencia de reglas</a>
+        </footer>
+      </article>
+    </main>
+
+    <footer id="site-footer"></footer>
+    <script src="../../../js/includes.js"></script>
+    <script src="../../../js/nav.js"></script>
+  </body>
+</html>

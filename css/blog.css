@@ -116,6 +116,60 @@
   padding-top: 1.5rem;
 }
 
+/* Blog index: sticky side menu listing the sections */
+.blog-main:has(.blog-index) {
+  max-width: var(--max-width-wide);
+}
+
+.blog-index {
+  display: grid;
+  grid-template-columns: 220px minmax(0, 1fr);
+  gap: 3rem;
+}
+
+.blog-sidebar {
+  position: sticky;
+  top: calc(var(--nav-height) + 1.5rem);
+  align-self: start;
+  border-right: 1px solid var(--line);
+  padding-right: 1.5rem;
+  margin-top: 0.5rem;
+}
+
+.blog-sidebar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.blog-sidebar a {
+  align-items: baseline;
+  border-radius: var(--radius-sm);
+  color: var(--ink-2);
+  display: flex;
+  font-size: 0.875rem;
+  gap: 0.5rem;
+  justify-content: space-between;
+  padding: 0.4rem 0.75rem;
+  text-decoration: none;
+}
+
+.blog-sidebar a:hover,
+.blog-sidebar a.active {
+  background: var(--paper-2);
+  color: var(--ink);
+}
+
+.blog-sidebar a.active {
+  font-weight: 600;
+}
+
+.blog-sidebar-count {
+  color: var(--ink-3);
+  font-size: 0.75rem;
+  font-weight: 400;
+}
+
 @media (max-width: 768px) {
   .blog-main {
     padding: 1rem;
@@ -131,6 +185,31 @@
 
   .blog-list-entry-title {
     font-size: 1rem;
+  }
+
+  .blog-index {
+    display: block;
+  }
+
+  /* On phones the menu becomes a row of tabs under the header */
+  .blog-sidebar {
+    background: var(--paper);
+    border-bottom: 1px solid var(--line);
+    border-right: none;
+    margin: 0 -1rem 1rem;
+    overflow-x: auto;
+    padding: 0.5rem 1rem;
+    top: var(--nav-height);
+    z-index: 5;
+  }
+
+  .blog-sidebar ul {
+    display: flex;
+    gap: 0.25rem;
+  }
+
+  .blog-sidebar a {
+    white-space: nowrap;
   }
 }
 
@@ -153,7 +232,7 @@
 
 .blog-list-entry-title {
   display: block;
-  color: var(--ink);
+  color: var(--link);
   font-size: 1.125rem;
   font-weight: 600;
   margin-bottom: 0.25rem;
@@ -171,4 +250,30 @@
   color: var(--ink-2);
   font-size: 0.9375rem;
   line-height: 1.6;
+}
+
+.blog-page-title {
+  color: var(--ink);
+  font-size: 2.25rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+  margin: 0;
+}
+
+.blog-section {
+  margin-top: 1.5rem;
+}
+
+.blog-eyebrow {
+  color: var(--accent);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  margin: 0 0 0.5rem;
+  text-transform: uppercase;
+}
+
+.blog-list-entry > a:hover .blog-list-entry-title {
+  text-decoration: underline;
 }

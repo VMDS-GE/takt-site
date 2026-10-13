@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rechercher dans les onglets ouverts de Chrome avec un raccourci clavier — Takt</title>
+    <meta
+      name="description"
+      content="Recherchez dans vos onglets Chrome ouverts au clavier : appuyez sur Alt+Shift+Space, tapez une partie d'un titre ou d'une URL, appuyez sur Entrée. Quick Switch trouve aussi les onglets en hibernation et, avec votre permission, votre historique. Plus la recherche gratuite du popup de Takt."
+    />
+    <link rel="canonical" href="https://taktabs.com/fr/blog/quick-switch-search-tabs/" />
+<!-- TAKT-LANG:head -->
+<link rel="alternate" hreflang="en" href="https://taktabs.com/blog/quick-switch-search-tabs/" />
+<link rel="alternate" hreflang="fr" href="https://taktabs.com/fr/blog/quick-switch-search-tabs/" />
+<link rel="alternate" hreflang="es" href="https://taktabs.com/es/blog/quick-switch-search-tabs/" />
+<link rel="alternate" hreflang="it" href="https://taktabs.com/it/blog/quick-switch-search-tabs/" />
+<link rel="alternate" hreflang="de" href="https://taktabs.com/de/blog/quick-switch-search-tabs/" />
+<link rel="alternate" hreflang="pt" href="https://taktabs.com/pt/blog/quick-switch-search-tabs/" />
+<link rel="alternate" hreflang="x-default" href="https://taktabs.com/blog/quick-switch-search-tabs/" />
+<!-- /TAKT-LANG:head -->
+    <meta property="og:type" content="article" />
+    <meta property="og:locale" content="fr_FR" />
+    <meta property="og:title" content="Rechercher dans les onglets ouverts de Chrome avec un raccourci clavier" />
+    <meta property="og:description" content="Alt+Shift+Space, tapez, Entrée. Recherchez dans les onglets ouverts, les onglets en hibernation et l'historique sans toucher à la souris." />
+    <meta property="og:url" content="https://taktabs.com/fr/blog/quick-switch-search-tabs/" />
+    <meta property="og:image" content="https://taktabs.com/fr/blog/img/quick-switch.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <link rel="icon" type="image/png" sizes="32x32" href="../../../assets/favicon-32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="../../../assets/favicon-16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="../../../assets/apple-touch-icon.png" />
+    <meta name="theme-color" content="#FF3B30" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../../../css/tokens.css" />
+    <link rel="stylesheet" href="../../../css/base.css" />
+    <link rel="stylesheet" href="../../../css/layout.css" />
+    <link rel="stylesheet" href="../../../css/blog.css" />
+    <link rel="stylesheet" href="../../../css/articles.css" />
+    <script src="../../../js/theme.js"></script>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Article",
+            "headline": "Rechercher dans les onglets ouverts de Chrome avec un raccourci clavier",
+            "description": "Appuyez sur Alt+Shift+Space, tapez une partie du titre ou de l'URL d'un onglet et appuyez sur Entrée. Quick Switch recherche dans les onglets ouverts, les onglets en hibernation et, avec votre permission, l'historique de navigation.",
+            "inLanguage": "fr",
+            "datePublished": "2026-10-08",
+            "dateModified": "2026-10-08",
+            "author": { "@type": "Person", "name": "Vitor" },
+            "publisher": { "@type": "Organization", "name": "Takt", "url": "https://taktabs.com" },
+            "image": "https://taktabs.com/fr/blog/img/quick-switch.png",
+            "mainEntityOfPage": "https://taktabs.com/fr/blog/quick-switch-search-tabs/"
+          },
+          {
+            "@type": "HowTo",
+            "name": "Rechercher un onglet Chrome et y accéder au clavier",
+            "step": [
+              { "@type": "HowToStep", "text": "Installez Takt et passez à Premium ; Quick Switch est une fonctionnalité Premium." },
+              { "@type": "HowToStep", "text": "Appuyez sur Alt+Shift+Space sur n'importe quelle page." },
+              { "@type": "HowToStep", "text": "Tapez une partie du titre ou de l'URL de l'onglet. La liste se filtre à chaque frappe." },
+              { "@type": "HowToStep", "text": "Utilisez les flèches haut et bas pour choisir un résultat et appuyez sur Entrée pour y accéder. Échap ferme la recherche." }
+            ]
+          },
+          {
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "Quel est le raccourci pour rechercher dans les onglets ouverts avec Takt ?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Alt+Shift+Space ouvre Quick Switch. Vous pouvez le modifier sur chrome://extensions/shortcuts." }
+              },
+              {
+                "@type": "Question",
+                "name": "Quick Switch fonctionne-t-il sur les pages chrome:// ?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Oui. Sur les pages où les extensions ne peuvent pas s'exécuter, comme les pages chrome://, les pages d'extension et le Chrome Web Store, Quick Switch s'ouvre dans une petite fenêtre de 560 × 480 au lieu de s'afficher sur la page." }
+              },
+              {
+                "@type": "Question",
+                "name": "Existe-t-il un moyen gratuit de rechercher dans les onglets avec Takt ?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Oui. Le volet Tabs du popup de Takt liste tous les onglets ouverts par groupe et comporte un champ de recherche. Il est gratuit. Quick Switch, le raccourci clavier, fait partie de Premium, à 3 $/mois ou 30 $/an." }
+              },
+              {
+                "@type": "Question",
+                "name": "Quick Switch recherche-t-il dans mon historique de navigation ?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Seulement si vous accordez la permission facultative d'accès à l'historique dans les réglages. Les résultats de l'historique apparaissent dès que vous tapez, 20 au maximum, et la recherche s'exécute dans Chrome." }
+              }
+            ]
+          },
+          {
+            "@type": "SoftwareApplication",
+            "name": "Takt",
+            "applicationCategory": "BrowserApplication",
+            "operatingSystem": "Chrome",
+            "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <header id="site-header"></header>
+
+    <main class="blog-main">
+      <article class="blog-post article">
+        <p class="eyebrow">Quick Switch</p>
+        <h1 class="blog-post-title">Rechercher dans les onglets ouverts de Chrome avec un raccourci clavier</h1>
+        <p class="lede">Pour rechercher dans vos onglets ouverts de Chrome au clavier, appuyez sur <kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>Space</kbd>, tapez quelques lettres du titre ou de l'adresse de l'onglet, puis appuyez sur Entrée. C'est Quick Switch, dans Takt. Il trouve aussi les onglets que vous avez mis en hibernation et, si vous l'autorisez, des pages de votre historique.</p>
+        <p class="blog-post-meta">Mis à jour le 8 octobre 2026 · 5 min de lecture</p>
+<!-- TAKT-LANG:nav -->
+<p class="lang-links"><a href="../../../blog/quick-switch-search-tabs/" hreflang="en" lang="en">English</a> · <span aria-current="true">Français</span> · <a href="../../../es/blog/quick-switch-search-tabs/" hreflang="es" lang="es">Español</a> · <a href="../../../it/blog/quick-switch-search-tabs/" hreflang="it" lang="it">Italiano</a> · <a href="../../../de/blog/quick-switch-search-tabs/" hreflang="de" lang="de">Deutsch</a> · <a href="../../../pt/blog/quick-switch-search-tabs/" hreflang="pt" lang="pt">Português</a></p>
+<!-- /TAKT-LANG:nav -->
+
+        <div class="blog-post-body">
+          <div class="tldr">
+            <p><strong>En bref :</strong> <kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>Space</kbd> ouvre un champ de recherche par-dessus la page. Tapez, utilisez les flèches, appuyez sur Entrée.</p>
+            <ul>
+              <li>Recherche dans les onglets ouverts, les onglets en hibernation et, si vous l'autorisez, l'historique de navigation.</li>
+              <li>Fonctionne aussi sur les pages <code>chrome://</code>, dans une petite fenêtre.</li>
+              <li>Quick Switch fait partie de Premium (3 $/mois ou 30 $/an). Le champ de recherche du volet Tabs du popup est gratuit.</li>
+            </ul>
+          </div>
+
+          <h2 id="why">Pourquoi est-ce si long de retrouver un onglet ?</h2>
+          <p>Au-delà d'une vingtaine d'onglets, la barre d'onglets de Chrome n'affiche plus guère que des favicons. Vous cherchez à l'icône, cliquez sur le mauvais onglet GitHub, recommencez.</p>
+          <p>Taper va plus vite que chercher des yeux. Vous vous souvenez de « la pull request sur le cache », pas de sa place dans la barre.</p>
+
+          <h2 id="how">Comment rechercher dans mes onglets ouverts au clavier ?</h2>
+          <ol class="steps">
+            <li>Appuyez sur <kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>Space</kbd>. Un champ de recherche s'ouvre par-dessus la page actuelle.</li>
+            <li>Tapez n'importe quelle partie du titre ou de l'URL. La recherche ignore la casse, et la liste se met à jour à chaque frappe.</li>
+            <li>Déplacez-vous avec <kbd>↑</kbd> et <kbd>↓</kbd>. La sélection reboucle aux extrémités.</li>
+            <li>Appuyez sur <kbd>Enter</kbd> pour y aller. Takt active l'onglet et met sa fenêtre au premier plan.</li>
+          </ol>
+          <p>Deux autres touches : <kbd>Tab</kbd> copie le titre du résultat sélectionné dans le champ de recherche, et <kbd>Esc</kbd> ferme le champ. Il se ferme aussi si vous cliquez en dehors ou changez de fenêtre.</p>
+
+          <figure>
+            <img src="../img/quick-switch.png" alt="Quick Switch de Takt avec un champ de recherche vide et une liste Onglets ouverts : des onglets Wikipedia, Reddit, YouTube, Hacker News, Chrome for Developers et MDN, chacun avec son URL et une pastille de la couleur de son groupe d'onglets, ainsi que des indications de touches pour naviguer, basculer et fermer" width="800" loading="lazy" />
+            <figcaption>Ouvert avec une requête vide, Quick Switch liste vos onglets, du plus récemment utilisé au plus ancien.</figcaption>
+          </figure>
+
+          <h2 id="results">Dans quoi Quick Switch recherche-t-il ?</h2>
+          <table>
+            <thead><tr><th>Source</th><th>Quand elle apparaît</th><th>Effet d'Entrée</th></tr></thead>
+            <tbody>
+              <tr><td>Onglets ouverts</td><td>Toujours ; du plus récemment utilisé au plus ancien, l'onglet actuel en dernier</td><td>Bascule vers l'onglet</td></tr>
+              <tr><td>Onglets en hibernation</td><td>Toujours, 50 au maximum</td><td>Réactive l'onglet là où il était</td></tr>
+              <tr><td>Historique</td><td>Dès que vous tapez, avec la permission d'accès à l'historique ; 20 au maximum</td><td>L'ouvre dans un nouvel onglet</td></tr>
+            </tbody>
+          </table>
+          <p>L'ordre est fixe : onglets ouverts, puis onglets en hibernation, puis historique. L'historique écarte les pages déjà ouvertes ou en hibernation, et ne liste jamais les pages <code>chrome://</code> ou d'extension.</p>
+
+          <figure>
+            <img src="../img/quick-switch-hibernated.png" alt="Quick Switch avec la requête « the » : deux onglets GitHub ouverts dont le titre contient « The », puis The Verge, un onglet en veille du groupe News, avec la mention réactiver" width="800" loading="lazy" />
+            <figcaption>Un onglet en hibernation apparaît dans la même recherche. Entrée le réactive.</figcaption>
+          </figure>
+          <p>Cette dernière ligne montre l'intérêt d'avoir la recherche et l'<a href="../hibernate-tabs-free-memory/">hibernation</a> dans la même extension. Vous pouvez fermer des onglets sans craindre de les perdre, car il suffit de taper leur nom pour les retrouver.</p>
+
+          <h2 id="chrome-pages">Fonctionne-t-il sur les pages chrome:// ?</h2>
+          <p>Oui. Les extensions ne peuvent pas s'afficher sur les pages propres à Chrome : Quick Switch s'y ouvre donc dans une fenêtre de 560 × 480. Cela concerne les pages <code>chrome://</code>, <code>chrome-extension://</code>, <code>about:</code> et <code>chrome-untrusted://</code>, ainsi que le Chrome Web Store. Les touches sont les mêmes.</p>
+
+          <h2 id="free">Existe-t-il un moyen gratuit de rechercher dans les onglets ?</h2>
+          <p>Oui : le volet <strong>Tabs</strong> du popup de Takt. Il liste chaque onglet ouvert sous son groupe d'onglets, avec les onglets hors groupe dans une section à part. Tapez dans le champ de recherche pour filtrer par titre ou par URL ; <kbd>Esc</kbd> l'efface. Cliquez sur une ligne pour activer cet onglet et mettre sa fenêtre au premier plan.</p>
+          <figure class="narrow">
+            <img src="../img/popup-tabs.png" alt="Popup de Takt sur le volet Tabs : un champ Search tabs au-dessus des onglets ouverts listés sous leurs groupes Code, Docs, Entertainment, News et Research, chaque ligne avec un favicon, un titre et une URL abrégée" width="420" loading="lazy" />
+            <figcaption>Le volet Tabs du popup. Gratuit, onglets ouverts uniquement.</figcaption>
+          </figure>
+
+          <table>
+            <thead><tr><th></th><th>Volet Tabs du popup</th><th>Quick Switch</th></tr></thead>
+            <tbody>
+              <tr><td>Plan</td><td>Free</td><td>Premium</td></tr>
+              <tr><td>Comment l'ouvrir</td><td>Cliquez sur l'icône de Takt, puis sur Tabs</td><td><kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>Space</kbd></td></tr>
+              <tr><td>Onglets ouverts</td><td>Oui, par groupe</td><td>Oui, les plus récents d'abord</td></tr>
+              <tr><td>Onglets en hibernation</td><td>Non (ils ont leur propre volet)</td><td>Oui</td></tr>
+              <tr><td>Historique</td><td>Non</td><td>Avec permission</td></tr>
+              <tr><td>Souris nécessaire</td><td>Pour ouvrir et choisir</td><td>Non</td></tr>
+            </tbody>
+          </table>
+
+          <h2 id="shortcut">Puis-je changer le raccourci ?</h2>
+          <p>Oui. Allez sur <code>chrome://extensions/shortcuts</code>, trouvez Takt, cliquez sur le crayon à côté de Quick-switch et appuyez sur les touches de votre choix.</p>
+
+          <h2 id="privacy">Mon historique est-il envoyé quelque part ?</h2>
+          <p>Non. La recherche dans l'historique reste désactivée tant que vous n'accordez pas la permission facultative d'accès à l'historique dans <strong>Settings → Permissions</strong>. La recherche s'exécute dans Chrome, et vous pouvez révoquer la permission sur la même page. Sans elle, Quick Switch recherche toujours dans les onglets ouverts et en hibernation.</p>
+
+          <h2 id="limits">Ce que Quick Switch ne fait pas</h2>
+          <p>Il cherche exactement les lettres que vous tapez, n'importe où dans le titre ou l'URL. Il n'y a pas de recherche approximative : « gthub » ne trouve rien. Avec le plan Free, le raccourci ne fait rien ; utilisez plutôt le volet Tabs.</p>
+
+          <div class="cta">
+            <p>Arrêtez de chercher parmi les favicons. Tapez le nom de l'onglet.</p>
+            <a class="btn" href="https://chromewebstore.google.com/detail/takt/plgfdnbgkjocmgegnkbihoeojcfphdic">Ajouter Takt à Chrome</a>
+          </div>
+
+          <h2 id="faq">Questions fréquentes</h2>
+          <div class="faq">
+            <details>
+              <summary>Quel est le raccourci pour rechercher dans les onglets ouverts avec Takt ?</summary>
+              <p><kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>Space</kbd> ouvre Quick Switch. Modifiez-le sur <code>chrome://extensions/shortcuts</code>.</p>
+            </details>
+            <details>
+              <summary>Quick Switch fonctionne-t-il sur les pages chrome:// ?</summary>
+              <p>Oui. Sur les pages où les extensions ne peuvent pas s'exécuter, il s'ouvre dans une fenêtre de 560 × 480 au lieu de s'afficher par-dessus la page.</p>
+            </details>
+            <details>
+              <summary>Existe-t-il un moyen gratuit de rechercher dans les onglets avec Takt ?</summary>
+              <p>Oui. Le volet Tabs du popup liste les onglets ouverts par groupe et comporte un champ de recherche. Quick Switch fait partie de Premium, à 3 $/mois ou 30 $/an.</p>
+            </details>
+            <details>
+              <summary>Quick Switch recherche-t-il dans mon historique de navigation ?</summary>
+              <p>Seulement avec la permission facultative d'accès à l'historique. Les résultats de l'historique apparaissent dès que vous tapez, 20 au maximum, et la recherche s'exécute dans Chrome.</p>
+            </details>
+          </div>
+
+          <h2 id="next">À lire ensuite</h2>
+          <div class="read-next">
+            <a href="../hibernate-tabs-free-memory/">Mettre les onglets en veille pour libérer de la mémoire<span>Fermez des onglets maintenant, réactivez-les plus tard.</span></a>
+            <a href="../auto-group-tabs-chrome/">Regrouper automatiquement les onglets dans Chrome<span>Des règles qui rangent chaque nouvel onglet.</span></a>
+          </div>
+        </div>
+
+        <footer class="blog-post-footer">
+          <a href="../../../blog/">Tous les articles</a> · <a href="../../../docs/quick-switch/">Référence : Quick Switch</a>
+        </footer>
+      </article>
+    </main>
+
+    <footer id="site-footer"></footer>
+    <script src="../../../js/includes.js"></script>
+    <script src="../../../js/nav.js"></script>
+  </body>
+</html>

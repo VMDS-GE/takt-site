@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Come evitare le schede duplicate in Chrome — Takt</title>
+    <meta
+      name="description"
+      content="Chrome apre la stessa pagina in tutte le schede che vuoi. Ecco come bloccare le schede duplicate mentre si aprono, scegliere cosa conta come stesso URL e chiudere quelle già aperte."
+    />
+    <link rel="canonical" href="https://taktabs.com/it/blog/prevent-duplicate-tabs/" />
+<!-- TAKT-LANG:head -->
+<link rel="alternate" hreflang="en" href="https://taktabs.com/blog/prevent-duplicate-tabs/" />
+<link rel="alternate" hreflang="fr" href="https://taktabs.com/fr/blog/prevent-duplicate-tabs/" />
+<link rel="alternate" hreflang="es" href="https://taktabs.com/es/blog/prevent-duplicate-tabs/" />
+<link rel="alternate" hreflang="it" href="https://taktabs.com/it/blog/prevent-duplicate-tabs/" />
+<link rel="alternate" hreflang="de" href="https://taktabs.com/de/blog/prevent-duplicate-tabs/" />
+<link rel="alternate" hreflang="pt" href="https://taktabs.com/pt/blog/prevent-duplicate-tabs/" />
+<link rel="alternate" hreflang="x-default" href="https://taktabs.com/blog/prevent-duplicate-tabs/" />
+<!-- /TAKT-LANG:head -->
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Come evitare le schede duplicate in Chrome" />
+    <meta property="og:description" content="Apri una pagina già aperta e Takt ti porta all'originale. Attivo per impostazione predefinita, gratuito." />
+    <meta property="og:url" content="https://taktabs.com/it/blog/prevent-duplicate-tabs/" />
+    <meta property="og:image" content="https://taktabs.com/it/blog/img/popup-home.png" />
+    <meta property="og:locale" content="it_IT" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <link rel="icon" type="image/png" sizes="32x32" href="../../../assets/favicon-32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="../../../assets/favicon-16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="../../../assets/apple-touch-icon.png" />
+    <meta name="theme-color" content="#FF3B30" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../../../css/tokens.css" />
+    <link rel="stylesheet" href="../../../css/base.css" />
+    <link rel="stylesheet" href="../../../css/layout.css" />
+    <link rel="stylesheet" href="../../../css/blog.css" />
+    <link rel="stylesheet" href="../../../css/articles.css" />
+    <script src="../../../js/theme.js"></script>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Article",
+            "headline": "Come evitare le schede duplicate in Chrome",
+            "description": "Blocca le schede duplicate mentre si aprono, scegli cosa conta come stesso URL e chiudi i duplicati già aperti.",
+            "inLanguage": "it",
+            "datePublished": "2026-10-08",
+            "dateModified": "2026-10-08",
+            "author": { "@type": "Person", "name": "Vitor" },
+            "publisher": { "@type": "Organization", "name": "Takt", "url": "https://taktabs.com" },
+            "image": "https://taktabs.com/it/blog/img/popup-home.png",
+            "mainEntityOfPage": "https://taktabs.com/it/blog/prevent-duplicate-tabs/"
+          },
+          {
+            "@type": "HowTo",
+            "name": "Evitare le schede duplicate in Chrome",
+            "step": [
+              { "@type": "HowToStep", "text": "Installa Takt dal Chrome Web Store. La prevenzione dei duplicati è attiva per impostazione predefinita." },
+              { "@type": "HowToStep", "text": "Per cambiare cosa conta come duplicato, apri la pagina delle opzioni di Takt, vai su Settings, Duplicate Prevention, e scegli una strategia di confronto degli URL." },
+              { "@type": "HowToStep", "text": "Per eliminare i duplicati già aperti, fai clic su Chiudi duplicati nel popup di Takt." }
+            ]
+          },
+          {
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "Chrome può evitare le schede duplicate da solo?",
+                "acceptedAnswer": { "@type": "Answer", "text": "No. Chrome non ha un'impostazione per bloccare le schede duplicate. Ogni nuova scheda viene aperta in modo indipendente, quindi serve un'estensione come Takt." }
+              },
+              {
+                "@type": "Question",
+                "name": "La prevenzione dei duplicati di Takt è gratuita?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Sì. La prevenzione dei duplicati, tutte e cinque le strategie di confronto degli URL e Chiudi duplicati sono gratuite, senza limiti." }
+              },
+              {
+                "@type": "Question",
+                "name": "Come apro una scheda duplicata di proposito?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Fai clic destro sul link e scegli Apri in nuova scheda (consenti duplicato), oppure fai clic su Apri comunque nell'avviso che Takt mostra dopo averne bloccata una." }
+              },
+              {
+                "@type": "Question",
+                "name": "Funziona in tutte le modalità di raggruppamento?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Sì. La prevenzione dei duplicati funziona nelle modalità Per regole, Per categoria, Per IA e Nessuno." }
+              }
+            ]
+          },
+          {
+            "@type": "SoftwareApplication",
+            "name": "Takt",
+            "applicationCategory": "BrowserApplication",
+            "operatingSystem": "Chrome",
+            "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <header id="site-header"></header>
+
+    <main class="blog-main">
+      <article class="blog-post article">
+        <p class="eyebrow">Prevenzione duplicati</p>
+        <h1 class="blog-post-title">Come evitare le schede duplicate in Chrome</h1>
+        <p class="lede">Per evitare le schede duplicate in Chrome serve un'estensione: Chrome da solo apre la stessa pagina in dieci schede se fai clic dieci volte. Takt controlla ogni nuova scheda mentre si apre. Se la pagina è già aperta, chiude la nuova scheda e ti porta all'originale.</p>
+        <p class="blog-post-meta">Aggiornato l'8 ottobre 2026 · 5 min di lettura</p>
+<!-- TAKT-LANG:nav -->
+<p class="lang-links"><a href="../../../blog/prevent-duplicate-tabs/" hreflang="en" lang="en">English</a> · <a href="../../../fr/blog/prevent-duplicate-tabs/" hreflang="fr" lang="fr">Français</a> · <a href="../../../es/blog/prevent-duplicate-tabs/" hreflang="es" lang="es">Español</a> · <span aria-current="true">Italiano</span> · <a href="../../../de/blog/prevent-duplicate-tabs/" hreflang="de" lang="de">Deutsch</a> · <a href="../../../pt/blog/prevent-duplicate-tabs/" hreflang="pt" lang="pt">Português</a></p>
+<!-- /TAKT-LANG:nav -->
+
+        <div class="blog-post-body">
+          <div class="tldr">
+            <p><strong>In breve:</strong> installa Takt. La prevenzione dei duplicati è attiva per impostazione predefinita e gratuita. Apri un link già aperto in un'altra scheda e finisci invece sulla scheda esistente.</p>
+            <ul>
+              <li>5 strategie di confronto degli URL decidono cosa conta come "la stessa pagina". Quella predefinita ignora il <code>#frammento</code>.</li>
+              <li>Ti serve comunque il duplicato? Fai clic destro sul link, oppure fai clic su <em>Apri comunque</em>.</li>
+              <li><strong>Chiudi duplicati</strong> ripulisce la finestra corrente con un clic.</li>
+            </ul>
+          </div>
+
+          <h2 id="why">Perché Chrome apre schede duplicate?</h2>
+          <p>Chrome tratta ogni nuova scheda come una richiesta separata. Non controlla mai se quella pagina è già aperta. Così la stessa dashboard, lo stesso ticket o lo stesso documento si accumulano dai link in posta, chat e risultati di ricerca.</p>
+          <p>Ogni copia è una pagina completa che continua a funzionare. Per chiuderla a mano devi prima trovarla.</p>
+
+          <h2 id="how">Cosa succede quando Takt blocca un duplicato?</h2>
+          <ol class="steps">
+            <li>Apri un link a una pagina già aperta in un'altra scheda.</li>
+            <li>Takt chiude la nuova scheda.</li>
+            <li>Ti porta alla scheda esistente, in qualunque finestra si trovi.</li>
+            <li>Il popup mostra "Duplicato bloccato" con un pulsante <strong>Apri comunque</strong> per 10 secondi.</li>
+          </ol>
+          <p>Se hai concesso a Takt l'autorizzazione facoltativa "Accesso a tutti i siti web", compare anche un avviso sulla pagina: "Takt ha rilevato un URL duplicato e ha cambiato a questa scheda", con <em>Ignora</em> e <em>Apri comunque</em>.</p>
+          <p>Il controllo funziona in tutte le modalità di raggruppamento: Per regole, Per categoria, Per IA e Nessuno. Guarda solo le schede mentre si aprono. Se in una scheda esistente navighi verso una pagina aperta altrove, non scatta.</p>
+
+          <figure class="narrow">
+            <img src="../img/popup-home.png" alt="Riquadro Home del popup di Takt con un banner giallo Duplicato bloccato per en.wikipedia.org/wiki/Takt_time e un pulsante Apri comunque, sopra le sezioni Modalità di raggruppamento e Azioni rapide" width="420" loading="lazy" />
+            <figcaption>Dopo un blocco, il popup indica la pagina e offre Apri comunque.</figcaption>
+          </figure>
+
+          <h2 id="same-url">Cosa conta come stesso URL?</h2>
+          <p>Prima di tutto, Takt normalizza ogni URL allo stesso modo. Toglie <code>www.</code>, rimuove la barra finale e decodifica la codifica percentuale innocua, come <code>%41</code> in <code>A</code>. Quindi <code>https://www.example.com/docs/</code> e <code>https://example.com/docs</code> sono la stessa pagina.</p>
+          <p>Poi la strategia di confronto decide quanto essere severi. La scegli in Opzioni → Settings → Duplicate Prevention.</p>
+          <table>
+            <thead><tr><th>Strategia</th><th>Confronta</th><th>Considerati uguali</th></tr></thead>
+            <tbody>
+              <tr><td>Exact URL</td><td>Tutto, con i parametri di query ordinati</td><td><code>?a=1&amp;b=2</code> e <code>?b=2&amp;a=1</code></td></tr>
+              <tr><td>Ignore fragment (#hash) <span class="badge">Predefinita</span></td><td>Tutto tranne il <code>#frammento</code></td><td><code>/page#top</code> e <code>/page#bottom</code></td></tr>
+              <tr><td>Ignore query string</td><td>Schema, host e percorso</td><td><code>/page?ref=mail</code> e <code>/page?ref=chat</code></td></tr>
+              <tr><td>Ignore query + fragment</td><td>Schema, host e percorso</td><td>Come sopra</td></tr>
+              <tr><td>Origin + path only</td><td>Schema, host e percorso</td><td>Come sopra</td></tr>
+            </tbody>
+          </table>
+          <p>Nella versione attuale, le ultime tre confrontano gli URL allo stesso modo. Scegline una qualsiasi quando vuoi ignorare i parametri di tracciamento.</p>
+          <p>Attenzione alle strategie più permissive sulle pagine di ricerca e sulle app. <code>/search?q=chairs</code> e <code>/search?q=tables</code> hanno lo stesso percorso, quindi ignorando la query vengono trattate come un'unica pagina.</p>
+
+          <figure>
+            <img src="../img/settings-duplicate-prevention.png" alt="Settings di Takt, sezione Duplicate Prevention con la casella Enable duplicate tab prevention spuntata e il menu della strategia di confronto degli URL impostato su Ignore fragment (#hash)" width="700" loading="lazy" />
+            <figcaption>L'interruttore generale e la strategia predefinita, in Opzioni → Settings.</figcaption>
+          </figure>
+
+          <h2 id="allow">Come apro un duplicato di proposito?</h2>
+          <ul>
+            <li><strong>Fai clic destro sul link</strong> e scegli <em>Apri in nuova scheda (consenti duplicato)</em>. Funziona su qualsiasi pagina.</li>
+            <li><strong>Fai clic su Apri comunque</strong> nell'avviso sulla pagina o nel popup, subito dopo un blocco.</li>
+            <li><strong>Fai Shift+clic sul link</strong>, in modalità Per regole, sulle pagine a cui Takt ha accesso.</li>
+          </ul>
+          <p>Oppure togli la spunta a <em>Enable duplicate tab prevention</em> in Settings per disattivare del tutto la funzione.</p>
+
+          <h2 id="close">Come chiudo le schede duplicate già aperte?</h2>
+          <p>Fai clic su <strong>Chiudi duplicati</strong> nel riquadro Home del popup. Takt analizza la finestra corrente con la tua strategia di confronto e tiene la prima scheda di ogni pagina, contando da sinistra. Le altre si chiudono subito, senza conferma, e il popup indica quante ne ha chiuse. Il pulsante è grigio quando non c'è niente da chiudere.</p>
+
+          <h2 id="per-rule">Un sito può usare una strategia diversa?</h2>
+          <p>Sì, in modalità Per regole. Apri una regola, spunta <strong>Prevent duplicate tabs in this group</strong> e scegli una strategia di confronto degli URL per le schede di quella regola.</p>
+          <p>Serve per una single-page app in cui ogni <code>#frammento</code> è una vista diversa: imposta quella regola su <em>Exact URL</em> e tieni la strategia generale predefinita per tutto il resto. L'interruttore generale resta quello principale. Se è spento, nessuna scheda viene bloccata, nemmeno in una regola con la casella spuntata.</p>
+
+          <h2 id="compare">Come si confronta con le altre opzioni?</h2>
+          <table>
+            <thead><tr><th></th><th>Solo Chrome</th><th>Estensione dedicata solo ai duplicati</th><th>Takt</th></tr></thead>
+            <tbody>
+              <tr><td>Blocca i duplicati mentre si aprono</td><td>No</td><td>Sì</td><td>Sì, attivo per impostazione predefinita</td></tr>
+              <tr><td>Scegliere cosa conta come stessa pagina</td><td>No</td><td>Dipende</td><td>5 strategie, anche per regola</td></tr>
+              <tr><td>Chiudere i duplicati esistenti</td><td>No</td><td>Dipende</td><td>Un clic, finestra corrente</td></tr>
+              <tr><td>Raggruppa e iberna anche le schede</td><td>No</td><td>No</td><td>Sì</td></tr>
+            </tbody>
+          </table>
+          <p>Verifica che un'estensione dedicata sia ancora mantenuta. Duplicate Tabs Preventor, per esempio, non viene più aggiornata da aprile 2026.</p>
+
+          <h2 id="limits">Cosa la prevenzione dei duplicati non fa</h2>
+          <ul>
+            <li>Non unisce le schede già aperte prima che installassi Takt. Per quelle usa Chiudi duplicati.</li>
+            <li>Chiudi duplicati funziona solo sulla finestra corrente.</li>
+            <li>L'avviso sulla pagina e lo Shift+clic richiedono l'autorizzazione facoltativa di accesso alle pagine. Il banner nel popup e l'opzione del clic destro no.</li>
+          </ul>
+
+          <div class="cta">
+            <p>Fai clic due volte sullo stesso link. Finisci sulla scheda che avevi già.</p>
+            <a class="btn" href="https://chromewebstore.google.com/detail/takt/plgfdnbgkjocmgegnkbihoeojcfphdic">Aggiungi Takt a Chrome, è gratis</a>
+          </div>
+
+          <h2 id="faq">Domande frequenti</h2>
+          <div class="faq">
+            <details>
+              <summary>Chrome può evitare le schede duplicate da solo?</summary>
+              <p>No. Chrome non ha un'impostazione per bloccare le schede duplicate, quindi serve un'estensione.</p>
+            </details>
+            <details>
+              <summary>La prevenzione dei duplicati di Takt è gratuita?</summary>
+              <p>Sì. La prevenzione, tutte e cinque le strategie e Chiudi duplicati sono gratuite, senza limiti.</p>
+            </details>
+            <details>
+              <summary>Come apro una scheda duplicata di proposito?</summary>
+              <p>Fai clic destro sul link e scegli <em>Apri in nuova scheda (consenti duplicato)</em>, oppure fai clic su <em>Apri comunque</em> dopo un blocco.</p>
+            </details>
+            <details>
+              <summary>Funziona in tutte le modalità di raggruppamento?</summary>
+              <p>Sì: Per regole, <a href="../group-tabs-by-category-or-ai/">Per categoria, Per IA</a> e Nessuno.</p>
+            </details>
+          </div>
+
+          <h2 id="next">Da leggere dopo</h2>
+          <div class="read-next">
+            <a href="../one-click-tab-cleanup/">Riordina tutte le finestre con un clic<span>Raggruppa, separa, comprimi e ordina.</span></a>
+            <a href="../hibernate-tabs-free-memory/">Iberna le schede che non usi<span>Chiudile, conservale, riaprile.</span></a>
+          </div>
+        </div>
+
+        <footer class="blog-post-footer">
+          <a href="../../../blog/">Tutti gli articoli sulle funzionalità</a> · <a href="../../../docs/duplicates/">Riferimento: prevenzione duplicati</a>
+        </footer>
+      </article>
+    </main>
+
+    <footer id="site-footer"></footer>
+    <script src="../../../js/includes.js"></script>
+    <script src="../../../js/nav.js"></script>
+  </body>
+</html>

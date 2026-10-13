@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Regrouper automatiquement les onglets Chrome avec des règles — Takt</title>
+    <meta
+      name="description"
+      content="Chrome sait grouper les onglets, mais il ne le fait pas pour vous. Voici comment écrire des règles d'URL qui rangent chaque nouvel onglet dans un groupe nommé et coloré dès son ouverture."
+    />
+    <link rel="canonical" href="https://taktabs.com/fr/blog/auto-group-tabs-chrome/" />
+<!-- TAKT-LANG:head -->
+<link rel="alternate" hreflang="en" href="https://taktabs.com/blog/auto-group-tabs-chrome/" />
+<link rel="alternate" hreflang="fr" href="https://taktabs.com/fr/blog/auto-group-tabs-chrome/" />
+<link rel="alternate" hreflang="es" href="https://taktabs.com/es/blog/auto-group-tabs-chrome/" />
+<link rel="alternate" hreflang="it" href="https://taktabs.com/it/blog/auto-group-tabs-chrome/" />
+<link rel="alternate" hreflang="de" href="https://taktabs.com/de/blog/auto-group-tabs-chrome/" />
+<link rel="alternate" hreflang="pt" href="https://taktabs.com/pt/blog/auto-group-tabs-chrome/" />
+<link rel="alternate" hreflang="x-default" href="https://taktabs.com/blog/auto-group-tabs-chrome/" />
+<!-- /TAKT-LANG:head -->
+    <meta property="og:type" content="article" />
+    <meta property="og:locale" content="fr_FR" />
+    <meta property="og:title" content="Regrouper automatiquement les onglets Chrome avec des règles" />
+    <meta property="og:description" content="Écrivez une règle une fois. Chaque onglet correspondant rejoint le bon groupe d'onglets Chrome dès son ouverture." />
+    <meta property="og:url" content="https://taktabs.com/fr/blog/auto-group-tabs-chrome/" />
+    <meta property="og:image" content="https://taktabs.com/fr/blog/img/options-rules.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <link rel="icon" type="image/png" sizes="32x32" href="../../../assets/favicon-32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="../../../assets/favicon-16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="../../../assets/apple-touch-icon.png" />
+    <meta name="theme-color" content="#FF3B30" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../../../css/tokens.css" />
+    <link rel="stylesheet" href="../../../css/base.css" />
+    <link rel="stylesheet" href="../../../css/layout.css" />
+    <link rel="stylesheet" href="../../../css/blog.css" />
+    <link rel="stylesheet" href="../../../css/articles.css" />
+    <script src="../../../js/theme.js"></script>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Article",
+            "headline": "Regrouper automatiquement les onglets Chrome avec des règles",
+            "description": "Écrivez des règles d'URL qui rangent chaque nouvel onglet dans un groupe d'onglets Chrome nommé et coloré dès son ouverture.",
+            "inLanguage": "fr",
+            "datePublished": "2026-10-08",
+            "dateModified": "2026-10-08",
+            "author": { "@type": "Person", "name": "Vitor" },
+            "publisher": { "@type": "Organization", "name": "Takt", "url": "https://taktabs.com" },
+            "image": "https://taktabs.com/fr/blog/img/options-rules.png",
+            "mainEntityOfPage": "https://taktabs.com/fr/blog/auto-group-tabs-chrome/"
+          },
+          {
+            "@type": "HowTo",
+            "name": "Regrouper automatiquement les onglets Chrome par URL",
+            "step": [
+              { "@type": "HowToStep", "text": "Installez Takt depuis le Chrome Web Store." },
+              { "@type": "HowToStep", "text": "Ouvrez la page d'options de Takt, allez dans Rules et cliquez sur New Rule." },
+              { "@type": "HowToStep", "text": "Ajoutez une condition, par exemple URL Domain github.com." },
+              { "@type": "HowToStep", "text": "Nommez le groupe, choisissez l'une des 8 couleurs de Chrome et enregistrez. Les onglets correspondants sont regroupés pendant leur chargement." }
+            ]
+          },
+          {
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "Chrome peut-il regrouper les onglets automatiquement sans extension ?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Chrome peut suggérer des groupes avec sa fonction d'IA intégrée « Organize tabs », mais il n'a pas de règles : impossible de lui dire que tout onglet github.com va toujours dans un groupe appelé Code. Une extension à base de règles comme Takt le fait." }
+              },
+              {
+                "@type": "Question",
+                "name": "Combien de règles puis-je créer gratuitement ?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Le plan Free permet 5 règles d'une condition chacune, avec une correspondance de type contient, exact ou domaine. Premium (3 $/mois ou 30 $/an) supprime la limite et ajoute glob, regex, la correspondance sur le titre et jusqu'à 10 conditions AND/OR par règle." }
+              },
+              {
+                "@type": "Question",
+                "name": "Puis-je mettre une règle en pause sans la supprimer ?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Oui. Chaque règle a un interrupteur d'activation dans la liste. Une règle désactivée garde ses réglages et cesse de s'appliquer." }
+              },
+              {
+                "@type": "Question",
+                "name": "Takt envoie-t-il mes URL quelque part pour appliquer les règles ?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Non. Les règles sont appliquées dans votre navigateur, à partir de données stockées localement. Takt n'a ni compte ni statistiques d'usage." }
+              }
+            ]
+          },
+          {
+            "@type": "SoftwareApplication",
+            "name": "Takt",
+            "applicationCategory": "BrowserApplication",
+            "operatingSystem": "Chrome",
+            "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <header id="site-header"></header>
+
+    <main class="blog-main">
+      <article class="blog-post article">
+        <p class="eyebrow">Règles</p>
+        <h1 class="blog-post-title">Comment regrouper automatiquement les onglets dans Chrome</h1>
+        <p class="lede">Chrome sait grouper les onglets. Il ne le fait pas pour vous. Une règle règle le problème : écrivez-la une fois, et chaque onglet correspondant rejoint le bon groupe dès son ouverture.</p>
+        <p class="blog-post-meta">Mis à jour le 8 octobre 2026 · 5 min de lecture</p>
+<!-- TAKT-LANG:nav -->
+<p class="lang-links"><a href="../../../blog/auto-group-tabs-chrome/" hreflang="en" lang="en">English</a> · <span aria-current="true">Français</span> · <a href="../../../es/blog/auto-group-tabs-chrome/" hreflang="es" lang="es">Español</a> · <a href="../../../it/blog/auto-group-tabs-chrome/" hreflang="it" lang="it">Italiano</a> · <a href="../../../de/blog/auto-group-tabs-chrome/" hreflang="de" lang="de">Deutsch</a> · <a href="../../../pt/blog/auto-group-tabs-chrome/" hreflang="pt" lang="pt">Português</a></p>
+<!-- /TAKT-LANG:nav -->
+
+        <div class="blog-post-body">
+          <div class="tldr">
+            <p><strong>En bref :</strong> installez Takt, créez une règle comme <em>URL domaine github.com → groupe « Code », bleu</em>, et enregistrez. Dès lors, chaque onglet GitHub est rangé dans le groupe bleu « Code » pendant son chargement.</p>
+            <ul>
+              <li>Free : 5 règles, correspondance de type <em>contient</em>, <em>exact</em> ou <em>domaine</em>.</li>
+              <li>Premium : règles illimitées, motifs glob et regex, correspondance sur le titre de la page, jusqu'à 10 conditions AND/OR.</li>
+              <li>La correspondance se fait sur votre machine. Aucun compte, aucune statistique d'usage.</li>
+            </ul>
+          </div>
+
+          <h2 id="why">Pourquoi les groupes d'onglets Chrome ne s'organisent-ils pas tout seuls ?</h2>
+          <p>Les groupes d'onglets de Chrome sont un classeur sans personne pour classer. Clic droit, « Ajouter l'onglet au groupe », et on recommence. Ouvrez vingt liens dans la matinée et vous classez vingt fois, ou, plus probablement, pas du tout.</p>
+          <p>La fonction d'IA intégrée de Chrome, « Organize tabs », aide pour un rangement ponctuel. Mais elle ne suit pas d'instructions. Impossible de lui dire « les pull requests vont toujours dans Reviews ». Une règle, si.</p>
+
+          <h2 id="create">Comment créer une règle de regroupement d'onglets ?</h2>
+          <ol class="steps">
+            <li>Installez <a href="https://chromewebstore.google.com/detail/takt/plgfdnbgkjocmgegnkbihoeojcfphdic">Takt depuis le Chrome Web Store</a>.</li>
+            <li>Ouvrez la page d'options de Takt et cliquez sur <strong>New Rule</strong>.</li>
+            <li>Ajoutez une condition. <em>URL · Domain · github.com</em> capte github.com et tous ses sous-domaines.</li>
+            <li>Nommez le groupe, choisissez une couleur et enregistrez.</li>
+          </ol>
+          <p>Laissez <strong>Appliquer maintenant</strong> coché : Takt regroupe aussitôt vos onglets ouverts. Les nouveaux onglets sont regroupés pendant leur chargement.</p>
+
+          <figure>
+            <img src="../img/options-rule-editor.png" alt="Éditeur de règles de Takt pour une règle nommée Code : deux conditions URL Domain (github.com, gitlab.com) reliées par ANY condition (OR), le nom de groupe Code, le bleu sélectionné parmi les 8 couleurs de Chrome, et Appliquer maintenant coché" width="700" loading="lazy" />
+            <figcaption>Une règle à deux conditions reliées par OR (Premium). Avec le plan Free, c'est une condition par règle.</figcaption>
+          </figure>
+
+          <h2 id="match-types">Quel type de correspondance choisir ?</h2>
+          <p>La plupart des gens n'ont besoin que de <strong>Domain</strong>. Passez aux autres quand un domaine est trop large.</p>
+          <table>
+            <thead>
+              <tr><th>Type de correspondance</th><th>Motif</th><th>Capte</th><th>Plan</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Domain</td><td><code>google.com</code></td><td>docs.google.com, mail.google.com, google.com</td><td>Free</td></tr>
+              <tr><td>Contains</td><td><code>localhost</code></td><td>http://localhost:3000/api</td><td>Free</td></tr>
+              <tr><td>Exact</td><td><code>https://mail.google.com/mail/u/0/#inbox</code></td><td>Uniquement cette URL</td><td>Free</td></tr>
+              <tr><td>Glob</td><td><code>*github.com/*/pull/*</code></td><td>Toutes les pull requests, de n'importe quel dépôt</td><td>Premium</td></tr>
+              <tr><td>Regex</td><td><code>jira\..*/browse/PROJ-\d+</code></td><td>Les tickets d'un seul projet</td><td>Premium</td></tr>
+            </tbody>
+          </table>
+          <p>Chaque condition peut aussi être inversée (<em>l'URL ne contient PAS google.com</em>) ou rendue sensible à la casse. Premium ajoute la correspondance sur le <strong>titre</strong> de la page, et la combinaison de jusqu'à 10 conditions avec AND ou OR.</p>
+
+          <h2 id="order">Et si deux règles correspondent au même onglet ?</h2>
+          <p>La première correspondance l'emporte. Les règles sont vérifiées du haut de votre liste vers le bas, et la vérification s'arrête à la première correspondance.</p>
+          <p>Classez-les donc de la plus précise à la plus large. Une règle « Reviews » pour les pull requests doit se trouver au-dessus d'une règle « Code » pour tout GitHub, sinon chaque pull request finit dans « Code ». Faites glisser une règle, ou utilisez les boutons ↑/↓, pour la déplacer.</p>
+
+          <figure>
+            <img src="../img/options-rules.png" alt="Liste des règles de Takt avec sept règles, leurs conditions, leurs noms de groupe, leurs interrupteurs d'activation et leurs flèches de réorganisation, et le Testeur de règles au-dessus" width="700" loading="lazy" />
+            <figcaption>La liste des règles, avec le Testeur de règles en haut. Collez une URL pour voir quelle règle s'applique.</figcaption>
+          </figure>
+
+          <h2 id="test">Comment vérifier une règle avant de m'y fier ?</h2>
+          <p>Deux moyens, tous deux sur la page Rules :</p>
+          <ul>
+            <li><strong>Testeur de règles.</strong> Collez une URL (et, si vous le souhaitez, un titre de page). Takt vous indique quelle règle s'appliquerait.</li>
+            <li><strong>Aperçu des onglets correspondants.</strong> Dans l'éditeur, ce bouton liste les onglets déjà ouverts que la règle capterait, avant que vous enregistriez.</li>
+          </ul>
+
+          <h2 id="starter">Cinq règles pour démarrer</h2>
+          <p>Cinq règles couvrent la plupart des journées de travail, et cinq, c'est exactement la limite du plan Free.</p>
+          <table>
+            <thead><tr><th>Groupe</th><th>Condition</th></tr></thead>
+            <tbody>
+              <tr><td>Code</td><td>Domain <code>github.com</code></td></tr>
+              <tr><td>Docs</td><td>Domain <code>developer.mozilla.org</code></td></tr>
+              <tr><td>Mail &amp; agenda</td><td>Domain <code>google.com</code></td></tr>
+              <tr><td>Dev local</td><td>Contains <code>localhost</code></td></tr>
+              <tr><td>À regarder</td><td>Domain <code>youtube.com</code></td></tr>
+            </tbody>
+          </table>
+          <p>Vous ne savez pas quoi écrire ? Le <a href="../rule-suggestions/">volet Suggestions propose des règles</a> d'après les sites que vous gardez déjà ouverts.</p>
+
+          <h2 id="limits">Ce que les règles ne font pas</h2>
+          <p>Les règles appliquent ce qu'on leur dit. Un onglet d'un site pour lequel vous n'avez jamais écrit de règle reste hors groupe. Si vous préférez ne pas écrire de règles du tout, passez le mode de regroupement sur <a href="../group-tabs-by-category-or-ai/">Catégorie ou IA</a>.</p>
+
+          <div class="cta">
+            <p>Écrivez une règle. Le prochain onglet se range tout seul.</p>
+            <a class="btn" href="https://chromewebstore.google.com/detail/takt/plgfdnbgkjocmgegnkbihoeojcfphdic">Ajouter Takt à Chrome, gratuitement</a>
+          </div>
+
+          <h2 id="faq">Questions fréquentes</h2>
+          <div class="faq">
+            <details>
+              <summary>Chrome peut-il regrouper les onglets automatiquement sans extension ?</summary>
+              <p>La fonction intégrée « Organize tabs » de Chrome suggère des groupes par IA, à la demande. Elle n'a pas de règles : elle ne peut donc pas envoyer systématiquement les mêmes sites dans le même groupe.</p>
+            </details>
+            <details>
+              <summary>Combien de règles puis-je créer gratuitement ?</summary>
+              <p>5 règles, une condition chacune, avec une correspondance de type contient, exact ou domaine. Premium (3 $/mois ou 30 $/an) supprime la limite.</p>
+            </details>
+            <details>
+              <summary>Puis-je mettre une règle en pause sans la supprimer ?</summary>
+              <p>Oui. Chaque règle a un interrupteur d'activation dans la liste. Une règle désactivée garde ses réglages et cesse de s'appliquer.</p>
+            </details>
+            <details>
+              <summary>Takt envoie-t-il mes URL quelque part pour appliquer les règles ?</summary>
+              <p>Non. La correspondance s'exécute dans votre navigateur, sur des règles stockées localement. Voir <a href="../privacy-local-first/">comment Takt garde vos données en local</a>.</p>
+            </details>
+          </div>
+
+          <h2 id="next">À lire ensuite</h2>
+          <div class="read-next">
+            <a href="../prevent-duplicate-tabs/">Ne plus ouvrir deux fois le même onglet<span>La prévention des doublons, activée par défaut.</span></a>
+            <a href="../profiles-and-schedules/">Des règles différentes au travail et à la maison<span>Des profils qui changent selon un horaire.</span></a>
+          </div>
+        </div>
+
+        <footer class="blog-post-footer">
+          <a href="../../../blog/">Tous les articles</a> · <a href="../../../docs/rules/">Référence des règles</a>
+        </footer>
+      </article>
+    </main>
+
+    <footer id="site-footer"></footer>
+    <script src="../../../js/includes.js"></script>
+    <script src="../../../js/nav.js"></script>
+  </body>
+</html>
