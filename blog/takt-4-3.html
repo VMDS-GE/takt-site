@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-i18n="blog.release43.title">Takt 4.3: fewer silent failures, a faster way to apply rules — Takt</title>
+  <meta name="description" data-i18n-attr="content:blog.release43.metaDescription" content="Takt 4.3.0 is live: duplicate prevention now works in every grouping mode, Quick Switch lists all your open tabs, rules apply the moment you save them, and a round of silent failures is fixed.">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon-16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../assets/apple-touch-icon.png">
+
+  <meta name="theme-color" content="#FF3B30">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/tokens.css">
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/layout.css">
+  <link rel="stylesheet" href="../css/blog.css">
+
+  <script src="../js/theme.js"></script>
+  <script type="module" src="../js/i18n.js"></script>
+</head>
+<body>
+  <header id="site-header"></header>
+
+  <main class="blog-main">
+    <article class="blog-post">
+      <h1 class="blog-post-title" data-i18n="blog.release43.h1">Takt 4.3: fewer silent failures, a faster way to apply rules</h1>
+      <p class="blog-post-meta" data-i18n="blog.release43.meta">October 2026 · 3 min read</p>
+      <div class="blog-post-body">
+        <p data-i18n="blog.release43.p.1">Takt v4.3.0 went live in the Chrome Web Store on 7 October. There is no headline feature this time. This release is mostly about things that failed without telling you, which is the worst kind of bug.</p>
+        <p data-i18n="blog.release43.p.2">Our user base has also grown, to 16 users now 🎉.</p>
+
+        <h2 data-i18n="blog.release43.h2.dedup">Duplicate prevention now works everywhere</h2>
+        <p data-i18n="blog.release43.p.3">Two bugs were hiding here. Duplicate prevention stopped firing after Chrome put the extension to sleep and woke it again, and it only ran in Rules mode. Both are fixed: it now runs in every grouping mode (Rules, Category, AI or None) and survives the extension being idle.</p>
+
+        <h2 data-i18n="blog.release43.h2.new">New</h2>
+        <ul>
+          <li data-i18n="blog.release43.li.new.1"><strong>Apply now.</strong> The rule editor has an "Apply now" checkbox, on by default. Save a rule and your open tabs are regrouped straight away, across all windows. Untick it to just save the rule.</li>
+          <li data-i18n="blog.release43.li.new.2"><strong>Quick Switch shows every open tab.</strong> The 50-tab limit is gone. Tabs are listed most recently used first, so pressing Enter takes you back to the tab you were on before.</li>
+          <li data-i18n="blog.release43.li.new.3"><strong>Groups follow the window you are in (Premium).</strong> With cross-window auto-collapse on, switching between Chrome windows expands the group of your active tab and collapses the groups in the windows you left.</li>
+          <li data-i18n="blog.release43.li.new.4"><strong>New tabs land in domain order.</strong> When a rule moves a tab into an existing group, it goes next to the other tabs from the same site instead of at the end.</li>
+        </ul>
+
+        <h2 data-i18n="blog.release43.h2.silent">No more silent failures</h2>
+        <ul>
+          <li data-i18n="blog.release43.li.silent.1">AI grouping on the free tier did nothing and still reported success when you already had five groups. It now tells you the limit is reached.</li>
+          <li data-i18n="blog.release43.li.silent.2">"Suggest rules" hid itself when the on-device model was downloading, unavailable or returned nothing. It now shows what is happening, with a Retry button on errors.</li>
+          <li data-i18n="blog.release43.li.silent.3">Importing a full backup imported zero rules. It now imports them, reports how many duplicates it skipped, and shows a clear error for an invalid or oversized file.</li>
+          <li data-i18n="blog.release43.li.silent.4">"Grant all permissions" left out Downloads access. Grant all and Revoke all now cover every optional permission.</li>
+        </ul>
+
+        <h2 data-i18n="blog.release43.h2.focus">Focus fixes</h2>
+        <ul>
+          <li data-i18n="blog.release43.li.focus.1">A tab you just opened stays active when it joins the Others group (Premium), and the group expands if it was collapsed.</li>
+          <li data-i18n="blog.release43.li.focus.2">A rule with auto-collapse no longer throws you off the tab you are on. The group starts expanded if your active tab is in it.</li>
+        </ul>
+
+        <h2 data-i18n="blog.release43.h2.uninstall">One thing you should know: uninstall feedback</h2>
+        <p data-i18n="blog.release43.p.4">If you uninstall Takt, Chrome now opens a short feedback page on taktabs.com. The link carries six coarse, anonymous values: version, plan, a rough install age, grouping mode, a rough rule count and language. No URLs, no tab titles, no identifiers. The form is optional, and the privacy policy has a new section describing exactly what is sent and how long it is kept.</p>
+
+        <p data-i18n="blog.release43.p.5">Takt itself still has no account and no telemetry.</p>
+        <div><span data-i18n="blog.release43.cta.feedback.before">What should we build next?</span> <a href="mailto:takt.extension@gmail.com?subject=Feature%20Request%20%E2%80%94%20Takt&amp;body=Describe%20the%20feature%20you%27d%20like%3A%0A%0AWhy%20it%20would%20be%20useful%3A" data-i18n="blog.release43.cta.feedback.linkText">Tell us</a></div>
+        <div><a href="https://chromewebstore.google.com/detail/takt/plgfdnbgkjocmgegnkbihoeojcfphdic" data-i18n="blog.release43.cta.install.linkText">Add Takt to Chrome</a><span data-i18n="blog.release43.cta.install.after"> it's free, no account needed.</span></div>
+      </div>
+      <footer class="blog-post-footer">
+        <a data-i18n="blog.release43.footer.back" href="../blog/releases/">Back to blog</a>
+      </footer>
+    </article>
+  </main>
+
+  <footer id="site-footer"></footer>
+
+  <script src="../js/includes.js"></script>
+  <script src="../js/nav.js"></script>
+</body>
+</html>
