@@ -38,7 +38,7 @@
 
     <main class="docs-content">
       <h1>Privacy Policy</h1>
-      <p class="lead" style="color: var(--muted); font-size: 0.9rem;">Last updated: October 13, 2026</p>
+      <p class="lead" style="color: var(--muted); font-size: 0.9rem;">Last updated: October 14, 2026</p>
 
       <h2 id="summary">Summary <a href="#summary" class="anchor-link">#</a></h2>
       <p>The Takt extension sends no analytics, telemetry or usage data. Your rules, settings and tabs are kept in your browser's storage. Takt copies parts of this data out of the browser when you turn on or use one of these features: Google Drive sync (to your own Google Drive), File Sync (to a folder you choose) and export (to a file you download: your rules, or a full backup). If Chrome Sync is on, Chrome may also sync part of this data through your Google account; see <a href="#data-stored">What data Takt stores</a>. The extension goes online only to check your license and, if you turned it on, to sync with Google Drive. When you uninstall Takt, Chrome opens an optional feedback page; what that page receives is described under <a href="#uninstall-feedback">Uninstall feedback</a>.</p>
@@ -52,8 +52,12 @@
           <tr><td>Tab grouping rules</td><td>sync</td><td>Your rules for organizing tabs</td></tr>
           <tr><td>Extension settings</td><td>sync</td><td>Preferences (theme, automation mode, etc.)</td></tr>
           <tr><td>Profiles</td><td>sync</td><td>Named rule sets for different workflows</td></tr>
-          <tr><td>Drive sync state</td><td>sync</td><td>Whether Google Drive sync is on, whether automatic sync is on, and the time of the last sync</td></tr>
-          <tr><td>Connected Google account email</td><td>sync</td><td>Shows in Settings which account is connected; removed when you disconnect Drive sync</td></tr>
+          <tr><td>Drive sync state</td><td>local</td><td>Whether Google Drive sync is on, whether automatic sync is on, and the time of the last sync, kept for this browser only (in <code>localSettings</code>). <code>driveSyncState</code> holds the content hashes from the last sync and whether a conflict is waiting for your choice</td></tr>
+          <tr><td>Connected Google account email</td><td>local</td><td>Shows in Settings which account is connected; kept for this browser only; removed when you disconnect Drive sync</td></tr>
+          <tr><td>Chrome Sync copy (<code>chromeSyncShadow</code>)</td><td>local</td><td>A copy of this browser's rules, profiles and synced settings, and this browser's device id. Takt keeps it so you can put your data back if Chrome Sync brings different data. With it, <code>chromeSyncState</code> holds content hashes of Takt's own writes and whether a choice is waiting</td></tr>
+          <tr><td>Device id (<code>deviceId</code>)</td><td>local</td><td>A random id Takt creates when it starts, if this browser has none yet. It is written to the File Sync folder's <code>meta.json</code> and kept in the Chrome Sync copy. It does not identify you and is not sent anywhere else</td></tr>
+          <tr><td>Computer-specific settings (<code>localSettings</code>)</td><td>local</td><td>Settings that belong to this computer: the File Sync folder name, auto-sync and permission state; whether Drive Sync and its auto-sync are on, the account email and the last sync time; granted permissions; whether onboarding is done. Chrome Sync no longer carries them</td></tr>
+          <tr><td>File Sync state (<code>fileSyncState</code>)</td><td>local</td><td>The time of the last File Sync, the content hashes from the last sync, and whether a conflict is waiting for your choice</td></tr>
           <tr><td>Rule match statistics</td><td>local</td><td>Counts of how many tabs each rule matched</td></tr>
           <tr><td>Dismissed suggestions</td><td>local</td><td>Domains you dismissed from suggestions</td></tr>
           <tr><td>Saved sessions</td><td>local</td><td>Sessions you save so you can reopen them later. A session holds its name, the time it was saved and, for each tab, the URL, title, pinned state and tab group. A session you save yourself also holds a copy of the hibernated tabs list as it was at that time. If you turn on "Auto-save on window close", Takt also saves a session automatically when a window closes. Google Drive sync, File Sync and the full backup export copy this data out of the browser when you use them: to your Google Drive, to a folder you choose, or to a file you download. Syncing or importing a backup can also load it back.</td></tr>
@@ -66,6 +70,7 @@
       </table>
 
       <p><code>chrome.storage.sync</code> data may be synced across your Chrome instances via your Google account if Chrome Sync is enabled. This is a Chrome platform feature, not controlled by Takt.</p>
+      <p>Google Drive sync and File Sync also write a <code>meta.json</code> file next to your data. In a File Sync folder it holds the time of the sync, the Takt version, this browser's <code>deviceId</code> and a content hash of the data. In Google Drive it holds the time of the sync, the Takt version, a <code>deviceId</code> field that holds Takt's extension id, which is the same for every user and does not identify your browser, and a content hash of the data.</p>
 
       <h2 id="interaction-tracking">Interaction tracking <a href="#interaction-tracking" class="anchor-link">#</a></h2>
       <p>The staleness reporter content script listens for <code>click</code>, <code>scroll</code>, and <code>keydown</code> events on each active tab. When any of those events occurs, the script records a single Unix-millisecond timestamp (<code>Date.now()</code>) and transmits it to the extension's service worker at most once every 30 seconds — and only if a new interaction has occurred since the last report. Tabs with no user interaction generate zero reports.</p>

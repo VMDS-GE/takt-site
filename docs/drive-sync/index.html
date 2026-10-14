@@ -58,10 +58,7 @@
 
       <main class="docs-content">
         <h1 data-i18n="docs.sidebar.driveSync">Drive Sync</h1>
-        <p class="lead" data-i18n="docs.driveSync.lead">
-          Keep your rules, profiles, and sessions in sync across all your devices — automatically,
-          using Google Drive. Sign in once and Takt handles everything silently in the background.
-        </p>
+        <p class="lead" data-i18n="docs.driveSync.lead">Keep your rules, profiles, sessions and hibernated tabs the same on all your computers, using Google Drive. Sign in once, and Takt syncs in the background. If this browser and Google Drive both changed, Takt asks you what to keep.</p>
 
         <div class="callout">
           <p data-i18n="docs.driveSync.premiumCallout"><strong>Premium feature.</strong> Drive Sync requires a Premium subscription.</p>
@@ -85,13 +82,7 @@
           per-app space that only Takt can access. It is completely separate from your Google Drive
           files and never appears in the Drive UI. Other apps and people cannot see it.
         </p>
-        <p data-i18n="docs.driveSync.howItWorks.p2">
-          After a one-time sign-in, Takt automatically syncs every 15 minutes in the background. You
-          can also sync on demand or force-push and force-pull at any time. A
-          <strong>smart direction check</strong> runs on every sync: Takt reads the remote timestamp
-          and compares it to the local one, then pushes if your local data is newer or pulls if
-          another device synced more recently.
-        </p>
+        <p data-i18n="docs.driveSync.howItWorks.p2">After a one-time sign-in, Takt can sync every 15 minutes in the background. You can also sync on demand, or force-push and force-pull at any time. On every sync, Takt compares the content of the data, not the time it was saved: it pushes when only this browser changed and pulls when only Google Drive changed. When both changed, Takt writes nothing and asks you what to keep.</p>
 
         <h2 id="drive-sync-vs-file-sync">
           <span data-i18n="docs.driveSync.comparison.heading">Drive Sync vs File Sync</span> <a href="#drive-sync-vs-file-sync" class="anchor-link">#</a>
@@ -109,7 +100,7 @@
             <tr>
               <td><strong>Setup</strong></td>
               <td>Sign in with Google once</td>
-              <td>Pick a folder each browser session</td>
+              <td data-i18n="docs.driveSync.comparison.setupFile">Pick a folder once</td>
             </tr>
             <tr>
               <td><strong>Re-auth on restart</strong></td>
@@ -118,7 +109,7 @@
             </tr>
             <tr>
               <td><strong>Auto-sync</strong></td>
-              <td>Every 15 minutes, fully silent</td>
+              <td data-i18n="docs.driveSync.comparison.autoSyncDrive">Every 15 minutes; asks you when both sides changed</td>
               <td>On every change (writes to disk)</td>
             </tr>
             <tr>
@@ -199,27 +190,44 @@
             </tr>
           </tbody>
         </table>
-        <p data-i18n="docs.driveSync.syncFiles.conclusion">
-          The files are written independently. A change to rules on device A and profiles on device
-          B will not cause a conflict between those two files.
-        </p>
+        <p data-i18n="docs.driveSync.syncFiles.conclusion">Takt compares the files as one set. If this browser and another computer each changed something, even in different files, Takt asks you what to keep before it writes anything.</p>
 
         <h2 id="sync-now"><span data-i18n="docs.driveSync.syncNow.heading">Sync Now</span> <a href="#sync-now" class="anchor-link">#</a></h2>
-        <p data-i18n="docs.driveSync.syncNow.p1">
-          Click <strong>Sync Now</strong> to trigger an immediate sync. Takt compares timestamps and
-          automatically pushes or pulls:
-        </p>
+        <p data-i18n="docs.driveSync.syncNow.p1">Click <strong>Sync Now</strong> to sync right away. Takt checks what changed on each side since the last sync:</p>
         <ul>
-          <li data-i18n="docs.driveSync.syncNow.liPush">
-            <strong>Push</strong> — if your local data is newer than what is on Drive, your data is
-            uploaded.
-          </li>
-          <li data-i18n="docs.driveSync.syncNow.liPull">
-            <strong>Pull</strong> — if another device synced to Drive more recently, the remote data
-            is downloaded and replaces your local data.
-          </li>
+          <li data-i18n="docs.driveSync.syncNow.liPush"><strong>Push</strong> — if only this browser changed, its data is uploaded to Google Drive.</li>
+          <li data-i18n="docs.driveSync.syncNow.liPull"><strong>Pull</strong> — if only Google Drive changed, its data is downloaded and replaces the data on this browser.</li>
+          <li data-i18n="docs.driveSync.syncNow.liBoth"><strong>Both changed</strong> — nothing is written, and Takt asks you what to keep (see below).</li>
         </ul>
         <p data-i18n="docs.driveSync.syncNow.p2">The <em>Last synced</em> timestamp updates when the operation completes successfully.</p>
+
+        <h2 id="conflicts"><span data-i18n="docs.driveSync.conflicts.heading">When another computer has different data</span> <a href="#conflicts" class="anchor-link">#</a></h2>
+        <p data-i18n="docs.driveSync.conflicts.p1">On every sync, Takt compares the content of this browser&#39;s data with the content in Google Drive, and with what each side held at the last sync. If only one side changed, Takt copies it to the other side. If both changed, Takt writes nothing and asks you what to keep. Nothing is overwritten until you choose.</p>
+        <p data-i18n="docs.driveSync.conflicts.p2">After Sync Now, the choice opens right away. If auto-sync finds that both sides changed, Takt shows a ! badge on its icon and one notification. Click the notification to open the Options page, where you make the choice. Until then, auto-sync writes nothing.</p>
+        <p data-i18n="docs.driveSync.conflicts.choicesIntro">You have three choices:</p>
+        <ul>
+          <li data-i18n="docs.driveSync.conflicts.liRemote"><strong>Keep what is in Google Drive</strong> — replaces the data on this browser with the data in Google Drive.</li>
+          <li data-i18n="docs.driveSync.conflicts.liLocal"><strong>Keep what is on this browser</strong> — replaces the data in Google Drive with the data on this browser.</li>
+          <li data-i18n="docs.driveSync.conflicts.liMerge"><strong>Merge both</strong> — keeps the data from both sides, then writes the result to this browser and to Google Drive.</li>
+        </ul>
+        <p data-i18n="docs.driveSync.conflicts.confirm">The two Keep choices replace data, so Takt asks you to confirm first. They cannot be undone. Cancel writes nothing, and the choice stays open.</p>
+        <p data-i18n="docs.driveSync.conflicts.mergeIntro">What Merge both does:</p>
+        <ul>
+          <li data-i18n="docs.driveSync.conflicts.mergeLiRules"><strong>Rules and profiles</strong> — everything on this browser stays as it is, and the entries from Google Drive are added. An identical entry is kept once. A rule or profile whose name is already used gets a number, for example Work (2). Added profiles are inactive, have no schedule, and point to the merged rules.</li>
+          <li data-i18n="docs.driveSync.conflicts.mergeLiSessions"><strong>Sessions</strong> — the sessions from both sides, at most 50; the most recent are kept.</li>
+          <li data-i18n="docs.driveSync.conflicts.mergeLiHibernated"><strong>Hibernated tabs</strong> — one entry per address, at most 200; this browser&#39;s entries come first.</li>
+          <li data-i18n="docs.driveSync.conflicts.mergeLiSettings"><strong>Settings</strong> — this browser&#39;s hibernation settings are kept.</li>
+        </ul>
+        <p data-i18n="docs.driveSync.conflicts.noPromptIntro">Takt does not ask you in these cases:</p>
+        <ul>
+          <li data-i18n="docs.driveSync.conflicts.noPromptLiSame">The data is the same on both sides. Nothing is written.</li>
+          <li data-i18n="docs.driveSync.conflicts.noPromptLiBlank">This browser has no data of its own: no profiles, sessions or hibernated tabs, and no rules or only the example rules Takt adds at install. Takt copies the data from Google Drive.</li>
+          <li data-i18n="docs.driveSync.conflicts.noPromptLiEmpty">Google Drive holds no Takt data yet. Takt copies this browser&#39;s data to Google Drive.</li>
+        </ul>
+        <ul>
+          <li><a href="../sync/#conflicts" data-i18n="docs.driveSync.conflicts.linkFile">How File Sync handles different data</a></li>
+          <li><a href="../sync/#chrome-sync" data-i18n="docs.driveSync.conflicts.linkChrome">How Takt handles data that Chrome Sync brings</a></li>
+        </ul>
 
         <h2 id="auto-sync"><span data-i18n="docs.driveSync.autoSync.heading">Auto-sync</span> <a href="#auto-sync" class="anchor-link">#</a></h2>
         <p data-i18n="docs.driveSync.autoSync.p1">
@@ -227,17 +235,12 @@
           background. The Settings panel shows a countdown to the next scheduled sync, refreshed
           every 30 seconds.
         </p>
-        <p data-i18n="docs.driveSync.autoSync.p2">
-          Auto-sync runs silently. Failures (for example, a temporary network error) are swallowed
-          without any notification — the next scheduled sync will retry. If you need to ensure a
-          sync succeeded, use <strong>Sync Now</strong> and check the
-          <em>Last synced</em> timestamp.
-        </p>
+        <p data-i18n="docs.driveSync.autoSync.p2">Auto-sync runs in the background. If a sync fails, for example because of a temporary network error, Takt does not tell you, and the next scheduled sync tries again. If this browser and Google Drive both changed, Takt shows a ! badge on its icon and one notification, and writes nothing until you choose. To check that a sync succeeded, use <strong>Sync Now</strong> and look at the <em>Last synced</em> timestamp.</p>
 
         <h2 id="force-push-pull">
           <span data-i18n="docs.driveSync.forcePushPull.heading">Force Push and Force Pull</span> <a href="#force-push-pull" class="anchor-link">#</a>
         </h2>
-        <p data-i18n="docs.driveSync.forcePushPull.intro">These operations bypass the automatic direction check and ignore timestamps entirely.</p>
+        <p data-i18n="docs.driveSync.forcePushPull.intro">These operations skip the check of what changed on each side.</p>
         <ul>
           <li data-i18n="docs.driveSync.forcePushPull.liForcePush">
             <strong>Force Push</strong> — overwrites everything on Drive with your current local
@@ -250,11 +253,7 @@
           </li>
         </ul>
         <div class="callout callout-warning">
-          <p data-i18n="docs.driveSync.forcePushPull.callout">
-            <strong>Force Push and Force Pull are destructive.</strong> Force Push overwrites Drive
-            unconditionally. Force Pull replaces all local rules, profiles, and sessions with the
-            remote copy. Both operations are immediate and cannot be undone from within Takt.
-          </p>
+          <p data-i18n="docs.driveSync.forcePushPull.callout"><strong>Force Push and Force Pull are destructive.</strong> Force Push replaces everything in Google Drive with this browser&#39;s data. Force Pull replaces this browser&#39;s rules, profiles, sessions and hibernated tabs with the copy in Google Drive. Each one asks you to confirm first, and neither can be undone from within Takt.</p>
         </div>
 
         <h2 id="disconnect"><span data-i18n="docs.driveSync.disconnect.heading">Disconnecting</span> <a href="#disconnect" class="anchor-link">#</a></h2>
@@ -326,7 +325,11 @@
             </tr>
             <tr>
               <td>Direction logic</td>
-              <td>Automatic: push if local is newer, pull if remote is newer</td>
+              <td data-i18n="docs.driveSync.limits.directionValue">Automatic: push if only this browser changed, pull if only Google Drive changed</td>
+            </tr>
+            <tr>
+              <td data-i18n="docs.driveSync.limits.bothChangedLabel">Both sides changed</td>
+              <td data-i18n="docs.driveSync.limits.bothChangedValue">Nothing is written until you choose what to keep</td>
             </tr>
             <tr>
               <td>Conflict strategy</td>

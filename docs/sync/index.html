@@ -58,10 +58,7 @@
 
       <main class="docs-content">
         <h1 data-i18n="docs.sidebar.sync">File Sync</h1>
-        <p class="lead" data-i18n="docs.sync.lead">
-          Keep your rules, profiles, and sessions in sync across all your devices — by writing to a
-          folder your cloud client already watches.
-        </p>
+        <p class="lead" data-i18n="docs.sync.lead">Keep your rules, profiles, sessions and hibernated tabs on all your computers, by writing to a folder your cloud client already watches. When the folder and this browser hold different data, Takt asks you what to keep.</p>
 
         <div class="callout">
           <p data-i18n="docs.sync.premiumCallout"><strong>Premium feature.</strong> File Sync requires a Premium subscription.</p>
@@ -80,12 +77,7 @@
         </div>
 
         <h2 id="how-it-works"><span data-i18n="docs.sync.howItWorks.heading">How it works</span> <a href="#how-it-works" class="anchor-link">#</a></h2>
-        <p data-i18n="docs.sync.howItWorks.p1">
-          Takt writes five JSON files to a folder you choose. Your cloud desktop client — Google
-          Drive, iCloud Drive, Dropbox, or any other — detects the new or changed files and uploads
-          them. On your other devices, the client downloads the files, and you can pull them into
-          Takt with <strong>Import from Folder</strong>.
-        </p>
+        <p data-i18n="docs.sync.howItWorks.p1">Takt writes five JSON files to a folder you choose. Your cloud desktop client — Google Drive, iCloud Drive, Dropbox, or any other — detects the new or changed files and uploads them. On your other computers, the client downloads the files. There, <strong>Sync Now</strong> reads the folder before it writes. A browser with no data of its own takes the data from the folder. A browser with its own data asks you what to keep.</p>
         <p data-i18n="docs.sync.howItWorks.p2">
           Takt handles the reading and writing. Your cloud client handles the transfer. No account
           linking or OAuth is required on Takt's side.
@@ -107,7 +99,7 @@
             directly from the picker.
           </li>
           <li data-i18n="docs.sync.setup.li4">Click <strong>Select</strong>. Takt stores a reference to that folder.</li>
-          <li data-i18n="docs.sync.setup.li5">Click <strong>Sync Now</strong> to write your data immediately.</li>
+          <li data-i18n="docs.sync.setup.li5">Click <strong>Sync Now</strong>. Takt reads the folder, then writes your data or asks you what to keep.</li>
         </ol>
 
         <div class="callout">
@@ -150,34 +142,68 @@
             </tr>
           </tbody>
         </table>
-        <p data-i18n="docs.sync.syncFiles.conclusion">
-          Each file is written independently. If your cloud client supports per-file conflict
-          resolution (like Google Drive), a change to rules on device A and profiles on device B
-          will not conflict.
-        </p>
+        <p data-i18n="docs.sync.syncFiles.conclusion">Takt compares the files as one set. Conflicts are not left to your cloud client: if the folder changed since this browser last synced, Takt writes nothing and asks you what to keep.</p>
 
         <h2 id="sync-now"><span data-i18n="docs.sync.syncNow.heading">Sync Now</span> <a href="#sync-now" class="anchor-link">#</a></h2>
-        <p data-i18n="docs.sync.syncNow.p1">
-          Click <strong>Sync Now</strong> to write all five files to the folder immediately. The
-          <em>Last synced</em> timestamp updates when the write succeeds.
-        </p>
+        <p data-i18n="docs.sync.syncNow.p1">Click <strong>Sync Now</strong> to sync with the folder right away. Takt first reads the five files in the folder. If the folder holds no Takt data, or only this browser changed, Takt writes its data there. If nothing changed, nothing is written. If this browser has no data of its own, Takt takes the data from the folder. If the folder changed and this browser has data of its own, Takt writes nothing and asks you what to keep. The <em>Last synced</em> timestamp updates when the sync succeeds.</p>
         <p data-i18n="docs.sync.syncNow.p2">
           Use Sync Now after making a batch of changes you want to push to your other devices right
           away.
         </p>
 
         <h2 id="auto-sync"><span data-i18n="docs.sync.autoSync.heading">Auto-sync</span> <a href="#auto-sync" class="anchor-link">#</a></h2>
-        <p data-i18n="docs.sync.autoSync.p1">
-          Enable <strong>Auto-sync on every change</strong> to have Takt write to the folder
-          automatically whenever your rules, profiles, or sessions change. There is a short delay
-          (about 2 seconds) after the last change before the write happens, so rapid edits are
-          batched into a single write.
-        </p>
-        <p data-i18n="docs.sync.autoSync.p2">
-          Auto-sync runs silently in the background. If the write fails (for example, if the folder
-          permission was lost after a browser restart), Takt surfaces a
-          <strong>Re-authorize</strong> prompt the next time you open the Options page.
-        </p>
+        <p data-i18n="docs.sync.autoSync.p1">Enable <strong>Auto-sync on every change</strong> to have Takt sync with the folder automatically whenever your rules, profiles, sessions or hibernated tabs change. Takt waits about 2 seconds after the last change, so rapid edits are batched into one sync. Like Sync Now, auto-sync reads the folder before it writes.</p>
+        <p data-i18n="docs.sync.autoSync.p2">Auto-sync runs in the background. If the write fails (for example, if the folder permission was lost after a browser restart), Takt surfaces a <strong>Re-authorize</strong> prompt the next time you open the Options page. If the folder changed since this browser last synced, Takt shows a ! badge on its icon and one notification, and writes nothing until you choose.</p>
+
+        <h2 id="conflicts"><span data-i18n="docs.sync.conflicts.heading">When another computer has different data</span> <a href="#conflicts" class="anchor-link">#</a></h2>
+        <p data-i18n="docs.sync.conflicts.p1">Sync Now and auto-sync read the folder before they write. Takt compares the content of the folder with this browser&#39;s data and with what the folder held at this browser&#39;s last sync. If the folder changed since then and this browser has data of its own, Takt writes nothing and asks you what to keep. Nothing is overwritten until you choose.</p>
+        <p data-i18n="docs.sync.conflicts.p2">File Sync never replaces this browser&#39;s data by itself. Changes made on another computer reach this browser when you choose Keep what is in the folder or Merge both.</p>
+        <p data-i18n="docs.sync.conflicts.p3">After Sync Now, the choice opens right away. If auto-sync finds the difference, Takt shows a ! badge on its icon and one notification. Click the notification to open the Options page, where you make the choice. Until then, auto-sync writes nothing.</p>
+        <p data-i18n="docs.sync.conflicts.choicesIntro">You have three choices:</p>
+        <ul>
+          <li data-i18n="docs.sync.conflicts.liRemote"><strong>Keep what is in the folder</strong> — replaces the data on this browser with the data in the folder.</li>
+          <li data-i18n="docs.sync.conflicts.liLocal"><strong>Keep what is on this browser</strong> — replaces the data in the folder with the data on this browser.</li>
+          <li data-i18n="docs.sync.conflicts.liMerge"><strong>Merge both</strong> — keeps the data from both sides, then writes the result to this browser and to the folder.</li>
+        </ul>
+        <p data-i18n="docs.sync.conflicts.confirm">The two Keep choices replace data, so Takt asks you to confirm first. They cannot be undone. Cancel writes nothing, and the choice stays open.</p>
+        <p data-i18n="docs.sync.conflicts.mergeIntro">What Merge both does:</p>
+        <ul>
+          <li data-i18n="docs.sync.conflicts.mergeLiRules"><strong>Rules and profiles</strong> — everything on this browser stays as it is, and the entries from the folder are added. An identical entry is kept once. A rule or profile whose name is already used gets a number, for example Work (2). Added profiles are inactive, have no schedule, and point to the merged rules.</li>
+          <li data-i18n="docs.sync.conflicts.mergeLiSessions"><strong>Sessions</strong> — the sessions from both sides, at most 50; the most recent are kept.</li>
+          <li data-i18n="docs.sync.conflicts.mergeLiHibernated"><strong>Hibernated tabs</strong> — one entry per address, at most 200; this browser&#39;s entries come first.</li>
+          <li data-i18n="docs.sync.conflicts.mergeLiSettings"><strong>Settings</strong> — not involved: the folder holds no settings.</li>
+        </ul>
+        <p data-i18n="docs.sync.conflicts.noPromptIntro">Takt does not ask you in these cases:</p>
+        <ul>
+          <li data-i18n="docs.sync.conflicts.noPromptLiSame">The data is the same on both sides. Nothing is written.</li>
+          <li data-i18n="docs.sync.conflicts.noPromptLiBlank">This browser has no data of its own: no profiles, sessions or hibernated tabs, and no rules or only the example rules Takt adds at install. Takt takes the data from the folder.</li>
+          <li data-i18n="docs.sync.conflicts.noPromptLiEmpty">The folder holds no Takt data yet. Takt writes this browser&#39;s data there.</li>
+          <li data-i18n="docs.sync.conflicts.noPromptLiLocalOnly">Only this browser changed since the last sync. Takt writes its data to the folder.</li>
+        </ul>
+
+        <h2 id="chrome-sync"><span data-i18n="docs.sync.chromeSync.heading">Chrome Sync and Takt</span> <a href="#chrome-sync" class="anchor-link">#</a></h2>
+        <p data-i18n="docs.sync.chromeSync.p1">Chrome Sync works on every plan, including the free plan. It is a Chrome feature: when it is on, Chrome copies Takt&#39;s rules, profiles and synced settings between the browsers signed in to your Google account. Sessions and hibernated tabs never travel by Chrome Sync.</p>
+        <p data-i18n="docs.sync.chromeSync.p2">Chrome applies the data from your Google account first, and Takt cannot stop it. That is why Takt keeps its own copy of this browser&#39;s rules, profiles and synced settings. If Chrome Sync brings rules or profiles that share no entry with the ones this browser had, Takt keeps working with what Chrome brought and asks you what to keep. Your copy stays until you choose.</p>
+        <p data-i18n="docs.sync.chromeSync.choicesIntro">You have three choices:</p>
+        <ul>
+          <li data-i18n="docs.sync.chromeSync.liRemote"><strong>Keep what came from your Google account</strong> — keeps what Chrome brought and deletes Takt&#39;s copy of what was on this browser.</li>
+          <li data-i18n="docs.sync.chromeSync.liLocal"><strong>Keep what was on this browser</strong> — puts back the rules, profiles and settings this browser had. Your other browsers that use Chrome Sync get them too.</li>
+          <li data-i18n="docs.sync.chromeSync.liMerge"><strong>Merge both</strong> — merges the rules and profiles from both sides, the same way as for Drive Sync and File Sync. Settings stay as they came from your Google account. Sessions and hibernated tabs are not involved.</li>
+        </ul>
+        <p data-i18n="docs.sync.chromeSync.confirm">The two Keep choices ask you to confirm first. They cannot be undone. Cancel changes nothing, and the choice stays open.</p>
+        <p data-i18n="docs.sync.chromeSync.limits">If the result is too large for Chrome Sync (8,192 bytes per item), Takt refuses it and nothing changes. While the choice is open, File Sync auto-sync and the 15-minute Drive Sync wait.</p>
+        <p data-i18n="docs.sync.chromeSync.noPromptIntro">Takt does not ask you when:</p>
+        <ul>
+          <li data-i18n="docs.sync.chromeSync.noPromptLiOwn">Takt itself made the change.</li>
+          <li data-i18n="docs.sync.chromeSync.noPromptLiShared">Another browser made an ordinary update, and its rules or profiles share entries with this browser&#39;s.</li>
+          <li data-i18n="docs.sync.chromeSync.noPromptLiBlank">This browser had no data of its own, or only the example rules Takt adds at install.</li>
+          <li data-i18n="docs.sync.chromeSync.noPromptLiSettings">Only settings changed.</li>
+        </ul>
+        <p data-i18n="docs.sync.chromeSync.freeRules">On the free plan, Takt uses at most 5 rules, also after any sync. Extra rules that arrive by sync are kept, marked Locked in the rules list, and not used. If you choose Merge both on the free plan, at most 5 rules are kept, this browser&#39;s first, and Takt tells you how many were left out.</p>
+        <p data-i18n="docs.sync.chromeSync.freeGroups">In AI and Category modes, the free plan makes at most 5 groups, the biggest first. The Others group needs Premium.</p>
+        <p data-i18n="docs.sync.chromeSync.perComputer">Settings that belong to one computer are no longer synced: the File Sync folder and its auto-sync; whether Drive Sync and its auto-sync are on, the account email and the last sync time; granted permissions; and whether onboarding is done.</p>
+
+        <p><a href="../drive-sync/#conflicts" data-i18n="docs.sync.chromeSync.driveLink">Using Drive Sync? See how Drive Sync handles different data.</a></p>
 
         <h2 id="import"><span data-i18n="docs.sync.import.heading">Import from Folder</span> <a href="#import" class="anchor-link">#</a></h2>
         <p data-i18n="docs.sync.import.intro">
@@ -197,10 +223,7 @@
             Each file is read, size-checked (5 MB limit), parsed, and validated for structure and
             security before any data is written.
           </li>
-          <li data-i18n="docs.sync.import.li4">
-            Valid data is merged into your current Takt data. Rules and profiles get fresh IDs to
-            avoid collisions. Sessions each get a new ID.
-          </li>
+          <li data-i18n="docs.sync.import.li4">Valid data is added to your current Takt data, and imported entries get new IDs. A rule, profile or session whose name is already used here, and a hibernated tab whose address is already in the list, is skipped. Imported profiles are inactive. Their rule links point to the imported rules, or to the rule here with the same name; a link to a rule that is not in the import is dropped. Takt then shows how many rules and profiles were added and skipped, and how many sessions and hibernated tabs were added.</li>
         </ol>
         <p data-i18n="docs.sync.import.p2">
           If a file is missing (for example, <code>sessions.json</code> doesn't exist yet), that
@@ -208,13 +231,7 @@
         </p>
 
         <div class="callout">
-          <p data-i18n="docs.sync.import.callout">
-            <strong>Don't import from your active sync folder.</strong> If you pick the same folder
-            Takt is currently syncing to, Takt will read back the files it just wrote — this is
-            harmless but pointless, and can create duplicate entries if you have made local changes
-            since the last sync. Use Import from Folder to bring in data from a
-            <em>different</em> device or a backup, not from the folder you sync to.
-          </p>
+          <p data-i18n="docs.sync.import.callout"><strong>Don&#39;t import from your active sync folder.</strong> Sync Now already reads that folder and asks you what to keep. Import from Folder only adds entries whose name is not used here, so importing from your sync folder can bring back rules, profiles or sessions you deleted or renamed since the last sync. Use Import from Folder to bring in data from a <em>different</em> device or a backup, not from the folder you sync to.</p>
         </div>
 
         <h2 id="reauthorize">
@@ -294,7 +311,7 @@
             </tr>
             <tr>
               <td>Conflict strategy</td>
-              <td>Last write wins per file</td>
+              <td data-i18n="docs.sync.limits.conflictValue">Nothing is written until you choose what to keep</td>
             </tr>
           </tbody>
         </table>
