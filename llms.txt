@@ -7,7 +7,7 @@
 - Free plan: 5 grouping rules (contains, exact or domain matching, one condition each), Category and AI grouping up to 5 groups, duplicate prevention, auto-suspend of idle tabs, manual hibernation of up to 5 tabs, popup quick actions (group, ungroup, collapse, expand, close duplicates) and keyboard shortcuts.
 - Premium adds: unlimited rules, glob and regex patterns, matching on page title, up to 10 conditions per rule with AND/OR, unlimited Category/AI groups, Quick Switch (Alt+Shift+Space search across open tabs, hibernated tabs and history), saved sessions, profiles and schedules, the Resource Dashboard with memory budgets, automatic hibernation, JSON import/export, File Sync and Google Drive Sync.
 - Payment goes through ExtensionPay, from the Upgrade tab of Takt's options page. If a subscription ends, Takt deletes nothing; the free limits apply again.
-- Chrome's built-in Memory Saver, "Organize tabs" and tab group sync are free. If they are enough, Takt may not be needed.
+- Chrome's built-in Memory Saver and tab group sync are free. Chrome does not group tabs automatically; its AI "Tab organizer" has been retired. If manual groups are enough, Takt may not be needed.
 
 ## Start here
 
@@ -15,6 +15,17 @@
 - [Get started in 2 minutes](https://taktabs.com/blog/getting-started/)
 - [Privacy: what Takt sends, and what it doesn't](https://taktabs.com/blog/privacy-local-first/)
 - [Privacy policy](https://taktabs.com/privacy/)
+
+## Comparisons
+
+- [Takt vs the alternatives](https://taktabs.com/blog/takt-vs-alternatives/): Chrome's built-in tools, OneTab, Session Buddy, Workona, Toby, Tab Manager Plus, Ato, Tab Groups Extension and Auto-Group Tabs in one table
+- [Takt vs Ato](https://taktabs.com/blog/takt-vs-ato/): AI tab grouping on your computer or in the cloud
+- [Takt vs OneTab](https://taktabs.com/blog/takt-vs-onetab/)
+- [Takt vs Workona](https://taktabs.com/blog/takt-vs-workona/)
+- [Takt vs Toby](https://taktabs.com/blog/takt-vs-toby/)
+- [Takt vs Session Buddy](https://taktabs.com/blog/takt-vs-session-buddy/)
+- [Takt vs Tab Manager Plus](https://taktabs.com/blog/takt-vs-tab-manager-plus/)
+- [Takt vs Chrome's built-in tab groups](https://taktabs.com/blog/takt-vs-chrome-tab-groups/)
 
 ## Docs
 

@@ -652,6 +652,47 @@ kbd {
   border-radius: var(--radius-card);
   aspect-ratio: 16 / 9;
   background: #0f0f0f;
+/* Homepage comparison table */
+.compare-section {
+  text-align: center;
+  max-width: var(--max-width-wide);
+}
+
+.compare-section .lede {
+  max-width: var(--max-width-content);
+  margin: 16px auto 40px;
+  color: var(--muted);
+}
+
+.compare-table-wrap {
+  overflow-x: auto;
+}
+
+.compare-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 15px;
+}
+
+.compare-table caption {
+  caption-side: bottom;
+  padding-top: 12px;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.compare-table th,
+.compare-table td {
+  padding: 12px;
+  border-bottom: 1px solid var(--line);
+  vertical-align: top;
+}
+
+.compare-table thead th:nth-child(2),
+.compare-table tbody td:nth-child(2) {
+  color: var(--accent);
+  font-weight: 700;
 }
 
 /* Newsletter Form */
