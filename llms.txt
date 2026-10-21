@@ -3,6 +3,7 @@
 > Takt is a Chrome extension that groups tabs automatically: by URL rules, by site category, or with Chrome's on-device AI. It also prevents duplicate tabs, hibernates idle tabs to free memory, and shows which tabs use the most resources. It has a free plan with no time limit, and Premium costs $3/month or $30/year. The extension needs no account, has no analytics, and keeps your data in Chrome's own storage. It is available in English, French, Spanish, Italian, German and Portuguese.
 
 - Install: [Takt on the Chrome Web Store](https://chromewebstore.google.com/detail/takt/plgfdnbgkjocmgegnkbihoeojcfphdic)
+- Video: [Takt promo video on YouTube](https://www.youtube.com/watch?v=Xv49EcuRYD8)
 - Free plan: 5 grouping rules (contains, exact or domain matching, one condition each), Category and AI grouping up to 5 groups, duplicate prevention, auto-suspend of idle tabs, manual hibernation of up to 5 tabs, popup quick actions (group, ungroup, collapse, expand, close duplicates) and keyboard shortcuts.
 - Premium adds: unlimited rules, glob and regex patterns, matching on page title, up to 10 conditions per rule with AND/OR, unlimited Category/AI groups, Quick Switch (Alt+Shift+Space search across open tabs, hibernated tabs and history), saved sessions, profiles and schedules, the Resource Dashboard with memory budgets, automatic hibernation, JSON import/export, File Sync and Google Drive Sync.
 - Payment goes through ExtensionPay, from the Upgrade tab of Takt's options page. If a subscription ends, Takt deletes nothing; the free limits apply again.

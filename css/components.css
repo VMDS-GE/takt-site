@@ -643,6 +643,17 @@ kbd {
   background: #0f0f0f;
 }
 
+#demo .demo-video {
+  display: block;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto 32px;
+  border: 0;
+  border-radius: var(--radius-card);
+  aspect-ratio: 16 / 9;
+  background: #0f0f0f;
+}
+
 /* Newsletter Form */
 
 .newsletter-form {
