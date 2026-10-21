@@ -73,7 +73,7 @@
               {
                 "@type": "Question",
                 "name": "¿Pierdo mis reglas si dejo de pagar?",
-                "acceptedAnswer": { "@type": "Answer", "text": "No. Takt no borra nada. Las reglas de una sola condición con contiene, exacta o dominio siguen funcionando, aunque tengas más de 5. Las que usan varias condiciones, títulos de página, glob o regex dejan de aplicarse hasta que vuelvas a suscribirte, y no puedes añadir reglas nuevas mientras tengas 5 o más." }
+                "acceptedAnswer": { "@type": "Answer", "text": "No. Takt no borra nada. Solo las 5 primeras reglas de tu lista siguen activas. De ellas, las de una sola condición con contiene, exacta o dominio siguen funcionando; las que usan varias condiciones, títulos de página, glob o regex dejan de aplicarse. Las reglas a partir de la sexta también quedan en pausa. Todo vuelve a funcionar cuando te suscribes de nuevo, y no puedes añadir reglas nuevas mientras tengas 5 o más." }
               },
               {
                 "@type": "Question",
@@ -188,7 +188,7 @@
           <h2 id="ends">¿Qué pasa cuando termina una suscripción Premium?</h2>
           <p>Takt comprueba tu plan al arrancar y cada 15 minutos. Cuando la suscripción ha terminado, vuelven a aplicarse los límites del plan Free. Takt no borra nada:</p>
           <ul>
-            <li><strong>Reglas:</strong> se quedan todas. Las de una sola condición con contiene, exacta o dominio siguen agrupando, aunque tengas más de 5. Las que tienen varias condiciones, una condición de título o un patrón glob o regex dejan de aplicarse. No puedes añadir una regla nueva mientras tengas 5 o más.</li>
+            <li><strong>Reglas:</strong> se quedan todas, pero solo las 5 primeras de tu lista siguen activas. De ellas, las de una sola condición con contiene, exacta o dominio siguen agrupando; las que tienen varias condiciones, una condición de título o un patrón glob o regex dejan de aplicarse. Las reglas a partir de la sexta quedan en pausa. No puedes añadir una regla nueva mientras tengas 5 o más.</li>
             <li><strong>Pestañas hibernadas:</strong> se quedan, y puedes despertarlas. Podrás hibernar otras nuevas cuando tengas menos de 5.</li>
             <li><strong>Sesiones:</strong> siguen guardadas, pero para guardar y restaurar vuelves a necesitar Premium.</li>
             <li><strong>Perfiles:</strong> dejan de aplicarse. Todas tus reglas funcionan a la vez, como si no hubiera ningún perfil activo.</li>
@@ -199,7 +199,8 @@
           <h2 id="limits">Lo que Premium no cambia</h2>
           <ul>
             <li><strong>La privacidad es la misma en los dos planes.</strong> Sin cuenta, sin analíticas. La comprobación del plan va a ExtensionPay; consulta <a href="../privacy-local-first/">qué hace Takt con tus datos</a>.</li>
-            <li><strong>Las herramientas de Chrome siguen ahí.</strong> "Ahorro de memoria", "Organizar pestañas" y la sincronización de grupos de pestañas son gratis y vienen integradas. Si te bastan, puede que no necesites Takt.</li>
+            <li><strong>La sincronización funciona en los dos planes.</strong> Tus reglas y ajustes se sincronizan entre ordenadores mediante la sincronización de Chrome en los dos planes; en Free, eso incluye tus 5 reglas.</li>
+            <li><strong>Las herramientas de Chrome siguen ahí.</strong> "Ahorro de memoria" y la sincronización de grupos de pestañas son gratis y vienen integradas. Si te bastan, puede que no necesites Takt.</li>
           </ul>
 
           <div class="cta">
@@ -219,7 +220,7 @@
             </details>
             <details>
               <summary>¿Pierdo mis reglas si dejo de pagar?</summary>
-              <p>No. Takt no borra nada. Las reglas de una sola condición con contiene, exacta y dominio siguen funcionando, aunque tengas más de 5. Las reglas con varias condiciones, título, glob y regex quedan en pausa hasta que vuelvas a suscribirte.</p>
+              <p>No. Takt no borra nada. Las 5 primeras reglas de tu lista siguen funcionando si usan una sola condición contiene, exacta o dominio. Todas las demás quedan en pausa hasta que vuelvas a suscribirte.</p>
             </details>
             <details>
               <summary>¿La importación y exportación son gratis?</summary>

@@ -73,7 +73,7 @@
               {
                 "@type": "Question",
                 "name": "Perdo le mie regole se smetto di pagare?",
-                "acceptedAnswer": { "@type": "Answer", "text": "No. Takt non elimina niente. Le regole con una sola condizione di tipo contiene, esatto o dominio continuano a funzionare, anche oltre le 5. Le regole con più condizioni, sul titolo della pagina, glob o regex smettono di corrispondere finché non ti abboni di nuovo, e non puoi aggiungere nuove regole finché ne hai 5 o più." }
+                "acceptedAnswer": { "@type": "Answer", "text": "No. Takt non elimina niente. Restano attive solo le prime 5 regole del tuo elenco. Tra queste, quelle con una sola condizione di tipo contiene, esatto o dominio continuano a funzionare; quelle con più condizioni, sul titolo della pagina, glob o regex smettono di corrispondere. Anche le regole dopo la quinta vanno in pausa. Tutto torna a funzionare quando ti abboni di nuovo, e non puoi aggiungere nuove regole finché ne hai 5 o più." }
               },
               {
                 "@type": "Question",
@@ -188,7 +188,7 @@
           <h2 id="ends">Cosa succede quando un abbonamento Premium finisce?</h2>
           <p>Takt verifica il piano all'avvio e ogni 15 minuti. Quando l'abbonamento è finito, tornano i limiti gratuiti. Takt non elimina niente:</p>
           <ul>
-            <li><strong>Le regole</strong> restano tutte. Le regole con una sola condizione di tipo contiene, esatto o dominio continuano a raggruppare, anche se ne hai più di 5. Le regole con più condizioni, una condizione sul titolo o un pattern glob o regex smettono di corrispondere. Non puoi aggiungere una nuova regola finché ne hai 5 o più.</li>
+            <li><strong>Le regole</strong> restano tutte, ma solo le prime 5 del tuo elenco restano attive. Tra queste, le regole con una sola condizione di tipo contiene, esatto o dominio continuano a raggruppare; quelle con più condizioni, una condizione sul titolo o un pattern glob o regex smettono di corrispondere. Le regole dopo la quinta vanno in pausa. Non puoi aggiungere una nuova regola finché ne hai 5 o più.</li>
             <li><strong>Le schede ibernate</strong> restano e puoi riattivarle. Puoi ibernarne di nuove quando scendi sotto le 5.</li>
             <li><strong>Le sessioni</strong> restano salvate, ma per salvarne e ripristinarne serve di nuovo Premium.</li>
             <li><strong>I profili</strong> smettono di applicarsi. Tutte le regole funzionano insieme, come se non ci fosse alcun profilo attivo.</li>
@@ -199,7 +199,8 @@
           <h2 id="limits">Cosa Premium non cambia</h2>
           <ul>
             <li><strong>La privacy è la stessa in entrambi i piani.</strong> Nessun account, nessuna analisi dei dati d'uso. La verifica del piano va a ExtensionPay; vedi <a href="../privacy-local-first/">cosa fa Takt con i tuoi dati</a>.</li>
-            <li><strong>Gli strumenti di Chrome restano lì.</strong> Risparmio memoria, "Organizza schede" e la sincronizzazione dei gruppi di schede sono gratuiti e integrati. Se ti bastano, forse Takt non ti serve affatto.</li>
+            <li><strong>La sincronizzazione funziona in entrambi i piani.</strong> Regole e impostazioni si sincronizzano tra i tuoi computer tramite la sincronizzazione di Chrome in entrambi i piani; con Free, questo include le tue 5 regole.</li>
+            <li><strong>Gli strumenti di Chrome restano lì.</strong> Risparmio memoria e la sincronizzazione dei gruppi di schede sono gratuiti e integrati. Se ti bastano, forse Takt non ti serve affatto.</li>
           </ul>
 
           <div class="cta">
@@ -219,7 +220,7 @@
             </details>
             <details>
               <summary>Perdo le mie regole se smetto di pagare?</summary>
-              <p>No. Takt non elimina niente. Le regole con una sola condizione di tipo contiene, esatto o dominio continuano a funzionare, anche oltre le 5. Le regole con più condizioni, sul titolo, glob e regex restano in pausa finché non ti abboni di nuovo.</p>
+              <p>No. Takt non elimina niente. Le prime 5 regole del tuo elenco continuano a funzionare se usano una sola condizione contiene, esatto o dominio. Tutte le altre restano in pausa finché non ti abboni di nuovo.</p>
             </details>
             <details>
               <summary>Importazione ed esportazione sono gratuite?</summary>

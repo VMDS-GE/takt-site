@@ -6,7 +6,7 @@
     <title>Group Chrome tabs by category or with on-device AI, no rules needed — Takt</title>
     <meta
       name="description"
-      content="Group every open Chrome tab by category (20 built-in categories) or with Chrome's on-device AI model, without writing a single rule. How each mode works, the free 5-group cap, and how it compares with Chrome's own Organize tabs."
+      content="Group every open Chrome tab by category (20 built-in categories) or with Chrome's on-device AI model, without writing a single rule. How each mode works, the free 5-group cap, and why Chrome can't do this on its own."
     />
     <link rel="canonical" href="https://taktabs.com/blog/group-tabs-by-category-or-ai/" />
 <!-- TAKT-LANG:head -->
@@ -177,14 +177,15 @@
           </ul>
           <p>Premium ($3/month or $30/year) removes the group cap.</p>
 
-          <h2 id="chrome">How is this different from Chrome's own "Organize tabs"?</h2>
-          <p>Since Chrome 146, right-clicking a tab offers to organize similar tabs. It uses Gemini Nano on your device, suggests group names, costs nothing and needs no extension. For a one-off cleanup, that may be all you need.</p>
+          <h2 id="chrome">Doesn't Chrome do this already?</h2>
+          <p>No. Chrome's AI Tab organizer, which ran in the cloud and was only available in the US, was retired in 2025. Current Chrome doesn't group tabs for you. You can make, save and sync tab groups by hand, but sorting tabs into them is up to you.</p>
+          <p>Takt's AI mode uses Chrome's on-device Prompt API instead, so tab titles stay on your computer. Category mode needs no model at all.</p>
           <table>
-            <thead><tr><th></th><th>Chrome built-in</th><th>Takt Category</th><th>Takt AI</th></tr></thead>
+            <thead><tr><th></th><th>Chrome, no extension</th><th>Takt Category</th><th>Takt AI</th></tr></thead>
             <tbody>
-              <tr><td>When it groups</td><td>When you ask</td><td>On Group Tabs, and each new tab as it loads</td><td>On Group Tabs</td></tr>
-              <tr><td>Group names</td><td>Suggested by the model</td><td>Fixed: 20 categories + Other</td><td>Suggested by the model</td></tr>
-              <tr><td>Runs on device</td><td>Yes</td><td>Yes, no model needed</td><td>Yes</td></tr>
+              <tr><td>When it groups</td><td>Only by hand</td><td>On Group Tabs, and each new tab as it loads</td><td>On Group Tabs</td></tr>
+              <tr><td>Group names</td><td>You type them</td><td>Fixed: 20 categories + Other</td><td>Suggested by the model</td></tr>
+              <tr><td>Runs on device</td><td>No AI grouping</td><td>Yes, no model needed</td><td>Yes</td></tr>
               <tr><td>Switch to your own rules</td><td>No</td><td colspan="2">Yes, one click to Rules mode</td></tr>
               <tr><td>Price</td><td>Free</td><td colspan="2">Free up to 5 groups; Premium unlimited</td></tr>
             </tbody>

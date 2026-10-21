@@ -73,7 +73,7 @@
               {
                 "@type": "Question",
                 "name": "Est-ce que je perds mes règles si j'arrête de payer ?",
-                "acceptedAnswer": { "@type": "Answer", "text": "Non. Takt ne supprime rien. Les règles à condition unique de type contient, exact ou domaine continuent de fonctionner, même au-delà de 5. Les règles qui utilisent plusieurs conditions, le titre de la page, un glob ou une regex cessent de s'appliquer jusqu'à ce que vous vous réabonniez, et vous ne pouvez pas ajouter de nouvelle règle tant que vous en avez 5 ou plus." }
+                "acceptedAnswer": { "@type": "Answer", "text": "Non. Takt ne supprime rien. Seules les 5 premières règles de votre liste restent actives. Parmi elles, celles à condition unique de type contient, exact ou domaine continuent de fonctionner ; celles qui utilisent plusieurs conditions, le titre de la page, un glob ou une regex cessent de s'appliquer. Les règles après la cinquième sont aussi mises en pause. Tout refonctionne quand vous vous réabonnez, et vous ne pouvez pas ajouter de nouvelle règle tant que vous en avez 5 ou plus." }
               },
               {
                 "@type": "Question",
@@ -188,7 +188,7 @@
           <h2 id="ends">Que se passe-t-il à la fin d'un abonnement Premium ?</h2>
           <p>Takt vérifie votre plan au démarrage, puis toutes les 15 minutes. Une fois l'abonnement terminé, les limites du plan Free s'appliquent de nouveau. Takt ne supprime rien :</p>
           <ul>
-            <li><strong>Les règles</strong> restent toutes. Les règles à condition unique de type contient, exact ou domaine continuent de regrouper, même si vous en avez plus de 5. Les règles à plusieurs conditions, avec une condition sur le titre, ou avec un motif glob ou regex cessent de s'appliquer. Vous ne pouvez pas ajouter de nouvelle règle tant que vous en avez 5 ou plus.</li>
+            <li><strong>Les règles</strong> restent toutes, mais seules les 5 premières de votre liste restent actives. Parmi elles, les règles à condition unique de type contient, exact ou domaine continuent de regrouper ; celles à plusieurs conditions, avec une condition sur le titre, ou avec un motif glob ou regex cessent de s'appliquer. Les règles après la cinquième sont mises en pause. Vous ne pouvez pas ajouter de nouvelle règle tant que vous en avez 5 ou plus.</li>
             <li><strong>Les onglets en hibernation</strong> restent, et vous pouvez les réactiver. Vous pourrez en mettre de nouveaux en hibernation une fois sous la barre des 5.</li>
             <li><strong>Les sessions</strong> restent stockées, mais il faut de nouveau Premium pour enregistrer et restaurer.</li>
             <li><strong>Les profils</strong> cessent de s'appliquer. Toutes vos règles fonctionnent ensemble, comme si aucun profil n'était actif.</li>
@@ -199,7 +199,8 @@
           <h2 id="limits">Ce que Premium ne change pas</h2>
           <ul>
             <li><strong>La confidentialité est la même sur les deux plans.</strong> Aucun compte, aucune statistique d'usage. La vérification du plan passe par ExtensionPay ; voir <a href="../privacy-local-first/">ce que Takt fait de vos données</a>.</li>
-            <li><strong>Les outils de Chrome restent disponibles.</strong> L'Économiseur de mémoire, « Organize tabs » et la synchronisation des groupes d'onglets sont gratuits et intégrés. S'ils vous suffisent, vous n'avez peut-être pas besoin de Takt du tout.</li>
+            <li><strong>La synchronisation fonctionne sur les deux plans.</strong> Vos règles et réglages se synchronisent entre vos ordinateurs via la synchronisation Chrome sur les deux plans ; en Free, cela couvre vos 5 règles.</li>
+            <li><strong>Les outils de Chrome restent disponibles.</strong> L'Économiseur de mémoire et la synchronisation des groupes d'onglets sont gratuits et intégrés. S'ils vous suffisent, vous n'avez peut-être pas besoin de Takt du tout.</li>
           </ul>
 
           <div class="cta">
@@ -219,7 +220,7 @@
             </details>
             <details>
               <summary>Est-ce que je perds mes règles si j'arrête de payer ?</summary>
-              <p>Non. Takt ne supprime rien. Les règles à condition unique de type contient, exact et domaine continuent de fonctionner, même au-delà de 5. Les règles à plusieurs conditions, sur le titre, glob et regex sont mises en pause jusqu'à ce que vous vous réabonniez.</p>
+              <p>Non. Takt ne supprime rien. Les 5 premières règles de votre liste continuent de fonctionner si elles utilisent une seule condition contient, exact ou domaine. Toutes les autres sont mises en pause jusqu'à ce que vous vous réabonniez.</p>
             </details>
             <details>
               <summary>L'import et l'export sont-ils gratuits ?</summary>

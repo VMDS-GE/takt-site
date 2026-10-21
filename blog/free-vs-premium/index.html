@@ -71,7 +71,7 @@
               {
                 "@type": "Question",
                 "name": "Do I lose my rules if I stop paying?",
-                "acceptedAnswer": { "@type": "Answer", "text": "No. Takt deletes nothing. Single-condition rules using contains, exact or domain keep working, even beyond 5. Rules that use several conditions, page titles, glob or regex stop matching until you resubscribe, and you can't add new rules while you have 5 or more." }
+                "acceptedAnswer": { "@type": "Answer", "text": "No. Takt deletes nothing. Only the first 5 rules in your list stay active. Of those, rules with one contains, exact or domain condition keep working; rules with several conditions, a page title, glob or regex stop matching. Rules after the fifth pause too. Everything works again when you resubscribe, and you can't add new rules while you have 5 or more." }
               },
               {
                 "@type": "Question",
@@ -186,7 +186,7 @@
           <h2 id="ends">What happens when a Premium subscription ends?</h2>
           <p>Takt checks your plan at startup and every 15 minutes. Once the subscription has ended, the free limits apply again. Takt deletes nothing:</p>
           <ul>
-            <li><strong>Rules</strong> all stay. Single-condition rules with contains, exact or domain keep grouping, even if you have more than 5. Rules with several conditions, a title condition, or a glob or regex pattern stop matching. You can't add a new rule while you have 5 or more.</li>
+            <li><strong>Rules</strong> all stay, but only the first 5 in your list stay active. Of those, single-condition rules with contains, exact or domain keep grouping; rules with several conditions, a title condition, or a glob or regex pattern stop matching. Rules after the fifth pause. You can't add a new rule while you have 5 or more.</li>
             <li><strong>Hibernated tabs</strong> stay, and you can wake them. You can hibernate new ones once you're under 5.</li>
             <li><strong>Sessions</strong> stay stored, but saving and restoring need Premium again.</li>
             <li><strong>Profiles</strong> stop applying. All your rules work together, as if no profile were active.</li>
@@ -197,7 +197,8 @@
           <h2 id="limits">What Premium doesn't change</h2>
           <ul>
             <li><strong>Privacy is the same on both plans.</strong> No account, no analytics. The plan check goes to ExtensionPay; see <a href="../privacy-local-first/">what Takt does with your data</a>.</li>
-            <li><strong>Chrome's own tools are still there.</strong> Memory Saver, "Organize tabs" and tab group sync are free and built in. If they cover you, you may not need Takt at all.</li>
+            <li><strong>Sync works on both plans.</strong> Your rules and settings sync between computers through Chrome Sync on both plans; on Free that covers your 5 rules.</li>
+            <li><strong>Chrome's own tools are still there.</strong> Memory Saver and tab group sync are free and built in. If they cover you, you may not need Takt at all.</li>
           </ul>
 
           <div class="cta">
@@ -217,7 +218,7 @@
             </details>
             <details>
               <summary>Do I lose my rules if I stop paying?</summary>
-              <p>No. Takt deletes nothing. Single-condition contains, exact and domain rules keep working, even beyond 5. Multi-condition, title, glob and regex rules pause until you resubscribe.</p>
+              <p>No. Takt deletes nothing. The first 5 rules in your list keep working if they use one contains, exact or domain condition. All other rules pause until you resubscribe.</p>
             </details>
             <details>
               <summary>Is import and export free?</summary>

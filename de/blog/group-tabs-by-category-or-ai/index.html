@@ -6,7 +6,7 @@
     <title>Chrome-Tabs nach Kategorie oder per lokaler KI gruppieren, ohne Regeln — Takt</title>
     <meta
       name="description"
-      content="Gruppieren Sie alle offenen Chrome-Tabs nach Kategorie (20 integrierte Kategorien) oder mit Chromes lokalem KI-Modell, ohne eine einzige Regel zu schreiben. Wie jeder Modus funktioniert, die kostenlose Grenze von 5 Gruppen und der Vergleich mit Chromes eigenem „Organize tabs“."
+      content="Gruppieren Sie alle offenen Chrome-Tabs nach Kategorie (20 integrierte Kategorien) oder mit Chromes lokalem KI-Modell, ohne eine einzige Regel zu schreiben. Wie jeder Modus funktioniert, die kostenlose Grenze von 5 Gruppen und warum Chrome das nicht selbst kann."
     />
     <link rel="canonical" href="https://taktabs.com/de/blog/group-tabs-by-category-or-ai/" />
 <!-- TAKT-LANG:head -->
@@ -179,14 +179,15 @@
           </ul>
           <p>Premium ($3/Monat oder $30/Jahr) hebt die Gruppengrenze auf.</p>
 
-          <h2 id="chrome">Was ist der Unterschied zu Chromes eigenem „Organize tabs“?</h2>
-          <p>Seit Chrome 146 bietet ein Rechtsklick auf einen Tab an, ähnliche Tabs zu ordnen. Die Funktion nutzt Gemini Nano auf Ihrem Gerät, schlägt Gruppennamen vor, kostet nichts und braucht keine Erweiterung. Für einmaliges Aufräumen kann das schon genügen.</p>
+          <h2 id="chrome">Kann Chrome das nicht schon?</h2>
+          <p>Nein. Chromes KI-Tab-Organizer lief in der Cloud, war nur in den USA verfügbar und wurde 2025 eingestellt. Das aktuelle Chrome gruppiert Tabs nicht für Sie. Sie können Tab-Gruppen von Hand anlegen, speichern und synchronisieren, aber die Tabs einsortieren müssen Sie selbst.</p>
+          <p>Der KI-Modus von Takt nutzt stattdessen Chromes Prompt API auf Ihrem Gerät, sodass Tab-Titel auf Ihrem Computer bleiben. Der Kategoriemodus braucht gar kein Modell.</p>
           <table>
-            <thead><tr><th></th><th>In Chrome integriert</th><th>Takt Kategorie</th><th>Takt KI</th></tr></thead>
+            <thead><tr><th></th><th>Chrome ohne Erweiterung</th><th>Takt Kategorie</th><th>Takt KI</th></tr></thead>
             <tbody>
-              <tr><td>Wann gruppiert wird</td><td>Wenn Sie es anfordern</td><td>Bei Tabs gruppieren und bei jedem neuen Tab während des Ladens</td><td>Bei Tabs gruppieren</td></tr>
-              <tr><td>Gruppennamen</td><td>Vom Modell vorgeschlagen</td><td>Fest: 20 Kategorien + Other</td><td>Vom Modell vorgeschlagen</td></tr>
-              <tr><td>Läuft auf dem Gerät</td><td>Ja</td><td>Ja, kein Modell nötig</td><td>Ja</td></tr>
+              <tr><td>Wann gruppiert wird</td><td>Nur von Hand</td><td>Bei Tabs gruppieren und bei jedem neuen Tab während des Ladens</td><td>Bei Tabs gruppieren</td></tr>
+              <tr><td>Gruppennamen</td><td>Sie tippen sie selbst ein</td><td>Fest: 20 Kategorien + Other</td><td>Vom Modell vorgeschlagen</td></tr>
+              <tr><td>Läuft auf dem Gerät</td><td>Keine KI-Gruppierung</td><td>Ja, kein Modell nötig</td><td>Ja</td></tr>
               <tr><td>Wechsel zu eigenen Regeln</td><td>Nein</td><td colspan="2">Ja, ein Klick zum Regelmodus</td></tr>
               <tr><td>Preis</td><td>Kostenlos</td><td colspan="2">Kostenlos bis 5 Gruppen; Premium unbegrenzt</td></tr>
             </tbody>

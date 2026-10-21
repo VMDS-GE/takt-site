@@ -73,7 +73,7 @@
               {
                 "@type": "Question",
                 "name": "Perco minhas regras se parar de pagar?",
-                "acceptedAnswer": { "@type": "Answer", "text": "Não. O Takt não apaga nada. Regras de uma condição com contém, exata ou domínio continuam funcionando, mesmo acima de 5. Regras com várias condições, título, glob ou regex ficam pausadas até você assinar de novo." }
+                "acceptedAnswer": { "@type": "Answer", "text": "Não. O Takt não apaga nada. Só as 5 primeiras regras da sua lista continuam ativas, e só se usarem uma condição contém, exata ou domínio. Todas as outras ficam pausadas até você assinar de novo." }
               },
               {
                 "@type": "Question",
@@ -188,7 +188,7 @@
           <h2 id="ends">O que acontece quando uma assinatura Premium termina?</h2>
           <p>O Takt verifica seu plano ao iniciar e a cada 15 minutos. Quando a assinatura termina, os limites gratuitos voltam a valer. O Takt não apaga nada:</p>
           <ul>
-            <li><strong>As regras</strong> ficam todas. Regras de uma condição com contém, exata ou domínio continuam agrupando, mesmo que você tenha mais de 5. Regras com várias condições, condição de título ou padrão glob ou regex param de corresponder. Você não pode adicionar uma regra nova enquanto tiver 5 ou mais.</li>
+            <li><strong>As regras</strong> ficam todas, mas só as 5 primeiras da sua lista continuam ativas. Delas, as regras de uma condição com contém, exata ou domínio continuam agrupando; as com várias condições, condição de título ou padrão glob ou regex param de corresponder. As regras depois da quinta ficam pausadas. Você não pode adicionar uma regra nova enquanto tiver 5 ou mais.</li>
             <li><strong>As abas hibernadas</strong> ficam, e você pode acordá-las. Pode hibernar novas quando estiver abaixo de 5.</li>
             <li><strong>As sessões</strong> continuam guardadas, mas salvar e restaurar voltam a exigir o Premium.</li>
             <li><strong>Os perfis</strong> deixam de ser aplicados. Todas as suas regras funcionam juntas, como se nenhum perfil estivesse ativo.</li>
@@ -199,7 +199,8 @@
           <h2 id="limits">O que o Premium não muda</h2>
           <ul>
             <li><strong>A privacidade é a mesma nos dois planos.</strong> Sem conta, sem analytics. A verificação do plano vai para o ExtensionPay; veja <a href="../privacy-local-first/">o que o Takt faz com seus dados</a>.</li>
-            <li><strong>As ferramentas do próprio Chrome continuam lá.</strong> "Economia de memória", "Organizar guias" e a sincronização de grupos de abas são gratuitos e já vêm no Chrome. Se eles bastam para você, talvez você nem precise do Takt.</li>
+            <li><strong>A sincronização funciona nos dois planos.</strong> Suas regras e configurações sincronizam entre computadores pela sincronização do Chrome nos dois planos; no Free, isso inclui suas 5 regras.</li>
+            <li><strong>As ferramentas do próprio Chrome continuam lá.</strong> "Economia de memória" e a sincronização de grupos de abas são gratuitas e já vêm no Chrome. Se eles bastam para você, talvez você nem precise do Takt.</li>
           </ul>
 
           <div class="cta">
@@ -219,7 +220,7 @@
             </details>
             <details>
               <summary>Perco minhas regras se parar de pagar?</summary>
-              <p>Não. O Takt não apaga nada. Regras de uma condição com contém, exata ou domínio continuam funcionando, mesmo acima de 5. Regras com várias condições, título, glob ou regex ficam pausadas até você assinar de novo.</p>
+              <p>Não. O Takt não apaga nada. As 5 primeiras regras da sua lista continuam funcionando se usarem uma condição contém, exata ou domínio. Todas as outras ficam pausadas até você assinar de novo.</p>
             </details>
             <details>
               <summary>Importar e exportar é gratuito?</summary>

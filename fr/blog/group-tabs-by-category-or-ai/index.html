@@ -6,7 +6,7 @@
     <title>Regrouper les onglets Chrome par catégorie ou avec l'IA locale, sans règles — Takt</title>
     <meta
       name="description"
-      content="Regroupez tous vos onglets Chrome ouverts par catégorie (20 catégories intégrées) ou avec le modèle d'IA local de Chrome, sans écrire une seule règle. Le fonctionnement de chaque mode, la limite gratuite de 5 groupes, et la comparaison avec « Organize tabs » de Chrome."
+      content="Regroupez tous vos onglets Chrome ouverts par catégorie (20 catégories intégrées) ou avec le modèle d'IA local de Chrome, sans écrire une seule règle. Le fonctionnement de chaque mode, la limite gratuite de 5 groupes, et pourquoi Chrome ne le fait pas tout seul."
     />
     <link rel="canonical" href="https://taktabs.com/fr/blog/group-tabs-by-category-or-ai/" />
 <!-- TAKT-LANG:head -->
@@ -179,14 +179,15 @@
           </ul>
           <p>Premium (3 $/mois ou 30 $/an) supprime la limite de groupes.</p>
 
-          <h2 id="chrome">Quelle différence avec « Organize tabs » de Chrome ?</h2>
-          <p>Depuis Chrome 146, un clic droit sur un onglet propose d'organiser les onglets similaires. La fonction utilise Gemini Nano sur votre appareil, suggère des noms de groupes, ne coûte rien et ne demande aucune extension. Pour un rangement ponctuel, cela peut suffire.</p>
+          <h2 id="chrome">Chrome ne le fait-il pas déjà ?</h2>
+          <p>Non. L'organisateur d'onglets par IA de Chrome, qui fonctionnait dans le cloud et n'était disponible qu'aux États-Unis, a été retiré en 2025. La version actuelle de Chrome ne regroupe pas les onglets à votre place. Vous pouvez créer, enregistrer et synchroniser des groupes à la main, mais y ranger les onglets reste à votre charge.</p>
+          <p>Le mode IA de Takt utilise la Prompt API de Chrome, qui s'exécute sur votre appareil : les titres des onglets restent sur votre ordinateur. Le mode Catégorie n'a besoin d'aucun modèle.</p>
           <table>
-            <thead><tr><th></th><th>Fonction intégrée de Chrome</th><th>Takt Catégorie</th><th>Takt IA</th></tr></thead>
+            <thead><tr><th></th><th>Chrome sans extension</th><th>Takt Catégorie</th><th>Takt IA</th></tr></thead>
             <tbody>
-              <tr><td>Quand le regroupement a lieu</td><td>Quand vous le demandez</td><td>Avec Regrouper les onglets, et pour chaque nouvel onglet pendant son chargement</td><td>Avec Regrouper les onglets</td></tr>
-              <tr><td>Noms des groupes</td><td>Suggérés par le modèle</td><td>Fixes : 20 catégories + Other</td><td>Suggérés par le modèle</td></tr>
-              <tr><td>Exécution sur l'appareil</td><td>Oui</td><td>Oui, sans modèle</td><td>Oui</td></tr>
+              <tr><td>Quand le regroupement a lieu</td><td>Seulement à la main</td><td>Avec Regrouper les onglets, et pour chaque nouvel onglet pendant son chargement</td><td>Avec Regrouper les onglets</td></tr>
+              <tr><td>Noms des groupes</td><td>Vous les saisissez</td><td>Fixes : 20 catégories + Other</td><td>Suggérés par le modèle</td></tr>
+              <tr><td>Exécution sur l'appareil</td><td>Pas de regroupement par IA</td><td>Oui, sans modèle</td><td>Oui</td></tr>
               <tr><td>Passer à vos propres règles</td><td>Non</td><td colspan="2">Oui, en un clic vers le mode Par règles</td></tr>
               <tr><td>Prix</td><td>Gratuit</td><td colspan="2">Gratuit jusqu'à 5 groupes ; illimité avec Premium</td></tr>
             </tbody>

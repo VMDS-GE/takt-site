@@ -6,7 +6,7 @@
     <title>Agrupar abas do Chrome por categoria ou com IA no dispositivo, sem regras — Takt</title>
     <meta
       name="description"
-      content="Agrupe todas as abas abertas do Chrome por categoria (20 categorias prontas) ou com o modelo de IA no dispositivo do Chrome, sem escrever nenhuma regra. Como cada modo funciona, o limite gratuito de 5 grupos e a comparação com o \"Organizar guias\" do próprio Chrome."
+      content="Agrupe todas as abas abertas do Chrome por categoria (20 categorias prontas) ou com o modelo de IA no dispositivo do Chrome, sem escrever nenhuma regra. Como cada modo funciona, o limite gratuito de 5 grupos e por que o Chrome não faz isso sozinho."
     />
     <link rel="canonical" href="https://taktabs.com/pt/blog/group-tabs-by-category-or-ai/" />
 <!-- TAKT-LANG:head -->
@@ -179,14 +179,15 @@
           </ul>
           <p>O Premium (US$ 3/mês ou US$ 30/ano) remove o limite de grupos.</p>
 
-          <h2 id="chrome">Qual a diferença para o "Organizar guias" do próprio Chrome?</h2>
-          <p>Desde o Chrome 146, clicar com o botão direito numa aba oferece organizar as abas parecidas. O recurso usa o Gemini Nano no seu dispositivo, sugere nomes de grupo, não custa nada e não precisa de extensão. Para uma arrumação pontual, pode ser tudo de que você precisa.</p>
+          <h2 id="chrome">O Chrome já não faz isso?</h2>
+          <p>Não. O organizador de guias com IA do Chrome, que rodava na nuvem e só estava disponível nos EUA, foi desativado em 2025. O Chrome atual não agrupa as abas por você. Você pode criar, salvar e sincronizar grupos à mão, mas distribuir as abas fica por sua conta.</p>
+          <p>O modo Por IA do Takt usa a Prompt API do Chrome, que roda no seu dispositivo, então os títulos das abas ficam no seu computador. O modo Por categoria não precisa de modelo nenhum.</p>
           <table>
-            <thead><tr><th></th><th>Integrado ao Chrome</th><th>Takt Por categoria</th><th>Takt Por IA</th></tr></thead>
+            <thead><tr><th></th><th>Chrome sem extensão</th><th>Takt Por categoria</th><th>Takt Por IA</th></tr></thead>
             <tbody>
-              <tr><td>Quando agrupa</td><td>Quando você pede</td><td>Ao clicar em Agrupar abas, e cada nova aba enquanto carrega</td><td>Ao clicar em Agrupar abas</td></tr>
-              <tr><td>Nomes dos grupos</td><td>Sugeridos pelo modelo</td><td>Fixos: 20 categorias + Other</td><td>Sugeridos pelo modelo</td></tr>
-              <tr><td>Roda no dispositivo</td><td>Sim</td><td>Sim, sem precisar de modelo</td><td>Sim</td></tr>
+              <tr><td>Quando agrupa</td><td>Só à mão</td><td>Ao clicar em Agrupar abas, e cada nova aba enquanto carrega</td><td>Ao clicar em Agrupar abas</td></tr>
+              <tr><td>Nomes dos grupos</td><td>Você digita</td><td>Fixos: 20 categorias + Other</td><td>Sugeridos pelo modelo</td></tr>
+              <tr><td>Roda no dispositivo</td><td>Sem agrupamento por IA</td><td>Sim, sem precisar de modelo</td><td>Sim</td></tr>
               <tr><td>Passar para suas próprias regras</td><td>Não</td><td colspan="2">Sim, um clique para o modo Por regras</td></tr>
               <tr><td>Preço</td><td>Grátis</td><td colspan="2">Grátis até 5 grupos; Premium ilimitado</td></tr>
             </tbody>

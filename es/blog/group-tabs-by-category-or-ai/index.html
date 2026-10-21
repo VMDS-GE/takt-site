@@ -6,7 +6,7 @@
     <title>Agrupar pestañas de Chrome por categoría o con IA local, sin reglas — Takt</title>
     <meta
       name="description"
-      content="Agrupa todas las pestañas abiertas de Chrome por categoría (20 categorías integradas) o con el modelo de IA local de Chrome, sin escribir ni una regla. Cómo funciona cada modo, el límite gratuito de 5 grupos y en qué se diferencia de «Organizar pestañas» de Chrome."
+      content="Agrupa todas las pestañas abiertas de Chrome por categoría (20 categorías integradas) o con el modelo de IA local de Chrome, sin escribir ni una regla. Cómo funciona cada modo, el límite gratuito de 5 grupos y por qué Chrome no lo hace solo."
     />
     <link rel="canonical" href="https://taktabs.com/es/blog/group-tabs-by-category-or-ai/" />
 <!-- TAKT-LANG:head -->
@@ -179,14 +179,15 @@
           </ul>
           <p>Premium (3 $/mes o 30 $/año) elimina el límite de grupos.</p>
 
-          <h2 id="chrome">¿En qué se diferencia de «Organizar pestañas» de Chrome?</h2>
-          <p>Desde Chrome 146, al hacer clic derecho en una pestaña puedes organizar las pestañas similares. Usa Gemini Nano en tu dispositivo, sugiere nombres de grupo, no cuesta nada y no necesita ninguna extensión. Para una limpieza puntual, puede que no necesites más.</p>
+          <h2 id="chrome">¿Chrome no hace esto ya?</h2>
+          <p>No. El organizador de pestañas con IA de Chrome, que funcionaba en la nube y solo estaba disponible en EE. UU., se retiró en 2025. El Chrome actual no agrupa las pestañas por ti. Puedes crear, guardar y sincronizar grupos a mano, pero repartir las pestañas te toca a ti.</p>
+          <p>El modo IA de Takt usa la Prompt API de Chrome, que se ejecuta en tu dispositivo, así que los títulos de las pestañas se quedan en tu ordenador. El modo Categoría no necesita ningún modelo.</p>
           <table>
-            <thead><tr><th></th><th>Integrado en Chrome</th><th>Takt Categoría</th><th>Takt IA</th></tr></thead>
+            <thead><tr><th></th><th>Chrome sin extensión</th><th>Takt Categoría</th><th>Takt IA</th></tr></thead>
             <tbody>
-              <tr><td>Cuándo agrupa</td><td>Cuando se lo pides</td><td>Con Agrupar pestañas, y cada pestaña nueva al cargarse</td><td>Con Agrupar pestañas</td></tr>
-              <tr><td>Nombres de grupo</td><td>Los sugiere el modelo</td><td>Fijos: 20 categorías + Other</td><td>Los sugiere el modelo</td></tr>
-              <tr><td>Se ejecuta en el dispositivo</td><td>Sí</td><td>Sí, sin necesidad de modelo</td><td>Sí</td></tr>
+              <tr><td>Cuándo agrupa</td><td>Solo a mano</td><td>Con Agrupar pestañas, y cada pestaña nueva al cargarse</td><td>Con Agrupar pestañas</td></tr>
+              <tr><td>Nombres de grupo</td><td>Los escribes tú</td><td>Fijos: 20 categorías + Other</td><td>Los sugiere el modelo</td></tr>
+              <tr><td>Se ejecuta en el dispositivo</td><td>Sin agrupación con IA</td><td>Sí, sin necesidad de modelo</td><td>Sí</td></tr>
               <tr><td>Pasar a tus propias reglas</td><td>No</td><td colspan="2">Sí, con un clic al modo Reglas</td></tr>
               <tr><td>Precio</td><td>Gratis</td><td colspan="2">Gratis hasta 5 grupos; Premium, sin límite</td></tr>
             </tbody>

@@ -73,7 +73,7 @@
               {
                 "@type": "Question",
                 "name": "Verliere ich meine Regeln, wenn ich nicht mehr zahle?",
-                "acceptedAnswer": { "@type": "Answer", "text": "Nein. Takt löscht nichts. Regeln mit einer einzigen Bedingung vom Typ enthält, exakt oder Domain funktionieren weiter, auch über 5 hinaus. Regeln mit mehreren Bedingungen, Seitentiteln, Glob oder Regex greifen nicht mehr, bis Sie erneut abonnieren, und solange Sie 5 oder mehr Regeln haben, können Sie keine neuen hinzufügen." }
+                "acceptedAnswer": { "@type": "Answer", "text": "Nein. Takt löscht nichts. Nur die ersten 5 Regeln Ihrer Liste bleiben aktiv. Davon funktionieren Regeln mit einer einzigen Bedingung vom Typ enthält, exakt oder Domain weiter; Regeln mit mehreren Bedingungen, Seitentiteln, Glob oder Regex greifen nicht mehr. Regeln nach der fünften pausieren ebenfalls. Mit einem neuen Abo funktioniert alles wieder, und solange Sie 5 oder mehr Regeln haben, können Sie keine neuen hinzufügen." }
               },
               {
                 "@type": "Question",
@@ -188,7 +188,7 @@
           <h2 id="ends">Was passiert, wenn ein Premium-Abonnement endet?</h2>
           <p>Takt prüft Ihren Plan beim Start und alle 15 Minuten. Sobald das Abonnement beendet ist, gelten wieder die kostenlosen Grenzen. Takt löscht nichts:</p>
           <ul>
-            <li><strong>Regeln</strong> bleiben alle erhalten. Regeln mit einer einzigen Bedingung vom Typ enthält, exakt oder Domain gruppieren weiter, auch wenn Sie mehr als 5 haben. Regeln mit mehreren Bedingungen, einer Titelbedingung oder einem Glob- oder Regex-Muster greifen nicht mehr. Solange Sie 5 oder mehr Regeln haben, können Sie keine neue hinzufügen.</li>
+            <li><strong>Regeln</strong> bleiben alle erhalten, aber nur die ersten 5 Ihrer Liste bleiben aktiv. Davon gruppieren Regeln mit einer einzigen Bedingung vom Typ enthält, exakt oder Domain weiter; Regeln mit mehreren Bedingungen, einer Titelbedingung oder einem Glob- oder Regex-Muster greifen nicht mehr. Regeln nach der fünften pausieren. Solange Sie 5 oder mehr Regeln haben, können Sie keine neue hinzufügen.</li>
             <li><strong>Hibernierte Tabs</strong> bleiben, und Sie können sie aufwecken. Neue können Sie hibernieren, sobald Sie unter 5 liegen.</li>
             <li><strong>Sitzungen</strong> bleiben gespeichert, aber Speichern und Wiederherstellen erfordern wieder Premium.</li>
             <li><strong>Profile</strong> werden nicht mehr angewendet. Alle Ihre Regeln arbeiten zusammen, als wäre kein Profil aktiv.</li>
@@ -199,7 +199,8 @@
           <h2 id="limits">Was Premium nicht ändert</h2>
           <ul>
             <li><strong>Der Datenschutz ist in beiden Plänen gleich.</strong> Kein Konto, keine Analysen. Die Planprüfung geht an ExtensionPay; siehe <a href="../privacy-local-first/">was Takt mit Ihren Daten macht</a>.</li>
-            <li><strong>Chromes eigene Werkzeuge gibt es weiterhin.</strong> „Memory Saver“, „Organize tabs“ und die Synchronisierung von Tab-Gruppen sind kostenlos und eingebaut. Wenn sie Ihnen reichen, brauchen Sie Takt vielleicht gar nicht.</li>
+            <li><strong>Die Synchronisierung funktioniert in beiden Plänen.</strong> Ihre Regeln und Einstellungen werden in beiden Plänen über die Chrome-Synchronisierung zwischen Ihren Computern abgeglichen; im kostenlosen Plan sind das Ihre 5 Regeln.</li>
+            <li><strong>Chromes eigene Werkzeuge gibt es weiterhin.</strong> „Memory Saver“ und die Synchronisierung von Tab-Gruppen sind kostenlos und eingebaut. Wenn sie Ihnen reichen, brauchen Sie Takt vielleicht gar nicht.</li>
           </ul>
 
           <div class="cta">
@@ -219,7 +220,7 @@
             </details>
             <details>
               <summary>Verliere ich meine Regeln, wenn ich nicht mehr zahle?</summary>
-              <p>Nein. Takt löscht nichts. Regeln mit einer Bedingung vom Typ enthält, exakt oder Domain funktionieren weiter, auch über 5 hinaus. Regeln mit mehreren Bedingungen, Titel, Glob oder Regex pausieren, bis Sie erneut abonnieren.</p>
+              <p>Nein. Takt löscht nichts. Die ersten 5 Regeln Ihrer Liste funktionieren weiter, wenn sie eine einzige Bedingung vom Typ enthält, exakt oder Domain nutzen. Alle anderen pausieren, bis Sie erneut abonnieren.</p>
             </details>
             <details>
               <summary>Sind Import und Export kostenlos?</summary>
