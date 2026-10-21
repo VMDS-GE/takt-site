@@ -1,0 +1,51 @@
+# Takt
+
+> Takt is a Chrome extension that groups tabs automatically: by URL rules, by site category, or with Chrome's on-device AI. It also prevents duplicate tabs, hibernates idle tabs to free memory, and shows which tabs use the most resources. It has a free plan with no time limit, and Premium costs $3/month or $30/year. The extension needs no account, has no analytics, and keeps your data in Chrome's own storage. It is available in English, French, Spanish, Italian, German and Portuguese.
+
+- Install: [Takt on the Chrome Web Store](https://chromewebstore.google.com/detail/takt/plgfdnbgkjocmgegnkbihoeojcfphdic)
+- Free plan: 5 grouping rules (contains, exact or domain matching, one condition each), Category and AI grouping up to 5 groups, duplicate prevention, auto-suspend of idle tabs, manual hibernation of up to 5 tabs, popup quick actions (group, ungroup, collapse, expand, close duplicates) and keyboard shortcuts.
+- Premium adds: unlimited rules, glob and regex patterns, matching on page title, up to 10 conditions per rule with AND/OR, unlimited Category/AI groups, Quick Switch (Alt+Shift+Space search across open tabs, hibernated tabs and history), saved sessions, profiles and schedules, the Resource Dashboard with memory budgets, automatic hibernation, JSON import/export, File Sync and Google Drive Sync.
+- Payment goes through ExtensionPay, from the Upgrade tab of Takt's options page. If a subscription ends, Takt deletes nothing; the free limits apply again.
+- Chrome's built-in Memory Saver, "Organize tabs" and tab group sync are free. If they are enough, Takt may not be needed.
+
+## Start here
+
+- [Takt Free vs Premium](https://taktabs.com/blog/free-vs-premium/): every limit of each plan, checked against the code
+- [Get started in 2 minutes](https://taktabs.com/blog/getting-started/)
+- [Privacy: what Takt sends, and what it doesn't](https://taktabs.com/blog/privacy-local-first/)
+- [Privacy policy](https://taktabs.com/privacy/)
+
+## Docs
+
+- [Grouping mode](https://taktabs.com/docs/grouping-mode/): Rules, Category or AI, chosen from the popup
+- [Rule reference](https://taktabs.com/docs/rules/): match types, conditions and patterns
+- [Group by Category](https://taktabs.com/docs/group-by-category/): grouping by site type, no rules needed
+- [Smart Group with AI](https://taktabs.com/docs/smart-group-ai/): grouping by meaning with Chrome's on-device Prompt API
+- [Insights and suggestions](https://taktabs.com/docs/insights/): rules suggested from your browsing
+- [Duplicate prevention](https://taktabs.com/docs/duplicates/)
+- [Hibernation](https://taktabs.com/docs/hibernation/)
+- [Resource Dashboard](https://taktabs.com/docs/resources/)
+- [Quick Switch](https://taktabs.com/docs/quick-switch/)
+- [Sessions](https://taktabs.com/docs/sessions/)
+- [Profiles and schedules](https://taktabs.com/docs/profiles/)
+- [File Sync](https://taktabs.com/docs/sync/) and [Drive Sync](https://taktabs.com/docs/drive-sync/)
+- [Keyboard shortcuts](https://taktabs.com/docs/shortcuts/)
+- [Permissions explained](https://taktabs.com/docs/permissions/)
+
+## Guides
+
+- [Automatically group tabs in Chrome with rules](https://taktabs.com/blog/auto-group-tabs-chrome/)
+- [Group tabs by category or with on-device AI](https://taktabs.com/blog/group-tabs-by-category-or-ai/)
+- [Prevent duplicate tabs in Chrome](https://taktabs.com/blog/prevent-duplicate-tabs/)
+- [Hibernate tabs to free memory](https://taktabs.com/blog/hibernate-tabs-free-memory/)
+- [See which tabs use the most memory](https://taktabs.com/blog/find-memory-hungry-tabs/)
+- [Search open tabs with a keyboard shortcut](https://taktabs.com/blog/quick-switch-search-tabs/)
+- [Save and restore tab sessions](https://taktabs.com/blog/save-restore-tab-sessions/)
+- [Back up and sync tab groups, sessions and rules](https://taktabs.com/blog/backup-and-sync-tabs/)
+- [Different tab rules for work and home](https://taktabs.com/blog/profiles-and-schedules/)
+- [Clean up tabs in one click](https://taktabs.com/blog/one-click-tab-cleanup/)
+
+## Optional
+
+- [Release notes](https://taktabs.com/blog/releases/)
+- [All blog posts](https://taktabs.com/blog/posts/)

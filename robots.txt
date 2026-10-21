@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /uninstall/
+
+Sitemap: https://taktabs.com/sitemap.xml
