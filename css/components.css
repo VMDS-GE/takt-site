@@ -655,6 +655,16 @@ kbd {
 }
 
 /* Homepage comparison table: Takt column as a raised card, checks and dashes */
+/* The comparison continues the pricing section, so the gap between them is tighter. */
+#pricing {
+  padding-bottom: calc(var(--section-pad) * 0.4);
+}
+
+#compare {
+  padding-top: calc(var(--section-pad) * 0.4);
+  border-top: none;
+}
+
 .compare-section {
   text-align: center;
   max-width: var(--max-width-wide);
@@ -666,9 +676,7 @@ kbd {
   color: var(--muted);
 }
 
-/* position: relative keeps the visually-hidden labels inside the scroll area on phones. */
 .compare-table-wrap {
-  position: relative;
   overflow-x: auto;
 }
 
