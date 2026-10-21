@@ -767,21 +767,6 @@ kbd {
   font-weight: 600;
 }
 
-.compare-caption {
-  margin-top: 16px;
-  font-size: 13px;
-  color: var(--muted);
-}
-
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-  clip: rect(0 0 0 0);
-  white-space: nowrap;
-}
-
 @media (max-width: 720px) {
   .compare-table tbody th {
     position: sticky;
